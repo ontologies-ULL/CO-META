@@ -1,0 +1,808 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH/"
+     xml:base="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH">
+        <rdfs:label xml:lang="en">Combinatory Optimization Metaheuristics</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasComponent">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasObjective -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasObjective">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isObjectiveOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Problem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Objective"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasRestriction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasRestriction">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isRestrictionOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Problem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Restriction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isObjectiveOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isObjectiveOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isRestrictionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isRestrictionOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasSize">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Solution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Bit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Bit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SolutionNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CPUTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CPUTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationCondition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ConstructionMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ConstructionMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CrossoverMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CrossoverMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+        <rdfs:comment xml:lang="en">Production of one or more individuals from two or more parent individuals</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CustomSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CustomSet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SolutionNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationBasedMetaheuristic"/>
+        <rdfs:label xml:lang="en">Evolutionary Algorithms</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Feature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Feature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GenerationMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GenerationMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicInfluence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicInfluence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HybridEvolutionaryAlgorithms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HybridEvolutionaryAlgorithms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationBasedMetaheuristic"/>
+        <rdfs:label xml:lang="en">Hybrid Evolutionary Algorithms</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Integer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Integer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SolutionNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IterationsWithoutImprovement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IterationsWithoutImprovement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationCondition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#List -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#List">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Solution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#LocalSearchMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#LocalSearchMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+        <rdfs:comment xml:lang="en">Improves the solution fitness by exploring its neighborhood</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaxTemperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaxTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaximizationObjective -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaximizationObjective">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Objective"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinimizationObjective"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MemoryComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MemoryComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
+        <rdfs:comment>Components that store data to guide the search</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinTemperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinimizationObjective -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinimizationObjective">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Objective"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+        <rdfs:comment>Introduces small random changes to a solution</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationProbability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationProbability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Objective -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Objective"/>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Permutation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Permutation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Solution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PersonalBestInfluence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PersonalBestInfluence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneAddition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneAddition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneConstruction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneConstruction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ConstructionMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneEvaporation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneEvaporation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneInfluence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneInfluence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Pheromones -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Pheromones">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MemoryComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneConstruction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicInfluence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneAddition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneEvaporation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneInfluence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationBasedMetaheuristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationBasedMetaheuristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionMetaheuristic"/>
+        <rdfs:label xml:lang="en">Population Based Metaheuristic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationGeneration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationGeneration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GenerationMethod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationSize"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationSize -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationSize">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Problem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Problem">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasObjective"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Objective"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ProportionateSelection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ProportionateSelection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SelectionMethod"/>
+        <rdfs:comment xml:lang="en">Selects individuals with probability proportional to their fitness value
+Calculation of all fitness values is needed</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLConstruction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLConstruction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ConstructionMethod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLRandomness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLRandomness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLRandomness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RankingSelection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RankingSelection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SelectionMethod"/>
+        <rdfs:comment xml:lang="en">Sorts individuals by fitness value and selects them with probability related to their rank
+A method to sort all solutions by their fitness is needed</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Restriction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Restriction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ScatteredPopulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ScatteredPopulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationGeneration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SelectionMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SelectionMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+        <rdfs:comment xml:lang="en">Selects the individuals that will start the next generation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SinglePointPopulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SinglePointPopulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationGeneration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionGeneration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionGeneration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GenerationMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionMetaheuristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionMetaheuristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+        <rdfs:label xml:lang="en">Single Solution Based Metaheuristic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Solution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Solution">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasSize"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SolutionNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SolutionNode"/>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SwarmIntelligence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SwarmIntelligence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationBasedMetaheuristic"/>
+        <rdfs:label xml:lang="en">Swarm Intelligence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuList -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuList">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MemoryComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Temperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Temperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaxTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationCondition"/>
+        <rdfs:comment xml:lang="en">Simulated Annealing temperature component</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationCondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationCondition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TotalIterations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TotalIterations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationCondition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TournamentSelection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TournamentSelection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SelectionMethod"/>
+        <rdfs:comment xml:lang="en">Selects random individuals and compares them to choose the better fitness
+A method to compare fitness values is needed</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Velocity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Velocity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MemoryComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationProbability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PersonalBestInfluence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuSearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuSearch"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CPUTime"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IterationsWithoutImprovement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TotalIterations"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicInfluence"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaxTemperature"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinTemperature"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationProbability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PersonalBestInfluence"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneAddition"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneEvaporation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneInfluence"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationSize"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLRandomness"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Objective"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Problem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Restriction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Solution"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SolutionNode"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
