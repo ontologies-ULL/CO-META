@@ -127,7 +127,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -190,22 +190,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicInfluence -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicInfluence">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicMethod -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicMethod">
@@ -223,26 +207,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Integer -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Integer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SolutionNode"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
     </owl:Class>
     
 
@@ -254,7 +222,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -274,14 +242,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#LocalSearchMethod">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
         <rdfs:comment xml:lang="en">Improves the solution fitness by exploring its neighborhood</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaxTemperature -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaxTemperature">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
     </owl:Class>
     
 
@@ -324,14 +284,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinTemperature -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinTemperature">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinimizationObjective -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinimizationObjective">
@@ -345,14 +297,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationMethod">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
         <rdfs:comment>Introduces small random changes to a solution</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationProbability -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationProbability">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
     </owl:Class>
     
 
@@ -377,42 +321,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PersonalBestInfluence -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PersonalBestInfluence">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneAddition -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneAddition">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneConstruction -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneConstruction">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ConstructionMethod"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneEvaporation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneEvaporation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneInfluence -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneInfluence">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
     </owl:Class>
     
 
@@ -430,25 +342,25 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicInfluence"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicInfluence"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneAddition"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneAddition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneEvaporation"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneEvaporation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneInfluence"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneInfluence"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -472,17 +384,9 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationSize"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationSize"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationSize -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationSize">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
     </owl:Class>
     
 
@@ -517,17 +421,9 @@ Calculation of all fitness values is needed</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLRandomness"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLRandomness"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLRandomness -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLRandomness">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
     </owl:Class>
     
 
@@ -625,17 +521,9 @@ A method to sort all solutions by their fitness is needed</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
     </owl:Class>
     
 
@@ -647,13 +535,13 @@ A method to sort all solutions by their fitness is needed</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaxTemperature"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaxTemperature"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinTemperature"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinTemperature"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationCondition"/>
@@ -670,14 +558,6 @@ A method to sort all solutions by their fitness is needed</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TotalIterations -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TotalIterations">
@@ -685,7 +565,7 @@ A method to sort all solutions by their fitness is needed</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -709,25 +589,25 @@ A method to compare fitness values is needed</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationProbability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationProbability"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PersonalBestInfluence"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PersonalBestInfluence"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -745,9 +625,129 @@ A method to compare fitness values is needed</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicInfluence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicInfluence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaxTemperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaxTemperature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinTemperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinTemperature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationProbability -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationProbability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PersonalBestInfluence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PersonalBestInfluence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneAddition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneAddition">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneEvaporation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneEvaporation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneInfluence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneInfluence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationSize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationSize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLRandomness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLRandomness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuSearch -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuSearch"/>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
     
 
 
@@ -765,26 +765,6 @@ A method to compare fitness values is needed</rdfs:comment>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CPUTime"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IterationsWithoutImprovement"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TotalIterations"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicInfluence"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaxTemperature"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinTemperature"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationProbability"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PersonalBestInfluence"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneAddition"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneEvaporation"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneInfluence"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationSize"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLRandomness"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
