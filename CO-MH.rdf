@@ -36,6 +36,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasInput">
         <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isOutputOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasOutput"/>
     </owl:ObjectProperty>
     
@@ -64,6 +65,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasOutput">
         <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isInputOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
     </owl:ObjectProperty>
     
 
@@ -95,8 +97,22 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasStart -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasStart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isStartOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasOutput"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -104,6 +120,7 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isInputOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isInputOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isOutputOf"/>
     </owl:ObjectProperty>
     
@@ -117,13 +134,21 @@
 
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isOutputOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isOutputOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isOutputOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isRestrictionOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isRestrictionOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isStartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isStartOf"/>
     
 
 
