@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:CO-MH="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH">
         <rdfs:label xml:lang="en">Combinatory Optimization Metaheuristics</rdfs:label>
     </owl:Ontology>
@@ -31,6 +32,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasInput">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isOutputOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasOutput"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasInputType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasInputType">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasOutputType"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasObjective -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasObjective">
@@ -38,6 +57,20 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Problem"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Objective"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasOutput">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isInputOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasOutputType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasOutputType"/>
     
 
 
@@ -59,9 +92,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasStart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasStart">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isInputOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isInputOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isOutputOf"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isObjectiveOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isObjectiveOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isOutputOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isOutputOf"/>
     
 
 
@@ -109,6 +165,22 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#AcceptanceMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#AcceptanceMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Archive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Archive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MemoryComponent"/>
+    </owl:Class>
     
 
 
@@ -310,6 +382,12 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ParameterValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ParameterValue"/>
     
 
 
@@ -649,6 +727,15 @@ A method to compare fitness values is needed</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IteratedLocalSearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IteratedLocalSearch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#generate_single_tsp_10"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations">
@@ -737,16 +824,65 @@ A method to compare fitness values is needed</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuSearch -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuSearch"/>
-    
-
-
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time">
         <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#accept -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#accept">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#AcceptanceMethod"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#generate_single_tsp_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#generate_single_tsp_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionGeneration"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#localsearch_hillclimb -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#localsearch_hillclimb">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#LocalSearchMethod"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#accept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#perturbation_adjacent_swap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#perturbation_adjacent_swap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationMethod"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#localsearch_hillclimb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#previous_solution_archive -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#previous_solution_archive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Archive"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#accept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TotalIterations"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#perturbation_adjacent_swap"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#previous_solution_archive"/>
     </owl:NamedIndividual>
     
 
@@ -774,6 +910,7 @@ A method to compare fitness values is needed</rdfs:comment>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Objective"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ParameterValue"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Problem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Restriction"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Solution"/>
