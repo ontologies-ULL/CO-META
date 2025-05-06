@@ -811,6 +811,14 @@ A method to compare fitness values is needed</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence">
@@ -959,10 +967,28 @@ A method to compare fitness values is needed</rdfs:comment>
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#binary_tournament_selection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#binary_tournament_selection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TournamentSelection"/>
+        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations_2"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#city -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#city">
         <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Integer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#generate_population_tsp_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#generate_population_tsp_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ScatteredPopulation"/>
+        <CO-MH:isStartOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithm"/>
     </owl:NamedIndividual>
     
 
@@ -989,6 +1015,24 @@ A method to compare fitness values is needed</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#minimum_distance">
         <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinimizationObjective"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#mutation_adjacent_swap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#mutation_adjacent_swap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationMethod"/>
+        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#order_crossover"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#order_crossover -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#order_crossover">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CrossoverMethod"/>
+        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#binary_tournament_selection"/>
     </owl:NamedIndividual>
     
 
@@ -1027,6 +1071,16 @@ A method to compare fitness values is needed</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TotalIterations"/>
         <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#perturbation_adjacent_swap"/>
         <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#previous_solution_archive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TotalIterations"/>
+        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#generate_population_tsp_10"/>
+        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#mutation_adjacent_swap"/>
     </owl:NamedIndividual>
     
 
