@@ -66,6 +66,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasOutput">
         <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isInputOf"/>
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
     </owl:ObjectProperty>
     
 
@@ -97,6 +99,7 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasStart -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasStart">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isStartOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
@@ -148,7 +151,9 @@
 
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isStartOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isStartOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isStartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
+    </owl:ObjectProperty>
     
 
 
@@ -265,7 +270,29 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithms -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithms">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationBasedMetaheuristic"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationBasedMetaheuristic"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CrossoverMethod"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationMethod"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SelectionMethod"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:label xml:lang="en">Evolutionary Algorithms</rdfs:label>
     </owl:Class>
     
@@ -298,7 +325,17 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HybridEvolutionaryAlgorithms -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HybridEvolutionaryAlgorithms">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationBasedMetaheuristic"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithms"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#LocalSearchMethod"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:label xml:lang="en">Hybrid Evolutionary Algorithms</rdfs:label>
     </owl:Class>
     
@@ -473,7 +510,17 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationBasedMetaheuristic -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationBasedMetaheuristic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationGeneration"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionMetaheuristic"/>
         <rdfs:label xml:lang="en">Population Based Metaheuristic</rdfs:label>
     </owl:Class>
@@ -583,7 +630,17 @@ A method to sort all solutions by their fitness is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionMetaheuristic -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionMetaheuristic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionGeneration"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:label xml:lang="en">Single Solution Based Metaheuristic</rdfs:label>
     </owl:Class>
     
