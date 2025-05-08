@@ -293,9 +293,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithms -->
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithm -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithms">
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithm">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -319,7 +319,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:label xml:lang="en">Evolutionary Algorithms</rdfs:label>
     </owl:Class>
     
 
@@ -344,25 +343,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicMethod">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HybridEvolutionaryAlgorithms -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HybridEvolutionaryAlgorithms">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithms"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#LocalSearchMethod"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:label xml:lang="en">Hybrid Evolutionary Algorithms</rdfs:label>
     </owl:Class>
     
 
@@ -411,6 +391,25 @@
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaximizationObjective">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Objective"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinimizationObjective"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MemeticAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MemeticAlgorithm">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithm"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isConnectedTo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#LocalSearchMethod"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">Memetic Algorithm</rdfs:label>
     </owl:Class>
     
 
@@ -691,11 +690,11 @@ A method to sort all solutions by their fitness is needed</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SwarmIntelligence -->
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SwarmIntelligenceAlgorithm -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SwarmIntelligence">
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SwarmIntelligenceAlgorithm">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationBasedMetaheuristic"/>
-        <rdfs:label xml:lang="en">Swarm Intelligence</rdfs:label>
+        <rdfs:label xml:lang="en">Swarm Intelligence Algorithm</rdfs:label>
     </owl:Class>
     
 
@@ -1082,6 +1081,20 @@ A method to compare fitness values is needed</rdfs:comment>
         <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#generate_population_tsp_10"/>
         <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#mutation_adjacent_swap"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithm">
+        <rdfs:label xml:lang="en">Evolutionary Algorithms</rdfs:label>
+    </rdf:Description>
     
 
 
