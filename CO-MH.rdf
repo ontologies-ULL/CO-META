@@ -101,6 +101,7 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isParameterOf"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
     </owl:ObjectProperty>
     
@@ -169,6 +170,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isParameterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isParameterOf"/>
+    
+
+
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isRestrictionOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#isRestrictionOf"/>
@@ -213,6 +220,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#maxValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#maxValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#minValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#minValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -236,6 +261,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Archive">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MemoryComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#archiveSize"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -331,6 +362,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IntegerParameter"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GenerationMethod -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GenerationMethod">
@@ -351,6 +391,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Integer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SolutionNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IntegerParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IntegerParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
     </owl:Class>
     
 
@@ -469,12 +517,6 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ParameterValue -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ParameterValue"/>
     
 
 
@@ -821,7 +863,8 @@ A method to compare fitness values is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GlobalBestInfluence">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter"/>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -829,7 +872,8 @@ A method to compare fitness values is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicInfluence -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicInfluence">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter"/>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -837,7 +881,9 @@ A method to compare fitness values is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter"/>
+        <CO-MH:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-MH:maxValue>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -855,7 +901,8 @@ A method to compare fitness values is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IntegerParameter"/>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -863,7 +910,9 @@ A method to compare fitness values is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaxTemperature -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MaxTemperature">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter"/>
+        <CO-MH:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-MH:maxValue>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -871,7 +920,9 @@ A method to compare fitness values is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinTemperature -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinTemperature">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter"/>
+        <CO-MH:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-MH:maxValue>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -879,7 +930,9 @@ A method to compare fitness values is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationProbability -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationProbability">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter"/>
+        <CO-MH:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-MH:maxValue>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -887,7 +940,8 @@ A method to compare fitness values is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PersonalBestInfluence -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PersonalBestInfluence">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter"/>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -895,7 +949,8 @@ A method to compare fitness values is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneAddition -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneAddition">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IntegerParameter"/>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -903,7 +958,9 @@ A method to compare fitness values is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneEvaporation -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneEvaporation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter"/>
+        <CO-MH:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-MH:maxValue>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -911,7 +968,8 @@ A method to compare fitness values is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneInfluence -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PheromoneInfluence">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter"/>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -919,7 +977,8 @@ A method to compare fitness values is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationSize -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationSize">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IntegerParameter"/>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -927,7 +986,9 @@ A method to compare fitness values is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLRandomness -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#RCLRandomness">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter"/>
+        <CO-MH:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-MH:maxValue>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -943,16 +1004,15 @@ A method to compare fitness values is needed</rdfs:comment>
 
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuListSize"/>
     
 
 
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IntegerParameter"/>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -962,6 +1022,15 @@ A method to compare fitness values is needed</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#accept">
         <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#AcceptanceMethod"/>
         <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#archiveSize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#archiveSize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IntegerParameter"/>
+        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</CO-MH:minValue>
     </owl:NamedIndividual>
     
 
@@ -1121,7 +1190,6 @@ A method to compare fitness values is needed</rdfs:comment>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Objective"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ParameterValue"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Problem"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Restriction"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Solution"/>
