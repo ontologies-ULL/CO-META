@@ -252,7 +252,7 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#AcceptanceMethod -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#AcceptanceMethod">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
     </owl:Class>
     
 
@@ -296,7 +296,7 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ConstructionMethod -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ConstructionMethod">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasComponent"/>
@@ -310,7 +310,7 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CrossoverMethod -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CrossoverMethod">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
         <rdfs:comment xml:lang="en">Production of one or more individuals from two or more parent individuals</rdfs:comment>
     </owl:Class>
     
@@ -354,14 +354,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Feature -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Feature">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#FloatParameter">
@@ -374,7 +366,7 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GenerationMethod -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#GenerationMethod">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
     </owl:Class>
     
 
@@ -382,7 +374,7 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicMethod -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#HeuristicMethod">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
     </owl:Class>
     
 
@@ -428,7 +420,7 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#LocalSearchMethod -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#LocalSearchMethod">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
         <rdfs:comment xml:lang="en">Improves the solution fitness by exploring its neighborhood</rdfs:comment>
     </owl:Class>
     
@@ -483,14 +475,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinimizationObjective -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MinimizationObjective">
@@ -502,7 +486,7 @@
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationMethod -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationMethod">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
         <rdfs:comment>Introduces small random changes to a solution</rdfs:comment>
     </owl:Class>
     
@@ -672,7 +656,7 @@ A method to sort all solutions by their fitness is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SelectionMethod -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SelectionMethod">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicMethod"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
         <rdfs:comment xml:lang="en">Selects the individuals that will start the next generation</rdfs:comment>
     </owl:Class>
     
@@ -758,7 +742,7 @@ A method to sort all solutions by their fitness is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Temperature -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Temperature">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Feature"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
@@ -780,7 +764,7 @@ A method to sort all solutions by their fitness is needed</rdfs:comment>
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationCondition -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationCondition">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Feature"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MetaheuristicComponent"/>
     </owl:Class>
     
 
