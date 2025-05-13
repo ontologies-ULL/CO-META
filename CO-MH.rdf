@@ -779,6 +779,52 @@
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_binary_tournament_selection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_binary_tournament_selection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SelectionMethod"/>
+        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_termination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_generate_population -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_generate_population">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationGeneration"/>
+        <CO-MH:isStartOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_mutation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_mutation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationMethod"/>
+        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_order_crossover"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_order_crossover -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_order_crossover">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CrossoverMethod"/>
+        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_binary_tournament_selection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_termination -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_termination">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TotalIterations"/>
+        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_mutation"/>
+        <CO-MH:hasInputStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_generate_population"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithm -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithm">
@@ -805,6 +851,61 @@
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_acceptance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_acceptance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#AcceptanceMethod"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_termination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_archive -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_archive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MemoryComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_acceptance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_generate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_generate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionGeneration"/>
+        <CO-MH:hasOutputStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_termination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_localsearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_localsearch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#LocalSearchMethod"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_acceptance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_perturbation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_perturbation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationMethod"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_localsearch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_termination -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_termination">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TotalIterations"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_archive"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_perturbation"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#InertiaFactor">
@@ -820,7 +921,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#IteratedLocalSearch">
         <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
         <CO-MH:hasCodification rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#solution_tsp_10"/>
-        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#generate_single_tsp_10"/>
+        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_generate"/>
     </owl:NamedIndividual>
     
 
@@ -947,55 +1048,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#accept -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#accept">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#AcceptanceMethod"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#binary_tournament_selection -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#binary_tournament_selection">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SelectionMethod"/>
-        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations_2"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#city -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#city">
         <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Integer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#generate_population_tsp_10 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#generate_population_tsp_10">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationGeneration"/>
-        <CO-MH:isStartOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EvolutionaryAlgorithm"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#generate_single_tsp_10 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#generate_single_tsp_10">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionGeneration"/>
-        <CO-MH:hasOutputStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#localsearch_hillclimb -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#localsearch_hillclimb">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#LocalSearchMethod"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#accept"/>
     </owl:NamedIndividual>
     
 
@@ -1008,68 +1064,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#mutation_adjacent_swap -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#mutation_adjacent_swap">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationMethod"/>
-        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#order_crossover"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#order_crossover -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#order_crossover">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#CrossoverMethod"/>
-        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#binary_tournament_selection"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#perturbation_adjacent_swap -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#perturbation_adjacent_swap">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationMethod"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#localsearch_hillclimb"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#previous_solution_archive -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#previous_solution_archive">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MemoryComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#accept"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#solution_tsp_10 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#solution_tsp_10">
         <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Permutation"/>
         <CO-MH:hasNodeType rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#city"/>
         <CO-MH:hasSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</CO-MH:hasSize>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TotalIterations"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#perturbation_adjacent_swap"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#previous_solution_archive"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations_2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#termination_totaliterations_2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TotalIterations"/>
-        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#mutation_adjacent_swap"/>
-        <CO-MH:hasInputStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#generate_population_tsp_10"/>
     </owl:NamedIndividual>
     
 
