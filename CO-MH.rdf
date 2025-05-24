@@ -1124,6 +1124,72 @@
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_acceptance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_acceptance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#AcceptanceComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_change_neighbourhood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_change_neighbourhood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_change_neighbourhood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ResourceHandlerComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_termination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_generate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_generate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionGenerationComponent"/>
+        <CO-MH:hasOutputStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_termination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_localsearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_localsearch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#LocalSearchComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_acceptance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_perturbation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_perturbation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_localsearch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_termination -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_termination">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationConditionComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_acceptance"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_change_neighbourhood"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_perturbation"/>
+        <CO-MH:hasParameter rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VariableNeighbourhoodSearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VariableNeighbourhoodSearch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_generate"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#city -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#city">
