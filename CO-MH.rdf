@@ -728,6 +728,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationConditionComponent">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#LoopComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasParameter"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Creates the main loop and determines when to stop the algorithm</rdfs:comment>
     </owl:Class>
     
@@ -786,7 +792,6 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationConditionComponent"/>
         <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_mutation"/>
         <CO-MH:hasInputStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_generate_population"/>
-        <CO-MH:hasParameter rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
     </owl:NamedIndividual>
     
 
@@ -859,7 +864,6 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationConditionComponent"/>
         <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_acceptance"/>
         <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ILS_perturbation"/>
-        <CO-MH:hasParameter rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
     </owl:NamedIndividual>
     
 
@@ -1115,6 +1119,70 @@
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_archive -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_archive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#StorageComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_substraction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_generate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_generate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionGenerationComponent"/>
+        <CO-MH:hasOutputStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_termination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_neighbourhood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_neighbourhood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#NeighbourhoodComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_substraction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_select_best -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_select_best">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#AcceptanceComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_termination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_substraction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_substraction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#PopulationOperatorComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_select_best"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_termination -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_termination">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationConditionComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_archive"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_neighbourhood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuSearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TabuSearch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TS_generate"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Time">
@@ -1176,7 +1244,6 @@
         <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_acceptance"/>
         <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_change_neighbourhood"/>
         <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#VNS_perturbation"/>
-        <CO-MH:hasParameter rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
     </owl:NamedIndividual>
     
 
