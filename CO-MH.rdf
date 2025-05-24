@@ -1101,6 +1101,70 @@
     
 
 
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_acceptance_temperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_acceptance_temperature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#AcceptanceComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_reduce_temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_archive -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_archive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#StorageComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_acceptance_temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_generate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_generate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SingleSolutionGenerationComponent"/>
+        <CO-MH:hasOutputStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_termination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_perturbation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_perturbation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#MutationComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_acceptance_temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_reduce_temperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_reduce_temperature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#ResourceHandlerComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_termination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_termination -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_termination">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationConditionComponent"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_archive"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_perturbation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SimulatedAnnealing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SimulatedAnnealing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Metaheuristic"/>
+        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#SA_generate"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#StorageSize -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#StorageSize">
