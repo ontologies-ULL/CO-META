@@ -210,15 +210,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasValue -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#hasValue">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Parameter"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#maxValue -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#maxValue">
@@ -795,6 +786,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationConditionComponent"/>
         <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_mutation"/>
         <CO-MH:hasInputStart rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#EA_generate_population"/>
+        <CO-MH:hasParameter rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#Iterations"/>
     </owl:NamedIndividual>
     
 
