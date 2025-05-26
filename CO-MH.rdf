@@ -1047,15 +1047,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#NSGA-II_archive -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#NSGA-II_archive">
-        <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#StorageComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#NSGA-II_union"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#NSGA-II_binary_tournament_selection -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#NSGA-II_binary_tournament_selection">
@@ -1132,8 +1123,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#NSGA-II_termination">
         <rdf:type rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#TerminationConditionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#NSGA-II_archive"/>
         <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#NSGA-II_binary_tournament_selection"/>
+        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/srmic/ontologies/2025/0/CO-MH#NSGA-II_union"/>
     </owl:NamedIndividual>
     
 
