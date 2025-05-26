@@ -993,7 +993,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#IteratedLocalSearch">
         <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
-        <CO-MH:hasCodification rdf:resource="http://www.semanticweb.org/CO-MH#solution_tsp_10"/>
         <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/CO-MH#ILS_generate"/>
     </owl:NamedIndividual>
     
