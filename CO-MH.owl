@@ -599,7 +599,7 @@
     <!-- http://www.semanticweb.org/CO-MH#PopulationOperatorComponent -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#PopulationOperatorComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#ModificationComponent"/>
         <rdfs:comment xml:lang="en">Uses set operations to modify populations</rdfs:comment>
     </owl:Class>
     
