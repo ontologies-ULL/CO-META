@@ -1,0 +1,1117 @@
+@prefix : <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/ontologies-ULL/CO-META#> .
+
+<https://w3id.org/ontologies-ULL/CO-META> rdf:type owl:Ontology ;
+                                           rdfs:label "Combinatory Optimization Metaheuristics"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasCodification
+:hasCodification rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :isCodificationOf ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Metaheuristic
+                                             :Problem
+                                           )
+                             ] ;
+                 rdfs:range :Solution .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasInput
+:hasInput rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :isConnectedTo ;
+          owl:inverseOf :hasOutput .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasInputEnd
+:hasInputEnd rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasInput ;
+             owl:inverseOf :hasOutputEnd .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasInputStart
+:hasInputStart rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasInput ;
+               owl:inverseOf :hasOutputStart .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasNodeType
+:hasNodeType rdf:type owl:ObjectProperty ;
+             rdfs:domain :Solution ;
+             rdfs:range :SolutionNode .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasObjective
+:hasObjective rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isObjectiveOf ;
+              rdfs:domain :Problem ;
+              rdfs:range :Objective .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasOutput
+:hasOutput rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :isConnectedTo ;
+           rdfs:domain :MetaheuristicComponent ;
+           rdfs:range :MetaheuristicComponent .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd
+:hasOutputEnd rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasOutput ;
+              rdfs:domain :LoopComponent .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasOutputStart
+:hasOutputStart rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasOutput ;
+                rdfs:range :LoopComponent .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasParameter
+:hasParameter rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isParameterOf ;
+              rdfs:range :Parameter .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasRestriction
+:hasRestriction rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isRestrictionOf ;
+                rdfs:domain :Problem ;
+                rdfs:range :Restriction .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasStart
+:hasStart rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :isConnectedTo ;
+          owl:inverseOf :isStartOf ;
+          rdfs:domain :Metaheuristic ;
+          rdfs:range :MetaheuristicComponent .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#isCodificationOf
+:isCodificationOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#isConnectedTo
+:isConnectedTo rdf:type owl:ObjectProperty ,
+                        owl:TransitiveProperty ;
+               owl:propertyChainAxiom ( :hasOutput
+                                        :isConnectedTo
+                                      ) .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf
+:isObjectiveOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#isParameterOf
+:isParameterOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf
+:isRestrictionOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#isStartOf
+:isStartOf rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :isConnectedTo .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasSize
+:hasSize rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Solution ;
+         rdfs:range xsd:integer .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#maxValue
+:maxValue rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Parameter ;
+          rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#minValue
+:minValue rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Parameter ;
+          rdfs:range xsd:decimal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent
+:AcceptanceComponent rdf:type owl:Class ;
+                     rdfs:subClassOf :MetaheuristicComponent ;
+                     rdfs:comment "Accepts a solution out of two or more solutions, according to its fitness. Needs fitness assingment component in multiobjective optimization"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Bit
+:Bit rdf:type owl:Class ;
+     rdfs:subClassOf :SolutionNode .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent
+:ConstructionComponent rdf:type owl:Class ;
+                       rdfs:subClassOf :MetaheuristicComponent ;
+                       rdfs:comment "Constructs a solution or a group of solutions using heuristic methods"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic
+:ConstructiveMetaheuristic rdf:type owl:Class ;
+                           owl:equivalentClass [ owl:intersectionOf ( :Metaheuristic
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty :isConnectedTo ;
+                                                                        owl:someValuesFrom :ConstructionComponent
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent
+:CrossoverComponent rdf:type owl:Class ;
+                    rdfs:subClassOf :ModificationComponent ;
+                    rdfs:comment "Production of one or more individuals from two or more parent individuals"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#CustomSet
+:CustomSet rdf:type owl:Class ;
+           rdfs:subClassOf :SolutionNode .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent
+:DiversityPreservationComponent rdf:type owl:Class ;
+                                rdfs:subClassOf :MultiobjectiveComponent ;
+                                rdfs:comment "Adjust the fitness value to encourage diversity in the population"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm
+:EvolutionaryAlgorithm rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( :PopulationBasedMetaheuristic
+                                                                  [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty :isConnectedTo ;
+                                                                                           owl:someValuesFrom :CrossoverComponent
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty :isConnectedTo ;
+                                                                                           owl:someValuesFrom :MutationComponent
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty :isConnectedTo ;
+                                                                                           owl:someValuesFrom :SelectionComponent
+                                                                                         ]
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent
+:FitnessAssingmentComponent rdf:type owl:Class ;
+                            rdfs:subClassOf :MultiobjectiveComponent ;
+                            rdfs:comment "Assign an individual fitness value to each member of a population" .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#FloatParameter
+:FloatParameter rdf:type owl:Class ;
+                rdfs:subClassOf :Parameter ;
+                owl:disjointWith :IntegerParameter .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GenerationComponent
+:GenerationComponent rdf:type owl:Class ;
+                     rdfs:subClassOf :MetaheuristicComponent ;
+                     rdfs:comment "Generates an initial solution or population"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Integer
+:Integer rdf:type owl:Class ;
+         rdfs:subClassOf :SolutionNode .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#IntegerParameter
+:IntegerParameter rdf:type owl:Class ;
+                  rdfs:subClassOf :Parameter .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#List
+:List rdf:type owl:Class ;
+      rdfs:subClassOf :Solution .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent
+:LocalSearchComponent rdf:type owl:Class ;
+                      rdfs:subClassOf :ModificationComponent ;
+                      rdfs:comment "Improves the solution fitness by exploring its neighborhood"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic
+:LocalSearchMetaheuristic rdf:type owl:Class ;
+                          owl:equivalentClass [ owl:intersectionOf ( :Metaheuristic
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty :isConnectedTo ;
+                                                                       owl:someValuesFrom :GenerationComponent
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ] .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#LoopComponent
+:LoopComponent rdf:type owl:Class ;
+               rdfs:subClassOf :MetaheuristicComponent ;
+               rdfs:comment "Creates loops to iterate through data structures or repeat processes until a condition is met. Has two additional properties: hasOutputStart and hasOutputEnd"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective
+:MaximizationObjective rdf:type owl:Class ;
+                       rdfs:subClassOf :Objective ;
+                       owl:disjointWith :MinimizationObjective .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm
+:MemeticAlgorithm rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :EvolutionaryAlgorithm
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :isConnectedTo ;
+                                                               owl:someValuesFrom :LocalSearchComponent
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:label "Memetic Algorithm"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Metaheuristic
+:Metaheuristic rdf:type owl:Class .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent
+:MetaheuristicComponent rdf:type owl:Class .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective
+:MinimizationObjective rdf:type owl:Class ;
+                       rdfs:subClassOf :Objective .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ModificationComponent
+:ModificationComponent rdf:type owl:Class ;
+                       rdfs:subClassOf :MetaheuristicComponent ;
+                       rdfs:comment "Modifies a solution or a population"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent
+:MultiobjectiveComponent rdf:type owl:Class ;
+                         rdfs:subClassOf :MetaheuristicComponent ;
+                         rdfs:comment "Components for multiobjective optimization. Required before acceptance methods"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MutationComponent
+:MutationComponent rdf:type owl:Class ;
+                   rdfs:subClassOf :ModificationComponent ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasParameter ;
+                                     owl:hasValue :MutationProbability
+                                   ] ;
+                   rdfs:comment "Introduces small random changes to a solution" .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent
+:NeighbourhoodComponent rdf:type owl:Class ;
+                        rdfs:subClassOf :ModificationComponent .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Objective
+:Objective rdf:type owl:Class ;
+           rdfs:comment "Objective of an optimization problem. This class should not be instantiated directly; subclasses shoud be used instead"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Parameter
+:Parameter rdf:type owl:Class ;
+           rdfs:comment "Defines the structure of a parameter used by a component" .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Permutation
+:Permutation rdf:type owl:Class ;
+             rdfs:subClassOf :Solution .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic
+:PopulationBasedMetaheuristic rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( :Metaheuristic
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty :isConnectedTo ;
+                                                                           owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                owl:unionOf ( :PopulationConstructionComponent
+                                                                                                              :PopulationGenerationComponent
+                                                                                                            )
+                                                                                              ]
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
+                              owl:disjointWith :SingleSolutionMetaheuristic ;
+                              rdfs:label "Population Based Metaheuristic"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent
+:PopulationConstructionComponent rdf:type owl:Class ;
+                                 rdfs:subClassOf :ConstructionComponent ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasParameter ;
+                                                   owl:hasValue :PopulationSize
+                                                 ] ;
+                                 owl:disjointWith :SingleSolutionConstructionComponent .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent
+:PopulationGenerationComponent rdf:type owl:Class ;
+                               rdfs:subClassOf :GenerationComponent ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasParameter ;
+                                                 owl:hasValue :PopulationSize
+                                               ] ;
+                               owl:disjointWith :SingleSolutionGenerationComponent .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent
+:PopulationOperatorComponent rdf:type owl:Class ;
+                             rdfs:subClassOf :ModificationComponent ;
+                             rdfs:comment "Uses set operations to modify populations"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Problem
+:Problem rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasObjective ;
+                           owl:someValuesFrom :Objective
+                         ] ;
+         rdfs:comment "Optimization problem"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent
+:ResourceHandlerComponent rdf:type owl:Class ;
+                          rdfs:subClassOf :MetaheuristicComponent ;
+                          rdfs:comment "Updates specific data structures"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Restriction
+:Restriction rdf:type owl:Class ;
+             rdfs:comment "Restriction of an optimization problem"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SelectionComponent
+:SelectionComponent rdf:type owl:Class ;
+                    rdfs:subClassOf :ModificationComponent ;
+                    rdfs:comment "Selects the individuals that will start the next generation"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent
+:SingleSolutionConstructionComponent rdf:type owl:Class ;
+                                     rdfs:subClassOf :ConstructionComponent .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent
+:SingleSolutionGenerationComponent rdf:type owl:Class ;
+                                   rdfs:subClassOf :GenerationComponent .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic
+:SingleSolutionMetaheuristic rdf:type owl:Class ;
+                             owl:equivalentClass [ owl:intersectionOf ( :Metaheuristic
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty :isConnectedTo ;
+                                                                          owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                               owl:unionOf ( :SingleSolutionConstructionComponent
+                                                                                                             :SingleSolutionGenerationComponent
+                                                                                                           )
+                                                                                             ]
+                                                                        ]
+                                                                      ) ;
+                                                   rdf:type owl:Class
+                                                 ] ;
+                             rdfs:label "Single Solution Based Metaheuristic"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Solution
+:Solution rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasSize ;
+                            owl:someValuesFrom xsd:integer
+                          ] ;
+          rdfs:comment "Solution codification used in an optimization problem"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SolutionNode
+:SolutionNode rdf:type owl:Class ;
+              rdfs:comment "Smallest part of a solution"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#StorageComponent
+:StorageComponent rdf:type owl:Class ;
+                  rdfs:subClassOf :MetaheuristicComponent ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasParameter ;
+                                    owl:hasValue :StorageSize
+                                  ] ;
+                  rdfs:comment "Components that store data to guide the search" .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent
+:TerminationConditionComponent rdf:type owl:Class ;
+                               rdfs:subClassOf :LoopComponent ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasParameter ;
+                                                 owl:hasValue :Iterations
+                                               ] ;
+                               rdfs:comment "Creates the main loop and determines when to stop the algorithm"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones
+:ACO_construction_pheromones rdf:type owl:NamedIndividual ,
+                                      :PopulationConstructionComponent ;
+                             :hasOutput :ACO_evaporate_pheromones .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones
+:ACO_evaporate_pheromones rdf:type owl:NamedIndividual ,
+                                   :ResourceHandlerComponent ;
+                          :hasOutput :ACO_iterate_population .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population
+:ACO_iterate_population rdf:type owl:NamedIndividual ,
+                                 :LoopComponent ;
+                        :hasOutput :ACO_place_pheromones ;
+                        :hasOutputEnd :ACO_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones
+:ACO_place_pheromones rdf:type owl:NamedIndividual ,
+                               :ResourceHandlerComponent ;
+                      :hasOutput :ACO_iterate_population .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ACO_termination
+:ACO_termination rdf:type owl:NamedIndividual ,
+                          :TerminationConditionComponent ;
+                 :hasOutput :ACO_construction_pheromones .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization
+:AntColonyOptimization rdf:type owl:NamedIndividual ,
+                                :Metaheuristic ;
+                       :hasStart :ACO_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection
+:EA_binary_tournament_selection rdf:type owl:NamedIndividual ,
+                                         :SelectionComponent ;
+                                :hasInput :EA_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#EA_generate_population
+:EA_generate_population rdf:type owl:NamedIndividual ,
+                                 :PopulationGenerationComponent ;
+                        :isStartOf :EvolutionaryAlgorithm .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#EA_mutation
+:EA_mutation rdf:type owl:NamedIndividual ,
+                      :MutationComponent ;
+             :hasInput :EA_order_crossover .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover
+:EA_order_crossover rdf:type owl:NamedIndividual ,
+                             :CrossoverComponent ;
+                    :hasInput :EA_binary_tournament_selection .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#EA_termination
+:EA_termination rdf:type owl:NamedIndividual ,
+                         :TerminationConditionComponent ;
+                :hasInput :EA_mutation ;
+                :hasInputStart :EA_generate_population .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm
+:EvolutionaryAlgorithm rdf:type owl:NamedIndividual ,
+                                :Metaheuristic .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GRASP
+:GRASP rdf:type owl:NamedIndividual ,
+                :Metaheuristic ;
+       :hasStart :GRASP_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance
+:GRASP_acceptance rdf:type owl:NamedIndividual ,
+                           :AcceptanceComponent ;
+                  :hasOutput :GRASP_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GRASP_archive
+:GRASP_archive rdf:type owl:NamedIndividual ,
+                        :StorageComponent ;
+               :hasOutput :GRASP_acceptance .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl
+:GRASP_construction_rcl rdf:type owl:NamedIndividual ,
+                                 :SingleSolutionConstructionComponent ;
+                        :hasOutput :GRASP_localsearch ;
+                        :hasParameter :RCLRandomness .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch
+:GRASP_localsearch rdf:type owl:NamedIndividual ,
+                            :LocalSearchComponent ;
+                   :hasOutput :GRASP_acceptance .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GRASP_termination
+:GRASP_termination rdf:type owl:NamedIndividual ,
+                            :TerminationConditionComponent ;
+                   :hasOutput :GRASP_archive ,
+                              :GRASP_construction_rcl .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence
+:GlobalBestInfluence rdf:type owl:NamedIndividual ,
+                              :FloatParameter ;
+                     :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence
+:HeuristicInfluence rdf:type owl:NamedIndividual ,
+                             :FloatParameter ;
+                    :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance
+:ILS_acceptance rdf:type owl:NamedIndividual ,
+                         :AcceptanceComponent ;
+                :hasOutput :ILS_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ILS_generate
+:ILS_generate rdf:type owl:NamedIndividual ,
+                       :SingleSolutionGenerationComponent ;
+              :hasOutputStart :ILS_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch
+:ILS_localsearch rdf:type owl:NamedIndividual ,
+                          :LocalSearchComponent ;
+                 :hasOutput :ILS_acceptance .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation
+:ILS_perturbation rdf:type owl:NamedIndividual ,
+                           :MutationComponent ;
+                  :hasOutput :ILS_localsearch .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ILS_termination
+:ILS_termination rdf:type owl:NamedIndividual ,
+                          :TerminationConditionComponent ;
+                 :hasOutput :ILS_acceptance ,
+                            :ILS_perturbation .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#InertiaFactor
+:InertiaFactor rdf:type owl:NamedIndividual ,
+                        :FloatParameter ;
+               :maxValue 1 ;
+               :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#IteratedLocalSearch
+:IteratedLocalSearch rdf:type owl:NamedIndividual ,
+                              :Metaheuristic ;
+                     :hasStart :ILS_generate .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Iterations
+:Iterations rdf:type owl:NamedIndividual ,
+                     :IntegerParameter ;
+            :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MaxTemperature
+:MaxTemperature rdf:type owl:NamedIndividual ,
+                         :FloatParameter ;
+                :maxValue 1 ;
+                :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MinTemperature
+:MinTemperature rdf:type owl:NamedIndividual ,
+                         :FloatParameter ;
+                :maxValue 1 ;
+                :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MutationProbability
+:MutationProbability rdf:type owl:NamedIndividual ,
+                              :FloatParameter ;
+                     :maxValue 1 ;
+                     :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II
+:NSGA-II rdf:type owl:NamedIndividual ,
+                  :Metaheuristic ;
+         :hasStart :NSGA-II_generate_population .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection
+:NSGA-II_binary_tournament_selection rdf:type owl:NamedIndividual ,
+                                              :SelectionComponent ;
+                                     :hasOutput :NSGA-II_crossover .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover
+:NSGA-II_crossover rdf:type owl:NamedIndividual ,
+                            :CrossoverComponent ;
+                   :hasOutput :NSGA-II_mutation .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance
+:NSGA-II_diversity_preservation_crowding_distance rdf:type owl:NamedIndividual ,
+                                                           :DiversityPreservationComponent ;
+                                                  :hasOutput :NSGA-II_truncation .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance
+:NSGA-II_fitness_assignment_non_dominance rdf:type owl:NamedIndividual ,
+                                                   :FitnessAssingmentComponent ;
+                                          :hasOutput :NSGA-II_diversity_preservation_crowding_distance .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population
+:NSGA-II_generate_population rdf:type owl:NamedIndividual ,
+                                      :PopulationGenerationComponent ;
+                             :hasOutput :NSGA-II_initial_fitness_assignment_non_dominance .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance
+:NSGA-II_initial_diversity_preservation_crowding_distance rdf:type owl:NamedIndividual ,
+                                                                   :DiversityPreservationComponent ;
+                                                          :hasOutputStart :NSGA-II_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance
+:NSGA-II_initial_fitness_assignment_non_dominance rdf:type owl:NamedIndividual ,
+                                                           :FitnessAssingmentComponent ;
+                                                  :hasOutput :NSGA-II_initial_diversity_preservation_crowding_distance .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation
+:NSGA-II_mutation rdf:type owl:NamedIndividual ,
+                           :MutationComponent ;
+                  :hasOutput :NSGA-II_union .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination
+:NSGA-II_termination rdf:type owl:NamedIndividual ,
+                              :TerminationConditionComponent ;
+                     :hasOutput :NSGA-II_binary_tournament_selection ,
+                                :NSGA-II_union .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation
+:NSGA-II_truncation rdf:type owl:NamedIndividual ,
+                             :PopulationOperatorComponent ;
+                    :hasOutput :NSGA-II_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union
+:NSGA-II_union rdf:type owl:NamedIndividual ,
+                        :PopulationOperatorComponent ;
+               :hasOutput :NSGA-II_fitness_assignment_non_dominance .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best
+:PSO_acceptance_global_best rdf:type owl:NamedIndividual ,
+                                     :AcceptanceComponent ;
+                            :hasOutput :PSO_archive_global_best .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best
+:PSO_acceptance_local_best rdf:type owl:NamedIndividual ,
+                                    :AcceptanceComponent ;
+                           :hasOutput :PSO_archive_local_best .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity
+:PSO_apply_velocity rdf:type owl:NamedIndividual ,
+                             :ModificationComponent ;
+                    :hasOutput :PSO_acceptance_global_best ,
+                               :PSO_acceptance_local_best ,
+                               :PSO_iterate_population .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best
+:PSO_archive_global_best rdf:type owl:NamedIndividual ,
+                                  :StorageComponent ;
+                         :hasOutput :PSO_acceptance_global_best ,
+                                    :PSO_update_velocity .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best
+:PSO_archive_local_best rdf:type owl:NamedIndividual ,
+                                 :StorageComponent ;
+                        :hasOutput :PSO_acceptance_local_best ,
+                                   :PSO_update_velocity .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population
+:PSO_generate_population rdf:type owl:NamedIndividual ,
+                                  :PopulationGenerationComponent ;
+                         :hasOutput :PSO_archive_local_best ,
+                                    :PSO_select_best ;
+                         :hasOutputStart :PSO_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population
+:PSO_iterate_population rdf:type owl:NamedIndividual ,
+                                 :LoopComponent ;
+                        :hasOutput :PSO_update_velocity ;
+                        :hasOutputEnd :PSO_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PSO_select_best
+:PSO_select_best rdf:type owl:NamedIndividual ,
+                          :AcceptanceComponent ;
+                 :hasOutput :PSO_archive_global_best .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PSO_termination
+:PSO_termination rdf:type owl:NamedIndividual ,
+                          :TerminationConditionComponent ;
+                 :hasOutput :PSO_iterate_population .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity
+:PSO_update_velocity rdf:type owl:NamedIndividual ,
+                              :ResourceHandlerComponent ;
+                     :hasOutput :PSO_apply_velocity .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ParticleSwarmOptimization
+:ParticleSwarmOptimization rdf:type owl:NamedIndividual ,
+                                    :Metaheuristic ;
+                           :hasStart :PSO_generate_population .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence
+:PersonalBestInfluence rdf:type owl:NamedIndividual ,
+                                :FloatParameter ;
+                       :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition
+:PheromoneAddition rdf:type owl:NamedIndividual ,
+                            :IntegerParameter ;
+                   :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation
+:PheromoneEvaporation rdf:type owl:NamedIndividual ,
+                               :FloatParameter ;
+                      :maxValue 1 ;
+                      :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence
+:PheromoneInfluence rdf:type owl:NamedIndividual ,
+                             :FloatParameter ;
+                    :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PopulationSize
+:PopulationSize rdf:type owl:NamedIndividual ,
+                         :IntegerParameter ;
+                :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#RCLRandomness
+:RCLRandomness rdf:type owl:NamedIndividual ,
+                        :FloatParameter ;
+               :maxValue 1 ;
+               :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature
+:SA_acceptance_temperature rdf:type owl:NamedIndividual ,
+                                    :AcceptanceComponent ;
+                           :hasOutput :SA_reduce_temperature .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SA_generate
+:SA_generate rdf:type owl:NamedIndividual ,
+                      :SingleSolutionGenerationComponent ;
+             :hasOutputStart :SA_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SA_perturbation
+:SA_perturbation rdf:type owl:NamedIndividual ,
+                          :MutationComponent ;
+                 :hasOutput :SA_acceptance_temperature .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature
+:SA_reduce_temperature rdf:type owl:NamedIndividual ,
+                                :ResourceHandlerComponent ;
+                       :hasOutput :SA_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SA_termination
+:SA_termination rdf:type owl:NamedIndividual ,
+                         :TerminationConditionComponent ;
+                :hasOutput :SA_acceptance_temperature ,
+                           :SA_perturbation .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2
+:SPEA2 rdf:type owl:NamedIndividual ,
+                :Metaheuristic ;
+       :hasStart :SPEA2_generate_population .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive
+:SPEA2_archive rdf:type owl:NamedIndividual ,
+                        :StorageComponent ;
+               :hasOutput :SPEA2_binary_tournament_selection ,
+                          :SPEA2_union .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection
+:SPEA2_binary_tournament_selection rdf:type owl:NamedIndividual ,
+                                            :SelectionComponent ;
+                                   :hasOutput :SPEA2_crossover .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover
+:SPEA2_crossover rdf:type owl:NamedIndividual ,
+                          :CrossoverComponent ;
+                 :hasOutput :SPEA2_mutation .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour
+:SPEA2_diversity_preservation_kth_nearest_neighbour rdf:type owl:NamedIndividual ,
+                                                             :DiversityPreservationComponent ;
+                                                    :hasOutput :SPEA2_truncation .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness
+:SPEA2_fitness_assignment_raw_fitness rdf:type owl:NamedIndividual ,
+                                               :FitnessAssingmentComponent ;
+                                      :hasOutput :SPEA2_diversity_preservation_kth_nearest_neighbour .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population
+:SPEA2_generate_population rdf:type owl:NamedIndividual ,
+                                    :PopulationGenerationComponent ;
+                           :hasOutputStart :SPEA2_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation
+:SPEA2_mutation rdf:type owl:NamedIndividual ,
+                         :MutationComponent ;
+                :hasOutput :SPEA2_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination
+:SPEA2_termination rdf:type owl:NamedIndividual ,
+                            :TerminationConditionComponent ;
+                   :hasOutput :SPEA2_union .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation
+:SPEA2_truncation rdf:type owl:NamedIndividual ,
+                           :PopulationOperatorComponent ;
+                  :hasOutput :SPEA2_archive .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_union
+:SPEA2_union rdf:type owl:NamedIndividual ,
+                      :PopulationOperatorComponent ;
+             :hasOutput :SPEA2_fitness_assignment_raw_fitness .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SimulatedAnnealing
+:SimulatedAnnealing rdf:type owl:NamedIndividual ,
+                             :Metaheuristic ;
+                    :hasStart :SA_generate .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#StorageSize
+:StorageSize rdf:type owl:NamedIndividual ,
+                      :IntegerParameter ;
+             :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TSP
+:TSP rdf:type owl:NamedIndividual ,
+              :Problem ;
+     :hasObjective :minimum_distance .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TS_generate
+:TS_generate rdf:type owl:NamedIndividual ,
+                      :SingleSolutionGenerationComponent ;
+             :hasOutputStart :TS_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood
+:TS_neighbourhood rdf:type owl:NamedIndividual ,
+                           :NeighbourhoodComponent ;
+                  :hasOutput :TS_substraction .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TS_select_best
+:TS_select_best rdf:type owl:NamedIndividual ,
+                         :AcceptanceComponent ;
+                :hasOutput :TS_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TS_substraction
+:TS_substraction rdf:type owl:NamedIndividual ,
+                          :PopulationOperatorComponent ;
+                 :hasOutput :TS_select_best .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list
+:TS_tabu_list rdf:type owl:NamedIndividual ,
+                       :StorageComponent ;
+              :hasOutput :TS_substraction .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TS_termination
+:TS_termination rdf:type owl:NamedIndividual ,
+                         :TerminationConditionComponent ;
+                :hasOutput :TS_neighbourhood ,
+                           :TS_tabu_list .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TabuSearch
+:TabuSearch rdf:type owl:NamedIndividual ,
+                     :Metaheuristic ;
+            :hasStart :TS_generate .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Time
+:Time rdf:type owl:NamedIndividual ,
+               :IntegerParameter ;
+      :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance
+:VNS_acceptance rdf:type owl:NamedIndividual ,
+                         :AcceptanceComponent ;
+                :hasOutput :VNS_change_neighbourhood .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood
+:VNS_change_neighbourhood rdf:type owl:NamedIndividual ,
+                                   :ResourceHandlerComponent ;
+                          :hasOutput :VNS_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VNS_generate
+:VNS_generate rdf:type owl:NamedIndividual ,
+                       :SingleSolutionGenerationComponent ;
+              :hasOutputStart :VNS_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch
+:VNS_localsearch rdf:type owl:NamedIndividual ,
+                          :LocalSearchComponent ;
+                 :hasOutput :VNS_acceptance .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation
+:VNS_perturbation rdf:type owl:NamedIndividual ,
+                           :MutationComponent ;
+                  :hasOutput :VNS_localsearch .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VNS_termination
+:VNS_termination rdf:type owl:NamedIndividual ,
+                          :TerminationConditionComponent ;
+                 :hasOutput :VNS_acceptance ,
+                            :VNS_change_neighbourhood ,
+                            :VNS_perturbation .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VariableNeighbourhoodSearch
+:VariableNeighbourhoodSearch rdf:type owl:NamedIndividual ,
+                                      :Metaheuristic ;
+                             :hasStart :VNS_generate .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#city
+:city rdf:type owl:NamedIndividual ,
+               :Integer .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#minimum_distance
+:minimum_distance rdf:type owl:NamedIndividual ,
+                           :MinimizationObjective .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#solution_tsp_10
+:solution_tsp_10 rdf:type owl:NamedIndividual ,
+                          :Permutation ;
+                 :hasNodeType :city ;
+                 :hasSize 10 .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:EvolutionaryAlgorithm rdfs:label "Evolutionary Algorithms"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Metaheuristic
+                :MetaheuristicComponent
+                :Objective
+                :Parameter
+                :Problem
+                :Restriction
+                :Solution
+                :SolutionNode
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

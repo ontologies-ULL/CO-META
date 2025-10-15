@@ -1,0 +1,1035 @@
+<https://w3id.org/ontologies-ULL/CO-META> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/ontologies-ULL/CO-META> <http://www.w3.org/2000/01/rdf-schema#label> "Combinatory Optimization Metaheuristics"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasCodification
+<https://w3id.org/ontologies-ULL/CO-META#hasCodification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCodification> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#isCodificationOf> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCodification> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Problem> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCodification> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasInput
+<https://w3id.org/ontologies-ULL/CO-META#hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasInput> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+<https://w3id.org/ontologies-ULL/CO-META#hasInput> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasInputEnd
+<https://w3id.org/ontologies-ULL/CO-META#hasInputEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasInputEnd> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#hasInput> .
+<https://w3id.org/ontologies-ULL/CO-META#hasInputEnd> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasInputStart
+<https://w3id.org/ontologies-ULL/CO-META#hasInputStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasInputStart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#hasInput> .
+<https://w3id.org/ontologies-ULL/CO-META#hasInputStart> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasNodeType
+<https://w3id.org/ontologies-ULL/CO-META#hasNodeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasNodeType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
+<https://w3id.org/ontologies-ULL/CO-META#hasNodeType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#SolutionNode> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasObjective
+<https://w3id.org/ontologies-ULL/CO-META#hasObjective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasObjective> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf> .
+<https://w3id.org/ontologies-ULL/CO-META#hasObjective> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Problem> .
+<https://w3id.org/ontologies-ULL/CO-META#hasObjective> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasOutput
+<https://w3id.org/ontologies-ULL/CO-META#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutput> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#LoopComponent> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasOutputStart
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#LoopComponent> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasParameter
+<https://w3id.org/ontologies-ULL/CO-META#hasParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasParameter> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#isParameterOf> .
+<https://w3id.org/ontologies-ULL/CO-META#hasParameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasRestriction
+<https://w3id.org/ontologies-ULL/CO-META#hasRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasRestriction> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf> .
+<https://w3id.org/ontologies-ULL/CO-META#hasRestriction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Problem> .
+<https://w3id.org/ontologies-ULL/CO-META#hasRestriction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#Restriction> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasStart
+<https://w3id.org/ontologies-ULL/CO-META#hasStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasStart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+<https://w3id.org/ontologies-ULL/CO-META#hasStart> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#isStartOf> .
+<https://w3id.org/ontologies-ULL/CO-META#hasStart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+<https://w3id.org/ontologies-ULL/CO-META#hasStart> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#isCodificationOf
+<https://w3id.org/ontologies-ULL/CO-META#isCodificationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#isConnectedTo
+<https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf
+<https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#isParameterOf
+<https://w3id.org/ontologies-ULL/CO-META#isParameterOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf
+<https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#isStartOf
+<https://w3id.org/ontologies-ULL/CO-META#isStartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#isStartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasSize
+<https://w3id.org/ontologies-ULL/CO-META#hasSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasSize> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
+<https://w3id.org/ontologies-ULL/CO-META#hasSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#maxValue
+<https://w3id.org/ontologies-ULL/CO-META#maxValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#maxValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+<https://w3id.org/ontologies-ULL/CO-META#maxValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#minValue
+<https://w3id.org/ontologies-ULL/CO-META#minValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#minValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+<https://w3id.org/ontologies-ULL/CO-META#minValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent
+<https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Accepts a solution out of two or more solutions, according to its fitness. Needs fitness assingment component in multiobjective optimization"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#Bit
+<https://w3id.org/ontologies-ULL/CO-META#Bit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#Bit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SolutionNode> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent
+<https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Constructs a solution or a group of solutions using heuristic methods"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic
+<https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Production of one or more individuals from two or more parent individuals"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#CustomSet
+<https://w3id.org/ontologies-ULL/CO-META#CustomSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#CustomSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SolutionNode> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent
+<https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Adjust the fitness value to encourage diversity in the population"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm
+<https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#MutationComponent> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent
+<https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Assign an individual fitness value to each member of a population" .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#FloatParameter
+<https://w3id.org/ontologies-ULL/CO-META#FloatParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#FloatParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+<https://w3id.org/ontologies-ULL/CO-META#FloatParameter> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#GenerationComponent
+<https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Generates an initial solution or population"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#Integer
+<https://w3id.org/ontologies-ULL/CO-META#Integer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#Integer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SolutionNode> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#IntegerParameter
+<https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#List
+<https://w3id.org/ontologies-ULL/CO-META#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#List> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Improves the solution fitness by exploring its neighborhood"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid20 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#LoopComponent
+<https://w3id.org/ontologies-ULL/CO-META#LoopComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#LoopComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#LoopComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Creates loops to iterate through data structures or repeat processes until a condition is met. Has two additional properties: hasOutputStart and hasOutputEnd"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective
+<https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
+<https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm
+<https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid24 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Memetic Algorithm"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#Metaheuristic
+<https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent
+<https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective
+<https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ModificationComponent
+<https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Modifies a solution or a population"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent
+<https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Components for multiobjective optimization. Required before acceptance methods"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#MutationComponent
+<https://w3id.org/ontologies-ULL/CO-META#MutationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#MutationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#MutationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#MutationProbability> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#MutationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Introduces small random changes to a solution" .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#Objective
+<https://w3id.org/ontologies-ULL/CO-META#Objective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#Objective> <http://www.w3.org/2000/01/rdf-schema#comment> "Objective of an optimization problem. This class should not be instantiated directly; subclasses shoud be used instead"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#Parameter
+<https://w3id.org/ontologies-ULL/CO-META#Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#Parameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the structure of a parameter used by a component" .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#Permutation
+<https://w3id.org/ontologies-ULL/CO-META#Permutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#Permutation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic
+<https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid29 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#unionOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Population Based Metaheuristic"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent
+<https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent
+<https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent
+<https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses set operations to modify populations"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#Problem
+<https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasObjective> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/2000/01/rdf-schema#comment> "Optimization problem"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent
+<https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Updates specific data structures"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#Restriction
+<https://w3id.org/ontologies-ULL/CO-META#Restriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#Restriction> <http://www.w3.org/2000/01/rdf-schema#comment> "Restriction of an optimization problem"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SelectionComponent
+<https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Selects the individuals that will start the next generation"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid39 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid41 .
+_:genid41 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid42 .
+_:genid42 <http://www.w3.org/2002/07/owl#unionOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Single Solution Based Metaheuristic"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#Solution
+<https://w3id.org/ontologies-ULL/CO-META#Solution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#Solution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasSize> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#Solution> <http://www.w3.org/2000/01/rdf-schema#comment> "Solution codification used in an optimization problem"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SolutionNode
+<https://w3id.org/ontologies-ULL/CO-META#SolutionNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#SolutionNode> <http://www.w3.org/2000/01/rdf-schema#comment> "Smallest part of a solution"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#StorageComponent
+<https://w3id.org/ontologies-ULL/CO-META#StorageComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#StorageComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#StorageComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#StorageSize> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#StorageComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Components that store data to guide the search" .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent
+<https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#LoopComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#Iterations> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Creates the main loop and determines when to stop the algorithm"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones
+<https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones
+<https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population
+<https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#LoopComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones> .
+<https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population> <https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <https://w3id.org/ontologies-ULL/CO-META#ACO_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones
+<https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ACO_termination
+<https://w3id.org/ontologies-ULL/CO-META#ACO_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#ACO_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ACO_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization
+<https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+<https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization> <https://w3id.org/ontologies-ULL/CO-META#hasStart> <https://w3id.org/ontologies-ULL/CO-META#ACO_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection
+<https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection> <https://w3id.org/ontologies-ULL/CO-META#hasInput> <https://w3id.org/ontologies-ULL/CO-META#EA_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#EA_generate_population
+<https://w3id.org/ontologies-ULL/CO-META#EA_generate_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#EA_generate_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#EA_generate_population> <https://w3id.org/ontologies-ULL/CO-META#isStartOf> <https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#EA_mutation
+<https://w3id.org/ontologies-ULL/CO-META#EA_mutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#EA_mutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#MutationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#EA_mutation> <https://w3id.org/ontologies-ULL/CO-META#hasInput> <https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover
+<https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover> <https://w3id.org/ontologies-ULL/CO-META#hasInput> <https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#EA_termination
+<https://w3id.org/ontologies-ULL/CO-META#EA_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#EA_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#EA_termination> <https://w3id.org/ontologies-ULL/CO-META#hasInput> <https://w3id.org/ontologies-ULL/CO-META#EA_mutation> .
+<https://w3id.org/ontologies-ULL/CO-META#EA_termination> <https://w3id.org/ontologies-ULL/CO-META#hasInputStart> <https://w3id.org/ontologies-ULL/CO-META#EA_generate_population> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm
+<https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#GRASP
+<https://w3id.org/ontologies-ULL/CO-META#GRASP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP> <https://w3id.org/ontologies-ULL/CO-META#hasStart> <https://w3id.org/ontologies-ULL/CO-META#GRASP_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#GRASP_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#GRASP_archive
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_archive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_archive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#StorageComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_archive> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> <https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#GRASP_termination
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#GRASP_archive> .
+<https://w3id.org/ontologies-ULL/CO-META#GRASP_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence
+<https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence
+<https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance
+<https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#ILS_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ILS_generate
+<https://w3id.org/ontologies-ULL/CO-META#ILS_generate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#ILS_generate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ILS_generate> <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <https://w3id.org/ontologies-ULL/CO-META#ILS_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch
+<https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation
+<https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#MutationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ILS_termination
+<https://w3id.org/ontologies-ULL/CO-META#ILS_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#ILS_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ILS_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance> .
+<https://w3id.org/ontologies-ULL/CO-META#ILS_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#InertiaFactor
+<https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <https://w3id.org/ontologies-ULL/CO-META#maxValue> "1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#IteratedLocalSearch
+<https://w3id.org/ontologies-ULL/CO-META#IteratedLocalSearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#IteratedLocalSearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+<https://w3id.org/ontologies-ULL/CO-META#IteratedLocalSearch> <https://w3id.org/ontologies-ULL/CO-META#hasStart> <https://w3id.org/ontologies-ULL/CO-META#ILS_generate> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#Iterations
+<https://w3id.org/ontologies-ULL/CO-META#Iterations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#Iterations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#Iterations> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#MaxTemperature
+<https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <https://w3id.org/ontologies-ULL/CO-META#maxValue> "1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#MinTemperature
+<https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <https://w3id.org/ontologies-ULL/CO-META#maxValue> "1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#MutationProbability
+<https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <https://w3id.org/ontologies-ULL/CO-META#maxValue> "1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NSGA-II
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II> <https://w3id.org/ontologies-ULL/CO-META#hasStart> <https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance> <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#MutationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best
+<https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best
+<https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity
+<https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best
+<https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#StorageComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best
+<https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#StorageComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population
+<https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_select_best> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population> <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <https://w3id.org/ontologies-ULL/CO-META#PSO_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population
+<https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#LoopComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population> <https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <https://w3id.org/ontologies-ULL/CO-META#PSO_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PSO_select_best
+<https://w3id.org/ontologies-ULL/CO-META#PSO_select_best> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_select_best> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_select_best> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PSO_termination
+<https://w3id.org/ontologies-ULL/CO-META#PSO_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity
+<https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ParticleSwarmOptimization
+<https://w3id.org/ontologies-ULL/CO-META#ParticleSwarmOptimization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#ParticleSwarmOptimization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+<https://w3id.org/ontologies-ULL/CO-META#ParticleSwarmOptimization> <https://w3id.org/ontologies-ULL/CO-META#hasStart> <https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence
+<https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <https://w3id.org/ontologies-ULL/CO-META#maxValue> "1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#PopulationSize
+<https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#RCLRandomness
+<https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <https://w3id.org/ontologies-ULL/CO-META#maxValue> "1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature
+<https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SA_generate
+<https://w3id.org/ontologies-ULL/CO-META#SA_generate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SA_generate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SA_generate> <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <https://w3id.org/ontologies-ULL/CO-META#SA_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SA_perturbation
+<https://w3id.org/ontologies-ULL/CO-META#SA_perturbation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SA_perturbation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#MutationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SA_perturbation> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature
+<https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SA_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SA_termination
+<https://w3id.org/ontologies-ULL/CO-META#SA_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SA_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SA_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature> .
+<https://w3id.org/ontologies-ULL/CO-META#SA_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SA_perturbation> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SPEA2
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2> <https://w3id.org/ontologies-ULL/CO-META#hasStart> <https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#StorageComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SPEA2_union> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population> <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#MutationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SPEA2_union> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SPEA2_union
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_union> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_union> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SPEA2_union> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#SimulatedAnnealing
+<https://w3id.org/ontologies-ULL/CO-META#SimulatedAnnealing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#SimulatedAnnealing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+<https://w3id.org/ontologies-ULL/CO-META#SimulatedAnnealing> <https://w3id.org/ontologies-ULL/CO-META#hasStart> <https://w3id.org/ontologies-ULL/CO-META#SA_generate> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#StorageSize
+<https://w3id.org/ontologies-ULL/CO-META#StorageSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#StorageSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#StorageSize> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#TSP
+<https://w3id.org/ontologies-ULL/CO-META#TSP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#TSP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Problem> .
+<https://w3id.org/ontologies-ULL/CO-META#TSP> <https://w3id.org/ontologies-ULL/CO-META#hasObjective> <https://w3id.org/ontologies-ULL/CO-META#minimum_distance> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#TS_generate
+<https://w3id.org/ontologies-ULL/CO-META#TS_generate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#TS_generate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#TS_generate> <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <https://w3id.org/ontologies-ULL/CO-META#TS_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood
+<https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#TS_substraction> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#TS_select_best
+<https://w3id.org/ontologies-ULL/CO-META#TS_select_best> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#TS_select_best> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#TS_select_best> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#TS_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#TS_substraction
+<https://w3id.org/ontologies-ULL/CO-META#TS_substraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#TS_substraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#TS_substraction> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#TS_select_best> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list
+<https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#StorageComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#TS_substraction> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#TS_termination
+<https://w3id.org/ontologies-ULL/CO-META#TS_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#TS_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#TS_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood> .
+<https://w3id.org/ontologies-ULL/CO-META#TS_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#TabuSearch
+<https://w3id.org/ontologies-ULL/CO-META#TabuSearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#TabuSearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+<https://w3id.org/ontologies-ULL/CO-META#TabuSearch> <https://w3id.org/ontologies-ULL/CO-META#hasStart> <https://w3id.org/ontologies-ULL/CO-META#TS_generate> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#Time
+<https://w3id.org/ontologies-ULL/CO-META#Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> .
+<https://w3id.org/ontologies-ULL/CO-META#Time> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance
+<https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood
+<https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#VNS_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#VNS_generate
+<https://w3id.org/ontologies-ULL/CO-META#VNS_generate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_generate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_generate> <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <https://w3id.org/ontologies-ULL/CO-META#VNS_termination> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch
+<https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation
+<https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#MutationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#VNS_termination
+<https://w3id.org/ontologies-ULL/CO-META#VNS_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_termination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood> .
+<https://w3id.org/ontologies-ULL/CO-META#VNS_termination> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#VariableNeighbourhoodSearch
+<https://w3id.org/ontologies-ULL/CO-META#VariableNeighbourhoodSearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#VariableNeighbourhoodSearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+<https://w3id.org/ontologies-ULL/CO-META#VariableNeighbourhoodSearch> <https://w3id.org/ontologies-ULL/CO-META#hasStart> <https://w3id.org/ontologies-ULL/CO-META#VNS_generate> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#city
+<https://w3id.org/ontologies-ULL/CO-META#city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Integer> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#minimum_distance
+<https://w3id.org/ontologies-ULL/CO-META#minimum_distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#minimum_distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#solution_tsp_10
+<https://w3id.org/ontologies-ULL/CO-META#solution_tsp_10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#solution_tsp_10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Permutation> .
+<https://w3id.org/ontologies-ULL/CO-META#solution_tsp_10> <https://w3id.org/ontologies-ULL/CO-META#hasNodeType> <https://w3id.org/ontologies-ULL/CO-META#city> .
+<https://w3id.org/ontologies-ULL/CO-META#solution_tsp_10> <https://w3id.org/ontologies-ULL/CO-META#hasSize> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Evolutionary Algorithms"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid49 <http://www.w3.org/2002/07/owl#members> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#SolutionNode> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Restriction> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Problem> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

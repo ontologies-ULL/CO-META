@@ -1,0 +1,2125 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/ontologies-ULL/CO-META", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "labels" : {
+      "en" : "Combinatory Optimization Metaheuristics"
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "5",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "33",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "115",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "119",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FitnessAssingmentComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "NSGA-II_initial_fitness_assignment_non_dominance"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "NSGA-II_fitness_assignment_non_dominance"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SPEA2_fitness_assignment_raw_fitness"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Assign an individual fitness value to each member of a population"
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#Bit",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Bit"
+    },
+    "id" : "2",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FloatParameter"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "HeuristicInfluence"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PersonalBestInfluence"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#MaxTemperature",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "MaxTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#RCLRandomness",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "RCLRandomness"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#MinTemperature",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "MinTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PheromoneInfluence"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PheromoneEvaporation"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#MutationProbability",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "MutationProbability"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "GlobalBestInfluence"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#InertiaFactor",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "InertiaFactor"
+      }
+    } ],
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PopulationOperatorComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_union",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SPEA2_union"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#TS_substraction",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "TS_substraction"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "NSGA-II_truncation"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "NSGA-II_union"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SPEA2_truncation"
+      }
+    } ],
+    "comment" : {
+      "en" : "Uses set operations to modify populations"
+    },
+    "id" : "13",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceHandlerComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "VNS_change_neighbourhood"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SA_reduce_temperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "ACO_evaporate_pheromones"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PSO_update_velocity"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "ACO_place_pheromones"
+      }
+    } ],
+    "comment" : {
+      "en" : "Updates specific data structures"
+    },
+    "id" : "18",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SelectionComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "NSGA-II_binary_tournament_selection"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SPEA2_binary_tournament_selection"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "EA_binary_tournament_selection"
+      }
+    } ],
+    "comment" : {
+      "en" : "Selects the individuals that will start the next generation"
+    },
+    "id" : "31",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IntegerParameter"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#Iterations",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "Iterations"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#StorageSize",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "StorageSize"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PheromoneAddition"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#Time",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "Time"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PopulationSize",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PopulationSize"
+      }
+    } ],
+    "id" : "42",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SingleSolutionMetaheuristic",
+      "en" : "Single Solution Based Metaheuristic"
+    },
+    "intersection" : [ "44" ],
+    "attributes" : [ "intersection" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModificationComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PSO_apply_velocity"
+      }
+    } ],
+    "subClasses" : [ "31", "46", "47", "13", "48", "49" ],
+    "comment" : {
+      "en" : "Modifies a solution or a population"
+    },
+    "id" : "14",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConstructionComponent"
+    },
+    "subClasses" : [ "59", "57" ],
+    "comment" : {
+      "en" : "Constructs a solution or a group of solutions using heuristic methods"
+    },
+    "id" : "58",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MemeticAlgorithm",
+      "en" : "Memetic Algorithm"
+    },
+    "intersection" : [ "64" ],
+    "attributes" : [ "intersection" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PopulationBasedMetaheuristic",
+      "en" : "Population Based Metaheuristic"
+    },
+    "intersection" : [ "44" ],
+    "attributes" : [ "intersection" ],
+    "id" : "5"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TerminationConditionComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#VNS_termination",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "VNS_termination"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SPEA2_termination"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#ACO_termination",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "ACO_termination"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#TS_termination",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "TS_termination"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#EA_termination",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "EA_termination"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_termination",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "GRASP_termination"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SA_termination",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SA_termination"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PSO_termination",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PSO_termination"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#ILS_termination",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "ILS_termination"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "NSGA-II_termination"
+      }
+    } ],
+    "comment" : {
+      "en" : "Creates the main loop and determines when to stop the algorithm"
+    },
+    "id" : "68",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 1,
+    "label" : {
+      "IRI-based" : "Metaheuristic"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#IteratedLocalSearch",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "IteratedLocalSearch"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#ParticleSwarmOptimization",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "ParticleSwarmOptimization"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "AntColonyOptimization"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#VariableNeighbourhoodSearch",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "VariableNeighbourhoodSearch"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#GRASP",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "GRASP"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SimulatedAnnealing",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SimulatedAnnealing"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SPEA2"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "NSGA-II"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#TabuSearch",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "TabuSearch"
+      }
+    } ],
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#List",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "List"
+    },
+    "id" : "69",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LocalSearchMetaheuristic"
+    },
+    "intersection" : [ "44" ],
+    "attributes" : [ "intersection" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GenerationComponent"
+    },
+    "subClasses" : [ "66", "61" ],
+    "comment" : {
+      "en" : "Generates an initial solution or population"
+    },
+    "id" : "62",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EvolutionaryAlgorithm",
+      "en" : "Evolutionary Algorithms"
+    },
+    "intersection" : [ "5" ],
+    "attributes" : [ "intersection" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "33",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DiversityPreservationComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "NSGA-II_diversity_preservation_crowding_distance"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SPEA2_diversity_preservation_kth_nearest_neighbour"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "NSGA-II_initial_diversity_preservation_crowding_distance"
+      }
+    } ],
+    "comment" : {
+      "en" : "Adjust the fitness value to encourage diversity in the population"
+    },
+    "id" : "81",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "28",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SingleSolutionConstructionComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "GRASP_construction_rcl"
+      }
+    } ],
+    "id" : "59",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MinimizationObjective"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#minimum_distance",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "minimum_distance"
+      }
+    } ],
+    "id" : "83",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#LoopComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LoopComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PSO_iterate_population"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "ACO_iterate_population"
+      }
+    } ],
+    "subClasses" : [ "68" ],
+    "comment" : {
+      "en" : "Creates loops to iterate through data structures or repeat processes until a condition is met. Has two additional properties: hasOutputStart and hasOutputEnd"
+    },
+    "id" : "34",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "84",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PopulationConstructionComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "ACO_construction_pheromones"
+      }
+    } ],
+    "id" : "57",
+    "superClasses" : [ "58" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "8", "44" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "86",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "88",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#Objective",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Objective"
+    },
+    "subClasses" : [ "83", "100" ],
+    "comment" : {
+      "en" : "Objective of an optimization problem. This class should not be instantiated directly; subclasses shoud be used instead"
+    },
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PopulationGenerationComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#EA_generate_population",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "EA_generate_population"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SPEA2_generate_population"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "NSGA-II_generate_population"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PSO_generate_population"
+      }
+    } ],
+    "id" : "61",
+    "superClasses" : [ "62" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#StorageComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StorageComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_archive",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "GRASP_archive"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PSO_archive_global_best"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "TS_tabu_list"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PSO_archive_local_best"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SPEA2_archive"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Components that store data to guide the search"
+    },
+    "id" : "107",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MetaheuristicComponent"
+    },
+    "subClasses" : [ "58", "115", "62", "34", "18", "14", "1", "107" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#Parameter",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Parameter"
+    },
+    "subClasses" : [ "11", "42" ],
+    "comment" : {
+      "undefined" : "Defines the structure of a parameter used by a component"
+    },
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaximizationObjective"
+    },
+    "id" : "100",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AcceptanceComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "ILS_acceptance"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#TS_select_best",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "TS_select_best"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "VNS_acceptance"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "GRASP_acceptance"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PSO_select_best",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PSO_select_best"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PSO_acceptance_local_best"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "PSO_acceptance_global_best"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SA_acceptance_temperature"
+      }
+    } ],
+    "comment" : {
+      "en" : "Accepts a solution out of two or more solutions, according to its fitness. Needs fitness assingment component in multiobjective optimization"
+    },
+    "id" : "115",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#CustomSet",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CustomSet"
+    },
+    "id" : "97",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConstructiveMetaheuristic"
+    },
+    "intersection" : [ "44" ],
+    "attributes" : [ "intersection" ],
+    "id" : "119"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#Restriction",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Restriction"
+    },
+    "comment" : {
+      "en" : "Restriction of an optimization problem"
+    },
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MultiobjectiveComponent"
+    },
+    "subClasses" : [ "81", "0" ],
+    "comment" : {
+      "en" : "Components for multiobjective optimization. Required before acceptance methods"
+    },
+    "id" : "1",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#Integer",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Integer"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#city",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "city"
+      }
+    } ],
+    "id" : "95",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NeighbourhoodComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "TS_neighbourhood"
+      }
+    } ],
+    "id" : "49",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#Permutation",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Permutation"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#solution_tsp_10",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "solution_tsp_10"
+      }
+    } ],
+    "id" : "103",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#MutationComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MutationComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SPEA2_mutation"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "NSGA-II_mutation"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#EA_mutation",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "EA_mutation"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SA_perturbation",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SA_perturbation"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "VNS_perturbation"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "ILS_perturbation"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Introduces small random changes to a solution"
+    },
+    "id" : "47",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SingleSolutionGenerationComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#ILS_generate",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "ILS_generate"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SA_generate",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SA_generate"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#VNS_generate",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "VNS_generate"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#TS_generate",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "TS_generate"
+      }
+    } ],
+    "id" : "66",
+    "superClasses" : [ "62" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#Solution",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Solution"
+    },
+    "subClasses" : [ "69", "103" ],
+    "comment" : {
+      "en" : "Solution codification used in an optimization problem"
+    },
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LocalSearchComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "GRASP_localsearch"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "VNS_localsearch"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "ILS_localsearch"
+      }
+    } ],
+    "comment" : {
+      "en" : "Improves the solution fitness by exploring its neighborhood"
+    },
+    "id" : "46",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#Problem",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Problem"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#TSP",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "TSP"
+      }
+    } ],
+    "comment" : {
+      "en" : "Optimization problem"
+    },
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SolutionNode"
+    },
+    "subClasses" : [ "2", "97", "95" ],
+    "comment" : {
+      "en" : "Smallest part of a solution"
+    },
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrossoverComponent"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "NSGA-II_crossover"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "SPEA2_crossover"
+      }
+    }, {
+      "iri" : "https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover",
+      "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+      "labels" : {
+        "IRI-based" : "EA_order_crossover"
+      }
+    } ],
+    "comment" : {
+      "en" : "Production of one or more individuals from two or more parent individuals"
+    },
+    "id" : "48",
+    "superClasses" : [ "14" ]
+  } ],
+  "property" : [ {
+    "id" : "4",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "17",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "20",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "21",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "22",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "23",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "24",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "25",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "26",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "41",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "43",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "45",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "50",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "51",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "52",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "53",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "54",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "55",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "92",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "93",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "98",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "121",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "124",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "125",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "126",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "127",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "128",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "129",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "130",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "131",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "132",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "133",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "134",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "135",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "136",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "137",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasRestriction",
+    "inverse" : "10",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasRestriction"
+    },
+    "domain" : "8",
+    "attributes" : [ "object" ],
+    "id" : "7"
+  }, {
+    "range" : "3",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "15"
+  }, {
+    "range" : "3",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "17"
+  }, {
+    "range" : "16",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "20"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "21"
+  }, {
+    "range" : "16",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "22"
+  }, {
+    "range" : "3",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "23"
+  }, {
+    "range" : "9",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "24"
+  }, {
+    "range" : "8",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "range" : "3",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#isStartOf",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "isStartOf"
+    },
+    "superproperty" : [ "29" ],
+    "domain" : "28",
+    "attributes" : [ "object" ],
+    "id" : "27"
+  }, {
+    "range" : "16",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputStart",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasOutputStart"
+    },
+    "superproperty" : [ "35" ],
+    "domain" : "33",
+    "attributes" : [ "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "isConnectedTo"
+    },
+    "domain" : "28",
+    "subproperty" : [ "36", "35", "37", "27" ],
+    "attributes" : [ "object", "transitive" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasInputStart",
+    "inverse" : "32",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasInputStart"
+    },
+    "superproperty" : [ "37" ],
+    "domain" : "34",
+    "attributes" : [ "object" ],
+    "id" : "38"
+  }, {
+    "range" : "16",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "9",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "range" : "3",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "43"
+  }, {
+    "range" : "3",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "45"
+  }, {
+    "range" : "16",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "50"
+  }, {
+    "range" : "8",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "12",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "range" : "12",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "range" : "9",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "8",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "58",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "62",
+    "domain" : "61",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "60"
+  }, {
+    "range" : "62",
+    "domain" : "66",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasOutputEnd"
+    },
+    "superproperty" : [ "35" ],
+    "domain" : "34",
+    "attributes" : [ "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasStart",
+    "inverse" : "27",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasStart"
+    },
+    "superproperty" : [ "29" ],
+    "domain" : "44",
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "range" : "14",
+    "domain" : "48",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "71"
+  }, {
+    "range" : "14",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "72"
+  }, {
+    "range" : "58",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
+  }, {
+    "range" : "14",
+    "domain" : "49",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "range" : "14",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "75"
+  }, {
+    "range" : "14",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "range" : "14",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasCodification",
+    "inverse" : "80",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasCodification"
+    },
+    "domain" : "79",
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "domain" : "44",
+    "range" : "64",
+    "id" : "82",
+    "label" : {
+      "IRI-based" : "40",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "isObjectiveOf"
+    },
+    "domain" : "28",
+    "attributes" : [ "object" ],
+    "id" : "87"
+  }, {
+    "range" : "66",
+    "domain" : "61",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasInputEnd",
+    "inverse" : "67",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasInputEnd"
+    },
+    "superproperty" : [ "37" ],
+    "domain" : "33",
+    "attributes" : [ "object" ],
+    "id" : "90"
+  }, {
+    "range" : "59",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "91"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasSize",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "hasSize"
+    },
+    "domain" : "16",
+    "attributes" : [ "functional", "datatype", "someValues" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasObjective",
+    "inverse" : "87",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "hasObjective"
+    },
+    "domain" : "8",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "93"
+  }, {
+    "range" : "3",
+    "domain" : "95",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "range" : "3",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "96"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter",
+    "inverse" : "99",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasParameter"
+    },
+    "domain" : "28",
+    "attributes" : [ "object" ],
+    "id" : "98"
+  }, {
+    "range" : "3",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "101"
+  }, {
+    "range" : "16",
+    "domain" : "103",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "102"
+  }, {
+    "range" : "16",
+    "domain" : "69",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "104"
+  }, {
+    "range" : "12",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "105"
+  }, {
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "106"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "108"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#minValue",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "minValue"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype" ],
+    "id" : "109"
+  }, {
+    "range" : "1",
+    "domain" : "81",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "110"
+  }, {
+    "range" : "19",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "111"
+  }, {
+    "range" : "19",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "112"
+  }, {
+    "range" : "19",
+    "domain" : "107",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "113"
+  }, {
+    "range" : "19",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "114"
+  }, {
+    "range" : "19",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "116"
+  }, {
+    "range" : "19",
+    "domain" : "115",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "117"
+  }, {
+    "range" : "19",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "118"
+  }, {
+    "range" : "40",
+    "domain" : "83",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "120"
+  }, {
+    "range" : "34",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "121"
+  }, {
+    "range" : "19",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "122"
+  }, {
+    "range" : "40",
+    "domain" : "100",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "123"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasSize",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "88",
+    "label" : {
+      "IRI-based" : "hasSize"
+    },
+    "domain" : "16",
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "124"
+  }, {
+    "range" : "19",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "125"
+  }, {
+    "range" : "40",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "126"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#maxValue",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "86",
+    "label" : {
+      "IRI-based" : "maxValue"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype" ],
+    "id" : "127"
+  }, {
+    "range" : "12",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "128"
+  }, {
+    "range" : "8",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "129"
+  }, {
+    "range" : "9",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "130"
+  }, {
+    "range" : "16",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "131"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasOutput",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasOutput"
+    },
+    "superproperty" : [ "29" ],
+    "domain" : "19",
+    "subproperty" : [ "32", "67" ],
+    "attributes" : [ "object" ],
+    "id" : "35"
+  }, {
+    "range" : "3",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "132"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasInput",
+    "inverse" : "35",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasInput"
+    },
+    "superproperty" : [ "29" ],
+    "domain" : "19",
+    "subproperty" : [ "38", "90" ],
+    "attributes" : [ "object" ],
+    "id" : "37"
+  }, {
+    "range" : "40",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "133"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "isRestrictionOf"
+    },
+    "domain" : "28",
+    "attributes" : [ "object" ],
+    "id" : "10"
+  }, {
+    "range" : "42",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "134"
+  }, {
+    "range" : "83",
+    "domain" : "100",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "135"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#isCodificationOf",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "isCodificationOf"
+    },
+    "domain" : "28",
+    "attributes" : [ "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#isParameterOf",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "isParameterOf"
+    },
+    "domain" : "28",
+    "attributes" : [ "object" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasObjective",
+    "inverse" : "87",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "hasObjective"
+    },
+    "domain" : "8",
+    "attributes" : [ "object" ],
+    "id" : "136"
+  }, {
+    "iri" : "https://w3id.org/ontologies-ULL/CO-META#hasNodeType",
+    "baseIri" : "https://w3id.org/ontologies-ULL/CO-META",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasNodeType"
+    },
+    "domain" : "16",
+    "attributes" : [ "object" ],
+    "id" : "137"
+  } ]
+}
