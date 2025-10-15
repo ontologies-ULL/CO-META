@@ -6,11 +6,23 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:cc="http://creativecommons.org/ns#"
      xmlns:CO-META="https://w3id.org/ontologies-ULL/CO-META#">
     <owl:Ontology rdf:about="https://w3id.org/ontologies-ULL/CO-META">
-        <rdfs:label xml:lang="en">Combinatory Optimization Metaheuristics</rdfs:label>
-    </owl:Ontology>
-    
+        <rdfs:label xml:lang="en">CO-META</rdfs:label>
+        <rdfs:label xml:lang="es">CO-META</rdfs:label>
+        <dc:description xml:lang="en">Ontology for Combinatory Optimization Metaheuristics</dc:description>
+        <dc:description xml:lang="es">Ontología para Metaheurísticas de Optimización Combinatoria</dc:description>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        <dc:creator>Miguel Luna García</dc:creator>
+        <dc:creator>Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)</dc:creator>
+        <dc:creator>Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)</dc:creator>
+        <dc:source rdf:resource="https://github.com/ontologies-ULL/CO-META"/>
+        <dcterms:abstract xml:lang="en">This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics.</dcterms:abstract>
+        <dcterms:abstract xml:lang="es">Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria.</dcterms:abstract>
+    </owl:Ontology>    
 
 
     <!-- 
