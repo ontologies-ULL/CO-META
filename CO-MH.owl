@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/CO-MH/"
-     xml:base="http://www.semanticweb.org/CO-MH/"
+<rdf:RDF xmlns="https://w3id.org/ontologies-ULL/CO-META/"
+     xml:base="https://w3id.org/ontologies-ULL/CO-META/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:CO-MH="http://www.semanticweb.org/CO-MH#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/CO-MH">
+     xmlns:CO-META="https://w3id.org/ontologies-ULL/CO-META#">
+    <owl:Ontology rdf:about="https://w3id.org/ontologies-ULL/CO-META">
         <rdfs:label xml:lang="en">Combinatory Optimization Metaheuristics</rdfs:label>
     </owl:Ontology>
     
@@ -24,167 +24,167 @@
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#hasCodification -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasCodification -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#hasCodification">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/CO-MH#isCodificationOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasCodification">
+        <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isCodificationOf"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#Problem"/>
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Problem"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/CO-MH#Solution"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Solution"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#hasInput -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasInput -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#hasInput">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/CO-MH#isConnectedTo"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/CO-MH#hasOutput"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasInput">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutput"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#hasInputEnd -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasInputEnd -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#hasInputEnd">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/CO-MH#hasInput"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/CO-MH#hasOutputEnd"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasInputEnd">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasInput"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#hasInputStart -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasInputStart -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#hasInputStart">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/CO-MH#hasInput"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/CO-MH#hasOutputStart"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasInputStart">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasInput"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutputStart"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#hasNodeType -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasNodeType -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#hasNodeType">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/CO-MH#Solution"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/CO-MH#SolutionNode"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasNodeType">
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Solution"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#hasObjective -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasObjective -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#hasObjective">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/CO-MH#isObjectiveOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/CO-MH#Problem"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/CO-MH#Objective"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasObjective">
+        <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Problem"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Objective"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#hasOutput -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasOutput -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#hasOutput">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/CO-MH#isConnectedTo"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasOutput">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#hasOutputEnd -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#hasOutputEnd">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/CO-MH#hasOutput"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/CO-MH#LoopComponent"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutput"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#hasOutputStart -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasOutputStart -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#hasOutputStart">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/CO-MH#hasOutput"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/CO-MH#LoopComponent"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasOutputStart">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutput"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#hasParameter -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasParameter -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#hasParameter">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/CO-MH#isParameterOf"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/CO-MH#Parameter"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasParameter">
+        <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isParameterOf"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#hasRestriction -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasRestriction -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#hasRestriction">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/CO-MH#isRestrictionOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/CO-MH#Problem"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/CO-MH#Restriction"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasRestriction">
+        <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Problem"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Restriction"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#hasStart -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasStart -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#hasStart">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/CO-MH#isConnectedTo"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/CO-MH#isStartOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasStart">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isStartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#isCodificationOf -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#isCodificationOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#isCodificationOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#isCodificationOf"/>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#isConnectedTo -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#isConnectedTo -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#isConnectedTo">
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#hasOutput"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#isConnectedTo"/>
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasOutput"/>
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#isObjectiveOf -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#isObjectiveOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf"/>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#isParameterOf -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#isParameterOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#isParameterOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#isParameterOf"/>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#isRestrictionOf -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#isRestrictionOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf"/>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#isStartOf -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#isStartOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CO-MH#isStartOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/CO-MH#isConnectedTo"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#isStartOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
     </owl:ObjectProperty>
     
 
@@ -200,29 +200,29 @@
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#hasSize -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasSize -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CO-MH#hasSize">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasSize">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/CO-MH#Solution"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Solution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#maxValue -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#maxValue -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CO-MH#maxValue">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/CO-MH#Parameter"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#maxValue">
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#minValue -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#minValue -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CO-MH#minValue">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/CO-MH#Parameter"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#minValue">
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
@@ -239,42 +239,42 @@
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#AcceptanceComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#AcceptanceComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:comment xml:lang="en">Accepts a solution out of two or more solutions, according to its fitness. Needs fitness assingment component in multiobjective optimization</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#Bit -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Bit -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#Bit">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#SolutionNode"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Bit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ConstructionComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#ConstructionComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:comment xml:lang="en">Constructs a solution or a group of solutions using heuristic methods</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ConstructiveMetaheuristic -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#ConstructiveMetaheuristic">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#isConnectedTo"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CO-MH#ConstructionComponent"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -283,52 +283,52 @@
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#CrossoverComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#CrossoverComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#ModificationComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
         <rdfs:comment xml:lang="en">Production of one or more individuals from two or more parent individuals</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#CustomSet -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#CustomSet -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#CustomSet">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#SolutionNode"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#CustomSet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#DiversityPreservationComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#DiversityPreservationComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#MultiobjectiveComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent"/>
         <rdfs:comment xml:lang="en">Adjust the fitness value to encourage diversity in the population</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#EvolutionaryAlgorithm -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#EvolutionaryAlgorithm">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#PopulationBasedMetaheuristic"/>
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#isConnectedTo"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CO-MH#CrossoverComponent"/>
+                                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#isConnectedTo"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CO-MH#MutationComponent"/>
+                                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#isConnectedTo"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CO-MH#SelectionComponent"/>
+                                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -339,76 +339,76 @@
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#FitnessAssingmentComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#FitnessAssingmentComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#MultiobjectiveComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent"/>
         <rdfs:comment>Assign an individual fitness value to each member of a population</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#FloatParameter -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#FloatParameter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#FloatParameter">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#Parameter"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/CO-MH#IntegerParameter"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#FloatParameter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#GenerationComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GenerationComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#GenerationComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:comment xml:lang="en">Generates an initial solution or population</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#Integer -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Integer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#Integer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#SolutionNode"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Integer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#IntegerParameter -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#IntegerParameter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#IntegerParameter">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#Parameter"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#List -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#List -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#List">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#Solution"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#List">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Solution"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#LocalSearchComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#LocalSearchComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#ModificationComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
         <rdfs:comment xml:lang="en">Improves the solution fitness by exploring its neighborhood</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#LocalSearchMetaheuristic -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#LocalSearchMetaheuristic">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#isConnectedTo"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CO-MH#GenerationComponent"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -417,34 +417,34 @@
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#LoopComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#LoopComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#LoopComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#LoopComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:comment xml:lang="en">Creates loops to iterate through data structures or repeat processes until a condition is met. Has two additional properties: hasOutputStart and hasOutputEnd</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#MaximizationObjective -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#MaximizationObjective">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#Objective"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/CO-MH#MinimizationObjective"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Objective"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#MemeticAlgorithm -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#MemeticAlgorithm">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#EvolutionaryAlgorithm"/>
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#isConnectedTo"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CO-MH#LocalSearchComponent"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -454,52 +454,52 @@
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#Metaheuristic -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Metaheuristic -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#MetaheuristicComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#MinimizationObjective -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#MinimizationObjective">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#Objective"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Objective"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ModificationComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ModificationComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#ModificationComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:comment xml:lang="en">Modifies a solution or a population</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#MultiobjectiveComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#MultiobjectiveComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:comment xml:lang="en">Components for multiobjective optimization. Required before acceptance methods</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#MutationComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MutationComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#MutationComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#ModificationComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MutationComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#hasParameter"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/CO-MH#MutationProbability"/>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationProbability"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Introduces small random changes to a solution</rdfs:comment>
@@ -507,52 +507,52 @@
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#NeighbourhoodComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#NeighbourhoodComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#ModificationComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#Objective -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Objective -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#Objective">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Objective">
         <rdfs:comment xml:lang="en">Objective of an optimization problem. This class should not be instantiated directly; subclasses shoud be used instead</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#Parameter -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Parameter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#Parameter">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Parameter">
         <rdfs:comment>Defines the structure of a parameter used by a component</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#Permutation -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Permutation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#Permutation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#Solution"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Permutation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Solution"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PopulationBasedMetaheuristic -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#PopulationBasedMetaheuristic">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#isConnectedTo"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#PopulationConstructionComponent"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#PopulationGenerationComponent"/>
+                                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent"/>
+                                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -560,58 +560,58 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/CO-MH#SingleSolutionMetaheuristic"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic"/>
         <rdfs:label xml:lang="en">Population Based Metaheuristic</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PopulationConstructionComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#PopulationConstructionComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#ConstructionComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#hasParameter"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/CO-MH#PopulationSize"/>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/CO-MH#SingleSolutionConstructionComponent"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PopulationGenerationComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#PopulationGenerationComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#GenerationComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#hasParameter"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/CO-MH#PopulationSize"/>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/CO-MH#SingleSolutionGenerationComponent"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PopulationOperatorComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#PopulationOperatorComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#ModificationComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
         <rdfs:comment xml:lang="en">Uses set operations to modify populations</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#Problem -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Problem -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#Problem">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Problem">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#hasObjective"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CO-MH#Objective"/>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasObjective"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Objective"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Optimization problem</rdfs:comment>
@@ -619,62 +619,62 @@
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ResourceHandlerComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#ResourceHandlerComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:comment xml:lang="en">Updates specific data structures</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#Restriction -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Restriction -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#Restriction">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Restriction">
         <rdfs:comment xml:lang="en">Restriction of an optimization problem</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SelectionComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SelectionComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#SelectionComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#ModificationComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
         <rdfs:comment xml:lang="en">Selects the individuals that will start the next generation</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SingleSolutionConstructionComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#SingleSolutionConstructionComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#ConstructionComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SingleSolutionGenerationComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#SingleSolutionGenerationComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#GenerationComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SingleSolutionMetaheuristic -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#SingleSolutionMetaheuristic">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#isConnectedTo"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#SingleSolutionConstructionComponent"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#SingleSolutionGenerationComponent"/>
+                                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent"/>
+                                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -687,12 +687,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#Solution -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Solution -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#Solution">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Solution">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#hasSize"/>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasSize"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -701,22 +701,22 @@
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SolutionNode -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SolutionNode -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#SolutionNode">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">
         <rdfs:comment xml:lang="en">Smallest part of a solution</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#StorageComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#StorageComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#StorageComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#StorageComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#hasParameter"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/CO-MH#StorageSize"/>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageSize"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Components that store data to guide the search</rdfs:comment>
@@ -724,14 +724,14 @@
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#TerminationConditionComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/CO-MH#TerminationConditionComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CO-MH#LoopComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/CO-MH#hasParameter"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/CO-MH#Iterations"/>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Iterations"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Creates the main loop and determines when to stop the algorithm</rdfs:comment>
@@ -750,897 +750,897 @@
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ACO_construction_pheromones -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#ACO_construction_pheromones">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#PopulationConstructionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#ACO_evaporate_pheromones"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ACO_evaporate_pheromones -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#ACO_evaporate_pheromones">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#ResourceHandlerComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#ACO_iterate_population"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ACO_iterate_population -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#ACO_iterate_population">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#LoopComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#ACO_place_pheromones"/>
-        <CO-MH:hasOutputEnd rdf:resource="http://www.semanticweb.org/CO-MH#ACO_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones"/>
+        <CO-META:hasOutputEnd rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ACO_place_pheromones -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#ACO_place_pheromones">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#ResourceHandlerComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#ACO_iterate_population"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ACO_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_termination -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#ACO_termination">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#TerminationConditionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#ACO_construction_pheromones"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_termination">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#AntColonyOptimization -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#AntColonyOptimization">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
-        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/CO-MH#ACO_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <CO-META:hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#EA_binary_tournament_selection -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#EA_binary_tournament_selection">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#SelectionComponent"/>
-        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/CO-MH#EA_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
+        <CO-META:hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#EA_generate_population -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EA_generate_population -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#EA_generate_population">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#PopulationGenerationComponent"/>
-        <CO-MH:isStartOf rdf:resource="http://www.semanticweb.org/CO-MH#EvolutionaryAlgorithm"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_generate_population">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"/>
+        <CO-META:isStartOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#EA_mutation -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EA_mutation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#EA_mutation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#MutationComponent"/>
-        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/CO-MH#EA_order_crossover"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_mutation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
+        <CO-META:hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#EA_order_crossover -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#EA_order_crossover">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#CrossoverComponent"/>
-        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/CO-MH#EA_binary_tournament_selection"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"/>
+        <CO-META:hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#EA_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EA_termination -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#EA_termination">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#TerminationConditionComponent"/>
-        <CO-MH:hasInput rdf:resource="http://www.semanticweb.org/CO-MH#EA_mutation"/>
-        <CO-MH:hasInputStart rdf:resource="http://www.semanticweb.org/CO-MH#EA_generate_population"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_termination">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+        <CO-META:hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_mutation"/>
+        <CO-META:hasInputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_generate_population"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#EvolutionaryAlgorithm -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#EvolutionaryAlgorithm">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#GRASP -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GRASP -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#GRASP">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
-        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/CO-MH#GRASP_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <CO-META:hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#GRASP_acceptance -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#GRASP_acceptance">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#AcceptanceComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#GRASP_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#GRASP_archive -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GRASP_archive -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#GRASP_archive">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#StorageComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#GRASP_acceptance"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_archive">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#GRASP_construction_rcl -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#GRASP_construction_rcl">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#SingleSolutionConstructionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#GRASP_localsearch"/>
-        <CO-MH:hasParameter rdf:resource="http://www.semanticweb.org/CO-MH#RCLRandomness"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch"/>
+        <CO-META:hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#GRASP_localsearch -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#GRASP_localsearch">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#LocalSearchComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#GRASP_acceptance"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#GRASP_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GRASP_termination -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#GRASP_termination">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#TerminationConditionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#GRASP_archive"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#GRASP_construction_rcl"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_termination">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_archive"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#GlobalBestInfluence -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#GlobalBestInfluence">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#FloatParameter"/>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#HeuristicInfluence -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#HeuristicInfluence">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#FloatParameter"/>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ILS_acceptance -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#ILS_acceptance">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#AcceptanceComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#ILS_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ILS_generate -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ILS_generate -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#ILS_generate">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#SingleSolutionGenerationComponent"/>
-        <CO-MH:hasOutputStart rdf:resource="http://www.semanticweb.org/CO-MH#ILS_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_generate">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
+        <CO-META:hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ILS_localsearch -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#ILS_localsearch">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#LocalSearchComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#ILS_acceptance"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ILS_perturbation -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#ILS_perturbation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#MutationComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#ILS_localsearch"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ILS_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ILS_termination -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#ILS_termination">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#TerminationConditionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#ILS_acceptance"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#ILS_perturbation"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_termination">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#InertiaFactor -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#InertiaFactor -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#InertiaFactor">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#FloatParameter"/>
-        <CO-MH:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-MH:maxValue>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <CO-META:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-META:maxValue>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#IteratedLocalSearch -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#IteratedLocalSearch -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#IteratedLocalSearch">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
-        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/CO-MH#ILS_generate"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#IteratedLocalSearch">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <CO-META:hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_generate"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#Iterations -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Iterations -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#Iterations">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#IntegerParameter"/>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#Iterations">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"/>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#MaxTemperature -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MaxTemperature -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#MaxTemperature">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#FloatParameter"/>
-        <CO-MH:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-MH:maxValue>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <CO-META:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-META:maxValue>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#MinTemperature -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MinTemperature -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#MinTemperature">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#FloatParameter"/>
-        <CO-MH:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-MH:maxValue>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#MinTemperature">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <CO-META:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-META:maxValue>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#MutationProbability -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MutationProbability -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#MutationProbability">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#FloatParameter"/>
-        <CO-MH:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-MH:maxValue>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <CO-META:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-META:maxValue>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#NSGA-II -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#NSGA-II">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
-        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/CO-MH#NSGA-II_generate_population"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <CO-META:hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#NSGA-II_binary_tournament_selection -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#NSGA-II_binary_tournament_selection">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#SelectionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#NSGA-II_crossover"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#NSGA-II_crossover -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#NSGA-II_crossover">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#CrossoverComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#NSGA-II_mutation"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#NSGA-II_diversity_preservation_crowding_distance -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#NSGA-II_diversity_preservation_crowding_distance">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#DiversityPreservationComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#NSGA-II_truncation"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#NSGA-II_fitness_assignment_non_dominance -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#NSGA-II_fitness_assignment_non_dominance">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#FitnessAssingmentComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#NSGA-II_diversity_preservation_crowding_distance"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#NSGA-II_generate_population -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#NSGA-II_generate_population">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#PopulationGenerationComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#NSGA-II_initial_fitness_assignment_non_dominance"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#NSGA-II_initial_diversity_preservation_crowding_distance -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#NSGA-II_initial_diversity_preservation_crowding_distance">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#DiversityPreservationComponent"/>
-        <CO-MH:hasOutputStart rdf:resource="http://www.semanticweb.org/CO-MH#NSGA-II_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent"/>
+        <CO-META:hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#NSGA-II_initial_fitness_assignment_non_dominance -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#NSGA-II_initial_fitness_assignment_non_dominance">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#FitnessAssingmentComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#NSGA-II_initial_diversity_preservation_crowding_distance"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#NSGA-II_mutation -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#NSGA-II_mutation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#MutationComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#NSGA-II_union"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#NSGA-II_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#NSGA-II_termination">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#TerminationConditionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#NSGA-II_binary_tournament_selection"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#NSGA-II_union"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#NSGA-II_truncation -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#NSGA-II_truncation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#PopulationOperatorComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#NSGA-II_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#NSGA-II_union -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#NSGA-II_union">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#PopulationOperatorComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#NSGA-II_fitness_assignment_non_dominance"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PSO_acceptance_global_best -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PSO_acceptance_global_best">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#AcceptanceComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_archive_global_best"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PSO_acceptance_local_best -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PSO_acceptance_local_best">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#AcceptanceComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_archive_local_best"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PSO_apply_velocity -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PSO_apply_velocity">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#ModificationComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_acceptance_global_best"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_acceptance_local_best"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_iterate_population"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PSO_archive_global_best -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PSO_archive_global_best">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#StorageComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_acceptance_global_best"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_update_velocity"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PSO_archive_local_best -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PSO_archive_local_best">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#StorageComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_acceptance_local_best"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_update_velocity"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PSO_generate_population -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PSO_generate_population">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#PopulationGenerationComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_archive_local_best"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_select_best"/>
-        <CO-MH:hasOutputStart rdf:resource="http://www.semanticweb.org/CO-MH#PSO_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_select_best"/>
+        <CO-META:hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PSO_iterate_population -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PSO_iterate_population">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#LoopComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_update_velocity"/>
-        <CO-MH:hasOutputEnd rdf:resource="http://www.semanticweb.org/CO-MH#PSO_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity"/>
+        <CO-META:hasOutputEnd rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PSO_select_best -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_select_best -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PSO_select_best">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#AcceptanceComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_archive_global_best"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_select_best">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PSO_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_termination -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PSO_termination">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#TerminationConditionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_iterate_population"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_termination">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PSO_update_velocity -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PSO_update_velocity">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#ResourceHandlerComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#PSO_apply_velocity"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#ParticleSwarmOptimization -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ParticleSwarmOptimization -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#ParticleSwarmOptimization">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
-        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/CO-MH#PSO_generate_population"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ParticleSwarmOptimization">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <CO-META:hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PersonalBestInfluence -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PersonalBestInfluence">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#FloatParameter"/>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PheromoneAddition -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PheromoneAddition">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#IntegerParameter"/>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"/>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PheromoneEvaporation -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PheromoneEvaporation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#FloatParameter"/>
-        <CO-MH:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-MH:maxValue>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <CO-META:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-META:maxValue>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PheromoneInfluence -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PheromoneInfluence">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#FloatParameter"/>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#PopulationSize -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PopulationSize -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#PopulationSize">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#IntegerParameter"/>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationSize">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"/>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#RCLRandomness -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#RCLRandomness -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#RCLRandomness">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#FloatParameter"/>
-        <CO-MH:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-MH:maxValue>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <CO-META:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-META:maxValue>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SA_acceptance_temperature -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SA_acceptance_temperature">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#AcceptanceComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SA_reduce_temperature"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SA_generate -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_generate -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SA_generate">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#SingleSolutionGenerationComponent"/>
-        <CO-MH:hasOutputStart rdf:resource="http://www.semanticweb.org/CO-MH#SA_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_generate">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
+        <CO-META:hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SA_perturbation -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_perturbation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SA_perturbation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#MutationComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SA_acceptance_temperature"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_perturbation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SA_reduce_temperature -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SA_reduce_temperature">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#ResourceHandlerComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SA_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SA_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_termination -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SA_termination">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#TerminationConditionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SA_acceptance_temperature"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SA_perturbation"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_termination">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_perturbation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SPEA2 -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SPEA2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
-        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/CO-MH#SPEA2_generate_population"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <CO-META:hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SPEA2_archive -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SPEA2_archive">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#StorageComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SPEA2_binary_tournament_selection"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SPEA2_union"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_union"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SPEA2_binary_tournament_selection -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SPEA2_binary_tournament_selection">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#SelectionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SPEA2_crossover"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SPEA2_crossover -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SPEA2_crossover">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#CrossoverComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SPEA2_mutation"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SPEA2_diversity_preservation_kth_nearest_neighbour -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SPEA2_diversity_preservation_kth_nearest_neighbour">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#DiversityPreservationComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SPEA2_truncation"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SPEA2_fitness_assignment_raw_fitness -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SPEA2_fitness_assignment_raw_fitness">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#FitnessAssingmentComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SPEA2_diversity_preservation_kth_nearest_neighbour"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SPEA2_generate_population -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SPEA2_generate_population">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#PopulationGenerationComponent"/>
-        <CO-MH:hasOutputStart rdf:resource="http://www.semanticweb.org/CO-MH#SPEA2_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"/>
+        <CO-META:hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SPEA2_mutation -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SPEA2_mutation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#MutationComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SPEA2_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SPEA2_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SPEA2_termination">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#TerminationConditionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SPEA2_union"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_union"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SPEA2_truncation -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SPEA2_truncation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#PopulationOperatorComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SPEA2_archive"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SPEA2_union -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_union -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SPEA2_union">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#PopulationOperatorComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#SPEA2_fitness_assignment_raw_fitness"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_union">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#SimulatedAnnealing -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SimulatedAnnealing -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#SimulatedAnnealing">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
-        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/CO-MH#SA_generate"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SimulatedAnnealing">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <CO-META:hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_generate"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#StorageSize -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#StorageSize -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#StorageSize">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#IntegerParameter"/>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#StorageSize">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"/>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#TSP -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TSP -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#TSP">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Problem"/>
-        <CO-MH:hasObjective rdf:resource="http://www.semanticweb.org/CO-MH#minimum_distance"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TSP">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Problem"/>
+        <CO-META:hasObjective rdf:resource="https://w3id.org/ontologies-ULL/CO-META#minimum_distance"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#TS_generate -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TS_generate -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#TS_generate">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#SingleSolutionGenerationComponent"/>
-        <CO-MH:hasOutputStart rdf:resource="http://www.semanticweb.org/CO-MH#TS_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_generate">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
+        <CO-META:hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#TS_neighbourhood -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#TS_neighbourhood">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#NeighbourhoodComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#TS_substraction"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_substraction"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#TS_select_best -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TS_select_best -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#TS_select_best">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#AcceptanceComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#TS_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_select_best">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#TS_substraction -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TS_substraction -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#TS_substraction">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#PopulationOperatorComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#TS_select_best"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_substraction">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_select_best"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#TS_tabu_list -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#TS_tabu_list">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#StorageComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#TS_substraction"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_substraction"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#TS_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TS_termination -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#TS_termination">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#TerminationConditionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#TS_neighbourhood"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#TS_tabu_list"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_termination">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#TabuSearch -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TabuSearch -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#TabuSearch">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
-        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/CO-MH#TS_generate"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TabuSearch">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <CO-META:hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_generate"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#Time -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Time -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#Time">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#IntegerParameter"/>
-        <CO-MH:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-MH:minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#Time">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"/>
+        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#VNS_acceptance -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#VNS_acceptance">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#AcceptanceComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#VNS_change_neighbourhood"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#VNS_change_neighbourhood -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#VNS_change_neighbourhood">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#ResourceHandlerComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#VNS_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#VNS_generate -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_generate -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#VNS_generate">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#SingleSolutionGenerationComponent"/>
-        <CO-MH:hasOutputStart rdf:resource="http://www.semanticweb.org/CO-MH#VNS_termination"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_generate">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
+        <CO-META:hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_termination"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#VNS_localsearch -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#VNS_localsearch">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#LocalSearchComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#VNS_acceptance"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#VNS_perturbation -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#VNS_perturbation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#MutationComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#VNS_localsearch"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#VNS_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_termination -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#VNS_termination">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#TerminationConditionComponent"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#VNS_acceptance"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#VNS_change_neighbourhood"/>
-        <CO-MH:hasOutput rdf:resource="http://www.semanticweb.org/CO-MH#VNS_perturbation"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_termination">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood"/>
+        <CO-META:hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#VariableNeighbourhoodSearch -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VariableNeighbourhoodSearch -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#VariableNeighbourhoodSearch">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
-        <CO-MH:hasStart rdf:resource="http://www.semanticweb.org/CO-MH#VNS_generate"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VariableNeighbourhoodSearch">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <CO-META:hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_generate"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#city -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#city -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#city">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Integer"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#city">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Integer"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#minimum_distance -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#minimum_distance -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#minimum_distance">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#MinimizationObjective"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#minimum_distance">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/CO-MH#solution_tsp_10 -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#solution_tsp_10 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CO-MH#solution_tsp_10">
-        <rdf:type rdf:resource="http://www.semanticweb.org/CO-MH#Permutation"/>
-        <CO-MH:hasNodeType rdf:resource="http://www.semanticweb.org/CO-MH#city"/>
-        <CO-MH:hasSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</CO-MH:hasSize>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#solution_tsp_10">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Permutation"/>
+        <CO-META:hasNodeType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#city"/>
+        <CO-META:hasSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</CO-META:hasSize>
     </owl:NamedIndividual>
     
 
@@ -1653,7 +1653,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#EvolutionaryAlgorithm">
+    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm">
         <rdfs:label xml:lang="en">Evolutionary Algorithms</rdfs:label>
     </rdf:Description>
     
@@ -1670,14 +1670,14 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#Metaheuristic"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#MetaheuristicComponent"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#Objective"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#Parameter"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#Problem"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#Restriction"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#Solution"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/CO-MH#SolutionNode"/>
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Objective"/>
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Problem"/>
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Restriction"/>
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Solution"/>
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
