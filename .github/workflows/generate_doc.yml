@@ -1,0 +1,62 @@
+name: Generate Widoco Documentation
+
+on:
+  push:
+    paths:
+      - "CO-META.owl"   # Solo se dispara si cambia este fichero
+  workflow_dispatch: # permite ejecución manual desde GitHub
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Clonar el repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          
+      # 2. Instalar Java (necesario para Widoco)
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+
+      # 3. Descargar Widoco (última release)
+      - name: Download Widoco
+        run: |
+          wget https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar -O widoco.jar
+
+      # 4. Ejecutar Widoco
+      - name: Generate documentation with Widoco
+        run: |
+          java -jar widoco.jar \
+            -ontFile CO-META.owl \
+            -outFolder docs \
+            -rewriteAll \
+            -lang en-es \
+            -uniteSections \
+            -includeAnnotationProperties
+
+      # 5. Widoco no crea un index.html, así que copiamos la versión inglesa
+      - name: Copy index-en.html to index.html
+        run: |
+          cp docs/index-en.html docs/index.html
+    
+      # 6. Commit y push solo si hay cambios reales
+      - name: Commit and push only if changes exist
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          # Verificar si hay cambios en docs/
+          if git diff --quiet docs; then
+            echo "No changes in docs/, skipping commit"
+          else
+            git add docs
+            git commit -m "Update Widoco documentation [skip ci]"
+            git push https://x-access-token:${PAT_TOKEN}@github.com/ontologies-ULL/CO-META.git HEAD:main
+          fi
