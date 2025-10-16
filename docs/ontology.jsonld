@@ -258,11 +258,56 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"
   } ]
 }, {
+  "@id" : "http://creativecommons.org/ns#license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://creativecommons.org/ns#license" : [ {
+    "@id" : "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"
+  }, {
+    "@value" : "Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"
+  }, {
+    "@value" : "Miguel Luna García"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Ontology for Combinatory Optimization Metaheuristics"
+  }, {
+    "@language" : "es",
+    "@value" : "Ontología para Metaheurísticas de Optimización Combinatoria"
+  } ],
+  "http://purl.org/dc/elements/1.1/source" : [ {
+    "@id" : "https://github.com/ontologies-ULL/CO-META"
+  } ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "es",
+    "@value" : "Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria."
+  }, {
+    "@language" : "en",
+    "@value" : "This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Combinatory Optimization Metaheuristics"
+    "@value" : "CO-META"
+  }, {
+    "@language" : "es",
+    "@value" : "CO-META"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones",
