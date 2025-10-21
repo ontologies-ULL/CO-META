@@ -2,7 +2,7 @@
 <https://w3id.org/ontologies-ULL/CO-META> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by-nc-sa/4.0/> .
 <https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/creator> "Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)" .
 <https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/creator> "Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)" .
-<https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/creator> "Miguel Luna García" .
+<https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/creator> "Miguel Luna García (http://orcid.org/0009-0006-6611-4360)" .
 <https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/description> "Ontology for Combinatory Optimization Metaheuristics"@en .
 <https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/description> "Ontología para Metaheurísticas de Optimización Combinatoria"@es .
 <https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/source> <https://github.com/ontologies-ULL/CO-META> .

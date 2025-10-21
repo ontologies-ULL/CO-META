@@ -14,7 +14,7 @@
         <ns:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dc:creator>Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)</dc:creator>
         <dc:creator>Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)</dc:creator>
-        <dc:creator>Miguel Luna García</dc:creator>
+        <dc:creator>Miguel Luna García (http://orcid.org/0009-0006-6611-4360)</dc:creator>
         <dc:description xml:lang="en">Ontology for Combinatory Optimization Metaheuristics</dc:description>
         <dc:description xml:lang="es">Ontología para Metaheurísticas de Optimización Combinatoria</dc:description>
         <dc:source rdf:resource="https://github.com/ontologies-ULL/CO-META"/>
