@@ -376,6 +376,12 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Production of one or more individuals from two or more parent individuals</rdfs:comment>
     </owl:Class>
     
@@ -936,6 +942,15 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
         <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_termination"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
     </owl:NamedIndividual>
     
 

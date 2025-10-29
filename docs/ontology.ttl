@@ -216,7 +216,11 @@
 
 ###  https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent
 :CrossoverComponent rdf:type owl:Class ;
-                    rdfs:subClassOf :ModificationComponent ;
+                    rdfs:subClassOf :ModificationComponent ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasParameter ;
+                                      owl:hasValue :CrossoverProbability
+                                    ] ;
                     rdfs:comment "Production of one or more individuals from two or more parent individuals"@en .
 
 
@@ -555,6 +559,11 @@
 :AntColonyOptimization rdf:type owl:NamedIndividual ,
                                 :Metaheuristic ;
                        :hasStart :ACO_termination .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability
+:CrossoverProbability rdf:type owl:NamedIndividual ,
+                               :FloatParameter .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection
