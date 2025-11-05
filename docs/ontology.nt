@@ -421,7 +421,7 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent
 <https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses set operations to modify populations"@en .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Modifies populations"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Problem
 <https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

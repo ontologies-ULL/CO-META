@@ -723,7 +723,7 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
-        <rdfs:comment xml:lang="en">Uses set operations to modify populations</rdfs:comment>
+        <rdfs:comment xml:lang="en">Modifies populations</rdfs:comment>
     </owl:Class>
     
 

@@ -430,7 +430,7 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent
 :PopulationOperatorComponent rdf:type owl:Class ;
                              rdfs:subClassOf :ModificationComponent ;
-                             rdfs:comment "Uses set operations to modify populations"@en .
+                             rdfs:comment "Modifies populations"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Problem
