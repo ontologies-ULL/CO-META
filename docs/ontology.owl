@@ -841,6 +841,22 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Iterations"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Creates the main loop and determines when to stop the algorithm</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#StorageComponent -->
 
 
@@ -853,22 +869,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Components that store data to guide the search</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent -->
-
-
-    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
-                <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Iterations"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Creates the main loop and determines when to stop the algorithm</rdfs:comment>
     </owl:Class>
     
 
@@ -911,7 +911,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones"/>
-        <hasOutputEnd rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_termination"/>
+        <hasOutputEnd rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_stop"/>
     </owl:NamedIndividual>
     
 
@@ -926,11 +926,11 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_stop -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_termination">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_stop">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones"/>
     </owl:NamedIndividual>
     
@@ -941,7 +941,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
-        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_termination"/>
+        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_stop"/>
     </owl:NamedIndividual>
     
 
@@ -960,7 +960,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
-        <hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_termination"/>
+        <hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_stop"/>
     </owl:NamedIndividual>
     
 
@@ -995,11 +995,11 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#EA_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EA_stop -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_termination">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_stop">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_mutation"/>
         <hasInputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_generate_population"/>
     </owl:NamedIndividual>
@@ -1020,7 +1020,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
-        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_termination"/>
+        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_stop"/>
     </owl:NamedIndividual>
     
 
@@ -1030,7 +1030,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_termination"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_stop"/>
     </owl:NamedIndividual>
     
 
@@ -1066,11 +1066,11 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#GRASP_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GRASP_stop -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_termination">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_stop">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_archive"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl"/>
     </owl:NamedIndividual>
@@ -1102,7 +1102,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_termination"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_stop"/>
     </owl:NamedIndividual>
     
 
@@ -1112,7 +1112,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_generate">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
-        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_termination"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_stop"/>
     </owl:NamedIndividual>
     
 
@@ -1137,11 +1137,11 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#ILS_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ILS_stop -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_termination">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_stop">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation"/>
     </owl:NamedIndividual>
@@ -1277,7 +1277,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent"/>
-        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop"/>
     </owl:NamedIndividual>
     
 
@@ -1302,11 +1302,11 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union"/>
     </owl:NamedIndividual>
@@ -1318,7 +1318,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop"/>
     </owl:NamedIndividual>
     
 
@@ -1394,7 +1394,7 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_select_best"/>
-        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_termination"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_stop"/>
     </owl:NamedIndividual>
     
 
@@ -1405,7 +1405,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity"/>
-        <hasOutputEnd rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_termination"/>
+        <hasOutputEnd rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_stop"/>
     </owl:NamedIndividual>
     
 
@@ -1420,11 +1420,11 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_stop -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_termination">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_stop">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population"/>
     </owl:NamedIndividual>
     
@@ -1527,7 +1527,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_generate">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
-        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_termination"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_stop"/>
     </owl:NamedIndividual>
     
 
@@ -1547,16 +1547,16 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_termination"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_stop"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_stop -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_termination">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_stop">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_perturbation"/>
     </owl:NamedIndividual>
@@ -1629,7 +1629,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"/>
-        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop"/>
     </owl:NamedIndividual>
     
 
@@ -1639,16 +1639,16 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_union"/>
     </owl:NamedIndividual>
     
@@ -1709,7 +1709,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_generate">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
-        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_termination"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_stop"/>
     </owl:NamedIndividual>
     
 
@@ -1729,7 +1729,18 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_select_best">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_termination"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_stop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TS_stop -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_stop">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list"/>
     </owl:NamedIndividual>
     
 
@@ -1750,17 +1761,6 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_substraction"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#TS_termination -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_termination">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list"/>
     </owl:NamedIndividual>
     
 
@@ -1800,7 +1800,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_termination"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_stop"/>
     </owl:NamedIndividual>
     
 
@@ -1810,7 +1810,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_generate">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
-        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_termination"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_stop"/>
     </owl:NamedIndividual>
     
 
@@ -1835,11 +1835,11 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_termination -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_stop -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_termination">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_stop">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation"/>

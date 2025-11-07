@@ -500,6 +500,16 @@
               rdfs:comment "Smallest part of a solution"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent
+:StoppingCriterionComponent rdf:type owl:Class ;
+                            rdfs:subClassOf :LoopComponent ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasParameter ;
+                                              owl:hasValue :Iterations
+                                            ] ;
+                            rdfs:comment "Creates the main loop and determines when to stop the algorithm"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#StorageComponent
 :StorageComponent rdf:type owl:Class ;
                   rdfs:subClassOf :MetaheuristicComponent ,
@@ -508,16 +518,6 @@
                                     owl:hasValue :StorageSize
                                   ] ;
                   rdfs:comment "Components that store data to guide the search" .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META#TerminationConditionComponent
-:TerminationConditionComponent rdf:type owl:Class ;
-                               rdfs:subClassOf :LoopComponent ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty :hasParameter ;
-                                                 owl:hasValue :Iterations
-                                               ] ;
-                               rdfs:comment "Creates the main loop and determines when to stop the algorithm"@en .
 
 
 #################################################################
@@ -540,7 +540,7 @@
 :ACO_iterate_population rdf:type owl:NamedIndividual ,
                                  :LoopComponent ;
                         :hasOutput :ACO_place_pheromones ;
-                        :hasOutputEnd :ACO_termination .
+                        :hasOutputEnd :ACO_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones
@@ -549,16 +549,16 @@
                       :hasOutput :ACO_iterate_population .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#ACO_termination
-:ACO_termination rdf:type owl:NamedIndividual ,
-                          :TerminationConditionComponent ;
-                 :hasOutput :ACO_construction_pheromones .
+###  https://w3id.org/ontologies-ULL/CO-META#ACO_stop
+:ACO_stop rdf:type owl:NamedIndividual ,
+                   :StoppingCriterionComponent ;
+          :hasOutput :ACO_construction_pheromones .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization
 :AntColonyOptimization rdf:type owl:NamedIndividual ,
                                 :Metaheuristic ;
-                       :hasStart :ACO_termination .
+                       :hasStart :ACO_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability
@@ -569,7 +569,7 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection
 :EA_binary_tournament_selection rdf:type owl:NamedIndividual ,
                                          :SelectionComponent ;
-                                :hasInput :EA_termination .
+                                :hasInput :EA_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#EA_generate_population
@@ -590,11 +590,11 @@
                     :hasInput :EA_binary_tournament_selection .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#EA_termination
-:EA_termination rdf:type owl:NamedIndividual ,
-                         :TerminationConditionComponent ;
-                :hasInput :EA_mutation ;
-                :hasInputStart :EA_generate_population .
+###  https://w3id.org/ontologies-ULL/CO-META#EA_stop
+:EA_stop rdf:type owl:NamedIndividual ,
+                  :StoppingCriterionComponent ;
+         :hasInput :EA_mutation ;
+         :hasInputStart :EA_generate_population .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm
@@ -605,13 +605,13 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#GRASP
 :GRASP rdf:type owl:NamedIndividual ,
                 :Metaheuristic ;
-       :hasStart :GRASP_termination .
+       :hasStart :GRASP_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance
 :GRASP_acceptance rdf:type owl:NamedIndividual ,
                            :AcceptanceComponent ;
-                  :hasOutput :GRASP_termination .
+                  :hasOutput :GRASP_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#GRASP_archive
@@ -633,11 +633,11 @@
                    :hasOutput :GRASP_acceptance .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#GRASP_termination
-:GRASP_termination rdf:type owl:NamedIndividual ,
-                            :TerminationConditionComponent ;
-                   :hasOutput :GRASP_archive ,
-                              :GRASP_construction_rcl .
+###  https://w3id.org/ontologies-ULL/CO-META#GRASP_stop
+:GRASP_stop rdf:type owl:NamedIndividual ,
+                     :StoppingCriterionComponent ;
+            :hasOutput :GRASP_archive ,
+                       :GRASP_construction_rcl .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence
@@ -655,13 +655,13 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance
 :ILS_acceptance rdf:type owl:NamedIndividual ,
                          :AcceptanceComponent ;
-                :hasOutput :ILS_termination .
+                :hasOutput :ILS_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ILS_generate
 :ILS_generate rdf:type owl:NamedIndividual ,
                        :SingleSolutionGenerationComponent ;
-              :hasOutputStart :ILS_termination .
+              :hasOutputStart :ILS_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch
@@ -676,11 +676,11 @@
                   :hasOutput :ILS_localsearch .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#ILS_termination
-:ILS_termination rdf:type owl:NamedIndividual ,
-                          :TerminationConditionComponent ;
-                 :hasOutput :ILS_acceptance ,
-                            :ILS_perturbation .
+###  https://w3id.org/ontologies-ULL/CO-META#ILS_stop
+:ILS_stop rdf:type owl:NamedIndividual ,
+                   :StoppingCriterionComponent ;
+          :hasOutput :ILS_acceptance ,
+                     :ILS_perturbation .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#InertiaFactor
@@ -762,7 +762,7 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance
 :NSGA-II_initial_diversity_preservation_crowding_distance rdf:type owl:NamedIndividual ,
                                                                    :DiversityPreservationComponent ;
-                                                          :hasOutputStart :NSGA-II_termination .
+                                                          :hasOutputStart :NSGA-II_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance
@@ -777,17 +777,17 @@
                   :hasOutput :NSGA-II_union .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_termination
-:NSGA-II_termination rdf:type owl:NamedIndividual ,
-                              :TerminationConditionComponent ;
-                     :hasOutput :NSGA-II_binary_tournament_selection ,
-                                :NSGA-II_union .
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop
+:NSGA-II_stop rdf:type owl:NamedIndividual ,
+                       :StoppingCriterionComponent ;
+              :hasOutput :NSGA-II_binary_tournament_selection ,
+                         :NSGA-II_union .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation
 :NSGA-II_truncation rdf:type owl:NamedIndividual ,
                              :PopulationOperatorComponent ;
-                    :hasOutput :NSGA-II_termination .
+                    :hasOutput :NSGA-II_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union
@@ -835,14 +835,14 @@
                                   :PopulationGenerationComponent ;
                          :hasOutput :PSO_archive_local_best ,
                                     :PSO_select_best ;
-                         :hasOutputStart :PSO_termination .
+                         :hasOutputStart :PSO_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population
 :PSO_iterate_population rdf:type owl:NamedIndividual ,
                                  :LoopComponent ;
                         :hasOutput :PSO_update_velocity ;
-                        :hasOutputEnd :PSO_termination .
+                        :hasOutputEnd :PSO_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_select_best
@@ -851,10 +851,10 @@
                  :hasOutput :PSO_archive_global_best .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#PSO_termination
-:PSO_termination rdf:type owl:NamedIndividual ,
-                          :TerminationConditionComponent ;
-                 :hasOutput :PSO_iterate_population .
+###  https://w3id.org/ontologies-ULL/CO-META#PSO_stop
+:PSO_stop rdf:type owl:NamedIndividual ,
+                   :StoppingCriterionComponent ;
+          :hasOutput :PSO_iterate_population .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity
@@ -916,7 +916,7 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_generate
 :SA_generate rdf:type owl:NamedIndividual ,
                       :SingleSolutionGenerationComponent ;
-             :hasOutputStart :SA_termination .
+             :hasOutputStart :SA_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_perturbation
@@ -928,14 +928,14 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature
 :SA_reduce_temperature rdf:type owl:NamedIndividual ,
                                 :ResourceHandlerComponent ;
-                       :hasOutput :SA_termination .
+                       :hasOutput :SA_stop .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SA_termination
-:SA_termination rdf:type owl:NamedIndividual ,
-                         :TerminationConditionComponent ;
-                :hasOutput :SA_acceptance_temperature ,
-                           :SA_perturbation .
+###  https://w3id.org/ontologies-ULL/CO-META#SA_stop
+:SA_stop rdf:type owl:NamedIndividual ,
+                  :StoppingCriterionComponent ;
+         :hasOutput :SA_acceptance_temperature ,
+                    :SA_perturbation .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2
@@ -978,19 +978,19 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population
 :SPEA2_generate_population rdf:type owl:NamedIndividual ,
                                     :PopulationGenerationComponent ;
-                           :hasOutputStart :SPEA2_termination .
+                           :hasOutputStart :SPEA2_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation
 :SPEA2_mutation rdf:type owl:NamedIndividual ,
                          :MutationComponent ;
-                :hasOutput :SPEA2_termination .
+                :hasOutput :SPEA2_stop .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_termination
-:SPEA2_termination rdf:type owl:NamedIndividual ,
-                            :TerminationConditionComponent ;
-                   :hasOutput :SPEA2_union .
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop
+:SPEA2_stop rdf:type owl:NamedIndividual ,
+                     :StoppingCriterionComponent ;
+            :hasOutput :SPEA2_union .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation
@@ -1026,7 +1026,7 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_generate
 :TS_generate rdf:type owl:NamedIndividual ,
                       :SingleSolutionGenerationComponent ;
-             :hasOutputStart :TS_termination .
+             :hasOutputStart :TS_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood
@@ -1038,7 +1038,14 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_select_best
 :TS_select_best rdf:type owl:NamedIndividual ,
                          :AcceptanceComponent ;
-                :hasOutput :TS_termination .
+                :hasOutput :TS_stop .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TS_stop
+:TS_stop rdf:type owl:NamedIndividual ,
+                  :StoppingCriterionComponent ;
+         :hasOutput :TS_neighbourhood ,
+                    :TS_tabu_list .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_substraction
@@ -1051,13 +1058,6 @@
 :TS_tabu_list rdf:type owl:NamedIndividual ,
                        :StorageComponent ;
               :hasOutput :TS_substraction .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META#TS_termination
-:TS_termination rdf:type owl:NamedIndividual ,
-                         :TerminationConditionComponent ;
-                :hasOutput :TS_neighbourhood ,
-                           :TS_tabu_list .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TabuSearch
@@ -1081,13 +1081,13 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood
 :VNS_change_neighbourhood rdf:type owl:NamedIndividual ,
                                    :ResourceHandlerComponent ;
-                          :hasOutput :VNS_termination .
+                          :hasOutput :VNS_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_generate
 :VNS_generate rdf:type owl:NamedIndividual ,
                        :SingleSolutionGenerationComponent ;
-              :hasOutputStart :VNS_termination .
+              :hasOutputStart :VNS_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch
@@ -1102,12 +1102,12 @@
                   :hasOutput :VNS_localsearch .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#VNS_termination
-:VNS_termination rdf:type owl:NamedIndividual ,
-                          :TerminationConditionComponent ;
-                 :hasOutput :VNS_acceptance ,
-                            :VNS_change_neighbourhood ,
-                            :VNS_perturbation .
+###  https://w3id.org/ontologies-ULL/CO-META#VNS_stop
+:VNS_stop rdf:type owl:NamedIndividual ,
+                   :StoppingCriterionComponent ;
+          :hasOutput :VNS_acceptance ,
+                     :VNS_change_neighbourhood ,
+                     :VNS_perturbation .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VariableNeighbourhoodSearch
