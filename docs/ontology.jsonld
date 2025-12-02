@@ -319,54 +319,6 @@
     "@value" : "CO-META"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#LoopComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ACO_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ACO_stop",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -375,15 +327,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ACO_stop"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Bit",
@@ -424,6 +367,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#maxValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#CustomSet",
@@ -442,63 +393,8 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasInput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#EA_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#EA_generate_population",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#isStartOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#EA_mutation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MutationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasInput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasInput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#EA_stop",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasInput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#EA_mutation"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasInputStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#EA_generate_population"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Evolutionary Algorithms"
-  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid11"
   } ]
@@ -521,65 +417,6 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#GRASP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_archive",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StorageComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasParameter" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#RCLRandomness"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_stop",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_archive"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -588,87 +425,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ILS_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ILS_generate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutputStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ILS_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MutationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ILS_stop",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#InertiaFactor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#maxValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "1"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Integer",
@@ -683,22 +439,13 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#IteratedLocalSearch",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ILS_generate"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Iterations",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "0"
   } ]
 }, {
@@ -734,20 +481,6 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#MaxTemperature",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#maxValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "1"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -772,20 +505,6 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#MinTemperature",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#maxValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "1"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0"
-  } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -838,116 +557,6 @@
     "@value" : "0"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutputStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MutationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -961,175 +570,16 @@
     "@value" : "Objective of an optimization problem. This class should not be instantiated directly; subclasses shoud be used instead"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StorageComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StorageComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_select_best"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutputStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#LoopComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_select_best",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_stop",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Defines the structure of a parameter used by a component"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ParticleSwarmOptimization",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Permutation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Solution"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#maxValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "1"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic",
@@ -1183,7 +633,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "0"
   } ]
 }, {
@@ -1195,20 +645,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid39"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#RCLRandomness",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#maxValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "1"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent",
@@ -1228,154 +664,6 @@
     "@value" : "Restriction of an optimization problem"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SA_generate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutputStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SA_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SA_perturbation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MutationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SA_reduce_temperature",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SA_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SA_stop",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SA_acceptance_temperature"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SA_perturbation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StorageComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_union"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutputStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MutationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_union"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_union",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1384,15 +672,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SimulatedAnnealing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SA_generate"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent",
@@ -1467,161 +746,14 @@
     "@value" : "0"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#TSP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Problem"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasObjective" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#minimum_distance"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_generate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutputStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_substraction"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_select_best",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_stop",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_substraction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_select_best"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StorageComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_substraction"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#TabuSearch",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#TS_generate"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Time",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_generate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutputStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_stop"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MutationComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_stop",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasOutput" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#VariableNeighbourhoodSearch",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasStart" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VNS_generate"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#city",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Integer"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasCodification",
@@ -1803,24 +935,5 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#minimum_distance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#solution_tsp_10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Permutation"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasNodeType" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#city"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#hasSize" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "10"
   } ]
 } ]
