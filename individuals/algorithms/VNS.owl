@@ -28,6 +28,16 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_VariableNeighbourhoodSearch -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_VariableNeighbourhoodSearch">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <hasDataStructure rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_neighbourhood"/>
+        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_generate"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance">
@@ -40,8 +50,9 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_stop"/>
+        <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_neighbourhood"/>
     </owl:NamedIndividual>
     
 
@@ -64,11 +75,20 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_neighbourhood -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_neighbourhood">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch"/>
+        <readsData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_neighbourhood"/>
     </owl:NamedIndividual>
     
 
@@ -80,15 +100,6 @@
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#VariableNeighbourhoodSearch -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VariableNeighbourhoodSearch">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
-        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_generate"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

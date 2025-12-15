@@ -28,13 +28,24 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_AntColonyOptimization -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_AntColonyOptimization">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <hasDataStructure rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromones"/>
+        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_stop"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones"/>
-        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence"/>
-        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_heuristic_influence"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromone_influence"/>
+        <readsData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromones"/>
     </owl:NamedIndividual>
     
 
@@ -42,9 +53,19 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population"/>
-        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromone_evaporation"/>
+        <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_heuristic_influence -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_heuristic_influence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
     </owl:NamedIndividual>
     
 
@@ -59,12 +80,49 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_pheromone_addition -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromone_addition">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"/>
+        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_pheromone_evaporation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromone_evaporation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</maxValue>
+        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_pheromone_influence -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromone_influence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_pheromones -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromones">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population"/>
-        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromone_addition"/>
+        <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromones"/>
     </owl:NamedIndividual>
     
 
@@ -74,52 +132,6 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_stop">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#AntColonyOptimization">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
-        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_stop"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
-        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"/>
-        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
-        <maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</maxValue>
-        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
-        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
     </owl:NamedIndividual>
 </rdf:RDF>
 

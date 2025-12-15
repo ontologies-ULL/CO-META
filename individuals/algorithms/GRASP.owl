@@ -46,15 +46,6 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#GRASP_archive -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_archive">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl">
@@ -78,7 +69,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_stop">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_archive"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl"/>
     </owl:NamedIndividual>
     

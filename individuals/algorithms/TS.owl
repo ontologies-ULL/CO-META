@@ -28,6 +28,16 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TS_TabuSearch -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_TabuSearch">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <hasDataStructure rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list"/>
+        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_generate"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#TS_generate -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_generate">
@@ -59,8 +69,17 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_stop">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_store_visited"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TS_store_visited -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_store_visited">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list"/>
+        <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list"/>
     </owl:NamedIndividual>
     
 
@@ -70,6 +89,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_substraction">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_select_best"/>
+        <readsData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list"/>
     </owl:NamedIndividual>
     
 
@@ -77,17 +97,7 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_tabu_list">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_substraction"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#TabuSearch -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TabuSearch">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
-        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_generate"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

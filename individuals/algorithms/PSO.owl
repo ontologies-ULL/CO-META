@@ -28,18 +28,18 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_GlobalBestInfluence -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_GlobalBestInfluence">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
         <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#InertiaFactor -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_InertiaFactor -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor">
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_InertiaFactor">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
         <maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</maxValue>
         <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
@@ -47,20 +47,22 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_ParticleSwarmOptimization -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_ParticleSwarmOptimization">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <hasDataStructure rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best"/>
+        <hasDataStructure rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"/>
+        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_PersonalBestInfluence -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_PersonalBestInfluence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
     </owl:NamedIndividual>
     
 
@@ -69,9 +71,8 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_update_local_best"/>
+        <readsData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_velocities"/>
     </owl:NamedIndividual>
     
 
@@ -79,9 +80,7 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_global_best"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
     </owl:NamedIndividual>
     
 
@@ -89,9 +88,7 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_acceptance_local_best"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
     </owl:NamedIndividual>
     
 
@@ -100,9 +97,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_select_best"/>
-        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_stop"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_store_local_best"/>
     </owl:NamedIndividual>
     
 
@@ -117,15 +112,6 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_select_best -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_select_best">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_stop -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_stop">
@@ -135,32 +121,66 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_store_global_best -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_store_global_best">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_stop"/>
+        <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_store_local_best -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_store_local_best">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_store_global_best"/>
+        <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"/>
+        <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_velocities"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_update_global_best -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_update_global_best">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population"/>
+        <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_update_local_best -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_update_local_best">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_update_global_best"/>
+        <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity"/>
-        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence"/>
-        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor"/>
-        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_GlobalBestInfluence"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_InertiaFactor"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_PersonalBestInfluence"/>
+        <readsData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best"/>
+        <readsData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"/>
+        <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_velocities"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#ParticleSwarmOptimization -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_velocities -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ParticleSwarmOptimization">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
-        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
-        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_velocities">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

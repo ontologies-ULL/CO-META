@@ -32,6 +32,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <hasDataStructure rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive"/>
         <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population"/>
     </owl:NamedIndividual>
     
@@ -40,9 +41,7 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_union"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
     </owl:NamedIndividual>
     
 
@@ -110,11 +109,21 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_store_solutions -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_store_solutions">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection"/>
+        <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_store_solutions"/>
     </owl:NamedIndividual>
     
 
@@ -124,6 +133,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_union">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness"/>
+        <readsData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
