@@ -218,18 +218,11 @@
   } ]
 }, {
   "@id" : "_:genid49",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#StorageSize"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
-  } ]
-}, {
-  "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure"
+    }, {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
     }, {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
@@ -381,6 +374,23 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Updates specific data structures"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Data structure that stores information used by the algorithm"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent",
@@ -647,16 +657,6 @@
     "@id" : "_:genid39"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Updates specific data structures"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Restriction",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -725,17 +725,6 @@
     "@id" : "_:genid48"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#StorageComponent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Components that store data to guide the search"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
-  }, {
-    "@id" : "_:genid49"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#StorageSize",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -766,6 +755,15 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isCodificationOf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasDataStructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasInput",
@@ -935,5 +933,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#readsData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#writesData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure"
   } ]
 } ]

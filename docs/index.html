@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics.", "dateReleased":"Tue Dec 02 22:42:14 UTC 2025", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics.", "dateReleased":"Mon Dec 15 16:40:29 UTC 2025", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -138,6 +138,18 @@ This ontology has the following classes and properties.</span>
       <a href="#CustomSet"
          title="https://w3id.org/ontologies-ULL/CO-META#CustomSet">
          <span>Custom Set</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DataHandlerComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">
+         <span>Data Handler Component</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DataStructure"
+         title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">
+         <span>Data Structure</span>
       </a>
    </li>
    <li>
@@ -290,12 +302,6 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#ResourceHandlerComponent"
-         title="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent">
-         <span>Resource Handler Component</span>
-      </a>
-   </li>
-   <li>
       <a href="#Restriction"
          title="https://w3id.org/ontologies-ULL/CO-META#Restriction">
          <span>Restriction</span>
@@ -340,12 +346,6 @@ This ontology has the following classes and properties.</span>
          <span>Stopping Criterion Component</span>
       </a>
    </li>
-   <li>
-      <a href="#StorageComponent"
-         title="https://w3id.org/ontologies-ULL/CO-META#StorageComponent">
-         <span>Storage Component</span>
-      </a>
-   </li>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
@@ -353,6 +353,12 @@ This ontology has the following classes and properties.</span>
       <a href="#hasCodification"
          title="https://w3id.org/ontologies-ULL/CO-META#hasCodification">
          <span>has Codification</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasDataStructure"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasDataStructure">
+         <span>has Data Structure</span>
       </a>
    </li>
    <li>
@@ -429,6 +435,18 @@ This ontology has the following classes and properties.</span>
       <a href="#isStartOf"
          title="https://w3id.org/ontologies-ULL/CO-META#isStartOf">
          <span>is Start Of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#readsData"
+         title="https://w3id.org/ontologies-ULL/CO-META#readsData">
+         <span>reads Data</span>
+      </a>
+   </li>
+   <li>
+      <a href="#writesData"
+         title="https://w3id.org/ontologies-ULL/CO-META#writesData">
+         <span>writes Data</span>
       </a>
    </li>
 </ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
@@ -537,6 +555,8 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#ConstructiveMetaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic"> <span>Constructive Metaheuristic</span> </a></li>
   <li><a href="#CrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"> <span>Crossover Component</span> </a></li>
   <li><a href="#CustomSet" title="https://w3id.org/ontologies-ULL/CO-META#CustomSet"> <span>Custom Set</span> </a></li>
+  <li><a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"> <span>Data Handler Component</span> </a></li>
+  <li><a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure"> <span>Data Structure</span> </a></li>
   <li><a href="#DiversityPreservationComponent" title="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent"> <span>Diversity Preservation Component</span> </a></li>
   <li><a href="#EvolutionaryAlgorithm" title="https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm"> <span>Evolutionary Algorithm</span> </a></li>
   <li><a href="#FitnessAssingmentComponent" title="https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent"> <span>Fitness Assingment Component</span> </a></li>
@@ -563,7 +583,6 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#PopulationGenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"> <span>Population Generation Component</span> </a></li>
   <li><a href="#PopulationOperatorComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"> <span>Population Operator Component</span> </a></li>
   <li><a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem"> <span>Problem</span> </a></li>
-  <li><a href="#ResourceHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent"> <span>Resource Handler Component</span> </a></li>
   <li><a href="#Restriction" title="https://w3id.org/ontologies-ULL/CO-META#Restriction"> <span>Restriction</span> </a></li>
   <li><a href="#SelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"> <span>Selection Component</span> </a></li>
   <li><a href="#SingleSolutionMetaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic">Single Solution Based Metaheuristic</a></li>
@@ -572,7 +591,6 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#Solution" title="https://w3id.org/ontologies-ULL/CO-META#Solution"> <span>Solution</span> </a></li>
   <li><a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"> <span>Solution Node</span> </a></li>
   <li><a href="#StoppingCriterionComponent" title="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"> <span>Stopping Criterion Component</span> </a></li>
-  <li><a href="#StorageComponent" title="https://w3id.org/ontologies-ULL/CO-META#StorageComponent"> <span>Storage Component</span> </a></li>
  </ul>
  <div class="entity" id="AcceptanceComponent">
   <h3>Acceptance Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
@@ -658,6 +676,48 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Solution Node</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataHandlerComponent">
+  <h3>Data Handler Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent</p>
+  <div class="comment">
+   <span class="markdown">Updates specific data structures</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#writesData" title="https://w3id.org/ontologies-ULL/CO-META#writesData">writes Data</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataStructure">
+  <h3>Data Structure<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#DataStructure</p>
+  <div class="comment">
+   <span class="markdown">Data structure that stores information used by the algorithm</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasDataStructure" title="https://w3id.org/ontologies-ULL/CO-META#hasDataStructure">has Data Structure</a> <sup class="type-op" title="object property">op</sup>, <a href="#readsData" title="https://w3id.org/ontologies-ULL/CO-META#readsData">reads Data</a> <sup class="type-op" title="object property">op</sup>, <a href="#writesData" title="https://w3id.org/ontologies-ULL/CO-META#writesData">writes Data</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objective</a> <sup class="type-c" title="class">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problem</a> <sup class="type-c" title="class">c</sup>, <a href="#Restriction" title="https://w3id.org/ontologies-ULL/CO-META#Restriction">Restriction</a> <sup class="type-c" title="class">c</sup>, <a href="#Solution" title="https://w3id.org/ontologies-ULL/CO-META#Solution">Solution</a> <sup class="type-c" title="class">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Solution Node</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -996,7 +1056,7 @@ This section provides details for each class and property defined by CO-META.
     is disjoint with
    </dt>
    <dd>
-    <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problem</a> <sup class="type-c" title="class">c</sup>, <a href="#Restriction" title="https://w3id.org/ontologies-ULL/CO-META#Restriction">Restriction</a> <sup class="type-c" title="class">c</sup>, <a href="#Solution" title="https://w3id.org/ontologies-ULL/CO-META#Solution">Solution</a> <sup class="type-c" title="class">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Solution Node</a> <sup class="type-c" title="class">c</sup>
+    <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Data Structure</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problem</a> <sup class="type-c" title="class">c</sup>, <a href="#Restriction" title="https://w3id.org/ontologies-ULL/CO-META#Restriction">Restriction</a> <sup class="type-c" title="class">c</sup>, <a href="#Solution" title="https://w3id.org/ontologies-ULL/CO-META#Solution">Solution</a> <sup class="type-c" title="class">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Solution Node</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1029,7 +1089,7 @@ This section provides details for each class and property defined by CO-META.
     is disjoint with
    </dt>
    <dd>
-    <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objective</a> <sup class="type-c" title="class">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problem</a> <sup class="type-c" title="class">c</sup>, <a href="#Restriction" title="https://w3id.org/ontologies-ULL/CO-META#Restriction">Restriction</a> <sup class="type-c" title="class">c</sup>, <a href="#Solution" title="https://w3id.org/ontologies-ULL/CO-META#Solution">Solution</a> <sup class="type-c" title="class">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Solution Node</a> <sup class="type-c" title="class">c</sup>
+    <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Data Structure</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objective</a> <sup class="type-c" title="class">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problem</a> <sup class="type-c" title="class">c</sup>, <a href="#Restriction" title="https://w3id.org/ontologies-ULL/CO-META#Restriction">Restriction</a> <sup class="type-c" title="class">c</sup>, <a href="#Solution" title="https://w3id.org/ontologies-ULL/CO-META#Solution">Solution</a> <sup class="type-c" title="class">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Solution Node</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1135,22 +1195,7 @@ This section provides details for each class and property defined by CO-META.
     is disjoint with
    </dt>
    <dd>
-    <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objective</a> <sup class="type-c" title="class">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#Restriction" title="https://w3id.org/ontologies-ULL/CO-META#Restriction">Restriction</a> <sup class="type-c" title="class">c</sup>, <a href="#Solution" title="https://w3id.org/ontologies-ULL/CO-META#Solution">Solution</a> <sup class="type-c" title="class">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Solution Node</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="ResourceHandlerComponent">
-  <h3>Resource Handler Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent</p>
-  <div class="comment">
-   <span class="markdown">Updates specific data structures</span>
-  </div>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>
+    <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Data Structure</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objective</a> <sup class="type-c" title="class">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#Restriction" title="https://w3id.org/ontologies-ULL/CO-META#Restriction">Restriction</a> <sup class="type-c" title="class">c</sup>, <a href="#Solution" title="https://w3id.org/ontologies-ULL/CO-META#Solution">Solution</a> <sup class="type-c" title="class">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Solution Node</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1171,7 +1216,7 @@ This section provides details for each class and property defined by CO-META.
     is disjoint with
    </dt>
    <dd>
-    <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objective</a> <sup class="type-c" title="class">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problem</a> <sup class="type-c" title="class">c</sup>, <a href="#Solution" title="https://w3id.org/ontologies-ULL/CO-META#Solution">Solution</a> <sup class="type-c" title="class">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Solution Node</a> <sup class="type-c" title="class">c</sup>
+    <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Data Structure</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objective</a> <sup class="type-c" title="class">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problem</a> <sup class="type-c" title="class">c</sup>, <a href="#Solution" title="https://w3id.org/ontologies-ULL/CO-META#Solution">Solution</a> <sup class="type-c" title="class">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Solution Node</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1277,7 +1322,7 @@ This section provides details for each class and property defined by CO-META.
     is disjoint with
    </dt>
    <dd>
-    <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objective</a> <sup class="type-c" title="class">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problem</a> <sup class="type-c" title="class">c</sup>, <a href="#Restriction" title="https://w3id.org/ontologies-ULL/CO-META#Restriction">Restriction</a> <sup class="type-c" title="class">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Solution Node</a> <sup class="type-c" title="class">c</sup>
+    <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Data Structure</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objective</a> <sup class="type-c" title="class">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problem</a> <sup class="type-c" title="class">c</sup>, <a href="#Restriction" title="https://w3id.org/ontologies-ULL/CO-META#Restriction">Restriction</a> <sup class="type-c" title="class">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Solution Node</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1304,7 +1349,7 @@ This section provides details for each class and property defined by CO-META.
     is disjoint with
    </dt>
    <dd>
-    <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objective</a> <sup class="type-c" title="class">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problem</a> <sup class="type-c" title="class">c</sup>, <a href="#Restriction" title="https://w3id.org/ontologies-ULL/CO-META#Restriction">Restriction</a> <sup class="type-c" title="class">c</sup>, <a href="#Solution" title="https://w3id.org/ontologies-ULL/CO-META#Solution">Solution</a> <sup class="type-c" title="class">c</sup>
+    <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Data Structure</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objective</a> <sup class="type-c" title="class">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problem</a> <sup class="type-c" title="class">c</sup>, <a href="#Restriction" title="https://w3id.org/ontologies-ULL/CO-META#Restriction">Restriction</a> <sup class="type-c" title="class">c</sup>, <a href="#Solution" title="https://w3id.org/ontologies-ULL/CO-META#Solution">Solution</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1323,25 +1368,11 @@ This section provides details for each class and property defined by CO-META.
    </dd>
   </dl>
  </div>
- <div class="entity" id="StorageComponent">
-  <h3>Storage Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#StorageComponent</p>
-  <div class="comment">
-   <span class="markdown">Components that store data to guide the search</span>
-  </div>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
   <li><a href="#hasCodification" title="https://w3id.org/ontologies-ULL/CO-META#hasCodification"> <span>has Codification</span> </a></li>
+  <li><a href="#hasDataStructure" title="https://w3id.org/ontologies-ULL/CO-META#hasDataStructure"> <span>has Data Structure</span> </a></li>
   <li><a href="#hasInput" title="https://w3id.org/ontologies-ULL/CO-META#hasInput"> <span>has Input</span> </a></li>
   <li><a href="#hasInputEnd" title="https://w3id.org/ontologies-ULL/CO-META#hasInputEnd"> <span>has Input End</span> </a></li>
   <li><a href="#hasInputStart" title="https://w3id.org/ontologies-ULL/CO-META#hasInputStart"> <span>has Input Start</span> </a></li>
@@ -1355,6 +1386,8 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#hasStart" title="https://w3id.org/ontologies-ULL/CO-META#hasStart"> <span>has Start</span> </a></li>
   <li><a href="#isConnectedTo" title="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"> <span>is Connected To</span> </a></li>
   <li><a href="#isStartOf" title="https://w3id.org/ontologies-ULL/CO-META#isStartOf"> <span>is Start Of</span> </a></li>
+  <li><a href="#readsData" title="https://w3id.org/ontologies-ULL/CO-META#readsData"> <span>reads Data</span> </a></li>
+  <li><a href="#writesData" title="https://w3id.org/ontologies-ULL/CO-META#writesData"> <span>writes Data</span> </a></li>
  </ul>
  <div class="entity" id="hasCodification">
   <h3>has Codification<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
@@ -1378,6 +1411,26 @@ This section provides details for each class and property defined by CO-META.
     </dt>
     <dd>
      <a href="https://w3id.org/ontologies-ULL/CO-META#isCodificationOf" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#isCodificationOf">is Codification Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDataStructure">
+  <h3>has Data Structure<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasDataStructure</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Data Structure</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1699,6 +1752,46 @@ This section provides details for each class and property defined by CO-META.
     </dt>
     <dd>
      <a href="#hasStart" title="https://w3id.org/ontologies-ULL/CO-META#hasStart">has Start</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="readsData">
+  <h3>reads Data<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#readsData</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent" target="_blank" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Data Structure</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="writesData">
+  <h3>writes Data<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#writesData</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">Data Handler Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Data Structure</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
