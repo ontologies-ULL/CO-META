@@ -80,10 +80,11 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           # Verificar si hay cambios en docs/
-          git add docs
-          if git diff --staged --quiet; then
+          if git diff --quiet docs; then
             echo "No changes in docs/, skipping commit"
           else
-            git commit -m "Update Widoco documentation ($VERSION) [skip ci]"
+            git add docs
+            git commit -m "Auto-update documentation (version ${{ steps.version.outputs.version }} + latest)" || echo "No changes to commit"
+            git pull --rebase origin main
             git push https://x-access-token:${PAT_TOKEN}@github.com/ontologies-ULL/CO-META.git HEAD:main
           fi
