@@ -3,9 +3,9 @@ name: Generate Widoco Documentation
 on:
   push:
     paths:
-      - "CO-META.owl"   # Solo se dispara si cambia este fichero
+      - "CO-META.owl" # Solo se dispara si cambia este fichero
   workflow_dispatch: # permite ejecución manual desde GitHub
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,36 +16,63 @@ jobs:
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.PAT_TOKEN }}
-          
+
       # 2. Instalar Java (necesario para Widoco)
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          java-version: '11'
-          distribution: 'temurin'
+          java-version: "11"
+          distribution: "temurin"
 
       # 3. Descargar Widoco (última release)
       - name: Download Widoco
         run: |
           wget https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar -O widoco.jar
 
-      # 4. Ejecutar Widoco
+      # 4. Extraer versión de la ontología
+      - name: Extract version from TTL
+        id: version
+        run: |
+          VERSION=$(grep -oP 'owl:versionIRI\s*\S*"[^"]+/(\K[^"]+)' CO-META.owl | head -n 1)
+          if [ -z "$VERSION" ]; then
+            echo "Version not found in owl:versionIRI in CO-META.owl"
+            exit 1
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Detected version: $VERSION"
+
+      # 5 Clean docs/latest directory
+      - name: Reset docs/latest directory
+        run: |
+          rm -rf docs/latest
+          mkdir -p docs/latest
+
+      # 6. Ejecutar Widoco
       - name: Generate documentation with Widoco
         run: |
           java -jar widoco.jar \
             -ontFile CO-META.owl \
-            -outFolder docs \
+            -outFolder docs/latest \
             -rewriteAll \
             -lang en-es \
             -uniteSections \
             -includeAnnotationProperties
 
-      # 5. Widoco no crea un index.html, así que copiamos la versión inglesa
-      - name: Copy index-en.html to index.html
+      # 7. Copiar carpeta individuos si hay cambios
+      - name: Copy individuals folder
+        if: ${{ hashFiles('individuals/**') != '' }}
         run: |
-          cp docs/index-en.html docs/index.html
-    
-      # 6. Commit y push solo si hay cambios reales
+          mkdir -p docs/latest/individuals
+          cp -R individuals/* docs/latest/individuals/
+
+      # 8. Copiar documentación versionada
+      - name: Copy versioned documentation
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          mkdir -p docs/$VERSION
+          cp -R docs/latest/* docs/$VERSION/
+
+      # 9. Commit y push solo si hay cambios reales
       - name: Commit and push only if changes exist
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
@@ -53,10 +80,10 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           # Verificar si hay cambios en docs/
-          if git diff --quiet docs; then
+          git add docs
+          if git diff --staged --quiet; then
             echo "No changes in docs/, skipping commit"
           else
-            git add docs
-            git commit -m "Update Widoco documentation [skip ci]"
+            git commit -m "Update Widoco documentation ($VERSION) [skip ci]"
             git push https://x-access-token:${PAT_TOKEN}@github.com/ontologies-ULL/CO-META.git HEAD:main
           fi
