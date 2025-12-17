@@ -58,6 +58,12 @@
                  rdfs:range :Solution .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasDataStructure
+:hasDataStructure rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Metaheuristic ;
+                  rdfs:range :DataStructure .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasInput
 :hasInput rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :isConnectedTo ;
@@ -158,6 +164,18 @@
            rdfs:subPropertyOf :isConnectedTo .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#readsData
+:readsData rdf:type owl:ObjectProperty ;
+           rdfs:domain :MetaheuristicComponent ;
+           rdfs:range :DataStructure .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#writesData
+:writesData rdf:type owl:ObjectProperty ;
+            rdfs:domain :DataHandlerComponent ;
+            rdfs:range :DataStructure .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -227,6 +245,17 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#CustomSet
 :CustomSet rdf:type owl:Class ;
            rdfs:subClassOf :SolutionNode .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent
+:DataHandlerComponent rdf:type owl:Class ;
+                      rdfs:subClassOf :MetaheuristicComponent ;
+                      rdfs:comment "Updates specific data structures"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#DataStructure
+:DataStructure rdf:type owl:Class ;
+               rdfs:comment "Data structure that stores information used by the algorithm"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent
@@ -442,12 +471,6 @@
          rdfs:comment "Optimization problem"@en .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent
-:ResourceHandlerComponent rdf:type owl:Class ;
-                          rdfs:subClassOf :MetaheuristicComponent ;
-                          rdfs:comment "Updates specific data structures"@en .
-
-
 ###  https://w3id.org/ontologies-ULL/CO-META#Restriction
 :Restriction rdf:type owl:Class ;
              rdfs:comment "Restriction of an optimization problem"@en .
@@ -510,16 +533,6 @@
                             rdfs:comment "Creates the main loop and determines when to stop the algorithm"@en .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#StorageComponent
-:StorageComponent rdf:type owl:Class ;
-                  rdfs:subClassOf :MetaheuristicComponent ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :hasParameter ;
-                                    owl:hasValue :StorageSize
-                                  ] ;
-                  rdfs:comment "Components that store data to guide the search" .
-
-
 #################################################################
 #    Individuals
 #################################################################
@@ -567,7 +580,8 @@
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Metaheuristic
+  owl:members ( :DataStructure
+                :Metaheuristic
                 :MetaheuristicComponent
                 :Objective
                 :Parameter

@@ -103,6 +103,16 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasDataStructure -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasDataStructure">
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#hasInput -->
 
 
@@ -268,6 +278,26 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#readsData -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#readsData">
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#writesData -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#writesData">
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -392,6 +422,25 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#CustomSet">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
+        <rdfs:comment xml:lang="en">Updates specific data structures</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#DataStructure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#DataStructure">
+        <rdfs:comment xml:lang="en">Data structure that stores information used by the algorithm</rdfs:comment>
     </owl:Class>
     
 
@@ -743,16 +792,6 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent -->
-
-
-    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ResourceHandlerComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
-        <rdfs:comment xml:lang="en">Updates specific data structures</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/ontologies-ULL/CO-META#Restriction -->
 
 
@@ -857,22 +896,6 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#StorageComponent -->
-
-
-    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#StorageComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
-                <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageSize"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>Components that store data to guide the search</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -959,6 +982,7 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Objective"/>
