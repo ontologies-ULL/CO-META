@@ -58,21 +58,26 @@ jobs:
             -uniteSections \
             -includeAnnotationProperties
 
-      # 7. Copiar carpeta individuos si hay cambios
+      # 7. Widoco no crea un index.html, así que copiamos la versión inglesa
+      - name: Copy index-en.html to index.html
+        run: |
+          cp docs/latest/index-en.html docs/latest/index.html
+
+      # 8. Copiar carpeta individuos si hay cambios
       - name: Copy individuals folder
         if: ${{ hashFiles('individuals/**') != '' }}
         run: |
           mkdir -p docs/latest/individuals
           cp -R individuals/* docs/latest/individuals/
 
-      # 8. Copiar documentación versionada
+      # 9. Copiar documentación versionada
       - name: Copy versioned documentation
         run: |
           VERSION="${{ steps.version.outputs.version }}"
           mkdir -p docs/$VERSION
           cp -R docs/latest/* docs/$VERSION/
 
-      # 9. Commit y push solo si hay cambios reales
+      # 10. Commit y push solo si hay cambios reales
       - name: Commit and push only if changes exist
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
