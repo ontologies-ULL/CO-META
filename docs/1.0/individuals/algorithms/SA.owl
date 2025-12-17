@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/ontologies-ULL/CO-META#"
+     xml:base="https://w3id.org/ontologies-ULL/CO-META"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:CO-META="https://w3id.org/ontologies-ULL/CO-META#">
+    <owl:Ontology rdf:about="https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SA">
+        <owl:imports rdf:resource="https://w3id.org/ontologies-ULL/CO-META"/>
+        <rdfs:label xml:lang="en">CO-META individuals for Simulated Annealing</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_SimulatedAnnealing -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_SimulatedAnnealing">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <hasDataStructure rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_temperature"/>
+        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_generate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_acceptance -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_acceptance">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_cooling_schedule"/>
+        <readsData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_cooling_schedule -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_cooling_schedule">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_stop"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_max_temperature"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_min_temperature"/>
+        <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_generate -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_generate">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_stop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_max_temperature -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_max_temperature">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</maxValue>
+        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_min_temperature -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_min_temperature">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</maxValue>
+        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_perturbation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_perturbation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_acceptance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_stop -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_stop">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_acceptance"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_perturbation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_temperature -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_temperature">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/ontologies-ULL/CO-META#"
+     xml:base="https://w3id.org/ontologies-ULL/CO-META"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:CO-META="https://w3id.org/ontologies-ULL/CO-META#">
+    <owl:Ontology rdf:about="https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2">
+        <owl:imports rdf:resource="https://w3id.org/ontologies-ULL/CO-META"/>
+        <rdfs:label xml:lang="en">CO-META individuals for SPEA2</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <hasDataStructure rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive"/>
+        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_union"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_store_solutions -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_store_solutions">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection"/>
+        <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_store_solutions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_union -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_union">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness"/>
+        <readsData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

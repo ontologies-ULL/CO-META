@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/ontologies-ULL/CO-META#"
+     xml:base="https://w3id.org/ontologies-ULL/CO-META"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:CO-META="https://w3id.org/ontologies-ULL/CO-META#">
+    <owl:Ontology rdf:about="https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/NSGA-II">
+        <owl:imports rdf:resource="https://w3id.org/ontologies-ULL/CO-META"/>
+        <rdfs:label xml:lang="en">CO-META individuals for NSGA-II</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_crossover">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
