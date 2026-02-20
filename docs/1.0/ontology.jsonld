@@ -221,6 +221,18 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#BoolParameter"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure"
     }, {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
@@ -331,6 +343,12 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#BoolParameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -425,9 +443,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent",

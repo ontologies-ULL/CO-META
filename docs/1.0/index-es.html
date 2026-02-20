@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria.", "dateReleased":"Wed Dec 17 04:49:23 UTC 2025", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria.", "dateReleased":"Fri Feb 20 12:21:53 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -114,6 +114,12 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
    <li>
       <a href="#Bit" title="https://w3id.org/ontologies-ULL/CO-META#Bit">
          <span>Bit</span>
+      </a>
+   </li>
+   <li>
+      <a href="#BoolParameter"
+         title="https://w3id.org/ontologies-ULL/CO-META#BoolParameter">
+         <span>Bool Parameter</span>
       </a>
    </li>
    <li>
@@ -551,6 +557,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
  <ul class="hlist">
   <li><a href="#AcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"> <span>Acceptance Component</span> </a></li>
   <li><a href="#Bit" title="https://w3id.org/ontologies-ULL/CO-META#Bit"> <span>Bit</span> </a></li>
+  <li><a href="#BoolParameter" title="https://w3id.org/ontologies-ULL/CO-META#BoolParameter"> <span>Bool Parameter</span> </a></li>
   <li><a href="#ConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"> <span>Construction Component</span> </a></li>
   <li><a href="#ConstructiveMetaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic"> <span>Constructive Metaheuristic</span> </a></li>
   <li><a href="#CrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"> <span>Crossover Component</span> </a></li>
@@ -616,6 +623,24 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dt>
    <dd>
     <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Solution Node</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BoolParameter">
+  <h3>Bool Parameter<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#BoolParameter</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#FloatParameter" title="https://w3id.org/ontologies-ULL/CO-META#FloatParameter">Float Parameter</a> <sup class="type-c" title="clase">c</sup>, <a href="#IntegerParameter" title="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter">Integer Parameter</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -783,7 +808,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     disjunto a
    </dt>
    <dd>
-    <a href="#IntegerParameter" title="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter">Integer Parameter</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#BoolParameter" title="https://w3id.org/ontologies-ULL/CO-META#BoolParameter">Bool Parameter</a> <sup class="type-c" title="clase">c</sup>, <a href="#IntegerParameter" title="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter">Integer Parameter</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -840,7 +865,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     disjunto a
    </dt>
    <dd>
-    <a href="#FloatParameter" title="https://w3id.org/ontologies-ULL/CO-META#FloatParameter">Float Parameter</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#BoolParameter" title="https://w3id.org/ontologies-ULL/CO-META#BoolParameter">Bool Parameter</a> <sup class="type-c" title="clase">c</sup>, <a href="#FloatParameter" title="https://w3id.org/ontologies-ULL/CO-META#FloatParameter">Float Parameter</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1071,7 +1096,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     tiene subclases
    </dt>
    <dd>
-    <a href="#FloatParameter" title="https://w3id.org/ontologies-ULL/CO-META#FloatParameter">Float Parameter</a> <sup class="type-c" title="clase">c</sup>, <a href="#IntegerParameter" title="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter">Integer Parameter</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#BoolParameter" title="https://w3id.org/ontologies-ULL/CO-META#BoolParameter">Bool Parameter</a> <sup class="type-c" title="clase">c</sup>, <a href="#FloatParameter" title="https://w3id.org/ontologies-ULL/CO-META#FloatParameter">Float Parameter</a> <sup class="type-c" title="clase">c</sup>, <a href="#IntegerParameter" title="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter">Integer Parameter</a> <sup class="type-c" title="clase">c</sup>
    </dd>
    <dt>
     en dominio de
