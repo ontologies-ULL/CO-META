@@ -338,6 +338,14 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#BoolParameter -->
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#BoolParameter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent -->
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent">
@@ -457,7 +465,6 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#FloatParameter">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"/>
     </owl:Class>
     
 
@@ -895,6 +902,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#BoolParameter"/>
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
