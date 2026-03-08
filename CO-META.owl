@@ -96,6 +96,16 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasConstraint -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasConstraint">
+        <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConstraintOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Problem"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Constraint"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#hasDataStructure -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasDataStructure">
@@ -188,16 +198,6 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#hasRestriction -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasRestriction">
-        <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Problem"/>
-        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Restriction"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/ontologies-ULL/CO-META#hasStart -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasStart">
@@ -227,6 +227,12 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#isConstraintOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#isConstraintOf"/>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf"/>
@@ -236,12 +242,6 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#isParameterOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#isParameterOf"/>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf"/>
     
 
 
@@ -342,6 +342,14 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#BoolParameter">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Constraint -->
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Constraint">
+        <rdfs:comment xml:lang="en">Constraint of an optimization problem</rdfs:comment>
     </owl:Class>
     
 
@@ -731,14 +739,6 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#Restriction -->
-
-    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Restriction">
-        <rdfs:comment xml:lang="en">Restriction of an optimization problem</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/ontologies-ULL/CO-META#SelectionComponent -->
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent">
@@ -913,13 +913,13 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Constraint"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Objective"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Problem"/>
-            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Restriction"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Solution"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"/>
         </owl:members>
