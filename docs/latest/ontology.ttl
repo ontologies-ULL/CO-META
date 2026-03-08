@@ -59,6 +59,13 @@
                  rdfs:range :Solution .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasConstraint
+:hasConstraint rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isConstraintOf ;
+               rdfs:domain :Problem ;
+               rdfs:range :Constraint .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasDataStructure
 :hasDataStructure rdf:type owl:ObjectProperty ;
                   rdfs:domain :Metaheuristic ;
@@ -121,13 +128,6 @@
               rdfs:range :Parameter .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#hasRestriction
-:hasRestriction rdf:type owl:ObjectProperty ;
-                owl:inverseOf :isRestrictionOf ;
-                rdfs:domain :Problem ;
-                rdfs:range :Restriction .
-
-
 ###  https://w3id.org/ontologies-ULL/CO-META#hasStart
 :hasStart rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :isConnectedTo ;
@@ -148,16 +148,16 @@
                                       ) .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#isConstraintOf
+:isConstraintOf rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf
 :isObjectiveOf rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#isParameterOf
 :isParameterOf rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf
-:isRestrictionOf rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#isStartOf
@@ -218,6 +218,11 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#BoolParameter
 :BoolParameter rdf:type owl:Class ;
                rdfs:subClassOf :Parameter .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Constraint
+:Constraint rdf:type owl:Class ;
+            rdfs:comment "Constraint of an optimization problem"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent
@@ -476,11 +481,6 @@
          rdfs:comment "Optimization problem"@en .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#Restriction
-:Restriction rdf:type owl:Class ;
-             rdfs:comment "Restriction of an optimization problem"@en .
-
-
 ###  https://w3id.org/ontologies-ULL/CO-META#SelectionComponent
 :SelectionComponent rdf:type owl:Class ;
                     rdfs:subClassOf :ModificationComponent ;
@@ -593,13 +593,13 @@
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :DataStructure
+  owl:members ( :Constraint
+                :DataStructure
                 :Metaheuristic
                 :MetaheuristicComponent
                 :Objective
                 :Parameter
                 :Problem
-                :Restriction
                 :Solution
                 :SolutionNode
               )

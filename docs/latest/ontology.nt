@@ -58,6 +58,12 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#hasCodification> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#hasConstraint
+<https://w3id.org/ontologies-ULL/CO-META#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasConstraint> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#isConstraintOf> .
+<https://w3id.org/ontologies-ULL/CO-META#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Problem> .
+<https://w3id.org/ontologies-ULL/CO-META#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#Constraint> .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#hasDataStructure
 <https://w3id.org/ontologies-ULL/CO-META#hasDataStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#hasDataStructure> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
@@ -110,12 +116,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/ontologies-ULL/CO-META#hasParameter> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#isParameterOf> .
 <https://w3id.org/ontologies-ULL/CO-META#hasParameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 # 
-# https://w3id.org/ontologies-ULL/CO-META#hasRestriction
-<https://w3id.org/ontologies-ULL/CO-META#hasRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/ontologies-ULL/CO-META#hasRestriction> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf> .
-<https://w3id.org/ontologies-ULL/CO-META#hasRestriction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Problem> .
-<https://w3id.org/ontologies-ULL/CO-META#hasRestriction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#Restriction> .
-# 
 # https://w3id.org/ontologies-ULL/CO-META#hasStart
 <https://w3id.org/ontologies-ULL/CO-META#hasStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#hasStart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
@@ -137,14 +137,14 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#isConstraintOf
+<https://w3id.org/ontologies-ULL/CO-META#isConstraintOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf
 <https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#isParameterOf
 <https://w3id.org/ontologies-ULL/CO-META#isParameterOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-# 
-# https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf
-<https://w3id.org/ontologies-ULL/CO-META#isRestrictionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#isStartOf
 <https://w3id.org/ontologies-ULL/CO-META#isStartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -206,6 +206,10 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # https://w3id.org/ontologies-ULL/CO-META#BoolParameter
 <https://w3id.org/ontologies-ULL/CO-META#BoolParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#BoolParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#Constraint
+<https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint of an optimization problem"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent
 <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -459,10 +463,6 @@ _:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologie
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/2000/01/rdf-schema#comment> "Optimization problem"@en .
 # 
-# https://w3id.org/ontologies-ULL/CO-META#Restriction
-<https://w3id.org/ontologies-ULL/CO-META#Restriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#Restriction> <http://www.w3.org/2000/01/rdf-schema#comment> "Restriction of an optimization problem"@en .
-# 
 # https://w3id.org/ontologies-ULL/CO-META#SelectionComponent
 <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
@@ -598,19 +598,19 @@ _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/o
 _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
 _:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Restriction> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Problem> .
 _:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Problem> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 _:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
 _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
 _:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
 _:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DataStructure> .
 _:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DataStructure> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Constraint> .
 _:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
