@@ -6,8 +6,10 @@
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 .
-:agent0 a prov:Agent; foaf:name "Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)".
-:agent1 a prov:Agent; foaf:name "Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)".
-:agent2 a prov:Agent; foaf:name "Miguel Luna García (http://orcid.org/0009-0006-6611-4360)".
+:agent0 a prov:Agent; foaf:name "Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)".
+:agent1 a prov:Agent; foaf:name "Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)".
+:agent2 a prov:Agent; foaf:name "Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)".
+:agent3 a prov:Agent; foaf:name "Miguel Luna García (http://orcid.org/0009-0006-6611-4360)".

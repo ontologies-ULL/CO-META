@@ -9,7 +9,8 @@
 <https://w3id.org/ontologies-ULL/CO-META> rdf:type owl:Ontology ;
                                            owl:versionIRI <https://w3id.org/ontologies-ULL/CO-META/1.0> ;
                                            <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by-nc-sa/4.0/> ;
-                                           <http://purl.org/dc/elements/1.1/creator> "Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)" ,
+                                           <http://purl.org/dc/elements/1.1/creator> "Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)" ,
+                                                                                     "Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)" ,
                                                                                      "Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)" ,
                                                                                      "Miguel Luna García (http://orcid.org/0009-0006-6611-4360)" ;
                                            <http://purl.org/dc/elements/1.1/description> "Ontology for Combinatory Optimization Metaheuristics"@en ,
