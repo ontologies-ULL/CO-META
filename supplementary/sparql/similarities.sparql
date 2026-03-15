@@ -1,0 +1,29 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX mh: <https://w3id.org/ontologies-ULL/CO-META#>
+
+SELECT DISTINCT ?componentClass
+WHERE {
+  VALUES (?mh1 ?mh2) {
+    (mh:TabuSearch mh:SimulatedAnnealing)
+  }
+  ?mh1 mh:isConnectedTo ?comp1 .
+  ?comp1 a ?componentClass .
+  ?mh2 mh:isConnectedTo ?comp2 .
+  ?comp2 a ?componentClass .
+  ?componentClass rdfs:subClassOf+ mh:MetaheuristicComponent .
+  FILTER NOT EXISTS {
+    ?subclass rdfs:subClassOf ?componentClass .
+    ?mh1 mh:isConnectedTo ?compSub1 .
+    ?compSub1 a ?subclass .
+    ?mh2 mh:isConnectedTo ?compSub2 .
+    ?compSub2 a ?subclass .
+  }
+  FILTER (
+    ?componentClass != owl:Class &&
+    ?componentClass != owl:NamedIndividual
+  )
+}
+ORDER BY ?componentClass
