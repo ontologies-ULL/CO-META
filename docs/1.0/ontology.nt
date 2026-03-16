@@ -241,9 +241,9 @@ _:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologie
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Production of one or more individuals from two or more parent individuals"@en .
 # 
-# https://w3id.org/ontologies-ULL/CO-META#CustomSet
-<https://w3id.org/ontologies-ULL/CO-META#CustomSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#CustomSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SolutionNode> .
+# https://w3id.org/ontologies-ULL/CO-META#Custom
+<https://w3id.org/ontologies-ULL/CO-META#Custom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#Custom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SolutionNode> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent
 <https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

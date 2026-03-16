@@ -437,10 +437,10 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#CustomSet -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Custom -->
 
 
-    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#CustomSet">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Custom">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"/>
     </owl:Class>
     

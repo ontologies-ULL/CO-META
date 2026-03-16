@@ -254,9 +254,9 @@
                     rdfs:comment "Production of one or more individuals from two or more parent individuals"@en .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#CustomSet
-:CustomSet rdf:type owl:Class ;
-           rdfs:subClassOf :SolutionNode .
+###  https://w3id.org/ontologies-ULL/CO-META#Custom
+:Custom rdf:type owl:Class ;
+        rdfs:subClassOf :SolutionNode .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent
