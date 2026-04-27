@@ -58,7 +58,7 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VariationComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch"/>
     </owl:NamedIndividual>
     

@@ -49,7 +49,7 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#EA_mutation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_mutation">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VariationComponent"/>
         <hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover"/>
     </owl:NamedIndividual>
     

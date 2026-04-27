@@ -446,11 +446,11 @@
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VariationComponent"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -609,21 +609,6 @@
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:comment xml:lang="en">Components for multiobjective optimization. Required before acceptance methods</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#MutationComponent -->
-
-    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MutationComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
-                <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationProbability"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>Introduces small random changes to a solution</rdfs:comment>
     </owl:Class>
     
 
@@ -828,6 +813,15 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VariationComponent -->
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#VariationComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
+        <rdfs:comment>Introduces small random changes to a solution</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -854,16 +848,6 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#Iterations">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"/>
         <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</CO-META:minValue>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#MutationProbability -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
-        <CO-META:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</CO-META:maxValue>
-        <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</CO-META:minValue>
     </owl:NamedIndividual>
     
 
