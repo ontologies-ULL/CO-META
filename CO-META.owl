@@ -199,6 +199,15 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasSafety -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasSafety">
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#hasStart -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasStart">
@@ -343,6 +352,22 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#BoolParameter">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ComponentSafety -->
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Both"/>
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Safe"/>
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Unsafe"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -842,6 +867,14 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Both -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#Both">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability">
@@ -870,6 +903,14 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Safe -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#Safe">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#StorageSize -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#StorageSize">
@@ -884,6 +925,14 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#Time">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"/>
         <CO-META:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</CO-META:minValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Unsafe -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#Unsafe">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety"/>
     </owl:NamedIndividual>
     
 
@@ -907,6 +956,7 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Constraint"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
