@@ -813,6 +813,15 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent -->
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
+        <rdfs:comment xml:lang="en">Updates the best solution or solutions found by the algorithm</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#VariationComponent -->
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#VariationComponent">
