@@ -762,6 +762,16 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent -->
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
+        <rdfs:comment xml:lang="en">Repeats a partial process, with the old population as input, until the new population is filled</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent -->
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent">
