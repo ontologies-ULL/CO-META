@@ -55,6 +55,16 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ILS_parameter_iterations -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_parameter_iterations">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Iterations"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000</hasValue>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation">
