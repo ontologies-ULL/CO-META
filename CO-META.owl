@@ -324,6 +324,7 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#hasValue -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
     </owl:DatatypeProperty>
     
@@ -740,18 +741,40 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent -->
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
-                <owl:someValuesFrom>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasValue"/>
+                                        <owl:someValuesFrom>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minExclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
                     </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"/>
         <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent"/>
     </owl:Class>
     
@@ -760,18 +783,40 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent -->
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
-                <owl:someValuesFrom>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasValue"/>
+                                        <owl:someValuesFrom>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minExclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
                     </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
         <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
     </owl:Class>
     
@@ -822,6 +867,30 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent -->
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasValue"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"/>
     </owl:Class>
     
@@ -830,6 +899,30 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent -->
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasValue"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
     </owl:Class>
     

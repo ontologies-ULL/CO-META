@@ -40,8 +40,9 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#ILS_generate -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_generate">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
         <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_stop"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_parameter_populationsize"/>
     </owl:NamedIndividual>
     
 
@@ -65,6 +66,15 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ILS_parameter_populationsize -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_parameter_populationsize">
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</hasValue>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation">
@@ -80,6 +90,7 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ILS_parameter_iterations"/>
     </owl:NamedIndividual>
     
 
