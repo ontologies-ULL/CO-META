@@ -60,6 +60,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_crossoverprobability"/>
     </owl:NamedIndividual>
     
 
@@ -87,6 +88,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"/>
         <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_populationsize"/>
     </owl:NamedIndividual>
     
 
@@ -96,6 +98,43 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VariationComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_mutationprobability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_crossoverprobability -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_crossoverprobability">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_iterations -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_iterations">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Iterations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_mutationprobability -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_mutationprobability">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationProbability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_populationsize -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_populationsize">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
     </owl:NamedIndividual>
     
 
@@ -105,6 +144,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_union"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_iterations"/>
     </owl:NamedIndividual>
     
 
