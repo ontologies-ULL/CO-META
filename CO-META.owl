@@ -194,6 +194,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasParameter">
         <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isParameterOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
     </owl:ObjectProperty>
     
