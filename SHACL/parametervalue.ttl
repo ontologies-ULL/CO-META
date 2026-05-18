@@ -1,0 +1,57 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:    <http://www.example.org/#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+@prefix cm: <https://w3id.org/ontologies-ULL/CO-META#> .
+
+cm:ParameterValueShape
+    a sh:NodeShape ;
+    sh:targetClass cm:ParameterValue ;
+    sh:or (
+        # it isn't IntegerParameter OR it is and the value is integer
+        [
+            sh:property [
+                sh:path cm:hasType ;
+                sh:not [ sh:class cm:IntegerParameter ]
+            ]
+        ]
+        [
+            sh:property [
+                sh:path cm:hasValue ;
+                sh:datatype xsd:integer ;
+            ]
+        ]
+    ) ;
+    sh:or (
+        # it isn't FloatParameter OR it is and the value is float
+        [
+            sh:property [
+                sh:path cm:hasType ;
+                sh:not [ sh:class cm:FloatParameter ]
+            ]
+        ]
+        [
+            sh:property [
+                sh:path cm:hasValue ;
+                sh:datatype xsd:decimal ;
+            ]
+        ]
+    ) ;
+    sh:or (
+        # it isn't BoolParameter OR it is and the value is bool
+        [
+            sh:property [
+                sh:path cm:hasType ;
+                sh:not [ sh:class cm:BoolParameter ]
+            ]
+        ]
+        [
+            sh:property [
+                sh:path cm:hasValue ;
+                sh:datatype xsd:boolean ;
+            ]
+        ]
+    ) .
