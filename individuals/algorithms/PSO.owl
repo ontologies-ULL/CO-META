@@ -89,6 +89,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_store_local_best"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_populationsize"/>
     </owl:NamedIndividual>
     
 
@@ -153,6 +154,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_stop">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_iterations"/>
     </owl:NamedIndividual>
     
 
