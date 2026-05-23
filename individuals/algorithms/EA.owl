@@ -28,6 +28,15 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EA_EvolutionaryAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_EvolutionaryAlgorithm">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <rdfs:label xml:lang="en">Evolutionary Algorithm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection">
@@ -41,7 +50,8 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_generate_population">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent"/>
-        <isStartOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_parameter_populationsize"/>
+        <isStartOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_EvolutionaryAlgorithm"/>
     </owl:NamedIndividual>
     
 
@@ -51,6 +61,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_mutation">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VariationComponent"/>
         <hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_parameter_mutationprobability"/>
     </owl:NamedIndividual>
     
 
@@ -60,6 +71,43 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"/>
         <hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_parameter_crossoverprobability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EA_parameter_crossoverprobability -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_parameter_crossoverprobability">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EA_parameter_iterations -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_parameter_iterations">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Iterations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EA_parameter_mutationprobability -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_parameter_mutationprobability">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationProbability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EA_parameter_populationsize -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_parameter_populationsize">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
     </owl:NamedIndividual>
     
 
@@ -70,15 +118,7 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_mutation"/>
         <hasInputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_generate_population"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#EA -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
-        <rdfs:label xml:lang="en">Evolutionary Algorithm</rdfs:label>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_parameter_iterations"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
