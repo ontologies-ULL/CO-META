@@ -28,18 +28,18 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_GlobalBestInfluence -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_GlobalBestInfluence">
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
         <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_InertiaFactor -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#InertiaFactor -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_InertiaFactor">
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
         <maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</maxValue>
         <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
@@ -54,15 +54,6 @@
         <hasDataStructure rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best"/>
         <hasDataStructure rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"/>
         <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_PersonalBestInfluence -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_PersonalBestInfluence">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
-        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
     </owl:NamedIndividual>
     
 
@@ -108,6 +99,51 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity"/>
         <hasOutputEnd rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_stop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_globalbestinfluence -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_globalbestinfluence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_inertiafactor -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_inertiafactor">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_iterations -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_iterations">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Iterations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_personalbestinfluence -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_personalbestinfluence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_populationsize -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_populationsize">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
     </owl:NamedIndividual>
     
 
@@ -167,9 +203,9 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity"/>
-        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_GlobalBestInfluence"/>
-        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_InertiaFactor"/>
-        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_PersonalBestInfluence"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_globalbestinfluence"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_inertiafactor"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_personalbestinfluence"/>
         <readsData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best"/>
         <readsData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"/>
         <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_velocities"/>
@@ -181,6 +217,15 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_velocities">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
+        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
     </owl:NamedIndividual>
 </rdf:RDF>
 
