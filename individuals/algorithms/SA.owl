@@ -89,6 +89,15 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SA_parameter_iterations -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_parameter_iterations">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Iterations"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#SA_parameter_max_temperature -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SA_parameter_max_temperature">
@@ -122,6 +131,7 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_acceptance"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_perturbation"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SA_parameter_iterations"/>
     </owl:NamedIndividual>
     
 
