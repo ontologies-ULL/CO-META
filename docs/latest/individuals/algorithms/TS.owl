@@ -56,6 +56,15 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TS_parameter_iterations -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_parameter_iterations">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Iterations"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#TS_select_best -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_select_best">
@@ -70,6 +79,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TS_stop">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_store_visited"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TS_parameter_iterations"/>
     </owl:NamedIndividual>
     
 

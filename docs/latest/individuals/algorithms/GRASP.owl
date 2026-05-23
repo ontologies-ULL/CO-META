@@ -51,7 +51,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch"/>
-        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_parameter_rclrandomness"/>
     </owl:NamedIndividual>
     
 
@@ -65,12 +65,31 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GRASP_parameter_iterations -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_parameter_iterations">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Iterations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GRASP_parameter_rclrandomness -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_parameter_rclrandomness">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#GRASP_stop -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GRASP_stop">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_construction_rcl"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GRASP_parameter_iterations"/>
     </owl:NamedIndividual>
     
 

@@ -126,7 +126,14 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#hasParameter
 :hasParameter rdf:type owl:ObjectProperty ;
               owl:inverseOf :isParameterOf ;
-              rdfs:range :Parameter .
+              rdfs:domain :MetaheuristicComponent ;
+              rdfs:range :ParameterValue .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasSafety
+:hasSafety rdf:type owl:ObjectProperty ;
+           rdfs:domain :MetaheuristicComponent ;
+           rdfs:range :ComponentSafety .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasStart
@@ -135,6 +142,13 @@
           owl:inverseOf :isStartOf ;
           rdfs:domain :Metaheuristic ;
           rdfs:range :MetaheuristicComponent .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasType
+:hasType rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :ParameterValue ;
+         rdfs:range :Parameter .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#isCodificationOf
@@ -182,11 +196,23 @@
 #    Data properties
 #################################################################
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasCodeReference
+:hasCodeReference rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :MetaheuristicComponent ;
+                  rdfs:range xsd:string .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasSize
 :hasSize rdf:type owl:DatatypeProperty ,
                   owl:FunctionalProperty ;
          rdfs:domain :Solution ;
          rdfs:range xsd:integer .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasValue
+:hasValue rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :ParameterValue .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#maxValue
@@ -221,6 +247,16 @@
                rdfs:subClassOf :Parameter .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#ComponentSafety
+:ComponentSafety rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:oneOf ( :Both
+                                                   :Safe
+                                                   :Unsafe
+                                                 )
+                                     ] .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#Constraint
 :Constraint rdf:type owl:Class ;
             rdfs:comment "Constraint of an optimization problem"@en .
@@ -249,7 +285,10 @@
                     rdfs:subClassOf :ModificationComponent ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasParameter ;
-                                      owl:hasValue :CrossoverProbability
+                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasType ;
+                                                           owl:hasValue :CrossoverProbability
+                                                         ]
                                     ] ;
                     rdfs:comment "Production of one or more individuals from two or more parent individuals"@en .
 
@@ -285,11 +324,11 @@
                                                                                          ]
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty :isConnectedTo ;
-                                                                                           owl:someValuesFrom :MutationComponent
+                                                                                           owl:someValuesFrom :SelectionComponent
                                                                                          ]
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty :isConnectedTo ;
-                                                                                           owl:someValuesFrom :SelectionComponent
+                                                                                           owl:someValuesFrom :VariationComponent
                                                                                          ]
                                                                                        ) ;
                                                                     rdf:type owl:Class
@@ -399,16 +438,6 @@
                          rdfs:comment "Components for multiobjective optimization. Required before acceptance methods"@en .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#MutationComponent
-:MutationComponent rdf:type owl:Class ;
-                   rdfs:subClassOf :ModificationComponent ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasParameter ;
-                                     owl:hasValue :MutationProbability
-                                   ] ;
-                   rdfs:comment "Introduces small random changes to a solution" .
-
-
 ###  https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent
 :NeighbourhoodComponent rdf:type owl:Class ;
                         rdfs:subClassOf :ModificationComponent .
@@ -422,6 +451,11 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#Parameter
 :Parameter rdf:type owl:Class ;
            rdfs:comment "Defines the structure of a parameter used by a component" .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ParameterValue
+:ParameterValue rdf:type owl:Class ;
+                rdfs:comment "Represents the value assigned to a parameter"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Permutation
@@ -449,22 +483,67 @@
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent
 :PopulationConstructionComponent rdf:type owl:Class ;
-                                 rdfs:subClassOf :ConstructionComponent ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty :hasParameter ;
-                                                   owl:hasValue :PopulationSize
-                                                 ] ;
+                                 owl:equivalentClass [ owl:intersectionOf ( :ConstructionComponent
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty :hasParameter ;
+                                                                              owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty :hasType ;
+                                                                                                                          owl:hasValue :PopulationSize
+                                                                                                                        ]
+                                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty :hasValue ;
+                                                                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                               owl:onDatatype xsd:integer ;
+                                                                                                                                               owl:withRestrictions ( [ xsd:minExclusive 1
+                                                                                                                                                                      ]
+                                                                                                                                                                    )
+                                                                                                                                             ]
+                                                                                                                        ]
+                                                                                                                      ) ;
+                                                                                                   rdf:type owl:Class
+                                                                                                 ]
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ] ;
+                                 rdfs:subClassOf :ConstructionComponent ;
                                  owl:disjointWith :SingleSolutionConstructionComponent .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent
 :PopulationGenerationComponent rdf:type owl:Class ;
-                               rdfs:subClassOf :GenerationComponent ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty :hasParameter ;
-                                                 owl:hasValue :PopulationSize
-                                               ] ;
+                               owl:equivalentClass [ owl:intersectionOf ( :GenerationComponent
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :hasParameter ;
+                                                                            owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty :hasType ;
+                                                                                                                        owl:hasValue :PopulationSize
+                                                                                                                      ]
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty :hasValue ;
+                                                                                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                             owl:onDatatype xsd:integer ;
+                                                                                                                                             owl:withRestrictions ( [ xsd:minExclusive 1
+                                                                                                                                                                    ]
+                                                                                                                                                                  )
+                                                                                                                                           ]
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                               rdfs:subClassOf :GenerationComponent ;
                                owl:disjointWith :SingleSolutionGenerationComponent .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent
+:PopulationModifierComponent rdf:type owl:Class ;
+                             rdfs:subClassOf :LoopComponent ;
+                             owl:disjointWith :StoppingCriterionComponent ;
+                             rdfs:comment "Repeats a partial process, with the old population as input, until the new population is filled"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent
@@ -490,11 +569,47 @@
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent
 :SingleSolutionConstructionComponent rdf:type owl:Class ;
+                                     owl:equivalentClass [ owl:intersectionOf ( :ConstructionComponent
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty :hasParameter ;
+                                                                                  owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                              owl:onProperty :hasType ;
+                                                                                                                              owl:hasValue :PopulationSize
+                                                                                                                            ]
+                                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                                              owl:onProperty :hasValue ;
+                                                                                                                              owl:hasValue 1
+                                                                                                                            ]
+                                                                                                                          ) ;
+                                                                                                       rdf:type owl:Class
+                                                                                                     ]
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
                                      rdfs:subClassOf :ConstructionComponent .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent
 :SingleSolutionGenerationComponent rdf:type owl:Class ;
+                                   owl:equivalentClass [ owl:intersectionOf ( :GenerationComponent
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :hasParameter ;
+                                                                                owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                            owl:onProperty :hasType ;
+                                                                                                                            owl:hasValue :PopulationSize
+                                                                                                                          ]
+                                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                                            owl:onProperty :hasValue ;
+                                                                                                                            owl:hasValue 1
+                                                                                                                          ]
+                                                                                                                        ) ;
+                                                                                                     rdf:type owl:Class
+                                                                                                   ]
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ] ;
                                    rdfs:subClassOf :GenerationComponent .
 
 
@@ -534,14 +649,34 @@
                             rdfs:subClassOf :LoopComponent ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty :hasParameter ;
-                                              owl:hasValue :Iterations
+                                              owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasType ;
+                                                                   owl:hasValue :Iterations
+                                                                 ]
                                             ] ;
                             rdfs:comment "Creates the main loop and determines when to stop the algorithm"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent
+:UpdateBestComponent rdf:type owl:Class ;
+                     rdfs:subClassOf :MetaheuristicComponent ;
+                     rdfs:comment "Updates the best solution or solutions found by the algorithm"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VariationComponent
+:VariationComponent rdf:type owl:Class ;
+                    rdfs:subClassOf :ModificationComponent ;
+                    rdfs:comment "Introduces small random changes to a solution" .
 
 
 #################################################################
 #    Individuals
 #################################################################
+
+###  https://w3id.org/ontologies-ULL/CO-META#Both
+:Both rdf:type owl:NamedIndividual ,
+               :ComponentSafety .
+
 
 ###  https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability
 :CrossoverProbability rdf:type owl:NamedIndividual ,
@@ -569,6 +704,11 @@
                 :minValue 0 .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#Safe
+:Safe rdf:type owl:NamedIndividual ,
+               :ComponentSafety .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#StorageSize
 :StorageSize rdf:type owl:NamedIndividual ,
                       :IntegerParameter ;
@@ -579,6 +719,11 @@
 :Time rdf:type owl:NamedIndividual ,
                :IntegerParameter ;
       :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Unsafe
+:Unsafe rdf:type owl:NamedIndividual ,
+                 :ComponentSafety .
 
 
 #################################################################
@@ -594,12 +739,14 @@
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Constraint
+  owl:members ( :ComponentSafety
+                :Constraint
                 :DataStructure
                 :Metaheuristic
                 :MetaheuristicComponent
                 :Objective
                 :Parameter
+                :ParameterValue
                 :Problem
                 :Solution
                 :SolutionNode
