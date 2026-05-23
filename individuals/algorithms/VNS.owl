@@ -83,6 +83,15 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_parameter_iterations -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_parameter_iterations">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <hasType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Iterations"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation">
@@ -100,6 +109,7 @@
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_perturbation"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VNS_parameter_iterations"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
