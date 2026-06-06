@@ -364,7 +364,7 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
-        <rdfs:comment xml:lang="en">Accepts a solution out of two or more solutions, according to its fitness. Needs fitness assingment component in multiobjective optimization</rdfs:comment>
+        <rdfs:comment xml:lang="en">Accepts a solution out of two or more solutions, according to its fitness. Needs fitness assignment component in multiobjective optimization</rdfs:comment>
     </owl:Class>
     
 
@@ -520,9 +520,9 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent -->
 
-    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent"/>
         <rdfs:comment>Assign an individual fitness value to each member of a population</rdfs:comment>
     </owl:Class>
