@@ -1,0 +1,29 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:    <http://www.example.org/#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+@prefix cm: <https://w3id.org/ontologies-ULL/CO-META#> .
+
+cm:ComponentConnectionSizeShape
+    a sh:NodeShape ;
+    sh:targetClass cm:MetaheuristicComponent ;
+    
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Connection error: Output size of ({?this}) does not match input size of ({?next})." ;
+        sh:select """
+            PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+            SELECT ?this ?next
+            WHERE {
+                ?this cm:hasOutput ?next .
+                
+                ?this cm:hasOutputSize ?outSize .
+                ?next cm:hasInputSize ?inSize .
+                
+                FILTER (?outSize != ?inSize)
+            }
+        """ ;
+    ] .
