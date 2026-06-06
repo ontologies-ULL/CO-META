@@ -45,6 +45,7 @@
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones"/>
         <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_parameter_heuristic_influence"/>
         <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_parameter_pheromone_influence"/>
+        <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_parameter_populationsize"/>
         <readsData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromones"/>
     </owl:NamedIndividual>
     
@@ -54,7 +55,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population"/>
         <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_parameter_pheromone_evaporation"/>
         <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromones"/>
     </owl:NamedIndividual>

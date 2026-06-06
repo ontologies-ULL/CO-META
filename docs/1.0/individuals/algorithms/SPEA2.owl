@@ -77,7 +77,7 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour"/>
     </owl:NamedIndividual>
     

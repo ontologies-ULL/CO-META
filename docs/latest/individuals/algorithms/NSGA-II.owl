@@ -68,7 +68,7 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance"/>
     </owl:NamedIndividual>
     
@@ -96,7 +96,7 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance"/>
     </owl:NamedIndividual>
     

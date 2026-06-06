@@ -202,6 +202,18 @@
                   rdfs:range xsd:string .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasInputSize
+:hasInputSize rdf:type owl:DatatypeProperty ;
+              rdfs:domain :MetaheuristicComponent ;
+              rdfs:range xsd:integer .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasOutputSize
+:hasOutputSize rdf:type owl:DatatypeProperty ;
+               rdfs:domain :MetaheuristicComponent ;
+               rdfs:range xsd:integer .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasSize
 :hasSize rdf:type owl:DatatypeProperty ,
                   owl:FunctionalProperty ;
@@ -234,7 +246,7 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent
 :AcceptanceComponent rdf:type owl:Class ;
                      rdfs:subClassOf :MetaheuristicComponent ;
-                     rdfs:comment "Accepts a solution out of two or more solutions, according to its fitness. Needs fitness assingment component in multiobjective optimization"@en .
+                     rdfs:comment "Accepts a solution out of two or more solutions, according to its fitness. Needs fitness assignment component in multiobjective optimization"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Bit
@@ -289,6 +301,14 @@
                                                            owl:onProperty :hasType ;
                                                            owl:hasValue :CrossoverProbability
                                                          ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasInputSize ;
+                                      owl:hasValue 2
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasOutputSize ;
+                                      owl:hasValue 2
                                     ] ;
                     rdfs:comment "Production of one or more individuals from two or more parent individuals"@en .
 
@@ -338,8 +358,8 @@
                                            ] .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#FitnessAssingmentComponent
-:FitnessAssingmentComponent rdf:type owl:Class ;
+###  https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent
+:FitnessAssignmentComponent rdf:type owl:Class ;
                             rdfs:subClassOf :MultiobjectiveComponent ;
                             rdfs:comment "Assign an individual fitness value to each member of a population" .
 
@@ -363,6 +383,27 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#IntegerParameter
 :IntegerParameter rdf:type owl:Class ;
                   rdfs:subClassOf :Parameter .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent
+:IterativeSelectionComponent rdf:type owl:Class ;
+                             rdfs:subClassOf :SelectionComponent ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasOutputSize ;
+                                               owl:hasValue 1
+                                             ] .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent
+:KPointCrossoverComponent rdf:type owl:Class ;
+                          rdfs:subClassOf :CrossoverComponent ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasParameter ;
+                                            owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :hasType ;
+                                                                 owl:hasValue :CrossoverKPoints
+                                                               ]
+                                          ] .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#List
@@ -456,6 +497,11 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#ParameterValue
 :ParameterValue rdf:type owl:Class ;
                 rdfs:comment "Represents the value assigned to a parameter"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent
+:PartiallyMappedCrossoverComponent rdf:type owl:Class ;
+                                   rdfs:subClassOf :CrossoverComponent .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Permutation
@@ -561,10 +607,40 @@
          rdfs:comment "Optimization problem"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent
+:RandomDecisionCrossoverComponent rdf:type owl:Class ;
+                                  rdfs:subClassOf :CrossoverComponent .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent
+:RandomSelectionComponent rdf:type owl:Class ;
+                          rdfs:subClassOf :SelectionComponent ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasOutputSize ;
+                                            owl:hasValue 2
+                                          ] .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#SelectionComponent
 :SelectionComponent rdf:type owl:Class ;
-                    rdfs:subClassOf :ModificationComponent ;
+                    rdfs:subClassOf :ModificationComponent ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasParameter ;
+                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasType ;
+                                                           owl:hasValue :Elitism
+                                                         ]
+                                    ] ;
                     rdfs:comment "Selects the individuals that will start the next generation"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent
+:SimplePairSelectionComponent rdf:type owl:Class ;
+                              rdfs:subClassOf :SelectionComponent ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasOutputSize ;
+                                                owl:hasValue 2
+                                              ] .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent
@@ -657,6 +733,22 @@
                             rdfs:comment "Creates the main loop and determines when to stop the algorithm"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent
+:TournamentSelectionComponent rdf:type owl:Class ;
+                              rdfs:subClassOf :SelectionComponent ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasParameter ;
+                                                owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty :hasType ;
+                                                                     owl:hasValue :TournamentSize
+                                                                   ]
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasOutputSize ;
+                                                owl:hasValue 2
+                                              ] .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent
 :UpdateBestComponent rdf:type owl:Class ;
                      rdfs:subClassOf :MetaheuristicComponent ;
@@ -678,11 +770,23 @@
                :ComponentSafety .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints
+:CrossoverKPoints rdf:type owl:NamedIndividual ,
+                           :IntegerParameter ;
+                  :minValue 1 .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability
 :CrossoverProbability rdf:type owl:NamedIndividual ,
                                :FloatParameter ;
                       :maxValue 1 ;
                       :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#Elitism
+:Elitism rdf:type owl:NamedIndividual ,
+                  :IntegerParameter ;
+         :minValue 0 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Iterations
@@ -719,6 +823,12 @@
 :Time rdf:type owl:NamedIndividual ,
                :IntegerParameter ;
       :minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TournamentSize
+:TournamentSize rdf:type owl:NamedIndividual ,
+                         :IntegerParameter ;
+                :minValue 1 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Unsafe
