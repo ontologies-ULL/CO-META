@@ -65,9 +65,18 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_iterative_selector"/>
         <hasOutputEnd rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_stop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ACO_iterative_selector -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#ACO_iterative_selector">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones"/>
     </owl:NamedIndividual>
     
 
@@ -132,6 +141,8 @@
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_iterate_population"/>
         <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_parameter_pheromone_addition"/>
         <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ACO_pheromones"/>
+        <hasInputSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasInputSize>
+        <hasOutputSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasOutputSize>
     </owl:NamedIndividual>
     
 

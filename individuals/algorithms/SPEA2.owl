@@ -49,7 +49,7 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover"/>
     </owl:NamedIndividual>
     
@@ -97,8 +97,18 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VariationComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_next_generation"/>
         <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_mutationprobability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SPEA2_next_generation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_next_generation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection"/>
+        <hasOutputEnd rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop"/>
     </owl:NamedIndividual>
     
 
@@ -153,7 +163,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#SPEA2_store_solutions">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_next_generation"/>
         <writesData rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive"/>
     </owl:NamedIndividual>
     

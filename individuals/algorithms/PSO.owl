@@ -53,6 +53,7 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
         <hasDataStructure rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_global_best"/>
         <hasDataStructure rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_archive_local_best"/>
+        <hasDataStructure rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_velocities"/>
         <hasStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_generate_population"/>
     </owl:NamedIndividual>
     
@@ -97,9 +98,18 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_iterate_population">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_iterative_selector"/>
         <hasOutputEnd rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_stop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PSO_iterative_selector -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PSO_iterative_selector">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity"/>
     </owl:NamedIndividual>
     
 

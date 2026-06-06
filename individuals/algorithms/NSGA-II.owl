@@ -106,8 +106,18 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_mutation">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VariationComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_next_generation"/>
         <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_parameter_mutation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NSGA-II_next_generation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_next_generation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent"/>
+        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection"/>
+        <hasOutputEnd rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union"/>
     </owl:NamedIndividual>
     
 
@@ -152,8 +162,8 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
-        <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection"/>
         <hasOutput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union"/>
+        <hasOutputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_next_generation"/>
         <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NSGA-II_parameter_iterations"/>
     </owl:NamedIndividual>
     

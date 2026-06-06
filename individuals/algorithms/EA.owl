@@ -40,8 +40,8 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection">
-        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
-        <hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_stop"/>
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent"/>
+        <hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_next_generation"/>
     </owl:NamedIndividual>
     
 
@@ -62,6 +62,16 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VariationComponent"/>
         <hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover"/>
         <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_parameter_mutationprobability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#EA_next_generation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_next_generation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent"/>
+        <hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_mutation"/>
+        <hasInputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_stop"/>
     </owl:NamedIndividual>
     
 
@@ -116,7 +126,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#EA_stop">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
-        <hasInput rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_mutation"/>
+        <hasInputEnd rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_next_generation"/>
         <hasInputStart rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_generate_population"/>
         <hasParameter rdf:resource="https://w3id.org/ontologies-ULL/CO-META#EA_parameter_iterations"/>
     </owl:NamedIndividual>
