@@ -100,7 +100,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Solution"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"/>
     </owl:ObjectProperty>
     
 
@@ -160,7 +160,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasNodeType">
-        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Solution"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"/>
         <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"/>
     </owl:ObjectProperty>
     
@@ -369,7 +369,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasSize">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Solution"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -422,7 +422,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
-        <rdfs:comment xml:lang="en">Accepts a solution out of two or more solutions, according to its fitness. Needs fitness assignment component in multiobjective optimization</rdfs:comment>
+        <rdfs:comment xml:lang="en">Component that accepts one solution out of two or more candidate solutions according to their fitness. In multiobjective optimization it requires a preceding fitness assignment component.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente que acepta una solución entre dos o más soluciones candidatas según su aptitud. En optimización multiobjetivo requiere un componente de asignación de aptitud previo.</rdfs:comment>
+        <rdfs:label xml:lang="en">Acceptance Component</rdfs:label>
+        <rdfs:label xml:lang="es">Componente de aceptación</rdfs:label>
     </owl:Class>
     
 
@@ -432,6 +435,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Bit">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"/>
+        <rdfs:comment xml:lang="es">Nodo de solución que toma un valor binario (0 o 1).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Solution node that takes a binary value (0 or 1).</rdfs:comment>
+        <rdfs:label xml:lang="en">Bit</rdfs:label>
+        <rdfs:label xml:lang="es">Bit</rdfs:label>
     </owl:Class>
     
 
@@ -441,6 +448,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#BoolParameter">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <rdfs:comment xml:lang="en">Parameter whose value is a boolean (true or false).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Parámetro cuyo valor es un booleano (verdadero o falso).</rdfs:comment>
+        <rdfs:label xml:lang="en">Boolean Parameter</rdfs:label>
+        <rdfs:label xml:lang="es">Parámetro booleano</rdfs:label>
     </owl:Class>
     
 
@@ -458,6 +469,23 @@
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Enumeración (Safe, Unsafe, Both) que indica si un componente metaheurístico garantiza que las soluciones que produce son factibles, puede producir soluciones no factibles o admite ambos comportamientos.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Enumeration (Safe, Unsafe, Both) that indicates whether a metaheuristic component guarantees that the solutions it produces are feasible, may produce infeasible solutions, or supports both behaviours.</rdfs:comment>
+        <rdfs:label xml:lang="en">Component Safety</rdfs:label>
+        <rdfs:label xml:lang="es">Seguridad del componente</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#CompositeEncoding -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#CompositeEncoding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"/>
+        <rdfs:comment xml:lang="es">Solución codificada como una combinación de varias codificaciones, cada una de las cuales representa una parte distinta de la solución.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Solution encoded as a combination of several encodings, each of which represents a different part of the solution.</rdfs:comment>
+        <rdfs:label xml:lang="es">Codificación compuesta</rdfs:label>
+        <rdfs:label xml:lang="en">Composite Encoding</rdfs:label>
     </owl:Class>
     
 
@@ -466,7 +494,10 @@
 
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Constraint">
-        <rdfs:comment xml:lang="en">Constraint of an optimization problem</rdfs:comment>
+        <rdfs:comment xml:lang="es">Condición que debe cumplir una solución de un problema de optimización para ser factible.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Condition that a solution of an optimization problem must satisfy in order to be feasible.</rdfs:comment>
+        <rdfs:label xml:lang="en">Constraint</rdfs:label>
+        <rdfs:label xml:lang="es">Restricción</rdfs:label>
     </owl:Class>
     
 
@@ -476,7 +507,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
-        <rdfs:comment xml:lang="en">Constructs a solution or a group of solutions using heuristic methods</rdfs:comment>
+        <rdfs:comment xml:lang="en">Component that constructs a solution or a group of solutions step by step using heuristic methods.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente que construye una solución o un grupo de soluciones paso a paso mediante métodos heurísticos.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de construcción</rdfs:label>
+        <rdfs:label xml:lang="en">Construction Component</rdfs:label>
     </owl:Class>
     
 
@@ -496,6 +530,10 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Metaheuristic that builds solutions incrementally.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Metaheurística que construye soluciones de forma incremental.</rdfs:comment>
+        <rdfs:label xml:lang="en">Constructive Metaheuristic</rdfs:label>
+        <rdfs:label xml:lang="es">Metaheurística constructiva</rdfs:label>
     </owl:Class>
     
 
@@ -528,7 +566,10 @@
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Production of one or more individuals from two or more parent individuals</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de modificación que produce uno o más individuos descendientes recombinando dos o más individuos progenitores. Tiene un parámetro de probabilidad de cruce.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Modification component that produces one or more offspring individuals by recombining two or more parent individuals. It has a crossover probability parameter.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de cruce</rdfs:label>
+        <rdfs:label xml:lang="en">Crossover Component</rdfs:label>
     </owl:Class>
     
 
@@ -538,6 +579,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Custom">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"/>
+        <rdfs:comment xml:lang="es">Nodo de solución cuyo tipo de valor está definido por el usuario y no corresponde a ninguno de los tipos de nodo predefinidos.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Solution node whose value type is user-defined and does not correspond to any of the predefined node types.</rdfs:comment>
+        <rdfs:label xml:lang="en">Custom Node</rdfs:label>
+        <rdfs:label xml:lang="es">Nodo personalizado</rdfs:label>
     </owl:Class>
     
 
@@ -547,7 +592,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
-        <rdfs:comment xml:lang="en">Updates specific data structures</rdfs:comment>
+        <rdfs:comment xml:lang="en">Component that updates specific data structures used by the algorithm.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente que actualiza estructuras de datos específicas utilizadas por el algoritmo.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente manejador de datos</rdfs:label>
+        <rdfs:label xml:lang="en">Data Handler Component</rdfs:label>
     </owl:Class>
     
 
@@ -556,7 +604,10 @@
 
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#DataStructure">
-        <rdfs:comment xml:lang="en">Data structure that stores information used by the algorithm</rdfs:comment>
+        <rdfs:comment xml:lang="en">Data structure that stores information used by the algorithm during its execution.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Estructura de datos que almacena información utilizada por el algoritmo durante su ejecución.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Structure</rdfs:label>
+        <rdfs:label xml:lang="es">Estructura de datos</rdfs:label>
     </owl:Class>
     
 
@@ -566,7 +617,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent"/>
-        <rdfs:comment xml:lang="en">Adjust the fitness value to encourage diversity in the population</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente multiobjetivo que ajusta los valores de aptitud para fomentar la diversidad en la población.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Multiobjective component that adjusts fitness values to encourage diversity in the population.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de preservación de la diversidad</rdfs:label>
+        <rdfs:label xml:lang="en">Diversity Preservation Component</rdfs:label>
     </owl:Class>
     
 
@@ -598,6 +652,10 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Metaheuristic based on evolutionary algorithms, employing selection, crossover and variation processes.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Metaheurística basada en algoritmos evolutivos, utilizando procesos de selección, cruce y variación.</rdfs:comment>
+        <rdfs:label xml:lang="es">Algoritmo evolutivo</rdfs:label>
+        <rdfs:label xml:lang="en">Evolutionary Algorithm</rdfs:label>
     </owl:Class>
     
 
@@ -607,7 +665,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent"/>
-        <rdfs:comment>Assign an individual fitness value to each member of a population</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente multiobjetivo que asigna un valor de aptitud individual a cada miembro de una población.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Multiobjective component that assigns a single fitness value to each member of a population.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de asignación de aptitud</rdfs:label>
+        <rdfs:label xml:lang="en">Fitness Assignment Component</rdfs:label>
     </owl:Class>
     
 
@@ -617,6 +678,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#FloatParameter">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <rdfs:comment xml:lang="en">Parameter whose value is a real (decimal) number.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Parámetro cuyo valor es un número real (decimal).</rdfs:comment>
+        <rdfs:label xml:lang="en">Float Parameter</rdfs:label>
+        <rdfs:label xml:lang="es">Parámetro real</rdfs:label>
     </owl:Class>
     
 
@@ -626,7 +691,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
-        <rdfs:comment xml:lang="en">Generates an initial solution or population</rdfs:comment>
+        <rdfs:comment xml:lang="en">Component that generates an initial solution or an initial population.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente que genera una solución inicial o una población inicial.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de generación</rdfs:label>
+        <rdfs:label xml:lang="en">Generation Component</rdfs:label>
     </owl:Class>
     
 
@@ -636,6 +704,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Integer">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"/>
+        <rdfs:comment xml:lang="es">Nodo de solución que toma un valor entero.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Solution node that takes an integer value.</rdfs:comment>
+        <rdfs:label xml:lang="en">Integer Node</rdfs:label>
+        <rdfs:label xml:lang="es">Nodo entero</rdfs:label>
     </owl:Class>
     
 
@@ -645,6 +717,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <rdfs:comment xml:lang="en">Parameter whose value is an integer number.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Parámetro cuyo valor es un número entero.</rdfs:comment>
+        <rdfs:label xml:lang="en">Integer Parameter</rdfs:label>
+        <rdfs:label xml:lang="es">Parámetro entero</rdfs:label>
     </owl:Class>
     
 
@@ -660,6 +736,10 @@
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Componente de selección que selecciona un único individuo en cada invocación, por lo que se aplica repetidamente para seleccionar varios individuos.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Selection component that selects a single individual per invocation, so it is applied repeatedly to select several individuals.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de selección iterativa</rdfs:label>
+        <rdfs:label xml:lang="en">Iterative Selection Component</rdfs:label>
     </owl:Class>
     
 
@@ -680,15 +760,23 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Componente de cruce que divide a los progenitores en k puntos de corte e intercambia los segmentos resultantes. Tiene un parámetro para el número de puntos de corte.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Crossover component that splits the parents at k cut points and exchanges the resulting segments. It has a parameter for the number of cut points.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de cruce de k puntos</rdfs:label>
+        <rdfs:label xml:lang="en">K-Point Crossover Component</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#List -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ListEncoding -->
 
 
-    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#List">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Solution"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ListEncoding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"/>
+        <rdfs:comment xml:lang="es">Solución codificada como una secuencia ordenada de nodos que puede contener valores repetidos.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Solution encoded as an ordered sequence of nodes that may contain repeated values.</rdfs:comment>
+        <rdfs:label xml:lang="es">Codificación de lista</rdfs:label>
+        <rdfs:label xml:lang="en">List Encoding</rdfs:label>
     </owl:Class>
     
 
@@ -698,7 +786,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
-        <rdfs:comment xml:lang="en">Improves the solution fitness by exploring its neighborhood</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de modificación que mejora la aptitud de una solución explorando su vecindario.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Modification component that improves the fitness of a solution by exploring its neighbourhood.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de búsqueda local</rdfs:label>
+        <rdfs:label xml:lang="en">Local Search Component</rdfs:label>
     </owl:Class>
     
 
@@ -718,6 +809,10 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Metaheuristic that starts from complete solutions and iteratively improves them.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Metaheurística que parte de soluciones completas y las mejora iterativamente.</rdfs:comment>
+        <rdfs:label xml:lang="en">Local Search Metaheuristic</rdfs:label>
+        <rdfs:label xml:lang="es">Metaheurística de búsqueda local</rdfs:label>
     </owl:Class>
     
 
@@ -727,7 +822,23 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#LoopComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
-        <rdfs:comment xml:lang="en">Creates loops to iterate through data structures or repeat processes until a condition is met. Has two additional properties: hasOutputStart and hasOutputEnd</rdfs:comment>
+        <rdfs:comment xml:lang="en">Component that creates loops to iterate through data structures or to repeat processes until a condition is met. It has two additional properties: hasOutputStart and hasOutputEnd.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente que crea bucles para recorrer estructuras de datos o repetir procesos hasta que se cumple una condición. Tiene dos propiedades adicionales: hasOutputStart y hasOutputEnd.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de bucle</rdfs:label>
+        <rdfs:label xml:lang="en">Loop Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MatrixEncoding -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MatrixEncoding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"/>
+        <rdfs:comment xml:lang="es">Solución codificada como una disposición bidimensional de nodos organizados en filas y columnas.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Solution encoded as a two-dimensional arrangement of nodes organized in rows and columns.</rdfs:comment>
+        <rdfs:label xml:lang="es">Codificación matricial</rdfs:label>
+        <rdfs:label xml:lang="en">Matrix Encoding</rdfs:label>
     </owl:Class>
     
 
@@ -738,6 +849,10 @@
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Objective"/>
         <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective"/>
+        <rdfs:comment xml:lang="en">Objective of an optimization problem whose value must be maximized.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Objetivo de un problema de optimización cuyo valor debe maximizarse.</rdfs:comment>
+        <rdfs:label xml:lang="en">Maximization Objective</rdfs:label>
+        <rdfs:label xml:lang="es">Objetivo de maximización</rdfs:label>
     </owl:Class>
     
 
@@ -757,6 +872,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Algoritmo evolutivo que además utiliza procesos de búsqueda local.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Evolutionary algorithm that employs local search processes.</rdfs:comment>
+        <rdfs:label xml:lang="es">Algoritmo memético</rdfs:label>
         <rdfs:label xml:lang="en">Memetic Algorithm</rdfs:label>
     </owl:Class>
     
@@ -765,14 +883,24 @@
     <!-- https://w3id.org/ontologies-ULL/CO-META#Metaheuristic -->
 
 
-    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">
+        <rdfs:comment xml:lang="en">High-level algorithmic procedure, composed of interconnected metaheuristic components, that finds sufficiently good solutions to optimization problems by searching through vast solution spaces.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Procedimiento algorítmico de alto nivel, compuesto por componentes metaheurísticos interconectados, que encuentran soluciones suficientemente buenas a problemas de optimización mediante búsquedas en amplios espacios de soluciones.</rdfs:comment>
+        <rdfs:label xml:lang="en">Metaheuristic</rdfs:label>
+        <rdfs:label xml:lang="es">Metaheurística</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent -->
 
 
-    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">
+        <rdfs:comment xml:lang="es">Bloque constructivo de una metaheurística que realiza una tarea específica y se conecta con otros componentes.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Building block of a metaheuristic that performs a specific task and is connected to other components.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente metaheurístico</rdfs:label>
+        <rdfs:label xml:lang="en">Metaheuristic Component</rdfs:label>
+    </owl:Class>
     
 
 
@@ -781,6 +909,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Objective"/>
+        <rdfs:comment xml:lang="en">Objective of an optimization problem whose value must be minimized.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Objetivo de un problema de optimización cuyo valor debe minimizarse.</rdfs:comment>
+        <rdfs:label xml:lang="en">Minimization Objective</rdfs:label>
+        <rdfs:label xml:lang="es">Objetivo de minimización</rdfs:label>
     </owl:Class>
     
 
@@ -790,7 +922,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
-        <rdfs:comment xml:lang="en">Modifies a solution or a population</rdfs:comment>
+        <rdfs:comment xml:lang="en">Component that modifies a solution or a population.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente que modifica una solución o una población.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de modificación</rdfs:label>
+        <rdfs:label xml:lang="en">Modification Component</rdfs:label>
     </owl:Class>
     
 
@@ -800,7 +935,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
-        <rdfs:comment xml:lang="en">Components for multiobjective optimization. Required before acceptance methods</rdfs:comment>
+        <rdfs:comment xml:lang="en">Component used in multiobjective optimization. It is required before acceptance components.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente utilizado en optimización multiobjetivo. Es necesario antes de los componentes de aceptación.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente multiobjetivo</rdfs:label>
+        <rdfs:label xml:lang="en">Multiobjective Component</rdfs:label>
     </owl:Class>
     
 
@@ -810,6 +948,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
+        <rdfs:comment xml:lang="es">Componente de modificación que genera soluciones vecinas de una solución dada aplicando un operador de movimiento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Modification component that generates neighbouring solutions of a given solution by applying a move operator.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de vecindario</rdfs:label>
+        <rdfs:label xml:lang="en">Neighbourhood Component</rdfs:label>
     </owl:Class>
     
 
@@ -818,7 +960,10 @@
 
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Objective">
-        <rdfs:comment xml:lang="en">Objective of an optimization problem. This class should not be instantiated directly; subclasses shoud be used instead</rdfs:comment>
+        <rdfs:comment xml:lang="en">Objective of an optimization problem. This class should not be instantiated directly; its subclasses should be used instead.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Objetivo de un problema de optimización. Esta clase no debe instanciarse directamente; deben usarse sus subclases.</rdfs:comment>
+        <rdfs:label xml:lang="en">Objective</rdfs:label>
+        <rdfs:label xml:lang="es">Objetivo</rdfs:label>
     </owl:Class>
     
 
@@ -827,7 +972,10 @@
 
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Parameter">
-        <rdfs:comment>Defines the structure of a parameter used by a component</rdfs:comment>
+        <rdfs:comment xml:lang="es">Define la estructura de un parámetro utilizado por un componente, como su tipo y su rango de valores válidos.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defines the structure of a parameter used by a component, such as its type and its valid range of values.</rdfs:comment>
+        <rdfs:label xml:lang="en">Parameter</rdfs:label>
+        <rdfs:label xml:lang="es">Parámetro</rdfs:label>
     </owl:Class>
     
 
@@ -836,7 +984,10 @@
 
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">
-        <rdfs:comment xml:lang="en">Represents the value assigned to a parameter</rdfs:comment>
+        <rdfs:comment xml:lang="es">Valor asignado a un parámetro para un componente concreto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Value assigned to a parameter for a specific component.</rdfs:comment>
+        <rdfs:label xml:lang="en">Parameter Value</rdfs:label>
+        <rdfs:label xml:lang="es">Valor de parámetro</rdfs:label>
     </owl:Class>
     
 
@@ -846,15 +997,23 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"/>
+        <rdfs:comment xml:lang="es">Componente de cruce para permutaciones que intercambia un segmento entre los progenitores y repara las posiciones restantes mediante la correspondencia definida por dicho segmento (PMX).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Crossover component for permutations that exchanges a segment between parents and repairs the remaining positions using the mapping defined by that segment (PMX).</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de cruce parcialmente mapeado</rdfs:label>
+        <rdfs:label xml:lang="en">Partially Mapped Crossover Component</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#Permutation -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PermutationEncoding -->
 
 
-    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Permutation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Solution"/>
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PermutationEncoding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"/>
+        <rdfs:comment xml:lang="es">Solución codificada como una ordenación de elementos distintos, sin repeticiones.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Solution encoded as an ordered arrangement of distinct elements, without repetitions.</rdfs:comment>
+        <rdfs:label xml:lang="es">Codificación de permutación</rdfs:label>
+        <rdfs:label xml:lang="en">Permutation Encoding</rdfs:label>
     </owl:Class>
     
 
@@ -882,6 +1041,9 @@
             </owl:Class>
         </owl:equivalentClass>
         <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic"/>
+        <rdfs:comment xml:lang="en">Metaheuristic that works with a population of solutions.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Metaheurística que trabaja con una población de soluciones.</rdfs:comment>
+        <rdfs:label xml:lang="es">Metaheurística basada en población</rdfs:label>
         <rdfs:label xml:lang="en">Population Based Metaheuristic</rdfs:label>
     </owl:Class>
     
@@ -926,6 +1088,10 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"/>
         <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent"/>
+        <rdfs:comment xml:lang="es">Componente de construcción que construye una población de más de una solución.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction component that builds a population of more than one solution.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de construcción de población</rdfs:label>
+        <rdfs:label xml:lang="en">Population Construction Component</rdfs:label>
     </owl:Class>
     
 
@@ -969,6 +1135,10 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
         <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"/>
+        <rdfs:comment xml:lang="es">Componente de generación que genera una población inicial de más de una solución.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Generation component that generates an initial population of more than one solution.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de generación de población</rdfs:label>
+        <rdfs:label xml:lang="en">Population Generation Component</rdfs:label>
     </owl:Class>
     
 
@@ -979,7 +1149,10 @@
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
         <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
-        <rdfs:comment xml:lang="en">Repeats a partial process, with the old population as input, until the new population is filled</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de bucle que repite un proceso parcial, tomando la población anterior como entrada, hasta completar la nueva población.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Loop component that repeats a partial process, taking the old population as input, until the new population is filled.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente modificador de población</rdfs:label>
+        <rdfs:label xml:lang="en">Population Modifier Component</rdfs:label>
     </owl:Class>
     
 
@@ -989,7 +1162,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
-        <rdfs:comment xml:lang="en">Modifies populations</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de modificación que opera sobre poblaciones completas.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Modification component that operates on whole populations.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente operador de población</rdfs:label>
+        <rdfs:label xml:lang="en">Population Operator Component</rdfs:label>
     </owl:Class>
     
 
@@ -1004,7 +1180,10 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Objective"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Optimization problem</rdfs:comment>
+        <rdfs:comment xml:lang="en">Optimization problem, defined by at least one objective and optionally by constraints and a solution codification.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Problema de optimización, definido por al menos un objetivo y, opcionalmente, por restricciones y una codificación de solución.</rdfs:comment>
+        <rdfs:label xml:lang="en">Problem</rdfs:label>
+        <rdfs:label xml:lang="es">Problema</rdfs:label>
     </owl:Class>
     
 
@@ -1014,6 +1193,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"/>
+        <rdfs:comment xml:lang="es">Componente de cruce que decide aleatoriamente, para cada posición, de qué progenitor hereda el valor el descendiente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Crossover component that decides randomly, for each position, from which parent the offspring inherits the value.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de cruce por decisión aleatoria</rdfs:label>
+        <rdfs:label xml:lang="en">Random Decision Crossover Component</rdfs:label>
     </owl:Class>
     
 
@@ -1029,6 +1212,23 @@
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Componente de selección que selecciona aleatoriamente una pareja de individuos.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Selection component that selects a pair of individuals at random.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de selección aleatoria</rdfs:label>
+        <rdfs:label xml:lang="en">Random Selection Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ScalarEncoding -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ScalarEncoding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"/>
+        <rdfs:comment xml:lang="es">Solución codificada como un único nodo que contiene un solo valor.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Solution encoded as a single node that holds one value.</rdfs:comment>
+        <rdfs:label xml:lang="es">Codificación escalar</rdfs:label>
+        <rdfs:label xml:lang="en">Scalar Encoding</rdfs:label>
     </owl:Class>
     
 
@@ -1049,7 +1249,10 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Selects the individuals that will start the next generation</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de modificación que selecciona los individuos que formarán parte de la siguiente generación. Tiene un parámetro de elitismo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Modification component that selects the individuals that will take part in the next generation. It has an elitism parameter.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de selección</rdfs:label>
+        <rdfs:label xml:lang="en">Selection Component</rdfs:label>
     </owl:Class>
     
 
@@ -1065,6 +1268,10 @@
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Componente de selección que selecciona individuos por parejas en orden.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Selection component that selects pairs of individuals in order.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de selección simple por parejas</rdfs:label>
+        <rdfs:label xml:lang="en">Simple Pair Selection Component</rdfs:label>
     </owl:Class>
     
 
@@ -1098,6 +1305,10 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"/>
+        <rdfs:comment xml:lang="es">Componente de construcción que construye una única solución (tamaño de población igual a 1).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction component that builds a single solution (population size equal to 1).</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de construcción de solución única</rdfs:label>
+        <rdfs:label xml:lang="en">Single Solution Construction Component</rdfs:label>
     </owl:Class>
     
 
@@ -1131,6 +1342,10 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
+        <rdfs:comment xml:lang="es">Componente de generación que genera una única solución inicial (tamaño de población igual a 1).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Generation component that generates a single initial solution (population size equal to 1).</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de generación de solución única</rdfs:label>
+        <rdfs:label xml:lang="en">Single Solution Generation Component</rdfs:label>
     </owl:Class>
     
 
@@ -1157,22 +1372,28 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Metaheuristic that works with a single solution at a time.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Metaheurística que trabaja con una única solución a la vez.</rdfs:comment>
+        <rdfs:label xml:lang="es">Metaheurística basada en solución única</rdfs:label>
         <rdfs:label xml:lang="en">Single Solution Based Metaheuristic</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#Solution -->
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding -->
 
 
-    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Solution">
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasSize"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Solution codification used in an optimization problem</rdfs:comment>
+        <rdfs:comment xml:lang="es">Codificación de solución utilizada en un problema de optimización, compuesta por nodos de solución y con un tamaño determinado.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Solution encoding used in an optimization problem, composed of solution nodes and with a given size.</rdfs:comment>
+        <rdfs:label xml:lang="es">Codificación de una solución</rdfs:label>
+        <rdfs:label xml:lang="en">Solution Encoding</rdfs:label>
     </owl:Class>
     
 
@@ -1181,7 +1402,10 @@
 
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">
-        <rdfs:comment xml:lang="en">Smallest part of a solution</rdfs:comment>
+        <rdfs:comment xml:lang="es">Parte más pequeña de una solución, que contiene un único valor.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Smallest part of a solution, which holds a single value.</rdfs:comment>
+        <rdfs:label xml:lang="es">Nodo de solución</rdfs:label>
+        <rdfs:label xml:lang="en">Solution Node</rdfs:label>
     </owl:Class>
     
 
@@ -1202,7 +1426,10 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Creates the main loop and determines when to stop the algorithm</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de bucle que crea el bucle principal del algoritmo y determina cuándo detenerlo. Tiene un parámetro de número de iteraciones.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Loop component that creates the main loop of the algorithm and determines when to stop it. It has an iterations parameter.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de criterio de parada</rdfs:label>
+        <rdfs:label xml:lang="en">Stopping Criterion Component</rdfs:label>
     </owl:Class>
     
 
@@ -1229,6 +1456,10 @@
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Componente de selección que selecciona cada individuo como el mejor de un grupo elegido aleatoriamente (torneo). Tiene un parámetro de tamaño de torneo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has a tournament size parameter.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de selección por torneo</rdfs:label>
+        <rdfs:label xml:lang="en">Tournament Selection Component</rdfs:label>
     </owl:Class>
     
 
@@ -1238,7 +1469,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
-        <rdfs:comment xml:lang="en">Updates the best solution or solutions found by the algorithm</rdfs:comment>
+        <rdfs:comment xml:lang="en">Component that updates the best solution or solutions found so far by the algorithm.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente que actualiza la mejor solución o soluciones encontradas hasta el momento por el algoritmo.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de actualización del mejor</rdfs:label>
+        <rdfs:label xml:lang="en">Update Best Component</rdfs:label>
     </owl:Class>
     
 
@@ -1248,7 +1482,10 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#VariationComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
-        <rdfs:comment>Introduces small random changes to a solution</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de modificación que introduce pequeños cambios aleatorios en una solución (mutación).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Modification component that introduces small random changes to a solution (mutation).</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de variación</rdfs:label>
+        <rdfs:label xml:lang="en">Variation Component</rdfs:label>
     </owl:Class>
     
 
@@ -1289,8 +1526,8 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
-        <maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</maxValue>
-        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
+        <maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxValue>
+        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</minValue>
     </owl:NamedIndividual>
     
 
@@ -1320,8 +1557,8 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FloatParameter"/>
-        <maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</maxValue>
-        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</minValue>
+        <maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxValue>
+        <minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</minValue>
     </owl:NamedIndividual>
     
 
@@ -1413,7 +1650,7 @@
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Problem"/>
-            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Solution"/>
+            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"/>
             <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#SolutionNode"/>
         </owl:members>
     </rdf:Description>

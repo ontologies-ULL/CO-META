@@ -57,7 +57,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#hasCodification> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCodification> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#hasConstraint
 <https://w3id.org/ontologies-ULL/CO-META#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -87,7 +87,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/ontologies-ULL/CO-META#hasNodeType
 <https://w3id.org/ontologies-ULL/CO-META#hasNodeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/ontologies-ULL/CO-META#hasNodeType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
+<https://w3id.org/ontologies-ULL/CO-META#hasNodeType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> .
 <https://w3id.org/ontologies-ULL/CO-META#hasNodeType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#SolutionNode> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#hasObjective
@@ -200,7 +200,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # https://w3id.org/ontologies-ULL/CO-META#hasSize
 <https://w3id.org/ontologies-ULL/CO-META#hasSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#hasSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<https://w3id.org/ontologies-ULL/CO-META#hasSize> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
+<https://w3id.org/ontologies-ULL/CO-META#hasSize> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> .
 <https://w3id.org/ontologies-ULL/CO-META#hasSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#hasValue
@@ -230,15 +230,26 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent
 <https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Accepts a solution out of two or more solutions, according to its fitness. Needs fitness assignment component in multiobjective optimization"@en .
+<https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Component that accepts one solution out of two or more candidate solutions according to their fitness. In multiobjective optimization it requires a preceding fitness assignment component."@en .
+<https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente que acepta una solución entre dos o más soluciones candidatas según su aptitud. En optimización multiobjetivo requiere un componente de asignación de aptitud previo."@es .
+<https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Acceptance Component"@en .
+<https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de aceptación"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Bit
 <https://w3id.org/ontologies-ULL/CO-META#Bit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#Bit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SolutionNode> .
+<https://w3id.org/ontologies-ULL/CO-META#Bit> <http://www.w3.org/2000/01/rdf-schema#comment> "Nodo de solución que toma un valor binario (0 o 1)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#Bit> <http://www.w3.org/2000/01/rdf-schema#comment> "Solution node that takes a binary value (0 or 1)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#Bit> <http://www.w3.org/2000/01/rdf-schema#label> "Bit"@en .
+<https://w3id.org/ontologies-ULL/CO-META#Bit> <http://www.w3.org/2000/01/rdf-schema#label> "Bit"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#BoolParameter
 <https://w3id.org/ontologies-ULL/CO-META#BoolParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#BoolParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+<https://w3id.org/ontologies-ULL/CO-META#BoolParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter whose value is a boolean (true or false)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#BoolParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parámetro cuyo valor es un booleano (verdadero o falso)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#BoolParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Boolean Parameter"@en .
+<https://w3id.org/ontologies-ULL/CO-META#BoolParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Parámetro booleano"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#ComponentSafety
 <https://w3id.org/ontologies-ULL/CO-META#ComponentSafety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -254,15 +265,33 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Both> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#ComponentSafety> <http://www.w3.org/2000/01/rdf-schema#comment> "Enumeración (Safe, Unsafe, Both) que indica si un componente metaheurístico garantiza que las soluciones que produce son factibles, puede producir soluciones no factibles o admite ambos comportamientos."@es .
+<https://w3id.org/ontologies-ULL/CO-META#ComponentSafety> <http://www.w3.org/2000/01/rdf-schema#comment> "Enumeration (Safe, Unsafe, Both) that indicates whether a metaheuristic component guarantees that the solutions it produces are feasible, may produce infeasible solutions, or supports both behaviours."@en .
+<https://w3id.org/ontologies-ULL/CO-META#ComponentSafety> <http://www.w3.org/2000/01/rdf-schema#label> "Component Safety"@en .
+<https://w3id.org/ontologies-ULL/CO-META#ComponentSafety> <http://www.w3.org/2000/01/rdf-schema#label> "Seguridad del componente"@es .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#CompositeEncoding
+<https://w3id.org/ontologies-ULL/CO-META#CompositeEncoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#CompositeEncoding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> .
+<https://w3id.org/ontologies-ULL/CO-META#CompositeEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Solución codificada como una combinación de varias codificaciones, cada una de las cuales representa una parte distinta de la solución."@es .
+<https://w3id.org/ontologies-ULL/CO-META#CompositeEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Solution encoded as a combination of several encodings, each of which represents a different part of the solution."@en .
+<https://w3id.org/ontologies-ULL/CO-META#CompositeEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "Codificación compuesta"@es .
+<https://w3id.org/ontologies-ULL/CO-META#CompositeEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "Composite Encoding"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Constraint
 <https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint of an optimization problem"@en .
+<https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Condición que debe cumplir una solución de un problema de optimización para ser factible."@es .
+<https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Condition that a solution of an optimization problem must satisfy in order to be feasible."@en .
+<https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint"@en .
+<https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Restricción"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent
 <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Constructs a solution or a group of solutions using heuristic methods"@en .
+<https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Component that constructs a solution or a group of solutions step by step using heuristic methods."@en .
+<https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente que construye una solución o un grupo de soluciones paso a paso mediante métodos heurísticos."@es .
+<https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de construcción"@es .
+<https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Construction Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic
 <https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -278,6 +307,10 @@ _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheuristic that builds solutions incrementally."@en .
+<https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheurística que construye soluciones de forma incremental."@es .
+<https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Constructive Metaheuristic"@en .
+<https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Metaheurística constructiva"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -297,25 +330,41 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid17 <http://www.w3.org/2002/07/owl#hasValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Production of one or more individuals from two or more parent individuals"@en .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de modificación que produce uno o más individuos descendientes recombinando dos o más individuos progenitores. Tiene un parámetro de probabilidad de cruce."@es .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Modification component that produces one or more offspring individuals by recombining two or more parent individuals. It has a crossover probability parameter."@en .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de cruce"@es .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Crossover Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Custom
 <https://w3id.org/ontologies-ULL/CO-META#Custom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#Custom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SolutionNode> .
+<https://w3id.org/ontologies-ULL/CO-META#Custom> <http://www.w3.org/2000/01/rdf-schema#comment> "Nodo de solución cuyo tipo de valor está definido por el usuario y no corresponde a ninguno de los tipos de nodo predefinidos."@es .
+<https://w3id.org/ontologies-ULL/CO-META#Custom> <http://www.w3.org/2000/01/rdf-schema#comment> "Solution node whose value type is user-defined and does not correspond to any of the predefined node types."@en .
+<https://w3id.org/ontologies-ULL/CO-META#Custom> <http://www.w3.org/2000/01/rdf-schema#label> "Custom Node"@en .
+<https://w3id.org/ontologies-ULL/CO-META#Custom> <http://www.w3.org/2000/01/rdf-schema#label> "Nodo personalizado"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent
 <https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Updates specific data structures"@en .
+<https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Component that updates specific data structures used by the algorithm."@en .
+<https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente que actualiza estructuras de datos específicas utilizadas por el algoritmo."@es .
+<https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente manejador de datos"@es .
+<https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Data Handler Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#DataStructure
 <https://w3id.org/ontologies-ULL/CO-META#DataStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#DataStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Data structure that stores information used by the algorithm"@en .
+<https://w3id.org/ontologies-ULL/CO-META#DataStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Data structure that stores information used by the algorithm during its execution."@en .
+<https://w3id.org/ontologies-ULL/CO-META#DataStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Estructura de datos que almacena información utilizada por el algoritmo durante su ejecución."@es .
+<https://w3id.org/ontologies-ULL/CO-META#DataStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Data Structure"@en .
+<https://w3id.org/ontologies-ULL/CO-META#DataStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Estructura de datos"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent
 <https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Adjust the fitness value to encourage diversity in the population"@en .
+<https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente multiobjetivo que ajusta los valores de aptitud para fomentar la diversidad en la población."@es .
+<https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Multiobjective component that adjusts fitness values to encourage diversity in the population."@en .
+<https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de preservación de la diversidad"@es .
+<https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Diversity Preservation Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm
 <https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -348,28 +397,50 @@ _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheuristic based on evolutionary algorithms, employing selection, crossover and variation processes."@en .
+<https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheurística basada en algoritmos evolutivos, utilizando procesos de selección, cruce y variación."@es .
+<https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Algoritmo evolutivo"@es .
+<https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Evolutionary Algorithm"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent
 <https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Assign an individual fitness value to each member of a population" .
+<https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente multiobjetivo que asigna un valor de aptitud individual a cada miembro de una población."@es .
+<https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Multiobjective component that assigns a single fitness value to each member of a population."@en .
+<https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de asignación de aptitud"@es .
+<https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Fitness Assignment Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#FloatParameter
 <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+<https://w3id.org/ontologies-ULL/CO-META#FloatParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter whose value is a real (decimal) number."@en .
+<https://w3id.org/ontologies-ULL/CO-META#FloatParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parámetro cuyo valor es un número real (decimal)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#FloatParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Float Parameter"@en .
+<https://w3id.org/ontologies-ULL/CO-META#FloatParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Parámetro real"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#GenerationComponent
 <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Generates an initial solution or population"@en .
+<https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Component that generates an initial solution or an initial population."@en .
+<https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente que genera una solución inicial o una población inicial."@es .
+<https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de generación"@es .
+<https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Generation Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Integer
 <https://w3id.org/ontologies-ULL/CO-META#Integer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#Integer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SolutionNode> .
+<https://w3id.org/ontologies-ULL/CO-META#Integer> <http://www.w3.org/2000/01/rdf-schema#comment> "Nodo de solución que toma un valor entero."@es .
+<https://w3id.org/ontologies-ULL/CO-META#Integer> <http://www.w3.org/2000/01/rdf-schema#comment> "Solution node that takes an integer value."@en .
+<https://w3id.org/ontologies-ULL/CO-META#Integer> <http://www.w3.org/2000/01/rdf-schema#label> "Integer Node"@en .
+<https://w3id.org/ontologies-ULL/CO-META#Integer> <http://www.w3.org/2000/01/rdf-schema#label> "Nodo entero"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#IntegerParameter
 <https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+<https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter whose value is an integer number."@en .
+<https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parámetro cuyo valor es un número entero."@es .
+<https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Integer Parameter"@en .
+<https://w3id.org/ontologies-ULL/CO-META#IntegerParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Parámetro entero"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent
 <https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -378,6 +449,10 @@ _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid28 <http://www.w3.org/2002/07/owl#hasValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de selección que selecciona un único individuo en cada invocación, por lo que se aplica repetidamente para seleccionar varios individuos."@es .
+<https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Selection component that selects a single individual per invocation, so it is applied repeatedly to select several individuals."@en .
+<https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de selección iterativa"@es .
+<https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Iterative Selection Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent
 <https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -389,15 +464,26 @@ _:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologie
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
 _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de cruce que divide a los progenitores en k puntos de corte e intercambia los segmentos resultantes. Tiene un parámetro para el número de puntos de corte."@es .
+<https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Crossover component that splits the parents at k cut points and exchanges the resulting segments. It has a parameter for the number of cut points."@en .
+<https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de cruce de k puntos"@es .
+<https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#label> "K-Point Crossover Component"@en .
 # 
-# https://w3id.org/ontologies-ULL/CO-META#List
-<https://w3id.org/ontologies-ULL/CO-META#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#List> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
+# https://w3id.org/ontologies-ULL/CO-META#ListEncoding
+<https://w3id.org/ontologies-ULL/CO-META#ListEncoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#ListEncoding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> .
+<https://w3id.org/ontologies-ULL/CO-META#ListEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Solución codificada como una secuencia ordenada de nodos que puede contener valores repetidos."@es .
+<https://w3id.org/ontologies-ULL/CO-META#ListEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Solution encoded as an ordered sequence of nodes that may contain repeated values."@en .
+<https://w3id.org/ontologies-ULL/CO-META#ListEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "Codificación de lista"@es .
+<https://w3id.org/ontologies-ULL/CO-META#ListEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "List Encoding"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent
 <https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Improves the solution fitness by exploring its neighborhood"@en .
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de modificación que mejora la aptitud de una solución explorando su vecindario."@es .
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Modification component that improves the fitness of a solution by exploring its neighbourhood."@en .
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de búsqueda local"@es .
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Local Search Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic
 <https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -413,16 +499,35 @@ _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheuristic that starts from complete solutions and iteratively improves them."@en .
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheurística que parte de soluciones completas y las mejora iterativamente."@es .
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Local Search Metaheuristic"@en .
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Metaheurística de búsqueda local"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#LoopComponent
 <https://w3id.org/ontologies-ULL/CO-META#LoopComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#LoopComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#LoopComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Creates loops to iterate through data structures or repeat processes until a condition is met. Has two additional properties: hasOutputStart and hasOutputEnd"@en .
+<https://w3id.org/ontologies-ULL/CO-META#LoopComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Component that creates loops to iterate through data structures or to repeat processes until a condition is met. It has two additional properties: hasOutputStart and hasOutputEnd."@en .
+<https://w3id.org/ontologies-ULL/CO-META#LoopComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente que crea bucles para recorrer estructuras de datos o repetir procesos hasta que se cumple una condición. Tiene dos propiedades adicionales: hasOutputStart y hasOutputEnd."@es .
+<https://w3id.org/ontologies-ULL/CO-META#LoopComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de bucle"@es .
+<https://w3id.org/ontologies-ULL/CO-META#LoopComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Loop Component"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#MatrixEncoding
+<https://w3id.org/ontologies-ULL/CO-META#MatrixEncoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#MatrixEncoding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> .
+<https://w3id.org/ontologies-ULL/CO-META#MatrixEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Solución codificada como una disposición bidimensional de nodos organizados en filas y columnas."@es .
+<https://w3id.org/ontologies-ULL/CO-META#MatrixEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Solution encoded as a two-dimensional arrangement of nodes organized in rows and columns."@en .
+<https://w3id.org/ontologies-ULL/CO-META#MatrixEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "Codificación matricial"@es .
+<https://w3id.org/ontologies-ULL/CO-META#MatrixEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "Matrix Encoding"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective
 <https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
 <https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective> .
+<https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective> <http://www.w3.org/2000/01/rdf-schema#comment> "Objective of an optimization problem whose value must be maximized."@en .
+<https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective> <http://www.w3.org/2000/01/rdf-schema#comment> "Objetivo de un problema de optimización cuyo valor debe maximizarse."@es .
+<https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective> <http://www.w3.org/2000/01/rdf-schema#label> "Maximization Objective"@en .
+<https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective> <http://www.w3.org/2000/01/rdf-schema#label> "Objetivo de maximización"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm
 <https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -438,51 +543,93 @@ _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "Algoritmo evolutivo que además utiliza procesos de búsqueda local."@es .
+<https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "Evolutionary algorithm that employs local search processes."@en .
+<https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Algoritmo memético"@es .
 <https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Memetic Algorithm"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Metaheuristic
 <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "High-level algorithmic procedure, composed of interconnected metaheuristic components, that finds sufficiently good solutions to optimization problems by searching through vast solution spaces."@en .
+<https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Procedimiento algorítmico de alto nivel, compuesto por componentes metaheurísticos interconectados, que encuentran soluciones suficientemente buenas a problemas de optimización mediante búsquedas en amplios espacios de soluciones."@es .
+<https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Metaheuristic"@en .
+<https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Metaheurística"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent
 <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Bloque constructivo de una metaheurística que realiza una tarea específica y se conecta con otros componentes."@es .
+<https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Building block of a metaheuristic that performs a specific task and is connected to other components."@en .
+<https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente metaheurístico"@es .
+<https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Metaheuristic Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective
 <https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
+<https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective> <http://www.w3.org/2000/01/rdf-schema#comment> "Objective of an optimization problem whose value must be minimized."@en .
+<https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective> <http://www.w3.org/2000/01/rdf-schema#comment> "Objetivo de un problema de optimización cuyo valor debe minimizarse."@es .
+<https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective> <http://www.w3.org/2000/01/rdf-schema#label> "Minimization Objective"@en .
+<https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective> <http://www.w3.org/2000/01/rdf-schema#label> "Objetivo de minimización"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#ModificationComponent
 <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Modifies a solution or a population"@en .
+<https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Component that modifies a solution or a population."@en .
+<https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente que modifica una solución o una población."@es .
+<https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de modificación"@es .
+<https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Modification Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent
 <https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Components for multiobjective optimization. Required before acceptance methods"@en .
+<https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Component used in multiobjective optimization. It is required before acceptance components."@en .
+<https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente utilizado en optimización multiobjetivo. Es necesario antes de los componentes de aceptación."@es .
+<https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente multiobjetivo"@es .
+<https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Multiobjective Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent
 <https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de modificación que genera soluciones vecinas de una solución dada aplicando un operador de movimiento."@es .
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Modification component that generates neighbouring solutions of a given solution by applying a move operator."@en .
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de vecindario"@es .
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Neighbourhood Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Objective
 <https://w3id.org/ontologies-ULL/CO-META#Objective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#Objective> <http://www.w3.org/2000/01/rdf-schema#comment> "Objective of an optimization problem. This class should not be instantiated directly; subclasses shoud be used instead"@en .
+<https://w3id.org/ontologies-ULL/CO-META#Objective> <http://www.w3.org/2000/01/rdf-schema#comment> "Objective of an optimization problem. This class should not be instantiated directly; its subclasses should be used instead."@en .
+<https://w3id.org/ontologies-ULL/CO-META#Objective> <http://www.w3.org/2000/01/rdf-schema#comment> "Objetivo de un problema de optimización. Esta clase no debe instanciarse directamente; deben usarse sus subclases."@es .
+<https://w3id.org/ontologies-ULL/CO-META#Objective> <http://www.w3.org/2000/01/rdf-schema#label> "Objective"@en .
+<https://w3id.org/ontologies-ULL/CO-META#Objective> <http://www.w3.org/2000/01/rdf-schema#label> "Objetivo"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Parameter
 <https://w3id.org/ontologies-ULL/CO-META#Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#Parameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the structure of a parameter used by a component" .
+<https://w3id.org/ontologies-ULL/CO-META#Parameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Define la estructura de un parámetro utilizado por un componente, como su tipo y su rango de valores válidos."@es .
+<https://w3id.org/ontologies-ULL/CO-META#Parameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the structure of a parameter used by a component, such as its type and its valid range of values."@en .
+<https://w3id.org/ontologies-ULL/CO-META#Parameter> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter"@en .
+<https://w3id.org/ontologies-ULL/CO-META#Parameter> <http://www.w3.org/2000/01/rdf-schema#label> "Parámetro"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#ParameterValue
 <https://w3id.org/ontologies-ULL/CO-META#ParameterValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#ParameterValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the value assigned to a parameter"@en .
+<https://w3id.org/ontologies-ULL/CO-META#ParameterValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Valor asignado a un parámetro para un componente concreto."@es .
+<https://w3id.org/ontologies-ULL/CO-META#ParameterValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Value assigned to a parameter for a specific component."@en .
+<https://w3id.org/ontologies-ULL/CO-META#ParameterValue> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter Value"@en .
+<https://w3id.org/ontologies-ULL/CO-META#ParameterValue> <http://www.w3.org/2000/01/rdf-schema#label> "Valor de parámetro"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent
 <https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de cruce para permutaciones que intercambia un segmento entre los progenitores y repara las posiciones restantes mediante la correspondencia definida por dicho segmento (PMX)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Crossover component for permutations that exchanges a segment between parents and repairs the remaining positions using the mapping defined by that segment (PMX)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de cruce parcialmente mapeado"@es .
+<https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Partially Mapped Crossover Component"@en .
 # 
-# https://w3id.org/ontologies-ULL/CO-META#Permutation
-<https://w3id.org/ontologies-ULL/CO-META#Permutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#Permutation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
+# https://w3id.org/ontologies-ULL/CO-META#PermutationEncoding
+<https://w3id.org/ontologies-ULL/CO-META#PermutationEncoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#PermutationEncoding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> .
+<https://w3id.org/ontologies-ULL/CO-META#PermutationEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Solución codificada como una ordenación de elementos distintos, sin repeticiones."@es .
+<https://w3id.org/ontologies-ULL/CO-META#PermutationEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Solution encoded as an ordered arrangement of distinct elements, without repetitions."@en .
+<https://w3id.org/ontologies-ULL/CO-META#PermutationEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "Codificación de permutación"@es .
+<https://w3id.org/ontologies-ULL/CO-META#PermutationEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "Permutation Encoding"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic
 <https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -507,6 +654,9 @@ _:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheuristic that works with a population of solutions."@en .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheurística que trabaja con una población de soluciones."@es .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Metaheurística basada en población"@es .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Population Based Metaheuristic"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent
@@ -546,6 +696,10 @@ _:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/o
 _:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de construcción que construye una población de más de una solución."@es .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Construction component that builds a population of more than one solution."@en .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de construcción de población"@es .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Population Construction Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent
 <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -584,17 +738,27 @@ _:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/o
 _:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de generación que genera una población inicial de más de una solución."@es .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Generation component that generates an initial population of more than one solution."@en .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de generación de población"@es .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Population Generation Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent
 <https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#LoopComponent> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Repeats a partial process, with the old population as input, until the new population is filled"@en .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de bucle que repite un proceso parcial, tomando la población anterior como entrada, hasta completar la nueva población."@es .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Loop component that repeats a partial process, taking the old population as input, until the new population is filled."@en .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente modificador de población"@es .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Population Modifier Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent
 <https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Modifies populations"@en .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de modificación que opera sobre poblaciones completas."@es .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Modification component that operates on whole populations."@en .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente operador de población"@es .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Population Operator Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Problem
 <https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -602,11 +766,18 @@ _:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid70 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
 _:genid70 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasObjective> .
 _:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/2000/01/rdf-schema#comment> "Optimization problem"@en .
+<https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/2000/01/rdf-schema#comment> "Optimization problem, defined by at least one objective and optionally by constraints and a solution codification."@en .
+<https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/2000/01/rdf-schema#comment> "Problema de optimización, definido por al menos un objetivo y, opcionalmente, por restricciones y una codificación de solución."@es .
+<https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/2000/01/rdf-schema#label> "Problem"@en .
+<https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/2000/01/rdf-schema#label> "Problema"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent
 <https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de cruce que decide aleatoriamente, para cada posición, de qué progenitor hereda el valor el descendiente."@es .
+<https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Crossover component that decides randomly, for each position, from which parent the offspring inherits the value."@en .
+<https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de cruce por decisión aleatoria"@es .
+<https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Random Decision Crossover Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent
 <https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -615,6 +786,18 @@ _:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid71 <http://www.w3.org/2002/07/owl#hasValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid71 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> .
 _:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de selección que selecciona aleatoriamente una pareja de individuos."@es .
+<https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Selection component that selects a pair of individuals at random."@en .
+<https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de selección aleatoria"@es .
+<https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Random Selection Component"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ScalarEncoding
+<https://w3id.org/ontologies-ULL/CO-META#ScalarEncoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#ScalarEncoding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> .
+<https://w3id.org/ontologies-ULL/CO-META#ScalarEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Solución codificada como un único nodo que contiene un solo valor."@es .
+<https://w3id.org/ontologies-ULL/CO-META#ScalarEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Solution encoded as a single node that holds one value."@en .
+<https://w3id.org/ontologies-ULL/CO-META#ScalarEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "Codificación escalar"@es .
+<https://w3id.org/ontologies-ULL/CO-META#ScalarEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "Scalar Encoding"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SelectionComponent
 <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -626,7 +809,10 @@ _:genid73 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologie
 _:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid72 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
 _:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Selects the individuals that will start the next generation"@en .
+<https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de modificación que selecciona los individuos que formarán parte de la siguiente generación. Tiene un parámetro de elitismo."@es .
+<https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Modification component that selects the individuals that will take part in the next generation. It has an elitism parameter."@en .
+<https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de selección"@es .
+<https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Selection Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent
 <https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -635,6 +821,10 @@ _:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid74 <http://www.w3.org/2002/07/owl#hasValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid74 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> .
 _:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de selección que selecciona individuos por parejas en orden."@es .
+<https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Selection component that selects pairs of individuals in order."@en .
+<https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de selección simple por parejas"@es .
+<https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Simple Pair Selection Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -665,6 +855,10 @@ _:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> .
 _:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de construcción que construye una única solución (tamaño de población igual a 1)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Construction component that builds a single solution (population size equal to 1)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de construcción de solución única"@es .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Single Solution Construction Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -695,6 +889,10 @@ _:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
 _:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de generación que genera una única solución inicial (tamaño de población igual a 1)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Generation component that generates a single initial solution (population size equal to 1)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de generación de solución única"@es .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Single Solution Generation Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -718,19 +916,28 @@ _:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
 _:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheuristic that works with a single solution at a time."@en .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheurística que trabaja con una única solución a la vez."@es .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Metaheurística basada en solución única"@es .
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Single Solution Based Metaheuristic"@en .
 # 
-# https://w3id.org/ontologies-ULL/CO-META#Solution
-<https://w3id.org/ontologies-ULL/CO-META#Solution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#Solution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid100 .
+# https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding
+<https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid100 .
 _:genid100 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
 _:genid100 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasSize> .
 _:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/ontologies-ULL/CO-META#Solution> <http://www.w3.org/2000/01/rdf-schema#comment> "Solution codification used in an optimization problem"@en .
+<https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Codificación de solución utilizada en un problema de optimización, compuesta por nodos de solución y con un tamaño determinado."@es .
+<https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Solution encoding used in an optimization problem, composed of solution nodes and with a given size."@en .
+<https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "Codificación de una solución"@es .
+<https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> <http://www.w3.org/2000/01/rdf-schema#label> "Solution Encoding"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SolutionNode
 <https://w3id.org/ontologies-ULL/CO-META#SolutionNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#SolutionNode> <http://www.w3.org/2000/01/rdf-schema#comment> "Smallest part of a solution"@en .
+<https://w3id.org/ontologies-ULL/CO-META#SolutionNode> <http://www.w3.org/2000/01/rdf-schema#comment> "Parte más pequeña de una solución, que contiene un único valor."@es .
+<https://w3id.org/ontologies-ULL/CO-META#SolutionNode> <http://www.w3.org/2000/01/rdf-schema#comment> "Smallest part of a solution, which holds a single value."@en .
+<https://w3id.org/ontologies-ULL/CO-META#SolutionNode> <http://www.w3.org/2000/01/rdf-schema#label> "Nodo de solución"@es .
+<https://w3id.org/ontologies-ULL/CO-META#SolutionNode> <http://www.w3.org/2000/01/rdf-schema#label> "Solution Node"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent
 <https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -742,7 +949,10 @@ _:genid102 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologi
 _:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid101 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
 _:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Creates the main loop and determines when to stop the algorithm"@en .
+<https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de bucle que crea el bucle principal del algoritmo y determina cuándo detenerlo. Tiene un parámetro de número de iteraciones."@es .
+<https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Loop component that creates the main loop of the algorithm and determines when to stop it. It has an iterations parameter."@en .
+<https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de criterio de parada"@es .
+<https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Stopping Criterion Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -758,16 +968,26 @@ _:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 _:genid105 <http://www.w3.org/2002/07/owl#hasValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid105 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> .
 _:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de selección que selecciona cada individuo como el mejor de un grupo elegido aleatoriamente (torneo). Tiene un parámetro de tamaño de torneo."@es .
+<https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has a tournament size parameter."@en .
+<https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de selección por torneo"@es .
+<https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Tournament Selection Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent
 <https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Updates the best solution or solutions found by the algorithm"@en .
+<https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Component that updates the best solution or solutions found so far by the algorithm."@en .
+<https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente que actualiza la mejor solución o soluciones encontradas hasta el momento por el algoritmo."@es .
+<https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de actualización del mejor"@es .
+<https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Update Best Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#VariationComponent
 <https://w3id.org/ontologies-ULL/CO-META#VariationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#VariationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#VariationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Introduces small random changes to a solution" .
+<https://w3id.org/ontologies-ULL/CO-META#VariationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de modificación que introduce pequeños cambios aleatorios en una solución (mutación)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#VariationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Modification component that introduces small random changes to a solution (mutation)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#VariationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de variación"@es .
+<https://w3id.org/ontologies-ULL/CO-META#VariationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Variation Component"@en .
 # 
 # 
 # 
@@ -790,8 +1010,8 @@ _:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> .
-<https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <https://w3id.org/ontologies-ULL/CO-META#maxValue> "1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <https://w3id.org/ontologies-ULL/CO-META#maxValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Elitism
 <https://w3id.org/ontologies-ULL/CO-META#Elitism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -806,8 +1026,8 @@ _:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/ontologies-ULL/CO-META#MutationProbability
 <https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#FloatParameter> .
-<https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <https://w3id.org/ontologies-ULL/CO-META#maxValue> "1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <https://w3id.org/ontologies-ULL/CO-META#maxValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <https://w3id.org/ontologies-ULL/CO-META#minValue> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PopulationSize
 <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -873,7 +1093,7 @@ _:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid111 .
 _:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#SolutionNode> .
 _:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Solution> .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding> .
 _:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Problem> .
 _:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .

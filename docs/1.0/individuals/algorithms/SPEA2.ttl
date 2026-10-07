@@ -1,0 +1,130 @@
+@prefix : <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns: <http://creativecommons.org/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@base <https://w3id.org/ontologies-ULL/CO-META#> .
+
+<https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2> rdf:type owl:Ontology ;
+                                                                        owl:imports <https://w3id.org/ontologies-ULL/CO-META> ;
+                                                                        rdfs:label "CO-META individuals for SPEA2"@en .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2
+CO-META:SPEA2 rdf:type owl:NamedIndividual ,
+                       CO-META:Metaheuristic ;
+              CO-META:hasDataStructure CO-META:SPEA2_archive ;
+              CO-META:hasStart CO-META:SPEA2_generate_population .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive
+CO-META:SPEA2_archive rdf:type owl:NamedIndividual ,
+                               CO-META:DataStructure .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection
+CO-META:SPEA2_binary_tournament_selection rdf:type owl:NamedIndividual ,
+                                                   CO-META:TournamentSelectionComponent ;
+                                          CO-META:hasOutput CO-META:SPEA2_crossover .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover
+CO-META:SPEA2_crossover rdf:type owl:NamedIndividual ,
+                                 CO-META:CrossoverComponent ;
+                        CO-META:hasOutput CO-META:SPEA2_mutation ;
+                        CO-META:hasParameter CO-META:SPEA2_parameter_crossoverprobability .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour
+CO-META:SPEA2_diversity_preservation_kth_nearest_neighbour rdf:type owl:NamedIndividual ,
+                                                                    CO-META:DiversityPreservationComponent ;
+                                                           CO-META:hasOutput CO-META:SPEA2_truncation .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness
+CO-META:SPEA2_fitness_assignment_raw_fitness rdf:type owl:NamedIndividual ,
+                                                      CO-META:FitnessAssignmentComponent ;
+                                             CO-META:hasOutput CO-META:SPEA2_diversity_preservation_kth_nearest_neighbour .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population
+CO-META:SPEA2_generate_population rdf:type owl:NamedIndividual ,
+                                           CO-META:PopulationGenerationComponent ;
+                                  CO-META:hasOutputStart CO-META:SPEA2_stop ;
+                                  CO-META:hasParameter CO-META:SPEA2_parameter_populationsize .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation
+CO-META:SPEA2_mutation rdf:type owl:NamedIndividual ,
+                                CO-META:VariationComponent ;
+                       CO-META:hasOutput CO-META:SPEA2_next_generation ;
+                       CO-META:hasParameter CO-META:SPEA2_parameter_mutationprobability .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_next_generation
+CO-META:SPEA2_next_generation rdf:type owl:NamedIndividual ,
+                                       CO-META:PopulationModifierComponent ;
+                              CO-META:hasOutput CO-META:SPEA2_binary_tournament_selection ;
+                              CO-META:hasOutputEnd CO-META:SPEA2_stop .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_crossoverprobability
+CO-META:SPEA2_parameter_crossoverprobability rdf:type owl:NamedIndividual ,
+                                                      CO-META:ParameterValue ;
+                                             CO-META:hasType CO-META:CrossoverProbability .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_iterations
+CO-META:SPEA2_parameter_iterations rdf:type owl:NamedIndividual ,
+                                            CO-META:ParameterValue ;
+                                   CO-META:hasType CO-META:Iterations .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_mutationprobability
+CO-META:SPEA2_parameter_mutationprobability rdf:type owl:NamedIndividual ,
+                                                     CO-META:ParameterValue ;
+                                            CO-META:hasType CO-META:MutationProbability .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_populationsize
+CO-META:SPEA2_parameter_populationsize rdf:type owl:NamedIndividual ,
+                                                CO-META:ParameterValue ;
+                                       CO-META:hasType CO-META:PopulationSize .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop
+CO-META:SPEA2_stop rdf:type owl:NamedIndividual ,
+                            CO-META:StoppingCriterionComponent ;
+                   CO-META:hasOutput CO-META:SPEA2_union ;
+                   CO-META:hasParameter CO-META:SPEA2_parameter_iterations .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_store_solutions
+CO-META:SPEA2_store_solutions rdf:type owl:NamedIndividual ,
+                                       CO-META:DataHandlerComponent ;
+                              CO-META:hasOutputStart CO-META:SPEA2_next_generation ;
+                              CO-META:writesData CO-META:SPEA2_archive .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation
+CO-META:SPEA2_truncation rdf:type owl:NamedIndividual ,
+                                  CO-META:PopulationOperatorComponent ;
+                         CO-META:hasOutput CO-META:SPEA2_store_solutions .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_union
+CO-META:SPEA2_union rdf:type owl:NamedIndividual ,
+                             CO-META:PopulationOperatorComponent ;
+                    CO-META:hasOutput CO-META:SPEA2_fitness_assignment_raw_fitness ;
+                    CO-META:readsData CO-META:SPEA2_archive .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

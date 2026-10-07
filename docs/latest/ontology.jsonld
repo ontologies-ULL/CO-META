@@ -108,7 +108,7 @@
     }, {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#Problem"
     }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Solution"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
     }, {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode"
     } ]
@@ -678,7 +678,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Accepts a solution out of two or more solutions, according to its fitness. Needs fitness assignment component in multiobjective optimization"
+    "@value" : "Component that accepts one solution out of two or more candidate solutions according to their fitness. In multiobjective optimization it requires a preceding fitness assignment component."
+  }, {
+    "@language" : "es",
+    "@value" : "Componente que acepta una solución entre dos o más soluciones candidatas según su aptitud. En optimización multiobjetivo requiere un componente de asignación de aptitud previo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Acceptance Component"
+  }, {
+    "@language" : "es",
+    "@value" : "Componente de aceptación"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
@@ -686,12 +696,40 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Bit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Nodo de solución que toma un valor binario (0 o 1)."
+  }, {
+    "@language" : "en",
+    "@value" : "Solution node that takes a binary value (0 or 1)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bit"
+  }, {
+    "@language" : "es",
+    "@value" : "Bit"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#BoolParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parameter whose value is a boolean (true or false)."
+  }, {
+    "@language" : "es",
+    "@value" : "Parámetro cuyo valor es un booleano (verdadero o falso)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Boolean Parameter"
+  }, {
+    "@language" : "es",
+    "@value" : "Parámetro booleano"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ]
@@ -704,22 +742,76 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ComponentSafety",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Enumeración (Safe, Unsafe, Both) que indica si un componente metaheurístico garantiza que las soluciones que produce son factibles, puede producir soluciones no factibles o admite ambos comportamientos."
+  }, {
+    "@language" : "en",
+    "@value" : "Enumeration (Safe, Unsafe, Both) that indicates whether a metaheuristic component guarantees that the solutions it produces are feasible, may produce infeasible solutions, or supports both behaviours."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Component Safety"
+  }, {
+    "@language" : "es",
+    "@value" : "Seguridad del componente"
+  } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid6"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#CompositeEncoding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Solución codificada como una combinación de varias codificaciones, cada una de las cuales representa una parte distinta de la solución."
+  }, {
+    "@language" : "en",
+    "@value" : "Solution encoded as a combination of several encodings, each of which represents a different part of the solution."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Codificación compuesta"
+  }, {
+    "@language" : "en",
+    "@value" : "Composite Encoding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Constraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Condición que debe cumplir una solución de un problema de optimización para ser factible."
+  }, {
     "@language" : "en",
-    "@value" : "Constraint of an optimization problem"
+    "@value" : "Condition that a solution of an optimization problem must satisfy in order to be feasible."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Constraint"
+  }, {
+    "@language" : "es",
+    "@value" : "Restricción"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Constructs a solution or a group of solutions using heuristic methods"
+    "@value" : "Component that constructs a solution or a group of solutions step by step using heuristic methods."
+  }, {
+    "@language" : "es",
+    "@value" : "Componente que construye una solución o un grupo de soluciones paso a paso mediante métodos heurísticos."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de construcción"
+  }, {
+    "@language" : "en",
+    "@value" : "Construction Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
@@ -727,6 +819,20 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructiveMetaheuristic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Metaheuristic that builds solutions incrementally."
+  }, {
+    "@language" : "es",
+    "@value" : "Metaheurística que construye soluciones de forma incremental."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Constructive Metaheuristic"
+  }, {
+    "@language" : "es",
+    "@value" : "Metaheurística constructiva"
+  } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid10"
   } ]
@@ -734,8 +840,18 @@
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de modificación que produce uno o más individuos descendientes recombinando dos o más individuos progenitores. Tiene un parámetro de probabilidad de cruce."
+  }, {
     "@language" : "en",
-    "@value" : "Production of one or more individuals from two or more parent individuals"
+    "@value" : "Modification component that produces one or more offspring individuals by recombining two or more parent individuals. It has a crossover probability parameter."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de cruce"
+  }, {
+    "@language" : "en",
+    "@value" : "Crossover Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
@@ -763,16 +879,30 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#maxValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "1"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "0"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Custom",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Nodo de solución cuyo tipo de valor está definido por el usuario y no corresponde a ninguno de los tipos de nodo predefinidos."
+  }, {
+    "@language" : "en",
+    "@value" : "Solution node whose value type is user-defined and does not correspond to any of the predefined node types."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Custom Node"
+  }, {
+    "@language" : "es",
+    "@value" : "Nodo personalizado"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode"
   } ]
@@ -781,7 +911,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Updates specific data structures"
+    "@value" : "Component that updates specific data structures used by the algorithm."
+  }, {
+    "@language" : "es",
+    "@value" : "Componente que actualiza estructuras de datos específicas utilizadas por el algoritmo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente manejador de datos"
+  }, {
+    "@language" : "en",
+    "@value" : "Data Handler Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
@@ -791,14 +931,34 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Data structure that stores information used by the algorithm"
+    "@value" : "Data structure that stores information used by the algorithm during its execution."
+  }, {
+    "@language" : "es",
+    "@value" : "Estructura de datos que almacena información utilizada por el algoritmo durante su ejecución."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Data Structure"
+  }, {
+    "@language" : "es",
+    "@value" : "Estructura de datos"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente multiobjetivo que ajusta los valores de aptitud para fomentar la diversidad en la población."
+  }, {
     "@language" : "en",
-    "@value" : "Adjust the fitness value to encourage diversity in the population"
+    "@value" : "Multiobjective component that adjusts fitness values to encourage diversity in the population."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de preservación de la diversidad"
+  }, {
+    "@language" : "en",
+    "@value" : "Diversity Preservation Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent"
@@ -816,6 +976,20 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Metaheuristic based on evolutionary algorithms, employing selection, crossover and variation processes."
+  }, {
+    "@language" : "es",
+    "@value" : "Metaheurística basada en algoritmos evolutivos, utilizando procesos de selección, cruce y variación."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Algoritmo evolutivo"
+  }, {
+    "@language" : "en",
+    "@value" : "Evolutionary Algorithm"
+  } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid18"
   } ]
@@ -823,7 +997,18 @@
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Assign an individual fitness value to each member of a population"
+    "@language" : "es",
+    "@value" : "Componente multiobjetivo que asigna un valor de aptitud individual a cada miembro de una población."
+  }, {
+    "@language" : "en",
+    "@value" : "Multiobjective component that assigns a single fitness value to each member of a population."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de asignación de aptitud"
+  }, {
+    "@language" : "en",
+    "@value" : "Fitness Assignment Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent"
@@ -831,6 +1016,20 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parameter whose value is a real (decimal) number."
+  }, {
+    "@language" : "es",
+    "@value" : "Parámetro cuyo valor es un número real (decimal)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Float Parameter"
+  }, {
+    "@language" : "es",
+    "@value" : "Parámetro real"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ]
@@ -839,7 +1038,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Generates an initial solution or population"
+    "@value" : "Component that generates an initial solution or an initial population."
+  }, {
+    "@language" : "es",
+    "@value" : "Componente que genera una solución inicial o una población inicial."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de generación"
+  }, {
+    "@language" : "en",
+    "@value" : "Generation Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
@@ -847,12 +1056,40 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Integer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Nodo de solución que toma un valor entero."
+  }, {
+    "@language" : "en",
+    "@value" : "Solution node that takes an integer value."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Integer Node"
+  }, {
+    "@language" : "es",
+    "@value" : "Nodo entero"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parameter whose value is an integer number."
+  }, {
+    "@language" : "es",
+    "@value" : "Parámetro cuyo valor es un número entero."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Integer Parameter"
+  }, {
+    "@language" : "es",
+    "@value" : "Parámetro entero"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ]
@@ -869,6 +1106,20 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de selección que selecciona un único individuo en cada invocación, por lo que se aplica repetidamente para seleccionar varios individuos."
+  }, {
+    "@language" : "en",
+    "@value" : "Selection component that selects a single individual per invocation, so it is applied repeatedly to select several individuals."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de selección iterativa"
+  }, {
+    "@language" : "en",
+    "@value" : "Iterative Selection Component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   }, {
@@ -877,23 +1128,61 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de cruce que divide a los progenitores en k puntos de corte e intercambia los segmentos resultantes. Tiene un parámetro para el número de puntos de corte."
+  }, {
+    "@language" : "en",
+    "@value" : "Crossover component that splits the parents at k cut points and exchanges the resulting segments. It has a parameter for the number of cut points."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de cruce de k puntos"
+  }, {
+    "@language" : "en",
+    "@value" : "K-Point Crossover Component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
   }, {
     "@id" : "_:genid29"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#List",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ListEncoding",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Solución codificada como una secuencia ordenada de nodos que puede contener valores repetidos."
+  }, {
+    "@language" : "en",
+    "@value" : "Solution encoded as an ordered sequence of nodes that may contain repeated values."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Codificación de lista"
+  }, {
+    "@language" : "en",
+    "@value" : "List Encoding"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Solution"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de modificación que mejora la aptitud de una solución explorando su vecindario."
+  }, {
     "@language" : "en",
-    "@value" : "Improves the solution fitness by exploring its neighborhood"
+    "@value" : "Modification component that improves the fitness of a solution by exploring its neighbourhood."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de búsqueda local"
+  }, {
+    "@language" : "en",
+    "@value" : "Local Search Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
@@ -901,6 +1190,20 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Metaheuristic that starts from complete solutions and iteratively improves them."
+  }, {
+    "@language" : "es",
+    "@value" : "Metaheurística que parte de soluciones completas y las mejora iterativamente."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Local Search Metaheuristic"
+  }, {
+    "@language" : "es",
+    "@value" : "Metaheurística de búsqueda local"
+  } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid31"
   } ]
@@ -909,14 +1212,58 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Creates loops to iterate through data structures or repeat processes until a condition is met. Has two additional properties: hasOutputStart and hasOutputEnd"
+    "@value" : "Component that creates loops to iterate through data structures or to repeat processes until a condition is met. It has two additional properties: hasOutputStart and hasOutputEnd."
+  }, {
+    "@language" : "es",
+    "@value" : "Componente que crea bucles para recorrer estructuras de datos o repetir procesos hasta que se cumple una condición. Tiene dos propiedades adicionales: hasOutputStart y hasOutputEnd."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de bucle"
+  }, {
+    "@language" : "en",
+    "@value" : "Loop Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixEncoding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Solución codificada como una disposición bidimensional de nodos organizados en filas y columnas."
+  }, {
+    "@language" : "en",
+    "@value" : "Solution encoded as a two-dimensional arrangement of nodes organized in rows and columns."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Codificación matricial"
+  }, {
+    "@language" : "en",
+    "@value" : "Matrix Encoding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Objective of an optimization problem whose value must be maximized."
+  }, {
+    "@language" : "es",
+    "@value" : "Objetivo de un problema de optimización cuyo valor debe maximizarse."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Maximization Objective"
+  }, {
+    "@language" : "es",
+    "@value" : "Objetivo de maximización"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Objective"
   } ],
@@ -926,7 +1273,17 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Algoritmo evolutivo que además utiliza procesos de búsqueda local."
+  }, {
+    "@language" : "en",
+    "@value" : "Evolutionary algorithm that employs local search processes."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Algoritmo memético"
+  }, {
     "@language" : "en",
     "@value" : "Memetic Algorithm"
   } ],
@@ -935,13 +1292,55 @@
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "High-level algorithmic procedure, composed of interconnected metaheuristic components, that finds sufficiently good solutions to optimization problems by searching through vast solution spaces."
+  }, {
+    "@language" : "es",
+    "@value" : "Procedimiento algorítmico de alto nivel, compuesto por componentes metaheurísticos interconectados, que encuentran soluciones suficientemente buenas a problemas de optimización mediante búsquedas en amplios espacios de soluciones."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Metaheuristic"
+  }, {
+    "@language" : "es",
+    "@value" : "Metaheurística"
+  } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Bloque constructivo de una metaheurística que realiza una tarea específica y se conecta con otros componentes."
+  }, {
+    "@language" : "en",
+    "@value" : "Building block of a metaheuristic that performs a specific task and is connected to other components."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente metaheurístico"
+  }, {
+    "@language" : "en",
+    "@value" : "Metaheuristic Component"
+  } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Objective of an optimization problem whose value must be minimized."
+  }, {
+    "@language" : "es",
+    "@value" : "Objetivo de un problema de optimización cuyo valor debe minimizarse."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Minimization Objective"
+  }, {
+    "@language" : "es",
+    "@value" : "Objetivo de minimización"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Objective"
   } ]
@@ -950,7 +1349,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Modifies a solution or a population"
+    "@value" : "Component that modifies a solution or a population."
+  }, {
+    "@language" : "es",
+    "@value" : "Componente que modifica una solución o una población."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de modificación"
+  }, {
+    "@language" : "en",
+    "@value" : "Modification Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
@@ -960,7 +1369,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Components for multiobjective optimization. Required before acceptance methods"
+    "@value" : "Component used in multiobjective optimization. It is required before acceptance components."
+  }, {
+    "@language" : "es",
+    "@value" : "Componente utilizado en optimización multiobjetivo. Es necesario antes de los componentes de aceptación."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente multiobjetivo"
+  }, {
+    "@language" : "en",
+    "@value" : "Multiobjective Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
@@ -972,16 +1391,30 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#maxValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "1"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "0"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de modificación que genera soluciones vecinas de una solución dada aplicando un operador de movimiento."
+  }, {
+    "@language" : "en",
+    "@value" : "Modification component that generates neighbouring solutions of a given solution by applying a move operator."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de vecindario"
+  }, {
+    "@language" : "en",
+    "@value" : "Neighbourhood Component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
   } ]
@@ -990,37 +1423,106 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Objective of an optimization problem. This class should not be instantiated directly; subclasses shoud be used instead"
+    "@value" : "Objective of an optimization problem. This class should not be instantiated directly; its subclasses should be used instead."
+  }, {
+    "@language" : "es",
+    "@value" : "Objetivo de un problema de optimización. Esta clase no debe instanciarse directamente; deben usarse sus subclases."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Objective"
+  }, {
+    "@language" : "es",
+    "@value" : "Objetivo"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Defines the structure of a parameter used by a component"
+    "@language" : "es",
+    "@value" : "Define la estructura de un parámetro utilizado por un componente, como su tipo y su rango de valores válidos."
+  }, {
+    "@language" : "en",
+    "@value" : "Defines the structure of a parameter used by a component, such as its type and its valid range of values."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Parameter"
+  }, {
+    "@language" : "es",
+    "@value" : "Parámetro"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ParameterValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Valor asignado a un parámetro para un componente concreto."
+  }, {
     "@language" : "en",
-    "@value" : "Represents the value assigned to a parameter"
+    "@value" : "Value assigned to a parameter for a specific component."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Parameter Value"
+  }, {
+    "@language" : "es",
+    "@value" : "Valor de parámetro"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de cruce para permutaciones que intercambia un segmento entre los progenitores y repara las posiciones restantes mediante la correspondencia definida por dicho segmento (PMX)."
+  }, {
+    "@language" : "en",
+    "@value" : "Crossover component for permutations that exchanges a segment between parents and repairs the remaining positions using the mapping defined by that segment (PMX)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de cruce parcialmente mapeado"
+  }, {
+    "@language" : "en",
+    "@value" : "Partially Mapped Crossover Component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#Permutation",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PermutationEncoding",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Solución codificada como una ordenación de elementos distintos, sin repeticiones."
+  }, {
+    "@language" : "en",
+    "@value" : "Solution encoded as an ordered arrangement of distinct elements, without repetitions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Codificación de permutación"
+  }, {
+    "@language" : "en",
+    "@value" : "Permutation Encoding"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Solution"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Metaheuristic that works with a population of solutions."
+  }, {
+    "@language" : "es",
+    "@value" : "Metaheurística que trabaja con una población de soluciones."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Metaheurística basada en población"
+  }, {
     "@language" : "en",
     "@value" : "Population Based Metaheuristic"
   } ],
@@ -1033,6 +1535,20 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de construcción que construye una población de más de una solución."
+  }, {
+    "@language" : "en",
+    "@value" : "Construction component that builds a population of more than one solution."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de construcción de población"
+  }, {
+    "@language" : "en",
+    "@value" : "Population Construction Component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"
   } ],
@@ -1045,6 +1561,20 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de generación que genera una población inicial de más de una solución."
+  }, {
+    "@language" : "en",
+    "@value" : "Generation component that generates an initial population of more than one solution."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de generación de población"
+  }, {
+    "@language" : "en",
+    "@value" : "Population Generation Component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"
   } ],
@@ -1058,8 +1588,18 @@
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de bucle que repite un proceso parcial, tomando la población anterior como entrada, hasta completar la nueva población."
+  }, {
     "@language" : "en",
-    "@value" : "Repeats a partial process, with the old population as input, until the new population is filled"
+    "@value" : "Loop component that repeats a partial process, taking the old population as input, until the new population is filled."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente modificador de población"
+  }, {
+    "@language" : "en",
+    "@value" : "Population Modifier Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#LoopComponent"
@@ -1071,8 +1611,18 @@
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de modificación que opera sobre poblaciones completas."
+  }, {
     "@language" : "en",
-    "@value" : "Modifies populations"
+    "@value" : "Modification component that operates on whole populations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente operador de población"
+  }, {
+    "@language" : "en",
+    "@value" : "Population Operator Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
@@ -1092,7 +1642,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Optimization problem"
+    "@value" : "Optimization problem, defined by at least one objective and optionally by constraints and a solution codification."
+  }, {
+    "@language" : "es",
+    "@value" : "Problema de optimización, definido por al menos un objetivo y, opcionalmente, por restricciones y una codificación de solución."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Problem"
+  }, {
+    "@language" : "es",
+    "@value" : "Problema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid70"
@@ -1100,12 +1660,40 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de cruce que decide aleatoriamente, para cada posición, de qué progenitor hereda el valor el descendiente."
+  }, {
+    "@language" : "en",
+    "@value" : "Crossover component that decides randomly, for each position, from which parent the offspring inherits the value."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de cruce por decisión aleatoria"
+  }, {
+    "@language" : "en",
+    "@value" : "Random Decision Crossover Component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de selección que selecciona aleatoriamente una pareja de individuos."
+  }, {
+    "@language" : "en",
+    "@value" : "Selection component that selects a pair of individuals at random."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de selección aleatoria"
+  }, {
+    "@language" : "en",
+    "@value" : "Random Selection Component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   }, {
@@ -1118,11 +1706,41 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ComponentSafety"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ScalarEncoding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Solución codificada como un único nodo que contiene un solo valor."
+  }, {
+    "@language" : "en",
+    "@value" : "Solution encoded as a single node that holds one value."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Codificación escalar"
+  }, {
+    "@language" : "en",
+    "@value" : "Scalar Encoding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de modificación que selecciona los individuos que formarán parte de la siguiente generación. Tiene un parámetro de elitismo."
+  }, {
     "@language" : "en",
-    "@value" : "Selects the individuals that will start the next generation"
+    "@value" : "Modification component that selects the individuals that will take part in the next generation. It has an elitism parameter."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de selección"
+  }, {
+    "@language" : "en",
+    "@value" : "Selection Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
@@ -1132,6 +1750,20 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de selección que selecciona individuos por parejas en orden."
+  }, {
+    "@language" : "en",
+    "@value" : "Selection component that selects pairs of individuals in order."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de selección simple por parejas"
+  }, {
+    "@language" : "en",
+    "@value" : "Simple Pair Selection Component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   }, {
@@ -1140,6 +1772,20 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de construcción que construye una única solución (tamaño de población igual a 1)."
+  }, {
+    "@language" : "en",
+    "@value" : "Construction component that builds a single solution (population size equal to 1)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de construcción de solución única"
+  }, {
+    "@language" : "en",
+    "@value" : "Single Solution Construction Component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"
   } ],
@@ -1149,6 +1795,20 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de generación que genera una única solución inicial (tamaño de población igual a 1)."
+  }, {
+    "@language" : "en",
+    "@value" : "Generation component that generates a single initial solution (population size equal to 1)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de generación de solución única"
+  }, {
+    "@language" : "en",
+    "@value" : "Single Solution Generation Component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"
   } ],
@@ -1158,7 +1818,17 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Metaheuristic that works with a single solution at a time."
+  }, {
+    "@language" : "es",
+    "@value" : "Metaheurística que trabaja con una única solución a la vez."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Metaheurística basada en solución única"
+  }, {
     "@language" : "en",
     "@value" : "Single Solution Based Metaheuristic"
   } ],
@@ -1166,11 +1836,21 @@
     "@id" : "_:genid93"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#Solution",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Codificación de solución utilizada en un problema de optimización, compuesta por nodos de solución y con un tamaño determinado."
+  }, {
     "@language" : "en",
-    "@value" : "Solution codification used in an optimization problem"
+    "@value" : "Solution encoding used in an optimization problem, composed of solution nodes and with a given size."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Codificación de una solución"
+  }, {
+    "@language" : "en",
+    "@value" : "Solution Encoding"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid100"
@@ -1179,15 +1859,35 @@
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Parte más pequeña de una solución, que contiene un único valor."
+  }, {
     "@language" : "en",
-    "@value" : "Smallest part of a solution"
+    "@value" : "Smallest part of a solution, which holds a single value."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Nodo de solución"
+  }, {
+    "@language" : "en",
+    "@value" : "Solution Node"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de bucle que crea el bucle principal del algoritmo y determina cuándo detenerlo. Tiene un parámetro de número de iteraciones."
+  }, {
     "@language" : "en",
-    "@value" : "Creates the main loop and determines when to stop the algorithm"
+    "@value" : "Loop component that creates the main loop of the algorithm and determines when to stop it. It has an iterations parameter."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de criterio de parada"
+  }, {
+    "@language" : "en",
+    "@value" : "Stopping Criterion Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#LoopComponent"
@@ -1217,6 +1917,20 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de selección que selecciona cada individuo como el mejor de un grupo elegido aleatoriamente (torneo). Tiene un parámetro de tamaño de torneo."
+  }, {
+    "@language" : "en",
+    "@value" : "Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has a tournament size parameter."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de selección por torneo"
+  }, {
+    "@language" : "en",
+    "@value" : "Tournament Selection Component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   }, {
@@ -1245,7 +1959,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Updates the best solution or solutions found by the algorithm"
+    "@value" : "Component that updates the best solution or solutions found so far by the algorithm."
+  }, {
+    "@language" : "es",
+    "@value" : "Componente que actualiza la mejor solución o soluciones encontradas hasta el momento por el algoritmo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de actualización del mejor"
+  }, {
+    "@language" : "en",
+    "@value" : "Update Best Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
@@ -1254,7 +1978,18 @@
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#VariationComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Introduces small random changes to a solution"
+    "@language" : "es",
+    "@value" : "Componente de modificación que introduce pequeños cambios aleatorios en una solución (mutación)."
+  }, {
+    "@language" : "en",
+    "@value" : "Modification component that introduces small random changes to a solution (mutation)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de variación"
+  }, {
+    "@language" : "en",
+    "@value" : "Variation Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
@@ -1275,7 +2010,7 @@
     "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Solution"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isCodificationOf"
@@ -1341,7 +2076,7 @@
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasNodeType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Solution"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode"
@@ -1422,7 +2157,7 @@
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasSize",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Solution"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
