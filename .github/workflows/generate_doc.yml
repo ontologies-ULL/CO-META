@@ -3,7 +3,7 @@ name: Generate Widoco Documentation
 on:
   push:
     paths:
-      - "CO-META.owl" # Solo se dispara si cambia este fichero
+      - "CO-META.ttl" # Solo se dispara si cambia este fichero
   workflow_dispatch: # permite ejecución manual desde GitHub
 
 jobs:
@@ -30,12 +30,13 @@ jobs:
           wget https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar -O widoco.jar
 
       # 4. Extraer versión de la ontología
+      # VERSION=$(grep -oP 'owl:versionIRI\s*\S*"[^"]+/(\K[^"]+)' CO-META.owl | head -n 1)
       - name: Extract version from TTL
         id: version
         run: |
-          VERSION=$(grep -oP 'owl:versionIRI\s*\S*"[^"]+/(\K[^"]+)' CO-META.owl | head -n 1)
+          VERSION=$(grep -oP 'owl:versionIRI\s*<[^>]+/(\K[^>/]+)' CO-META.ttl | head -n 1)
           if [ -z "$VERSION" ]; then
-            echo "Version not found in owl:versionIRI in CO-META.owl"
+            echo "Version not found in owl:versionIRI in CO-META.ttl"
             exit 1
           fi
           echo "version=$VERSION" >> $GITHUB_OUTPUT
@@ -51,7 +52,7 @@ jobs:
       - name: Generate documentation with Widoco
         run: |
           java -jar widoco.jar \
-            -ontFile CO-META.owl \
+            -ontFile CO-META.ttl \
             -outFolder docs/latest \
             -rewriteAll \
             -lang en-es \
