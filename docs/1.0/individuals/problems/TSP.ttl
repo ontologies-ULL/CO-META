@@ -15,26 +15,6 @@
                                                                     rdfs:label "CO-META individuals for the Traveling Salesman Problem"@en .
 
 #################################################################
-#    Annotation properties
-#################################################################
-
-###  https://w3id.org/ontologies-ULL/CO-META#hasCodification
-CO-META:hasCodification rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META#hasNodeType
-CO-META:hasNodeType rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META#hasObjective
-CO-META:hasObjective rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META#hasSize
-CO-META:hasSize rdf:type owl:AnnotationProperty .
-
-
-#################################################################
 #    Individuals
 #################################################################
 
@@ -42,7 +22,64 @@ CO-META:hasSize rdf:type owl:AnnotationProperty .
 CO-META:TSP rdf:type owl:NamedIndividual ,
                      CO-META:Problem ;
             CO-META:hasCodification CO-META:solution_tsp_10 ;
-            CO-META:hasObjective CO-META:minimum_distance .
+            CO-META:hasConstraint CO-META:TSP_visit_each_city_once ;
+            CO-META:hasObjective CO-META:minimum_distance ;
+            CO-META:hasProblemElement CO-META:TSP_Cities ,
+                                      CO-META:TSP_N ,
+                                      CO-META:TSP_x ;
+            rdfs:label "Problema del viajante"@es ,
+                       "Traveling Salesman Problem"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TSP_Cities
+CO-META:TSP_Cities rdf:type owl:NamedIndividual ,
+                            CO-META:NamedColumnTable ;
+                   CO-META:hasColumn CO-META:TSP_Cities_X ,
+                                     CO-META:TSP_Cities_Y ;
+                   CO-META:hasRowCount CO-META:TSP_N ;
+                   CO-META:hasIdentifier "Cities" ;
+                   CO-META:hasLatexSymbol "C" .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TSP_Cities_X
+CO-META:TSP_Cities_X rdf:type owl:NamedIndividual ,
+                              CO-META:Column ;
+                     CO-META:hasIdentifier "X" ;
+                     CO-META:hasLatexSymbol "X" ;
+                     CO-META:hasPosition 1 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TSP_Cities_Y
+CO-META:TSP_Cities_Y rdf:type owl:NamedIndividual ,
+                              CO-META:Column ;
+                     CO-META:hasIdentifier "Y" ;
+                     CO-META:hasLatexSymbol "Y" ;
+                     CO-META:hasPosition 2 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TSP_N
+CO-META:TSP_N rdf:type owl:NamedIndividual ,
+                       CO-META:InputParameter ;
+              CO-META:hasIdentifier "N" ;
+              CO-META:hasLatexSymbol "N" ;
+              CO-META:isImplicit "false"^^xsd:boolean .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TSP_visit_each_city_once
+CO-META:TSP_visit_each_city_once rdf:type owl:NamedIndividual ,
+                                          CO-META:Constraint ;
+                                 CO-META:hasLatexExpression "\\left|\\{ i \\in \\{1, \\ldots, N\\} : x_i = j \\}\\right| = 1 \\quad \\forall j \\in \\{1, \\ldots, N\\}" ;
+                                 rdfs:label "Cada ciudad se visita exactamente una vez"@es ,
+                                            "Each city is visited exactly once"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TSP_x
+CO-META:TSP_x rdf:type owl:NamedIndividual ,
+                       CO-META:PermutationVariable ;
+              CO-META:hasLength CO-META:TSP_N ;
+              CO-META:hasValueType CO-META:IntegerType ;
+              CO-META:hasIdentifier "x" ;
+              CO-META:hasLatexSymbol "x" .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#city
@@ -52,12 +89,16 @@ CO-META:city rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#minimum_distance
 CO-META:minimum_distance rdf:type owl:NamedIndividual ,
-                                  CO-META:MinimizationObjective .
+                                  CO-META:MinimizationObjective ;
+                         CO-META:hasLatexExpression "\\sum_{i=1}^{N} \\sqrt{\\left(X_{x_{(i \\bmod N) + 1}} - X_{x_i}\\right)^2 + \\left(Y_{x_{(i \\bmod N) + 1}} - Y_{x_i}\\right)^2}" ;
+                         CO-META:hasWeight "1.0"^^xsd:double ;
+                         rdfs:label "Distancia total mínima"@es ,
+                                    "Minimum total distance"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#solution_tsp_10
 CO-META:solution_tsp_10 rdf:type owl:NamedIndividual ,
-                                 CO-META:Permutation ;
+                                 CO-META:PermutationEncoding ;
                         CO-META:hasNodeType CO-META:city ;
                         CO-META:hasSize 10 .
 

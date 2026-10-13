@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria.", "dateReleased":"Wed Oct 07 13:09:28 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria.", "dateReleased":"Tue Oct 13 21:45:44 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -141,6 +141,9 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#MatrixEncoding">Codificación matricial</a>
    </li>
    <li>
+      <a href="#Column" title="https://w3id.org/ontologies-ULL/CO-META#Column">Columna</a>
+   </li>
+   <li>
       <a href="#AcceptanceComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent">Componente de aceptación</a>
    </li>
@@ -261,8 +264,20 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent">Componente operador de población</a>
    </li>
    <li>
+      <a href="#ProblemData"
+         title="https://w3id.org/ontologies-ULL/CO-META#ProblemData">Datos del problema</a>
+   </li>
+   <li>
+      <a href="#ProblemElement"
+         title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a>
+   </li>
+   <li>
       <a href="#DataStructure"
          title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a>
+   </li>
+   <li>
+      <a href="#ProblemQuantity"
+         title="https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity">Magnitud del problema</a>
    </li>
    <li>
       <a href="#Metaheuristic"
@@ -315,6 +330,10 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#BoolParameter">Parámetro booleano</a>
    </li>
    <li>
+      <a href="#InputParameter"
+         title="https://w3id.org/ontologies-ULL/CO-META#InputParameter">Parámetro de entrada</a>
+   </li>
+   <li>
       <a href="#IntegerParameter"
          title="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter">Parámetro entero</a>
    </li>
@@ -334,8 +353,43 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a>
    </li>
    <li>
+      <a href="#Table" title="https://w3id.org/ontologies-ULL/CO-META#Table">Tabla</a>
+   </li>
+   <li>
+      <a href="#NamedColumnTable"
+         title="https://w3id.org/ontologies-ULL/CO-META#NamedColumnTable">Tabla de columnas con nombre</a>
+   </li>
+   <li>
+      <a href="#MatrixTable"
+         title="https://w3id.org/ontologies-ULL/CO-META#MatrixTable">Tabla matricial</a>
+   </li>
+   <li>
+      <a href="#ValueType"
+         title="https://w3id.org/ontologies-ULL/CO-META#ValueType">Tipo de valor</a>
+   </li>
+   <li>
       <a href="#ParameterValue"
          title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a>
+   </li>
+   <li>
+      <a href="#DecisionVariable"
+         title="https://w3id.org/ontologies-ULL/CO-META#DecisionVariable">Variable de decisión</a>
+   </li>
+   <li>
+      <a href="#ListVariable"
+         title="https://w3id.org/ontologies-ULL/CO-META#ListVariable">Variable de lista</a>
+   </li>
+   <li>
+      <a href="#PermutationVariable"
+         title="https://w3id.org/ontologies-ULL/CO-META#PermutationVariable">Variable de permutación</a>
+   </li>
+   <li>
+      <a href="#ScalarVariable"
+         title="https://w3id.org/ontologies-ULL/CO-META#ScalarVariable">Variable escalar</a>
+   </li>
+   <li>
+      <a href="#MatrixVariable"
+         title="https://w3id.org/ontologies-ULL/CO-META#MatrixVariable">Variable matricial</a>
    </li>
 </ul><h4>Propiedades de objeto</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -446,6 +500,29 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
       </a>
    </li>
    <li>
+      <a href="#hasColumn" title="https://w3id.org/ontologies-ULL/CO-META#hasColumn">tiene columna</a>
+   </li>
+   <li>
+      <a href="#hasProblemElement"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasProblemElement">tiene elemento del problema</a>
+   </li>
+   <li>
+      <a href="#hasLength"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasLength">tiene longitud</a>
+   </li>
+   <li>
+      <a href="#hasColumnCount"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasColumnCount">tiene número de columnas</a>
+   </li>
+   <li>
+      <a href="#hasRowCount"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasRowCount">tiene número de filas</a>
+   </li>
+   <li>
+      <a href="#hasValueType"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasValueType">tiene tipo de valor</a>
+   </li>
+   <li>
       <a href="#writesData"
          title="https://w3id.org/ontologies-ULL/CO-META#writesData">
          <span>writes Data</span>
@@ -454,6 +531,10 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
 </ul><h4>Propiedades de datos</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
+   <li>
+      <a href="#isImplicit"
+         title="https://w3id.org/ontologies-ULL/CO-META#isImplicit">es implícito</a>
+   </li>
    <li>
       <a href="#hasCodeReference"
          title="https://w3id.org/ontologies-ULL/CO-META#hasCodeReference">
@@ -491,6 +572,46 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
       <a href="#minValue" title="https://w3id.org/ontologies-ULL/CO-META#minValue">
          <span>min Value</span>
       </a>
+   </li>
+   <li>
+      <a href="#hasLowerBound"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasLowerBound">tiene cota inferior</a>
+   </li>
+   <li>
+      <a href="#hasUpperBound"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasUpperBound">tiene cota superior</a>
+   </li>
+   <li>
+      <a href="#hasLatexExpression"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasLatexExpression">tiene expresión LaTeX</a>
+   </li>
+   <li>
+      <a href="#hasIdentifier"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasIdentifier">tiene identificador</a>
+   </li>
+   <li>
+      <a href="#hasFixedLength"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasFixedLength">tiene longitud fija</a>
+   </li>
+   <li>
+      <a href="#hasFixedColumnCount"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasFixedColumnCount">tiene número fijo de columnas</a>
+   </li>
+   <li>
+      <a href="#hasFixedRowCount"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasFixedRowCount">tiene número fijo de filas</a>
+   </li>
+   <li>
+      <a href="#hasWeight"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasWeight">tiene peso</a>
+   </li>
+   <li>
+      <a href="#hasPosition"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasPosition">tiene posición</a>
+   </li>
+   <li>
+      <a href="#hasLatexSymbol"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasLatexSymbol">tiene símbolo LaTeX</a>
    </li>
 </ul><h4>Propiedades usadas para anotaci&oacute;n</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -580,6 +701,14 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
       </a>
    </li>
    <li>
+      <a href="#IntegerType"
+         title="https://w3id.org/ontologies-ULL/CO-META#IntegerType">Tipo entero</a>
+   </li>
+   <li>
+      <a href="#RealType"
+         title="https://w3id.org/ontologies-ULL/CO-META#RealType">Tipo real</a>
+   </li>
+   <li>
       <a href="#TournamentSize"
          title="https://w3id.org/ontologies-ULL/CO-META#TournamentSize">
          <span>Tournament Size</span>
@@ -615,6 +744,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a></li>
   <li><a href="#ScalarEncoding" title="https://w3id.org/ontologies-ULL/CO-META#ScalarEncoding">Codificación escalar</a></li>
   <li><a href="#MatrixEncoding" title="https://w3id.org/ontologies-ULL/CO-META#MatrixEncoding">Codificación matricial</a></li>
+  <li><a href="#Column" title="https://w3id.org/ontologies-ULL/CO-META#Column">Columna</a></li>
   <li><a href="#AcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent">Componente de aceptación</a></li>
   <li><a href="#UpdateBestComponent" title="https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent">Componente de actualización del mejor</a></li>
   <li><a href="#FitnessAssignmentComponent" title="https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent">Componente de asignación de aptitud</a></li>
@@ -645,7 +775,10 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#PopulationModifierComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent">Componente modificador de población</a></li>
   <li><a href="#MultiobjectiveComponent" title="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent">Componente multiobjetivo</a></li>
   <li><a href="#PopulationOperatorComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent">Componente operador de población</a></li>
+  <li><a href="#ProblemData" title="https://w3id.org/ontologies-ULL/CO-META#ProblemData">Datos del problema</a></li>
+  <li><a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a></li>
   <li><a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a></li>
+  <li><a href="#ProblemQuantity" title="https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity">Magnitud del problema</a></li>
   <li><a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a></li>
   <li><a href="#PopulationBasedMetaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic">Metaheurística basada en población</a></li>
   <li><a href="#SingleSolutionMetaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic">Metaheurística basada en solución única</a></li>
@@ -659,12 +792,22 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#MinimizationObjective" title="https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective">Objetivo de minimización</a></li>
   <li><a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a></li>
   <li><a href="#BoolParameter" title="https://w3id.org/ontologies-ULL/CO-META#BoolParameter">Parámetro booleano</a></li>
+  <li><a href="#InputParameter" title="https://w3id.org/ontologies-ULL/CO-META#InputParameter">Parámetro de entrada</a></li>
   <li><a href="#IntegerParameter" title="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter">Parámetro entero</a></li>
   <li><a href="#FloatParameter" title="https://w3id.org/ontologies-ULL/CO-META#FloatParameter">Parámetro real</a></li>
   <li><a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a></li>
   <li><a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a></li>
   <li><a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a></li>
+  <li><a href="#Table" title="https://w3id.org/ontologies-ULL/CO-META#Table">Tabla</a></li>
+  <li><a href="#NamedColumnTable" title="https://w3id.org/ontologies-ULL/CO-META#NamedColumnTable">Tabla de columnas con nombre</a></li>
+  <li><a href="#MatrixTable" title="https://w3id.org/ontologies-ULL/CO-META#MatrixTable">Tabla matricial</a></li>
+  <li><a href="#ValueType" title="https://w3id.org/ontologies-ULL/CO-META#ValueType">Tipo de valor</a></li>
   <li><a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a></li>
+  <li><a href="#DecisionVariable" title="https://w3id.org/ontologies-ULL/CO-META#DecisionVariable">Variable de decisión</a></li>
+  <li><a href="#ListVariable" title="https://w3id.org/ontologies-ULL/CO-META#ListVariable">Variable de lista</a></li>
+  <li><a href="#PermutationVariable" title="https://w3id.org/ontologies-ULL/CO-META#PermutationVariable">Variable de permutación</a></li>
+  <li><a href="#ScalarVariable" title="https://w3id.org/ontologies-ULL/CO-META#ScalarVariable">Variable escalar</a></li>
+  <li><a href="#MatrixVariable" title="https://w3id.org/ontologies-ULL/CO-META#MatrixVariable">Variable matricial</a></li>
  </ul>
  <div class="entity" id="EvolutionaryAlgorithm">
   <h3>Algoritmo evolutivo<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
@@ -789,7 +932,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     disjunto a
    </dt>
    <dd>
-    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -820,6 +963,39 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dt>
    <dd>
     <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Column">
+  <h3>Columna<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#Column</p>
+  <div class="comment">
+   <span class="markdown">Atributo de las entidades descritas por una tabla. Equivale a un vector de datos con un valor por registro (p. ej., el peso de cada objeto).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#ProblemData" title="https://w3id.org/ontologies-ULL/CO-META#ProblemData">Datos del problema</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#hasPosition" title="https://w3id.org/ontologies-ULL/CO-META#hasPosition">tiene posición</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#hasColumn" title="https://w3id.org/ontologies-ULL/CO-META#hasColumn">tiene columna</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#InputParameter" title="https://w3id.org/ontologies-ULL/CO-META#InputParameter">Parámetro de entrada</a> <sup class="type-c" title="clase">c</sup>, <a href="#Table" title="https://w3id.org/ontologies-ULL/CO-META#Table">Tabla</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1350,7 +1526,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     disjunto a
    </dt>
    <dd>
-    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1411,6 +1587,60 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
+ <div class="entity" id="ProblemData">
+  <h3>Datos del problema<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ProblemData</p>
+  <div class="comment">
+   <span class="markdown">Magnitud del problema cuyo valor se conoce antes de resolverlo y que caracteriza una instancia concreta del problema.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#ProblemQuantity" title="https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity">Magnitud del problema</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#Column" title="https://w3id.org/ontologies-ULL/CO-META#Column">Columna</a> <sup class="type-c" title="clase">c</sup>, <a href="#InputParameter" title="https://w3id.org/ontologies-ULL/CO-META#InputParameter">Parámetro de entrada</a> <sup class="type-c" title="clase">c</sup>, <a href="#Table" title="https://w3id.org/ontologies-ULL/CO-META#Table">Tabla</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#DecisionVariable" title="https://w3id.org/ontologies-ULL/CO-META#DecisionVariable">Variable de decisión</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProblemElement">
+  <h3>Elemento del problema<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ProblemElement</p>
+  <div class="comment">
+   <span class="markdown">Constituyente de la formulación matemática de un problema de optimización: sus datos, sus variables de decisión, sus objetivos o sus restricciones.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#ProblemQuantity" title="https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity">Magnitud del problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>, <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#hasProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#hasProblemElement">tiene elemento del problema</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="DataStructure">
   <h3>Estructura de datos<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#DataStructure</p>
@@ -1428,7 +1658,40 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     disjunto a
    </dt>
    <dd>
-    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProblemQuantity">
+  <h3>Magnitud del problema<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity</p>
+  <div class="comment">
+   <span class="markdown">Magnitud, o colección indexada de magnitudes, que interviene en la formulación del problema y se representa mediante un símbolo en sus expresiones. Su valor se conoce de antemano (datos) o se busca al resolver el problema (variable de decisión). No se refiere a una magnitud física.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#ProblemData" title="https://w3id.org/ontologies-ULL/CO-META#ProblemData">Datos del problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#DecisionVariable" title="https://w3id.org/ontologies-ULL/CO-META#DecisionVariable">Variable de decisión</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#hasIdentifier" title="https://w3id.org/ontologies-ULL/CO-META#hasIdentifier">tiene identificador</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasLatexSymbol" title="https://w3id.org/ontologies-ULL/CO-META#hasLatexSymbol">tiene símbolo LaTeX</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1449,7 +1712,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     disjunto a
    </dt>
    <dd>
-    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1548,7 +1811,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     disjunto a
    </dt>
    <dd>
-    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1590,10 +1853,22 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   </div>
   <dl class="description">
    <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
     tiene subclases
    </dt>
    <dd>
     <a href="#MaximizationObjective" title="https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective">Objetivo de maximización</a> <sup class="type-c" title="clase">c</sup>, <a href="#MinimizationObjective" title="https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective">Objetivo de minimización</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#hasLatexExpression" title="https://w3id.org/ontologies-ULL/CO-META#hasLatexExpression">tiene expresión LaTeX</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasWeight" title="https://w3id.org/ontologies-ULL/CO-META#hasWeight">tiene peso</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
    </dd>
    <dt>
     en rango de
@@ -1605,7 +1880,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     disjunto a
    </dt>
    <dd>
-    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup>, <a href="#ProblemQuantity" title="https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity">Magnitud del problema</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1680,7 +1955,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     disjunto a
    </dt>
    <dd>
-    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1702,6 +1977,39 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dt>
    <dd>
     <a href="#FloatParameter" title="https://w3id.org/ontologies-ULL/CO-META#FloatParameter">Parámetro real</a> <sup class="type-c" title="clase">c</sup>, <a href="#IntegerParameter" title="https://w3id.org/ontologies-ULL/CO-META#IntegerParameter">Parámetro entero</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InputParameter">
+  <h3>Parámetro de entrada<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#InputParameter</p>
+  <div class="comment">
+   <span class="markdown">Dato escalar que caracteriza una instancia del problema (p. ej., la capacidad de la mochila o el número de ciudades).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#ProblemData" title="https://w3id.org/ontologies-ULL/CO-META#ProblemData">Datos del problema</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#isImplicit" title="https://w3id.org/ontologies-ULL/CO-META#isImplicit">es implícito</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#hasLength" title="https://w3id.org/ontologies-ULL/CO-META#hasLength">tiene longitud</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasColumnCount" title="https://w3id.org/ontologies-ULL/CO-META#hasColumnCount">tiene número de columnas</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasRowCount" title="https://w3id.org/ontologies-ULL/CO-META#hasRowCount">tiene número de filas</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#Column" title="https://w3id.org/ontologies-ULL/CO-META#Column">Columna</a> <sup class="type-c" title="clase">c</sup>, <a href="#Table" title="https://w3id.org/ontologies-ULL/CO-META#Table">Tabla</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1774,13 +2082,13 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     en dominio de
    </dt>
    <dd>
-    <a href="#hasCodification" title="https://w3id.org/ontologies-ULL/CO-META#hasCodification">has Codification</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasConstraint" title="https://w3id.org/ontologies-ULL/CO-META#hasConstraint">has Constraint</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasObjective" title="https://w3id.org/ontologies-ULL/CO-META#hasObjective">has Objective</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#hasCodification" title="https://w3id.org/ontologies-ULL/CO-META#hasCodification">has Codification</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasConstraint" title="https://w3id.org/ontologies-ULL/CO-META#hasConstraint">has Constraint</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasObjective" title="https://w3id.org/ontologies-ULL/CO-META#hasObjective">has Objective</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#hasProblemElement">tiene elemento del problema</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
    <dt>
     disjunto a
    </dt>
    <dd>
-    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1792,6 +2100,18 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   </div>
   <dl class="description">
    <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#hasLatexExpression" title="https://w3id.org/ontologies-ULL/CO-META#hasLatexExpression">tiene expresión LaTeX</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
     en rango de
    </dt>
    <dd>
@@ -1801,7 +2121,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     disjunto a
    </dt>
    <dd>
-    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>, <a href="#ProblemQuantity" title="https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity">Magnitud del problema</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1834,7 +2154,109 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     disjunto a
    </dt>
    <dd>
-    <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Valor de parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Table">
+  <h3>Tabla<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#Table</p>
+  <div class="comment">
+   <span class="markdown">Colección de datos del problema formada por registros homogéneos, cada uno de los cuales describe una entidad del problema (p. ej., una ciudad o un objeto) mediante sus atributos.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#ProblemData" title="https://w3id.org/ontologies-ULL/CO-META#ProblemData">Datos del problema</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#NamedColumnTable" title="https://w3id.org/ontologies-ULL/CO-META#NamedColumnTable">Tabla de columnas con nombre</a> <sup class="type-c" title="clase">c</sup>, <a href="#MatrixTable" title="https://w3id.org/ontologies-ULL/CO-META#MatrixTable">Tabla matricial</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#hasRowCount" title="https://w3id.org/ontologies-ULL/CO-META#hasRowCount">tiene número de filas</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasFixedRowCount" title="https://w3id.org/ontologies-ULL/CO-META#hasFixedRowCount">tiene número fijo de filas</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#Column" title="https://w3id.org/ontologies-ULL/CO-META#Column">Columna</a> <sup class="type-c" title="clase">c</sup>, <a href="#InputParameter" title="https://w3id.org/ontologies-ULL/CO-META#InputParameter">Parámetro de entrada</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NamedColumnTable">
+  <h3>Tabla de columnas con nombre<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#NamedColumnTable</p>
+  <div class="comment">
+   <span class="markdown">Tabla cuyos registros se describen mediante atributos distintos y con nombre (p. ej., las coordenadas X e Y de cada ciudad).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#Table" title="https://w3id.org/ontologies-ULL/CO-META#Table">Tabla</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#hasColumn" title="https://w3id.org/ontologies-ULL/CO-META#hasColumn">tiene columna</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MatrixTable">
+  <h3>Tabla matricial<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#MatrixTable</p>
+  <div class="comment">
+   <span class="markdown">Tabla cuyos registros se describen mediante atributos anónimos de la misma naturaleza, de modo que los datos forman una matriz (p. ej., una matriz de distancias entre ciudades).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#Table" title="https://w3id.org/ontologies-ULL/CO-META#Table">Tabla</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#hasColumnCount" title="https://w3id.org/ontologies-ULL/CO-META#hasColumnCount">tiene número de columnas</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasFixedColumnCount" title="https://w3id.org/ontologies-ULL/CO-META#hasFixedColumnCount">tiene número fijo de columnas</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ValueType">
+  <h3>Tipo de valor<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ValueType</p>
+  <div class="comment">
+   <span class="markdown">Dominio numérico al que pertenecen los valores que puede tomar una variable de decisión: enteros (IntegerType) o reales (RealType).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    equivalente a
+   </dt>
+   <dd>
+    { <a href="#IntegerType" title="https://w3id.org/ontologies-ULL/CO-META#IntegerType">Tipo entero</a> <sup class="type-ni" title="Individuo">ni</sup> , <a href="#RealType" title="https://w3id.org/ontologies-ULL/CO-META#RealType">Tipo real</a> <sup class="type-ni" title="Individuo">ni</sup> }
+   </dd>
+   <dt>
+    en rango de
+   </dt>
+   <dd>
+    <a href="#hasValueType" title="https://w3id.org/ontologies-ULL/CO-META#hasValueType">tiene tipo de valor</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    miembros
+   </dt>
+   <dd>
+    <a href="#IntegerType" title="https://w3id.org/ontologies-ULL/CO-META#IntegerType">Tipo entero</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#RealType" title="https://w3id.org/ontologies-ULL/CO-META#RealType">Tipo real</a> <sup class="type-ni" title="Individuo">ni</sup>
    </dd>
   </dl>
  </div>
@@ -1861,7 +2283,142 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     disjunto a
    </dt>
    <dd>
-    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataStructure" title="https://w3id.org/ontologies-ULL/CO-META#DataStructure">Estructura de datos</a> <sup class="type-c" title="clase">c</sup>, <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheurística</a> <sup class="type-c" title="clase">c</sup>, <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>, <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>, <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionEncoding" title="https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding">Codificación de una solución</a> <sup class="type-c" title="clase">c</sup>, <a href="#SolutionNode" title="https://w3id.org/ontologies-ULL/CO-META#SolutionNode">Nodo de solución</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DecisionVariable">
+  <h3>Variable de decisión<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#DecisionVariable</p>
+  <div class="comment">
+   <span class="markdown">Magnitud cuyo valor elige el método de resolución. Una asignación de valores a todas las variables de decisión del problema constituye una solución candidata.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#ProblemQuantity" title="https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity">Magnitud del problema</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#ListVariable" title="https://w3id.org/ontologies-ULL/CO-META#ListVariable">Variable de lista</a> <sup class="type-c" title="clase">c</sup>, <a href="#PermutationVariable" title="https://w3id.org/ontologies-ULL/CO-META#PermutationVariable">Variable de permutación</a> <sup class="type-c" title="clase">c</sup>, <a href="#ScalarVariable" title="https://w3id.org/ontologies-ULL/CO-META#ScalarVariable">Variable escalar</a> <sup class="type-c" title="clase">c</sup>, <a href="#MatrixVariable" title="https://w3id.org/ontologies-ULL/CO-META#MatrixVariable">Variable matricial</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#hasLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasLowerBound">tiene cota inferior</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasUpperBound" title="https://w3id.org/ontologies-ULL/CO-META#hasUpperBound">tiene cota superior</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasValueType" title="https://w3id.org/ontologies-ULL/CO-META#hasValueType">tiene tipo de valor</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#ProblemData" title="https://w3id.org/ontologies-ULL/CO-META#ProblemData">Datos del problema</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ListVariable">
+  <h3>Variable de lista<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ListVariable</p>
+  <div class="comment">
+   <span class="markdown">Variable de decisión que representa una secuencia de valores, uno por elemento de una colección, que pueden repetirse (p. ej., si cada objeto se mete en la mochila).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DecisionVariable" title="https://w3id.org/ontologies-ULL/CO-META#DecisionVariable">Variable de decisión</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#hasLength" title="https://w3id.org/ontologies-ULL/CO-META#hasLength">tiene longitud</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasFixedLength" title="https://w3id.org/ontologies-ULL/CO-META#hasFixedLength">tiene longitud fija</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#MatrixVariable" title="https://w3id.org/ontologies-ULL/CO-META#MatrixVariable">Variable matricial</a> <sup class="type-c" title="clase">c</sup>, <a href="#PermutationVariable" title="https://w3id.org/ontologies-ULL/CO-META#PermutationVariable">Variable de permutación</a> <sup class="type-c" title="clase">c</sup>, <a href="#ScalarVariable" title="https://w3id.org/ontologies-ULL/CO-META#ScalarVariable">Variable escalar</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PermutationVariable">
+  <h3>Variable de permutación<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#PermutationVariable</p>
+  <div class="comment">
+   <span class="markdown">Variable de decisión que representa un orden de los elementos de una colección, en el que cada elemento aparece exactamente una vez (p. ej., el recorrido por las ciudades en el TSP).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DecisionVariable" title="https://w3id.org/ontologies-ULL/CO-META#DecisionVariable">Variable de decisión</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#hasLength" title="https://w3id.org/ontologies-ULL/CO-META#hasLength">tiene longitud</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasFixedLength" title="https://w3id.org/ontologies-ULL/CO-META#hasFixedLength">tiene longitud fija</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#ListVariable" title="https://w3id.org/ontologies-ULL/CO-META#ListVariable">Variable de lista</a> <sup class="type-c" title="clase">c</sup>, <a href="#MatrixVariable" title="https://w3id.org/ontologies-ULL/CO-META#MatrixVariable">Variable matricial</a> <sup class="type-c" title="clase">c</sup>, <a href="#ScalarVariable" title="https://w3id.org/ontologies-ULL/CO-META#ScalarVariable">Variable escalar</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ScalarVariable">
+  <h3>Variable escalar<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ScalarVariable</p>
+  <div class="comment">
+   <span class="markdown">Variable de decisión que representa un único valor (p. ej., el número de vehículos que se van a utilizar).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DecisionVariable" title="https://w3id.org/ontologies-ULL/CO-META#DecisionVariable">Variable de decisión</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#ListVariable" title="https://w3id.org/ontologies-ULL/CO-META#ListVariable">Variable de lista</a> <sup class="type-c" title="clase">c</sup>, <a href="#MatrixVariable" title="https://w3id.org/ontologies-ULL/CO-META#MatrixVariable">Variable matricial</a> <sup class="type-c" title="clase">c</sup>, <a href="#PermutationVariable" title="https://w3id.org/ontologies-ULL/CO-META#PermutationVariable">Variable de permutación</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MatrixVariable">
+  <h3>Variable matricial<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#MatrixVariable</p>
+  <div class="comment">
+   <span class="markdown">Variable de decisión que representa un valor para cada par de elementos de dos colecciones (p. ej., si cada vehículo visita a cada cliente).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DecisionVariable" title="https://w3id.org/ontologies-ULL/CO-META#DecisionVariable">Variable de decisión</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    en dominio de
+   </dt>
+   <dd>
+    <a href="#hasColumnCount" title="https://w3id.org/ontologies-ULL/CO-META#hasColumnCount">tiene número de columnas</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasRowCount" title="https://w3id.org/ontologies-ULL/CO-META#hasRowCount">tiene número de filas</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasFixedColumnCount" title="https://w3id.org/ontologies-ULL/CO-META#hasFixedColumnCount">tiene número fijo de columnas</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasFixedRowCount" title="https://w3id.org/ontologies-ULL/CO-META#hasFixedRowCount">tiene número fijo de filas</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+   </dd>
+   <dt>
+    disjunto a
+   </dt>
+   <dd>
+    <a href="#ListVariable" title="https://w3id.org/ontologies-ULL/CO-META#ListVariable">Variable de lista</a> <sup class="type-c" title="clase">c</sup>, <a href="#PermutationVariable" title="https://w3id.org/ontologies-ULL/CO-META#PermutationVariable">Variable de permutación</a> <sup class="type-c" title="clase">c</sup>, <a href="#ScalarVariable" title="https://w3id.org/ontologies-ULL/CO-META#ScalarVariable">Variable escalar</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1886,6 +2443,12 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#isConnectedTo" title="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"> <span>is Connected To</span> </a></li>
   <li><a href="#isStartOf" title="https://w3id.org/ontologies-ULL/CO-META#isStartOf"> <span>is Start Of</span> </a></li>
   <li><a href="#readsData" title="https://w3id.org/ontologies-ULL/CO-META#readsData"> <span>reads Data</span> </a></li>
+  <li><a href="#hasColumn" title="https://w3id.org/ontologies-ULL/CO-META#hasColumn">tiene columna</a></li>
+  <li><a href="#hasProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#hasProblemElement">tiene elemento del problema</a></li>
+  <li><a href="#hasLength" title="https://w3id.org/ontologies-ULL/CO-META#hasLength">tiene longitud</a></li>
+  <li><a href="#hasColumnCount" title="https://w3id.org/ontologies-ULL/CO-META#hasColumnCount">tiene número de columnas</a></li>
+  <li><a href="#hasRowCount" title="https://w3id.org/ontologies-ULL/CO-META#hasRowCount">tiene número de filas</a></li>
+  <li><a href="#hasValueType" title="https://w3id.org/ontologies-ULL/CO-META#hasValueType">tiene tipo de valor</a></li>
   <li><a href="#writesData" title="https://w3id.org/ontologies-ULL/CO-META#writesData"> <span>writes Data</span> </a></li>
  </ul>
  <div class="entity" id="hasCodification">
@@ -1919,6 +2482,12 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasConstraint</p>
   <div class="description">
    <dl>
+    <dt>
+     tiene superpropiedades
+    </dt>
+    <dd>
+     <a href="#hasProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#hasProblemElement">tiene elemento del problema</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    </dd>
     <dt>
      dominio
     </dt>
@@ -2051,6 +2620,12 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasObjective</p>
   <div class="description">
    <dl>
+    <dt>
+     tiene superpropiedades
+    </dt>
+    <dd>
+     <a href="#hasProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#hasProblemElement">tiene elemento del problema</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    </dd>
     <dt>
      dominio
     </dt>
@@ -2322,6 +2897,154 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dl>
   </div>
  </div>
+ <div class="entity" id="hasColumn">
+  <h3>tiene columna<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasColumn</p>
+  <div class="comment">
+   <span class="markdown">Relaciona una tabla con cada uno de los atributos que describen sus registros.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#NamedColumnTable" title="https://w3id.org/ontologies-ULL/CO-META#NamedColumnTable">Tabla de columnas con nombre</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#Column" title="https://w3id.org/ontologies-ULL/CO-META#Column">Columna</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasProblemElement">
+  <h3>tiene elemento del problema<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasProblemElement</p>
+  <div class="comment">
+   <span class="markdown">Relaciona un problema con cada uno de los constituyentes de su formulación: datos, variables de decisión, objetivos y restricciones.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     tiene subpropiedades
+    </dt>
+    <dd>
+     <a href="#hasConstraint" title="https://w3id.org/ontologies-ULL/CO-META#hasConstraint">has Constraint</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasObjective" title="https://w3id.org/ontologies-ULL/CO-META#hasObjective">has Objective</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    </dd>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Problem" title="https://w3id.org/ontologies-ULL/CO-META#Problem">Problema</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#ProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#ProblemElement">Elemento del problema</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLength">
+  <h3>tiene longitud<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasLength</p>
+  <div class="comment">
+   <span class="markdown">Parámetro de entrada cuyo valor es el número de elementos de una secuencia de variables de decisión. Alternativa a hasFixedLength.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ListVariable" title="https://w3id.org/ontologies-ULL/CO-META#ListVariable">Variable de lista</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#PermutationVariable" title="https://w3id.org/ontologies-ULL/CO-META#PermutationVariable">Variable de permutación</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#InputParameter" title="https://w3id.org/ontologies-ULL/CO-META#InputParameter">Parámetro de entrada</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasColumnCount">
+  <h3>tiene número de columnas<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasColumnCount</p>
+  <div class="comment">
+   <span class="markdown">Parámetro de entrada cuyo valor es la segunda dimensión de una matriz de datos o de variables de decisión. Alternativa a hasFixedColumnCount.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#MatrixTable" title="https://w3id.org/ontologies-ULL/CO-META#MatrixTable">Tabla matricial</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#MatrixVariable" title="https://w3id.org/ontologies-ULL/CO-META#MatrixVariable">Variable matricial</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#InputParameter" title="https://w3id.org/ontologies-ULL/CO-META#InputParameter">Parámetro de entrada</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasRowCount">
+  <h3>tiene número de filas<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasRowCount</p>
+  <div class="comment">
+   <span class="markdown">Parámetro de entrada cuyo valor es el número de entidades que describe una tabla, o la primera dimensión de una matriz de variables de decisión. Alternativa a hasFixedRowCount.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#MatrixVariable" title="https://w3id.org/ontologies-ULL/CO-META#MatrixVariable">Variable matricial</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#Table" title="https://w3id.org/ontologies-ULL/CO-META#Table">Tabla</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#InputParameter" title="https://w3id.org/ontologies-ULL/CO-META#InputParameter">Parámetro de entrada</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasValueType">
+  <h3>tiene tipo de valor<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasValueType</p>
+  <div class="comment">
+   <span class="markdown">Dominio numérico (enteros o reales) al que pertenecen los valores que puede tomar una variable de decisión.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#DecisionVariable" title="https://w3id.org/ontologies-ULL/CO-META#DecisionVariable">Variable de decisión</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#ValueType" title="https://w3id.org/ontologies-ULL/CO-META#ValueType">Tipo de valor</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="writesData">
   <h3>writes Data<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#writesData</p>
@@ -2345,6 +3068,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Propiedades de datos</h3>
  <ul class="hlist">
+  <li><a href="#isImplicit" title="https://w3id.org/ontologies-ULL/CO-META#isImplicit">es implícito</a></li>
   <li><a href="#hasCodeReference" title="https://w3id.org/ontologies-ULL/CO-META#hasCodeReference"> <span>has Code Reference</span> </a></li>
   <li><a href="#hasInputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasInputSize"> <span>has Input Size</span> </a></li>
   <li><a href="#hasOutputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"> <span>has Output Size</span> </a></li>
@@ -2352,7 +3076,41 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#hasValue" title="https://w3id.org/ontologies-ULL/CO-META#hasValue"> <span>has Value</span> </a></li>
   <li><a href="#maxValue" title="https://w3id.org/ontologies-ULL/CO-META#maxValue"> <span>max Value</span> </a></li>
   <li><a href="#minValue" title="https://w3id.org/ontologies-ULL/CO-META#minValue"> <span>min Value</span> </a></li>
+  <li><a href="#hasLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasLowerBound">tiene cota inferior</a></li>
+  <li><a href="#hasUpperBound" title="https://w3id.org/ontologies-ULL/CO-META#hasUpperBound">tiene cota superior</a></li>
+  <li><a href="#hasLatexExpression" title="https://w3id.org/ontologies-ULL/CO-META#hasLatexExpression">tiene expresión LaTeX</a></li>
+  <li><a href="#hasIdentifier" title="https://w3id.org/ontologies-ULL/CO-META#hasIdentifier">tiene identificador</a></li>
+  <li><a href="#hasFixedLength" title="https://w3id.org/ontologies-ULL/CO-META#hasFixedLength">tiene longitud fija</a></li>
+  <li><a href="#hasFixedColumnCount" title="https://w3id.org/ontologies-ULL/CO-META#hasFixedColumnCount">tiene número fijo de columnas</a></li>
+  <li><a href="#hasFixedRowCount" title="https://w3id.org/ontologies-ULL/CO-META#hasFixedRowCount">tiene número fijo de filas</a></li>
+  <li><a href="#hasWeight" title="https://w3id.org/ontologies-ULL/CO-META#hasWeight">tiene peso</a></li>
+  <li><a href="#hasPosition" title="https://w3id.org/ontologies-ULL/CO-META#hasPosition">tiene posición</a></li>
+  <li><a href="#hasLatexSymbol" title="https://w3id.org/ontologies-ULL/CO-META#hasLatexSymbol">tiene símbolo LaTeX</a></li>
  </ul>
+ <div class="entity" id="isImplicit">
+  <h3>es implícito<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#isImplicit</p>
+  <div class="comment">
+   <span class="markdown">Indica que el parámetro de entrada no se declaró explícitamente como dato del problema, sino que surgió al usarse como tamaño de una tabla.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#InputParameter" title="https://w3id.org/ontologies-ULL/CO-META#InputParameter">Parámetro de entrada</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="hasCodeReference">
   <h3>has Code Reference<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasCodeReference</p>
@@ -2489,6 +3247,246 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dl>
   </div>
  </div>
+ <div class="entity" id="hasLowerBound">
+  <h3>tiene cota inferior<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasLowerBound</p>
+  <div class="comment">
+   <span class="markdown">Menor valor que puede tomar una variable de decisión. Se usa xsd:double para poder expresar -INF (sin cota inferior).</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#DecisionVariable" title="https://w3id.org/ontologies-ULL/CO-META#DecisionVariable">Variable de decisión</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasUpperBound">
+  <h3>tiene cota superior<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasUpperBound</p>
+  <div class="comment">
+   <span class="markdown">Mayor valor que puede tomar una variable de decisión. Se usa xsd:double para poder expresar INF (sin cota superior).</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#DecisionVariable" title="https://w3id.org/ontologies-ULL/CO-META#DecisionVariable">Variable de decisión</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLatexExpression">
+  <h3>tiene expresión LaTeX<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasLatexExpression</p>
+  <div class="comment">
+   <span class="markdown">Expresión LaTeX de un objetivo o de una restricción. En las restricciones incluye el comparador y el cuantificador universal, si lo hay.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Restricción</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasIdentifier">
+  <h3>tiene identificador<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasIdentifier</p>
+  <div class="comment">
+   <span class="markdown">Nombre que identifica de forma unívoca una magnitud dentro de la formulación del problema.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ProblemQuantity" title="https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity">Magnitud del problema</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFixedLength">
+  <h3>tiene longitud fija<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasFixedLength</p>
+  <div class="comment">
+   <span class="markdown">Número fijo de elementos de una secuencia de variables de decisión. Alternativa a hasLength.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ListVariable" title="https://w3id.org/ontologies-ULL/CO-META#ListVariable">Variable de lista</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#PermutationVariable" title="https://w3id.org/ontologies-ULL/CO-META#PermutationVariable">Variable de permutación</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFixedColumnCount">
+  <h3>tiene número fijo de columnas<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasFixedColumnCount</p>
+  <div class="comment">
+   <span class="markdown">Segunda dimensión fija de una matriz de datos o de variables de decisión. Alternativa a hasColumnCount.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#MatrixTable" title="https://w3id.org/ontologies-ULL/CO-META#MatrixTable">Tabla matricial</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#MatrixVariable" title="https://w3id.org/ontologies-ULL/CO-META#MatrixVariable">Variable matricial</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFixedRowCount">
+  <h3>tiene número fijo de filas<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasFixedRowCount</p>
+  <div class="comment">
+   <span class="markdown">Número fijo de entidades que describe una tabla, o primera dimensión fija de una matriz de variables de decisión. Alternativa a hasRowCount.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#MatrixVariable" title="https://w3id.org/ontologies-ULL/CO-META#MatrixVariable">Variable matricial</a> <sup class="type-c" title="clase">c</sup> <span class="logic">or</span> <a href="#Table" title="https://w3id.org/ontologies-ULL/CO-META#Table">Tabla</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasWeight">
+  <h3>tiene peso<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasWeight</p>
+  <div class="comment">
+   <span class="markdown">Importancia relativa de un objetivo cuando se agrega con otros objetivos en una única función.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Objective" title="https://w3id.org/ontologies-ULL/CO-META#Objective">Objetivo</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPosition">
+  <h3>tiene posición<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasPosition</p>
+  <div class="comment">
+   <span class="markdown">Posición de un atributo en el orden en que se describen los registros de su tabla.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#Column" title="https://w3id.org/ontologies-ULL/CO-META#Column">Columna</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLatexSymbol">
+  <h3>tiene símbolo LaTeX<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasLatexSymbol</p>
+  <div class="comment">
+   <span class="markdown">Notación matemática, escrita en LaTeX, que representa una magnitud en las expresiones de los objetivos y las restricciones (p. ej. "x" o "v").</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ProblemQuantity" title="https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity">Magnitud del problema</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
  <h2>Propiedades de anotación</h2>
  <ul class="hlist">
@@ -2531,6 +3529,8 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#Safe" title="https://w3id.org/ontologies-ULL/CO-META#Safe"> <span>Safe</span> </a></li>
   <li><a href="#StorageSize" title="https://w3id.org/ontologies-ULL/CO-META#StorageSize"> <span>Storage Size</span> </a></li>
   <li><a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time"> <span>Time</span> </a></li>
+  <li><a href="#IntegerType" title="https://w3id.org/ontologies-ULL/CO-META#IntegerType">Tipo entero</a></li>
+  <li><a href="#RealType" title="https://w3id.org/ontologies-ULL/CO-META#RealType">Tipo real</a></li>
   <li><a href="#TournamentSize" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSize"> <span>Tournament Size</span> </a></li>
   <li><a href="#Unsafe" title="https://w3id.org/ontologies-ULL/CO-META#Unsafe"> <span>Unsafe</span> </a></li>
  </ul>
@@ -2705,6 +3705,36 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dt>
    <dd>
     <a href="#minValue" title="https://w3id.org/ontologies-ULL/CO-META#minValue">min Value</a> <sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="literal">"0"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IntegerType">
+  <h3>Tipo entero<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#IntegerType</p>
+  <div class="comment">
+   <span class="markdown">Tipo de valor entero de una variable de decisión.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#ValueType" title="https://w3id.org/ontologies-ULL/CO-META#ValueType">Tipo de valor</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RealType">
+  <h3>Tipo real<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#RealType</p>
+  <div class="comment">
+   <span class="markdown">Tipo de valor real de una variable de decisión.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#ValueType" title="https://w3id.org/ontologies-ULL/CO-META#ValueType">Tipo de valor</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
