@@ -64,8 +64,34 @@ CO-META:hasCodification rdf:type owl:ObjectProperty ;
                         rdfs:range CO-META:SolutionEncoding .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasColumn
+CO-META:hasColumn rdf:type owl:ObjectProperty ;
+                  rdfs:domain CO-META:NamedColumnTable ;
+                  rdfs:range CO-META:Column ;
+                  rdfs:comment "Relaciona una tabla con cada uno de los atributos que describen sus registros."@es ,
+                               "Relates a table to each of the attributes that describe its records."@en ;
+                  rdfs:label "has column"@en ,
+                             "tiene columna"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasColumnCount
+CO-META:hasColumnCount rdf:type owl:ObjectProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( CO-META:MatrixTable
+                                                   CO-META:MatrixVariable
+                                                 )
+                                   ] ;
+                       rdfs:range CO-META:InputParameter ;
+                       rdfs:comment "Input parameter whose value is the second dimension of a matrix of data or of decision variables. Alternative to hasFixedColumnCount."@en ,
+                                    "Parámetro de entrada cuyo valor es la segunda dimensión de una matriz de datos o de variables de decisión. Alternativa a hasFixedColumnCount."@es ;
+                       rdfs:label "has column count"@en ,
+                                  "tiene número de columnas"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasConstraint
 CO-META:hasConstraint rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf CO-META:hasProblemElement ;
                       owl:inverseOf CO-META:isConstraintOf ;
                       rdfs:domain CO-META:Problem ;
                       rdfs:range CO-META:Constraint .
@@ -95,6 +121,21 @@ CO-META:hasInputStart rdf:type owl:ObjectProperty ;
                       owl:inverseOf CO-META:hasOutputStart .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasLength
+CO-META:hasLength rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( CO-META:ListVariable
+                                              CO-META:PermutationVariable
+                                            )
+                              ] ;
+                  rdfs:range CO-META:InputParameter ;
+                  rdfs:comment "Input parameter whose value is the number of elements of a sequence of decision variables. Alternative to hasFixedLength."@en ,
+                               "Parámetro de entrada cuyo valor es el número de elementos de una secuencia de variables de decisión. Alternativa a hasFixedLength."@es ;
+                  rdfs:label "has length"@en ,
+                             "tiene longitud"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasNodeType
 CO-META:hasNodeType rdf:type owl:ObjectProperty ;
                     rdfs:domain CO-META:SolutionEncoding ;
@@ -103,6 +144,7 @@ CO-META:hasNodeType rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasObjective
 CO-META:hasObjective rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf CO-META:hasProblemElement ;
                      owl:inverseOf CO-META:isObjectiveOf ;
                      rdfs:domain CO-META:Problem ;
                      rdfs:range CO-META:Objective .
@@ -134,6 +176,31 @@ CO-META:hasParameter rdf:type owl:ObjectProperty ;
                      rdfs:range CO-META:ParameterValue .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasProblemElement
+CO-META:hasProblemElement rdf:type owl:ObjectProperty ;
+                          rdfs:domain CO-META:Problem ;
+                          rdfs:range CO-META:ProblemElement ;
+                          rdfs:comment "Relaciona un problema con cada uno de los constituyentes de su formulación: datos, variables de decisión, objetivos y restricciones."@es ,
+                                       "Relates a problem to each of the constituents of its formulation: data, decision variables, objectives and constraints."@en ;
+                          rdfs:label "has problem element"@en ,
+                                     "tiene elemento del problema"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasRowCount
+CO-META:hasRowCount rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( CO-META:MatrixVariable
+                                                CO-META:Table
+                                              )
+                                ] ;
+                    rdfs:range CO-META:InputParameter ;
+                    rdfs:comment "Input parameter whose value is the number of entities described by a table, or the first dimension of a matrix of decision variables. Alternative to hasFixedRowCount."@en ,
+                                 "Parámetro de entrada cuyo valor es el número de entidades que describe una tabla, o la primera dimensión de una matriz de variables de decisión. Alternativa a hasFixedRowCount."@es ;
+                    rdfs:label "has row count"@en ,
+                               "tiene número de filas"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasSafety
 CO-META:hasSafety rdf:type owl:ObjectProperty ;
                   rdfs:domain CO-META:MetaheuristicComponent ;
@@ -153,6 +220,17 @@ CO-META:hasType rdf:type owl:ObjectProperty ,
                          owl:FunctionalProperty ;
                 rdfs:domain CO-META:ParameterValue ;
                 rdfs:range CO-META:Parameter .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasValueType
+CO-META:hasValueType rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain CO-META:DecisionVariable ;
+                     rdfs:range CO-META:ValueType ;
+                     rdfs:comment "Dominio numérico (enteros o reales) al que pertenecen los valores que puede tomar una variable de decisión."@es ,
+                                  "Numeric domain (integers or reals) to which the values a decision variable can take belong."@en ;
+                     rdfs:label "has value type"@en ,
+                                "tiene tipo de valor"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#isCodificationOf
@@ -206,16 +284,120 @@ CO-META:hasCodeReference rdf:type owl:DatatypeProperty ;
                          rdfs:range xsd:string .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasFixedColumnCount
+CO-META:hasFixedColumnCount rdf:type owl:DatatypeProperty ,
+                                     owl:FunctionalProperty ;
+                            rdfs:domain [ rdf:type owl:Class ;
+                                          owl:unionOf ( CO-META:MatrixTable
+                                                        CO-META:MatrixVariable
+                                                      )
+                                        ] ;
+                            rdfs:range xsd:integer ;
+                            rdfs:comment "Fixed second dimension of a matrix of data or of decision variables. Alternative to hasColumnCount."@en ,
+                                         "Segunda dimensión fija de una matriz de datos o de variables de decisión. Alternativa a hasColumnCount."@es ;
+                            rdfs:label "has fixed column count"@en ,
+                                       "tiene número fijo de columnas"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasFixedLength
+CO-META:hasFixedLength rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( CO-META:ListVariable
+                                                   CO-META:PermutationVariable
+                                                 )
+                                   ] ;
+                       rdfs:range xsd:integer ;
+                       rdfs:comment "Fixed number of elements of a sequence of decision variables. Alternative to hasLength."@en ,
+                                    "Número fijo de elementos de una secuencia de variables de decisión. Alternativa a hasLength."@es ;
+                       rdfs:label "has fixed length"@en ,
+                                  "tiene longitud fija"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasFixedRowCount
+CO-META:hasFixedRowCount rdf:type owl:DatatypeProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:domain [ rdf:type owl:Class ;
+                                       owl:unionOf ( CO-META:MatrixVariable
+                                                     CO-META:Table
+                                                   )
+                                     ] ;
+                         rdfs:range xsd:integer ;
+                         rdfs:comment "Fixed number of entities described by a table, or fixed first dimension of a matrix of decision variables. Alternative to hasRowCount."@en ,
+                                      "Número fijo de entidades que describe una tabla, o primera dimensión fija de una matriz de variables de decisión. Alternativa a hasRowCount."@es ;
+                         rdfs:label "has fixed row count"@en ,
+                                    "tiene número fijo de filas"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasIdentifier
+CO-META:hasIdentifier rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain CO-META:ProblemQuantity ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Name that identifies a quantity unambiguously within the problem formulation."@en ,
+                                   "Nombre que identifica de forma unívoca una magnitud dentro de la formulación del problema."@es ;
+                      rdfs:label "has identifier"@en ,
+                                 "tiene identificador"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasInputSize
 CO-META:hasInputSize rdf:type owl:DatatypeProperty ;
                      rdfs:domain CO-META:MetaheuristicComponent ;
                      rdfs:range xsd:integer .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasLatexExpression
+CO-META:hasLatexExpression rdf:type owl:DatatypeProperty ,
+                                    owl:FunctionalProperty ;
+                           rdfs:domain [ rdf:type owl:Class ;
+                                         owl:unionOf ( CO-META:Constraint
+                                                       CO-META:Objective
+                                                     )
+                                       ] ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "LaTeX expression of an objective or constraint. For constraints it includes the comparator and the universal quantifier, if any."@en ,
+                                        "Expresión LaTeX de un objetivo o de una restricción. En las restricciones incluye el comparador y el cuantificador universal, si lo hay."@es ;
+                           rdfs:label "has LaTeX expression"@en ,
+                                      "tiene expresión LaTeX"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasLatexSymbol
+CO-META:hasLatexSymbol rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain CO-META:ProblemQuantity ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Mathematical notation, written in LaTeX, that represents a quantity in the objective and constraint expressions (e.g. \"x\" or \"v\")."@en ,
+                                    "Notación matemática, escrita en LaTeX, que representa una magnitud en las expresiones de los objetivos y las restricciones (p. ej. \"x\" o \"v\")."@es ;
+                       rdfs:label "has LaTeX symbol"@en ,
+                                  "tiene símbolo LaTeX"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasLowerBound
+CO-META:hasLowerBound rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain CO-META:DecisionVariable ;
+                      rdfs:range xsd:double ;
+                      rdfs:comment "Smallest value a decision variable may take. xsd:double is used so that -INF (no lower bound) can be expressed."@en ,
+                                   "Menor valor que puede tomar una variable de decisión. Se usa xsd:double para poder expresar -INF (sin cota inferior)."@es ;
+                      rdfs:label "has lower bound"@en ,
+                                 "tiene cota inferior"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasOutputSize
 CO-META:hasOutputSize rdf:type owl:DatatypeProperty ;
                       rdfs:domain CO-META:MetaheuristicComponent ;
                       rdfs:range xsd:integer .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasPosition
+CO-META:hasPosition rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain CO-META:Column ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "Position of an attribute in the order in which the records of its table are described."@en ,
+                                 "Posición de un atributo en el orden en que se describen los registros de su tabla."@es ;
+                    rdfs:label "has position"@en ,
+                               "tiene posición"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasSize
@@ -225,10 +407,43 @@ CO-META:hasSize rdf:type owl:DatatypeProperty ,
                 rdfs:range xsd:integer .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasUpperBound
+CO-META:hasUpperBound rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain CO-META:DecisionVariable ;
+                      rdfs:range xsd:double ;
+                      rdfs:comment "Mayor valor que puede tomar una variable de decisión. Se usa xsd:double para poder expresar INF (sin cota superior)."@es ,
+                                   "Largest value a decision variable may take. xsd:double is used so that INF (no upper bound) can be expressed."@en ;
+                      rdfs:label "has upper bound"@en ,
+                                 "tiene cota superior"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasValue
 CO-META:hasValue rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
                  rdfs:domain CO-META:ParameterValue .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasWeight
+CO-META:hasWeight rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain CO-META:Objective ;
+                  rdfs:range xsd:double ;
+                  rdfs:comment "Importancia relativa de un objetivo cuando se agrega con otros objetivos en una única función."@es ,
+                               "Relative importance of an objective when it is aggregated with other objectives into a single function."@en ;
+                  rdfs:label "has weight"@en ,
+                             "tiene peso"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#isImplicit
+CO-META:isImplicit rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain CO-META:InputParameter ;
+                   rdfs:range xsd:boolean ;
+                   rdfs:comment "Indica que el parámetro de entrada no se declaró explícitamente como dato del problema, sino que surgió al usarse como tamaño de una tabla."@es ,
+                                "Indicates that the input parameter was not explicitly declared as problem data, but arose from its use as the size of a table."@en ;
+                   rdfs:label "es implícito"@es ,
+                              "is implicit"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#maxValue
@@ -274,6 +489,15 @@ CO-META:BoolParameter rdf:type owl:Class ;
                                  "Parámetro booleano"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#Column
+CO-META:Column rdf:type owl:Class ;
+               rdfs:subClassOf CO-META:ProblemData ;
+               rdfs:comment "Atributo de las entidades descritas por una tabla. Equivale a un vector de datos con un valor por registro (p. ej., el peso de cada objeto)."@es ,
+                            "Attribute of the entities described by a table. It is equivalent to a vector of data with one value per record (e.g. the weight of each item)."@en ;
+               rdfs:label "Column"@en ,
+                          "Columna"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#ComponentSafety
 CO-META:ComponentSafety rdf:type owl:Class ;
                         owl:equivalentClass [ rdf:type owl:Class ;
@@ -299,6 +523,7 @@ CO-META:CompositeEncoding rdf:type owl:Class ;
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Constraint
 CO-META:Constraint rdf:type owl:Class ;
+                   rdfs:subClassOf CO-META:ProblemElement ;
                    rdfs:comment "Condición que debe cumplir una solución de un problema de optimización para ser factible."@es ,
                                 "Condition that a solution of an optimization problem must satisfy in order to be feasible."@en ;
                    rdfs:label "Constraint"@en ,
@@ -380,6 +605,16 @@ CO-META:DataStructure rdf:type owl:Class ;
                                  "Estructura de datos"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#DecisionVariable
+CO-META:DecisionVariable rdf:type owl:Class ;
+                         rdfs:subClassOf CO-META:ProblemQuantity ;
+                         owl:disjointWith CO-META:ProblemData ;
+                         rdfs:comment "Magnitud cuyo valor elige el método de resolución. Una asignación de valores a todas las variables de decisión del problema constituye una solución candidata."@es ,
+                                      "Quantity whose value is chosen by the solution method. An assignment of values to all the decision variables of a problem is a candidate solution."@en ;
+                         rdfs:label "Decision Variable"@en ,
+                                    "Variable de decisión"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent
 CO-META:DiversityPreservationComponent rdf:type owl:Class ;
                                        rdfs:subClassOf CO-META:MultiobjectiveComponent ;
@@ -443,6 +678,15 @@ CO-META:GenerationComponent rdf:type owl:Class ;
                                        "Generation Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#InputParameter
+CO-META:InputParameter rdf:type owl:Class ;
+                       rdfs:subClassOf CO-META:ProblemData ;
+                       rdfs:comment "Dato escalar que caracteriza una instancia del problema (p. ej., la capacidad de la mochila o el número de ciudades)."@es ,
+                                    "Scalar datum that characterizes an instance of the problem (e.g. the capacity of the knapsack or the number of cities)."@en ;
+                       rdfs:label "Input Parameter"@en ,
+                                  "Parámetro de entrada"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#Integer
 CO-META:Integer rdf:type owl:Class ;
                 rdfs:subClassOf CO-META:SolutionNode ;
@@ -499,6 +743,40 @@ CO-META:ListEncoding rdf:type owl:Class ;
                                 "List Encoding"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#ListVariable
+CO-META:ListVariable rdf:type owl:Class ;
+                     rdfs:subClassOf CO-META:DecisionVariable ,
+                                     [ rdf:type owl:Class ;
+                                       owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty CO-META:hasFixedLength ;
+                                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                            ]
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty CO-META:hasLength ;
+                                                                              owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ]
+                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty CO-META:hasFixedLength ;
+                                                                              owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                                            ]
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty CO-META:hasLength ;
+                                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ]
+                                                   )
+                                     ] ;
+                     rdfs:comment "Decision variable that represents a sequence of values, one per element of a collection, which may be repeated (e.g. whether each item is put in the knapsack)."@en ,
+                                  "Variable de decisión que representa una secuencia de valores, uno por elemento de una colección, que pueden repetirse (p. ej., si cada objeto se mete en la mochila)."@es ;
+                     rdfs:label "List Variable"@en ,
+                                "Variable de lista"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent
 CO-META:LocalSearchComponent rdf:type owl:Class ;
                              rdfs:subClassOf CO-META:ModificationComponent ;
@@ -540,6 +818,99 @@ CO-META:MatrixEncoding rdf:type owl:Class ;
                                     "Solution encoded as a two-dimensional arrangement of nodes organized in rows and columns."@en ;
                        rdfs:label "Codificación matricial"@es ,
                                   "Matrix Encoding"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MatrixTable
+CO-META:MatrixTable rdf:type owl:Class ;
+                    rdfs:subClassOf CO-META:Table ,
+                                    [ rdf:type owl:Class ;
+                                      owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty CO-META:hasColumnCount ;
+                                                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                           ]
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty CO-META:hasFixedColumnCount ;
+                                                                             owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ]
+                                                    [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty CO-META:hasColumnCount ;
+                                                                             owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                                           ]
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty CO-META:hasFixedColumnCount ;
+                                                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ]
+                                                  )
+                                    ] ;
+                    rdfs:comment "Table whose records are described by anonymous attributes of the same nature, so that the data form a matrix (e.g. a distance matrix between cities)."@en ,
+                                 "Tabla cuyos registros se describen mediante atributos anónimos de la misma naturaleza, de modo que los datos forman una matriz (p. ej., una matriz de distancias entre ciudades)."@es ;
+                    rdfs:label "Matrix Table"@en ,
+                               "Tabla matricial"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MatrixVariable
+CO-META:MatrixVariable rdf:type owl:Class ;
+                       rdfs:subClassOf CO-META:DecisionVariable ,
+                                       [ rdf:type owl:Class ;
+                                         owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty CO-META:hasColumnCount ;
+                                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty CO-META:hasFixedColumnCount ;
+                                                                                owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ]
+                                                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty CO-META:hasColumnCount ;
+                                                                                owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty CO-META:hasFixedColumnCount ;
+                                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ]
+                                                     )
+                                       ] ,
+                                       [ rdf:type owl:Class ;
+                                         owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty CO-META:hasFixedRowCount ;
+                                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty CO-META:hasRowCount ;
+                                                                                owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ]
+                                                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty CO-META:hasFixedRowCount ;
+                                                                                owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty CO-META:hasRowCount ;
+                                                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ]
+                                                     )
+                                       ] ;
+                       rdfs:comment "Decision variable that represents a value for each pair of elements of two collections (e.g. whether each vehicle visits each customer)."@en ,
+                                    "Variable de decisión que representa un valor para cada par de elementos de dos colecciones (p. ej., si cada vehículo visita a cada cliente)."@es ;
+                       rdfs:label "Matrix Variable"@en ,
+                                  "Variable matricial"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective
@@ -611,6 +982,15 @@ CO-META:MultiobjectiveComponent rdf:type owl:Class ;
                                            "Multiobjective Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#NamedColumnTable
+CO-META:NamedColumnTable rdf:type owl:Class ;
+                         rdfs:subClassOf CO-META:Table ;
+                         rdfs:comment "Table whose records are described by distinct, named attributes (e.g. the X and Y coordinates of each city)."@en ,
+                                      "Tabla cuyos registros se describen mediante atributos distintos y con nombre (p. ej., las coordenadas X e Y de cada ciudad)."@es ;
+                         rdfs:label "Named Column Table"@en ,
+                                    "Tabla de columnas con nombre"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent
 CO-META:NeighbourhoodComponent rdf:type owl:Class ;
                                rdfs:subClassOf CO-META:ModificationComponent ;
@@ -622,6 +1002,7 @@ CO-META:NeighbourhoodComponent rdf:type owl:Class ;
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Objective
 CO-META:Objective rdf:type owl:Class ;
+                  rdfs:subClassOf CO-META:ProblemElement ;
                   rdfs:comment "Objective of an optimization problem. This class should not be instantiated directly; its subclasses should be used instead."@en ,
                                "Objetivo de un problema de optimización. Esta clase no debe instanciarse directamente; deben usarse sus subclases."@es ;
                   rdfs:label "Objective"@en ,
@@ -660,6 +1041,40 @@ CO-META:PermutationEncoding rdf:type owl:Class ;
                                          "Solution encoded as an ordered arrangement of distinct elements, without repetitions."@en ;
                             rdfs:label "Codificación de permutación"@es ,
                                        "Permutation Encoding"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PermutationVariable
+CO-META:PermutationVariable rdf:type owl:Class ;
+                            rdfs:subClassOf CO-META:DecisionVariable ,
+                                            [ rdf:type owl:Class ;
+                                              owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty CO-META:hasFixedLength ;
+                                                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                                   ]
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty CO-META:hasLength ;
+                                                                                     owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                                                   ]
+                                                                                 ) ;
+                                                              rdf:type owl:Class
+                                                            ]
+                                                            [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty CO-META:hasFixedLength ;
+                                                                                     owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                                                   ]
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty CO-META:hasLength ;
+                                                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                                   ]
+                                                                                 ) ;
+                                                              rdf:type owl:Class
+                                                            ]
+                                                          )
+                                            ] ;
+                            rdfs:comment "Decision variable that represents an ordering of the elements of a collection, in which each element appears exactly once (e.g. the tour through the cities in the TSP)."@en ,
+                                         "Variable de decisión que representa un orden de los elementos de una colección, en el que cada elemento aparece exactamente una vez (p. ej., el recorrido por las ciudades en el TSP)."@es ;
+                            rdfs:label "Permutation Variable"@en ,
+                                       "Variable de permutación"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic
@@ -780,6 +1195,32 @@ CO-META:Problem rdf:type owl:Class ;
                            "Problema"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#ProblemData
+CO-META:ProblemData rdf:type owl:Class ;
+                    rdfs:subClassOf CO-META:ProblemQuantity ;
+                    rdfs:comment "Magnitud del problema cuyo valor se conoce antes de resolverlo y que caracteriza una instancia concreta del problema."@es ,
+                                 "Problem quantity whose value is known before solving the problem and that characterizes a specific instance of it."@en ;
+                    rdfs:label "Datos del problema"@es ,
+                               "Problem Data"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ProblemElement
+CO-META:ProblemElement rdf:type owl:Class ;
+                       rdfs:comment "Constituent of the mathematical formulation of an optimization problem: its data, its decision variables, its objectives or its constraints."@en ,
+                                    "Constituyente de la formulación matemática de un problema de optimización: sus datos, sus variables de decisión, sus objetivos o sus restricciones."@es ;
+                       rdfs:label "Elemento del problema"@es ,
+                                  "Problem Element"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity
+CO-META:ProblemQuantity rdf:type owl:Class ;
+                        rdfs:subClassOf CO-META:ProblemElement ;
+                        rdfs:comment "Magnitud, o colección indexada de magnitudes, que interviene en la formulación del problema y se representa mediante un símbolo en sus expresiones. Su valor se conoce de antemano (datos) o se busca al resolver el problema (variable de decisión). No se refiere a una magnitud física."@es ,
+                                     "Quantity, or indexed collection of quantities, that takes part in the formulation of the problem and is represented by a symbol in its expressions. Its value is either known in advance (data) or sought when solving the problem (decision variable). It does not refer to a physical quantity."@en ;
+                        rdfs:label "Magnitud del problema"@es ,
+                                   "Problem Quantity"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent
 CO-META:RandomDecisionCrossoverComponent rdf:type owl:Class ;
                                          rdfs:subClassOf CO-META:CrossoverComponent ;
@@ -809,6 +1250,15 @@ CO-META:ScalarEncoding rdf:type owl:Class ;
                                     "Solution encoded as a single node that holds one value."@en ;
                        rdfs:label "Codificación escalar"@es ,
                                   "Scalar Encoding"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ScalarVariable
+CO-META:ScalarVariable rdf:type owl:Class ;
+                       rdfs:subClassOf CO-META:DecisionVariable ;
+                       rdfs:comment "Decision variable that represents a single value (e.g. the number of vehicles to use)."@en ,
+                                    "Variable de decisión que representa un único valor (p. ej., el número de vehículos que se van a utilizar)."@es ;
+                       rdfs:label "Scalar Variable"@en ,
+                                  "Variable escalar"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SelectionComponent
@@ -950,6 +1400,40 @@ CO-META:StoppingCriterionComponent rdf:type owl:Class ;
                                               "Stopping Criterion Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#Table
+CO-META:Table rdf:type owl:Class ;
+              rdfs:subClassOf CO-META:ProblemData ,
+                              [ rdf:type owl:Class ;
+                                owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty CO-META:hasFixedRowCount ;
+                                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                     ]
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty CO-META:hasRowCount ;
+                                                                       owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ]
+                                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty CO-META:hasFixedRowCount ;
+                                                                       owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                                     ]
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty CO-META:hasRowCount ;
+                                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ]
+                                            )
+                              ] ;
+              rdfs:comment "Collection of problem data made up of homogeneous records, each of which describes an entity of the problem (e.g. a city or an item) by means of its attributes."@en ,
+                           "Colección de datos del problema formada por registros homogéneos, cada uno de los cuales describe una entidad del problema (p. ej., una ciudad o un objeto) mediante sus atributos."@es ;
+              rdfs:label "Table"@en ,
+                         "Tabla"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent
 CO-META:TournamentSelectionComponent rdf:type owl:Class ;
                                      rdfs:subClassOf CO-META:SelectionComponent ,
@@ -977,6 +1461,19 @@ CO-META:UpdateBestComponent rdf:type owl:Class ;
                                          "Componente que actualiza la mejor solución o soluciones encontradas hasta el momento por el algoritmo."@es ;
                             rdfs:label "Componente de actualización del mejor"@es ,
                                        "Update Best Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ValueType
+CO-META:ValueType rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:oneOf ( CO-META:IntegerType
+                                                    CO-META:RealType
+                                                  )
+                                      ] ;
+                  rdfs:comment "Dominio numérico al que pertenecen los valores que puede tomar una variable de decisión: enteros (IntegerType) o reales (RealType)."@es ,
+                               "Numeric domain to which the values a decision variable can take belong: integers (IntegerType) or reals (RealType)."@en ;
+                  rdfs:label "Tipo de valor"@es ,
+                             "Value Type"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VariationComponent
@@ -1016,6 +1513,15 @@ CO-META:Elitism rdf:type owl:NamedIndividual ,
                 CO-META:minValue 0 .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#IntegerType
+CO-META:IntegerType rdf:type owl:NamedIndividual ,
+                             CO-META:ValueType ;
+                    rdfs:comment "Integer value type of a decision variable."@en ,
+                                 "Tipo de valor entero de una variable de decisión."@es ;
+                    rdfs:label "Integer Type"@en ,
+                               "Tipo entero"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#Iterations
 CO-META:Iterations rdf:type owl:NamedIndividual ,
                             CO-META:IntegerParameter ;
@@ -1033,6 +1539,15 @@ CO-META:MutationProbability rdf:type owl:NamedIndividual ,
 CO-META:PopulationSize rdf:type owl:NamedIndividual ,
                                 CO-META:IntegerParameter ;
                        CO-META:minValue 0 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#RealType
+CO-META:RealType rdf:type owl:NamedIndividual ,
+                          CO-META:ValueType ;
+                 rdfs:comment "Real value type of a decision variable."@en ,
+                              "Tipo de valor real de una variable de decisión."@es ;
+                 rdfs:label "Real Type"@en ,
+                            "Tipo real"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Safe
@@ -1077,16 +1592,40 @@ CO-META:Unsafe rdf:type owl:NamedIndividual ,
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( CO-META:ComponentSafety
-                CO-META:Constraint
                 CO-META:DataStructure
                 CO-META:Metaheuristic
                 CO-META:MetaheuristicComponent
-                CO-META:Objective
                 CO-META:Parameter
                 CO-META:ParameterValue
                 CO-META:Problem
+                CO-META:ProblemElement
                 CO-META:SolutionEncoding
                 CO-META:SolutionNode
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( CO-META:Column
+                CO-META:InputParameter
+                CO-META:Table
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( CO-META:Constraint
+                CO-META:Objective
+                CO-META:ProblemQuantity
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( CO-META:ListVariable
+                CO-META:MatrixVariable
+                CO-META:PermutationVariable
+                CO-META:ScalarVariable
               )
 ] .
 
