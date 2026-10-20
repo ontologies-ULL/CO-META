@@ -1,0 +1,12 @@
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX t: <http://example.org/co-meta-test#>
+
+ASK {
+    t:tour a qudt:Sequence , qudt:Collection , qudt:StructuredDatatype .
+    t:selection a qudt:Set .
+    t:bag a qudt:MultiSet .
+    t:distances a qudt:Matrix , qudt:Array .
+    t:cities a qudt:Table .
+    t:solution a qudt:Record , qudt:CompositeDatatype .
+    FILTER NOT EXISTS { t:selection a qudt:Sequence }
+}

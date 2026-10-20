@@ -1,0 +1,58 @@
+name: Validate Ontology
+
+on:
+  push:
+    paths:
+      - "CO-META.ttl"
+      - "individuals/**"
+      - "imports/**"
+      - "SHACL/**"
+      - "tests/**"
+      - "scripts/**"
+      - ".github/workflows/validate.yml"
+  pull_request:
+    paths:
+      - "CO-META.ttl"
+      - "individuals/**"
+      - "imports/**"
+      - "SHACL/**"
+      - "tests/**"
+      - "scripts/**"
+      - ".github/workflows/validate.yml"
+  workflow_call: # usado por generate_doc.yml antes de generar la documentación
+  workflow_dispatch: # permite ejecución manual desde GitHub
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Clonar el repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Instalar Java (necesario para ROBOT y HermiT)
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: "temurin"
+
+      # 3. Instalar pyshacl (necesario para validar SHACL)
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pyshacl
+        run: pip install pyshacl==0.40.1
+
+      # 4. Reutilizar ROBOT entre ejecuciones (la versión está fijada en el script)
+      - name: Cache ROBOT
+        uses: actions/cache@v4
+        with:
+          path: .tools
+          key: tools-${{ hashFiles('scripts/robot.sh') }}
+
+      # 5. Perfil OWL 2 DL, consistencia con HermiT, pruebas OWL y SHACL
+      - name: Validate ontology
+        run: bash scripts/validate.sh

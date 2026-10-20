@@ -6,7 +6,7 @@ PREFIX mh: <https://w3id.org/ontologies-ULL/CO-META#>
 
 SELECT DISTINCT ?metaheuristic ?componentClass
 WHERE {
-  VALUES ?metaheuristic { mh:TabuSearch mh:SimulatedAnnealing }
+  VALUES ?metaheuristic { mh:TS_TabuSearch mh:SA_SimulatedAnnealing }
   ?metaheuristic mh:isConnectedTo ?comp1 .
   ?comp1 a ?componentClass .
 
@@ -15,7 +15,7 @@ WHERE {
   FILTER NOT EXISTS {
     ?subclass rdfs:subClassOf ?componentClass .
     
-    ?mh1 mh:isConnectedTo ?compSub1 .
+    ?metaheuristic mh:isConnectedTo ?compSub1 .
     ?compSub1 a ?subclass .
   }
   FILTER (
@@ -23,4 +23,4 @@ WHERE {
     ?componentClass != owl:Class
   )
 }
-ORDER BY ?component ?metaheuristic
+ORDER BY ?componentClass ?metaheuristic

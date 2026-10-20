@@ -1,0 +1,15 @@
+PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+PREFIX t: <http://example.org/co-meta-test#>
+
+ASK {
+    t:vehicles a cm:ScalarVariable .
+    t:tour a cm:PermutationVariable , cm:SequenceVariable .
+    t:packing a cm:SequenceVariable .
+    t:facilities a cm:SetVariable .
+    t:visits a cm:MatrixVariable .
+    t:cities a cm:TableData .
+    t:distances a cm:MatrixData .
+    FILTER NOT EXISTS { t:packing a cm:PermutationVariable }
+    FILTER NOT EXISTS { t:facilities a cm:SequenceVariable }
+    FILTER NOT EXISTS { t:distances a cm:MatrixVariable }
+}

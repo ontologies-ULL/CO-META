@@ -1,0 +1,11 @@
+# Expected: inconsistent.
+# A literal value must be an xsd:integer or an xsd:double.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/literal-value-datatype> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:bound a owl:NamedIndividual , CO-META:LiteralValue ;
+    CO-META:hasLiteralValue "ten" .

@@ -1,0 +1,15 @@
+# Expected: SHACL violation (ComponentConnectionSizeShape).
+# A component that outputs one solution cannot feed a component that expects two.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/component-connection-size> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:selection a owl:NamedIndividual , CO-META:SelectionComponent ;
+    CO-META:hasOutputSize 1 ;
+    CO-META:hasOutput t:crossover .
+
+t:crossover a owl:NamedIndividual , CO-META:ModificationComponent ;
+    CO-META:hasInputSize 2 .

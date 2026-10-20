@@ -1,0 +1,13 @@
+# Expected: inconsistent.
+# An input parameter is a scalar datum, so it cannot have the shape of a matrix.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/input-parameter-scalar> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:n a owl:NamedIndividual , CO-META:InputParameter ;
+    CO-META:hasShape t:matrix .
+
+t:matrix a owl:NamedIndividual , CO-META:MatrixShape .

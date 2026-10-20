@@ -7,7 +7,7 @@ PREFIX mh: <https://w3id.org/ontologies-ULL/CO-META#>
 SELECT DISTINCT ?componentClass
 WHERE {
   VALUES (?mh1 ?mh2) {
-    (mh:TabuSearch mh:SimulatedAnnealing)
+    (mh:TS_TabuSearch mh:SA_SimulatedAnnealing)
   }
   ?mh1 mh:isConnectedTo ?comp1 .
   ?comp1 a ?componentClass .

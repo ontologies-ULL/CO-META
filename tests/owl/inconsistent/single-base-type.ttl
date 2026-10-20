@@ -1,0 +1,12 @@
+# Expected: inconsistent.
+# hasBaseType is functional and the base types are pairwise different,
+# so a value domain cannot be both integer and real.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/single-base-type> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:domain a owl:NamedIndividual , CO-META:ValueDomain ;
+    CO-META:hasBaseType CO-META:Integers , CO-META:Reals .

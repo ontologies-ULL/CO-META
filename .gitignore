@@ -1,2 +1,7 @@
 # Automatic XML catalogs created by Protégé
 catalog-v*.xml
+# except those that resolve CO-META and its modules to the local files
+!/catalog-v001.xml
+!/individuals/*/catalog-v001.xml
+# ROBOT and other tools downloaded by scripts/robot.sh
+.tools/

@@ -1,0 +1,114 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+@prefix cm: <https://w3id.org/ontologies-ULL/CO-META#> .
+
+# OWL states how many values these properties have; under the open world
+# assumption a missing value is not an error, so SHACL requires it.
+
+cm:DecisionVariableShape
+    a sh:NodeShape ;
+    sh:targetClass cm:DecisionVariable ;
+    sh:property [
+        sh:path cm:hasShape ;
+        sh:minCount 1 ;
+        sh:message "A decision variable must state its shape (use cm:Scalar for single values)." ;
+    ] .
+
+cm:DataStructureShape
+    a sh:NodeShape ;
+    sh:targetClass cm:DataStructure ;
+    sh:property [
+        sh:path cm:hasShape ;
+        sh:minCount 1 ;
+        sh:message "A data structure must state its shape (use cm:Scalar for single values)." ;
+    ] ;
+    sh:property [
+        sh:path cm:hasValueDomain ;
+        sh:minCount 1 ;
+        sh:message "A data structure must state the domain of the values it stores." ;
+    ] .
+
+cm:CollectionShapeShape
+    a sh:NodeShape ;
+    sh:targetClass cm:CollectionShape ;
+    sh:property [
+        sh:path cm:isOrdered ;
+        sh:minCount 1 ;
+        sh:message "A collection must state whether it is ordered." ;
+    ] ;
+    sh:property [
+        sh:path cm:isDistinct ;
+        sh:minCount 1 ;
+        sh:message "A collection must state whether its values are distinct." ;
+    ] .
+
+# Sizes are only required for the shape of a specific quantity (object of hasShape).
+# Shapes used with supportsShape describe a kind of solution and have no sizes.
+cm:QuantityShapeSizesShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf cm:hasShape ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Shape {$this} of a quantity does not state its {?size}." ;
+        sh:select """
+            PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+            SELECT $this ?size
+            WHERE {
+                {
+                    $this a cm:CollectionShape .
+                    FILTER NOT EXISTS { $this cm:hasLength ?length }
+                    BIND ("length" AS ?size)
+                } UNION {
+                    $this a cm:MatrixShape .
+                    FILTER NOT EXISTS { $this cm:hasRowCount ?rows }
+                    BIND ("number of rows" AS ?size)
+                } UNION {
+                    $this a cm:MatrixShape .
+                    FILTER NOT EXISTS { $this cm:hasColumnCount ?columns }
+                    BIND ("number of columns" AS ?size)
+                } UNION {
+                    $this a cm:TableShape .
+                    FILTER NOT EXISTS { $this cm:hasRowCount ?records }
+                    BIND ("number of records" AS ?size)
+                }
+            }
+        """ ;
+    ] .
+
+cm:TableShapeShape
+    a sh:NodeShape ;
+    sh:targetClass cm:TableShape ;
+    sh:property [
+        sh:path cm:hasColumn ;
+        sh:minCount 1 ;
+        sh:message "A table must have at least one column." ;
+    ] ;
+
+    # Two columns of the same table cannot share a position
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Columns {?first} and {?second} of {$this} share position {?position}." ;
+        sh:select """
+            PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+            SELECT $this ?first ?second ?position
+            WHERE {
+                $this cm:hasColumn ?first , ?second .
+                ?first cm:hasPosition ?position .
+                ?second cm:hasPosition ?position .
+                FILTER (STR(?first) < STR(?second))
+            }
+        """ ;
+    ] .
+
+cm:CompositeShapeShape
+    a sh:NodeShape ;
+    sh:targetClass cm:CompositeShape ;
+    sh:property [
+        sh:path cm:hasComponent ;
+        sh:minCount 2 ;
+        sh:message "A composite shape must combine at least two shapes." ;
+    ] .

@@ -1,0 +1,11 @@
+# Expected: SHACL violation (DataStructureShape).
+# A data structure must state its shape, even if it holds a single value.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/data-structure-without-shape> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:temperature a owl:NamedIndividual , CO-META:DataStructure ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ; CO-META:hasBaseType CO-META:Reals ] .

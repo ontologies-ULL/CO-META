@@ -1,0 +1,16 @@
+# Expected: SHACL violation (TableShapeShape).
+# Two columns of the same table cannot share a position.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/table-duplicate-column-position> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:cities a owl:NamedIndividual , CO-META:ProblemData ;
+    CO-META:hasShape [ a CO-META:TableShape ;
+                       CO-META:hasRowCount [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 10 ] ;
+                       CO-META:hasColumn t:x , t:y ] .
+
+t:x a owl:NamedIndividual , CO-META:Column ; CO-META:hasPosition 1 .
+t:y a owl:NamedIndividual , CO-META:Column ; CO-META:hasPosition 1 .

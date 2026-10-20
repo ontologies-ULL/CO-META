@@ -1,0 +1,6 @@
+PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+PREFIX t: <http://example.org/co-meta-test#>
+
+ASK {
+    t:n cm:hasShape cm:Scalar .
+}

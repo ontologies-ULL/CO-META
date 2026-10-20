@@ -1,0 +1,13 @@
+# Expected: SHACL violation (ValueDomainShape).
+# OWL accepts a value domain without a base type (open world), but SHACL requires it.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/value-domain-without-base-type> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:x a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape CO-META:Scalar ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ;
+                             CO-META:hasLowerBound [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 0 ] ] .

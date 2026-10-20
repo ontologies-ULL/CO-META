@@ -1,0 +1,27 @@
+# Expected inferences: see qudt-alignment.rq.
+# CO-META shapes are classified under the QUDT structured datatypes imported in
+# imports/qudt.ttl.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/qudt-alignment> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:tour a owl:NamedIndividual , CO-META:CollectionShape ;
+    CO-META:isOrdered true ;
+    CO-META:isDistinct true .
+
+t:selection a owl:NamedIndividual , CO-META:CollectionShape ;
+    CO-META:isOrdered false ;
+    CO-META:isDistinct true .
+
+t:bag a owl:NamedIndividual , CO-META:CollectionShape ;
+    CO-META:isOrdered false ;
+    CO-META:isDistinct false .
+
+t:distances a owl:NamedIndividual , CO-META:MatrixShape .
+
+t:cities a owl:NamedIndividual , CO-META:TableShape .
+
+t:solution a owl:NamedIndividual , CO-META:CompositeShape .

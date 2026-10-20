@@ -1,0 +1,19 @@
+# Expected: consistent (and SHACL-conforming).
+# A metaheuristic and its components state the kind of solution they support,
+# without sizes: here, permutations of any length.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/supported-shapes> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:permutation a owl:NamedIndividual , CO-META:CollectionShape ;
+    CO-META:isOrdered true ;
+    CO-META:isDistinct true .
+
+t:genetic_algorithm a owl:NamedIndividual , CO-META:Metaheuristic ;
+    CO-META:supportsShape t:permutation .
+
+t:pmx a owl:NamedIndividual , CO-META:PartiallyMappedCrossoverComponent ;
+    CO-META:supportsShape t:permutation .

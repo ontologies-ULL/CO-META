@@ -2,12 +2,20 @@ name: Generate Widoco Documentation
 
 on:
   push:
+    branches:
+      - main # La documentación se publica en main; otras ramas no deben dispararlo
     paths:
-      - "CO-META.ttl" # Solo se dispara si cambia este fichero
+      - "CO-META.ttl" # Solo se dispara si cambia la ontología o sus módulos importados
+      - "imports/**"
   workflow_dispatch: # permite ejecución manual desde GitHub
 
 jobs:
+  # 0. Validar la ontología antes de generar la documentación
+  validate:
+    uses: ./.github/workflows/validate.yml
+
   build:
+    needs: validate
     runs-on: ubuntu-latest
 
     steps:
@@ -70,6 +78,13 @@ jobs:
         run: |
           mkdir -p docs/latest/individuals
           cp -R individuals/* docs/latest/individuals/
+
+      # 8b. Copiar los módulos importados (p. ej. imports/qudt.ttl)
+      - name: Copy imports folder
+        if: ${{ hashFiles('imports/**') != '' }}
+        run: |
+          mkdir -p docs/latest/imports
+          cp -R imports/* docs/latest/imports/
 
       # 9. Copiar documentación versionada
       - name: Copy versioned documentation

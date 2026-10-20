@@ -1,0 +1,11 @@
+# Expected: SHACL violation (DecisionVariableShape).
+# Every decision variable must state its shape, even a single value (cm:Scalar).
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/decision-variable-without-shape> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:x a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ; CO-META:hasBaseType CO-META:Reals ] .

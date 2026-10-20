@@ -1,0 +1,40 @@
+# Expected: consistent.
+# Bounds can refer to an input parameter of the problem, to the value of a parameter
+# of the algorithm, or to the size of the solution.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/symbolic-bounds> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:n a owl:NamedIndividual , CO-META:InputParameter ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ; CO-META:hasBaseType CO-META:Integers ] .
+
+t:population_size a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:PopulationSize ;
+    CO-META:hasValue 50 .
+
+# Values between 1 and N
+t:city a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape CO-META:Scalar ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ;
+                             CO-META:hasBaseType CO-META:Integers ;
+                             CO-META:hasLowerBound [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 1 ] ;
+                             CO-META:hasUpperBound [ a CO-META:ParameterReference ; CO-META:refersTo t:n ] ] .
+
+# Values between 0 and the population size of the algorithm
+t:individual a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape CO-META:Scalar ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ;
+                             CO-META:hasBaseType CO-META:Integers ;
+                             CO-META:hasLowerBound [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 0 ] ;
+                             CO-META:hasUpperBound [ a CO-META:ParameterReference ; CO-META:refersTo t:population_size ] ] .
+
+# Values between 1 and the length of the solution
+t:position a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape CO-META:Scalar ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ;
+                             CO-META:hasBaseType CO-META:Integers ;
+                             CO-META:hasLowerBound [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 1 ] ;
+                             CO-META:hasUpperBound [ a CO-META:SolutionSizeReference ; CO-META:hasDimensionIndex 1 ] ] .

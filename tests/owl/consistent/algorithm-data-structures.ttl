@@ -1,0 +1,37 @@
+# Expected: consistent (and SHACL-conforming).
+# Algorithm data structures are sized independently of any problem: by the size of the
+# solution, by the value of a parameter of the algorithm, or both.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/algorithm-data-structures> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:population_size a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:PopulationSize ;
+    CO-META:hasValue 30 .
+
+# n x n pheromone matrix, n being the length of the solution
+t:pheromones a owl:NamedIndividual , CO-META:DataStructure ;
+    CO-META:hasShape [ a CO-META:MatrixShape ;
+                       CO-META:hasRowCount [ a CO-META:SolutionSizeReference ; CO-META:hasDimensionIndex 1 ] ;
+                       CO-META:hasColumnCount [ a CO-META:SolutionSizeReference ; CO-META:hasDimensionIndex 1 ] ] ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ;
+                             CO-META:hasBaseType CO-META:Reals ;
+                             CO-META:hasLowerBound [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 0 ] ] .
+
+# One velocity vector per particle
+t:velocities a owl:NamedIndividual , CO-META:DataStructure ;
+    CO-META:hasShape [ a CO-META:MatrixShape ;
+                       CO-META:hasRowCount [ a CO-META:ParameterReference ; CO-META:refersTo t:population_size ] ;
+                       CO-META:hasColumnCount [ a CO-META:SolutionSizeReference ; CO-META:hasDimensionIndex 1 ] ] ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ; CO-META:hasBaseType CO-META:Reals ] .
+
+# Archive of non-dominated solutions
+t:archive a owl:NamedIndividual , CO-META:DataStructure ;
+    CO-META:hasShape [ a CO-META:CollectionShape ;
+                       CO-META:isOrdered false ;
+                       CO-META:isDistinct true ;
+                       CO-META:hasLength [ a CO-META:ParameterReference ; CO-META:refersTo t:population_size ] ] ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ; CO-META:hasBaseType CO-META:Solutions ] .

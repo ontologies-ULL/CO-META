@@ -1,0 +1,10 @@
+# Expected inferences: see input-parameter-shape.rq.
+# Input parameters are scalar data, so their shape does not need to be stated.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/input-parameter-shape> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:n a owl:NamedIndividual , CO-META:InputParameter .

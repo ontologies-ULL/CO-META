@@ -1,0 +1,28 @@
+# Expected inferences: see collection-classification.rq.
+# The reasoner classifies each collection from its isOrdered and isDistinct flags.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/collection-classification> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+# Ordered, without repetitions: a tour through the cities
+t:tour a owl:NamedIndividual , CO-META:CollectionShape ;
+    CO-META:isOrdered true ;
+    CO-META:isDistinct true .
+
+# Ordered, with repetitions: one 0/1 value per item
+t:list a owl:NamedIndividual , CO-META:CollectionShape ;
+    CO-META:isOrdered true ;
+    CO-META:isDistinct false .
+
+# Unordered, without repetitions: k locations out of N
+t:selection a owl:NamedIndividual , CO-META:CollectionShape ;
+    CO-META:isOrdered false ;
+    CO-META:isDistinct true .
+
+# Unordered, with repetitions: units of each product
+t:bag a owl:NamedIndividual , CO-META:CollectionShape ;
+    CO-META:isOrdered false ;
+    CO-META:isDistinct false .

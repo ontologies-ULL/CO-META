@@ -1,0 +1,13 @@
+# Expected: SHACL violation (ParameterValueShape).
+# The value domain of Elitism is the integers, so its value must be an xsd:integer.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/parameter-value-type> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:elitism_value a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:Elitism ;
+    CO-META:hasValue "0.5"^^xsd:decimal .

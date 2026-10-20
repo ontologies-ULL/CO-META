@@ -1,0 +1,14 @@
+# Expected: SHACL violation (CollectionShapeShape).
+# OWL cannot require isOrdered (open world), but without it the collection cannot be
+# classified as a sequence, set or multiset, so SHACL requires it.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/collection-without-order> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:x a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape [ a CO-META:CollectionShape ;
+                       CO-META:isDistinct true ;
+                       CO-META:hasLength [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 10 ] ] .

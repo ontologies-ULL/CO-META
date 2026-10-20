@@ -1,0 +1,14 @@
+# Expected: inconsistent.
+# hasShape is functional and the kinds of shape are disjoint,
+# so a variable cannot be both a single value and a collection.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/single-shape> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:x a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape CO-META:Scalar , t:sequence .
+
+t:sequence a owl:NamedIndividual , CO-META:CollectionShape .

@@ -1,0 +1,12 @@
+PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+PREFIX t: <http://example.org/co-meta-test#>
+
+ASK {
+    t:tour a cm:SequenceShape , cm:DistinctSequenceShape .
+    t:list a cm:SequenceShape .
+    t:selection a cm:SetShape .
+    t:bag a cm:MultiSetShape .
+    FILTER NOT EXISTS { t:list a cm:DistinctSequenceShape }
+    FILTER NOT EXISTS { t:selection a cm:SequenceShape }
+    FILTER NOT EXISTS { t:bag a cm:SetShape }
+}

@@ -2,7 +2,6 @@
 @prefix sh:    <http://www.w3.org/ns/shacl#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ex:    <http://www.example.org/#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 
 @prefix cm: <https://w3id.org/ontologies-ULL/CO-META#> .
@@ -10,48 +9,46 @@
 cm:ParameterValueShape
     a sh:NodeShape ;
     sh:targetClass cm:ParameterValue ;
-    sh:or (
-        # it isn't IntegerParameter OR it is and the value is integer
-        [
-            sh:property [
-                sh:path cm:hasType ;
-                sh:not [ sh:class cm:IntegerParameter ]
-            ]
-        ]
-        [
-            sh:property [
-                sh:path cm:hasValue ;
-                sh:datatype xsd:integer ;
-            ]
-        ]
-    ) ;
-    sh:or (
-        # it isn't FloatParameter OR it is and the value is float
-        [
-            sh:property [
-                sh:path cm:hasType ;
-                sh:not [ sh:class cm:FloatParameter ]
-            ]
-        ]
-        [
-            sh:property [
-                sh:path cm:hasValue ;
-                sh:datatype xsd:decimal ;
-            ]
-        ]
-    ) ;
-    sh:or (
-        # it isn't BoolParameter OR it is and the value is bool
-        [
-            sh:property [
-                sh:path cm:hasType ;
-                sh:not [ sh:class cm:BoolParameter ]
-            ]
-        ]
-        [
-            sh:property [
-                sh:path cm:hasValue ;
-                sh:datatype xsd:boolean ;
-            ]
-        ]
-    ) .
+
+    # The datatype of the value must match the base type of the parameter's value domain
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Value {?value} of {$this} does not match the base type {?baseType} of its parameter." ;
+        sh:select """
+            PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+            PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+            SELECT $this ?value ?baseType
+            WHERE {
+                $this cm:hasValue ?value ;
+                      cm:hasType/cm:hasValueDomain/cm:hasBaseType ?baseType .
+                FILTER (
+                    (?baseType = cm:Integers && datatype(?value) != xsd:integer) ||
+                    (?baseType = cm:Reals && !(datatype(?value) IN (xsd:decimal, xsd:double))) ||
+                    (?baseType = cm:Booleans && datatype(?value) != xsd:boolean)
+                )
+            }
+        """ ;
+    ] ;
+
+    # The value must lie within the literal bounds of the parameter's value domain
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Value {?value} of {$this} is outside the bound {?bound} of its parameter." ;
+        sh:select """
+            PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+            SELECT $this ?value ?bound
+            WHERE {
+                $this cm:hasValue ?value ;
+                      cm:hasType/cm:hasValueDomain ?domain .
+                {
+                    ?domain cm:hasLowerBound/cm:hasLiteralValue ?bound .
+                    BIND ("lower" AS ?side)
+                } UNION {
+                    ?domain cm:hasUpperBound/cm:hasLiteralValue ?bound .
+                    BIND ("upper" AS ?side)
+                }
+                # Compared outside the UNION, where ?value is in scope
+                FILTER ((?side = "lower" && ?value < ?bound) || (?side = "upper" && ?value > ?bound))
+            }
+        """ ;
+    ] .

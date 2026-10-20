@@ -1,0 +1,14 @@
+# Expected: inconsistent.
+# A parameter reference can only refer to an input parameter or to a parameter value,
+# not to other problem elements such as a constraint.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/reference-target-kind> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:bound a owl:NamedIndividual , CO-META:ParameterReference ;
+    CO-META:refersTo t:capacity .
+
+t:capacity a owl:NamedIndividual , CO-META:Constraint .

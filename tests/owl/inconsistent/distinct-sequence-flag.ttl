@@ -1,0 +1,12 @@
+# Expected: inconsistent.
+# A distinct sequence is defined by isDistinct true; isDistinct is functional,
+# so declaring it false contradicts the class.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/distinct-sequence-flag> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:tour a owl:NamedIndividual , CO-META:DistinctSequenceShape ;
+    CO-META:isDistinct false .

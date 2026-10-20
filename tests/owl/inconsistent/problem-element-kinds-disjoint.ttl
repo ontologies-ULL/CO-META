@@ -1,0 +1,10 @@
+# Expected: inconsistent.
+# Objectives, constraints and problem quantities are disjoint kinds of problem element.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/problem-element-kinds-disjoint> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:element a owl:NamedIndividual , CO-META:Objective , CO-META:InputParameter .

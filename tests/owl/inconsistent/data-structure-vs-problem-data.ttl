@@ -1,0 +1,11 @@
+# Expected: inconsistent.
+# Data structures belong to the algorithm and problem data to the problem; both can have
+# a shape and a value domain, but they are disjoint.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/data-structure-vs-problem-data> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:distances a owl:NamedIndividual , CO-META:DataStructure , CO-META:ProblemData .

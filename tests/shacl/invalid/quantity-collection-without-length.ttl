@@ -1,0 +1,14 @@
+# Expected: SHACL violation (QuantityShapeSizesShape).
+# The shape of a specific quantity must state its sizes; only the shapes used with
+# supportsShape, which describe a kind of solution, can omit them.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/quantity-collection-without-length> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:tour a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape [ a CO-META:CollectionShape ;
+                       CO-META:isOrdered true ;
+                       CO-META:isDistinct true ] .

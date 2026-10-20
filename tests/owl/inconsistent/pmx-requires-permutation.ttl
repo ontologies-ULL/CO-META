@@ -1,0 +1,14 @@
+# Expected: inconsistent.
+# The partially mapped crossover (PMX) is only defined for permutations,
+# so it cannot support a set (unordered values).
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/pmx-requires-permutation> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:pmx a owl:NamedIndividual , CO-META:PartiallyMappedCrossoverComponent ;
+    CO-META:supportsShape [ a CO-META:CollectionShape ;
+                            CO-META:isOrdered false ;
+                            CO-META:isDistinct true ] .

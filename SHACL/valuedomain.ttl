@@ -1,0 +1,75 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+@prefix cm: <https://w3id.org/ontologies-ULL/CO-META#> .
+
+# OWL only states that these properties have exactly one value; under the open
+# world assumption a missing value is not an error, so SHACL requires it.
+
+cm:ValueDomainShape
+    a sh:NodeShape ;
+    sh:targetClass cm:ValueDomain ;
+    sh:property [
+        sh:path cm:hasBaseType ;
+        sh:minCount 1 ;
+        sh:message "A value domain must state its base type." ;
+    ] ;
+
+    # When both bounds are literals, the lower bound cannot exceed the upper bound
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Lower bound {?lower} of {$this} is greater than its upper bound {?upper}." ;
+        sh:select """
+            PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+            SELECT $this ?lower ?upper
+            WHERE {
+                $this cm:hasLowerBound/cm:hasLiteralValue ?lower ;
+                      cm:hasUpperBound/cm:hasLiteralValue ?upper .
+                FILTER (?lower > ?upper)
+            }
+        """ ;
+    ] ;
+
+    # Candidate solutions are not numbers, so they cannot be bounded
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Domain {$this} of solutions cannot have numeric bounds." ;
+        sh:select """
+            PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+            SELECT $this
+            WHERE {
+                $this cm:hasBaseType cm:Solutions .
+                FILTER EXISTS { $this cm:hasLowerBound|cm:hasUpperBound ?bound }
+            }
+        """ ;
+    ] .
+
+cm:LiteralValueShape
+    a sh:NodeShape ;
+    sh:targetClass cm:LiteralValue ;
+    sh:property [
+        sh:path cm:hasLiteralValue ;
+        sh:minCount 1 ;
+        sh:message "A literal value must state its number." ;
+    ] .
+
+cm:ParameterReferenceShape
+    a sh:NodeShape ;
+    sh:targetClass cm:ParameterReference ;
+    sh:property [
+        sh:path cm:refersTo ;
+        sh:minCount 1 ;
+        sh:message "A parameter reference must state the parameter it refers to." ;
+    ] .
+
+cm:SolutionSizeReferenceShape
+    a sh:NodeShape ;
+    sh:targetClass cm:SolutionSizeReference ;
+    sh:property [
+        sh:path cm:hasDimensionIndex ;
+        sh:minCount 1 ;
+        sh:message "A solution size reference must state the dimension it refers to." ;
+    ] .

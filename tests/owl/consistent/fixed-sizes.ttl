@@ -1,0 +1,24 @@
+# Expected: consistent.
+# Sizes can be fixed numbers instead of references to parameters.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/fixed-sizes> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:distances a owl:NamedIndividual , CO-META:ProblemData ;
+    CO-META:hasShape [ a CO-META:MatrixShape ;
+                       CO-META:hasRowCount [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 10 ] ;
+                       CO-META:hasColumnCount [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 10 ] ] .
+
+t:assignment a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape [ a CO-META:MatrixShape ;
+                       CO-META:hasRowCount [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 3 ] ;
+                       CO-META:hasColumnCount [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 4 ] ] .
+
+t:order a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape [ a CO-META:CollectionShape ;
+                       CO-META:isOrdered true ;
+                       CO-META:isDistinct true ;
+                       CO-META:hasLength [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 10 ] ] .

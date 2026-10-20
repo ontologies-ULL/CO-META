@@ -1,0 +1,12 @@
+# Expected: SHACL violation (ParameterValueShape).
+# CrossoverProbability takes real values between 0 and 1.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/parameter-value-out-of-bounds> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:crossover_probability_value a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:CrossoverProbability ;
+    CO-META:hasValue 1.5 .

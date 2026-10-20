@@ -1,0 +1,55 @@
+# Expected inferences: see defined-classes.rq.
+# Variables and data are classified (ScalarVariable, PermutationVariable, TableData...)
+# from their shape, even though shapes are anonymous and only the generic classes
+# DecisionVariable and ProblemData are asserted.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/defined-classes> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+# Number of vehicles to use
+t:vehicles a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape CO-META:Scalar .
+
+# As in the TSP: an ordering of the cities
+t:tour a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape [ a CO-META:CollectionShape ;
+                       CO-META:isOrdered true ;
+                       CO-META:isDistinct true ;
+                       CO-META:hasLength [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 10 ] ] .
+
+# As in the knapsack problem: one 0/1 value per item
+t:packing a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape [ a CO-META:CollectionShape ;
+                       CO-META:isOrdered true ;
+                       CO-META:isDistinct false ;
+                       CO-META:hasLength [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 10 ] ] .
+
+# k locations where facilities are opened
+t:facilities a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape [ a CO-META:CollectionShape ;
+                       CO-META:isOrdered false ;
+                       CO-META:isDistinct true ;
+                       CO-META:hasLength [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 3 ] ] .
+
+# Whether each vehicle visits each customer
+t:visits a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape [ a CO-META:MatrixShape ;
+                       CO-META:hasRowCount [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 3 ] ;
+                       CO-META:hasColumnCount [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 10 ] ] .
+
+# Coordinates of each city
+t:cities a owl:NamedIndividual , CO-META:ProblemData ;
+    CO-META:hasShape [ a CO-META:TableShape ;
+                       CO-META:hasRowCount [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 10 ] ;
+                       CO-META:hasColumn t:x ] .
+
+t:x a owl:NamedIndividual , CO-META:Column .
+
+# Distances between each pair of cities
+t:distances a owl:NamedIndividual , CO-META:ProblemData ;
+    CO-META:hasShape [ a CO-META:MatrixShape ;
+                       CO-META:hasRowCount [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 10 ] ;
+                       CO-META:hasColumnCount [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 10 ] ] .

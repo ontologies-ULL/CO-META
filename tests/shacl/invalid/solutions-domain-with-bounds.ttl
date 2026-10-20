@@ -1,0 +1,14 @@
+# Expected: SHACL violation (ValueDomainShape).
+# Candidate solutions are not numbers, so a domain of solutions cannot be bounded.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/solutions-domain-with-bounds> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:best a owl:NamedIndividual , CO-META:DataStructure ;
+    CO-META:hasShape CO-META:Scalar ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ;
+                             CO-META:hasBaseType CO-META:Solutions ;
+                             CO-META:hasLowerBound [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 0 ] ] .
