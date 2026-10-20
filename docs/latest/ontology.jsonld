@@ -3,171 +3,32 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixShape"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#TableShape"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid100",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
     }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Problem"
+      "@id" : "_:genid102"
     } ]
   } ]
 }, {
-  "@id" : "_:genid10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixVariable"
-    }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Table"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid101",
+  "@id" : "_:genid102",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasRowCount"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid103"
   } ]
 }, {
   "@id" : "_:genid103",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid107"
-    }, {
-      "@id" : "_:genid105"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid105",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedRowCount"
-  } ]
-}, {
-  "@id" : "_:genid107",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasRowCount"
-  } ]
-}, {
-  "@id" : "_:genid108",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm"
-    }, {
-      "@id" : "_:genid110"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid110",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"
-  } ]
-}, {
-  "@id" : "_:genid112",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid120"
-    }, {
-      "@id" : "_:genid114"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid114",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid118"
-    }, {
-      "@id" : "_:genid116"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid116",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedLength"
-  } ]
-}, {
-  "@id" : "_:genid118",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasLength"
-  } ]
-}, {
-  "@id" : "_:genid120",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid124"
-    }, {
-      "@id" : "_:genid122"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid122",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedLength"
-  } ]
-}, {
-  "@id" : "_:genid124",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasLength"
-  } ]
-}, {
-  "@id" : "_:genid125",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
-    }, {
-      "@id" : "_:genid127"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid127",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid128"
-  } ]
-}, {
-  "@id" : "_:genid128",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -177,62 +38,62 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid132",
+  "@id" : "_:genid107",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"
     }, {
-      "@id" : "_:genid134"
+      "@id" : "_:genid109"
     } ]
   } ]
 }, {
-  "@id" : "_:genid134",
+  "@id" : "_:genid109",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid135"
+    "@id" : "_:genid110"
   } ]
 }, {
-  "@id" : "_:genid135",
+  "@id" : "_:genid110",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid142"
+      "@id" : "_:genid117"
     }, {
-      "@id" : "_:genid137"
+      "@id" : "_:genid112"
     } ]
   } ]
 }, {
-  "@id" : "_:genid137",
+  "@id" : "_:genid112",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasValue"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid138"
+    "@id" : "_:genid113"
   } ]
 }, {
-  "@id" : "_:genid138",
+  "@id" : "_:genid113",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#onDatatype" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
     "@list" : [ {
-      "@id" : "_:genid140"
+      "@id" : "_:genid115"
     } ]
   } ]
 }, {
-  "@id" : "_:genid140",
+  "@id" : "_:genid115",
   "http://www.w3.org/2001/XMLSchema#minExclusive" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid142",
+  "@id" : "_:genid117",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationSize"
@@ -241,72 +102,62 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid144",
+  "@id" : "_:genid119",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"
     }, {
-      "@id" : "_:genid146"
+      "@id" : "_:genid121"
     } ]
   } ]
 }, {
-  "@id" : "_:genid146",
+  "@id" : "_:genid121",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid147"
+    "@id" : "_:genid122"
   } ]
 }, {
-  "@id" : "_:genid147",
+  "@id" : "_:genid122",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid154"
+      "@id" : "_:genid129"
     }, {
-      "@id" : "_:genid149"
+      "@id" : "_:genid124"
     } ]
   } ]
 }, {
-  "@id" : "_:genid149",
+  "@id" : "_:genid124",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasValue"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid150"
+    "@id" : "_:genid125"
   } ]
 }, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixTable"
-    }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixVariable"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid150",
+  "@id" : "_:genid125",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#onDatatype" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
     "@list" : [ {
-      "@id" : "_:genid152"
+      "@id" : "_:genid127"
     } ]
   } ]
 }, {
-  "@id" : "_:genid152",
+  "@id" : "_:genid127",
   "http://www.w3.org/2001/XMLSchema#minExclusive" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid154",
+  "@id" : "_:genid129",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationSize"
@@ -315,7 +166,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid156",
+  "@id" : "_:genid131",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasObjective"
@@ -324,7 +175,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Objective"
   } ]
 }, {
-  "@id" : "_:genid157",
+  "@id" : "_:genid132",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -334,16 +185,43 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"
   } ]
 }, {
-  "@id" : "_:genid158",
+  "@id" : "_:genid133",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Scalar"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid135",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
+    }, {
+      "@id" : "_:genid137"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid137",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ScalarShape"
+  } ]
+}, {
+  "@id" : "_:genid139",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid159"
+    "@id" : "_:genid140"
   } ]
 }, {
-  "@id" : "_:genid159",
+  "@id" : "_:genid140",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Elitism"
@@ -352,7 +230,97 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid160",
+  "@id" : "_:genid141",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#CollectionShape"
+    }, {
+      "@id" : "_:genid143"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid143",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isOrdered"
+  } ]
+}, {
+  "@id" : "_:genid145",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
+    }, {
+      "@id" : "_:genid147"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid147",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SequenceShape"
+  } ]
+}, {
+  "@id" : "_:genid149",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#CollectionShape"
+    }, {
+      "@id" : "_:genid153"
+    }, {
+      "@id" : "_:genid151"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid151",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isOrdered"
+  } ]
+}, {
+  "@id" : "_:genid153",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isDistinct"
+  } ]
+}, {
+  "@id" : "_:genid155",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
+    }, {
+      "@id" : "_:genid157"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid157",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SetShape"
+  } ]
+}, {
+  "@id" : "_:genid159",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -362,36 +330,46 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"
   } ]
 }, {
-  "@id" : "_:genid161",
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#InputParameter"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ParameterValue"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid160",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"
     }, {
-      "@id" : "_:genid163"
+      "@id" : "_:genid162"
     } ]
   } ]
 }, {
-  "@id" : "_:genid163",
+  "@id" : "_:genid162",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid164"
+    "@id" : "_:genid163"
   } ]
 }, {
-  "@id" : "_:genid164",
+  "@id" : "_:genid163",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid168"
+      "@id" : "_:genid167"
     }, {
-      "@id" : "_:genid166"
+      "@id" : "_:genid165"
     } ]
   } ]
 }, {
-  "@id" : "_:genid166",
+  "@id" : "_:genid165",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -401,7 +379,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasValue"
   } ]
 }, {
-  "@id" : "_:genid168",
+  "@id" : "_:genid167",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationSize"
@@ -410,36 +388,36 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid170",
+  "@id" : "_:genid169",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"
     }, {
-      "@id" : "_:genid172"
+      "@id" : "_:genid171"
     } ]
   } ]
 }, {
-  "@id" : "_:genid172",
+  "@id" : "_:genid171",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid173"
+    "@id" : "_:genid172"
   } ]
 }, {
-  "@id" : "_:genid173",
+  "@id" : "_:genid172",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid177"
+      "@id" : "_:genid176"
     }, {
-      "@id" : "_:genid175"
+      "@id" : "_:genid174"
     } ]
   } ]
 }, {
-  "@id" : "_:genid175",
+  "@id" : "_:genid174",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -449,7 +427,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasValue"
   } ]
 }, {
-  "@id" : "_:genid177",
+  "@id" : "_:genid176",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationSize"
@@ -458,36 +436,26 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid179",
+  "@id" : "_:genid178",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
     }, {
-      "@id" : "_:genid181"
+      "@id" : "_:genid180"
     } ]
   } ]
 }, {
-  "@id" : "_:genid18",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ListVariable"
-    }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#PermutationVariable"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid181",
+  "@id" : "_:genid180",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid182"
+    "@id" : "_:genid181"
   } ]
 }, {
-  "@id" : "_:genid182",
+  "@id" : "_:genid181",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -497,25 +465,26 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid186",
+  "@id" : "_:genid185",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasSize"
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex"
   } ]
 }, {
-  "@id" : "_:genid187",
+  "@id" : "_:genid186",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid188"
+    "@id" : "_:genid187"
   } ]
 }, {
-  "@id" : "_:genid188",
+  "@id" : "_:genid187",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Iterations"
@@ -524,24 +493,42 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid189",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid197"
-    }, {
-      "@id" : "_:genid191"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid191",
+  "@id" : "_:genid188",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid195"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
     }, {
-      "@id" : "_:genid193"
+      "@id" : "_:genid190"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid190",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#TableShape"
+  } ]
+}, {
+  "@id" : "_:genid192",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasColumn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Column"
   } ]
 }, {
   "@id" : "_:genid193",
@@ -551,59 +538,19 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedRowCount"
-  } ]
-}, {
-  "@id" : "_:genid195",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasRowCount"
   } ]
 }, {
-  "@id" : "_:genid197",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid201"
-    }, {
-      "@id" : "_:genid199"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid199",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedRowCount"
-  } ]
-}, {
-  "@id" : "_:genid201",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasRowCount"
-  } ]
-}, {
-  "@id" : "_:genid202",
+  "@id" : "_:genid194",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid203"
+    "@id" : "_:genid195"
   } ]
 }, {
-  "@id" : "_:genid203",
+  "@id" : "_:genid195",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#TournamentSize"
@@ -612,7 +559,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid204",
+  "@id" : "_:genid196",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -622,55 +569,25 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"
   } ]
 }, {
-  "@id" : "_:genid205",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerType"
-    }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#RealType"
-    } ]
+  "@id" : "_:genid197",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasBaseType"
   } ]
 }, {
-  "@id" : "_:genid208",
+  "@id" : "_:genid198",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#BoolParameter"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#BaseType"
     }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
-    }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid21",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixVariable"
-    }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Table"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid212",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
-  "http://www.w3.org/2002/07/owl#members" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Column"
-    }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#InputParameter"
-    }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Table"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid216",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
-  "http://www.w3.org/2002/07/owl#members" : [ {
-    "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#ComponentSafety"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape"
     }, {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure"
     }, {
@@ -686,13 +603,29 @@
     }, {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemElement"
     }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
     }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"
     } ]
   } ]
 }, {
-  "@id" : "_:genid227",
+  "@id" : "_:genid211",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#CollectionShape"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#CompositeShape"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixShape"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ScalarShape"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#TableShape"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid217",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -704,21 +637,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid231",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
-  "http://www.w3.org/2002/07/owl#members" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ListVariable"
-    }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixVariable"
-    }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#PermutationVariable"
-    }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ScalarVariable"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid24",
+  "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -728,7 +647,87 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid27",
+  "@id" : "_:genid221",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#LiteralValue"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ParameterReference"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid225",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Booleans"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Integers"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Reals"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Solutions"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2001/XMLSchema#double"
+    }, {
+      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Booleans"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Integers"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Reals"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Solutions"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasLength"
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isDistinct"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isOrdered"
+  } ]
+}, {
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -740,90 +739,32 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid31",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
-    }, {
-      "@id" : "_:genid33"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid33",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"
-  } ]
-}, {
-  "@id" : "_:genid35",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid36"
-  } ]
-}, {
-  "@id" : "_:genid36",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
-  } ]
-}, {
-  "@id" : "_:genid37",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "2"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasInputSize"
-  } ]
-}, {
-  "@id" : "_:genid38",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "2"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"
-  } ]
-}, {
-  "@id" : "_:genid39",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic"
-    }, {
-      "@id" : "_:genid41"
-    } ]
-  } ]
-}, {
   "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixTable"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure"
     }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixVariable"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasComponent"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape"
   } ]
 }, {
   "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid47"
-    }, {
-      "@id" : "_:genid45"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
     }, {
       "@id" : "_:genid43"
     } ]
@@ -835,10 +776,111 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VariationComponent"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"
   } ]
 }, {
   "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid46"
+  } ]
+}, {
+  "@id" : "_:genid46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasInputSize"
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#CollectionShape"
+    }, {
+      "@id" : "_:genid53"
+    }, {
+      "@id" : "_:genid51"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isOrdered"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isDistinct"
+  } ]
+}, {
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic"
+    }, {
+      "@id" : "_:genid57"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid63"
+    }, {
+      "@id" : "_:genid61"
+    }, {
+      "@id" : "_:genid59"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid59",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VariationComponent"
+  } ]
+}, {
+  "@id" : "_:genid61",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
@@ -847,7 +889,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   } ]
 }, {
-  "@id" : "_:genid47",
+  "@id" : "_:genid63",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
@@ -856,7 +898,16 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
   } ]
 }, {
-  "@id" : "_:genid49",
+  "@id" : "_:genid65",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Scalar"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
+  } ]
+}, {
+  "@id" : "_:genid66",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -866,16 +917,16 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"
   } ]
 }, {
-  "@id" : "_:genid50",
+  "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid51"
+    "@id" : "_:genid68"
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints"
@@ -884,87 +935,27 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid52",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid60"
-    }, {
-      "@id" : "_:genid54"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid54",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid58"
-    }, {
-      "@id" : "_:genid56"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedLength"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasLiteralValue"
   } ]
 }, {
-  "@id" : "_:genid58",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasLength"
-  } ]
-}, {
-  "@id" : "_:genid60",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid64"
-    }, {
-      "@id" : "_:genid62"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid62",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedLength"
-  } ]
-}, {
-  "@id" : "_:genid64",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasLength"
-  } ]
-}, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid70",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
     }, {
-      "@id" : "_:genid67"
+      "@id" : "_:genid72"
     } ]
   } ]
 }, {
-  "@id" : "_:genid67",
+  "@id" : "_:genid72",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
@@ -973,101 +964,85 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"
   } ]
 }, {
-  "@id" : "_:genid69",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid77"
-    }, {
-      "@id" : "_:genid71"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ListVariable"
-    }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#PermutationVariable"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid71",
+  "@id" : "_:genid74",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid75"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
     }, {
-      "@id" : "_:genid73"
+      "@id" : "_:genid76"
     } ]
   } ]
 }, {
-  "@id" : "_:genid73",
+  "@id" : "_:genid76",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixShape"
+  } ]
+}, {
+  "@id" : "_:genid78",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedColumnCount"
-  } ]
-}, {
-  "@id" : "_:genid75",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasColumnCount"
-  } ]
-}, {
-  "@id" : "_:genid77",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid81"
-    }, {
-      "@id" : "_:genid79"
-    } ]
   } ]
 }, {
   "@id" : "_:genid79",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedColumnCount"
-  } ]
-}, {
-  "@id" : "_:genid81",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasColumnCount"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasRowCount"
   } ]
 }, {
-  "@id" : "_:genid82",
+  "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid90"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Column"
     }, {
-      "@id" : "_:genid84"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#InputParameter"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid80",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
+    }, {
+      "@id" : "_:genid82"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid82",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixShape"
   } ]
 }, {
   "@id" : "_:genid84",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid88"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm"
     }, {
       "@id" : "_:genid86"
     } ]
@@ -1075,42 +1050,43 @@
 }, {
   "@id" : "_:genid86",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedColumnCount"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"
   } ]
 }, {
   "@id" : "_:genid88",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasColumnCount"
-  } ]
-}, {
-  "@id" : "_:genid90",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid94"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#CollectionShape"
     }, {
       "@id" : "_:genid92"
+    }, {
+      "@id" : "_:genid90"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid90",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isOrdered"
   } ]
 }, {
   "@id" : "_:genid92",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedColumnCount"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isDistinct"
   } ]
 }, {
   "@id" : "_:genid94",
@@ -1120,37 +1096,35 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasColumnCount"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#refersTo"
   } ]
 }, {
   "@id" : "_:genid95",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid103"
-    }, {
-      "@id" : "_:genid97"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#supportsShape"
   } ]
 }, {
-  "@id" : "_:genid97",
+  "@id" : "_:genid96",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid101"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
     }, {
-      "@id" : "_:genid99"
+      "@id" : "_:genid98"
     } ]
   } ]
 }, {
-  "@id" : "_:genid99",
+  "@id" : "_:genid98",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedRowCount"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"
   } ]
 }, {
   "@id" : "http://creativecommons.org/ns#license",
@@ -1167,6 +1141,27 @@
 }, {
   "@id" : "http://purl.org/dc/terms/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/Collection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/Matrix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/MultiSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/Record",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/Sequence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/Set",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/Table",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
@@ -1206,6 +1201,9 @@
     "@language" : "es",
     "@value" : "CO-META"
   } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META/imports/qudt"
+  } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META/1.0"
   } ]
@@ -1230,50 +1228,199 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#Bit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#AnyBoolean",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Nodo de solución que toma un valor binario (0 o 1)."
+    "@value" : "Dominio de valores con todos los valores de verdad."
   }, {
     "@language" : "en",
-    "@value" : "Solution node that takes a binary value (0 or 1)."
+    "@value" : "Value domain of all truth values."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Bit"
+    "@value" : "Any Boolean"
   }, {
     "@language" : "es",
-    "@value" : "Bit"
+    "@value" : "Cualquier booleano"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode"
+  "https://w3id.org/ontologies-ULL/CO-META#hasBaseType" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Booleans"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#BoolParameter",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#AnyInteger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Parameter whose value is a boolean (true or false)."
-  }, {
     "@language" : "es",
-    "@value" : "Parámetro cuyo valor es un booleano (verdadero o falso)."
+    "@value" : "Dominio de valores con todos los números enteros, sin cotas."
+  }, {
+    "@language" : "en",
+    "@value" : "Value domain of all integer numbers, without bounds."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Boolean Parameter"
+    "@value" : "Any Integer"
   }, {
     "@language" : "es",
-    "@value" : "Parámetro booleano"
+    "@value" : "Cualquier entero"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  "https://w3id.org/ontologies-ULL/CO-META#hasBaseType" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Integers"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#AnyReal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Dominio de valores con todos los números reales, sin cotas."
+  }, {
+    "@language" : "en",
+    "@value" : "Value domain of all real numbers, without bounds."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Any Real"
+  }, {
+    "@language" : "es",
+    "@value" : "Cualquier real"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasBaseType" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Reals"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#AnySolution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Dominio de valores con todas las soluciones candidatas del problema que se resuelve."
+  }, {
+    "@language" : "en",
+    "@value" : "Value domain of all candidate solutions of the problem being solved."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Any Solution"
+  }, {
+    "@language" : "es",
+    "@value" : "Cualquier solución"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasBaseType" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Solutions"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#BaseType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Conjunto en el que se basa un dominio de valores: booleanos, enteros, reales o soluciones candidatas."
+  }, {
+    "@language" : "en",
+    "@value" : "Set on which a value domain is based: booleans, integers, reals or candidate solutions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Base Type"
+  }, {
+    "@language" : "es",
+    "@value" : "Tipo base"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid28"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#BinaryIntegers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Dominio de valores con los enteros 0 y 1 (p. ej., si un objeto se selecciona)."
+  }, {
+    "@language" : "en",
+    "@value" : "Value domain of the integers 0 and 1 (e.g. whether an item is selected)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Binary Integers"
+  }, {
+    "@language" : "es",
+    "@value" : "Enteros binarios"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasBaseType" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Integers"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasLowerBound" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Zero"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasUpperBound" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#One"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#Booleans",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#BaseType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Conjunto de valores de verdad {falso, verdadero}."
+  }, {
+    "@language" : "en",
+    "@value" : "Set of truth values {false, true}."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Booleanos"
+  }, {
+    "@language" : "en",
+    "@value" : "Booleans"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Both",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ComponentSafety"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#CollectionShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Forma de una magnitud formada por varios valores de la misma naturaleza, caracterizada por si importa su orden (isOrdered) y si pueden repetirse (isDistinct)."
+  }, {
+    "@language" : "en",
+    "@value" : "Shape of a quantity made up of a number of values of the same kind, characterized by whether their order matters (isOrdered) and whether they can be repeated (isDistinct)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Collection Shape"
+  }, {
+    "@language" : "es",
+    "@value" : "Forma de colección"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://qudt.org/schema/qudt/Collection"
+  }, {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape"
+  }, {
+    "@id" : "_:genid33"
+  }, {
+    "@id" : "_:genid34"
+  }, {
+    "@id" : "_:genid35"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Column",
@@ -1294,6 +1441,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#InputParameter"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ComponentSafety",
@@ -1313,27 +1463,31 @@
     "@value" : "Seguridad del componente"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid27"
+    "@id" : "_:genid36"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#CompositeEncoding",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#CompositeShape",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Solución codificada como una combinación de varias codificaciones, cada una de las cuales representa una parte distinta de la solución."
+    "@value" : "Forma de una magnitud que combina varias formas, una por componente (p. ej., una solución formada por una permutación y una matriz)."
   }, {
     "@language" : "en",
-    "@value" : "Solution encoded as a combination of several encodings, each of which represents a different part of the solution."
+    "@value" : "Shape of a quantity that combines several shapes, one per component (e.g. a solution made up of a permutation and a matrix)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Codificación compuesta"
-  }, {
     "@language" : "en",
-    "@value" : "Composite Encoding"
+    "@value" : "Composite Shape"
+  }, {
+    "@language" : "es",
+    "@value" : "Forma compuesta"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
+    "@id" : "http://qudt.org/schema/qudt/Record"
+  }, {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape"
+  }, {
+    "@id" : "_:genid40"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Constraint",
@@ -1393,7 +1547,7 @@
     "@value" : "Metaheurística constructiva"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid31"
+    "@id" : "_:genid41"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent",
@@ -1415,55 +1569,29 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
   }, {
-    "@id" : "_:genid35"
+    "@id" : "_:genid45"
   }, {
-    "@id" : "_:genid37"
+    "@id" : "_:genid47"
   }, {
-    "@id" : "_:genid38"
+    "@id" : "_:genid48"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
+  "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
-  "https://w3id.org/ontologies-ULL/CO-META#maxValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#Custom",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Nodo de solución cuyo tipo de valor está definido por el usuario y no corresponde a ninguno de los tipos de nodo predefinidos."
-  }, {
-    "@language" : "en",
-    "@value" : "Solution node whose value type is user-defined and does not correspond to any of the predefined node types."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Custom Node"
-  }, {
-    "@language" : "es",
-    "@value" : "Nodo personalizado"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode"
+  "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#UnitInterval"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent",
@@ -1484,6 +1612,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Organización de los valores de una magnitud: un único valor, una colección, una matriz, una tabla o una combinación de ellas. Describe un tipo de datos, no valores concretos. Esta clase no debe instanciarse directamente; deben usarse sus subclases."
+  }, {
+    "@language" : "en",
+    "@value" : "Organization of the values of a quantity: a single value, a collection, a matrix, a table or a combination of them. It describes a type of data, not specific values. This class should not be instantiated directly; its subclasses should be used instead."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Data Shape"
+  }, {
+    "@language" : "es",
+    "@value" : "Forma de datos"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure",
@@ -1526,6 +1671,26 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Secuencia cuyos valores no pueden repetirse. Cuando su longitud coincide con el número de valores posibles, es una permutación (p. ej., el recorrido por las ciudades en el TSP)."
+  }, {
+    "@language" : "en",
+    "@value" : "Sequence whose values cannot be repeated. When its length equals the number of possible values, it is a permutation (e.g. the tour through the cities in the TSP)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Distinct Sequence Shape"
+  }, {
+    "@language" : "es",
+    "@value" : "Forma de secuencia sin repeticiones"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid49"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1549,11 +1714,10 @@
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Elitism",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
+  "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm",
@@ -1573,7 +1737,7 @@
     "@value" : "Evolutionary Algorithm"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid55"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent",
@@ -1594,26 +1758,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Parameter whose value is a real (decimal) number."
-  }, {
-    "@language" : "es",
-    "@value" : "Parámetro cuyo valor es un número real (decimal)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Float Parameter"
-  }, {
-    "@language" : "es",
-    "@value" : "Parámetro real"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent",
@@ -1654,76 +1798,37 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
+  }, {
+    "@id" : "_:genid65"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#Integer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Nodo de solución que toma un valor entero."
-  }, {
-    "@language" : "en",
-    "@value" : "Solution node that takes an integer value."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Integer Node"
-  }, {
-    "@language" : "es",
-    "@value" : "Nodo entero"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Parameter whose value is an integer number."
-  }, {
-    "@language" : "es",
-    "@value" : "Parámetro cuyo valor es un número entero."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Integer Parameter"
-  }, {
-    "@language" : "es",
-    "@value" : "Parámetro entero"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerType",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#Integers",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueType"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#BaseType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Integer value type of a decision variable."
-  }, {
     "@language" : "es",
-    "@value" : "Tipo de valor entero de una variable de decisión."
+    "@value" : "Conjunto de los números enteros."
+  }, {
+    "@language" : "en",
+    "@value" : "Set of integer numbers."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Integer Type"
-  }, {
     "@language" : "es",
-    "@value" : "Tipo entero"
+    "@value" : "Enteros"
+  }, {
+    "@language" : "en",
+    "@value" : "Integers"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Iterations",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
+  "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent",
@@ -1745,7 +1850,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   }, {
-    "@id" : "_:genid49"
+    "@id" : "_:genid66"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent",
@@ -1767,49 +1872,29 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
   }, {
-    "@id" : "_:genid50"
+    "@id" : "_:genid67"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ListEncoding",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#LiteralValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Solución codificada como una secuencia ordenada de nodos que puede contener valores repetidos."
+    "@value" : "Especificación de valor indicada explícitamente como un número (p. ej., 0, 1 o INF)."
   }, {
     "@language" : "en",
-    "@value" : "Solution encoded as an ordered sequence of nodes that may contain repeated values."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Codificación de lista"
-  }, {
-    "@language" : "en",
-    "@value" : "List Encoding"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ListVariable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Decision variable that represents a sequence of values, one per element of a collection, which may be repeated (e.g. whether each item is put in the knapsack)."
-  }, {
-    "@language" : "es",
-    "@value" : "Variable de decisión que representa una secuencia de valores, uno por elemento de una colección, que pueden repetirse (p. ej., si cada objeto se mete en la mochila)."
+    "@value" : "Value specification given explicitly as a number (e.g. 0, 1 or INF)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "List Variable"
+    "@value" : "Literal Value"
   }, {
     "@language" : "es",
-    "@value" : "Variable de lista"
+    "@value" : "Valor literal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"
   }, {
-    "@id" : "_:genid52"
+    "@id" : "_:genid69"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent",
@@ -1849,7 +1934,7 @@
     "@value" : "Metaheurística de búsqueda local"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid65"
+    "@id" : "_:genid70"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#LoopComponent",
@@ -1872,56 +1957,63 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixEncoding",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixData",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Solución codificada como una disposición bidimensional de nodos organizados en filas y columnas."
+    "@value" : "Datos del problema organizados como una matriz de valores de la misma naturaleza (p. ej., las distancias entre cada par de ciudades). Se deduce de la forma, por lo que no es necesario declararla."
   }, {
     "@language" : "en",
-    "@value" : "Solution encoded as a two-dimensional arrangement of nodes organized in rows and columns."
+    "@value" : "Problem data organized as a matrix of values of the same kind (e.g. the distances between each pair of cities). It is inferred from the shape, so it does not need to be asserted."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Codificación matricial"
+    "@value" : "Datos matriciales"
   }, {
     "@language" : "en",
-    "@value" : "Matrix Encoding"
+    "@value" : "Matrix Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid74"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixTable",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixShape",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Tabla cuyos registros se describen mediante atributos anónimos de la misma naturaleza, de modo que los datos forman una matriz (p. ej., una matriz de distancias entre ciudades)."
+    "@value" : "Forma de una magnitud cuyos valores, todos de la misma naturaleza, se disponen en filas y columnas (p. ej., una matriz de distancias entre ciudades)."
   }, {
     "@language" : "en",
-    "@value" : "Table whose records are described by anonymous attributes of the same nature, so that the data form a matrix (e.g. a distance matrix between cities)."
+    "@value" : "Shape of a quantity whose values, all of the same kind, are arranged in rows and columns (e.g. a distance matrix between cities)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Matrix Table"
-  }, {
     "@language" : "es",
-    "@value" : "Tabla matricial"
+    "@value" : "Forma matricial"
+  }, {
+    "@language" : "en",
+    "@value" : "Matrix Shape"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Table"
+    "@id" : "http://qudt.org/schema/qudt/Matrix"
   }, {
-    "@id" : "_:genid69"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape"
+  }, {
+    "@id" : "_:genid78"
+  }, {
+    "@id" : "_:genid79"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixVariable",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Decision variable that represents a value for each pair of elements of two collections (e.g. whether each vehicle visits each customer)."
+    "@value" : "Decision variable made up of a value for each pair of elements of two collections (e.g. whether each vehicle visits each customer). It is inferred from the shape, so it does not need to be asserted."
   }, {
     "@language" : "es",
-    "@value" : "Variable de decisión que representa un valor para cada par de elementos de dos colecciones (p. ej., si cada vehículo visita a cada cliente)."
+    "@value" : "Variable de decisión formada por un valor para cada par de elementos de dos colecciones (p. ej., si cada vehículo visita a cada cliente). Se deduce de la forma, por lo que no es necesario declararla."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1932,10 +2024,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
-  }, {
-    "@id" : "_:genid82"
-  }, {
-    "@id" : "_:genid95"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid80"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective",
@@ -1978,7 +2069,7 @@
     "@value" : "Memetic Algorithm"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid108"
+    "@id" : "_:genid84"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic",
@@ -2055,6 +2146,29 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#MultiSetShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Colección cuyos valores no están ordenados y pueden repetirse (p. ej., el número de unidades de cada producto en un pedido)."
+  }, {
+    "@language" : "en",
+    "@value" : "Collection whose values are not ordered and can be repeated (e.g. the number of units of each product in an order)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Forma de multiconjunto"
+  }, {
+    "@language" : "en",
+    "@value" : "Multiset Shape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://qudt.org/schema/qudt/MultiSet"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid88"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2078,35 +2192,10 @@
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MutationProbability",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#FloatParameter"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
-  "https://w3id.org/ontologies-ULL/CO-META#maxValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
-  } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NamedColumnTable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Tabla cuyos registros se describen mediante atributos distintos y con nombre (p. ej., las coordenadas X e Y de cada ciudad)."
-  }, {
-    "@language" : "en",
-    "@value" : "Table whose records are described by distinct, named attributes (e.g. the X and Y coordinates of each city)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Named Column Table"
-  }, {
-    "@language" : "es",
-    "@value" : "Tabla de columnas con nombre"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Table"
+  "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#UnitInterval"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent",
@@ -2129,6 +2218,58 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Dominio de valores con los enteros mayores o iguales que 0 (p. ej., un número de iteraciones)."
+  }, {
+    "@language" : "en",
+    "@value" : "Value domain of the integers greater than or equal to 0 (e.g. a number of iterations)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Enteros no negativos"
+  }, {
+    "@language" : "en",
+    "@value" : "Non-Negative Integers"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasBaseType" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Integers"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasLowerBound" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Zero"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Dominio de valores con los reales mayores o iguales que 0 (p. ej., un peso)."
+  }, {
+    "@language" : "en",
+    "@value" : "Value domain of the real numbers greater than or equal to 0 (e.g. a weight)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Non-Negative Reals"
+  }, {
+    "@language" : "es",
+    "@value" : "Reales no negativos"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasBaseType" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Reals"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasLowerBound" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Zero"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Objective",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2149,6 +2290,30 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemElement"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#One",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#LiteralValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El número 1, como valor literal para tamaños y cotas."
+  }, {
+    "@language" : "en",
+    "@value" : "The number 1, as a literal value for sizes and bounds."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "One"
+  }, {
+    "@language" : "es",
+    "@value" : "Uno"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasLiteralValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2164,6 +2329,28 @@
   }, {
     "@language" : "es",
     "@value" : "Parámetro"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ParameterReference",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Especificación de valor dada por el valor de un parámetro, que solo se conoce para una instancia concreta del problema o una configuración concreta del algoritmo (p. ej., el número de ciudades N)."
+  }, {
+    "@language" : "en",
+    "@value" : "Value specification given by the value of a parameter, which is only known for a specific problem instance or algorithm configuration (e.g. the number of cities N)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Parameter Reference"
+  }, {
+    "@language" : "es",
+    "@value" : "Referencia a parámetro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"
+  }, {
+    "@id" : "_:genid94"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ParameterValue",
@@ -2201,36 +2388,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PermutationEncoding",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Solución codificada como una ordenación de elementos distintos, sin repeticiones."
   }, {
-    "@language" : "en",
-    "@value" : "Solution encoded as an ordered arrangement of distinct elements, without repetitions."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Codificación de permutación"
-  }, {
-    "@language" : "en",
-    "@value" : "Permutation Encoding"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
+    "@id" : "_:genid95"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PermutationVariable",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Decision variable that represents an ordering of the elements of a collection, in which each element appears exactly once (e.g. the tour through the cities in the TSP)."
+    "@value" : "Decision variable made up of an ordering of values without repetitions. When its length equals the number of possible values it is a complete permutation (e.g. the tour through the cities in the TSP); otherwise it is a partial permutation. It is inferred from the shape, so it does not need to be asserted."
   }, {
     "@language" : "es",
-    "@value" : "Variable de decisión que representa un orden de los elementos de una colección, en el que cada elemento aparece exactamente una vez (p. ej., el recorrido por las ciudades en el TSP)."
+    "@value" : "Variable de decisión formada por una ordenación de valores sin repeticiones. Cuando su longitud coincide con el número de valores posibles es una permutación completa (p. ej., el recorrido por las ciudades en el TSP); si no, es una permutación parcial. Se deduce de la forma, por lo que no es necesario declararla."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2241,8 +2410,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
-  }, {
-    "@id" : "_:genid112"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid96"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic",
@@ -2265,7 +2435,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid125"
+    "@id" : "_:genid100"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent",
@@ -2291,7 +2461,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid132"
+    "@id" : "_:genid107"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent",
@@ -2317,7 +2487,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid144"
+    "@id" : "_:genid119"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent",
@@ -2366,21 +2536,46 @@
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationSize",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
+  "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Dominio de valores con los enteros mayores o iguales que 1 (p. ej., un número de ciudades)."
+  }, {
+    "@language" : "en",
+    "@value" : "Value domain of the integers greater than or equal to 1 (e.g. a number of cities)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Enteros positivos"
+  }, {
+    "@language" : "en",
+    "@value" : "Positive Integers"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasBaseType" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Integers"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasLowerBound" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#One"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Problem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Optimization problem, defined by at least one objective and optionally by constraints and a solution codification."
+    "@value" : "Optimization problem, formulated by its data, its decision variables, at least one objective and, optionally, constraints. A solution is an assignment of values to its decision variables."
   }, {
     "@language" : "es",
-    "@value" : "Problema de optimización, definido por al menos un objetivo y, opcionalmente, por restricciones y una codificación de solución."
+    "@value" : "Problema de optimización, formulado mediante sus datos, sus variables de decisión, al menos un objetivo y, opcionalmente, restricciones. Una solución es una asignación de valores a sus variables de decisión."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2390,7 +2585,7 @@
     "@value" : "Problema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid156"
+    "@id" : "_:genid131"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData",
@@ -2489,27 +2684,27 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   }, {
-    "@id" : "_:genid157"
+    "@id" : "_:genid132"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#RealType",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#Reals",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueType"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#BaseType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Real value type of a decision variable."
-  }, {
     "@language" : "es",
-    "@value" : "Tipo de valor real de una variable de decisión."
+    "@value" : "Conjunto de los números reales."
+  }, {
+    "@language" : "en",
+    "@value" : "Set of real numbers."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Real Type"
-  }, {
     "@language" : "es",
-    "@value" : "Tipo real"
+    "@value" : "Reales"
+  }, {
+    "@language" : "en",
+    "@value" : "Reals"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Safe",
@@ -2518,34 +2713,57 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ComponentSafety"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ScalarEncoding",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#Scalar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ScalarShape"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Solución codificada como un único nodo que contiene un solo valor."
+    "@value" : "La forma de los valores individuales."
   }, {
     "@language" : "en",
-    "@value" : "Solution encoded as a single node that holds one value."
+    "@value" : "The shape of single values."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Codificación escalar"
+    "@value" : "Escalar"
   }, {
     "@language" : "en",
-    "@value" : "Scalar Encoding"
+    "@value" : "Scalar"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ScalarShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Forma de una magnitud formada por un único valor. Su única instancia es Scalar."
+  }, {
+    "@language" : "en",
+    "@value" : "Shape of a quantity made up of a single value. Its only instance is Scalar."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Forma escalar"
+  }, {
+    "@language" : "en",
+    "@value" : "Scalar Shape"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid133"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ScalarVariable",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Decision variable that represents a single value (e.g. the number of vehicles to use)."
+    "@value" : "Decision variable that takes a single value (e.g. the number of vehicles to use). It is inferred from the shape, so it does not need to be asserted."
   }, {
     "@language" : "es",
-    "@value" : "Variable de decisión que representa un único valor (p. ej., el número de vehículos que se van a utilizar)."
+    "@value" : "Variable de decisión que toma un único valor (p. ej., el número de vehículos que se van a utilizar). Se deduce de la forma, por lo que no es necesario declararla."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2556,6 +2774,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid135"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent",
@@ -2577,7 +2798,99 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
   }, {
-    "@id" : "_:genid158"
+    "@id" : "_:genid139"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SequenceShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Colección cuyos valores están ordenados, de modo que cada uno ocupa una posición (p. ej., si cada objeto se mete en la mochila)."
+  }, {
+    "@language" : "en",
+    "@value" : "Collection whose values are ordered, so that each one occupies a position (e.g. whether each item is put in the knapsack)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Forma de secuencia"
+  }, {
+    "@language" : "en",
+    "@value" : "Sequence Shape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://qudt.org/schema/qudt/Sequence"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid141"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SequenceVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Decision variable made up of an ordered sequence of values, one per position, which may be repeated unless it is a permutation (e.g. whether each item is put in the knapsack). It is inferred from the shape, so it does not need to be asserted."
+  }, {
+    "@language" : "es",
+    "@value" : "Variable de decisión formada por una secuencia ordenada de valores, uno por posición, que pueden repetirse salvo que sea una permutación (p. ej., si cada objeto se mete en la mochila). Se deduce de la forma, por lo que no es necesario declararla."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sequence Variable"
+  }, {
+    "@language" : "es",
+    "@value" : "Variable de secuencia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid145"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SetShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Colección cuyos valores no están ordenados ni se repiten (p. ej., una selección de k ubicaciones de entre N)."
+  }, {
+    "@language" : "en",
+    "@value" : "Collection whose values are neither ordered nor repeated (e.g. a selection of k locations out of N)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Forma de conjunto"
+  }, {
+    "@language" : "en",
+    "@value" : "Set Shape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://qudt.org/schema/qudt/Set"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid149"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SetVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Decision variable made up of an unordered selection of values without repetitions (e.g. the k locations where facilities are opened). It is inferred from the shape, so it does not need to be asserted."
+  }, {
+    "@language" : "es",
+    "@value" : "Variable de decisión formada por una selección no ordenada de valores sin repeticiones (p. ej., las k ubicaciones en las que se abren instalaciones). Se deduce de la forma, por lo que no es necesario declararla."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Set Variable"
+  }, {
+    "@language" : "es",
+    "@value" : "Variable de conjunto"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid155"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent",
@@ -2599,7 +2912,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   }, {
-    "@id" : "_:genid160"
+    "@id" : "_:genid159"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent",
@@ -2622,7 +2935,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid161"
+    "@id" : "_:genid160"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent",
@@ -2645,7 +2958,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid170"
+    "@id" : "_:genid169"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic",
@@ -2665,44 +2978,97 @@
     "@value" : "Single Solution Based Metaheuristic"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid179"
+    "@id" : "_:genid178"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionFirstDimensionSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Size of the first dimension of the solution handled by the algorithm: the length of a sequence or the number of rows of a matrix."
+  }, {
+    "@language" : "es",
+    "@value" : "Tamaño de la primera dimensión de la solución que maneja el algoritmo: la longitud de una secuencia o el número de filas de una matriz."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Solution First Dimension Size"
+  }, {
+    "@language" : "es",
+    "@value" : "Tamaño de la primera dimensión de la solución"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionSecondDimensionSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Size of the second dimension of the solution handled by the algorithm: the number of columns of a matrix."
+  }, {
+    "@language" : "es",
+    "@value" : "Tamaño de la segunda dimensión de la solución que maneja el algoritmo: el número de columnas de una matriz."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Solution Second Dimension Size"
+  }, {
+    "@language" : "es",
+    "@value" : "Tamaño de la segunda dimensión de la solución"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Codificación de solución utilizada en un problema de optimización, compuesta por nodos de solución y con un tamaño determinado."
+    "@value" : "Especificación de valor dada por el tamaño de una dimensión de la solución que maneja el algoritmo. Permite dimensionar las estructuras de datos del algoritmo sin depender de un problema concreto (p. ej., una matriz de feromonas de n × n)."
   }, {
     "@language" : "en",
-    "@value" : "Solution encoding used in an optimization problem, composed of solution nodes and with a given size."
+    "@value" : "Value specification given by the size of one dimension of the solution handled by the algorithm. It allows algorithm data structures to be sized independently of any specific problem (e.g. an n × n pheromone matrix)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Codificación de una solución"
+    "@value" : "Referencia al tamaño de la solución"
   }, {
     "@language" : "en",
-    "@value" : "Solution Encoding"
+    "@value" : "Solution Size Reference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid186"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"
+  }, {
+    "@id" : "_:genid185"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#Solutions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#BaseType"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Parte más pequeña de una solución, que contiene un único valor."
+    "@value" : "Conjunto de soluciones candidatas del problema que se resuelve. Es el tipo base de las estructuras de datos que almacenan soluciones (p. ej., archivos o listas tabú)."
   }, {
     "@language" : "en",
-    "@value" : "Smallest part of a solution, which holds a single value."
+    "@value" : "Set of candidate solutions of the problem being solved. It is the base type of data structures that store solutions (e.g. archives or tabu lists)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Nodo de solución"
+    "@value" : "Soluciones"
   }, {
     "@language" : "en",
-    "@value" : "Solution Node"
+    "@value" : "Solutions"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent",
@@ -2724,49 +3090,74 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#LoopComponent"
   }, {
-    "@id" : "_:genid187"
+    "@id" : "_:genid186"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#StorageSize",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
+  "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#Table",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#TableData",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Colección de datos del problema formada por registros homogéneos, cada uno de los cuales describe una entidad del problema (p. ej., una ciudad o un objeto) mediante sus atributos."
+    "@value" : "Datos del problema organizados como una tabla de registros, cada uno de los cuales describe una entidad del problema mediante sus atributos (p. ej., las coordenadas de cada ciudad). Se deduce de la forma, por lo que no es necesario declararla."
   }, {
     "@language" : "en",
-    "@value" : "Collection of problem data made up of homogeneous records, each of which describes an entity of the problem (e.g. a city or an item) by means of its attributes."
+    "@value" : "Problem data organized as a table of records, each of which describes an entity of the problem by means of its attributes (e.g. the coordinates of each city). It is inferred from the shape, so it does not need to be asserted."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Tabla"
+    "@value" : "Datos en tabla"
   }, {
     "@language" : "en",
-    "@value" : "Table"
+    "@value" : "Table Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid188"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#TableShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Forma de una magnitud formada por registros homogéneos (filas), cada uno de los cuales describe una entidad del problema mediante atributos con nombre (columnas) (p. ej., las coordenadas de cada ciudad)."
   }, {
-    "@id" : "_:genid189"
+    "@language" : "en",
+    "@value" : "Shape of a quantity made up of homogeneous records (rows), each of which describes an entity of the problem by means of named attributes (columns) (e.g. the coordinates of each city)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Forma de tabla"
+  }, {
+    "@language" : "en",
+    "@value" : "Table Shape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://qudt.org/schema/qudt/Table"
+  }, {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape"
+  }, {
+    "@id" : "_:genid192"
+  }, {
+    "@id" : "_:genid193"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Time",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
+  "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent",
@@ -2788,19 +3179,47 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   }, {
-    "@id" : "_:genid202"
+    "@id" : "_:genid194"
   }, {
-    "@id" : "_:genid204"
+    "@id" : "_:genid196"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#TournamentSize",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#IntegerParameter"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
-  "https://w3id.org/ontologies-ULL/CO-META#minValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
+  "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#UnitInterval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Dominio de valores con los reales entre 0 y 1 (p. ej., una probabilidad)."
+  }, {
+    "@language" : "en",
+    "@value" : "Value domain of the real numbers between 0 and 1 (e.g. a probability)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Intervalo unidad"
+  }, {
+    "@language" : "en",
+    "@value" : "Unit Interval"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasBaseType" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Reals"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasLowerBound" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Zero"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasUpperBound" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#One"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Unsafe",
@@ -2829,24 +3248,41 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueType",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Dominio numérico al que pertenecen los valores que puede tomar una variable de decisión: enteros (IntegerType) o reales (RealType)."
+    "@value" : "Conjunto de valores que puede tomar una magnitud o un parámetro, definido por un conjunto numérico base y cotas inferior y superior opcionales (p. ej., los enteros entre 0 y 1)."
   }, {
     "@language" : "en",
-    "@value" : "Numeric domain to which the values a decision variable can take belong: integers (IntegerType) or reals (RealType)."
+    "@value" : "Set of values that a quantity or parameter can take, defined by a base number set and optional lower and upper bounds (e.g. the integers between 0 and 1)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Tipo de valor"
+    "@value" : "Dominio de valores"
   }, {
     "@language" : "en",
-    "@value" : "Value Type"
+    "@value" : "Value Domain"
   } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid205"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid197"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number used as a size or as a bound, given explicitly or by reference to a parameter or to the size of the solution. This class should not be instantiated directly; its subclasses should be used instead."
+  }, {
+    "@language" : "es",
+    "@value" : "Número usado como tamaño o como cota, indicado explícitamente o mediante una referencia a un parámetro o al tamaño de la solución. Esta clase no debe instanciarse directamente; deben usarse sus subclases."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Especificación de valor"
+  }, {
+    "@language" : "en",
+    "@value" : "Value Specification"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#VariationComponent",
@@ -2869,6 +3305,53 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#Zero",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#LiteralValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El número 0, como valor literal para tamaños y cotas."
+  }, {
+    "@language" : "en",
+    "@value" : "The number 0, as a literal value for sizes and bounds."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Cero"
+  }, {
+    "@language" : "en",
+    "@value" : "Zero"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasLiteralValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasBaseType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Conjunto numérico al que pertenecen los valores de un dominio de valores."
+  }, {
+    "@language" : "en",
+    "@value" : "Number set to which the values of a value domain belong."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has base type"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene tipo base"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#BaseType"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasCodeReference",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2878,29 +3361,17 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasCodification",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid1"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#isCodificationOf"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasColumn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Relaciona una tabla con cada uno de los atributos que describen sus registros."
+    "@value" : "Relaciona una forma de tabla con cada uno de los atributos que describen sus registros."
   }, {
     "@language" : "en",
-    "@value" : "Relates a table to each of the attributes that describe its records."
+    "@value" : "Relates a table shape to each of the attributes that describe its records."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#NamedColumnTable"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#TableShape"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2917,13 +3388,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Input parameter whose value is the second dimension of a matrix of data or of decision variables. Alternative to hasFixedColumnCount."
+    "@value" : "Number of columns of a matrix."
   }, {
     "@language" : "es",
-    "@value" : "Parámetro de entrada cuyo valor es la segunda dimensión de una matriz de datos o de variables de decisión. Alternativa a hasFixedColumnCount."
+    "@value" : "Número de columnas de una matriz."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid4"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixShape"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2933,7 +3404,30 @@
     "@value" : "tiene número de columnas"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#InputParameter"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona una forma compuesta con cada una de las formas que combina."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a composite shape to each of the shapes it combines."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#CompositeShape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has component"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene componente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasConstraint",
@@ -2960,73 +3454,27 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedColumnCount",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Fixed second dimension of a matrix of data or of decision variables. Alternative to hasColumnCount."
+    "@value" : "Dimension of the solution whose size is referred to: 1 for the length of a sequence or the rows of a matrix, 2 for the columns of a matrix."
   }, {
     "@language" : "es",
-    "@value" : "Segunda dimensión fija de una matriz de datos o de variables de decisión. Alternativa a hasColumnCount."
+    "@value" : "Dimensión de la solución cuyo tamaño se referencia: 1 para la longitud de una secuencia o las filas de una matriz, 2 para las columnas de una matriz."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid15"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has fixed column count"
+    "@value" : "has dimension index"
   }, {
     "@language" : "es",
-    "@value" : "tiene número fijo de columnas"
+    "@value" : "tiene índice de dimensión"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedLength",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Fixed number of elements of a sequence of decision variables. Alternative to hasLength."
-  }, {
-    "@language" : "es",
-    "@value" : "Número fijo de elementos de una secuencia de variables de decisión. Alternativa a hasLength."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid18"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has fixed length"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene longitud fija"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasFixedRowCount",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Fixed number of entities described by a table, or fixed first dimension of a matrix of decision variables. Alternative to hasRowCount."
-  }, {
-    "@language" : "es",
-    "@value" : "Número fijo de entidades que describe una tabla, o primera dimensión fija de una matriz de variables de decisión. Alternativa a hasRowCount."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid21"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has fixed row count"
-  }, {
-    "@language" : "es",
-    "@value" : "tiene número fijo de filas"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasIdentifier",
@@ -3098,7 +3546,7 @@
     "@value" : "LaTeX expression of an objective or constraint. For constraints it includes the comparator and the universal quantifier, if any."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid24"
+    "@id" : "_:genid22"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3138,13 +3586,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Input parameter whose value is the number of elements of a sequence of decision variables. Alternative to hasFixedLength."
+    "@value" : "Number of values of a collection."
   }, {
     "@language" : "es",
-    "@value" : "Parámetro de entrada cuyo valor es el número de elementos de una secuencia de variables de decisión. Alternativa a hasFixedLength."
+    "@value" : "Número de valores de una colección."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid7"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#CollectionShape"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3154,20 +3602,43 @@
     "@value" : "tiene longitud"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#InputParameter"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasLiteralValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number given explicitly. xsd:double is used for -INF and INF."
+  }, {
+    "@language" : "es",
+    "@value" : "Número indicado de forma explícita. Se usa xsd:double para -INF e INF."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#LiteralValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has literal value"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene valor literal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid25"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasLowerBound",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Menor valor que puede tomar una variable de decisión. Se usa xsd:double para poder expresar -INF (sin cota inferior)."
+    "@value" : "Menor valor de un dominio de valores. Si no se indica, no se impone cota inferior."
   }, {
     "@language" : "en",
-    "@value" : "Smallest value a decision variable may take. xsd:double is used so that -INF (no lower bound) can be expressed."
+    "@value" : "Smallest value of a value domain. If it is not stated, no lower bound is imposed."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3177,16 +3648,7 @@
     "@value" : "tiene cota inferior"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#double"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasNodeType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionNode"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasObjective",
@@ -3305,13 +3767,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Input parameter whose value is the number of entities described by a table, or the first dimension of a matrix of decision variables. Alternative to hasFixedRowCount."
+    "@value" : "Number of rows of a matrix, or of records of a table."
   }, {
     "@language" : "es",
-    "@value" : "Parámetro de entrada cuyo valor es el número de entidades que describe una tabla, o la primera dimensión de una matriz de variables de decisión. Alternativa a hasFixedRowCount."
+    "@value" : "Número de filas de una matriz, o de registros de una tabla."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid10"
+    "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3321,7 +3783,7 @@
     "@value" : "tiene número de filas"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#InputParameter"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasSafety",
@@ -3333,13 +3795,27 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ComponentSafety"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasSize",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Forma en que se organizan los valores de una magnitud o de una estructura de datos."
+  }, {
+    "@language" : "en",
+    "@value" : "Shape in which the values of a quantity or of a data structure are organized."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionEncoding"
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has shape"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene forma"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasStart",
@@ -3367,16 +3843,16 @@
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasUpperBound",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Largest value a decision variable may take. xsd:double is used so that INF (no upper bound) can be expressed."
+    "@value" : "Largest value of a value domain. If it is not stated, no upper bound is imposed."
   }, {
     "@language" : "es",
-    "@value" : "Mayor valor que puede tomar una variable de decisión. Se usa xsd:double para poder expresar INF (sin cota superior)."
+    "@value" : "Mayor valor de un dominio de valores. Si no se indica, no se impone cota superior."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3386,7 +3862,7 @@
     "@value" : "tiene cota superior"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasValue",
@@ -3395,27 +3871,27 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ParameterValue"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasValueType",
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Dominio numérico (enteros o reales) al que pertenecen los valores que puede tomar una variable de decisión."
+    "@value" : "Conjunto de valores que puede tomar una magnitud del problema, una estructura de datos o un parámetro del algoritmo."
   }, {
     "@language" : "en",
-    "@value" : "Numeric domain (integers or reals) to which the values a decision variable can take belong."
+    "@value" : "Set of values that a quantity of the problem, a data structure or a parameter of the algorithm can take."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
+    "@id" : "_:genid8"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has value type"
+    "@value" : "has value domain"
   }, {
     "@language" : "es",
-    "@value" : "tiene tipo de valor"
+    "@value" : "tiene dominio de valores"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueType"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasWeight",
@@ -3441,9 +3917,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#isCodificationOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
@@ -3456,6 +3929,29 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConstraintOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#isDistinct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica si los valores de una colección deben ser distintos entre sí."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates whether the values of a collection must be pairwise different."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#CollectionShape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es sin repeticiones"
+  }, {
+    "@language" : "en",
+    "@value" : "is distinct"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#isImplicit",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
@@ -3483,6 +3979,29 @@
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#isOrdered",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica si importa la posición de cada valor en una colección."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates whether the position of each value in a collection matters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#CollectionShape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es ordenada"
+  }, {
+    "@language" : "en",
+    "@value" : "is ordered"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#isParameterOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
@@ -3492,24 +4011,6 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#maxValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
-  } ]
-}, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#minValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#readsData",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -3517,6 +4018,52 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#refersTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parameter whose value determines a value specification: an input parameter of the problem or the value of a parameter of the algorithm."
+  }, {
+    "@language" : "es",
+    "@value" : "Parámetro cuyo valor determina una especificación de valor: un parámetro de entrada del problema o el valor de un parámetro del algoritmo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ParameterReference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "refers to"
+  }, {
+    "@language" : "es",
+    "@value" : "se refiere a"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid16"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#supportsShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Forma de las soluciones que puede manejar una metaheurística o un componente. Describe un tipo de solución, por lo que no es necesario indicar sus tamaños."
+  }, {
+    "@language" : "en",
+    "@value" : "Shape of the solutions that a metaheuristic or a component can handle. It describes a kind of solution, so its sizes do not need to be stated."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid19"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "admite forma"
+  }, {
+    "@language" : "en",
+    "@value" : "supports shape"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#writesData",
