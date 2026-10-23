@@ -51,7 +51,8 @@ CO-META:NSGA-II_fitness_assignment_non_dominance rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population
 CO-META:NSGA-II_generate_population rdf:type owl:NamedIndividual ,
-                                             CO-META:PopulationGenerationComponent ;
+                                             CO-META:PopulationGenerationComponent ,
+                                             CO-META:RandomGenerationComponent ;
                                     CO-META:hasOutput CO-META:NSGA-II_initial_fitness_assignment_non_dominance ;
                                     CO-META:hasParameter CO-META:NSGA-II_parameter_populationsize .
 

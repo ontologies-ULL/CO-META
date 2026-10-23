@@ -67,7 +67,8 @@ CO-META:SPEA2_fitness_assignment_raw_fitness rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population
 CO-META:SPEA2_generate_population rdf:type owl:NamedIndividual ,
-                                           CO-META:PopulationGenerationComponent ;
+                                           CO-META:PopulationGenerationComponent ,
+                                           CO-META:RandomGenerationComponent ;
                                   CO-META:hasOutputStart CO-META:SPEA2_stop ;
                                   CO-META:hasParameter CO-META:SPEA2_parameter_populationsize .
 

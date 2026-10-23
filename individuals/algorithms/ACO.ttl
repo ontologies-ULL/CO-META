@@ -27,6 +27,7 @@ CO-META:ACO_AntColonyOptimization rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones
 CO-META:ACO_construction_pheromones rdf:type owl:NamedIndividual ,
+                                             CO-META:AntConstructionComponent ,
                                              CO-META:PopulationConstructionComponent ;
                                     CO-META:hasOutput CO-META:ACO_evaporate_pheromones ;
                                     CO-META:hasParameter CO-META:ACO_parameter_heuristic_influence ,

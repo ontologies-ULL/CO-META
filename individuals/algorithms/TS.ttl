@@ -27,8 +27,9 @@ CO-META:TS_TabuSearch rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_generate
 CO-META:TS_generate rdf:type owl:NamedIndividual ,
-                             CO-META:SingleSolutionGenerationComponent ;
-                    CO-META:hasOutputStart CO-META:TS_stop .
+                             CO-META:RandomGenerationComponent ;
+                    CO-META:hasOutputStart CO-META:TS_stop ;
+                    CO-META:hasParameter CO-META:TS_parameter_populationsize .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood
@@ -41,6 +42,13 @@ CO-META:TS_neighbourhood rdf:type owl:NamedIndividual ,
 CO-META:TS_parameter_iterations rdf:type owl:NamedIndividual ,
                                          CO-META:ParameterValue ;
                                 CO-META:hasType CO-META:Iterations .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TS_parameter_populationsize
+CO-META:TS_parameter_populationsize rdf:type owl:NamedIndividual ,
+                                             CO-META:ParameterValue ;
+                                    CO-META:hasType CO-META:PopulationSize ;
+                                    CO-META:hasValue 1 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_parameter_storagesize

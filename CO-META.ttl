@@ -501,6 +501,15 @@ CO-META:AcceptanceComponent rdf:type owl:Class ;
                                        "Componente de aceptación"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#AntConstructionComponent
+CO-META:AntConstructionComponent rdf:type owl:Class ;
+                                 rdfs:subClassOf CO-META:ConstructionComponent ;
+                                 rdfs:comment "Componente de construcción que crea cada solución eligiendo el siguiente elemento con probabilidad proporcional a feromona^alfa · heurística^beta, donde las feromonas son la matriz que lee el componente, y alfa y beta sus parámetros de influencia de la feromona y de la heurística."@es ,
+                                              "Construction component that builds each solution by choosing the next element with probability proportional to pheromone^alpha · heuristic^beta, where the pheromones are the matrix the component reads, and alpha and beta its pheromone and heuristic influence parameters."@en ;
+                                 rdfs:label "Componente de construcción por hormigas"@es ,
+                                            "Ant Construction Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#ArchiveUpdateComponent
 CO-META:ArchiveUpdateComponent rdf:type owl:Class ;
                                rdfs:subClassOf CO-META:DataHandlerComponent ;
@@ -845,6 +854,15 @@ CO-META:GeometricCoolingComponent rdf:type owl:Class ;
                                                "Data handler that lowers the temperature it writes geometrically, from the maximum temperature at the start to the minimum one when the iteration budget of the enclosing stopping criterion is spent."@en ;
                                   rdfs:label "Componente de enfriamiento geométrico"@es ,
                                              "Geometric Cooling Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GreedyRandomizedConstructionComponent
+CO-META:GreedyRandomizedConstructionComponent rdf:type owl:Class ;
+                                              rdfs:subClassOf CO-META:ConstructionComponent ;
+                                              rdfs:comment "Componente de construcción que añade un elemento cada vez, elegido al azar de una lista restringida de candidatos (RCL) construida con la información heurística del problema. Su parámetro de aleatoriedad de la RCL va de puramente voraz (0) a puramente aleatorio (1)."@es ,
+                                                           "Construction component that adds one element at a time, chosen at random from a restricted candidate list (RCL) built from the heuristic information of the problem. Its RCL randomness parameter goes from purely greedy (0) to purely random (1)."@en ;
+                                              rdfs:label "Componente de construcción voraz aleatorizada"@es ,
+                                                         "Greedy Randomized Construction Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent
@@ -1421,6 +1439,15 @@ CO-META:RandomDecisionCrossoverComponent rdf:type owl:Class ;
                                                       "Crossover component that decides randomly, for each position, from which parent the offspring inherits the value."@en ;
                                          rdfs:label "Componente de cruce por decisión aleatoria"@es ,
                                                     "Random Decision Crossover Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#RandomGenerationComponent
+CO-META:RandomGenerationComponent rdf:type owl:Class ;
+                                  rdfs:subClassOf CO-META:GenerationComponent ;
+                                  rdfs:comment "Componente de generación que obtiene cada solución de forma uniformemente aleatoria a partir de la representación de las variables de decisión."@es ,
+                                               "Generation component that draws each solution uniformly at random from the representation of the decision variables."@en ;
+                                  rdfs:label "Componente de generación aleatoria"@es ,
+                                             "Random Generation Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#RandomResetMutationComponent
