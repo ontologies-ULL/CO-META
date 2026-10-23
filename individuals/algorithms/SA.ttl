@@ -18,18 +18,6 @@
 #    Individuals
 #################################################################
 
-###  https://w3id.org/ontologies-ULL/CO-META#MaxTemperature
-CO-META:MaxTemperature rdf:type owl:NamedIndividual ,
-                                CO-META:Parameter ;
-                       CO-META:hasValueDomain CO-META:UnitInterval .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META#MinTemperature
-CO-META:MinTemperature rdf:type owl:NamedIndividual ,
-                                CO-META:Parameter ;
-                       CO-META:hasValueDomain CO-META:UnitInterval .
-
-
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_SimulatedAnnealing
 CO-META:SA_SimulatedAnnealing rdf:type owl:NamedIndividual ,
                                        CO-META:Metaheuristic ;
