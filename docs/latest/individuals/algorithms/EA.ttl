@@ -32,7 +32,8 @@ CO-META:EA_binary_tournament_selection rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#EA_generate_population
 CO-META:EA_generate_population rdf:type owl:NamedIndividual ,
-                                        CO-META:PopulationGenerationComponent ;
+                                        CO-META:PopulationGenerationComponent ,
+                                        CO-META:RandomGenerationComponent ;
                                CO-META:hasParameter CO-META:EA_parameter_populationsize ;
                                CO-META:isStartOf CO-META:EA_EvolutionaryAlgorithm .
 

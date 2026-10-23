@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria.", "dateReleased":"Fri Oct 23 20:17:32 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria.", "dateReleased":"Fri Oct 23 22:22:20 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -133,8 +133,36 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent">Componente de aceptación por mejora</a>
    </li>
    <li>
+      <a href="#TabuListUpdateComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#TabuListUpdateComponent">Componente de actualización de la lista tabú</a>
+   </li>
+   <li>
+      <a href="#VelocityUpdateComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#VelocityUpdateComponent">Componente de actualización de la velocidad</a>
+   </li>
+   <li>
+      <a href="#BestSolutionsUpdateComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent">Componente de actualización de las mejores soluciones</a>
+   </li>
+   <li>
+      <a href="#ArchiveUpdateComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#ArchiveUpdateComponent">Componente de actualización del archivo</a>
+   </li>
+   <li>
       <a href="#UpdateBestComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent">Componente de actualización del mejor</a>
+   </li>
+   <li>
+      <a href="#ShakingComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#ShakingComponent">Componente de agitación</a>
+   </li>
+   <li>
+      <a href="#VelocityApplicationComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#VelocityApplicationComponent">Componente de aplicación de la velocidad</a>
+   </li>
+   <li>
+      <a href="#StrengthFitnessComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#StrengthFitnessComponent">Componente de aptitud por fuerza</a>
    </li>
    <li>
       <a href="#FitnessAssignmentComponent"
@@ -157,6 +185,10 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent">Componente de búsqueda local de primera mejora</a>
    </li>
    <li>
+      <a href="#NeighbourhoodChangeComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodChangeComponent">Componente de cambio de vecindario</a>
+   </li>
+   <li>
       <a href="#ConstructionComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent">Componente de construcción</a>
    </li>
@@ -167,6 +199,14 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
    <li>
       <a href="#SingleSolutionConstructionComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent">Componente de construcción de solución única</a>
+   </li>
+   <li>
+      <a href="#AntConstructionComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#AntConstructionComponent">Componente de construcción por hormigas</a>
+   </li>
+   <li>
+      <a href="#GreedyRandomizedConstructionComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#GreedyRandomizedConstructionComponent">Componente de construcción voraz aleatorizada</a>
    </li>
    <li>
       <a href="#StoppingCriterionComponent"
@@ -197,8 +237,36 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent">Componente de cruce por decisión aleatoria</a>
    </li>
    <li>
+      <a href="#BlendCrossoverComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#BlendCrossoverComponent">Componente de cruce por mezcla</a>
+   </li>
+   <li>
+      <a href="#NearestNeighbourDensityComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#NearestNeighbourDensityComponent">Componente de densidad del vecino más cercano</a>
+   </li>
+   <li>
+      <a href="#PheromoneDepositComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#PheromoneDepositComponent">Componente de depósito de feromonas</a>
+   </li>
+   <li>
+      <a href="#CrowdingDistanceComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#CrowdingDistanceComponent">Componente de distancia de hacinamiento</a>
+   </li>
+   <li>
+      <a href="#GeometricCoolingComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#GeometricCoolingComponent">Componente de enfriamiento geométrico</a>
+   </li>
+   <li>
+      <a href="#PheromoneEvaporationComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporationComponent">Componente de evaporación de feromonas</a>
+   </li>
+   <li>
       <a href="#GenerationComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent">Componente de generación</a>
+   </li>
+   <li>
+      <a href="#RandomGenerationComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#RandomGenerationComponent">Componente de generación aleatoria</a>
    </li>
    <li>
       <a href="#PopulationGenerationComponent"
@@ -211,6 +279,10 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
    <li>
       <a href="#ModificationComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent">Componente de modificación</a>
+   </li>
+   <li>
+      <a href="#GaussianMutationComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#GaussianMutationComponent">Componente de mutación gaussiana</a>
    </li>
    <li>
       <a href="#BitFlipMutationComponent"
@@ -233,6 +305,10 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#RandomResetMutationComponent">Componente de mutación por reinicio aleatorio</a>
    </li>
    <li>
+      <a href="#NonDominatedSortingComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#NonDominatedSortingComponent">Componente de ordenación no dominada</a>
+   </li>
+   <li>
       <a href="#DiversityPreservationComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent">Componente de preservación de la diversidad</a>
    </li>
@@ -249,12 +325,32 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent">Componente de selección iterativa</a>
    </li>
    <li>
+      <a href="#SequentialIterativeSelectionComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#SequentialIterativeSelectionComponent">Componente de selección iterativa secuencial</a>
+   </li>
+   <li>
+      <a href="#RouletteWheelSelectionComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#RouletteWheelSelectionComponent">Componente de selección por ruleta</a>
+   </li>
+   <li>
       <a href="#TournamentSelectionComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent">Componente de selección por torneo</a>
    </li>
    <li>
       <a href="#SimplePairSelectionComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent">Componente de selección simple por parejas</a>
+   </li>
+   <li>
+      <a href="#SubtractionComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#SubtractionComponent">Componente de sustracción</a>
+   </li>
+   <li>
+      <a href="#TruncationComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#TruncationComponent">Componente de truncamiento</a>
+   </li>
+   <li>
+      <a href="#UnionComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#UnionComponent">Componente de unión</a>
    </li>
    <li>
       <a href="#VariationComponent"
@@ -436,7 +532,8 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Seguridad del componente</a>
    </li>
    <li>
-      <a href="#BaseType" title="https://w3id.org/ontologies-ULL/CO-META#BaseType">Tipo base</a>
+      <a href="#BaseType"
+         title="https://w3id.org/ontologies-ULL/CO-META#BaseType">Tipo base</a>
    </li>
    <li>
       <a href="#ParameterValue"
@@ -585,8 +682,16 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#hasLowerBound">tiene cota inferior</a>
    </li>
    <li>
+      <a href="#hasExclusiveLowerBound"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveLowerBound">tiene cota inferior exclusiva</a>
+   </li>
+   <li>
       <a href="#hasUpperBound"
          title="https://w3id.org/ontologies-ULL/CO-META#hasUpperBound">tiene cota superior</a>
+   </li>
+   <li>
+      <a href="#hasExclusiveUpperBound"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveUpperBound">tiene cota superior exclusiva</a>
    </li>
    <li>
       <a href="#hasValueDomain"
@@ -637,12 +742,6 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#isDistinct">es sin repeticiones</a>
    </li>
    <li>
-      <a href="#hasCodeReference"
-         title="https://w3id.org/ontologies-ULL/CO-META#hasCodeReference">
-         <span>has Code Reference</span>
-      </a>
-   </li>
-   <li>
       <a href="#hasInputSize"
          title="https://w3id.org/ontologies-ULL/CO-META#hasInputSize">
          <span>has Input Size</span>
@@ -674,6 +773,10 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
    <li>
       <a href="#hasPosition"
          title="https://w3id.org/ontologies-ULL/CO-META#hasPosition">tiene posición</a>
+   </li>
+   <li>
+      <a href="#hasCodeReference"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasCodeReference">tiene referencia de código</a>
    </li>
    <li>
       <a href="#hasLatexSymbol"
@@ -718,6 +821,10 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
 </ul><h4>Individuos</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
+   <li>
+      <a href="#BlendAlpha"
+         title="https://w3id.org/ontologies-ULL/CO-META#BlendAlpha">Alfa de mezcla</a>
+   </li>
    <li>
       <a href="#Booleans"
          title="https://w3id.org/ontologies-ULL/CO-META#Booleans">Booleanos</a>
@@ -782,6 +889,28 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
       <a href="#Scalar" title="https://w3id.org/ontologies-ULL/CO-META#Scalar">Escalar</a>
    </li>
    <li>
+      <a href="#GlobalBestInfluence"
+         title="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">
+         <span>Global Best Influence</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HeuristicInfluence"
+         title="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence">
+         <span>Heuristic Influence</span>
+      </a>
+   </li>
+   <li>
+      <a href="#InertiaFactor"
+         title="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor">
+         <span>Inertia Factor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#MutationStrength"
+         title="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">Intensidad de mutación</a>
+   </li>
+   <li>
       <a href="#UnitInterval"
          title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Intervalo unidad</a>
    </li>
@@ -792,9 +921,45 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
       </a>
    </li>
    <li>
+      <a href="#MaxTemperature"
+         title="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature">
+         <span>Max Temperature</span>
+      </a>
+   </li>
+   <li>
+      <a href="#MinTemperature"
+         title="https://w3id.org/ontologies-ULL/CO-META#MinTemperature">
+         <span>Min Temperature</span>
+      </a>
+   </li>
+   <li>
       <a href="#MutationProbability"
          title="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">
          <span>Mutation Probability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PersonalBestInfluence"
+         title="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence">
+         <span>Personal Best Influence</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PheromoneAddition"
+         title="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition">
+         <span>Pheromone Addition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PheromoneEvaporation"
+         title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation">
+         <span>Pheromone Evaporation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PheromoneInfluence"
+         title="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence">
+         <span>Pheromone Influence</span>
       </a>
    </li>
    <li>
@@ -804,11 +969,21 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
       </a>
    </li>
    <li>
+      <a href="#RCLRandomness"
+         title="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness">
+         <span>R C L Randomness</span>
+      </a>
+   </li>
+   <li>
       <a href="#Reals" title="https://w3id.org/ontologies-ULL/CO-META#Reals">Reales</a>
    </li>
    <li>
       <a href="#NonNegativeReals"
          title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Reales no negativos</a>
+   </li>
+   <li>
+      <a href="#PositiveReals"
+         title="https://w3id.org/ontologies-ULL/CO-META#PositiveReals">Reales positivos</a>
    </li>
    <li>
       <a href="#Safe" title="https://w3id.org/ontologies-ULL/CO-META#Safe">
@@ -875,15 +1050,25 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#MetropolisAcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent">Componente de aceptación de Metropolis</a></li>
   <li><a href="#BestCandidateAcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent">Componente de aceptación del mejor candidato</a></li>
   <li><a href="#ImprovementAcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent">Componente de aceptación por mejora</a></li>
+  <li><a href="#TabuListUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#TabuListUpdateComponent">Componente de actualización de la lista tabú</a></li>
+  <li><a href="#VelocityUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#VelocityUpdateComponent">Componente de actualización de la velocidad</a></li>
+  <li><a href="#BestSolutionsUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent">Componente de actualización de las mejores soluciones</a></li>
+  <li><a href="#ArchiveUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#ArchiveUpdateComponent">Componente de actualización del archivo</a></li>
   <li><a href="#UpdateBestComponent" title="https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent">Componente de actualización del mejor</a></li>
+  <li><a href="#ShakingComponent" title="https://w3id.org/ontologies-ULL/CO-META#ShakingComponent">Componente de agitación</a></li>
+  <li><a href="#VelocityApplicationComponent" title="https://w3id.org/ontologies-ULL/CO-META#VelocityApplicationComponent">Componente de aplicación de la velocidad</a></li>
+  <li><a href="#StrengthFitnessComponent" title="https://w3id.org/ontologies-ULL/CO-META#StrengthFitnessComponent">Componente de aptitud por fuerza</a></li>
   <li><a href="#FitnessAssignmentComponent" title="https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent">Componente de asignación de aptitud</a></li>
   <li><a href="#LoopComponent" title="https://w3id.org/ontologies-ULL/CO-META#LoopComponent">Componente de bucle</a></li>
   <li><a href="#LocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent">Componente de búsqueda local</a></li>
   <li><a href="#BestImprovementLocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent">Componente de búsqueda local de mejor mejora</a></li>
   <li><a href="#FirstImprovementLocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent">Componente de búsqueda local de primera mejora</a></li>
+  <li><a href="#NeighbourhoodChangeComponent" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodChangeComponent">Componente de cambio de vecindario</a></li>
   <li><a href="#ConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent">Componente de construcción</a></li>
   <li><a href="#PopulationConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent">Componente de construcción de población</a></li>
   <li><a href="#SingleSolutionConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent">Componente de construcción de solución única</a></li>
+  <li><a href="#AntConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#AntConstructionComponent">Componente de construcción por hormigas</a></li>
+  <li><a href="#GreedyRandomizedConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#GreedyRandomizedConstructionComponent">Componente de construcción voraz aleatorizada</a></li>
   <li><a href="#StoppingCriterionComponent" title="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent">Componente de criterio de parada</a></li>
   <li><a href="#CrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent">Componente de cruce</a></li>
   <li><a href="#KPointCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent">Componente de cruce de k puntos</a></li>
@@ -891,21 +1076,35 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#PartiallyMappedCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent">Componente de cruce parcialmente mapeado</a></li>
   <li><a href="#CycleCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#CycleCrossoverComponent">Componente de cruce por ciclos</a></li>
   <li><a href="#RandomDecisionCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent">Componente de cruce por decisión aleatoria</a></li>
+  <li><a href="#BlendCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#BlendCrossoverComponent">Componente de cruce por mezcla</a></li>
+  <li><a href="#NearestNeighbourDensityComponent" title="https://w3id.org/ontologies-ULL/CO-META#NearestNeighbourDensityComponent">Componente de densidad del vecino más cercano</a></li>
+  <li><a href="#PheromoneDepositComponent" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneDepositComponent">Componente de depósito de feromonas</a></li>
+  <li><a href="#CrowdingDistanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#CrowdingDistanceComponent">Componente de distancia de hacinamiento</a></li>
+  <li><a href="#GeometricCoolingComponent" title="https://w3id.org/ontologies-ULL/CO-META#GeometricCoolingComponent">Componente de enfriamiento geométrico</a></li>
+  <li><a href="#PheromoneEvaporationComponent" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporationComponent">Componente de evaporación de feromonas</a></li>
   <li><a href="#GenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent">Componente de generación</a></li>
+  <li><a href="#RandomGenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#RandomGenerationComponent">Componente de generación aleatoria</a></li>
   <li><a href="#PopulationGenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent">Componente de generación de población</a></li>
   <li><a href="#SingleSolutionGenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent">Componente de generación de solución única</a></li>
   <li><a href="#ModificationComponent" title="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent">Componente de modificación</a></li>
+  <li><a href="#GaussianMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#GaussianMutationComponent">Componente de mutación gaussiana</a></li>
   <li><a href="#BitFlipMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent">Componente de mutación por cambio de bit</a></li>
   <li><a href="#InsertionMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#InsertionMutationComponent">Componente de mutación por inserción</a></li>
   <li><a href="#SwapMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent">Componente de mutación por intercambio</a></li>
   <li><a href="#InversionMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent">Componente de mutación por inversión</a></li>
   <li><a href="#RandomResetMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#RandomResetMutationComponent">Componente de mutación por reinicio aleatorio</a></li>
+  <li><a href="#NonDominatedSortingComponent" title="https://w3id.org/ontologies-ULL/CO-META#NonDominatedSortingComponent">Componente de ordenación no dominada</a></li>
   <li><a href="#DiversityPreservationComponent" title="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent">Componente de preservación de la diversidad</a></li>
   <li><a href="#SelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent">Componente de selección</a></li>
   <li><a href="#RandomSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent">Componente de selección aleatoria</a></li>
   <li><a href="#IterativeSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent">Componente de selección iterativa</a></li>
+  <li><a href="#SequentialIterativeSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SequentialIterativeSelectionComponent">Componente de selección iterativa secuencial</a></li>
+  <li><a href="#RouletteWheelSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#RouletteWheelSelectionComponent">Componente de selección por ruleta</a></li>
   <li><a href="#TournamentSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent">Componente de selección por torneo</a></li>
   <li><a href="#SimplePairSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent">Componente de selección simple por parejas</a></li>
+  <li><a href="#SubtractionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SubtractionComponent">Componente de sustracción</a></li>
+  <li><a href="#TruncationComponent" title="https://w3id.org/ontologies-ULL/CO-META#TruncationComponent">Componente de truncamiento</a></li>
+  <li><a href="#UnionComponent" title="https://w3id.org/ontologies-ULL/CO-META#UnionComponent">Componente de unión</a></li>
   <li><a href="#VariationComponent" title="https://w3id.org/ontologies-ULL/CO-META#VariationComponent">Componente de variación</a></li>
   <li><a href="#NeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent">Componente de vecindario</a></li>
   <li><a href="#TwoOptNeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent">Componente de vecindario 2-opt</a></li>
@@ -1090,6 +1289,66 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
+ <div class="entity" id="TabuListUpdateComponent">
+  <h3>Componente de actualización de la lista tabú<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#TabuListUpdateComponent</p>
+  <div class="comment">
+   <span class="markdown">Manejador de datos que almacena las soluciones que recibe en la lista que escribe, descartando las más antiguas por encima del tamaño de almacenamiento, y las deja pasar.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">Componente manejador de datos</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VelocityUpdateComponent">
+  <h3>Componente de actualización de la velocidad<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#VelocityUpdateComponent</p>
+  <div class="comment">
+   <span class="markdown">Manejador de datos que actualiza la velocidad de cada partícula que recibe a partir de su inercia y la atracción hacia su mejor posición personal y la mejor global.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">Componente manejador de datos</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BestSolutionsUpdateComponent">
+  <h3>Componente de actualización de las mejores soluciones<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent</p>
+  <div class="comment">
+   <span class="markdown">Manejador de datos que conserva en la estructura que escribe la mejor solución vista: una única para una estructura escalar, o una por posición (p. ej. por partícula) para una colección.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#UpdateBestComponent" title="https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent">Componente de actualización del mejor</a> <sup class="type-c" title="clase">c</sup>, <a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">Componente manejador de datos</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ArchiveUpdateComponent">
+  <h3>Componente de actualización del archivo<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ArchiveUpdateComponent</p>
+  <div class="comment">
+   <span class="markdown">Manejador de datos que sustituye el contenido del archivo que escribe por las soluciones que recibe, y las deja pasar.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">Componente manejador de datos</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="UpdateBestComponent">
   <h3>Componente de actualización del mejor<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent</p>
@@ -1102,6 +1361,57 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dt>
    <dd>
     <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#BestSolutionsUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent">Componente de actualización de las mejores soluciones</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ShakingComponent">
+  <h3>Componente de agitación<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ShakingComponent</p>
+  <div class="comment">
+   <span class="markdown">Componente de variación que aplica k movimientos aleatorios de un vecindario, donde k es el valor de la estructura de datos que lee (el vecindario actual de una búsqueda de vecindario variable).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#VariationComponent" title="https://w3id.org/ontologies-ULL/CO-META#VariationComponent">Componente de variación</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VelocityApplicationComponent">
+  <h3>Componente de aplicación de la velocidad<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#VelocityApplicationComponent</p>
+  <div class="comment">
+   <span class="markdown">Componente de modificación que desplaza cada partícula que recibe según su velocidad: sumada a los valores reales, o mediante una sigmoide como probabilidad de un 1 en valores binarios.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#ModificationComponent" title="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent">Componente de modificación</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StrengthFitnessComponent">
+  <h3>Componente de aptitud por fuerza<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#StrengthFitnessComponent</p>
+  <div class="comment">
+   <span class="markdown">Componente de asignación de aptitud que da a cada individuo la suma de las fuerzas (número de individuos dominados) de los que lo dominan (aptitud bruta de SPEA2).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#FitnessAssignmentComponent" title="https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent">Componente de asignación de aptitud</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1117,6 +1427,12 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dt>
    <dd>
     <a href="#MultiobjectiveComponent" title="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent">Componente multiobjetivo</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#StrengthFitnessComponent" title="https://w3id.org/ontologies-ULL/CO-META#StrengthFitnessComponent">Componente de aptitud por fuerza</a> <sup class="type-c" title="clase">c</sup>, <a href="#NonDominatedSortingComponent" title="https://w3id.org/ontologies-ULL/CO-META#NonDominatedSortingComponent">Componente de ordenación no dominada</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1204,6 +1520,21 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
+ <div class="entity" id="NeighbourhoodChangeComponent">
+  <h3>Componente de cambio de vecindario<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodChangeComponent</p>
+  <div class="comment">
+   <span class="markdown">Manejador de datos que reinicia a 1 el índice de vecindario que escribe cuando la candidata mejora la solución actual y lo incrementa en otro caso, volviendo a 1 tras su cota superior.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">Componente manejador de datos</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="ConstructionComponent">
   <h3>Componente de construcción<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent</p>
@@ -1221,7 +1552,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     tiene subclases
    </dt>
    <dd>
-    <a href="#PopulationConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent">Componente de construcción de población</a> <sup class="type-c" title="clase">c</sup>, <a href="#SingleSolutionConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent">Componente de construcción de solución única</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#PopulationConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent">Componente de construcción de población</a> <sup class="type-c" title="clase">c</sup>, <a href="#SingleSolutionConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent">Componente de construcción de solución única</a> <sup class="type-c" title="clase">c</sup>, <a href="#AntConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#AntConstructionComponent">Componente de construcción por hormigas</a> <sup class="type-c" title="clase">c</sup>, <a href="#GreedyRandomizedConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#GreedyRandomizedConstructionComponent">Componente de construcción voraz aleatorizada</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1279,6 +1610,36 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
+ <div class="entity" id="AntConstructionComponent">
+  <h3>Componente de construcción por hormigas<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#AntConstructionComponent</p>
+  <div class="comment">
+   <span class="markdown">Componente de construcción que crea cada solución eligiendo el siguiente elemento con probabilidad proporcional a feromona^alfa · heurística^beta, donde las feromonas son la matriz que lee el componente, y alfa y beta sus parámetros de influencia de la feromona y de la heurística.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#ConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent">Componente de construcción</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GreedyRandomizedConstructionComponent">
+  <h3>Componente de construcción voraz aleatorizada<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#GreedyRandomizedConstructionComponent</p>
+  <div class="comment">
+   <span class="markdown">Componente de construcción que añade un elemento cada vez, elegido al azar de una lista restringida de candidatos (RCL) construida con la información heurística del problema. Su parámetro de aleatoriedad de la RCL va de puramente voraz (0) a puramente aleatorio (1).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#ConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent">Componente de construcción</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="StoppingCriterionComponent">
   <h3>Componente de criterio de parada<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent</p>
@@ -1317,7 +1678,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     tiene subclases
    </dt>
    <dd>
-    <a href="#KPointCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent">Componente de cruce de k puntos</a> <sup class="type-c" title="clase">c</sup>, <a href="#OrderCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#OrderCrossoverComponent">Componente de cruce de orden</a> <sup class="type-c" title="clase">c</sup>, <a href="#PartiallyMappedCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent">Componente de cruce parcialmente mapeado</a> <sup class="type-c" title="clase">c</sup>, <a href="#CycleCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#CycleCrossoverComponent">Componente de cruce por ciclos</a> <sup class="type-c" title="clase">c</sup>, <a href="#RandomDecisionCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent">Componente de cruce por decisión aleatoria</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#KPointCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent">Componente de cruce de k puntos</a> <sup class="type-c" title="clase">c</sup>, <a href="#OrderCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#OrderCrossoverComponent">Componente de cruce de orden</a> <sup class="type-c" title="clase">c</sup>, <a href="#PartiallyMappedCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent">Componente de cruce parcialmente mapeado</a> <sup class="type-c" title="clase">c</sup>, <a href="#CycleCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#CycleCrossoverComponent">Componente de cruce por ciclos</a> <sup class="type-c" title="clase">c</sup>, <a href="#RandomDecisionCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent">Componente de cruce por decisión aleatoria</a> <sup class="type-c" title="clase">c</sup>, <a href="#BlendCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#BlendCrossoverComponent">Componente de cruce por mezcla</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1396,6 +1757,96 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
+ <div class="entity" id="BlendCrossoverComponent">
+  <h3>Componente de cruce por mezcla<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#BlendCrossoverComponent</p>
+  <div class="comment">
+   <span class="markdown">Componente de cruce para valores reales que obtiene cada valor del descendiente de forma uniforme en el intervalo de los valores de los progenitores ampliado en alfa veces su anchura (BLX-alfa).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#CrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent">Componente de cruce</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NearestNeighbourDensityComponent">
+  <h3>Componente de densidad del vecino más cercano<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#NearestNeighbourDensityComponent</p>
+  <div class="comment">
+   <span class="markdown">Componente de preservación de la diversidad que estima la densidad alrededor de cada individuo a partir de la distancia a su k-ésimo vecino más cercano en el espacio de objetivos (SPEA2).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DiversityPreservationComponent" title="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent">Componente de preservación de la diversidad</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PheromoneDepositComponent">
+  <h3>Componente de depósito de feromonas<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#PheromoneDepositComponent</p>
+  <div class="comment">
+   <span class="markdown">Manejador de datos que añade, en los elementos que usa cada solución que recibe, la adición de feromona dividida por el coste de la solución.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">Componente manejador de datos</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CrowdingDistanceComponent">
+  <h3>Componente de distancia de hacinamiento<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#CrowdingDistanceComponent</p>
+  <div class="comment">
+   <span class="markdown">Componente de preservación de la diversidad que mide, dentro de cada frente, el tamaño del cuboide alrededor de cada individuo en el espacio de objetivos.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DiversityPreservationComponent" title="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent">Componente de preservación de la diversidad</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GeometricCoolingComponent">
+  <h3>Componente de enfriamiento geométrico<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#GeometricCoolingComponent</p>
+  <div class="comment">
+   <span class="markdown">Manejador de datos que reduce de forma geométrica la temperatura que escribe, desde la temperatura máxima al principio hasta la mínima cuando se agota el presupuesto de iteraciones del criterio de parada que lo contiene.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">Componente manejador de datos</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PheromoneEvaporationComponent">
+  <h3>Componente de evaporación de feromonas<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporationComponent</p>
+  <div class="comment">
+   <span class="markdown">Manejador de datos que multiplica cada feromona que escribe por (1 - tasa de evaporación).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">Componente manejador de datos</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="GenerationComponent">
   <h3>Componente de generación<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#GenerationComponent</p>
@@ -1413,7 +1864,22 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     tiene subclases
    </dt>
    <dd>
-    <a href="#PopulationGenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent">Componente de generación de población</a> <sup class="type-c" title="clase">c</sup>, <a href="#SingleSolutionGenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent">Componente de generación de solución única</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#RandomGenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#RandomGenerationComponent">Componente de generación aleatoria</a> <sup class="type-c" title="clase">c</sup>, <a href="#PopulationGenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent">Componente de generación de población</a> <sup class="type-c" title="clase">c</sup>, <a href="#SingleSolutionGenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent">Componente de generación de solución única</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RandomGenerationComponent">
+  <h3>Componente de generación aleatoria<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#RandomGenerationComponent</p>
+  <div class="comment">
+   <span class="markdown">Componente de generación que obtiene cada solución de forma uniformemente aleatoria a partir de la representación de las variables de decisión.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#GenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent">Componente de generación</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1488,7 +1954,22 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     tiene subclases
    </dt>
    <dd>
-    <a href="#LocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent">Componente de búsqueda local</a> <sup class="type-c" title="clase">c</sup>, <a href="#CrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent">Componente de cruce</a> <sup class="type-c" title="clase">c</sup>, <a href="#SelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent">Componente de selección</a> <sup class="type-c" title="clase">c</sup>, <a href="#VariationComponent" title="https://w3id.org/ontologies-ULL/CO-META#VariationComponent">Componente de variación</a> <sup class="type-c" title="clase">c</sup>, <a href="#NeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent">Componente de vecindario</a> <sup class="type-c" title="clase">c</sup>, <a href="#PopulationOperatorComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent">Componente operador de población</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#VelocityApplicationComponent" title="https://w3id.org/ontologies-ULL/CO-META#VelocityApplicationComponent">Componente de aplicación de la velocidad</a> <sup class="type-c" title="clase">c</sup>, <a href="#LocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent">Componente de búsqueda local</a> <sup class="type-c" title="clase">c</sup>, <a href="#CrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent">Componente de cruce</a> <sup class="type-c" title="clase">c</sup>, <a href="#SelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent">Componente de selección</a> <sup class="type-c" title="clase">c</sup>, <a href="#VariationComponent" title="https://w3id.org/ontologies-ULL/CO-META#VariationComponent">Componente de variación</a> <sup class="type-c" title="clase">c</sup>, <a href="#NeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent">Componente de vecindario</a> <sup class="type-c" title="clase">c</sup>, <a href="#PopulationOperatorComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent">Componente operador de población</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GaussianMutationComponent">
+  <h3>Componente de mutación gaussiana<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#GaussianMutationComponent</p>
+  <div class="comment">
+   <span class="markdown">Componente de variación que suma ruido normal a valores reales, con una desviación típica igual a la intensidad de mutación por la anchura del dominio.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#VariationComponent" title="https://w3id.org/ontologies-ULL/CO-META#VariationComponent">Componente de variación</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1567,6 +2048,21 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
+ <div class="entity" id="NonDominatedSortingComponent">
+  <h3>Componente de ordenación no dominada<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#NonDominatedSortingComponent</p>
+  <div class="comment">
+   <span class="markdown">Componente de asignación de aptitud que clasifica cada individuo según el frente no dominado al que pertenece.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#FitnessAssignmentComponent" title="https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent">Componente de asignación de aptitud</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="DiversityPreservationComponent">
   <h3>Componente de preservación de la diversidad<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent</p>
@@ -1579,6 +2075,12 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dt>
    <dd>
     <a href="#MultiobjectiveComponent" title="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent">Componente multiobjetivo</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#NearestNeighbourDensityComponent" title="https://w3id.org/ontologies-ULL/CO-META#NearestNeighbourDensityComponent">Componente de densidad del vecino más cercano</a> <sup class="type-c" title="clase">c</sup>, <a href="#CrowdingDistanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#CrowdingDistanceComponent">Componente de distancia de hacinamiento</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1599,7 +2101,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     tiene subclases
    </dt>
    <dd>
-    <a href="#RandomSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent">Componente de selección aleatoria</a> <sup class="type-c" title="clase">c</sup>, <a href="#IterativeSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent">Componente de selección iterativa</a> <sup class="type-c" title="clase">c</sup>, <a href="#TournamentSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent">Componente de selección por torneo</a> <sup class="type-c" title="clase">c</sup>, <a href="#SimplePairSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent">Componente de selección simple por parejas</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#RandomSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent">Componente de selección aleatoria</a> <sup class="type-c" title="clase">c</sup>, <a href="#IterativeSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent">Componente de selección iterativa</a> <sup class="type-c" title="clase">c</sup>, <a href="#RouletteWheelSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#RouletteWheelSelectionComponent">Componente de selección por ruleta</a> <sup class="type-c" title="clase">c</sup>, <a href="#TournamentSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent">Componente de selección por torneo</a> <sup class="type-c" title="clase">c</sup>, <a href="#SimplePairSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent">Componente de selección simple por parejas</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1623,6 +2125,42 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent</p>
   <div class="comment">
    <span class="markdown">Componente de selección que selecciona un único individuo en cada invocación, por lo que se aplica repetidamente para seleccionar varios individuos.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#SelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent">Componente de selección</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#SequentialIterativeSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SequentialIterativeSelectionComponent">Componente de selección iterativa secuencial</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SequentialIterativeSelectionComponent">
+  <h3>Componente de selección iterativa secuencial<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#SequentialIterativeSelectionComponent</p>
+  <div class="comment">
+   <span class="markdown">Componente de selección iterativa que selecciona los individuos de la población uno a uno, en orden (p. ej. cada hormiga o cada partícula).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#IterativeSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent">Componente de selección iterativa</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RouletteWheelSelectionComponent">
+  <h3>Componente de selección por ruleta<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#RouletteWheelSelectionComponent</p>
+  <div class="comment">
+   <span class="markdown">Componente de selección que selecciona cada individuo con probabilidad proporcional a su posición según la aptitud.</span>
   </div>
   <dl class="description">
    <dt>
@@ -1663,6 +2201,51 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
+ <div class="entity" id="SubtractionComponent">
+  <h3>Componente de sustracción<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#SubtractionComponent</p>
+  <div class="comment">
+   <span class="markdown">Operador de población que elimina de su entrada las soluciones almacenadas en las estructuras de datos que lee (p. ej. una lista tabú).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#PopulationOperatorComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent">Componente operador de población</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TruncationComponent">
+  <h3>Componente de truncamiento<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#TruncationComponent</p>
+  <div class="comment">
+   <span class="markdown">Operador de población que conserva los mejores individuos hasta el tamaño de población, según la aptitud asignada por los componentes previos (rango y diversidad) o, si no la hay, según los objetivos.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#PopulationOperatorComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent">Componente operador de población</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="UnionComponent">
+  <h3>Componente de unión<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#UnionComponent</p>
+  <div class="comment">
+   <span class="markdown">Operador de población que une, sin repeticiones, las poblaciones que recibe y las soluciones de las estructuras de datos que lee.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#PopulationOperatorComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent">Componente operador de población</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="VariationComponent">
   <h3>Componente de variación<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#VariationComponent</p>
@@ -1680,7 +2263,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     tiene subclases
    </dt>
    <dd>
-    <a href="#BitFlipMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent">Componente de mutación por cambio de bit</a> <sup class="type-c" title="clase">c</sup>, <a href="#InsertionMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#InsertionMutationComponent">Componente de mutación por inserción</a> <sup class="type-c" title="clase">c</sup>, <a href="#SwapMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent">Componente de mutación por intercambio</a> <sup class="type-c" title="clase">c</sup>, <a href="#InversionMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent">Componente de mutación por inversión</a> <sup class="type-c" title="clase">c</sup>, <a href="#RandomResetMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#RandomResetMutationComponent">Componente de mutación por reinicio aleatorio</a> <sup class="type-c" title="clase">c</sup>
+    <a href="#ShakingComponent" title="https://w3id.org/ontologies-ULL/CO-META#ShakingComponent">Componente de agitación</a> <sup class="type-c" title="clase">c</sup>, <a href="#GaussianMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#GaussianMutationComponent">Componente de mutación gaussiana</a> <sup class="type-c" title="clase">c</sup>, <a href="#BitFlipMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent">Componente de mutación por cambio de bit</a> <sup class="type-c" title="clase">c</sup>, <a href="#InsertionMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#InsertionMutationComponent">Componente de mutación por inserción</a> <sup class="type-c" title="clase">c</sup>, <a href="#SwapMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent">Componente de mutación por intercambio</a> <sup class="type-c" title="clase">c</sup>, <a href="#InversionMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent">Componente de mutación por inversión</a> <sup class="type-c" title="clase">c</sup>, <a href="#RandomResetMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#RandomResetMutationComponent">Componente de mutación por reinicio aleatorio</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1794,6 +2377,12 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>
    </dd>
    <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#TabuListUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#TabuListUpdateComponent">Componente de actualización de la lista tabú</a> <sup class="type-c" title="clase">c</sup>, <a href="#VelocityUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#VelocityUpdateComponent">Componente de actualización de la velocidad</a> <sup class="type-c" title="clase">c</sup>, <a href="#BestSolutionsUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent">Componente de actualización de las mejores soluciones</a> <sup class="type-c" title="clase">c</sup>, <a href="#ArchiveUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#ArchiveUpdateComponent">Componente de actualización del archivo</a> <sup class="type-c" title="clase">c</sup>, <a href="#NeighbourhoodChangeComponent" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodChangeComponent">Componente de cambio de vecindario</a> <sup class="type-c" title="clase">c</sup>, <a href="#PheromoneDepositComponent" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneDepositComponent">Componente de depósito de feromonas</a> <sup class="type-c" title="clase">c</sup>, <a href="#GeometricCoolingComponent" title="https://w3id.org/ontologies-ULL/CO-META#GeometricCoolingComponent">Componente de enfriamiento geométrico</a> <sup class="type-c" title="clase">c</sup>, <a href="#PheromoneEvaporationComponent" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporationComponent">Componente de evaporación de feromonas</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
     en dominio de
    </dt>
    <dd>
@@ -1818,7 +2407,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     en dominio de
    </dt>
    <dd>
-    <a href="#supportsShape" title="https://w3id.org/ontologies-ULL/CO-META#supportsShape">admite forma</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasCodeReference" title="https://w3id.org/ontologies-ULL/CO-META#hasCodeReference">has Code Reference</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasInputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasInputSize">has Input Size</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasOutput">has Output</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasOutputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize">has Output Size</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasParameter" title="https://w3id.org/ontologies-ULL/CO-META#hasParameter">has Parameter</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasSafety" title="https://w3id.org/ontologies-ULL/CO-META#hasSafety">has Safety</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#readsData" title="https://w3id.org/ontologies-ULL/CO-META#readsData">reads Data</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#supportsShape" title="https://w3id.org/ontologies-ULL/CO-META#supportsShape">admite forma</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasInputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasInputSize">has Input Size</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasOutput">has Output</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasOutputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize">has Output Size</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasParameter" title="https://w3id.org/ontologies-ULL/CO-META#hasParameter">has Parameter</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasSafety" title="https://w3id.org/ontologies-ULL/CO-META#hasSafety">has Safety</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#readsData" title="https://w3id.org/ontologies-ULL/CO-META#readsData">reads Data</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasCodeReference" title="https://w3id.org/ontologies-ULL/CO-META#hasCodeReference">tiene referencia de código</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
    </dd>
    <dt>
     en rango de
@@ -1888,6 +2477,12 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dt>
    <dd>
     <a href="#ModificationComponent" title="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent">Componente de modificación</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#SubtractionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SubtractionComponent">Componente de sustracción</a> <sup class="type-c" title="clase">c</sup>, <a href="#TruncationComponent" title="https://w3id.org/ontologies-ULL/CO-META#TruncationComponent">Componente de truncamiento</a> <sup class="type-c" title="clase">c</sup>, <a href="#UnionComponent" title="https://w3id.org/ontologies-ULL/CO-META#UnionComponent">Componente de unión</a> <sup class="type-c" title="clase">c</sup>
    </dd>
   </dl>
  </div>
@@ -1970,7 +2565,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <h3>Dominio de valores<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ValueDomain</p>
   <div class="comment">
-   <span class="markdown">Conjunto de valores que puede tomar una magnitud o un parámetro, definido por un conjunto numérico base y cotas inferior y superior opcionales (p. ej., los enteros entre 0 y 1).</span>
+   <span class="markdown">Conjunto de valores que puede tomar una magnitud o un parámetro, definido por un conjunto numérico base y cotas inferior y superior opcionales, inclusivas o exclusivas (p. ej., los enteros entre 0 y 1).</span>
   </div>
   <dl class="description">
    <dt>
@@ -1981,7 +2576,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     en dominio de
    </dt>
    <dd>
-    <a href="#hasLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasLowerBound">tiene cota inferior</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasUpperBound" title="https://w3id.org/ontologies-ULL/CO-META#hasUpperBound">tiene cota superior</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasBaseType" title="https://w3id.org/ontologies-ULL/CO-META#hasBaseType">tiene tipo base</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#hasLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasLowerBound">tiene cota inferior</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasExclusiveLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveLowerBound">tiene cota inferior exclusiva</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasUpperBound" title="https://w3id.org/ontologies-ULL/CO-META#hasUpperBound">tiene cota superior</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasExclusiveUpperBound" title="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveUpperBound">tiene cota superior exclusiva</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasBaseType" title="https://w3id.org/ontologies-ULL/CO-META#hasBaseType">tiene tipo base</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
    <dt>
     en rango de
@@ -1993,7 +2588,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     miembros
    </dt>
    <dd>
-    <a href="#AnyBoolean" title="https://w3id.org/ontologies-ULL/CO-META#AnyBoolean">Cualquier booleano</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#AnyInteger" title="https://w3id.org/ontologies-ULL/CO-META#AnyInteger">Cualquier entero</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#AnyReal" title="https://w3id.org/ontologies-ULL/CO-META#AnyReal">Cualquier real</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#AnySolution" title="https://w3id.org/ontologies-ULL/CO-META#AnySolution">Cualquier solución</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#BinaryIntegers" title="https://w3id.org/ontologies-ULL/CO-META#BinaryIntegers">Enteros binarios</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Enteros no negativos</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PositiveIntegers" title="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers">Enteros positivos</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Intervalo unidad</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Reales no negativos</a> <sup class="type-ni" title="Individuo">ni</sup>
+    <a href="#AnyBoolean" title="https://w3id.org/ontologies-ULL/CO-META#AnyBoolean">Cualquier booleano</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#AnyInteger" title="https://w3id.org/ontologies-ULL/CO-META#AnyInteger">Cualquier entero</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#AnyReal" title="https://w3id.org/ontologies-ULL/CO-META#AnyReal">Cualquier real</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#AnySolution" title="https://w3id.org/ontologies-ULL/CO-META#AnySolution">Cualquier solución</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#BinaryIntegers" title="https://w3id.org/ontologies-ULL/CO-META#BinaryIntegers">Enteros binarios</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Enteros no negativos</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PositiveIntegers" title="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers">Enteros positivos</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Intervalo unidad</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Reales no negativos</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PositiveReals" title="https://w3id.org/ontologies-ULL/CO-META#PositiveReals">Reales positivos</a> <sup class="type-ni" title="Individuo">ni</sup>
    </dd>
    <dt>
     disjunto a
@@ -2047,7 +2642,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     en rango de
    </dt>
    <dd>
-    <a href="#hasLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasLowerBound">tiene cota inferior</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasUpperBound" title="https://w3id.org/ontologies-ULL/CO-META#hasUpperBound">tiene cota superior</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasLength" title="https://w3id.org/ontologies-ULL/CO-META#hasLength">tiene longitud</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasColumnCount" title="https://w3id.org/ontologies-ULL/CO-META#hasColumnCount">tiene número de columnas</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasRowCount" title="https://w3id.org/ontologies-ULL/CO-META#hasRowCount">tiene número de filas</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#hasLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasLowerBound">tiene cota inferior</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasExclusiveLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveLowerBound">tiene cota inferior exclusiva</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasUpperBound" title="https://w3id.org/ontologies-ULL/CO-META#hasUpperBound">tiene cota superior</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasExclusiveUpperBound" title="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveUpperBound">tiene cota superior exclusiva</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasLength" title="https://w3id.org/ontologies-ULL/CO-META#hasLength">tiene longitud</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasColumnCount" title="https://w3id.org/ontologies-ULL/CO-META#hasColumnCount">tiene número de columnas</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasRowCount" title="https://w3id.org/ontologies-ULL/CO-META#hasRowCount">tiene número de filas</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
    <dt>
     disjunto a
@@ -2560,7 +3155,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     miembros
    </dt>
    <dd>
-    <a href="#CrossoverKPoints" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints">Crossover K Points</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#CrossoverProbability" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability">Crossover Probability</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#Elitism" title="https://w3id.org/ontologies-ULL/CO-META#Elitism">Elitism</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#Iterations" title="https://w3id.org/ontologies-ULL/CO-META#Iterations">Iterations</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#MutationProbability" title="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">Mutation Probability</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PopulationSize" title="https://w3id.org/ontologies-ULL/CO-META#PopulationSize">Population Size</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#StorageSize" title="https://w3id.org/ontologies-ULL/CO-META#StorageSize">Storage Size</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">Time</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#TournamentSize" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSize">Tournament Size</a> <sup class="type-ni" title="Individuo">ni</sup>
+    <a href="#BlendAlpha" title="https://w3id.org/ontologies-ULL/CO-META#BlendAlpha">Alfa de mezcla</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#CrossoverKPoints" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints">Crossover K Points</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#CrossoverProbability" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability">Crossover Probability</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#Elitism" title="https://w3id.org/ontologies-ULL/CO-META#Elitism">Elitism</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#GlobalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">Global Best Influence</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#HeuristicInfluence" title="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence">Heuristic Influence</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#InertiaFactor" title="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor">Inertia Factor</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#MutationStrength" title="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">Intensidad de mutación</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#Iterations" title="https://w3id.org/ontologies-ULL/CO-META#Iterations">Iterations</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#MaxTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature">Max Temperature</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#MinTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MinTemperature">Min Temperature</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#MutationProbability" title="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">Mutation Probability</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PersonalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence">Personal Best Influence</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PheromoneAddition" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition">Pheromone Addition</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PheromoneEvaporation" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation">Pheromone Evaporation</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PheromoneInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence">Pheromone Influence</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PopulationSize" title="https://w3id.org/ontologies-ULL/CO-META#PopulationSize">Population Size</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#RCLRandomness" title="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness">R C L Randomness</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#StorageSize" title="https://w3id.org/ontologies-ULL/CO-META#StorageSize">Storage Size</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">Time</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#TournamentSize" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSize">Tournament Size</a> <sup class="type-ni" title="Individuo">ni</sup>
    </dd>
    <dt>
     disjunto a
@@ -3009,7 +3604,9 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#hasColumn" title="https://w3id.org/ontologies-ULL/CO-META#hasColumn">tiene columna</a></li>
   <li><a href="#hasComponent" title="https://w3id.org/ontologies-ULL/CO-META#hasComponent">tiene componente</a></li>
   <li><a href="#hasLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasLowerBound">tiene cota inferior</a></li>
+  <li><a href="#hasExclusiveLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveLowerBound">tiene cota inferior exclusiva</a></li>
   <li><a href="#hasUpperBound" title="https://w3id.org/ontologies-ULL/CO-META#hasUpperBound">tiene cota superior</a></li>
+  <li><a href="#hasExclusiveUpperBound" title="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveUpperBound">tiene cota superior exclusiva</a></li>
   <li><a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a></li>
   <li><a href="#hasProblemElement" title="https://w3id.org/ontologies-ULL/CO-META#hasProblemElement">tiene elemento del problema</a></li>
   <li><a href="#hasShape" title="https://w3id.org/ontologies-ULL/CO-META#hasShape">tiene forma</a></li>
@@ -3516,7 +4113,31 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <h3>tiene cota inferior<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasLowerBound</p>
   <div class="comment">
-   <span class="markdown">Menor valor de un dominio de valores. Si no se indica, no se impone cota inferior.</span>
+   <span class="markdown">Menor valor de un dominio de valores, incluido en él. Si no se indica ni esta ni hasExclusiveLowerBound, no se impone cota inferior.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#ValueDomain">Dominio de valores</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#ValueSpecification" title="https://w3id.org/ontologies-ULL/CO-META#ValueSpecification">Especificación de valor</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasExclusiveLowerBound">
+  <h3>tiene cota inferior exclusiva<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasExclusiveLowerBound</p>
+  <div class="comment">
+   <span class="markdown">Valor del que todos los valores de un dominio de valores son mayores, sin alcanzarlo. Un dominio de valores tiene como mucho una cota inferior, inclusiva (hasLowerBound) o exclusiva.</span>
   </div>
   <div class="description">
    <p><strong>tiene características: </strong> funcional</p>
@@ -3540,7 +4161,31 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <h3>tiene cota superior<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasUpperBound</p>
   <div class="comment">
-   <span class="markdown">Mayor valor de un dominio de valores. Si no se indica, no se impone cota superior.</span>
+   <span class="markdown">Mayor valor de un dominio de valores, incluido en él. Si no se indica ni esta ni hasExclusiveUpperBound, no se impone cota superior.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#ValueDomain">Dominio de valores</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#ValueSpecification" title="https://w3id.org/ontologies-ULL/CO-META#ValueSpecification">Especificación de valor</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasExclusiveUpperBound">
+  <h3>tiene cota superior exclusiva<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasExclusiveUpperBound</p>
+  <div class="comment">
+   <span class="markdown">Valor del que todos los valores de un dominio de valores son menores, sin alcanzarlo. Un dominio de valores tiene como mucho una cota superior, inclusiva (hasUpperBound) o exclusiva.</span>
   </div>
   <div class="description">
    <p><strong>tiene características: </strong> funcional</p>
@@ -3759,7 +4404,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#isImplicit" title="https://w3id.org/ontologies-ULL/CO-META#isImplicit">es implícito</a></li>
   <li><a href="#isOrdered" title="https://w3id.org/ontologies-ULL/CO-META#isOrdered">es ordenada</a></li>
   <li><a href="#isDistinct" title="https://w3id.org/ontologies-ULL/CO-META#isDistinct">es sin repeticiones</a></li>
-  <li><a href="#hasCodeReference" title="https://w3id.org/ontologies-ULL/CO-META#hasCodeReference"> <span>has Code Reference</span> </a></li>
   <li><a href="#hasInputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasInputSize"> <span>has Input Size</span> </a></li>
   <li><a href="#hasOutputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"> <span>has Output Size</span> </a></li>
   <li><a href="#hasValue" title="https://w3id.org/ontologies-ULL/CO-META#hasValue"> <span>has Value</span> </a></li>
@@ -3767,6 +4411,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#hasIdentifier" title="https://w3id.org/ontologies-ULL/CO-META#hasIdentifier">tiene identificador</a></li>
   <li><a href="#hasWeight" title="https://w3id.org/ontologies-ULL/CO-META#hasWeight">tiene peso</a></li>
   <li><a href="#hasPosition" title="https://w3id.org/ontologies-ULL/CO-META#hasPosition">tiene posición</a></li>
+  <li><a href="#hasCodeReference" title="https://w3id.org/ontologies-ULL/CO-META#hasCodeReference">tiene referencia de código</a></li>
   <li><a href="#hasLatexSymbol" title="https://w3id.org/ontologies-ULL/CO-META#hasLatexSymbol">tiene símbolo LaTeX</a></li>
   <li><a href="#hasLiteralValue" title="https://w3id.org/ontologies-ULL/CO-META#hasLiteralValue">tiene valor literal</a></li>
   <li><a href="#hasDimensionIndex" title="https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex">tiene índice de dimensión</a></li>
@@ -3839,26 +4484,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="hasCodeReference">
-  <h3>has Code Reference<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasCodeReference</p>
-  <div class="description">
-   <dl>
-    <dt>
-     dominio
-    </dt>
-    <dd>
-     <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>
-    </dd>
-    <dt>
-     rango
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
@@ -4014,6 +4639,29 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dl>
   </div>
  </div>
+ <div class="entity" id="hasCodeReference">
+  <h3>tiene referencia de código<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasCodeReference</p>
+  <div class="comment">
+   <span class="markdown">Clave de una implementación del componente en un programa que ejecuta metaheurísticas (p. ej. "cometa:swap-mutation"). Selecciona esa implementación de forma explícita; si no se indica, se usa la clase más específica del componente.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Componente metaheurístico</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="hasLatexSymbol">
   <h3>tiene símbolo LaTeX<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasLatexSymbol</p>
@@ -4118,6 +4766,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
  <h3 id="namedindividuals" class="list">Individuos</h3>
  <ul class="hlist">
+  <li><a href="#BlendAlpha" title="https://w3id.org/ontologies-ULL/CO-META#BlendAlpha">Alfa de mezcla</a></li>
   <li><a href="#Booleans" title="https://w3id.org/ontologies-ULL/CO-META#Booleans">Booleanos</a></li>
   <li><a href="#Both" title="https://w3id.org/ontologies-ULL/CO-META#Both"> <span>Both</span> </a></li>
   <li><a href="#Zero" title="https://w3id.org/ontologies-ULL/CO-META#Zero">Cero</a></li>
@@ -4133,12 +4782,24 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Enteros no negativos</a></li>
   <li><a href="#PositiveIntegers" title="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers">Enteros positivos</a></li>
   <li><a href="#Scalar" title="https://w3id.org/ontologies-ULL/CO-META#Scalar">Escalar</a></li>
+  <li><a href="#GlobalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence"> <span>Global Best Influence</span> </a></li>
+  <li><a href="#HeuristicInfluence" title="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence"> <span>Heuristic Influence</span> </a></li>
+  <li><a href="#InertiaFactor" title="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor"> <span>Inertia Factor</span> </a></li>
+  <li><a href="#MutationStrength" title="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">Intensidad de mutación</a></li>
   <li><a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Intervalo unidad</a></li>
   <li><a href="#Iterations" title="https://w3id.org/ontologies-ULL/CO-META#Iterations"> <span>Iterations</span> </a></li>
+  <li><a href="#MaxTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature"> <span>Max Temperature</span> </a></li>
+  <li><a href="#MinTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MinTemperature"> <span>Min Temperature</span> </a></li>
   <li><a href="#MutationProbability" title="https://w3id.org/ontologies-ULL/CO-META#MutationProbability"> <span>Mutation Probability</span> </a></li>
+  <li><a href="#PersonalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence"> <span>Personal Best Influence</span> </a></li>
+  <li><a href="#PheromoneAddition" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition"> <span>Pheromone Addition</span> </a></li>
+  <li><a href="#PheromoneEvaporation" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation"> <span>Pheromone Evaporation</span> </a></li>
+  <li><a href="#PheromoneInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence"> <span>Pheromone Influence</span> </a></li>
   <li><a href="#PopulationSize" title="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"> <span>Population Size</span> </a></li>
+  <li><a href="#RCLRandomness" title="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness"> <span>R C L Randomness</span> </a></li>
   <li><a href="#Reals" title="https://w3id.org/ontologies-ULL/CO-META#Reals">Reales</a></li>
   <li><a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Reales no negativos</a></li>
+  <li><a href="#PositiveReals" title="https://w3id.org/ontologies-ULL/CO-META#PositiveReals">Reales positivos</a></li>
   <li><a href="#Safe" title="https://w3id.org/ontologies-ULL/CO-META#Safe"> <span>Safe</span> </a></li>
   <li><a href="#Solutions" title="https://w3id.org/ontologies-ULL/CO-META#Solutions">Soluciones</a></li>
   <li><a href="#StorageSize" title="https://w3id.org/ontologies-ULL/CO-META#StorageSize"> <span>Storage Size</span> </a></li>
@@ -4149,6 +4810,27 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#One" title="https://w3id.org/ontologies-ULL/CO-META#One">Uno</a></li>
   <li><a href="#Unsafe" title="https://w3id.org/ontologies-ULL/CO-META#Unsafe"> <span>Unsafe</span> </a></li>
  </ul>
+ <div class="entity" id="BlendAlpha">
+  <h3>Alfa de mezcla<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#BlendAlpha</p>
+  <div class="comment">
+   <span class="markdown">Ampliación del intervalo de los progenitores en un cruce por mezcla, como fracción de su anchura.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Reales no negativos</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="Booleans">
   <h3>Booleanos<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#Booleans</p>
@@ -4440,6 +5122,81 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
+ <div class="entity" id="GlobalBestInfluence">
+  <h3>Global Best Influence<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Reales no negativos</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HeuristicInfluence">
+  <h3>Heuristic Influence<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Reales no negativos</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InertiaFactor">
+  <h3>Inertia Factor<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#InertiaFactor</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Intervalo unidad</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MutationStrength">
+  <h3>Intensidad de mutación<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#MutationStrength</p>
+  <div class="comment">
+   <span class="markdown">Desviación típica de una mutación gaussiana, como fracción de la anchura del dominio.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Intervalo unidad</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="UnitInterval">
   <h3>Intervalo unidad<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#UnitInterval</p>
@@ -4485,6 +5242,42 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
+ <div class="entity" id="MaxTemperature">
+  <h3>Max Temperature<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#MaxTemperature</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#PositiveReals" title="https://w3id.org/ontologies-ULL/CO-META#PositiveReals">Reales positivos</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MinTemperature">
+  <h3>Min Temperature<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#MinTemperature</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#PositiveReals" title="https://w3id.org/ontologies-ULL/CO-META#PositiveReals">Reales positivos</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="MutationProbability">
   <h3>Mutation Probability<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#MutationProbability</p>
@@ -4503,6 +5296,78 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
+ <div class="entity" id="PersonalBestInfluence">
+  <h3>Personal Best Influence<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Reales no negativos</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PheromoneAddition">
+  <h3>Pheromone Addition<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Enteros no negativos</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PheromoneEvaporation">
+  <h3>Pheromone Evaporation<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Intervalo unidad</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PheromoneInfluence">
+  <h3>Pheromone Influence<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Reales no negativos</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="PopulationSize">
   <h3>Population Size<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#PopulationSize</p>
@@ -4518,6 +5383,24 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dt>
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Enteros no negativos</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RCLRandomness">
+  <h3>R C L Randomness<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#RCLRandomness</p>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Intervalo unidad</a> <sup class="type-ni" title="Individuo">ni</sup>
    </dd>
   </dl>
  </div>
@@ -4557,6 +5440,30 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
    <dd>
     <a href="#hasLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasLowerBound">tiene cota inferior</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#Zero" title="https://w3id.org/ontologies-ULL/CO-META#Zero">Cero</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PositiveReals">
+  <h3>Reales positivos<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#PositiveReals</p>
+  <div class="comment">
+   <span class="markdown">Dominio de valores con los reales mayores que 0 (p. ej., una temperatura).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#ValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#ValueDomain">Dominio de valores</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasBaseType" title="https://w3id.org/ontologies-ULL/CO-META#hasBaseType">tiene tipo base</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#Reals" title="https://w3id.org/ontologies-ULL/CO-META#Reals">Reales</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasExclusiveLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveLowerBound">tiene cota inferior exclusiva</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#Zero" title="https://w3id.org/ontologies-ULL/CO-META#Zero">Cero</a> <sup class="type-ni" title="Individuo">ni</sup>
    </dd>
   </dl>
  </div>

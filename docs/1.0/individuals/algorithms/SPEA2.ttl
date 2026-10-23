@@ -55,19 +55,20 @@ CO-META:SPEA2_crossover rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour
 CO-META:SPEA2_diversity_preservation_kth_nearest_neighbour rdf:type owl:NamedIndividual ,
-                                                                    CO-META:DiversityPreservationComponent ;
+                                                                    CO-META:NearestNeighbourDensityComponent ;
                                                            CO-META:hasOutput CO-META:SPEA2_truncation .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness
 CO-META:SPEA2_fitness_assignment_raw_fitness rdf:type owl:NamedIndividual ,
-                                                      CO-META:FitnessAssignmentComponent ;
+                                                      CO-META:StrengthFitnessComponent ;
                                              CO-META:hasOutput CO-META:SPEA2_diversity_preservation_kth_nearest_neighbour .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population
 CO-META:SPEA2_generate_population rdf:type owl:NamedIndividual ,
-                                           CO-META:PopulationGenerationComponent ;
+                                           CO-META:PopulationGenerationComponent ,
+                                           CO-META:RandomGenerationComponent ;
                                   CO-META:hasOutputStart CO-META:SPEA2_stop ;
                                   CO-META:hasParameter CO-META:SPEA2_parameter_populationsize .
 
@@ -122,6 +123,12 @@ CO-META:SPEA2_parameter_storagesize_reference rdf:type owl:NamedIndividual ,
                                               CO-META:refersTo CO-META:SPEA2_parameter_storagesize .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_truncationsize
+CO-META:SPEA2_parameter_truncationsize rdf:type owl:NamedIndividual ,
+                                                CO-META:ParameterValue ;
+                                       CO-META:hasType CO-META:PopulationSize .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop
 CO-META:SPEA2_stop rdf:type owl:NamedIndividual ,
                             CO-META:StoppingCriterionComponent ;
@@ -131,7 +138,7 @@ CO-META:SPEA2_stop rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_store_solutions
 CO-META:SPEA2_store_solutions rdf:type owl:NamedIndividual ,
-                                       CO-META:DataHandlerComponent ;
+                                       CO-META:ArchiveUpdateComponent ;
                               CO-META:hasOutputStart CO-META:SPEA2_next_generation ;
                               CO-META:hasParameter CO-META:SPEA2_parameter_storagesize ;
                               CO-META:writesData CO-META:SPEA2_archive .
@@ -139,13 +146,14 @@ CO-META:SPEA2_store_solutions rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation
 CO-META:SPEA2_truncation rdf:type owl:NamedIndividual ,
-                                  CO-META:PopulationOperatorComponent ;
-                         CO-META:hasOutput CO-META:SPEA2_store_solutions .
+                                  CO-META:TruncationComponent ;
+                         CO-META:hasOutput CO-META:SPEA2_store_solutions ;
+                         CO-META:hasParameter CO-META:SPEA2_parameter_truncationsize .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_union
 CO-META:SPEA2_union rdf:type owl:NamedIndividual ,
-                             CO-META:PopulationOperatorComponent ;
+                             CO-META:UnionComponent ;
                     CO-META:hasOutput CO-META:SPEA2_fitness_assignment_raw_fitness ;
                     CO-META:readsData CO-META:SPEA2_archive .
 

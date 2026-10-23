@@ -168,6 +168,36 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasExclusiveLowerBound -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveLowerBound">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ValueDomain"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"/>
+        <rdfs:comment xml:lang="es">Valor del que todos los valores de un dominio de valores son mayores, sin alcanzarlo. Un dominio de valores tiene como mucho una cota inferior, inclusiva (hasLowerBound) o exclusiva.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Value that every value of a value domain is greater than, without reaching it. A value domain has at most one lower bound, inclusive (hasLowerBound) or exclusive.</rdfs:comment>
+        <rdfs:label xml:lang="en">has exclusive lower bound</rdfs:label>
+        <rdfs:label xml:lang="es">tiene cota inferior exclusiva</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasExclusiveUpperBound -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveUpperBound">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ValueDomain"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"/>
+        <rdfs:comment xml:lang="es">Valor del que todos los valores de un dominio de valores son menores, sin alcanzarlo. Un dominio de valores tiene como mucho una cota superior, inclusiva (hasUpperBound) o exclusiva.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Value that every value of a value domain is less than, without reaching it. A value domain has at most one upper bound, inclusive (hasUpperBound) or exclusive.</rdfs:comment>
+        <rdfs:label xml:lang="en">has exclusive upper bound</rdfs:label>
+        <rdfs:label xml:lang="es">tiene cota superior exclusiva</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#hasInput -->
 
 
@@ -220,8 +250,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ValueDomain"/>
         <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"/>
-        <rdfs:comment xml:lang="es">Menor valor de un dominio de valores. Si no se indica, no se impone cota inferior.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Smallest value of a value domain. If it is not stated, no lower bound is imposed.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Menor valor de un dominio de valores, incluido en él. Si no se indica ni esta ni hasExclusiveLowerBound, no se impone cota inferior.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Smallest value of a value domain, included in it. If neither it nor hasExclusiveLowerBound is stated, no lower bound is imposed.</rdfs:comment>
         <rdfs:label xml:lang="en">has lower bound</rdfs:label>
         <rdfs:label xml:lang="es">tiene cota inferior</rdfs:label>
     </owl:ObjectProperty>
@@ -381,8 +411,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ValueDomain"/>
         <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"/>
-        <rdfs:comment xml:lang="en">Largest value of a value domain. If it is not stated, no upper bound is imposed.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Mayor valor de un dominio de valores. Si no se indica, no se impone cota superior.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Largest value of a value domain, included in it. If neither it nor hasExclusiveUpperBound is stated, no upper bound is imposed.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Mayor valor de un dominio de valores, incluido en él. Si no se indica ni esta ni hasExclusiveUpperBound, no se impone cota superior.</rdfs:comment>
         <rdfs:label xml:lang="en">has upper bound</rdfs:label>
         <rdfs:label xml:lang="es">tiene cota superior</rdfs:label>
     </owl:ObjectProperty>
@@ -538,6 +568,10 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasCodeReference">
         <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="es">Clave de una implementación del componente en un programa que ejecuta metaheurísticas (p. ej. &quot;cometa:swap-mutation&quot;). Selecciona esa implementación de forma explícita; si no se indica, se usa la clase más específica del componente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Key of an implementation of the component in a program that runs metaheuristics (e.g. &quot;cometa:swap-mutation&quot;). It selects that implementation explicitly; without it, the most specific class of the component is used.</rdfs:comment>
+        <rdfs:label xml:lang="en">has code reference</rdfs:label>
+        <rdfs:label xml:lang="es">tiene referencia de código</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -810,6 +844,54 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#AntConstructionComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#AntConstructionComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Componente de construcción que crea cada solución eligiendo el siguiente elemento con probabilidad proporcional a feromona^alfa · heurística^beta, donde las feromonas son la matriz que lee el componente, y alfa y beta sus parámetros de influencia de la feromona y de la heurística.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction component that builds each solution by choosing the next element with probability proportional to pheromone^alpha · heuristic^beta, where the pheromones are the matrix the component reads, and alpha and beta its pheromone and heuristic influence parameters.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ant Construction Component</rdfs:label>
+        <rdfs:label xml:lang="es">Componente de construcción por hormigas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ArchiveUpdateComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ArchiveUpdateComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <rdfs:comment xml:lang="en">Data handler that replaces the content of the archive it writes with the solutions it receives, and passes them on.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Manejador de datos que sustituye el contenido del archivo que escribe por las soluciones que recibe, y las deja pasar.</rdfs:comment>
+        <rdfs:label xml:lang="en">Archive Update Component</rdfs:label>
+        <rdfs:label xml:lang="es">Componente de actualización del archivo</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#BaseType -->
 
 
@@ -858,6 +940,20 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent"/>
+        <rdfs:comment xml:lang="en">Data handler that keeps in the structure it writes the best solution seen: a single one for a scalar structure, or one per position (e.g. per particle) for a collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Manejador de datos que conserva en la estructura que escribe la mejor solución vista: una única para una estructura escalar, o una por posición (p. ej. por partícula) para una colección.</rdfs:comment>
+        <rdfs:label xml:lang="en">Best Solutions Update Component</rdfs:label>
+        <rdfs:label xml:lang="es">Componente de actualización de las mejores soluciones</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent -->
 
 
@@ -880,6 +976,30 @@
         <rdfs:comment xml:lang="es">Vecindario de los vectores binarios que difieren en una posición.</rdfs:comment>
         <rdfs:label xml:lang="en">Bit Flip Neighbourhood Component</rdfs:label>
         <rdfs:label xml:lang="es">Componente de vecindario de cambio de bit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#BlendCrossoverComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#BlendCrossoverComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#BlendAlpha"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Componente de cruce para valores reales que obtiene cada valor del descendiente de forma uniforme en el intervalo de los valores de los progenitores ampliado en alfa veces su anchura (BLX-alfa).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Crossover component for real values that draws each offspring value uniformly from the interval of the parents&apos; values extended by alpha times its width (BLX-alpha).</rdfs:comment>
+        <rdfs:label xml:lang="en">Blend Crossover Component</rdfs:label>
+        <rdfs:label xml:lang="es">Componente de cruce por mezcla</rdfs:label>
     </owl:Class>
     
 
@@ -1052,6 +1172,19 @@
         <rdfs:comment xml:lang="en">Modification component that produces one or more offspring individuals by recombining two or more parent individuals. It has a crossover probability parameter.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de cruce</rdfs:label>
         <rdfs:label xml:lang="en">Crossover Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#CrowdingDistanceComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#CrowdingDistanceComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent"/>
+        <rdfs:comment xml:lang="es">Componente de preservación de la diversidad que mide, dentro de cada frente, el tamaño del cuboide alrededor de cada individuo en el espacio de objetivos.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Diversity preservation component that measures, within each front, the size of the cuboid around each individual in objective space.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de distancia de hacinamiento</rdfs:label>
+        <rdfs:label xml:lang="en">Crowding Distance Component</rdfs:label>
     </owl:Class>
     
 
@@ -1240,6 +1373,30 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GaussianMutationComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#GaussianMutationComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VariationComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MutationStrength"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Componente de variación que suma ruido normal a valores reales, con una desviación típica igual a la intensidad de mutación por la anchura del dominio.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Variation component that adds normal noise to real values, with a standard deviation equal to the mutation strength times the width of the domain.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de mutación gaussiana</rdfs:label>
+        <rdfs:label xml:lang="en">Gaussian Mutation Component</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#GenerationComponent -->
 
 
@@ -1249,6 +1406,65 @@
         <rdfs:comment xml:lang="es">Componente que genera una solución inicial o una población inicial.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de generación</rdfs:label>
         <rdfs:label xml:lang="en">Generation Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GeometricCoolingComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#GeometricCoolingComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MinTemperature"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Data handler that lowers the temperature it writes geometrically, from the maximum temperature at the start to the minimum one when the iteration budget of the enclosing stopping criterion is spent.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Manejador de datos que reduce de forma geométrica la temperatura que escribe, desde la temperatura máxima al principio hasta la mínima cuando se agota el presupuesto de iteraciones del criterio de parada que lo contiene.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de enfriamiento geométrico</rdfs:label>
+        <rdfs:label xml:lang="en">Geometric Cooling Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GreedyRandomizedConstructionComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#GreedyRandomizedConstructionComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Componente de construcción que añade un elemento cada vez, elegido al azar de una lista restringida de candidatos (RCL) construida con la información heurística del problema. Su parámetro de aleatoriedad de la RCL va de puramente voraz (0) a puramente aleatorio (1).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction component that adds one element at a time, chosen at random from a restricted candidate list (RCL) built from the heuristic information of the problem. Its RCL randomness parameter goes from purely greedy (0) to purely random (1).</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de construcción voraz aleatorizada</rdfs:label>
+        <rdfs:label xml:lang="en">Greedy Randomized Construction Component</rdfs:label>
     </owl:Class>
     
 
@@ -1668,6 +1884,32 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NearestNeighbourDensityComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#NearestNeighbourDensityComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent"/>
+        <rdfs:comment xml:lang="es">Componente de preservación de la diversidad que estima la densidad alrededor de cada individuo a partir de la distancia a su k-ésimo vecino más cercano en el espacio de objetivos (SPEA2).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Diversity preservation component that estimates the density around each individual from the distance to its k-th nearest neighbour in objective space (SPEA2).</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de densidad del vecino más cercano</rdfs:label>
+        <rdfs:label xml:lang="en">Nearest Neighbour Density Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodChangeComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodChangeComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <rdfs:comment xml:lang="en">Data handler that resets the neighbourhood index it writes to 1 when the candidate improves the current solution and increases it otherwise, back to 1 after its upper bound.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Manejador de datos que reinicia a 1 el índice de vecindario que escribe cuando la candidata mejora la solución actual y lo incrementa en otro caso, volviendo a 1 tras su cota superior.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de cambio de vecindario</rdfs:label>
+        <rdfs:label xml:lang="en">Neighbourhood Change Component</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent -->
 
 
@@ -1677,6 +1919,19 @@
         <rdfs:comment xml:lang="en">Modification component that generates neighbouring solutions of a given solution by applying a move operator.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de vecindario</rdfs:label>
         <rdfs:label xml:lang="en">Neighbourhood Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NonDominatedSortingComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#NonDominatedSortingComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent"/>
+        <rdfs:comment xml:lang="es">Componente de asignación de aptitud que clasifica cada individuo según el frente no dominado al que pertenece.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Fitness assignment component that ranks each individual by the non-dominated front it belongs to.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de ordenación no dominada</rdfs:label>
+        <rdfs:label xml:lang="en">Non-Dominated Sorting Component</rdfs:label>
     </owl:Class>
     
 
@@ -1795,6 +2050,54 @@
         <rdfs:comment xml:lang="es">Variable de decisión formada por una ordenación de valores sin repeticiones. Cuando su longitud coincide con el número de valores posibles es una permutación completa (p. ej., el recorrido por las ciudades en el TSP); si no, es una permutación parcial. Se deduce de la forma, por lo que no es necesario declararla.</rdfs:comment>
         <rdfs:label xml:lang="en">Permutation Variable</rdfs:label>
         <rdfs:label xml:lang="es">Variable de permutación</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PheromoneDepositComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneDepositComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Data handler that adds, on the elements used by each solution it receives, the pheromone addition divided by the solution&apos;s cost.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Manejador de datos que añade, en los elementos que usa cada solución que recibe, la adición de feromona dividida por el coste de la solución.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de depósito de feromonas</rdfs:label>
+        <rdfs:label xml:lang="en">Pheromone Deposit Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporationComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporationComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Data handler that multiplies every pheromone it writes by (1 - evaporation rate).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Manejador de datos que multiplica cada feromona que escribe por (1 - tasa de evaporación).</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de evaporación de feromonas</rdfs:label>
+        <rdfs:label xml:lang="en">Pheromone Evaporation Component</rdfs:label>
     </owl:Class>
     
 
@@ -2020,6 +2323,19 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#RandomGenerationComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#RandomGenerationComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
+        <rdfs:comment xml:lang="es">Componente de generación que obtiene cada solución de forma uniformemente aleatoria a partir de la representación de las variables de decisión.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Generation component that draws each solution uniformly at random from the representation of the decision variables.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de generación aleatoria</rdfs:label>
+        <rdfs:label xml:lang="en">Random Generation Component</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#RandomResetMutationComponent -->
 
 
@@ -2048,6 +2364,25 @@
         <rdfs:comment xml:lang="en">Selection component that selects a pair of individuals at random.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de selección aleatoria</rdfs:label>
         <rdfs:label xml:lang="en">Random Selection Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#RouletteWheelSelectionComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#RouletteWheelSelectionComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Componente de selección que selecciona cada individuo con probabilidad proporcional a su posición según la aptitud.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Selection component that selects each individual with probability proportional to its fitness rank.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de selección por ruleta</rdfs:label>
+        <rdfs:label xml:lang="en">Roulette Wheel Selection Component</rdfs:label>
     </owl:Class>
     
 
@@ -2168,6 +2503,19 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SequentialIterativeSelectionComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SequentialIterativeSelectionComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent"/>
+        <rdfs:comment xml:lang="es">Componente de selección iterativa que selecciona los individuos de la población uno a uno, en orden (p. ej. cada hormiga o cada partícula).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Iterative selection component that selects the individuals of the population one by one, in order (e.g. each ant or each particle).</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de selección iterativa secuencial</rdfs:label>
+        <rdfs:label xml:lang="en">Sequential Iterative Selection Component</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#SetShape -->
 
 
@@ -2216,6 +2564,19 @@
         <rdfs:comment xml:lang="es">Variable de decisión formada por una selección no ordenada de valores sin repeticiones (p. ej., las k ubicaciones en las que se abren instalaciones). Se deduce de la forma, por lo que no es necesario declararla.</rdfs:comment>
         <rdfs:label xml:lang="en">Set Variable</rdfs:label>
         <rdfs:label xml:lang="es">Variable de conjunto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ShakingComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ShakingComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#VariationComponent"/>
+        <rdfs:comment xml:lang="es">Componente de variación que aplica k movimientos aleatorios de un vecindario, donde k es el valor de la estructura de datos que lee (el vecindario actual de una búsqueda de vecindario variable).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Variation component that applies k random moves of a neighbourhood, where k is the value of the data structure it reads (the current neighbourhood of a variable neighbourhood search).</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de agitación</rdfs:label>
+        <rdfs:label xml:lang="en">Shaking Component</rdfs:label>
     </owl:Class>
     
 
@@ -2386,6 +2747,32 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#StrengthFitnessComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#StrengthFitnessComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent"/>
+        <rdfs:comment xml:lang="es">Componente de asignación de aptitud que da a cada individuo la suma de las fuerzas (número de individuos dominados) de los que lo dominan (aptitud bruta de SPEA2).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Fitness assignment component that gives each individual the sum of the strengths (number of dominated individuals) of those that dominate it (SPEA2 raw fitness).</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de aptitud por fuerza</rdfs:label>
+        <rdfs:label xml:lang="en">Strength Fitness Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SubtractionComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SubtractionComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
+        <rdfs:comment xml:lang="es">Operador de población que elimina de su entrada las soluciones almacenadas en las estructuras de datos que lee (p. ej. una lista tabú).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Population operator that removes from its input the solutions stored in the data structures it reads (e.g. a tabu list).</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de sustracción</rdfs:label>
+        <rdfs:label xml:lang="en">Subtraction Component</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent -->
 
 
@@ -2474,6 +2861,30 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TabuListUpdateComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#TabuListUpdateComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StorageSize"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Data handler that stores the solutions it receives in the list it writes, discarding the oldest beyond the storage size, and passes them on.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Manejador de datos que almacena las soluciones que recibe en la lista que escribe, descartando las más antiguas por encima del tamaño de almacenamiento, y las deja pasar.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de actualización de la lista tabú</rdfs:label>
+        <rdfs:label xml:lang="en">Tabu List Update Component</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent -->
 
 
@@ -2504,6 +2915,30 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TruncationComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#TruncationComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Operador de población que conserva los mejores individuos hasta el tamaño de población, según la aptitud asignada por los componentes previos (rango y diversidad) o, si no la hay, según los objetivos.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Population operator that keeps the best individuals up to the population size, according to the fitness assigned by the previous components (rank and diversity) or, without it, to the objectives.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de truncamiento</rdfs:label>
+        <rdfs:label xml:lang="en">Truncation Component</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent -->
 
 
@@ -2519,6 +2954,19 @@
         <rdfs:comment xml:lang="es">Vecindario de las permutaciones obtenidas invirtiendo un segmento (movimiento 2-opt).</rdfs:comment>
         <rdfs:label xml:lang="en">2-opt Neighbourhood Component</rdfs:label>
         <rdfs:label xml:lang="es">Componente de vecindario 2-opt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#UnionComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#UnionComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationOperatorComponent"/>
+        <rdfs:comment xml:lang="es">Operador de población que une, sin repeticiones, las poblaciones que recibe y las soluciones de las estructuras de datos que lee.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Population operator that joins, without repetitions, the populations it receives and the solutions of the data structures it reads.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de unión</rdfs:label>
+        <rdfs:label xml:lang="en">Union Component</rdfs:label>
     </owl:Class>
     
 
@@ -2541,13 +2989,49 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ValueDomain">
         <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveLowerBound"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasLowerBound"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveUpperBound"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasUpperBound"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasBaseType"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="es">Conjunto de valores que puede tomar una magnitud o un parámetro, definido por un conjunto numérico base y cotas inferior y superior opcionales (p. ej., los enteros entre 0 y 1).</rdfs:comment>
-        <rdfs:comment xml:lang="en">Set of values that a quantity or parameter can take, defined by a base number set and optional lower and upper bounds (e.g. the integers between 0 and 1).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Conjunto de valores que puede tomar una magnitud o un parámetro, definido por un conjunto numérico base y cotas inferior y superior opcionales, inclusivas o exclusivas (p. ej., los enteros entre 0 y 1).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Set of values that a quantity or parameter can take, defined by a base number set and optional lower and upper bounds, inclusive or exclusive (e.g. the integers between 0 and 1).</rdfs:comment>
         <rdfs:label xml:lang="es">Dominio de valores</rdfs:label>
         <rdfs:label xml:lang="en">Value Domain</rdfs:label>
     </owl:Class>
@@ -2575,6 +3059,65 @@
         <rdfs:comment xml:lang="en">Modification component that introduces small random changes to a solution (mutation).</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de variación</rdfs:label>
         <rdfs:label xml:lang="en">Variation Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VelocityApplicationComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#VelocityApplicationComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
+        <rdfs:comment xml:lang="es">Componente de modificación que desplaza cada partícula que recibe según su velocidad: sumada a los valores reales, o mediante una sigmoide como probabilidad de un 1 en valores binarios.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Modification component that moves each particle it receives by its velocity: added to real values, or through a sigmoid as the probability of a 1 for binary values.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de aplicación de la velocidad</rdfs:label>
+        <rdfs:label xml:lang="en">Velocity Application Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#VelocityUpdateComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#VelocityUpdateComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Data handler that updates the velocity of each particle it receives from its inertia and the attraction towards its personal best and the global best.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Manejador de datos que actualiza la velocidad de cada partícula que recibe a partir de su inercia y la atracción hacia su mejor posición personal y la mejor global.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de actualización de la velocidad</rdfs:label>
+        <rdfs:label xml:lang="en">Velocity Update Component</rdfs:label>
     </owl:Class>
     
 
@@ -2663,6 +3206,20 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#BlendAlpha -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#BlendAlpha">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
+        <rdfs:comment xml:lang="es">Ampliación del intervalo de los progenitores en un cruce por mezcla, como fracción de su anchura.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Extension of the parents&apos; interval in a blend crossover, as a fraction of its width.</rdfs:comment>
+        <rdfs:label xml:lang="es">Alfa de mezcla</rdfs:label>
+        <rdfs:label xml:lang="en">Blend Alpha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#Booleans -->
 
 
@@ -2715,6 +3272,36 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#InertiaFactor -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#Integers -->
 
 
@@ -2738,12 +3325,46 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MaxTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PositiveReals"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MinTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#MinTemperature">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PositiveReals"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#MutationProbability -->
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MutationStrength -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
+        <rdfs:comment xml:lang="es">Desviación típica de una mutación gaussiana, como fracción de la anchura del dominio.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Standard deviation of a Gaussian mutation, as a fraction of the width of the domain.</rdfs:comment>
+        <rdfs:label xml:lang="es">Intensidad de mutación</rdfs:label>
+        <rdfs:label xml:lang="en">Mutation Strength</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2792,6 +3413,46 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#PopulationSize -->
 
 
@@ -2813,6 +3474,31 @@
         <rdfs:comment xml:lang="en">Value domain of the integers greater than or equal to 1 (e.g. a number of cities).</rdfs:comment>
         <rdfs:label xml:lang="es">Enteros positivos</rdfs:label>
         <rdfs:label xml:lang="en">Positive Integers</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PositiveReals -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PositiveReals">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ValueDomain"/>
+        <hasBaseType rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Reals"/>
+        <hasExclusiveLowerBound rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Zero"/>
+        <rdfs:comment xml:lang="es">Dominio de valores con los reales mayores que 0 (p. ej., una temperatura).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Value domain of the real numbers greater than 0 (e.g. a temperature).</rdfs:comment>
+        <rdfs:label xml:lang="en">Positive Reals</rdfs:label>
+        <rdfs:label xml:lang="es">Reales positivos</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#RCLRandomness -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
     </owl:NamedIndividual>
     
 

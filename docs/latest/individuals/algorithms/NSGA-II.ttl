@@ -39,32 +39,33 @@ CO-META:NSGA-II_crossover rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance
 CO-META:NSGA-II_diversity_preservation_crowding_distance rdf:type owl:NamedIndividual ,
-                                                                  CO-META:DiversityPreservationComponent ;
+                                                                  CO-META:CrowdingDistanceComponent ;
                                                          CO-META:hasOutput CO-META:NSGA-II_truncation .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance
 CO-META:NSGA-II_fitness_assignment_non_dominance rdf:type owl:NamedIndividual ,
-                                                          CO-META:FitnessAssignmentComponent ;
+                                                          CO-META:NonDominatedSortingComponent ;
                                                  CO-META:hasOutput CO-META:NSGA-II_diversity_preservation_crowding_distance .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_generate_population
 CO-META:NSGA-II_generate_population rdf:type owl:NamedIndividual ,
-                                             CO-META:PopulationGenerationComponent ;
+                                             CO-META:PopulationGenerationComponent ,
+                                             CO-META:RandomGenerationComponent ;
                                     CO-META:hasOutput CO-META:NSGA-II_initial_fitness_assignment_non_dominance ;
                                     CO-META:hasParameter CO-META:NSGA-II_parameter_populationsize .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance
 CO-META:NSGA-II_initial_diversity_preservation_crowding_distance rdf:type owl:NamedIndividual ,
-                                                                          CO-META:DiversityPreservationComponent ;
+                                                                          CO-META:CrowdingDistanceComponent ;
                                                                  CO-META:hasOutputStart CO-META:NSGA-II_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance
 CO-META:NSGA-II_initial_fitness_assignment_non_dominance rdf:type owl:NamedIndividual ,
-                                                                  CO-META:FitnessAssignmentComponent ;
+                                                                  CO-META:NonDominatedSortingComponent ;
                                                          CO-META:hasOutput CO-META:NSGA-II_initial_diversity_preservation_crowding_distance .
 
 
@@ -106,6 +107,12 @@ CO-META:NSGA-II_parameter_populationsize rdf:type owl:NamedIndividual ,
                                          CO-META:hasType CO-META:PopulationSize .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_parameter_truncationsize
+CO-META:NSGA-II_parameter_truncationsize rdf:type owl:NamedIndividual ,
+                                                  CO-META:ParameterValue ;
+                                         CO-META:hasType CO-META:PopulationSize .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop
 CO-META:NSGA-II_stop rdf:type owl:NamedIndividual ,
                               CO-META:StoppingCriterionComponent ;
@@ -116,13 +123,14 @@ CO-META:NSGA-II_stop rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_truncation
 CO-META:NSGA-II_truncation rdf:type owl:NamedIndividual ,
-                                    CO-META:PopulationOperatorComponent ;
-                           CO-META:hasOutput CO-META:NSGA-II_stop .
+                                    CO-META:TruncationComponent ;
+                           CO-META:hasOutput CO-META:NSGA-II_stop ;
+                           CO-META:hasParameter CO-META:NSGA-II_parameter_truncationsize .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_union
 CO-META:NSGA-II_union rdf:type owl:NamedIndividual ,
-                               CO-META:PopulationOperatorComponent ;
+                               CO-META:UnionComponent ;
                       CO-META:hasOutput CO-META:NSGA-II_fitness_assignment_non_dominance .
 
 

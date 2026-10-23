@@ -18,18 +18,6 @@
 #    Individuals
 #################################################################
 
-###  https://w3id.org/ontologies-ULL/CO-META#MaxTemperature
-CO-META:MaxTemperature rdf:type owl:NamedIndividual ,
-                                CO-META:Parameter ;
-                       CO-META:hasValueDomain CO-META:UnitInterval .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META#MinTemperature
-CO-META:MinTemperature rdf:type owl:NamedIndividual ,
-                                CO-META:Parameter ;
-                       CO-META:hasValueDomain CO-META:UnitInterval .
-
-
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_SimulatedAnnealing
 CO-META:SA_SimulatedAnnealing rdf:type owl:NamedIndividual ,
                                        CO-META:Metaheuristic ;
@@ -46,7 +34,7 @@ CO-META:SA_acceptance rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_cooling_schedule
 CO-META:SA_cooling_schedule rdf:type owl:NamedIndividual ,
-                                     CO-META:DataHandlerComponent ;
+                                     CO-META:GeometricCoolingComponent ;
                             CO-META:hasOutput CO-META:SA_stop ;
                             CO-META:hasParameter CO-META:SA_parameter_max_temperature ,
                                                  CO-META:SA_parameter_min_temperature ;
@@ -55,8 +43,9 @@ CO-META:SA_cooling_schedule rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_generate
 CO-META:SA_generate rdf:type owl:NamedIndividual ,
-                             CO-META:SingleSolutionGenerationComponent ;
-                    CO-META:hasOutputStart CO-META:SA_stop .
+                             CO-META:RandomGenerationComponent ;
+                    CO-META:hasOutputStart CO-META:SA_stop ;
+                    CO-META:hasParameter CO-META:SA_parameter_populationsize .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_parameter_iterations
@@ -87,6 +76,13 @@ CO-META:SA_parameter_min_temperature rdf:type owl:NamedIndividual ,
 CO-META:SA_parameter_min_temperature_reference rdf:type owl:NamedIndividual ,
                                                         CO-META:ParameterReference ;
                                                CO-META:refersTo CO-META:SA_parameter_min_temperature .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SA_parameter_populationsize
+CO-META:SA_parameter_populationsize rdf:type owl:NamedIndividual ,
+                                             CO-META:ParameterValue ;
+                                    CO-META:hasType CO-META:PopulationSize ;
+                                    CO-META:hasValue 1 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_perturbation

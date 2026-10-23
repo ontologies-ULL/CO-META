@@ -26,7 +26,7 @@ CO-META:ILS_acceptance rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ILS_generate
 CO-META:ILS_generate rdf:type owl:NamedIndividual ,
-                              CO-META:GenerationComponent ;
+                              CO-META:RandomGenerationComponent ;
                      CO-META:hasOutputStart CO-META:ILS_stop ;
                      CO-META:hasParameter CO-META:ILS_parameter_populationsize .
 

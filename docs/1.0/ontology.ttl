@@ -106,6 +106,28 @@
                   rdfs:range :DataStructure .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasExclusiveLowerBound
+:hasExclusiveLowerBound rdf:type owl:ObjectProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain :ValueDomain ;
+                        rdfs:range :ValueSpecification ;
+                        rdfs:comment "Valor del que todos los valores de un dominio de valores son mayores, sin alcanzarlo. Un dominio de valores tiene como mucho una cota inferior, inclusiva (hasLowerBound) o exclusiva."@es ,
+                                     "Value that every value of a value domain is greater than, without reaching it. A value domain has at most one lower bound, inclusive (hasLowerBound) or exclusive."@en ;
+                        rdfs:label "has exclusive lower bound"@en ,
+                                   "tiene cota inferior exclusiva"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasExclusiveUpperBound
+:hasExclusiveUpperBound rdf:type owl:ObjectProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain :ValueDomain ;
+                        rdfs:range :ValueSpecification ;
+                        rdfs:comment "Valor del que todos los valores de un dominio de valores son menores, sin alcanzarlo. Un dominio de valores tiene como mucho una cota superior, inclusiva (hasUpperBound) o exclusiva."@es ,
+                                     "Value that every value of a value domain is less than, without reaching it. A value domain has at most one upper bound, inclusive (hasUpperBound) or exclusive."@en ;
+                        rdfs:label "has exclusive upper bound"@en ,
+                                   "tiene cota superior exclusiva"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasInput
 :hasInput rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :isConnectedTo ;
@@ -140,8 +162,8 @@
                         owl:FunctionalProperty ;
                rdfs:domain :ValueDomain ;
                rdfs:range :ValueSpecification ;
-               rdfs:comment "Menor valor de un dominio de valores. Si no se indica, no se impone cota inferior."@es ,
-                            "Smallest value of a value domain. If it is not stated, no lower bound is imposed."@en ;
+               rdfs:comment "Menor valor de un dominio de valores, incluido en él. Si no se indica ni esta ni hasExclusiveLowerBound, no se impone cota inferior."@es ,
+                            "Smallest value of a value domain, included in it. If neither it nor hasExclusiveLowerBound is stated, no lower bound is imposed."@en ;
                rdfs:label "has lower bound"@en ,
                           "tiene cota inferior"@es .
 
@@ -247,8 +269,8 @@
                         owl:FunctionalProperty ;
                rdfs:domain :ValueDomain ;
                rdfs:range :ValueSpecification ;
-               rdfs:comment "Largest value of a value domain. If it is not stated, no upper bound is imposed."@en ,
-                            "Mayor valor de un dominio de valores. Si no se indica, no se impone cota superior."@es ;
+               rdfs:comment "Largest value of a value domain, included in it. If neither it nor hasExclusiveUpperBound is stated, no upper bound is imposed."@en ,
+                            "Mayor valor de un dominio de valores, incluido en él. Si no se indica ni esta ni hasExclusiveUpperBound, no se impone cota superior."@es ;
                rdfs:label "has upper bound"@en ,
                           "tiene cota superior"@es .
 
@@ -344,7 +366,11 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#hasCodeReference
 :hasCodeReference rdf:type owl:DatatypeProperty ;
                   rdfs:domain :MetaheuristicComponent ;
-                  rdfs:range xsd:string .
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Clave de una implementación del componente en un programa que ejecuta metaheurísticas (p. ej. \"cometa:swap-mutation\"). Selecciona esa implementación de forma explícita; si no se indica, se usa la clase más específica del componente."@es ,
+                               "Key of an implementation of the component in a program that runs metaheuristics (e.g. \"cometa:swap-mutation\"). It selects that implementation explicitly; without it, the most specific class of the component is used."@en ;
+                  rdfs:label "has code reference"@en ,
+                             "tiene referencia de código"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex
@@ -524,6 +550,38 @@
                                 "Componente de aceptación"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#AntConstructionComponent
+:AntConstructionComponent rdf:type owl:Class ;
+                          rdfs:subClassOf :ConstructionComponent ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasParameter ;
+                                            owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :hasType ;
+                                                                 owl:hasValue :HeuristicInfluence
+                                                               ]
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasParameter ;
+                                            owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :hasType ;
+                                                                 owl:hasValue :PheromoneInfluence
+                                                               ]
+                                          ] ;
+                          rdfs:comment "Componente de construcción que crea cada solución eligiendo el siguiente elemento con probabilidad proporcional a feromona^alfa · heurística^beta, donde las feromonas son la matriz que lee el componente, y alfa y beta sus parámetros de influencia de la feromona y de la heurística."@es ,
+                                       "Construction component that builds each solution by choosing the next element with probability proportional to pheromone^alpha · heuristic^beta, where the pheromones are the matrix the component reads, and alpha and beta its pheromone and heuristic influence parameters."@en ;
+                          rdfs:label "Ant Construction Component"@en ,
+                                     "Componente de construcción por hormigas"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ArchiveUpdateComponent
+:ArchiveUpdateComponent rdf:type owl:Class ;
+                        rdfs:subClassOf :DataHandlerComponent ;
+                        rdfs:comment "Data handler that replaces the content of the archive it writes with the solutions it receives, and passes them on."@en ,
+                                     "Manejador de datos que sustituye el contenido del archivo que escribe por las soluciones que recibe, y las deja pasar."@es ;
+                        rdfs:label "Archive Update Component"@en ,
+                                   "Componente de actualización del archivo"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#BaseType
 :BaseType rdf:type owl:Class ;
           owl:equivalentClass [ rdf:type owl:Class ;
@@ -557,6 +615,16 @@
                                                 "Componente de búsqueda local de mejor mejora"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent
+:BestSolutionsUpdateComponent rdf:type owl:Class ;
+                              rdfs:subClassOf :DataHandlerComponent ,
+                                              :UpdateBestComponent ;
+                              rdfs:comment "Data handler that keeps in the structure it writes the best solution seen: a single one for a scalar structure, or one per position (e.g. per particle) for a collection."@en ,
+                                           "Manejador de datos que conserva en la estructura que escribe la mejor solución vista: una única para una estructura escalar, o una por posición (p. ej. por partícula) para una colección."@es ;
+                              rdfs:label "Best Solutions Update Component"@en ,
+                                         "Componente de actualización de las mejores soluciones"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent
 :BitFlipMutationComponent rdf:type owl:Class ;
                           rdfs:subClassOf :VariationComponent ;
@@ -573,6 +641,22 @@
                                             "Vecindario de los vectores binarios que difieren en una posición."@es ;
                                rdfs:label "Bit Flip Neighbourhood Component"@en ,
                                           "Componente de vecindario de cambio de bit"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#BlendCrossoverComponent
+:BlendCrossoverComponent rdf:type owl:Class ;
+                         rdfs:subClassOf :CrossoverComponent ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasParameter ;
+                                           owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasType ;
+                                                                owl:hasValue :BlendAlpha
+                                                              ]
+                                         ] ;
+                         rdfs:comment "Componente de cruce para valores reales que obtiene cada valor del descendiente de forma uniforme en el intervalo de los valores de los progenitores ampliado en alfa veces su anchura (BLX-alfa)."@es ,
+                                      "Crossover component for real values that draws each offspring value uniformly from the interval of the parents' values extended by alpha times its width (BLX-alpha)."@en ;
+                         rdfs:label "Blend Crossover Component"@en ,
+                                    "Componente de cruce por mezcla"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#CollectionShape
@@ -691,6 +775,15 @@
                                  "Modification component that produces one or more offspring individuals by recombining two or more parent individuals. It has a crossover probability parameter."@en ;
                     rdfs:label "Componente de cruce"@es ,
                                "Crossover Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#CrowdingDistanceComponent
+:CrowdingDistanceComponent rdf:type owl:Class ;
+                           rdfs:subClassOf :DiversityPreservationComponent ;
+                           rdfs:comment "Componente de preservación de la diversidad que mide, dentro de cada frente, el tamaño del cuboide alrededor de cada individuo en el espacio de objetivos."@es ,
+                                        "Diversity preservation component that measures, within each front, the size of the cuboid around each individual in objective space."@en ;
+                           rdfs:label "Componente de distancia de hacinamiento"@es ,
+                                      "Crowding Distance Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#CycleCrossoverComponent
@@ -824,6 +917,22 @@
                                        "Fitness Assignment Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#GaussianMutationComponent
+:GaussianMutationComponent rdf:type owl:Class ;
+                           rdfs:subClassOf :VariationComponent ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasParameter ;
+                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :hasType ;
+                                                                  owl:hasValue :MutationStrength
+                                                                ]
+                                           ] ;
+                           rdfs:comment "Componente de variación que suma ruido normal a valores reales, con una desviación típica igual a la intensidad de mutación por la anchura del dominio."@es ,
+                                        "Variation component that adds normal noise to real values, with a standard deviation equal to the mutation strength times the width of the domain."@en ;
+                           rdfs:label "Componente de mutación gaussiana"@es ,
+                                      "Gaussian Mutation Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#GenerationComponent
 :GenerationComponent rdf:type owl:Class ;
                      rdfs:subClassOf :MetaheuristicComponent ;
@@ -831,6 +940,45 @@
                                   "Componente que genera una solución inicial o una población inicial."@es ;
                      rdfs:label "Componente de generación"@es ,
                                 "Generation Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GeometricCoolingComponent
+:GeometricCoolingComponent rdf:type owl:Class ;
+                           rdfs:subClassOf :DataHandlerComponent ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasParameter ;
+                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :hasType ;
+                                                                  owl:hasValue :MaxTemperature
+                                                                ]
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasParameter ;
+                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :hasType ;
+                                                                  owl:hasValue :MinTemperature
+                                                                ]
+                                           ] ;
+                           rdfs:comment "Data handler that lowers the temperature it writes geometrically, from the maximum temperature at the start to the minimum one when the iteration budget of the enclosing stopping criterion is spent."@en ,
+                                        "Manejador de datos que reduce de forma geométrica la temperatura que escribe, desde la temperatura máxima al principio hasta la mínima cuando se agota el presupuesto de iteraciones del criterio de parada que lo contiene."@es ;
+                           rdfs:label "Componente de enfriamiento geométrico"@es ,
+                                      "Geometric Cooling Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GreedyRandomizedConstructionComponent
+:GreedyRandomizedConstructionComponent rdf:type owl:Class ;
+                                       rdfs:subClassOf :ConstructionComponent ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :hasParameter ;
+                                                         owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty :hasType ;
+                                                                              owl:hasValue :RCLRandomness
+                                                                            ]
+                                                       ] ;
+                                       rdfs:comment "Componente de construcción que añade un elemento cada vez, elegido al azar de una lista restringida de candidatos (RCL) construida con la información heurística del problema. Su parámetro de aleatoriedad de la RCL va de puramente voraz (0) a puramente aleatorio (1)."@es ,
+                                                    "Construction component that adds one element at a time, chosen at random from a restricted candidate list (RCL) built from the heuristic information of the problem. Its RCL randomness parameter goes from purely greedy (0) to purely random (1)."@en ;
+                                       rdfs:label "Componente de construcción voraz aleatorizada"@es ,
+                                                  "Greedy Randomized Construction Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent
@@ -1121,6 +1269,24 @@
                                     "Multiobjective Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#NearestNeighbourDensityComponent
+:NearestNeighbourDensityComponent rdf:type owl:Class ;
+                                  rdfs:subClassOf :DiversityPreservationComponent ;
+                                  rdfs:comment "Componente de preservación de la diversidad que estima la densidad alrededor de cada individuo a partir de la distancia a su k-ésimo vecino más cercano en el espacio de objetivos (SPEA2)."@es ,
+                                               "Diversity preservation component that estimates the density around each individual from the distance to its k-th nearest neighbour in objective space (SPEA2)."@en ;
+                                  rdfs:label "Componente de densidad del vecino más cercano"@es ,
+                                             "Nearest Neighbour Density Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodChangeComponent
+:NeighbourhoodChangeComponent rdf:type owl:Class ;
+                              rdfs:subClassOf :DataHandlerComponent ;
+                              rdfs:comment "Data handler that resets the neighbourhood index it writes to 1 when the candidate improves the current solution and increases it otherwise, back to 1 after its upper bound."@en ,
+                                           "Manejador de datos que reinicia a 1 el índice de vecindario que escribe cuando la candidata mejora la solución actual y lo incrementa en otro caso, volviendo a 1 tras su cota superior."@es ;
+                              rdfs:label "Componente de cambio de vecindario"@es ,
+                                         "Neighbourhood Change Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent
 :NeighbourhoodComponent rdf:type owl:Class ;
                         rdfs:subClassOf :ModificationComponent ;
@@ -1128,6 +1294,15 @@
                                      "Modification component that generates neighbouring solutions of a given solution by applying a move operator."@en ;
                         rdfs:label "Componente de vecindario"@es ,
                                    "Neighbourhood Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NonDominatedSortingComponent
+:NonDominatedSortingComponent rdf:type owl:Class ;
+                              rdfs:subClassOf :FitnessAssignmentComponent ;
+                              rdfs:comment "Componente de asignación de aptitud que clasifica cada individuo según el frente no dominado al que pertenece."@es ,
+                                           "Fitness assignment component that ranks each individual by the non-dominated front it belongs to."@en ;
+                              rdfs:label "Componente de ordenación no dominada"@es ,
+                                         "Non-Dominated Sorting Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Objective
@@ -1209,6 +1384,38 @@
                                   "Variable de decisión formada por una ordenación de valores sin repeticiones. Cuando su longitud coincide con el número de valores posibles es una permutación completa (p. ej., el recorrido por las ciudades en el TSP); si no, es una permutación parcial. Se deduce de la forma, por lo que no es necesario declararla."@es ;
                      rdfs:label "Permutation Variable"@en ,
                                 "Variable de permutación"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PheromoneDepositComponent
+:PheromoneDepositComponent rdf:type owl:Class ;
+                           rdfs:subClassOf :DataHandlerComponent ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasParameter ;
+                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :hasType ;
+                                                                  owl:hasValue :PheromoneAddition
+                                                                ]
+                                           ] ;
+                           rdfs:comment "Data handler that adds, on the elements used by each solution it receives, the pheromone addition divided by the solution's cost."@en ,
+                                        "Manejador de datos que añade, en los elementos que usa cada solución que recibe, la adición de feromona dividida por el coste de la solución."@es ;
+                           rdfs:label "Componente de depósito de feromonas"@es ,
+                                      "Pheromone Deposit Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporationComponent
+:PheromoneEvaporationComponent rdf:type owl:Class ;
+                               rdfs:subClassOf :DataHandlerComponent ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasParameter ;
+                                                 owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :hasType ;
+                                                                      owl:hasValue :PheromoneEvaporation
+                                                                    ]
+                                               ] ;
+                               rdfs:comment "Data handler that multiplies every pheromone it writes by (1 - evaporation rate)."@en ,
+                                            "Manejador de datos que multiplica cada feromona que escribe por (1 - tasa de evaporación)."@es ;
+                               rdfs:label "Componente de evaporación de feromonas"@es ,
+                                          "Pheromone Evaporation Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic
@@ -1364,6 +1571,15 @@
                                              "Random Decision Crossover Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#RandomGenerationComponent
+:RandomGenerationComponent rdf:type owl:Class ;
+                           rdfs:subClassOf :GenerationComponent ;
+                           rdfs:comment "Componente de generación que obtiene cada solución de forma uniformemente aleatoria a partir de la representación de las variables de decisión."@es ,
+                                        "Generation component that draws each solution uniformly at random from the representation of the decision variables."@en ;
+                           rdfs:label "Componente de generación aleatoria"@es ,
+                                      "Random Generation Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#RandomResetMutationComponent
 :RandomResetMutationComponent rdf:type owl:Class ;
                               rdfs:subClassOf :VariationComponent ;
@@ -1384,6 +1600,19 @@
                                        "Selection component that selects a pair of individuals at random."@en ;
                           rdfs:label "Componente de selección aleatoria"@es ,
                                      "Random Selection Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#RouletteWheelSelectionComponent
+:RouletteWheelSelectionComponent rdf:type owl:Class ;
+                                 rdfs:subClassOf :SelectionComponent ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasOutputSize ;
+                                                   owl:hasValue 2
+                                                 ] ;
+                                 rdfs:comment "Componente de selección que selecciona cada individuo con probabilidad proporcional a su posición según la aptitud."@es ,
+                                              "Selection component that selects each individual with probability proportional to its fitness rank."@en ;
+                                 rdfs:label "Componente de selección por ruleta"@es ,
+                                            "Roulette Wheel Selection Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ScalarShape
@@ -1466,6 +1695,15 @@
                              "Variable de secuencia"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#SequentialIterativeSelectionComponent
+:SequentialIterativeSelectionComponent rdf:type owl:Class ;
+                                       rdfs:subClassOf :IterativeSelectionComponent ;
+                                       rdfs:comment "Componente de selección iterativa que selecciona los individuos de la población uno a uno, en orden (p. ej. cada hormiga o cada partícula)."@es ,
+                                                    "Iterative selection component that selects the individuals of the population one by one, in order (e.g. each ant or each particle)."@en ;
+                                       rdfs:label "Componente de selección iterativa secuencial"@es ,
+                                                  "Sequential Iterative Selection Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#SetShape
 :SetShape rdf:type owl:Class ;
           owl:equivalentClass [ owl:intersectionOf ( :CollectionShape
@@ -1502,6 +1740,15 @@
                           "Variable de decisión formada por una selección no ordenada de valores sin repeticiones (p. ej., las k ubicaciones en las que se abren instalaciones). Se deduce de la forma, por lo que no es necesario declararla."@es ;
              rdfs:label "Set Variable"@en ,
                         "Variable de conjunto"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ShakingComponent
+:ShakingComponent rdf:type owl:Class ;
+                  rdfs:subClassOf :VariationComponent ;
+                  rdfs:comment "Componente de variación que aplica k movimientos aleatorios de un vecindario, donde k es el valor de la estructura de datos que lee (el vecindario actual de una búsqueda de vecindario variable)."@es ,
+                               "Variation component that applies k random moves of a neighbourhood, where k is the value of the data structure it reads (the current neighbourhood of a variable neighbourhood search)."@en ;
+                  rdfs:label "Componente de agitación"@es ,
+                             "Shaking Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent
@@ -1620,6 +1867,24 @@
                                        "Stopping Criterion Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#StrengthFitnessComponent
+:StrengthFitnessComponent rdf:type owl:Class ;
+                          rdfs:subClassOf :FitnessAssignmentComponent ;
+                          rdfs:comment "Componente de asignación de aptitud que da a cada individuo la suma de las fuerzas (número de individuos dominados) de los que lo dominan (aptitud bruta de SPEA2)."@es ,
+                                       "Fitness assignment component that gives each individual the sum of the strengths (number of dominated individuals) of those that dominate it (SPEA2 raw fitness)."@en ;
+                          rdfs:label "Componente de aptitud por fuerza"@es ,
+                                     "Strength Fitness Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SubtractionComponent
+:SubtractionComponent rdf:type owl:Class ;
+                      rdfs:subClassOf :PopulationOperatorComponent ;
+                      rdfs:comment "Operador de población que elimina de su entrada las soluciones almacenadas en las estructuras de datos que lee (p. ej. una lista tabú)."@es ,
+                                   "Population operator that removes from its input the solutions stored in the data structures it reads (e.g. a tabu list)."@en ;
+                      rdfs:label "Componente de sustracción"@es ,
+                                 "Subtraction Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent
 :SwapMutationComponent rdf:type owl:Class ;
                        rdfs:subClassOf :VariationComponent ,
@@ -1681,6 +1946,22 @@
                        "Table Shape"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#TabuListUpdateComponent
+:TabuListUpdateComponent rdf:type owl:Class ;
+                         rdfs:subClassOf :DataHandlerComponent ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasParameter ;
+                                           owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasType ;
+                                                                owl:hasValue :StorageSize
+                                                              ]
+                                         ] ;
+                         rdfs:comment "Data handler that stores the solutions it receives in the list it writes, discarding the oldest beyond the storage size, and passes them on."@en ,
+                                      "Manejador de datos que almacena las soluciones que recibe en la lista que escribe, descartando las más antiguas por encima del tamaño de almacenamiento, y las deja pasar."@es ;
+                         rdfs:label "Componente de actualización de la lista tabú"@es ,
+                                    "Tabu List Update Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent
 :TournamentSelectionComponent rdf:type owl:Class ;
                               rdfs:subClassOf :SelectionComponent ,
@@ -1701,6 +1982,22 @@
                                          "Tournament Selection Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#TruncationComponent
+:TruncationComponent rdf:type owl:Class ;
+                     rdfs:subClassOf :PopulationOperatorComponent ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasParameter ;
+                                       owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :hasType ;
+                                                            owl:hasValue :PopulationSize
+                                                          ]
+                                     ] ;
+                     rdfs:comment "Operador de población que conserva los mejores individuos hasta el tamaño de población, según la aptitud asignada por los componentes previos (rango y diversidad) o, si no la hay, según los objetivos."@es ,
+                                  "Population operator that keeps the best individuals up to the population size, according to the fitness assigned by the previous components (rank and diversity) or, without it, to the objectives."@en ;
+                     rdfs:label "Componente de truncamiento"@es ,
+                                "Truncation Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent
 :TwoOptNeighbourhoodComponent rdf:type owl:Class ;
                               rdfs:subClassOf :NeighbourhoodComponent ,
@@ -1714,6 +2011,15 @@
                                          "Componente de vecindario 2-opt"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#UnionComponent
+:UnionComponent rdf:type owl:Class ;
+                rdfs:subClassOf :PopulationOperatorComponent ;
+                rdfs:comment "Operador de población que une, sin repeticiones, las poblaciones que recibe y las soluciones de las estructuras de datos que lee."@es ,
+                             "Population operator that joins, without repetitions, the populations it receives and the solutions of the data structures it reads."@en ;
+                rdfs:label "Componente de unión"@es ,
+                           "Union Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent
 :UpdateBestComponent rdf:type owl:Class ;
                      rdfs:subClassOf :MetaheuristicComponent ;
@@ -1725,12 +2031,38 @@
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ValueDomain
 :ValueDomain rdf:type owl:Class ;
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
+             rdfs:subClassOf [ rdf:type owl:Class ;
+                               owl:complementOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :hasExclusiveLowerBound ;
+                                                                         owl:someValuesFrom owl:Thing
+                                                                       ]
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :hasLowerBound ;
+                                                                         owl:someValuesFrom owl:Thing
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ]
+                             ] ,
+                             [ rdf:type owl:Class ;
+                               owl:complementOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :hasExclusiveUpperBound ;
+                                                                         owl:someValuesFrom owl:Thing
+                                                                       ]
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :hasUpperBound ;
+                                                                         owl:someValuesFrom owl:Thing
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasBaseType ;
                                owl:cardinality "1"^^xsd:nonNegativeInteger
                              ] ;
-             rdfs:comment "Conjunto de valores que puede tomar una magnitud o un parámetro, definido por un conjunto numérico base y cotas inferior y superior opcionales (p. ej., los enteros entre 0 y 1)."@es ,
-                          "Set of values that a quantity or parameter can take, defined by a base number set and optional lower and upper bounds (e.g. the integers between 0 and 1)."@en ;
+             rdfs:comment "Conjunto de valores que puede tomar una magnitud o un parámetro, definido por un conjunto numérico base y cotas inferior y superior opcionales, inclusivas o exclusivas (p. ej., los enteros entre 0 y 1)."@es ,
+                          "Set of values that a quantity or parameter can take, defined by a base number set and optional lower and upper bounds, inclusive or exclusive (e.g. the integers between 0 and 1)."@en ;
              rdfs:label "Dominio de valores"@es ,
                         "Value Domain"@en .
 
@@ -1750,6 +2082,45 @@
                                  "Modification component that introduces small random changes to a solution (mutation)."@en ;
                     rdfs:label "Componente de variación"@es ,
                                "Variation Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VelocityApplicationComponent
+:VelocityApplicationComponent rdf:type owl:Class ;
+                              rdfs:subClassOf :ModificationComponent ;
+                              rdfs:comment "Componente de modificación que desplaza cada partícula que recibe según su velocidad: sumada a los valores reales, o mediante una sigmoide como probabilidad de un 1 en valores binarios."@es ,
+                                           "Modification component that moves each particle it receives by its velocity: added to real values, or through a sigmoid as the probability of a 1 for binary values."@en ;
+                              rdfs:label "Componente de aplicación de la velocidad"@es ,
+                                         "Velocity Application Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VelocityUpdateComponent
+:VelocityUpdateComponent rdf:type owl:Class ;
+                         rdfs:subClassOf :DataHandlerComponent ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasParameter ;
+                                           owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasType ;
+                                                                owl:hasValue :GlobalBestInfluence
+                                                              ]
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasParameter ;
+                                           owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasType ;
+                                                                owl:hasValue :InertiaFactor
+                                                              ]
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasParameter ;
+                                           owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasType ;
+                                                                owl:hasValue :PersonalBestInfluence
+                                                              ]
+                                         ] ;
+                         rdfs:comment "Data handler that updates the velocity of each particle it receives from its inertia and the attraction towards its personal best and the global best."@en ,
+                                      "Manejador de datos que actualiza la velocidad de cada partícula que recibe a partir de su inercia y la atracción hacia su mejor posición personal y la mejor global."@es ;
+                         rdfs:label "Componente de actualización de la velocidad"@es ,
+                                    "Velocity Update Component"@en .
 
 
 #################################################################
@@ -1808,6 +2179,16 @@
                            "Enteros binarios"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#BlendAlpha
+:BlendAlpha rdf:type owl:NamedIndividual ,
+                     :Parameter ;
+            :hasValueDomain :NonNegativeReals ;
+            rdfs:comment "Ampliación del intervalo de los progenitores en un cruce por mezcla, como fracción de su anchura."@es ,
+                         "Extension of the parents' interval in a blend crossover, as a fraction of its width."@en ;
+            rdfs:label "Alfa de mezcla"@es ,
+                       "Blend Alpha"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#Booleans
 :Booleans rdf:type owl:NamedIndividual ,
                    :BaseType ;
@@ -1840,6 +2221,24 @@
          :hasValueDomain :NonNegativeIntegers .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence
+:GlobalBestInfluence rdf:type owl:NamedIndividual ,
+                              :Parameter ;
+                     :hasValueDomain :NonNegativeReals .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence
+:HeuristicInfluence rdf:type owl:NamedIndividual ,
+                             :Parameter ;
+                    :hasValueDomain :NonNegativeReals .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#InertiaFactor
+:InertiaFactor rdf:type owl:NamedIndividual ,
+                        :Parameter ;
+               :hasValueDomain :UnitInterval .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#Integers
 :Integers rdf:type owl:NamedIndividual ,
                    :BaseType ;
@@ -1855,10 +2254,32 @@
             :hasValueDomain :NonNegativeIntegers .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#MaxTemperature
+:MaxTemperature rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                :hasValueDomain :PositiveReals .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MinTemperature
+:MinTemperature rdf:type owl:NamedIndividual ,
+                         :Parameter ;
+                :hasValueDomain :PositiveReals .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#MutationProbability
 :MutationProbability rdf:type owl:NamedIndividual ,
                               :Parameter ;
                      :hasValueDomain :UnitInterval .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MutationStrength
+:MutationStrength rdf:type owl:NamedIndividual ,
+                           :Parameter ;
+                  :hasValueDomain :UnitInterval ;
+                  rdfs:comment "Desviación típica de una mutación gaussiana, como fracción de la anchura del dominio."@es ,
+                               "Standard deviation of a Gaussian mutation, as a fraction of the width of the domain."@en ;
+                  rdfs:label "Intensidad de mutación"@es ,
+                             "Mutation Strength"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers
@@ -1893,6 +2314,30 @@
                 "Uno"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence
+:PersonalBestInfluence rdf:type owl:NamedIndividual ,
+                                :Parameter ;
+                       :hasValueDomain :NonNegativeReals .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition
+:PheromoneAddition rdf:type owl:NamedIndividual ,
+                            :Parameter ;
+                   :hasValueDomain :NonNegativeIntegers .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation
+:PheromoneEvaporation rdf:type owl:NamedIndividual ,
+                               :Parameter ;
+                      :hasValueDomain :UnitInterval .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence
+:PheromoneInfluence rdf:type owl:NamedIndividual ,
+                             :Parameter ;
+                    :hasValueDomain :NonNegativeReals .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#PopulationSize
 :PopulationSize rdf:type owl:NamedIndividual ,
                          :Parameter ;
@@ -1908,6 +2353,23 @@
                                "Value domain of the integers greater than or equal to 1 (e.g. a number of cities)."@en ;
                   rdfs:label "Enteros positivos"@es ,
                              "Positive Integers"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PositiveReals
+:PositiveReals rdf:type owl:NamedIndividual ,
+                        :ValueDomain ;
+               :hasBaseType :Reals ;
+               :hasExclusiveLowerBound :Zero ;
+               rdfs:comment "Dominio de valores con los reales mayores que 0 (p. ej., una temperatura)."@es ,
+                            "Value domain of the real numbers greater than 0 (e.g. a temperature)."@en ;
+               rdfs:label "Positive Reals"@en ,
+                          "Reales positivos"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#RCLRandomness
+:RCLRandomness rdf:type owl:NamedIndividual ,
+                        :Parameter ;
+               :hasValueDomain :UnitInterval .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Reals

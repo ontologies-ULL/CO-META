@@ -27,8 +27,9 @@ CO-META:TS_TabuSearch rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_generate
 CO-META:TS_generate rdf:type owl:NamedIndividual ,
-                             CO-META:SingleSolutionGenerationComponent ;
-                    CO-META:hasOutputStart CO-META:TS_stop .
+                             CO-META:RandomGenerationComponent ;
+                    CO-META:hasOutputStart CO-META:TS_stop ;
+                    CO-META:hasParameter CO-META:TS_parameter_populationsize .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_neighbourhood
@@ -41,6 +42,13 @@ CO-META:TS_neighbourhood rdf:type owl:NamedIndividual ,
 CO-META:TS_parameter_iterations rdf:type owl:NamedIndividual ,
                                          CO-META:ParameterValue ;
                                 CO-META:hasType CO-META:Iterations .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TS_parameter_populationsize
+CO-META:TS_parameter_populationsize rdf:type owl:NamedIndividual ,
+                                             CO-META:ParameterValue ;
+                                    CO-META:hasType CO-META:PopulationSize ;
+                                    CO-META:hasValue 1 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_parameter_storagesize
@@ -70,7 +78,7 @@ CO-META:TS_stop rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_store_visited
 CO-META:TS_store_visited rdf:type owl:NamedIndividual ,
-                                  CO-META:DataHandlerComponent ;
+                                  CO-META:TabuListUpdateComponent ;
                          CO-META:hasOutput CO-META:TS_neighbourhood ;
                          CO-META:hasParameter CO-META:TS_parameter_storagesize ;
                          CO-META:writesData CO-META:TS_tabu_list .
@@ -78,7 +86,7 @@ CO-META:TS_store_visited rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_substraction
 CO-META:TS_substraction rdf:type owl:NamedIndividual ,
-                                 CO-META:PopulationOperatorComponent ;
+                                 CO-META:SubtractionComponent ;
                         CO-META:hasOutput CO-META:TS_select_best ;
                         CO-META:readsData CO-META:TS_tabu_list .
 
