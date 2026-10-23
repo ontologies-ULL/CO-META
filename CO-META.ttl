@@ -516,6 +516,15 @@ CO-META:BaseType rdf:type owl:Class ;
                             "Tipo base"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent
+CO-META:BestImprovementLocalSearchComponent rdf:type owl:Class ;
+                                            rdfs:subClassOf CO-META:LocalSearchComponent ;
+                                            rdfs:comment "Componente de búsqueda local que se desplaza al mejor vecino del vecindario que usa mientras mejore."@es ,
+                                                         "Local search component that moves to the best neighbour of the neighbourhood it uses while it improves."@en ;
+                                            rdfs:label "Componente de búsqueda local de mejor mejora"@es ,
+                                                       "Best Improvement Local Search Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent
 CO-META:BitFlipMutationComponent rdf:type owl:Class ;
                                  rdfs:subClassOf CO-META:VariationComponent ;
@@ -523,6 +532,15 @@ CO-META:BitFlipMutationComponent rdf:type owl:Class ;
                                               "Variation component that flips each binary value with probability 1/n, flipping at least one."@en ;
                                  rdfs:label "Componente de mutación por cambio de bit"@es ,
                                             "Bit Flip Mutation Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent
+CO-META:BitFlipNeighbourhoodComponent rdf:type owl:Class ;
+                                      rdfs:subClassOf CO-META:NeighbourhoodComponent ;
+                                      rdfs:comment "Vecindario de los vectores binarios que difieren en una posición."@es ,
+                                                   "Neighbourhood of the binary vectors that differ in one position."@en ;
+                                      rdfs:label "Componente de vecindario de cambio de bit"@es ,
+                                                 "Bit Flip Neighbourhood Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#CollectionShape
@@ -720,6 +738,15 @@ CO-META:DiversityPreservationComponent rdf:type owl:Class ;
                                                   "Diversity Preservation Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent
+CO-META:ElementChangeNeighbourhoodComponent rdf:type owl:Class ;
+                                            rdfs:subClassOf CO-META:NeighbourhoodComponent ;
+                                            rdfs:comment "Vecindario de los vectores enteros obtenidos cambiando el valor de una posición por otro valor de su dominio."@es ,
+                                                         "Neighbourhood of the integer vectors obtained by changing the value of one position to another value of its domain."@en ;
+                                            rdfs:label "Componente de vecindario de cambio de elemento"@es ,
+                                                       "Element Change Neighbourhood Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm
 CO-META:EvolutionaryAlgorithm rdf:type owl:Class ;
                               owl:equivalentClass [ owl:intersectionOf ( CO-META:PopulationBasedMetaheuristic
@@ -745,6 +772,15 @@ CO-META:EvolutionaryAlgorithm rdf:type owl:Class ;
                                            "Metaheurística basada en algoritmos evolutivos, utilizando procesos de selección, cruce y variación."@es ;
                               rdfs:label "Algoritmo evolutivo"@es ,
                                          "Evolutionary Algorithm"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent
+CO-META:FirstImprovementLocalSearchComponent rdf:type owl:Class ;
+                                             rdfs:subClassOf CO-META:LocalSearchComponent ;
+                                             rdfs:comment "Componente de búsqueda local que se desplaza al primer vecino que mejora del vecindario que usa, hasta que ningún vecino mejora."@es ,
+                                                          "Local search component that moves to the first improving neighbour of the neighbourhood it uses, until no neighbour improves."@en ;
+                                             rdfs:label "Componente de búsqueda local de primera mejora"@es ,
+                                                        "First Improvement Local Search Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent
@@ -789,6 +825,19 @@ CO-META:InsertionMutationComponent rdf:type owl:Class ;
                                                 "Variation component that moves the value of a random position to another random position of a permutation."@en ;
                                    rdfs:label "Componente de mutación por inserción"@es ,
                                               "Insertion Mutation Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent
+CO-META:InsertionNeighbourhoodComponent rdf:type owl:Class ;
+                                        rdfs:subClassOf CO-META:NeighbourhoodComponent ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty CO-META:supportsShape ;
+                                                          owl:allValuesFrom CO-META:DistinctSequenceShape
+                                                        ] ;
+                                        rdfs:comment "Vecindario de las permutaciones obtenidas moviendo un valor a otra posición."@es ,
+                                                     "Neighbourhood of the permutations obtained by moving a value to another position."@en ;
+                                        rdfs:label "Componente de vecindario de inserción"@es ,
+                                                   "Insertion Neighbourhood Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent
@@ -1534,6 +1583,19 @@ CO-META:SwapMutationComponent rdf:type owl:Class ;
                                          "Swap Mutation Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent
+CO-META:SwapNeighbourhoodComponent rdf:type owl:Class ;
+                                   rdfs:subClassOf CO-META:NeighbourhoodComponent ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty CO-META:supportsShape ;
+                                                     owl:allValuesFrom CO-META:DistinctSequenceShape
+                                                   ] ;
+                                   rdfs:comment "Vecindario de las permutaciones obtenidas intercambiando los valores de dos posiciones."@es ,
+                                                "Neighbourhood of the permutations obtained by exchanging the values of two positions."@en ;
+                                   rdfs:label "Componente de vecindario de intercambio"@es ,
+                                              "Swap Neighbourhood Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#TableData
 CO-META:TableData rdf:type owl:Class ;
                   owl:equivalentClass [ owl:intersectionOf ( CO-META:ProblemData
@@ -1587,6 +1649,19 @@ CO-META:TournamentSelectionComponent rdf:type owl:Class ;
                                                   "Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has a tournament size parameter."@en ;
                                      rdfs:label "Componente de selección por torneo"@es ,
                                                 "Tournament Selection Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent
+CO-META:TwoOptNeighbourhoodComponent rdf:type owl:Class ;
+                                     rdfs:subClassOf CO-META:NeighbourhoodComponent ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty CO-META:supportsShape ;
+                                                       owl:allValuesFrom CO-META:DistinctSequenceShape
+                                                     ] ;
+                                     rdfs:comment "Vecindario de las permutaciones obtenidas invirtiendo un segmento (movimiento 2-opt)."@es ,
+                                                  "Neighbourhood of the permutations obtained by reversing a segment (2-opt move)."@en ;
+                                     rdfs:label "Componente de vecindario 2-opt"@es ,
+                                                "2-opt Neighbourhood Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent

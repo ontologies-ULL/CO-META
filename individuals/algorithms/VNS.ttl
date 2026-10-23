@@ -46,7 +46,7 @@ CO-META:VNS_generate rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch
 CO-META:VNS_localsearch rdf:type owl:NamedIndividual ,
-                                 CO-META:LocalSearchComponent ;
+                                 CO-META:FirstImprovementLocalSearchComponent ;
                         CO-META:hasOutput CO-META:VNS_acceptance .
 
 
