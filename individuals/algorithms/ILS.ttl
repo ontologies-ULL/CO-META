@@ -20,7 +20,7 @@
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ILS_acceptance
 CO-META:ILS_acceptance rdf:type owl:NamedIndividual ,
-                                CO-META:AcceptanceComponent ;
+                                CO-META:ImprovementAcceptanceComponent ;
                        CO-META:hasOutput CO-META:ILS_stop .
 
 

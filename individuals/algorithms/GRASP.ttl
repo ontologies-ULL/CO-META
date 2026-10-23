@@ -26,7 +26,7 @@ CO-META:GRASP rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance
 CO-META:GRASP_acceptance rdf:type owl:NamedIndividual ,
-                                  CO-META:AcceptanceComponent ;
+                                  CO-META:ImprovementAcceptanceComponent ;
                          CO-META:hasOutput CO-META:GRASP_stop .
 
 

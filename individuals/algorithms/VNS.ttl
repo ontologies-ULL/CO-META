@@ -27,7 +27,7 @@ CO-META:VNS_VariableNeighbourhoodSearch rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance
 CO-META:VNS_acceptance rdf:type owl:NamedIndividual ,
-                                CO-META:AcceptanceComponent ;
+                                CO-META:ImprovementAcceptanceComponent ;
                        CO-META:hasOutput CO-META:VNS_change_neighbourhood .
 
 

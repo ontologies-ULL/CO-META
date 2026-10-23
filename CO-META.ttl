@@ -516,6 +516,15 @@ CO-META:BaseType rdf:type owl:Class ;
                             "Tipo base"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent
+CO-META:BestCandidateAcceptanceComponent rdf:type owl:Class ;
+                                         rdfs:subClassOf CO-META:AcceptanceComponent ;
+                                         rdfs:comment "Componente de aceptación que acepta al mejor candidato aunque sea peor que la solución actual (como en la búsqueda tabú)."@es ,
+                                                      "Acceptance component that accepts the best candidate even if it is worse than the current solution (as in tabu search)."@en ;
+                                         rdfs:label "Componente de aceptación del mejor candidato"@es ,
+                                                    "Best Candidate Acceptance Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent
 CO-META:BestImprovementLocalSearchComponent rdf:type owl:Class ;
                                             rdfs:subClassOf CO-META:LocalSearchComponent ;
@@ -801,6 +810,15 @@ CO-META:GenerationComponent rdf:type owl:Class ;
                                        "Generation Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent
+CO-META:ImprovementAcceptanceComponent rdf:type owl:Class ;
+                                       rdfs:subClassOf CO-META:AcceptanceComponent ;
+                                       rdfs:comment "Componente de aceptación que conserva la mejor entre la solución actual y la candidata; en caso de empate, la candidata."@es ,
+                                                    "Acceptance component that keeps the best of the current and the candidate solutions; ties favour the candidate."@en ;
+                                       rdfs:label "Componente de aceptación por mejora"@es ,
+                                                  "Improvement Acceptance Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#InputParameter
 CO-META:InputParameter rdf:type owl:Class ;
                        rdfs:subClassOf CO-META:ProblemData ,
@@ -1021,6 +1039,15 @@ CO-META:MetaheuristicComponent rdf:type owl:Class ;
                                             "Building block of a metaheuristic that performs a specific task and is connected to other components."@en ;
                                rdfs:label "Componente metaheurístico"@es ,
                                           "Metaheuristic Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent
+CO-META:MetropolisAcceptanceComponent rdf:type owl:Class ;
+                                      rdfs:subClassOf CO-META:AcceptanceComponent ;
+                                      rdfs:comment "Componente de aceptación que acepta una candidata peor con probabilidad exp(-d / T), donde d es el empeoramiento relativo (f_candidata - f_actual) / |f_actual| y T la temperatura que lee."@es ,
+                                                   "Acceptance component that accepts a worse candidate with probability exp(-d / T), where d is the relative degradation (f_candidate - f_current) / |f_current| and T the temperature it reads."@en ;
+                                      rdfs:label "Componente de aceptación de Metropolis"@es ,
+                                                 "Metropolis Acceptance Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective
