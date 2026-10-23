@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics.", "dateReleased":"Fri Oct 23 19:34:40 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics.", "dateReleased":"Fri Oct 23 20:17:31 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -108,6 +108,10 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
+      <a href="#TwoOptNeighbourhoodComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent">2-opt Neighbourhood Component</a>
+   </li>
+   <li>
       <a href="#AcceptanceComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent">Acceptance Component</a>
    </li>
@@ -115,8 +119,20 @@ This ontology has the following classes and properties.</span>
       <a href="#BaseType" title="https://w3id.org/ontologies-ULL/CO-META#BaseType">Base Type</a>
    </li>
    <li>
+      <a href="#BestCandidateAcceptanceComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent">Best Candidate Acceptance Component</a>
+   </li>
+   <li>
+      <a href="#BestImprovementLocalSearchComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent">Best Improvement Local Search Component</a>
+   </li>
+   <li>
       <a href="#BitFlipMutationComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent">Bit Flip Mutation Component</a>
+   </li>
+   <li>
+      <a href="#BitFlipNeighbourhoodComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent">Bit Flip Neighbourhood Component</a>
    </li>
    <li>
       <a href="#CollectionShape"
@@ -178,8 +194,16 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent">Diversity Preservation Component</a>
    </li>
    <li>
+      <a href="#ElementChangeNeighbourhoodComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent">Element Change Neighbourhood Component</a>
+   </li>
+   <li>
       <a href="#EvolutionaryAlgorithm"
          title="https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm">Evolutionary Algorithm</a>
+   </li>
+   <li>
+      <a href="#FirstImprovementLocalSearchComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent">First Improvement Local Search Component</a>
    </li>
    <li>
       <a href="#FitnessAssignmentComponent"
@@ -190,12 +214,20 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent">Generation Component</a>
    </li>
    <li>
+      <a href="#ImprovementAcceptanceComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent">Improvement Acceptance Component</a>
+   </li>
+   <li>
       <a href="#InputParameter"
          title="https://w3id.org/ontologies-ULL/CO-META#InputParameter">Input Parameter</a>
    </li>
    <li>
       <a href="#InsertionMutationComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#InsertionMutationComponent">Insertion Mutation Component</a>
+   </li>
+   <li>
+      <a href="#InsertionNeighbourhoodComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent">Insertion Neighbourhood Component</a>
    </li>
    <li>
       <a href="#InversionMutationComponent"
@@ -252,6 +284,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#MetaheuristicComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a>
+   </li>
+   <li>
+      <a href="#MetropolisAcceptanceComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent">Metropolis Acceptance Component</a>
    </li>
    <li>
       <a href="#MinimizationObjective"
@@ -403,6 +439,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#SwapMutationComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent">Swap Mutation Component</a>
+   </li>
+   <li>
+      <a href="#SwapNeighbourhoodComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent">Swap Neighbourhood Component</a>
    </li>
    <li>
       <a href="#TableData"
@@ -830,9 +870,13 @@ This section provides details for each class and property defined by CO-META.
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
+  <li><a href="#TwoOptNeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent">2-opt Neighbourhood Component</a></li>
   <li><a href="#AcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent">Acceptance Component</a></li>
   <li><a href="#BaseType" title="https://w3id.org/ontologies-ULL/CO-META#BaseType">Base Type</a></li>
+  <li><a href="#BestCandidateAcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent">Best Candidate Acceptance Component</a></li>
+  <li><a href="#BestImprovementLocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent">Best Improvement Local Search Component</a></li>
   <li><a href="#BitFlipMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent">Bit Flip Mutation Component</a></li>
+  <li><a href="#BitFlipNeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent">Bit Flip Neighbourhood Component</a></li>
   <li><a href="#CollectionShape" title="https://w3id.org/ontologies-ULL/CO-META#CollectionShape">Collection Shape</a></li>
   <li><a href="#Column" title="https://w3id.org/ontologies-ULL/CO-META#Column">Column</a></li>
   <li><a href="#ComponentSafety" title="https://w3id.org/ontologies-ULL/CO-META#ComponentSafety">Component Safety</a></li>
@@ -848,11 +892,15 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#DecisionVariable" title="https://w3id.org/ontologies-ULL/CO-META#DecisionVariable">Decision Variable</a></li>
   <li><a href="#DistinctSequenceShape" title="https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape">Distinct Sequence Shape</a></li>
   <li><a href="#DiversityPreservationComponent" title="https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent">Diversity Preservation Component</a></li>
+  <li><a href="#ElementChangeNeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent">Element Change Neighbourhood Component</a></li>
   <li><a href="#EvolutionaryAlgorithm" title="https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm">Evolutionary Algorithm</a></li>
+  <li><a href="#FirstImprovementLocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent">First Improvement Local Search Component</a></li>
   <li><a href="#FitnessAssignmentComponent" title="https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent">Fitness Assignment Component</a></li>
   <li><a href="#GenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent">Generation Component</a></li>
+  <li><a href="#ImprovementAcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent">Improvement Acceptance Component</a></li>
   <li><a href="#InputParameter" title="https://w3id.org/ontologies-ULL/CO-META#InputParameter">Input Parameter</a></li>
   <li><a href="#InsertionMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#InsertionMutationComponent">Insertion Mutation Component</a></li>
+  <li><a href="#InsertionNeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent">Insertion Neighbourhood Component</a></li>
   <li><a href="#InversionMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent">Inversion Mutation Component</a></li>
   <li><a href="#IterativeSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent">Iterative Selection Component</a></li>
   <li><a href="#KPointCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent">K-Point Crossover Component</a></li>
@@ -867,6 +915,7 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#MemeticAlgorithm" title="https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm">Memetic Algorithm</a></li>
   <li><a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a></li>
   <li><a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a></li>
+  <li><a href="#MetropolisAcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent">Metropolis Acceptance Component</a></li>
   <li><a href="#MinimizationObjective" title="https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective">Minimization Objective</a></li>
   <li><a href="#ModificationComponent" title="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent">Modification Component</a></li>
   <li><a href="#MultiobjectiveComponent" title="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent">Multiobjective Component</a></li>
@@ -905,6 +954,7 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#SolutionSizeReference" title="https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference">Solution Size Reference</a></li>
   <li><a href="#StoppingCriterionComponent" title="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent">Stopping Criterion Component</a></li>
   <li><a href="#SwapMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent">Swap Mutation Component</a></li>
+  <li><a href="#SwapNeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent">Swap Neighbourhood Component</a></li>
   <li><a href="#TableData" title="https://w3id.org/ontologies-ULL/CO-META#TableData">Table Data</a></li>
   <li><a href="#TableShape" title="https://w3id.org/ontologies-ULL/CO-META#TableShape">Table Shape</a></li>
   <li><a href="#TournamentSelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent">Tournament Selection Component</a></li>
@@ -913,6 +963,21 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#ValueSpecification" title="https://w3id.org/ontologies-ULL/CO-META#ValueSpecification">Value Specification</a></li>
   <li><a href="#VariationComponent" title="https://w3id.org/ontologies-ULL/CO-META#VariationComponent">Variation Component</a></li>
  </ul>
+ <div class="entity" id="TwoOptNeighbourhoodComponent">
+  <h3>2-opt Neighbourhood Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent</p>
+  <div class="comment">
+   <span class="markdown">Neighbourhood of the permutations obtained by reversing a segment (2-opt move).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#NeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent">Neighbourhood Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="AcceptanceComponent">
   <h3>Acceptance Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent</p>
@@ -925,6 +990,12 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BestCandidateAcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent">Best Candidate Acceptance Component</a> <sup class="type-c" title="class">c</sup>, <a href="#ImprovementAcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent">Improvement Acceptance Component</a> <sup class="type-c" title="class">c</sup>, <a href="#MetropolisAcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent">Metropolis Acceptance Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -961,6 +1032,36 @@ This section provides details for each class and property defined by CO-META.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="BestCandidateAcceptanceComponent">
+  <h3>Best Candidate Acceptance Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent</p>
+  <div class="comment">
+   <span class="markdown">Acceptance component that accepts the best candidate even if it is worse than the current solution (as in tabu search).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#AcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent">Acceptance Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BestImprovementLocalSearchComponent">
+  <h3>Best Improvement Local Search Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent</p>
+  <div class="comment">
+   <span class="markdown">Local search component that moves to the best neighbour of the neighbourhood it uses while it improves.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent">Local Search Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="BitFlipMutationComponent">
   <h3>Bit Flip Mutation Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent</p>
@@ -973,6 +1074,21 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#VariationComponent" title="https://w3id.org/ontologies-ULL/CO-META#VariationComponent">Variation Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BitFlipNeighbourhoodComponent">
+  <h3>Bit Flip Neighbourhood Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent</p>
+  <div class="comment">
+   <span class="markdown">Neighbourhood of the binary vectors that differ in one position.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#NeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent">Neighbourhood Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1339,6 +1455,21 @@ This section provides details for each class and property defined by CO-META.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="ElementChangeNeighbourhoodComponent">
+  <h3>Element Change Neighbourhood Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent</p>
+  <div class="comment">
+   <span class="markdown">Neighbourhood of the integer vectors obtained by changing the value of one position to another value of its domain.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#NeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent">Neighbourhood Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="EvolutionaryAlgorithm">
   <h3>Evolutionary Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm</p>
@@ -1351,6 +1482,21 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#PopulationBasedMetaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic">Population Based Metaheuristic</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> ((<a href="#isConnectedTo" title="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo">is Connected To</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#CrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent">Crossover Component</a> <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#isConnectedTo" title="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo">is Connected To</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#SelectionComponent" title="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent">Selection Component</a> <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#isConnectedTo" title="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo">is Connected To</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#VariationComponent" title="https://w3id.org/ontologies-ULL/CO-META#VariationComponent">Variation Component</a> <sup class="type-c" title="class">c</sup>))
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FirstImprovementLocalSearchComponent">
+  <h3>First Improvement Local Search Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent</p>
+  <div class="comment">
+   <span class="markdown">Local search component that moves to the first improving neighbour of the neighbourhood it uses, until no neighbour improves.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#LocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent">Local Search Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1387,6 +1533,21 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#PopulationGenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent">Population Generation Component</a> <sup class="type-c" title="class">c</sup>, <a href="#SingleSolutionGenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent">Single Solution Generation Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ImprovementAcceptanceComponent">
+  <h3>Improvement Acceptance Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent</p>
+  <div class="comment">
+   <span class="markdown">Acceptance component that keeps the best of the current and the candidate solutions; ties favour the candidate.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#AcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent">Acceptance Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1435,6 +1596,21 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#VariationComponent" title="https://w3id.org/ontologies-ULL/CO-META#VariationComponent">Variation Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InsertionNeighbourhoodComponent">
+  <h3>Insertion Neighbourhood Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent</p>
+  <div class="comment">
+   <span class="markdown">Neighbourhood of the permutations obtained by moving a value to another position.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#NeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent">Neighbourhood Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1528,6 +1704,12 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#ModificationComponent" title="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent">Modification Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BestImprovementLocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent">Best Improvement Local Search Component</a> <sup class="type-c" title="class">c</sup>, <a href="#FirstImprovementLocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent">First Improvement Local Search Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1738,6 +1920,21 @@ This section provides details for each class and property defined by CO-META.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="MetropolisAcceptanceComponent">
+  <h3>Metropolis Acceptance Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent</p>
+  <div class="comment">
+   <span class="markdown">Acceptance component that accepts a worse candidate with probability exp(-d / T), where d is the relative degradation (f_candidate - f_current) / |f_current| and T the temperature it reads.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#AcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent">Acceptance Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="MinimizationObjective">
   <h3>Minimization Objective<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective</p>
@@ -1834,6 +2031,12 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#ModificationComponent" title="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent">Modification Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#TwoOptNeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent">2-opt Neighbourhood Component</a> <sup class="type-c" title="class">c</sup>, <a href="#BitFlipNeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent">Bit Flip Neighbourhood Component</a> <sup class="type-c" title="class">c</sup>, <a href="#ElementChangeNeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent">Element Change Neighbourhood Component</a> <sup class="type-c" title="class">c</sup>, <a href="#InsertionNeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent">Insertion Neighbourhood Component</a> <sup class="type-c" title="class">c</sup>, <a href="#SwapNeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent">Swap Neighbourhood Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -2603,6 +2806,21 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#VariationComponent" title="https://w3id.org/ontologies-ULL/CO-META#VariationComponent">Variation Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SwapNeighbourhoodComponent">
+  <h3>Swap Neighbourhood Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent</p>
+  <div class="comment">
+   <span class="markdown">Neighbourhood of the permutations obtained by exchanging the values of two positions.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#NeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent">Neighbourhood Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>

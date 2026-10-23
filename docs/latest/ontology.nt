@@ -537,6 +537,22 @@ _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/ontologies-ULL/CO-META#BaseType> <http://www.w3.org/2000/01/rdf-schema#label> "Base Type"@en .
 <https://w3id.org/ontologies-ULL/CO-META#BaseType> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo base"@es .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent
+<https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Acceptance component that accepts the best candidate even if it is worse than the current solution (as in tabu search)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de aceptación que acepta al mejor candidato aunque sea peor que la solución actual (como en la búsqueda tabú)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Best Candidate Acceptance Component"@en .
+<https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de aceptación del mejor candidato"@es .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent
+<https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de búsqueda local que se desplaza al mejor vecino del vecindario que usa mientras mejore."@es .
+<https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Local search component that moves to the best neighbour of the neighbourhood it uses while it improves."@en .
+<https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Best Improvement Local Search Component"@en .
+<https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de búsqueda local de mejor mejora"@es .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent
 <https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#VariationComponent> .
@@ -544,6 +560,14 @@ _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Variation component that flips each binary value with probability 1/n, flipping at least one."@en .
 <https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Bit Flip Mutation Component"@en .
 <https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de mutación por cambio de bit"@es .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent
+<https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Neighbourhood of the binary vectors that differ in one position."@en .
+<https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Vecindario de los vectores binarios que difieren en una posición."@es .
+<https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Bit Flip Neighbourhood Component"@en .
+<https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de vecindario de cambio de bit"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#CollectionShape
 <https://w3id.org/ontologies-ULL/CO-META#CollectionShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -741,6 +765,14 @@ _:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de preservación de la diversidad"@es .
 <https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Diversity Preservation Component"@en .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent
+<https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Neighbourhood of the integer vectors obtained by changing the value of one position to another value of its domain."@en .
+<https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Vecindario de los vectores enteros obtenidos cambiando el valor de una posición por otro valor de su dominio."@es .
+<https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de vecindario de cambio de elemento"@es .
+<https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Element Change Neighbourhood Component"@en .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm
 <https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid56 .
@@ -777,6 +809,14 @@ _:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Algoritmo evolutivo"@es .
 <https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Evolutionary Algorithm"@en .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent
+<https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de búsqueda local que se desplaza al primer vecino que mejora del vecindario que usa, hasta que ningún vecino mejora."@es .
+<https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Local search component that moves to the first improving neighbour of the neighbourhood it uses, until no neighbour improves."@en .
+<https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de búsqueda local de primera mejora"@es .
+<https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#label> "First Improvement Local Search Component"@en .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent
 <https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent> .
@@ -792,6 +832,14 @@ _:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente que genera una solución inicial o una población inicial."@es .
 <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de generación"@es .
 <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Generation Component"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent
+<https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Acceptance component that keeps the best of the current and the candidate solutions; ties favour the candidate."@en .
+<https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de aceptación que conserva la mejor entre la solución actual y la candidata; en caso de empate, la candidata."@es .
+<https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de aceptación por mejora"@es .
+<https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Improvement Acceptance Component"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#InputParameter
 <https://w3id.org/ontologies-ULL/CO-META#InputParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -817,13 +865,25 @@ _:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/ontologies-ULL/CO-META#InsertionMutationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de mutación por inserción"@es .
 <https://w3id.org/ontologies-ULL/CO-META#InsertionMutationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Insertion Mutation Component"@en .
 # 
-# https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent
-<https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#VariationComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
+# https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent
+<https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
 _:genid68 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape> .
 _:genid68 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#supportsShape> .
 _:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Neighbourhood of the permutations obtained by moving a value to another position."@en .
+<https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Vecindario de las permutaciones obtenidas moviendo un valor a otra posición."@es .
+<https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de vecindario de inserción"@es .
+<https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Insertion Neighbourhood Component"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent
+<https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#VariationComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
+_:genid69 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape> .
+_:genid69 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#supportsShape> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de variación que invierte el orden de un segmento aleatorio de una permutación."@es .
 <https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Variation component that reverses the order of a random segment of a permutation."@en .
 <https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de mutación por inversión"@es .
@@ -832,10 +892,10 @@ _:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent
 <https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
-_:genid69 <http://www.w3.org/2002/07/owl#hasValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid69 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> .
-_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
+_:genid70 <http://www.w3.org/2002/07/owl#hasValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de selección que selecciona un único individuo en cada invocación, por lo que se aplica repetidamente para seleccionar varios individuos."@es .
 <https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Selection component that selects a single individual per invocation, so it is applied repeatedly to select several individuals."@en .
 <https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de selección iterativa"@es .
@@ -844,13 +904,13 @@ _:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent
 <https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
-_:genid70 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid71 .
-_:genid71 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints> .
-_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
+<https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid71 .
+_:genid71 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid72 .
+_:genid72 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints> .
+_:genid72 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
 _:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de cruce que divide a los progenitores en k puntos de corte e intercambia los segmentos resultantes. Tiene un parámetro para el número de puntos de corte."@es .
 <https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Crossover component that splits the parents at k cut points and exchanges the resulting segments. It has a parameter for the number of cut points."@en .
 <https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de cruce de k puntos"@es .
@@ -859,10 +919,10 @@ _:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/ontologies-ULL/CO-META#LiteralValue
 <https://w3id.org/ontologies-ULL/CO-META#LiteralValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#LiteralValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ValueSpecification> .
-<https://w3id.org/ontologies-ULL/CO-META#LiteralValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid72 .
-_:genid72 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid72 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasLiteralValue> .
-_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#LiteralValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid73 .
+_:genid73 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid73 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasLiteralValue> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#LiteralValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Especificación de valor indicada explícitamente como un número (p. ej., 0, 1 o INF)."@es .
 <https://w3id.org/ontologies-ULL/CO-META#LiteralValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Value specification given explicitly as a number (e.g. 0, 1 or INF)."@en .
 <https://w3id.org/ontologies-ULL/CO-META#LiteralValue> <http://www.w3.org/2000/01/rdf-schema#label> "Literal Value"@en .
@@ -878,18 +938,18 @@ _:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic
 <https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid73 .
-_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid73 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid76 .
-_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid74 .
-_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid75 .
-_:genid75 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
-_:genid75 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
-_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
-_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid74 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid76 .
+_:genid76 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
+_:genid76 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheuristic that starts from complete solutions and iteratively improves them."@en .
 <https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheurística que parte de soluciones completas y las mejora iterativamente."@es .
 <https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Local Search Metaheuristic"@en .
@@ -905,18 +965,18 @@ _:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MatrixData
 <https://w3id.org/ontologies-ULL/CO-META#MatrixData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#MatrixData> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid77 .
-_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid77 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid80 .
-_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid78 .
-_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid79 .
-_:genid79 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#MatrixShape> .
-_:genid79 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
-_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ProblemData> .
-_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#MatrixData> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid78 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid78 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid81 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid80 .
+_:genid80 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#MatrixShape> .
+_:genid80 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ProblemData> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#MatrixData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ProblemData> .
 <https://w3id.org/ontologies-ULL/CO-META#MatrixData> <http://www.w3.org/2000/01/rdf-schema#comment> "Datos del problema organizados como una matriz de valores de la misma naturaleza (p. ej., las distancias entre cada par de ciudades). Se deduce de la forma, por lo que no es necesario declararla."@es .
 <https://w3id.org/ontologies-ULL/CO-META#MatrixData> <http://www.w3.org/2000/01/rdf-schema#comment> "Problem data organized as a matrix of values of the same kind (e.g. the distances between each pair of cities). It is inferred from the shape, so it does not need to be asserted."@en .
@@ -927,14 +987,14 @@ _:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/ontologies-ULL/CO-META#MatrixShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#MatrixShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Matrix> .
 <https://w3id.org/ontologies-ULL/CO-META#MatrixShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#DataShape> .
-<https://w3id.org/ontologies-ULL/CO-META#MatrixShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid81 .
-_:genid81 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid81 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasColumnCount> .
-_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#MatrixShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid82 .
 _:genid82 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid82 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasRowCount> .
+_:genid82 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasColumnCount> .
 _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#MatrixShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid83 .
+_:genid83 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid83 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasRowCount> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#MatrixShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Forma de una magnitud cuyos valores, todos de la misma naturaleza, se disponen en filas y columnas (p. ej., una matriz de distancias entre ciudades)."@es .
 <https://w3id.org/ontologies-ULL/CO-META#MatrixShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Shape of a quantity whose values, all of the same kind, are arranged in rows and columns (e.g. a distance matrix between cities)."@en .
 <https://w3id.org/ontologies-ULL/CO-META#MatrixShape> <http://www.w3.org/2000/01/rdf-schema#label> "Forma matricial"@es .
@@ -942,18 +1002,18 @@ _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MatrixVariable
 <https://w3id.org/ontologies-ULL/CO-META#MatrixVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#MatrixVariable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid83 .
-_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid83 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid86 .
-_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid84 .
-_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid85 .
-_:genid85 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#MatrixShape> .
-_:genid85 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
-_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
-_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#MatrixVariable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid84 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid87 .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid85 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid86 .
+_:genid86 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#MatrixShape> .
+_:genid86 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#MatrixVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
 <https://w3id.org/ontologies-ULL/CO-META#MatrixVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Decision variable made up of a value for each pair of elements of two collections (e.g. whether each vehicle visits each customer). It is inferred from the shape, so it does not need to be asserted."@en .
 <https://w3id.org/ontologies-ULL/CO-META#MatrixVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable de decisión formada por un valor para cada par de elementos de dos colecciones (p. ej., si cada vehículo visita a cada cliente). Se deduce de la forma, por lo que no es necesario declararla."@es .
@@ -971,18 +1031,18 @@ _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm
 <https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid87 .
-_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid87 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid90 .
-_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid88 .
-_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid89 .
-_:genid89 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> .
-_:genid89 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
-_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> .
-_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid88 .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid88 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid91 .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid89 .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid90 .
+_:genid90 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent> .
+_:genid90 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "Algoritmo evolutivo que además utiliza procesos de búsqueda local."@es .
 <https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "Evolutionary algorithm that employs local search processes."@en .
 <https://w3id.org/ontologies-ULL/CO-META#MemeticAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Algoritmo memético"@es .
@@ -1002,6 +1062,14 @@ _:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente metaheurístico"@es .
 <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Metaheuristic Component"@en .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent
+<https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Acceptance component that accepts a worse candidate with probability exp(-d / T), where d is the relative degradation (f_candidate - f_current) / |f_current| and T the temperature it reads."@en .
+<https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de aceptación que acepta una candidata peor con probabilidad exp(-d / T), donde d es el empeoramiento relativo (f_candidata - f_actual) / |f_actual| y T la temperatura que lee."@es .
+<https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de aceptación de Metropolis"@es .
+<https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Metropolis Acceptance Component"@en .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective
 <https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
@@ -1020,24 +1088,24 @@ _:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MultiSetShape
 <https://w3id.org/ontologies-ULL/CO-META#MultiSetShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#MultiSetShape> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid91 .
-_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid91 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid96 .
-_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid94 .
-_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid92 .
-_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid93 .
-_:genid93 <http://www.w3.org/2002/07/owl#hasValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid93 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isOrdered> .
-_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid95 .
-_:genid95 <http://www.w3.org/2002/07/owl#hasValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid95 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isDistinct> .
-_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#CollectionShape> .
-_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#MultiSetShape> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid92 .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid92 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid97 .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid95 .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid93 .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid94 .
+_:genid94 <http://www.w3.org/2002/07/owl#hasValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid94 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isOrdered> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid96 .
+_:genid96 <http://www.w3.org/2002/07/owl#hasValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid96 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isDistinct> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#CollectionShape> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#MultiSetShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/MultiSet> .
 <https://w3id.org/ontologies-ULL/CO-META#MultiSetShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Colección cuyos valores no están ordenados y pueden repetirse (p. ej., el número de unidades de cada producto en un pedido)."@es .
 <https://w3id.org/ontologies-ULL/CO-META#MultiSetShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection whose values are not ordered and can be repeated (e.g. the number of units of each product in an order)."@en .
@@ -1071,10 +1139,10 @@ _:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://w3id.org/ontologies-ULL/CO-META#OrderCrossoverComponent
 <https://w3id.org/ontologies-ULL/CO-META#OrderCrossoverComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#OrderCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#OrderCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid97 .
-_:genid97 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape> .
-_:genid97 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#supportsShape> .
-_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#OrderCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid98 .
+_:genid98 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape> .
+_:genid98 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#supportsShape> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#OrderCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de cruce para permutaciones que copia un segmento de un progenitor y rellena las posiciones restantes con los valores del otro progenitor en su orden (OX)."@es .
 <https://w3id.org/ontologies-ULL/CO-META#OrderCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Crossover component for permutations that copies a segment from one parent and fills the remaining positions with the values of the other parent in their order (OX)."@en .
 <https://w3id.org/ontologies-ULL/CO-META#OrderCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de cruce de orden"@es .
@@ -1090,10 +1158,10 @@ _:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/ontologies-ULL/CO-META#ParameterReference
 <https://w3id.org/ontologies-ULL/CO-META#ParameterReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#ParameterReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ValueSpecification> .
-<https://w3id.org/ontologies-ULL/CO-META#ParameterReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid98 .
-_:genid98 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid98 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#refersTo> .
-_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#ParameterReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid99 .
+_:genid99 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid99 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#refersTo> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#ParameterReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Especificación de valor dada por el valor de un parámetro, que solo se conoce para una instancia concreta del problema o una configuración concreta del algoritmo (p. ej., el número de ciudades N)."@es .
 <https://w3id.org/ontologies-ULL/CO-META#ParameterReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Value specification given by the value of a parameter, which is only known for a specific problem instance or algorithm configuration (e.g. the number of cities N)."@en .
 <https://w3id.org/ontologies-ULL/CO-META#ParameterReference> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter Reference"@en .
@@ -1109,10 +1177,10 @@ _:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent
 <https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid99 .
-_:genid99 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape> .
-_:genid99 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#supportsShape> .
-_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid100 .
+_:genid100 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape> .
+_:genid100 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#supportsShape> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de cruce para permutaciones que intercambia un segmento entre los progenitores y repara las posiciones restantes mediante la correspondencia definida por dicho segmento (PMX)."@es .
 <https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Crossover component for permutations that exchanges a segment between parents and repairs the remaining positions using the mapping defined by that segment (PMX)."@en .
 <https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de cruce parcialmente mapeado"@es .
@@ -1120,18 +1188,18 @@ _:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PermutationVariable
 <https://w3id.org/ontologies-ULL/CO-META#PermutationVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#PermutationVariable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid100 .
-_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid100 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid103 .
-_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid101 .
-_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid102 .
-_:genid102 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape> .
-_:genid102 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
-_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
-_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#PermutationVariable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid101 .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid101 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid104 .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid102 .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid103 .
+_:genid103 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape> .
+_:genid103 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#PermutationVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
 <https://w3id.org/ontologies-ULL/CO-META#PermutationVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Decision variable made up of an ordering of values without repetitions. When its length equals the number of possible values it is a complete permutation (e.g. the tour through the cities in the TSP); otherwise it is a partial permutation. It is inferred from the shape, so it does not need to be asserted."@en .
 <https://w3id.org/ontologies-ULL/CO-META#PermutationVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable de decisión formada por una ordenación de valores sin repeticiones. Cuando su longitud coincide con el número de valores posibles es una permutación completa (p. ej., el recorrido por las ciudades en el TSP); si no, es una permutación parcial. Se deduce de la forma, por lo que no es necesario declararla."@es .
@@ -1140,26 +1208,26 @@ _:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic
 <https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid104 .
-_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid104 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid110 .
-_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid105 .
-_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid106 .
-_:genid106 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid107 .
-_:genid107 <http://www.w3.org/2002/07/owl#unionOf> _:genid109 .
-_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid108 .
-_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> .
-_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid105 .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid105 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid111 .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid106 .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid107 .
+_:genid107 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid108 .
+_:genid108 <http://www.w3.org/2002/07/owl#unionOf> _:genid110 .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid109 .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> .
 _:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid106 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
-_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> .
 _:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid107 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheuristic that works with a population of solutions."@en .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheurística que trabaja con una población de soluciones."@es .
@@ -1168,39 +1236,39 @@ _:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent
 <https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid111 .
-_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid111 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid122 .
-_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid112 .
-_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid113 .
-_:genid113 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid114 .
-_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid114 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid120 .
-_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid115 .
-_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid116 .
-_:genid116 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid117 .
-_:genid117 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid118 .
-_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid119 .
-_:genid119 <http://www.w3.org/2001/XMLSchema#minExclusive> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid117 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-_:genid116 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasValue> .
-_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid121 .
-_:genid121 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> .
-_:genid121 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
-_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid113 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
-_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> .
-_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid112 .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid112 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid123 .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid113 .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid114 .
+_:genid114 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid115 .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid115 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid121 .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid116 .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid117 .
+_:genid117 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid118 .
+_:genid118 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid119 .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid120 .
+_:genid120 <http://www.w3.org/2001/XMLSchema#minExclusive> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid118 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid117 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasValue> .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid122 .
+_:genid122 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> .
+_:genid122 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid114 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de construcción que construye una población de más de una solución."@es .
@@ -1210,39 +1278,39 @@ _:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent
 <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid123 .
-_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid123 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid134 .
-_:genid134 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid124 .
-_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid125 .
-_:genid125 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid126 .
-_:genid126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid126 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid132 .
-_:genid132 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid127 .
-_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid128 .
-_:genid128 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid129 .
-_:genid129 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid130 .
-_:genid130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid131 .
-_:genid131 <http://www.w3.org/2001/XMLSchema#minExclusive> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid129 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid129 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-_:genid128 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasValue> .
-_:genid128 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid132 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid133 .
-_:genid133 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> .
-_:genid133 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
-_:genid133 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid132 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid125 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
-_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid134 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
-_:genid134 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid124 .
+_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid124 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid135 .
+_:genid135 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid125 .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid126 .
+_:genid126 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid127 .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid127 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid133 .
+_:genid133 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid128 .
+_:genid128 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid128 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid129 .
+_:genid129 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid130 .
+_:genid130 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid131 .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid132 .
+_:genid132 <http://www.w3.org/2001/XMLSchema#minExclusive> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid130 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid129 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasValue> .
+_:genid129 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid128 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid133 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid134 .
+_:genid134 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> .
+_:genid134 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
+_:genid134 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid133 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid126 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
+_:genid126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid135 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
+_:genid135 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de generación que genera una población inicial de más de una solución."@es .
@@ -1269,10 +1337,10 @@ _:genid134 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Problem
 <https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid135 .
-_:genid135 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
-_:genid135 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasObjective> .
-_:genid135 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid136 .
+_:genid136 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
+_:genid136 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasObjective> .
+_:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/2000/01/rdf-schema#comment> "Optimization problem, formulated by its data, its decision variables, at least one objective and, optionally, constraints. A solution is an assignment of values to its decision variables."@en .
 <https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/2000/01/rdf-schema#comment> "Problema de optimización, formulado mediante sus datos, sus variables de decisión, al menos un objetivo y, opcionalmente, restricciones. Una solución es una asignación de valores a sus variables de decisión."@es .
 <https://w3id.org/ontologies-ULL/CO-META#Problem> <http://www.w3.org/2000/01/rdf-schema#label> "Problem"@en .
@@ -1320,10 +1388,10 @@ _:genid135 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent
 <https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid136 .
-_:genid136 <http://www.w3.org/2002/07/owl#hasValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid136 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> .
-_:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid137 .
+_:genid137 <http://www.w3.org/2002/07/owl#hasValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid137 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> .
+_:genid137 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de selección que selecciona aleatoriamente una pareja de individuos."@es .
 <https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Selection component that selects a pair of individuals at random."@en .
 <https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de selección aleatoria"@es .
@@ -1331,12 +1399,12 @@ _:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#ScalarShape
 <https://w3id.org/ontologies-ULL/CO-META#ScalarShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#ScalarShape> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid137 .
-_:genid137 <http://www.w3.org/2002/07/owl#oneOf> _:genid138 .
-_:genid138 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid138 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Scalar> .
-_:genid138 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid137 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#ScalarShape> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid138 .
+_:genid138 <http://www.w3.org/2002/07/owl#oneOf> _:genid139 .
+_:genid139 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid139 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Scalar> .
+_:genid139 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid138 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#ScalarShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#DataShape> .
 <https://w3id.org/ontologies-ULL/CO-META#ScalarShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Forma de una magnitud formada por un único valor. Su única instancia es Scalar."@es .
 <https://w3id.org/ontologies-ULL/CO-META#ScalarShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Shape of a quantity made up of a single value. Its only instance is Scalar."@en .
@@ -1345,18 +1413,18 @@ _:genid137 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#ScalarVariable
 <https://w3id.org/ontologies-ULL/CO-META#ScalarVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#ScalarVariable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid139 .
-_:genid139 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid139 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid142 .
-_:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid140 .
-_:genid140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid141 .
-_:genid141 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#ScalarShape> .
-_:genid141 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
-_:genid141 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
-_:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#ScalarVariable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid140 .
+_:genid140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid140 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid143 .
+_:genid143 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid141 .
+_:genid141 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid141 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid142 .
+_:genid142 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#ScalarShape> .
+_:genid142 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
+_:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid141 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid143 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
+_:genid143 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#ScalarVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
 <https://w3id.org/ontologies-ULL/CO-META#ScalarVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Decision variable that takes a single value (e.g. the number of vehicles to use). It is inferred from the shape, so it does not need to be asserted."@en .
 <https://w3id.org/ontologies-ULL/CO-META#ScalarVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable de decisión que toma un único valor (p. ej., el número de vehículos que se van a utilizar). Se deduce de la forma, por lo que no es necesario declararla."@es .
@@ -1366,13 +1434,13 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/ontologies-ULL/CO-META#SelectionComponent
 <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ModificationComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid143 .
-_:genid143 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid144 .
-_:genid144 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#Elitism> .
-_:genid144 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
+<https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid144 .
+_:genid144 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid145 .
+_:genid145 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#Elitism> .
+_:genid145 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
+_:genid145 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid144 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
 _:genid144 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid143 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
-_:genid143 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de modificación que selecciona los individuos que formarán parte de la siguiente generación. Tiene un parámetro de elitismo."@es .
 <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Modification component that selects the individuals that will take part in the next generation. It has an elitism parameter."@en .
 <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de selección"@es .
@@ -1380,18 +1448,18 @@ _:genid143 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SequenceShape
 <https://w3id.org/ontologies-ULL/CO-META#SequenceShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#SequenceShape> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid145 .
-_:genid145 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid145 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid148 .
-_:genid148 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid146 .
-_:genid146 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid146 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid147 .
-_:genid147 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid147 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isOrdered> .
-_:genid147 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid146 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid148 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#CollectionShape> .
-_:genid148 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#SequenceShape> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid146 .
+_:genid146 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid146 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid149 .
+_:genid149 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid147 .
+_:genid147 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid147 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid148 .
+_:genid148 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid148 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isOrdered> .
+_:genid148 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid147 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid149 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#CollectionShape> .
+_:genid149 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#SequenceShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Sequence> .
 <https://w3id.org/ontologies-ULL/CO-META#SequenceShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Colección cuyos valores están ordenados, de modo que cada uno ocupa una posición (p. ej., si cada objeto se mete en la mochila)."@es .
 <https://w3id.org/ontologies-ULL/CO-META#SequenceShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection whose values are ordered, so that each one occupies a position (e.g. whether each item is put in the knapsack)."@en .
@@ -1400,18 +1468,18 @@ _:genid148 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SequenceVariable
 <https://w3id.org/ontologies-ULL/CO-META#SequenceVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#SequenceVariable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid149 .
-_:genid149 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid149 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid152 .
-_:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid150 .
-_:genid150 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid150 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid151 .
-_:genid151 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#SequenceShape> .
-_:genid151 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
-_:genid151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid150 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
-_:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#SequenceVariable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid150 .
+_:genid150 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid150 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid153 .
+_:genid153 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid151 .
+_:genid151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid152 .
+_:genid152 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#SequenceShape> .
+_:genid152 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
+_:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid153 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
+_:genid153 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#SequenceVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
 <https://w3id.org/ontologies-ULL/CO-META#SequenceVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Decision variable made up of an ordered sequence of values, one per position, which may be repeated unless it is a permutation (e.g. whether each item is put in the knapsack). It is inferred from the shape, so it does not need to be asserted."@en .
 <https://w3id.org/ontologies-ULL/CO-META#SequenceVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable de decisión formada por una secuencia ordenada de valores, uno por posición, que pueden repetirse salvo que sea una permutación (p. ej., si cada objeto se mete en la mochila). Se deduce de la forma, por lo que no es necesario declararla."@es .
@@ -1420,24 +1488,24 @@ _:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SetShape
 <https://w3id.org/ontologies-ULL/CO-META#SetShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#SetShape> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid153 .
-_:genid153 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid153 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid158 .
-_:genid158 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid156 .
-_:genid156 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid154 .
-_:genid154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid155 .
-_:genid155 <http://www.w3.org/2002/07/owl#hasValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid155 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isOrdered> .
-_:genid155 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid156 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid157 .
-_:genid157 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid157 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isDistinct> .
-_:genid157 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid156 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid158 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#CollectionShape> .
-_:genid158 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#SetShape> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid154 .
+_:genid154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid154 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid159 .
+_:genid159 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid157 .
+_:genid157 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid155 .
+_:genid155 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid155 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid156 .
+_:genid156 <http://www.w3.org/2002/07/owl#hasValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid156 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isOrdered> .
+_:genid156 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid155 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid157 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid158 .
+_:genid158 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid158 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isDistinct> .
+_:genid158 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid157 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid159 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#CollectionShape> .
+_:genid159 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#SetShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Set> .
 <https://w3id.org/ontologies-ULL/CO-META#SetShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Colección cuyos valores no están ordenados ni se repiten (p. ej., una selección de k ubicaciones de entre N)."@es .
 <https://w3id.org/ontologies-ULL/CO-META#SetShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection whose values are neither ordered nor repeated (e.g. a selection of k locations out of N)."@en .
@@ -1446,18 +1514,18 @@ _:genid158 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SetVariable
 <https://w3id.org/ontologies-ULL/CO-META#SetVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#SetVariable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid159 .
-_:genid159 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid159 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid162 .
-_:genid162 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid160 .
-_:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid161 .
-_:genid161 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#SetShape> .
-_:genid161 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
-_:genid161 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid162 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
-_:genid162 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#SetVariable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid160 .
+_:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid160 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid163 .
+_:genid163 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid161 .
+_:genid161 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid161 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid162 .
+_:genid162 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#SetShape> .
+_:genid162 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
+_:genid162 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid161 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid163 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
+_:genid163 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#SetVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#DecisionVariable> .
 <https://w3id.org/ontologies-ULL/CO-META#SetVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Decision variable made up of an unordered selection of values without repetitions (e.g. the k locations where facilities are opened). It is inferred from the shape, so it does not need to be asserted."@en .
 <https://w3id.org/ontologies-ULL/CO-META#SetVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable de decisión formada por una selección no ordenada de valores sin repeticiones (p. ej., las k ubicaciones en las que se abren instalaciones). Se deduce de la forma, por lo que no es necesario declararla."@es .
@@ -1467,10 +1535,10 @@ _:genid162 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent
 <https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid163 .
-_:genid163 <http://www.w3.org/2002/07/owl#hasValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid163 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> .
-_:genid163 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid164 .
+_:genid164 <http://www.w3.org/2002/07/owl#hasValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid164 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> .
+_:genid164 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de selección que selecciona individuos por parejas en orden."@es .
 <https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Selection component that selects pairs of individuals in order."@en .
 <https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de selección simple por parejas"@es .
@@ -1478,32 +1546,32 @@ _:genid163 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid164 .
-_:genid164 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid164 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid172 .
-_:genid172 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid165 .
-_:genid165 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid165 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid166 .
-_:genid166 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid167 .
-_:genid167 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid167 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid170 .
-_:genid170 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid168 .
-_:genid168 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid168 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid169 .
-_:genid169 <http://www.w3.org/2002/07/owl#hasValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid169 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasValue> .
-_:genid169 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid168 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid170 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid171 .
-_:genid171 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> .
-_:genid171 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
-_:genid171 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid170 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid166 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
-_:genid166 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid165 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid172 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> .
-_:genid172 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid165 .
+_:genid165 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid165 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid173 .
+_:genid173 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid166 .
+_:genid166 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid166 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid167 .
+_:genid167 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid168 .
+_:genid168 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid168 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid171 .
+_:genid171 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid169 .
+_:genid169 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid169 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid170 .
+_:genid170 <http://www.w3.org/2002/07/owl#hasValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid170 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasValue> .
+_:genid170 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid169 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid171 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid172 .
+_:genid172 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> .
+_:genid172 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
+_:genid172 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid171 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid167 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
+_:genid167 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid166 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid173 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> .
+_:genid173 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent> .
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de construcción que construye una única solución (tamaño de población igual a 1)."@es .
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Construction component that builds a single solution (population size equal to 1)."@en .
@@ -1512,32 +1580,32 @@ _:genid172 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid173 .
-_:genid173 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid173 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid181 .
-_:genid181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid174 .
-_:genid174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid175 .
-_:genid175 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid176 .
-_:genid176 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid176 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid179 .
-_:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid177 .
-_:genid177 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid177 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid178 .
-_:genid178 <http://www.w3.org/2002/07/owl#hasValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid178 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasValue> .
-_:genid178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid177 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid180 .
-_:genid180 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> .
-_:genid180 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
-_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid175 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
-_:genid175 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
-_:genid181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid174 .
+_:genid174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid174 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid182 .
+_:genid182 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid175 .
+_:genid175 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid175 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid176 .
+_:genid176 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid177 .
+_:genid177 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid177 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid180 .
+_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid178 .
+_:genid178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid179 .
+_:genid179 <http://www.w3.org/2002/07/owl#hasValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid179 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasValue> .
+_:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid181 .
+_:genid181 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> .
+_:genid181 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
+_:genid181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid176 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
+_:genid176 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid175 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid182 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
+_:genid182 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#GenerationComponent> .
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de generación que genera una única solución inicial (tamaño de población igual a 1)."@es .
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Generation component that generates a single initial solution (population size equal to 1)."@en .
@@ -1546,26 +1614,26 @@ _:genid181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid182 .
-_:genid182 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid182 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid188 .
-_:genid188 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid183 .
-_:genid183 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid183 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid184 .
-_:genid184 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid185 .
-_:genid185 <http://www.w3.org/2002/07/owl#unionOf> _:genid187 .
-_:genid187 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid186 .
-_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> .
-_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid187 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid183 .
+_:genid183 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid183 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid189 .
+_:genid189 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid184 .
+_:genid184 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid184 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid185 .
+_:genid185 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid186 .
+_:genid186 <http://www.w3.org/2002/07/owl#unionOf> _:genid188 .
+_:genid188 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid187 .
+_:genid187 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid187 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent> .
 _:genid187 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid185 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid184 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
-_:genid184 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid183 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid188 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+_:genid188 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent> .
 _:genid188 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid185 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
+_:genid185 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid184 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid189 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+_:genid189 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheuristic that works with a single solution at a time."@en .
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Metaheurística que trabaja con una única solución a la vez."@es .
 <https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic> <http://www.w3.org/2000/01/rdf-schema#label> "Metaheurística basada en solución única"@es .
@@ -1574,10 +1642,10 @@ _:genid188 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference
 <https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ValueSpecification> .
-<https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid189 .
-_:genid189 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid189 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex> .
-_:genid189 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid190 .
+_:genid190 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid190 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex> .
+_:genid190 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Especificación de valor dada por el tamaño de una dimensión de la solución que maneja el algoritmo. Permite dimensionar las estructuras de datos del algoritmo sin depender de un problema concreto (p. ej., una matriz de feromonas de n × n)."@es .
 <https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Value specification given by the size of one dimension of the solution handled by the algorithm. It allows algorithm data structures to be sized independently of any specific problem (e.g. an n × n pheromone matrix)."@en .
 <https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference> <http://www.w3.org/2000/01/rdf-schema#label> "Referencia al tamaño de la solución"@es .
@@ -1586,13 +1654,13 @@ _:genid189 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent
 <https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#LoopComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid190 .
-_:genid190 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid191 .
-_:genid191 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#Iterations> .
-_:genid191 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
+<https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid191 .
+_:genid191 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid192 .
+_:genid192 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#Iterations> .
+_:genid192 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
+_:genid192 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid191 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
 _:genid191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid190 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
-_:genid190 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de bucle que crea el bucle principal del algoritmo y determina cuándo detenerlo. Tiene un parámetro de número de iteraciones."@es .
 <https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Loop component that creates the main loop of the algorithm and determines when to stop it. It has an iterations parameter."@en .
 <https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de criterio de parada"@es .
@@ -1601,29 +1669,41 @@ _:genid190 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent
 <https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#VariationComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid192 .
-_:genid192 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape> .
-_:genid192 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#supportsShape> .
-_:genid192 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid193 .
+_:genid193 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape> .
+_:genid193 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#supportsShape> .
+_:genid193 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de variación que intercambia los valores de dos posiciones aleatorias de una permutación."@es .
 <https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Variation component that exchanges the values of two random positions of a permutation."@en .
 <https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de mutación por intercambio"@es .
 <https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Swap Mutation Component"@en .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent
+<https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid194 .
+_:genid194 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape> .
+_:genid194 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#supportsShape> .
+_:genid194 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Neighbourhood of the permutations obtained by exchanging the values of two positions."@en .
+<https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Vecindario de las permutaciones obtenidas intercambiando los valores de dos posiciones."@es .
+<https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de vecindario de intercambio"@es .
+<https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Swap Neighbourhood Component"@en .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#TableData
 <https://w3id.org/ontologies-ULL/CO-META#TableData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#TableData> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid193 .
-_:genid193 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid193 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid196 .
-_:genid196 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid194 .
-_:genid194 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid194 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid195 .
-_:genid195 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#TableShape> .
-_:genid195 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
-_:genid195 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid194 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid196 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ProblemData> .
+<https://w3id.org/ontologies-ULL/CO-META#TableData> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid195 .
+_:genid195 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid195 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid198 .
+_:genid198 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid196 .
+_:genid196 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid196 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid197 .
+_:genid197 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#TableShape> .
+_:genid197 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasShape> .
+_:genid197 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid196 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid198 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ProblemData> .
+_:genid198 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://w3id.org/ontologies-ULL/CO-META#TableData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ProblemData> .
 <https://w3id.org/ontologies-ULL/CO-META#TableData> <http://www.w3.org/2000/01/rdf-schema#comment> "Datos del problema organizados como una tabla de registros, cada uno de los cuales describe una entidad del problema mediante sus atributos (p. ej., las coordenadas de cada ciudad). Se deduce de la forma, por lo que no es necesario declararla."@es .
 <https://w3id.org/ontologies-ULL/CO-META#TableData> <http://www.w3.org/2000/01/rdf-schema#comment> "Problem data organized as a table of records, each of which describes an entity of the problem by means of its attributes (e.g. the coordinates of each city). It is inferred from the shape, so it does not need to be asserted."@en .
@@ -1634,14 +1714,14 @@ _:genid196 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#TableShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#TableShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Table> .
 <https://w3id.org/ontologies-ULL/CO-META#TableShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#DataShape> .
-<https://w3id.org/ontologies-ULL/CO-META#TableShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid197 .
-_:genid197 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#Column> .
-_:genid197 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasColumn> .
-_:genid197 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/ontologies-ULL/CO-META#TableShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid198 .
-_:genid198 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid198 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasRowCount> .
-_:genid198 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#TableShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid199 .
+_:genid199 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#Column> .
+_:genid199 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasColumn> .
+_:genid199 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#TableShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid200 .
+_:genid200 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid200 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasRowCount> .
+_:genid200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#TableShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Forma de una magnitud formada por registros homogéneos (filas), cada uno de los cuales describe una entidad del problema mediante atributos con nombre (columnas) (p. ej., las coordenadas de cada ciudad)."@es .
 <https://w3id.org/ontologies-ULL/CO-META#TableShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Shape of a quantity made up of homogeneous records (rows), each of which describes an entity of the problem by means of named attributes (columns) (e.g. the coordinates of each city)."@en .
 <https://w3id.org/ontologies-ULL/CO-META#TableShape> <http://www.w3.org/2000/01/rdf-schema#label> "Forma de tabla"@es .
@@ -1650,21 +1730,33 @@ _:genid198 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#SelectionComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid199 .
-_:genid199 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid200 .
-_:genid200 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#TournamentSize> .
-_:genid200 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
-_:genid200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid199 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
-_:genid199 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid201 .
-_:genid201 <http://www.w3.org/2002/07/owl#hasValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid201 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> .
+_:genid201 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid202 .
+_:genid202 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/ontologies-ULL/CO-META#TournamentSize> .
+_:genid202 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasType> .
+_:genid202 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid201 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasParameter> .
 _:genid201 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid203 .
+_:genid203 <http://www.w3.org/2002/07/owl#hasValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid203 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> .
+_:genid203 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de selección que selecciona cada individuo como el mejor de un grupo elegido aleatoriamente (torneo). Tiene un parámetro de tamaño de torneo."@es .
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has a tournament size parameter."@en .
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de selección por torneo"@es .
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Tournament Selection Component"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent
+<https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid204 .
+_:genid204 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape> .
+_:genid204 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#supportsShape> .
+_:genid204 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Neighbourhood of the permutations obtained by reversing a segment (2-opt move)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Vecindario de las permutaciones obtenidas invirtiendo un segmento (movimiento 2-opt)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#label> "2-opt Neighbourhood Component"@en .
+<https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de vecindario 2-opt"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent
 <https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1676,10 +1768,10 @@ _:genid201 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#ValueDomain
 <https://w3id.org/ontologies-ULL/CO-META#ValueDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#ValueDomain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid202 .
-_:genid202 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid202 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasBaseType> .
-_:genid202 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ontologies-ULL/CO-META#ValueDomain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid205 .
+_:genid205 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid205 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/ontologies-ULL/CO-META#hasBaseType> .
+_:genid205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/ontologies-ULL/CO-META#ValueDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "Conjunto de valores que puede tomar una magnitud o un parámetro, definido por un conjunto numérico base y cotas inferior y superior opcionales (p. ej., los enteros entre 0 y 1)."@es .
 <https://w3id.org/ontologies-ULL/CO-META#ValueDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of values that a quantity or parameter can take, defined by a base number set and optional lower and upper bounds (e.g. the integers between 0 and 1)."@en .
 <https://w3id.org/ontologies-ULL/CO-META#ValueDomain> <http://www.w3.org/2000/01/rdf-schema#label> "Dominio de valores"@es .
@@ -1939,8 +2031,11 @@ _:genid202 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # #################################################################
 # 
 # 
-_:genid203 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid203 <http://www.w3.org/2002/07/owl#members> _:genid215 .
+_:genid206 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid206 <http://www.w3.org/2002/07/owl#members> _:genid218 .
+_:genid218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid217 .
+_:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid216 .
+_:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid215 .
 _:genid215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid214 .
 _:genid214 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid213 .
 _:genid213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid212 .
@@ -1949,90 +2044,87 @@ _:genid211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid210 .
 _:genid210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid209 .
 _:genid209 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid208 .
 _:genid208 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid207 .
-_:genid207 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid206 .
-_:genid206 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid205 .
-_:genid205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid204 .
-_:genid204 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid204 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ValueSpecification> .
-_:genid204 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ValueDomain> .
-_:genid205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid206 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ProblemElement> .
-_:genid206 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid207 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Problem> .
+_:genid207 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid207 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ValueSpecification> .
 _:genid207 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid208 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ParameterValue> .
+_:genid208 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ValueDomain> .
 _:genid208 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid209 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+_:genid209 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ProblemElement> .
 _:genid209 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+_:genid210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Problem> .
 _:genid210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+_:genid211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ParameterValue> .
 _:genid211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid212 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DataStructure> .
+_:genid212 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 _:genid212 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DataShape> .
+_:genid213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
 _:genid213 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid214 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ComponentSafety> .
+_:genid214 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
 _:genid214 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#BaseType> .
+_:genid215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DataStructure> .
 _:genid215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-# 
-_:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid216 <http://www.w3.org/2002/07/owl#members> _:genid221 .
-_:genid221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid220 .
-_:genid220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid219 .
-_:genid219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid218 .
-_:genid218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid217 .
-_:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#TableShape> .
+_:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#DataShape> .
+_:genid216 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ComponentSafety> .
 _:genid217 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ScalarShape> .
+_:genid218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#BaseType> .
 _:genid218 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#MatrixShape> .
-_:genid219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#CompositeShape> .
-_:genid220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#CollectionShape> .
-_:genid221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
-_:genid222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid222 <http://www.w3.org/2002/07/owl#members> _:genid225 .
-_:genid225 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid224 .
+_:genid219 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid219 <http://www.w3.org/2002/07/owl#members> _:genid224 .
 _:genid224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid223 .
-_:genid223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity> .
+_:genid223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid222 .
+_:genid222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid221 .
+_:genid221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid220 .
+_:genid220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#TableShape> .
+_:genid220 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ScalarShape> .
+_:genid221 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#MatrixShape> .
+_:genid222 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#CompositeShape> .
 _:genid223 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
+_:genid224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#CollectionShape> .
 _:genid224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid225 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Constraint> .
-_:genid225 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
-_:genid226 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid226 <http://www.w3.org/2002/07/owl#members> _:genid229 .
-_:genid229 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid228 .
+_:genid225 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid225 <http://www.w3.org/2002/07/owl#members> _:genid228 .
 _:genid228 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid227 .
-_:genid227 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid227 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference> .
+_:genid227 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid226 .
+_:genid226 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid226 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity> .
+_:genid226 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid227 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
 _:genid227 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid228 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ParameterReference> .
+_:genid228 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Constraint> .
 _:genid228 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid229 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#LiteralValue> .
-_:genid229 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
-_:genid230 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
-_:genid230 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid234 .
-_:genid234 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid233 .
-_:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid232 .
+_:genid229 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid229 <http://www.w3.org/2002/07/owl#members> _:genid232 .
 _:genid232 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid231 .
-_:genid231 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid231 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Solutions> .
+_:genid231 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid230 .
+_:genid230 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid230 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference> .
+_:genid230 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid231 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#ParameterReference> .
 _:genid231 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid232 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Reals> .
+_:genid232 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#LiteralValue> .
 _:genid232 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Integers> .
-_:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid234 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Booleans> .
+# 
+_:genid233 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid233 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid237 .
+_:genid237 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid236 .
+_:genid236 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid235 .
+_:genid235 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid234 .
+_:genid234 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid234 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Solutions> .
 _:genid234 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid235 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Reals> .
+_:genid235 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid236 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Integers> .
+_:genid236 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid237 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ontologies-ULL/CO-META#Booleans> .
+_:genid237 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

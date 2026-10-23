@@ -39,7 +39,7 @@ CO-META:SA_SimulatedAnnealing rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_acceptance
 CO-META:SA_acceptance rdf:type owl:NamedIndividual ,
-                               CO-META:AcceptanceComponent ;
+                               CO-META:MetropolisAcceptanceComponent ;
                       CO-META:hasOutput CO-META:SA_cooling_schedule ;
                       CO-META:readsData CO-META:SA_temperature .
 

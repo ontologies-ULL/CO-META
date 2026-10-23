@@ -57,7 +57,7 @@ CO-META:TS_parameter_storagesize_reference rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_select_best
 CO-META:TS_select_best rdf:type owl:NamedIndividual ,
-                                CO-META:AcceptanceComponent ;
+                                CO-META:BestCandidateAcceptanceComponent ;
                        CO-META:hasOutput CO-META:TS_stop .
 
 

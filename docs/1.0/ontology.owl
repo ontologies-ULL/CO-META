@@ -832,6 +832,32 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
+        <rdfs:comment xml:lang="en">Acceptance component that accepts the best candidate even if it is worse than the current solution (as in tabu search).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de aceptación que acepta al mejor candidato aunque sea peor que la solución actual (como en la búsqueda tabú).</rdfs:comment>
+        <rdfs:label xml:lang="en">Best Candidate Acceptance Component</rdfs:label>
+        <rdfs:label xml:lang="es">Componente de aceptación del mejor candidato</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"/>
+        <rdfs:comment xml:lang="es">Componente de búsqueda local que se desplaza al mejor vecino del vecindario que usa mientras mejore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Local search component that moves to the best neighbour of the neighbourhood it uses while it improves.</rdfs:comment>
+        <rdfs:label xml:lang="en">Best Improvement Local Search Component</rdfs:label>
+        <rdfs:label xml:lang="es">Componente de búsqueda local de mejor mejora</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent -->
 
 
@@ -841,6 +867,19 @@
         <rdfs:comment xml:lang="en">Variation component that flips each binary value with probability 1/n, flipping at least one.</rdfs:comment>
         <rdfs:label xml:lang="en">Bit Flip Mutation Component</rdfs:label>
         <rdfs:label xml:lang="es">Componente de mutación por cambio de bit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent"/>
+        <rdfs:comment xml:lang="en">Neighbourhood of the binary vectors that differ in one position.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Vecindario de los vectores binarios que difieren en una posición.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bit Flip Neighbourhood Component</rdfs:label>
+        <rdfs:label xml:lang="es">Componente de vecindario de cambio de bit</rdfs:label>
     </owl:Class>
     
 
@@ -1127,6 +1166,19 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent"/>
+        <rdfs:comment xml:lang="en">Neighbourhood of the integer vectors obtained by changing the value of one position to another value of its domain.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Vecindario de los vectores enteros obtenidos cambiando el valor de una posición por otro valor de su dominio.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de vecindario de cambio de elemento</rdfs:label>
+        <rdfs:label xml:lang="en">Element Change Neighbourhood Component</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm -->
 
 
@@ -1162,6 +1214,19 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"/>
+        <rdfs:comment xml:lang="es">Componente de búsqueda local que se desplaza al primer vecino que mejora del vecindario que usa, hasta que ningún vecino mejora.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Local search component that moves to the first improving neighbour of the neighbourhood it uses, until no neighbour improves.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de búsqueda local de primera mejora</rdfs:label>
+        <rdfs:label xml:lang="en">First Improvement Local Search Component</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent -->
 
 
@@ -1184,6 +1249,19 @@
         <rdfs:comment xml:lang="es">Componente que genera una solución inicial o una población inicial.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de generación</rdfs:label>
         <rdfs:label xml:lang="en">Generation Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
+        <rdfs:comment xml:lang="en">Acceptance component that keeps the best of the current and the candidate solutions; ties favour the candidate.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de aceptación que conserva la mejor entre la solución actual y la candidata; en caso de empate, la candidata.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de aceptación por mejora</rdfs:label>
+        <rdfs:label xml:lang="en">Improvement Acceptance Component</rdfs:label>
     </owl:Class>
     
 
@@ -1222,6 +1300,25 @@
         <rdfs:comment xml:lang="en">Variation component that moves the value of a random position to another random position of a permutation.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de mutación por inserción</rdfs:label>
         <rdfs:label xml:lang="en">Insertion Mutation Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#supportsShape"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Neighbourhood of the permutations obtained by moving a value to another position.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Vecindario de las permutaciones obtenidas moviendo un valor a otra posición.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de vecindario de inserción</rdfs:label>
+        <rdfs:label xml:lang="en">Insertion Neighbourhood Component</rdfs:label>
     </owl:Class>
     
 
@@ -1487,6 +1584,19 @@
         <rdfs:comment xml:lang="en">Building block of a metaheuristic that performs a specific task and is connected to other components.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente metaheurístico</rdfs:label>
         <rdfs:label xml:lang="en">Metaheuristic Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent"/>
+        <rdfs:comment xml:lang="en">Acceptance component that accepts a worse candidate with probability exp(-d / T), where d is the relative degradation (f_candidate - f_current) / |f_current| and T the temperature it reads.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de aceptación que acepta una candidata peor con probabilidad exp(-d / T), donde d es el empeoramiento relativo (f_candidata - f_actual) / |f_actual| y T la temperatura que lee.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de aceptación de Metropolis</rdfs:label>
+        <rdfs:label xml:lang="en">Metropolis Acceptance Component</rdfs:label>
     </owl:Class>
     
 
@@ -2295,6 +2405,25 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#supportsShape"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Neighbourhood of the permutations obtained by exchanging the values of two positions.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Vecindario de las permutaciones obtenidas intercambiando los valores de dos posiciones.</rdfs:comment>
+        <rdfs:label xml:lang="es">Componente de vecindario de intercambio</rdfs:label>
+        <rdfs:label xml:lang="en">Swap Neighbourhood Component</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#TableData -->
 
 
@@ -2371,6 +2500,25 @@
         <rdfs:comment xml:lang="en">Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has a tournament size parameter.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de selección por torneo</rdfs:label>
         <rdfs:label xml:lang="en">Tournament Selection Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#supportsShape"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Neighbourhood of the permutations obtained by reversing a segment (2-opt move).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Vecindario de las permutaciones obtenidas invirtiendo un segmento (movimiento 2-opt).</rdfs:comment>
+        <rdfs:label xml:lang="en">2-opt Neighbourhood Component</rdfs:label>
+        <rdfs:label xml:lang="es">Componente de vecindario 2-opt</rdfs:label>
     </owl:Class>
     
 

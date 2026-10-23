@@ -539,6 +539,24 @@
                      "Tipo base"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent
+:BestCandidateAcceptanceComponent rdf:type owl:Class ;
+                                  rdfs:subClassOf :AcceptanceComponent ;
+                                  rdfs:comment "Acceptance component that accepts the best candidate even if it is worse than the current solution (as in tabu search)."@en ,
+                                               "Componente de aceptación que acepta al mejor candidato aunque sea peor que la solución actual (como en la búsqueda tabú)."@es ;
+                                  rdfs:label "Best Candidate Acceptance Component"@en ,
+                                             "Componente de aceptación del mejor candidato"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent
+:BestImprovementLocalSearchComponent rdf:type owl:Class ;
+                                     rdfs:subClassOf :LocalSearchComponent ;
+                                     rdfs:comment "Componente de búsqueda local que se desplaza al mejor vecino del vecindario que usa mientras mejore."@es ,
+                                                  "Local search component that moves to the best neighbour of the neighbourhood it uses while it improves."@en ;
+                                     rdfs:label "Best Improvement Local Search Component"@en ,
+                                                "Componente de búsqueda local de mejor mejora"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent
 :BitFlipMutationComponent rdf:type owl:Class ;
                           rdfs:subClassOf :VariationComponent ;
@@ -546,6 +564,15 @@
                                        "Variation component that flips each binary value with probability 1/n, flipping at least one."@en ;
                           rdfs:label "Bit Flip Mutation Component"@en ,
                                      "Componente de mutación por cambio de bit"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent
+:BitFlipNeighbourhoodComponent rdf:type owl:Class ;
+                               rdfs:subClassOf :NeighbourhoodComponent ;
+                               rdfs:comment "Neighbourhood of the binary vectors that differ in one position."@en ,
+                                            "Vecindario de los vectores binarios que difieren en una posición."@es ;
+                               rdfs:label "Bit Flip Neighbourhood Component"@en ,
+                                          "Componente de vecindario de cambio de bit"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#CollectionShape
@@ -743,6 +770,15 @@
                                            "Diversity Preservation Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#ElementChangeNeighbourhoodComponent
+:ElementChangeNeighbourhoodComponent rdf:type owl:Class ;
+                                     rdfs:subClassOf :NeighbourhoodComponent ;
+                                     rdfs:comment "Neighbourhood of the integer vectors obtained by changing the value of one position to another value of its domain."@en ,
+                                                  "Vecindario de los vectores enteros obtenidos cambiando el valor de una posición por otro valor de su dominio."@es ;
+                                     rdfs:label "Componente de vecindario de cambio de elemento"@es ,
+                                                "Element Change Neighbourhood Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm
 :EvolutionaryAlgorithm rdf:type owl:Class ;
                        owl:equivalentClass [ owl:intersectionOf ( :PopulationBasedMetaheuristic
@@ -770,6 +806,15 @@
                                   "Evolutionary Algorithm"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent
+:FirstImprovementLocalSearchComponent rdf:type owl:Class ;
+                                      rdfs:subClassOf :LocalSearchComponent ;
+                                      rdfs:comment "Componente de búsqueda local que se desplaza al primer vecino que mejora del vecindario que usa, hasta que ningún vecino mejora."@es ,
+                                                   "Local search component that moves to the first improving neighbour of the neighbourhood it uses, until no neighbour improves."@en ;
+                                      rdfs:label "Componente de búsqueda local de primera mejora"@es ,
+                                                 "First Improvement Local Search Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent
 :FitnessAssignmentComponent rdf:type owl:Class ;
                             rdfs:subClassOf :MultiobjectiveComponent ;
@@ -786,6 +831,15 @@
                                   "Componente que genera una solución inicial o una población inicial."@es ;
                      rdfs:label "Componente de generación"@es ,
                                 "Generation Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent
+:ImprovementAcceptanceComponent rdf:type owl:Class ;
+                                rdfs:subClassOf :AcceptanceComponent ;
+                                rdfs:comment "Acceptance component that keeps the best of the current and the candidate solutions; ties favour the candidate."@en ,
+                                             "Componente de aceptación que conserva la mejor entre la solución actual y la candidata; en caso de empate, la candidata."@es ;
+                                rdfs:label "Componente de aceptación por mejora"@es ,
+                                           "Improvement Acceptance Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#InputParameter
@@ -812,6 +866,19 @@
                                          "Variation component that moves the value of a random position to another random position of a permutation."@en ;
                             rdfs:label "Componente de mutación por inserción"@es ,
                                        "Insertion Mutation Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#InsertionNeighbourhoodComponent
+:InsertionNeighbourhoodComponent rdf:type owl:Class ;
+                                 rdfs:subClassOf :NeighbourhoodComponent ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :supportsShape ;
+                                                   owl:allValuesFrom :DistinctSequenceShape
+                                                 ] ;
+                                 rdfs:comment "Neighbourhood of the permutations obtained by moving a value to another position."@en ,
+                                              "Vecindario de las permutaciones obtenidas moviendo un valor a otra posición."@es ;
+                                 rdfs:label "Componente de vecindario de inserción"@es ,
+                                            "Insertion Neighbourhood Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent
@@ -995,6 +1062,15 @@
                                      "Building block of a metaheuristic that performs a specific task and is connected to other components."@en ;
                         rdfs:label "Componente metaheurístico"@es ,
                                    "Metaheuristic Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#MetropolisAcceptanceComponent
+:MetropolisAcceptanceComponent rdf:type owl:Class ;
+                               rdfs:subClassOf :AcceptanceComponent ;
+                               rdfs:comment "Acceptance component that accepts a worse candidate with probability exp(-d / T), where d is the relative degradation (f_candidate - f_current) / |f_current| and T the temperature it reads."@en ,
+                                            "Componente de aceptación que acepta una candidata peor con probabilidad exp(-d / T), donde d es el empeoramiento relativo (f_candidata - f_actual) / |f_actual| y T la temperatura que lee."@es ;
+                               rdfs:label "Componente de aceptación de Metropolis"@es ,
+                                          "Metropolis Acceptance Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MinimizationObjective
@@ -1557,6 +1633,19 @@
                                   "Swap Mutation Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#SwapNeighbourhoodComponent
+:SwapNeighbourhoodComponent rdf:type owl:Class ;
+                            rdfs:subClassOf :NeighbourhoodComponent ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :supportsShape ;
+                                              owl:allValuesFrom :DistinctSequenceShape
+                                            ] ;
+                            rdfs:comment "Neighbourhood of the permutations obtained by exchanging the values of two positions."@en ,
+                                         "Vecindario de las permutaciones obtenidas intercambiando los valores de dos posiciones."@es ;
+                            rdfs:label "Componente de vecindario de intercambio"@es ,
+                                       "Swap Neighbourhood Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#TableData
 :TableData rdf:type owl:Class ;
            owl:equivalentClass [ owl:intersectionOf ( :ProblemData
@@ -1610,6 +1699,19 @@
                                            "Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has a tournament size parameter."@en ;
                               rdfs:label "Componente de selección por torneo"@es ,
                                          "Tournament Selection Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent
+:TwoOptNeighbourhoodComponent rdf:type owl:Class ;
+                              rdfs:subClassOf :NeighbourhoodComponent ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :supportsShape ;
+                                                owl:allValuesFrom :DistinctSequenceShape
+                                              ] ;
+                              rdfs:comment "Neighbourhood of the permutations obtained by reversing a segment (2-opt move)."@en ,
+                                           "Vecindario de las permutaciones obtenidas invirtiendo un segmento (movimiento 2-opt)."@es ;
+                              rdfs:label "2-opt Neighbourhood Component"@en ,
+                                         "Componente de vecindario 2-opt"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent
