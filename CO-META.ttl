@@ -1597,6 +1597,15 @@ CO-META:StoppingCriterionComponent rdf:type owl:Class ;
                                               "Stopping Criterion Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#SubtractionComponent
+CO-META:SubtractionComponent rdf:type owl:Class ;
+                             rdfs:subClassOf CO-META:PopulationOperatorComponent ;
+                             rdfs:comment "Operador de población que elimina de su entrada las soluciones almacenadas en las estructuras de datos que lee (p. ej. una lista tabú)."@es ,
+                                          "Population operator that removes from its input the solutions stored in the data structures it reads (e.g. a tabu list)."@en ;
+                             rdfs:label "Componente de sustracción"@es ,
+                                        "Subtraction Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent
 CO-META:SwapMutationComponent rdf:type owl:Class ;
                               rdfs:subClassOf CO-META:VariationComponent ,
@@ -1678,6 +1687,22 @@ CO-META:TournamentSelectionComponent rdf:type owl:Class ;
                                                 "Tournament Selection Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#TruncationComponent
+CO-META:TruncationComponent rdf:type owl:Class ;
+                            rdfs:subClassOf CO-META:PopulationOperatorComponent ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty CO-META:hasParameter ;
+                                              owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty CO-META:hasType ;
+                                                                   owl:hasValue CO-META:PopulationSize
+                                                                 ]
+                                            ] ;
+                            rdfs:comment "Operador de población que conserva los mejores individuos hasta el tamaño de población, según la aptitud asignada por los componentes previos (rango y diversidad) o, si no la hay, según los objetivos."@es ,
+                                         "Population operator that keeps the best individuals up to the population size, according to the fitness assigned by the previous components (rank and diversity) or, without it, to the objectives."@en ;
+                            rdfs:label "Componente de truncamiento"@es ,
+                                       "Truncation Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#TwoOptNeighbourhoodComponent
 CO-META:TwoOptNeighbourhoodComponent rdf:type owl:Class ;
                                      rdfs:subClassOf CO-META:NeighbourhoodComponent ,
@@ -1689,6 +1714,15 @@ CO-META:TwoOptNeighbourhoodComponent rdf:type owl:Class ;
                                                   "Neighbourhood of the permutations obtained by reversing a segment (2-opt move)."@en ;
                                      rdfs:label "Componente de vecindario 2-opt"@es ,
                                                 "2-opt Neighbourhood Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#UnionComponent
+CO-META:UnionComponent rdf:type owl:Class ;
+                       rdfs:subClassOf CO-META:PopulationOperatorComponent ;
+                       rdfs:comment "Operador de población que une, sin repeticiones, las poblaciones que recibe y las soluciones de las estructuras de datos que lee."@es ,
+                                    "Population operator that joins, without repetitions, the populations it receives and the solutions of the data structures it reads."@en ;
+                       rdfs:label "Componente de unión"@es ,
+                                  "Union Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent
