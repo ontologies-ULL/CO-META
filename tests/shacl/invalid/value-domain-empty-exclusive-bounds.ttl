@@ -1,0 +1,15 @@
+# Expected: SHACL violation (ValueDomainShape).
+# The reals greater than 1 and at most 1 leave the value domain without values.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/value-domain-empty-exclusive-bounds> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:x a owl:NamedIndividual , CO-META:DecisionVariable ;
+    CO-META:hasShape CO-META:Scalar ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ;
+                             CO-META:hasBaseType CO-META:Reals ;
+                             CO-META:hasExclusiveLowerBound CO-META:One ;
+                             CO-META:hasUpperBound CO-META:One ] .

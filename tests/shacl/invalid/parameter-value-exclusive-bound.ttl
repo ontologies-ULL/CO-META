@@ -1,0 +1,12 @@
+# Expected: SHACL violation (ParameterValueShape).
+# MaxTemperature takes real values greater than 0, so 0 is outside its domain.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/parameter-value-exclusive-bound> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:max_temperature_value a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:MaxTemperature ;
+    CO-META:hasValue 0.0 .

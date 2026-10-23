@@ -111,6 +111,28 @@ CO-META:hasDataStructure rdf:type owl:ObjectProperty ;
                          rdfs:range CO-META:DataStructure .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasExclusiveLowerBound
+CO-META:hasExclusiveLowerBound rdf:type owl:ObjectProperty ,
+                                        owl:FunctionalProperty ;
+                               rdfs:domain CO-META:ValueDomain ;
+                               rdfs:range CO-META:ValueSpecification ;
+                               rdfs:comment "Value that every value of a value domain is greater than, without reaching it. A value domain has at most one lower bound, inclusive (hasLowerBound) or exclusive."@en ,
+                                            "Valor del que todos los valores de un dominio de valores son mayores, sin alcanzarlo. Un dominio de valores tiene como mucho una cota inferior, inclusiva (hasLowerBound) o exclusiva."@es ;
+                               rdfs:label "has exclusive lower bound"@en ,
+                                          "tiene cota inferior exclusiva"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasExclusiveUpperBound
+CO-META:hasExclusiveUpperBound rdf:type owl:ObjectProperty ,
+                                        owl:FunctionalProperty ;
+                               rdfs:domain CO-META:ValueDomain ;
+                               rdfs:range CO-META:ValueSpecification ;
+                               rdfs:comment "Value that every value of a value domain is less than, without reaching it. A value domain has at most one upper bound, inclusive (hasUpperBound) or exclusive."@en ,
+                                            "Valor del que todos los valores de un dominio de valores son menores, sin alcanzarlo. Un dominio de valores tiene como mucho una cota superior, inclusiva (hasUpperBound) o exclusiva."@es ;
+                               rdfs:label "has exclusive upper bound"@en ,
+                                          "tiene cota superior exclusiva"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasInput
 CO-META:hasInput rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf CO-META:isConnectedTo ;
@@ -145,8 +167,8 @@ CO-META:hasLowerBound rdf:type owl:ObjectProperty ,
                                owl:FunctionalProperty ;
                       rdfs:domain CO-META:ValueDomain ;
                       rdfs:range CO-META:ValueSpecification ;
-                      rdfs:comment "Smallest value of a value domain. If it is not stated, no lower bound is imposed."@en ,
-                                   "Menor valor de un dominio de valores. Si no se indica, no se impone cota inferior."@es ;
+                      rdfs:comment "Smallest value of a value domain, included in it. If neither it nor hasExclusiveLowerBound is stated, no lower bound is imposed."@en ,
+                                   "Menor valor de un dominio de valores, incluido en él. Si no se indica ni esta ni hasExclusiveLowerBound, no se impone cota inferior."@es ;
                       rdfs:label "has lower bound"@en ,
                                  "tiene cota inferior"@es .
 
@@ -252,8 +274,8 @@ CO-META:hasUpperBound rdf:type owl:ObjectProperty ,
                                owl:FunctionalProperty ;
                       rdfs:domain CO-META:ValueDomain ;
                       rdfs:range CO-META:ValueSpecification ;
-                      rdfs:comment "Largest value of a value domain. If it is not stated, no upper bound is imposed."@en ,
-                                   "Mayor valor de un dominio de valores. Si no se indica, no se impone cota superior."@es ;
+                      rdfs:comment "Largest value of a value domain, included in it. If neither it nor hasExclusiveUpperBound is stated, no upper bound is imposed."@en ,
+                                   "Mayor valor de un dominio de valores, incluido en él. Si no se indica ni esta ni hasExclusiveUpperBound, no se impone cota superior."@es ;
                       rdfs:label "has upper bound"@en ,
                                  "tiene cota superior"@es .
 
@@ -1989,9 +2011,35 @@ CO-META:ValueDomain rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty CO-META:hasBaseType ;
                                       owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Class ;
+                                      owl:complementOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty CO-META:hasLowerBound ;
+                                                                                owl:someValuesFrom owl:Thing
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty CO-META:hasExclusiveLowerBound ;
+                                                                                owl:someValuesFrom owl:Thing
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ]
+                                    ] ,
+                                    [ rdf:type owl:Class ;
+                                      owl:complementOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty CO-META:hasUpperBound ;
+                                                                                owl:someValuesFrom owl:Thing
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty CO-META:hasExclusiveUpperBound ;
+                                                                                owl:someValuesFrom owl:Thing
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ]
                                     ] ;
-                    rdfs:comment "Set of values that a quantity or parameter can take, defined by a base number set and optional lower and upper bounds (e.g. the integers between 0 and 1)."@en ,
-                                 "Conjunto de valores que puede tomar una magnitud o un parámetro, definido por un conjunto numérico base y cotas inferior y superior opcionales (p. ej., los enteros entre 0 y 1)."@es ;
+                    rdfs:comment "Set of values that a quantity or parameter can take, defined by a base number set and optional lower and upper bounds, inclusive or exclusive (e.g. the integers between 0 and 1)."@en ,
+                                 "Conjunto de valores que puede tomar una magnitud o un parámetro, definido por un conjunto numérico base y cotas inferior y superior opcionales, inclusivas o exclusivas (p. ej., los enteros entre 0 y 1)."@es ;
                     rdfs:label "Value Domain"@en ,
                                "Dominio de valores"@es .
 
@@ -2186,13 +2234,13 @@ CO-META:Iterations rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#MaxTemperature
 CO-META:MaxTemperature rdf:type owl:NamedIndividual ,
                                 CO-META:Parameter ;
-                       CO-META:hasValueDomain CO-META:NonNegativeReals .
+                       CO-META:hasValueDomain CO-META:PositiveReals .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MinTemperature
 CO-META:MinTemperature rdf:type owl:NamedIndividual ,
                                 CO-META:Parameter ;
-                       CO-META:hasValueDomain CO-META:NonNegativeReals .
+                       CO-META:hasValueDomain CO-META:PositiveReals .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MutationProbability
@@ -2282,6 +2330,17 @@ CO-META:PositiveIntegers rdf:type owl:NamedIndividual ,
                                       "Dominio de valores con los enteros mayores o iguales que 1 (p. ej., un número de ciudades)."@es ;
                          rdfs:label "Positive Integers"@en ,
                                     "Enteros positivos"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PositiveReals
+CO-META:PositiveReals rdf:type owl:NamedIndividual ,
+                               CO-META:ValueDomain ;
+                      CO-META:hasBaseType CO-META:Reals ;
+                      CO-META:hasExclusiveLowerBound CO-META:Zero ;
+                      rdfs:comment "Value domain of the real numbers greater than 0 (e.g. a temperature)."@en ,
+                                   "Dominio de valores con los reales mayores que 0 (p. ej., una temperatura)."@es ;
+                      rdfs:label "Positive Reals"@en ,
+                                 "Reales positivos"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#RCLRandomness

@@ -46,9 +46,16 @@ cm:ParameterValueShape
                 } UNION {
                     ?domain cm:hasUpperBound/cm:hasLiteralValue ?bound .
                     BIND ("upper" AS ?side)
+                } UNION {
+                    ?domain cm:hasExclusiveLowerBound/cm:hasLiteralValue ?bound .
+                    BIND ("exclusive lower" AS ?side)
+                } UNION {
+                    ?domain cm:hasExclusiveUpperBound/cm:hasLiteralValue ?bound .
+                    BIND ("exclusive upper" AS ?side)
                 }
                 # Compared outside the UNION, where ?value is in scope
-                FILTER ((?side = "lower" && ?value < ?bound) || (?side = "upper" && ?value > ?bound))
+                FILTER ((?side = "lower" && ?value < ?bound) || (?side = "upper" && ?value > ?bound) ||
+                        (?side = "exclusive lower" && ?value <= ?bound) || (?side = "exclusive upper" && ?value >= ?bound))
             }
         """ ;
     ] .

@@ -18,17 +18,21 @@ cm:ValueDomainShape
         sh:message "A value domain must state its base type." ;
     ] ;
 
-    # When both bounds are literals, the lower bound cannot exceed the upper bound
+    # When both bounds are literals, they must leave some value: the lower bound
+    # cannot exceed the upper bound, nor equal it if either bound is exclusive
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "Lower bound {?lower} of {$this} is greater than its upper bound {?upper}." ;
+        sh:message "Bounds {?lower} and {?upper} of {$this} leave it without values." ;
         sh:select """
             PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
             SELECT $this ?lower ?upper
             WHERE {
-                $this cm:hasLowerBound/cm:hasLiteralValue ?lower ;
-                      cm:hasUpperBound/cm:hasLiteralValue ?upper .
-                FILTER (?lower > ?upper)
+                $this ?lowerProperty [ cm:hasLiteralValue ?lower ] ;
+                      ?upperProperty [ cm:hasLiteralValue ?upper ] .
+                FILTER (?lowerProperty IN (cm:hasLowerBound, cm:hasExclusiveLowerBound))
+                FILTER (?upperProperty IN (cm:hasUpperBound, cm:hasExclusiveUpperBound))
+                FILTER (?lower > ?upper || (?lower = ?upper &&
+                        (?lowerProperty = cm:hasExclusiveLowerBound || ?upperProperty = cm:hasExclusiveUpperBound)))
             }
         """ ;
     ] ;
@@ -42,7 +46,7 @@ cm:ValueDomainShape
             SELECT $this
             WHERE {
                 $this cm:hasBaseType cm:Solutions .
-                FILTER EXISTS { $this cm:hasLowerBound|cm:hasUpperBound ?bound }
+                FILTER EXISTS { $this cm:hasLowerBound|cm:hasUpperBound|cm:hasExclusiveLowerBound|cm:hasExclusiveUpperBound ?bound }
             }
         """ ;
     ] .
