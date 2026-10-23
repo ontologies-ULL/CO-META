@@ -39,7 +39,7 @@ CO-META:EA_generate_population rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#EA_mutation
 CO-META:EA_mutation rdf:type owl:NamedIndividual ,
-                             CO-META:VariationComponent ;
+                             CO-META:SwapMutationComponent ;
                     CO-META:hasInput CO-META:EA_order_crossover ;
                     CO-META:hasParameter CO-META:EA_parameter_mutationprobability .
 
@@ -53,7 +53,7 @@ CO-META:EA_next_generation rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover
 CO-META:EA_order_crossover rdf:type owl:NamedIndividual ,
-                                    CO-META:CrossoverComponent ;
+                                    CO-META:OrderCrossoverComponent ;
                            CO-META:hasInput CO-META:EA_binary_tournament_selection ;
                            CO-META:hasParameter CO-META:EA_parameter_crossoverprobability .
 

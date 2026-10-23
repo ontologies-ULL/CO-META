@@ -13,7 +13,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
     }, {
       "@id" : "_:genid102"
     } ]
@@ -22,13 +22,32 @@
   "@id" : "_:genid102",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"
+  } ]
+}, {
+  "@id" : "_:genid104",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
+    }, {
+      "@id" : "_:genid106"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid106",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid103"
+    "@id" : "_:genid107"
   } ]
 }, {
-  "@id" : "_:genid103",
+  "@id" : "_:genid107",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -38,62 +57,62 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid107",
+  "@id" : "_:genid111",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"
     }, {
-      "@id" : "_:genid109"
+      "@id" : "_:genid113"
     } ]
   } ]
 }, {
-  "@id" : "_:genid109",
+  "@id" : "_:genid113",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid110"
+    "@id" : "_:genid114"
   } ]
 }, {
-  "@id" : "_:genid110",
+  "@id" : "_:genid114",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid117"
+      "@id" : "_:genid121"
     }, {
-      "@id" : "_:genid112"
+      "@id" : "_:genid116"
     } ]
   } ]
 }, {
-  "@id" : "_:genid112",
+  "@id" : "_:genid116",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasValue"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid113"
+    "@id" : "_:genid117"
   } ]
 }, {
-  "@id" : "_:genid113",
+  "@id" : "_:genid117",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#onDatatype" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
     "@list" : [ {
-      "@id" : "_:genid115"
+      "@id" : "_:genid119"
     } ]
   } ]
 }, {
-  "@id" : "_:genid115",
+  "@id" : "_:genid119",
   "http://www.w3.org/2001/XMLSchema#minExclusive" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid117",
+  "@id" : "_:genid121",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationSize"
@@ -102,62 +121,62 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid119",
+  "@id" : "_:genid123",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"
     }, {
-      "@id" : "_:genid121"
+      "@id" : "_:genid125"
     } ]
   } ]
 }, {
-  "@id" : "_:genid121",
+  "@id" : "_:genid125",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid122"
+    "@id" : "_:genid126"
   } ]
 }, {
-  "@id" : "_:genid122",
+  "@id" : "_:genid126",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid129"
+      "@id" : "_:genid133"
     }, {
-      "@id" : "_:genid124"
+      "@id" : "_:genid128"
     } ]
   } ]
 }, {
-  "@id" : "_:genid124",
+  "@id" : "_:genid128",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasValue"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid125"
+    "@id" : "_:genid129"
   } ]
 }, {
-  "@id" : "_:genid125",
+  "@id" : "_:genid129",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#onDatatype" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
     "@list" : [ {
-      "@id" : "_:genid127"
+      "@id" : "_:genid131"
     } ]
   } ]
 }, {
-  "@id" : "_:genid127",
+  "@id" : "_:genid131",
   "http://www.w3.org/2001/XMLSchema#minExclusive" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid129",
+  "@id" : "_:genid133",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationSize"
@@ -166,7 +185,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid131",
+  "@id" : "_:genid135",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasObjective"
@@ -175,7 +194,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Objective"
   } ]
 }, {
-  "@id" : "_:genid132",
+  "@id" : "_:genid136",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -185,7 +204,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"
   } ]
 }, {
-  "@id" : "_:genid133",
+  "@id" : "_:genid137",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -193,17 +212,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid135",
+  "@id" : "_:genid139",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
     }, {
-      "@id" : "_:genid137"
+      "@id" : "_:genid141"
     } ]
   } ]
 }, {
-  "@id" : "_:genid137",
+  "@id" : "_:genid141",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
@@ -212,16 +231,16 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ScalarShape"
   } ]
 }, {
-  "@id" : "_:genid139",
+  "@id" : "_:genid143",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid140"
+    "@id" : "_:genid144"
   } ]
 }, {
-  "@id" : "_:genid140",
+  "@id" : "_:genid144",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Elitism"
@@ -230,17 +249,17 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid141",
+  "@id" : "_:genid145",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#CollectionShape"
     }, {
-      "@id" : "_:genid143"
+      "@id" : "_:genid147"
     } ]
   } ]
 }, {
-  "@id" : "_:genid143",
+  "@id" : "_:genid147",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -250,17 +269,17 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isOrdered"
   } ]
 }, {
-  "@id" : "_:genid145",
+  "@id" : "_:genid149",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
     }, {
-      "@id" : "_:genid147"
+      "@id" : "_:genid151"
     } ]
   } ]
 }, {
-  "@id" : "_:genid147",
+  "@id" : "_:genid151",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
@@ -269,19 +288,19 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SequenceShape"
   } ]
 }, {
-  "@id" : "_:genid149",
+  "@id" : "_:genid153",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#CollectionShape"
     }, {
-      "@id" : "_:genid153"
+      "@id" : "_:genid157"
     }, {
-      "@id" : "_:genid151"
+      "@id" : "_:genid155"
     } ]
   } ]
 }, {
-  "@id" : "_:genid151",
+  "@id" : "_:genid155",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -291,7 +310,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isOrdered"
   } ]
 }, {
-  "@id" : "_:genid153",
+  "@id" : "_:genid157",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -301,33 +320,14 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isDistinct"
   } ]
 }, {
-  "@id" : "_:genid155",
+  "@id" : "_:genid159",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
     }, {
-      "@id" : "_:genid157"
+      "@id" : "_:genid161"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid157",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SetShape"
-  } ]
-}, {
-  "@id" : "_:genid159",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "2"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"
   } ]
 }, {
   "@id" : "_:genid16",
@@ -340,36 +340,55 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid160",
+  "@id" : "_:genid161",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SetShape"
+  } ]
+}, {
+  "@id" : "_:genid163",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"
+  } ]
+}, {
+  "@id" : "_:genid164",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"
     }, {
-      "@id" : "_:genid162"
+      "@id" : "_:genid166"
     } ]
   } ]
 }, {
-  "@id" : "_:genid162",
+  "@id" : "_:genid166",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid163"
+    "@id" : "_:genid167"
   } ]
 }, {
-  "@id" : "_:genid163",
+  "@id" : "_:genid167",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid167"
+      "@id" : "_:genid171"
     }, {
-      "@id" : "_:genid165"
+      "@id" : "_:genid169"
     } ]
   } ]
 }, {
-  "@id" : "_:genid165",
+  "@id" : "_:genid169",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -379,7 +398,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasValue"
   } ]
 }, {
-  "@id" : "_:genid167",
+  "@id" : "_:genid171",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationSize"
@@ -388,36 +407,36 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid169",
+  "@id" : "_:genid173",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"
     }, {
-      "@id" : "_:genid171"
+      "@id" : "_:genid175"
     } ]
   } ]
 }, {
-  "@id" : "_:genid171",
+  "@id" : "_:genid175",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid172"
+    "@id" : "_:genid176"
   } ]
 }, {
-  "@id" : "_:genid172",
+  "@id" : "_:genid176",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid176"
+      "@id" : "_:genid180"
     }, {
-      "@id" : "_:genid174"
+      "@id" : "_:genid178"
     } ]
   } ]
 }, {
-  "@id" : "_:genid174",
+  "@id" : "_:genid178",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -427,7 +446,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasValue"
   } ]
 }, {
-  "@id" : "_:genid176",
+  "@id" : "_:genid180",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationSize"
@@ -436,26 +455,26 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid178",
+  "@id" : "_:genid182",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
     }, {
-      "@id" : "_:genid180"
+      "@id" : "_:genid184"
     } ]
   } ]
 }, {
-  "@id" : "_:genid180",
+  "@id" : "_:genid184",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid181"
+    "@id" : "_:genid185"
   } ]
 }, {
-  "@id" : "_:genid181",
+  "@id" : "_:genid185",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -465,7 +484,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid185",
+  "@id" : "_:genid189",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -473,34 +492,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex"
-  } ]
-}, {
-  "@id" : "_:genid186",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid187"
-  } ]
-}, {
-  "@id" : "_:genid187",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Iterations"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
-  } ]
-}, {
-  "@id" : "_:genid188",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
-    }, {
-      "@id" : "_:genid190"
-    } ]
   } ]
 }, {
   "@id" : "_:genid19",
@@ -516,13 +507,50 @@
   "@id" : "_:genid190",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid191"
+  } ]
+}, {
+  "@id" : "_:genid191",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Iterations"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
+  } ]
+}, {
+  "@id" : "_:genid192",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#supportsShape"
+  } ]
+}, {
+  "@id" : "_:genid193",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
+    }, {
+      "@id" : "_:genid195"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid195",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#TableShape"
   } ]
 }, {
-  "@id" : "_:genid192",
+  "@id" : "_:genid197",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasColumn"
@@ -531,7 +559,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Column"
   } ]
 }, {
-  "@id" : "_:genid193",
+  "@id" : "_:genid198",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -541,16 +569,16 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasRowCount"
   } ]
 }, {
-  "@id" : "_:genid194",
+  "@id" : "_:genid199",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid195"
+    "@id" : "_:genid200"
   } ]
 }, {
-  "@id" : "_:genid195",
+  "@id" : "_:genid200",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#TournamentSize"
@@ -559,7 +587,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid196",
+  "@id" : "_:genid201",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -569,7 +597,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"
   } ]
 }, {
-  "@id" : "_:genid197",
+  "@id" : "_:genid202",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -579,7 +607,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasBaseType"
   } ]
 }, {
-  "@id" : "_:genid198",
+  "@id" : "_:genid203",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -609,7 +637,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid211",
+  "@id" : "_:genid216",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -625,7 +653,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid217",
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Constraint"
+    }, {
+      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Objective"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid222",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -637,17 +675,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid22",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Constraint"
-    }, {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#Objective"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid221",
+  "@id" : "_:genid226",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -659,7 +687,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid225",
+  "@id" : "_:genid230",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
   "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
     "@list" : [ {
@@ -818,18 +846,27 @@
   } ]
 }, {
   "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#supportsShape"
+  } ]
+}, {
+  "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#CollectionShape"
     }, {
-      "@id" : "_:genid53"
+      "@id" : "_:genid54"
     }, {
-      "@id" : "_:genid51"
+      "@id" : "_:genid52"
     } ]
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid52",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -839,7 +876,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isOrdered"
   } ]
 }, {
-  "@id" : "_:genid53",
+  "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -849,29 +886,29 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isDistinct"
   } ]
 }, {
-  "@id" : "_:genid55",
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic"
     }, {
-      "@id" : "_:genid57"
+      "@id" : "_:genid58"
     } ]
   } ]
 }, {
-  "@id" : "_:genid57",
+  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid63"
+      "@id" : "_:genid64"
     }, {
-      "@id" : "_:genid61"
+      "@id" : "_:genid62"
     }, {
-      "@id" : "_:genid59"
+      "@id" : "_:genid60"
     } ]
   } ]
 }, {
-  "@id" : "_:genid59",
+  "@id" : "_:genid60",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
@@ -880,7 +917,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#VariationComponent"
   } ]
 }, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid62",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
@@ -889,7 +926,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   } ]
 }, {
-  "@id" : "_:genid63",
+  "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
@@ -898,7 +935,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
   } ]
 }, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid66",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Scalar"
@@ -907,7 +944,25 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
   } ]
 }, {
-  "@id" : "_:genid66",
+  "@id" : "_:genid67",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#supportsShape"
+  } ]
+}, {
+  "@id" : "_:genid68",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#supportsShape"
+  } ]
+}, {
+  "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -917,16 +972,16 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"
   } ]
 }, {
-  "@id" : "_:genid67",
+  "@id" : "_:genid70",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasParameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid68"
+    "@id" : "_:genid71"
   } ]
 }, {
-  "@id" : "_:genid68",
+  "@id" : "_:genid71",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints"
@@ -935,7 +990,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasType"
   } ]
 }, {
-  "@id" : "_:genid69",
+  "@id" : "_:genid72",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -945,17 +1000,17 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasLiteralValue"
   } ]
 }, {
-  "@id" : "_:genid70",
+  "@id" : "_:genid73",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
     }, {
-      "@id" : "_:genid72"
+      "@id" : "_:genid75"
     } ]
   } ]
 }, {
-  "@id" : "_:genid72",
+  "@id" : "_:genid75",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
@@ -964,43 +1019,23 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"
   } ]
 }, {
-  "@id" : "_:genid74",
+  "@id" : "_:genid77",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
     }, {
-      "@id" : "_:genid76"
+      "@id" : "_:genid79"
     } ]
   } ]
 }, {
-  "@id" : "_:genid76",
+  "@id" : "_:genid79",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixShape"
-  } ]
-}, {
-  "@id" : "_:genid78",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasColumnCount"
-  } ]
-}, {
-  "@id" : "_:genid79",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasRowCount"
   } ]
 }, {
   "@id" : "_:genid8",
@@ -1019,17 +1054,37 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid80",
+  "@id" : "_:genid81",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasColumnCount"
+  } ]
+}, {
+  "@id" : "_:genid82",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasRowCount"
+  } ]
+}, {
+  "@id" : "_:genid83",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
     }, {
-      "@id" : "_:genid82"
+      "@id" : "_:genid85"
     } ]
   } ]
 }, {
-  "@id" : "_:genid82",
+  "@id" : "_:genid85",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
@@ -1038,17 +1093,17 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixShape"
   } ]
 }, {
-  "@id" : "_:genid84",
+  "@id" : "_:genid87",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#EvolutionaryAlgorithm"
     }, {
-      "@id" : "_:genid86"
+      "@id" : "_:genid89"
     } ]
   } ]
 }, {
-  "@id" : "_:genid86",
+  "@id" : "_:genid89",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"
@@ -1057,19 +1112,19 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"
   } ]
 }, {
-  "@id" : "_:genid88",
+  "@id" : "_:genid91",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/ontologies-ULL/CO-META#CollectionShape"
     }, {
-      "@id" : "_:genid92"
+      "@id" : "_:genid95"
     }, {
-      "@id" : "_:genid90"
+      "@id" : "_:genid93"
     } ]
   } ]
 }, {
-  "@id" : "_:genid90",
+  "@id" : "_:genid93",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1079,7 +1134,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isOrdered"
   } ]
 }, {
-  "@id" : "_:genid92",
+  "@id" : "_:genid95",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1089,7 +1144,16 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isDistinct"
   } ]
 }, {
-  "@id" : "_:genid94",
+  "@id" : "_:genid97",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#supportsShape"
+  } ]
+}, {
+  "@id" : "_:genid98",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1099,32 +1163,13 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#refersTo"
   } ]
 }, {
-  "@id" : "_:genid95",
+  "@id" : "_:genid99",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#supportsShape"
-  } ]
-}, {
-  "@id" : "_:genid96",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
-    }, {
-      "@id" : "_:genid98"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid98",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasShape"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"
   } ]
 }, {
   "@id" : "http://creativecommons.org/ns#license",
@@ -1369,6 +1414,26 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#One"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de variación que cambia cada valor binario con probabilidad 1/n, cambiando al menos uno."
+  }, {
+    "@language" : "en",
+    "@value" : "Variation component that flips each binary value with probability 1/n, flipping at least one."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bit Flip Mutation Component"
+  }, {
+    "@language" : "es",
+    "@value" : "Componente de mutación por cambio de bit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VariationComponent"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Booleans",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -1594,6 +1659,28 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#UnitInterval"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#CycleCrossoverComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de cruce para permutaciones que mantiene cada valor en la posición que ocupa en uno de los progenitores, siguiendo los ciclos entre ellos (CX)."
+  }, {
+    "@language" : "en",
+    "@value" : "Crossover component for permutations that keeps each value in the position it has in one of the parents, following the cycles between them (CX)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de cruce por ciclos"
+  }, {
+    "@language" : "en",
+    "@value" : "Cycle Crossover Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
+  }, {
+    "@id" : "_:genid49"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1688,7 +1775,7 @@
     "@value" : "Forma de secuencia sin repeticiones"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid49"
+    "@id" : "_:genid50"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#DiversityPreservationComponent",
@@ -1737,7 +1824,7 @@
     "@value" : "Evolutionary Algorithm"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid55"
+    "@id" : "_:genid56"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#FitnessAssignmentComponent",
@@ -1799,7 +1886,29 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
   }, {
-    "@id" : "_:genid65"
+    "@id" : "_:genid66"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#InsertionMutationComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de variación que mueve el valor de una posición aleatoria a otra posición aleatoria de una permutación."
+  }, {
+    "@language" : "en",
+    "@value" : "Variation component that moves the value of a random position to another random position of a permutation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de mutación por inserción"
+  }, {
+    "@language" : "en",
+    "@value" : "Insertion Mutation Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VariationComponent"
+  }, {
+    "@id" : "_:genid67"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Integers",
@@ -1820,6 +1929,28 @@
   }, {
     "@language" : "en",
     "@value" : "Integers"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de variación que invierte el orden de un segmento aleatorio de una permutación."
+  }, {
+    "@language" : "en",
+    "@value" : "Variation component that reverses the order of a random segment of a permutation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de mutación por inversión"
+  }, {
+    "@language" : "en",
+    "@value" : "Inversion Mutation Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VariationComponent"
+  }, {
+    "@id" : "_:genid68"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Iterations",
@@ -1850,7 +1981,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   }, {
-    "@id" : "_:genid66"
+    "@id" : "_:genid69"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#KPointCrossoverComponent",
@@ -1872,7 +2003,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
   }, {
-    "@id" : "_:genid67"
+    "@id" : "_:genid70"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#LiteralValue",
@@ -1894,7 +2025,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"
   }, {
-    "@id" : "_:genid69"
+    "@id" : "_:genid72"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent",
@@ -1934,7 +2065,7 @@
     "@value" : "Metaheurística de búsqueda local"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid70"
+    "@id" : "_:genid73"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#LoopComponent",
@@ -1977,7 +2108,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid74"
+    "@id" : "_:genid77"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixShape",
@@ -2001,9 +2132,9 @@
   }, {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape"
   }, {
-    "@id" : "_:genid78"
+    "@id" : "_:genid81"
   }, {
-    "@id" : "_:genid79"
+    "@id" : "_:genid82"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MatrixVariable",
@@ -2026,7 +2157,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid80"
+    "@id" : "_:genid83"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MaximizationObjective",
@@ -2069,7 +2200,7 @@
     "@value" : "Memetic Algorithm"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid84"
+    "@id" : "_:genid87"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic",
@@ -2166,7 +2297,7 @@
     "@id" : "http://qudt.org/schema/qudt/MultiSet"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid88"
+    "@id" : "_:genid91"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent",
@@ -2314,6 +2445,28 @@
     "@value" : "1"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#OrderCrossoverComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de cruce para permutaciones que copia un segmento de un progenitor y rellena las posiciones restantes con los valores del otro progenitor en su orden (OX)."
+  }, {
+    "@language" : "en",
+    "@value" : "Crossover component for permutations that copies a segment from one parent and fills the remaining positions with the values of the other parent in their order (OX)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de cruce de orden"
+  }, {
+    "@language" : "en",
+    "@value" : "Order Crossover Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
+  }, {
+    "@id" : "_:genid97"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2350,7 +2503,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"
   }, {
-    "@id" : "_:genid94"
+    "@id" : "_:genid98"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ParameterValue",
@@ -2389,7 +2542,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
   }, {
-    "@id" : "_:genid95"
+    "@id" : "_:genid99"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PermutationVariable",
@@ -2412,7 +2565,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid96"
+    "@id" : "_:genid100"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic",
@@ -2435,7 +2588,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid100"
+    "@id" : "_:genid104"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationConstructionComponent",
@@ -2461,7 +2614,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid107"
+    "@id" : "_:genid111"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationGenerationComponent",
@@ -2487,7 +2640,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid119"
+    "@id" : "_:genid123"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent",
@@ -2585,7 +2738,7 @@
     "@value" : "Problema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid131"
+    "@id" : "_:genid135"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData",
@@ -2665,6 +2818,26 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#RandomResetMutationComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de variación que sustituye el valor de una posición aleatoria por un valor aleatorio de su dominio."
+  }, {
+    "@language" : "en",
+    "@value" : "Variation component that replaces the value of a random position with a random value of its domain."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de mutación por reinicio aleatorio"
+  }, {
+    "@language" : "en",
+    "@value" : "Random Reset Mutation Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VariationComponent"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2684,7 +2857,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   }, {
-    "@id" : "_:genid132"
+    "@id" : "_:genid136"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Reals",
@@ -2753,7 +2926,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid133"
+    "@id" : "_:genid137"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ScalarVariable",
@@ -2776,7 +2949,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid135"
+    "@id" : "_:genid139"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent",
@@ -2798,7 +2971,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
   }, {
-    "@id" : "_:genid139"
+    "@id" : "_:genid143"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SequenceShape",
@@ -2821,7 +2994,7 @@
     "@id" : "http://qudt.org/schema/qudt/Sequence"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid141"
+    "@id" : "_:genid145"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SequenceVariable",
@@ -2844,7 +3017,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid145"
+    "@id" : "_:genid149"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SetShape",
@@ -2867,7 +3040,7 @@
     "@id" : "http://qudt.org/schema/qudt/Set"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid149"
+    "@id" : "_:genid153"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SetVariable",
@@ -2890,7 +3063,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DecisionVariable"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid155"
+    "@id" : "_:genid159"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent",
@@ -2912,7 +3085,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   }, {
-    "@id" : "_:genid159"
+    "@id" : "_:genid163"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionConstructionComponent",
@@ -2935,7 +3108,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid160"
+    "@id" : "_:genid164"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionGenerationComponent",
@@ -2958,7 +3131,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid169"
+    "@id" : "_:genid173"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic",
@@ -2978,7 +3151,7 @@
     "@value" : "Single Solution Based Metaheuristic"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid178"
+    "@id" : "_:genid182"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionFirstDimensionSize",
@@ -3048,7 +3221,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"
   }, {
-    "@id" : "_:genid185"
+    "@id" : "_:genid189"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Solutions",
@@ -3090,7 +3263,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#LoopComponent"
   }, {
-    "@id" : "_:genid186"
+    "@id" : "_:genid190"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#StorageSize",
@@ -3100,6 +3273,28 @@
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente de variación que intercambia los valores de dos posiciones aleatorias de una permutación."
+  }, {
+    "@language" : "en",
+    "@value" : "Variation component that exchanges the values of two random positions of a permutation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Componente de mutación por intercambio"
+  }, {
+    "@language" : "en",
+    "@value" : "Swap Mutation Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#VariationComponent"
+  }, {
+    "@id" : "_:genid192"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#TableData",
@@ -3122,7 +3317,7 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemData"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid188"
+    "@id" : "_:genid193"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#TableShape",
@@ -3146,9 +3341,9 @@
   }, {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataShape"
   }, {
-    "@id" : "_:genid192"
+    "@id" : "_:genid197"
   }, {
-    "@id" : "_:genid193"
+    "@id" : "_:genid198"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#Time",
@@ -3179,9 +3374,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"
   }, {
-    "@id" : "_:genid194"
+    "@id" : "_:genid199"
   }, {
-    "@id" : "_:genid196"
+    "@id" : "_:genid201"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#TournamentSize",
@@ -3265,7 +3460,7 @@
     "@value" : "Value Domain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid197"
+    "@id" : "_:genid202"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification",

@@ -539,6 +539,15 @@
                      "Tipo base"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent
+:BitFlipMutationComponent rdf:type owl:Class ;
+                          rdfs:subClassOf :VariationComponent ;
+                          rdfs:comment "Componente de variación que cambia cada valor binario con probabilidad 1/n, cambiando al menos uno."@es ,
+                                       "Variation component that flips each binary value with probability 1/n, flipping at least one."@en ;
+                          rdfs:label "Bit Flip Mutation Component"@en ,
+                                     "Componente de mutación por cambio de bit"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#CollectionShape
 :CollectionShape rdf:type owl:Class ;
                  rdfs:subClassOf <http://qudt.org/schema/qudt/Collection> ,
@@ -655,6 +664,19 @@
                                  "Modification component that produces one or more offspring individuals by recombining two or more parent individuals. It has a crossover probability parameter."@en ;
                     rdfs:label "Componente de cruce"@es ,
                                "Crossover Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#CycleCrossoverComponent
+:CycleCrossoverComponent rdf:type owl:Class ;
+                         rdfs:subClassOf :CrossoverComponent ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :supportsShape ;
+                                           owl:allValuesFrom :DistinctSequenceShape
+                                         ] ;
+                         rdfs:comment "Componente de cruce para permutaciones que mantiene cada valor en la posición que ocupa en uno de los progenitores, siguiendo los ciclos entre ellos (CX)."@es ,
+                                      "Crossover component for permutations that keeps each value in the position it has in one of the parents, following the cycles between them (CX)."@en ;
+                         rdfs:label "Componente de cruce por ciclos"@es ,
+                                    "Cycle Crossover Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent
@@ -777,6 +799,32 @@
                              "Scalar datum that characterizes an instance of the problem (e.g. the capacity of the knapsack or the number of cities)."@en ;
                 rdfs:label "Input Parameter"@en ,
                            "Parámetro de entrada"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#InsertionMutationComponent
+:InsertionMutationComponent rdf:type owl:Class ;
+                            rdfs:subClassOf :VariationComponent ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :supportsShape ;
+                                              owl:allValuesFrom :DistinctSequenceShape
+                                            ] ;
+                            rdfs:comment "Componente de variación que mueve el valor de una posición aleatoria a otra posición aleatoria de una permutación."@es ,
+                                         "Variation component that moves the value of a random position to another random position of a permutation."@en ;
+                            rdfs:label "Componente de mutación por inserción"@es ,
+                                       "Insertion Mutation Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#InversionMutationComponent
+:InversionMutationComponent rdf:type owl:Class ;
+                            rdfs:subClassOf :VariationComponent ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :supportsShape ;
+                                              owl:allValuesFrom :DistinctSequenceShape
+                                            ] ;
+                            rdfs:comment "Componente de variación que invierte el orden de un segmento aleatorio de una permutación."@es ,
+                                         "Variation component that reverses the order of a random segment of a permutation."@en ;
+                            rdfs:label "Componente de mutación por inversión"@es ,
+                                       "Inversion Mutation Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#IterativeSelectionComponent
@@ -1015,6 +1063,19 @@
                       "Objetivo"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#OrderCrossoverComponent
+:OrderCrossoverComponent rdf:type owl:Class ;
+                         rdfs:subClassOf :CrossoverComponent ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :supportsShape ;
+                                           owl:allValuesFrom :DistinctSequenceShape
+                                         ] ;
+                         rdfs:comment "Componente de cruce para permutaciones que copia un segmento de un progenitor y rellena las posiciones restantes con los valores del otro progenitor en su orden (OX)."@es ,
+                                      "Crossover component for permutations that copies a segment from one parent and fills the remaining positions with the values of the other parent in their order (OX)."@en ;
+                         rdfs:label "Componente de cruce de orden"@es ,
+                                    "Order Crossover Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#Parameter
 :Parameter rdf:type owl:Class ;
            rdfs:comment "Define la estructura de un parámetro utilizado por un componente, como su tipo y su rango de valores válidos."@es ,
@@ -1225,6 +1286,15 @@
                                                "Crossover component that decides randomly, for each position, from which parent the offspring inherits the value."@en ;
                                   rdfs:label "Componente de cruce por decisión aleatoria"@es ,
                                              "Random Decision Crossover Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#RandomResetMutationComponent
+:RandomResetMutationComponent rdf:type owl:Class ;
+                              rdfs:subClassOf :VariationComponent ;
+                              rdfs:comment "Componente de variación que sustituye el valor de una posición aleatoria por un valor aleatorio de su dominio."@es ,
+                                           "Variation component that replaces the value of a random position with a random value of its domain."@en ;
+                              rdfs:label "Componente de mutación por reinicio aleatorio"@es ,
+                                         "Random Reset Mutation Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent
@@ -1472,6 +1542,19 @@
                                          "Loop component that creates the main loop of the algorithm and determines when to stop it. It has an iterations parameter."@en ;
                             rdfs:label "Componente de criterio de parada"@es ,
                                        "Stopping Criterion Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SwapMutationComponent
+:SwapMutationComponent rdf:type owl:Class ;
+                       rdfs:subClassOf :VariationComponent ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :supportsShape ;
+                                         owl:allValuesFrom :DistinctSequenceShape
+                                       ] ;
+                       rdfs:comment "Componente de variación que intercambia los valores de dos posiciones aleatorias de una permutación."@es ,
+                                    "Variation component that exchanges the values of two random positions of a permutation."@en ;
+                       rdfs:label "Componente de mutación por intercambio"@es ,
+                                  "Swap Mutation Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TableData
