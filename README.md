@@ -25,7 +25,11 @@ Documentation: <https://w3id.org/ontologies-ULL/CO-META>
 
 ### Problems
 - A `Problem` is formulated by its `ProblemData` (input parameters, tables, matrices), its `DecisionVariable`s, at least one `Objective` and, optionally, `Constraint`s.
-- Objectives and constraints are written as LaTeX expressions (`hasLatexExpression`); the quantities they use are identified by `hasLatexSymbol`.
+- Objectives and constraints are written as LaTeX expressions (`hasLatexExpression`); the quantities they use are identified by `hasLatexSymbol`. Use only the LaTeX described in the comment of `hasLatexExpression`, so that programs can evaluate the expressions:
+  - indices start at 1, and each term of a subscript is an index: `d_{ij}` has two, so a product in an index is written `x_{2 \cdot i}`;
+  - a column of a table is indexed by record (`v_i`) and a matrix by row and column (`d_{ij}`); values of decision variables can be indices (`X_{x_i}`);
+  - constraints include the comparator and, if any, the quantifier (`x_i \leq 1 \quad \forall i \in \{1, \ldots, N\}`);
+  - `\log` is the natural logarithm.
 - Every quantity has a shape (`hasShape`: scalar, collection, matrix, table) and a value domain (`hasValueDomain`). Variables such as permutations or tables of data are then classified by the reasoner from their shape.
 
 ### Algorithms
