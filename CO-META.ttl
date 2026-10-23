@@ -670,6 +670,15 @@ CO-META:CrossoverComponent rdf:type owl:Class ;
                                       "Crossover Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#CrowdingDistanceComponent
+CO-META:CrowdingDistanceComponent rdf:type owl:Class ;
+                                  rdfs:subClassOf CO-META:DiversityPreservationComponent ;
+                                  rdfs:comment "Componente de preservación de la diversidad que mide, dentro de cada frente, el tamaño del cuboide alrededor de cada individuo en el espacio de objetivos."@es ,
+                                               "Diversity preservation component that measures, within each front, the size of the cuboid around each individual in objective space."@en ;
+                                  rdfs:label "Componente de distancia de hacinamiento"@es ,
+                                             "Crowding Distance Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#CycleCrossoverComponent
 CO-META:CycleCrossoverComponent rdf:type owl:Class ;
                                 rdfs:subClassOf CO-META:CrossoverComponent ,
@@ -1098,6 +1107,15 @@ CO-META:MultiobjectiveComponent rdf:type owl:Class ;
                                            "Multiobjective Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#NearestNeighbourDensityComponent
+CO-META:NearestNeighbourDensityComponent rdf:type owl:Class ;
+                                         rdfs:subClassOf CO-META:DiversityPreservationComponent ;
+                                         rdfs:comment "Componente de preservación de la diversidad que estima la densidad alrededor de cada individuo a partir de la distancia a su k-ésimo vecino más cercano en el espacio de objetivos (SPEA2)."@es ,
+                                                      "Diversity preservation component that estimates the density around each individual from the distance to its k-th nearest neighbour in objective space (SPEA2)."@en ;
+                                         rdfs:label "Componente de densidad del vecino más cercano"@es ,
+                                                    "Nearest Neighbour Density Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent
 CO-META:NeighbourhoodComponent rdf:type owl:Class ;
                                rdfs:subClassOf CO-META:ModificationComponent ;
@@ -1105,6 +1123,15 @@ CO-META:NeighbourhoodComponent rdf:type owl:Class ;
                                             "Modification component that generates neighbouring solutions of a given solution by applying a move operator."@en ;
                                rdfs:label "Componente de vecindario"@es ,
                                           "Neighbourhood Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NonDominatedSortingComponent
+CO-META:NonDominatedSortingComponent rdf:type owl:Class ;
+                                     rdfs:subClassOf CO-META:FitnessAssignmentComponent ;
+                                     rdfs:comment "Componente de asignación de aptitud que clasifica cada individuo según el frente no dominado al que pertenece."@es ,
+                                                  "Fitness assignment component that ranks each individual by the non-dominated front it belongs to."@en ;
+                                     rdfs:label "Componente de ordenación no dominada"@es ,
+                                                "Non-Dominated Sorting Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Objective
@@ -1595,6 +1622,15 @@ CO-META:StoppingCriterionComponent rdf:type owl:Class ;
                                                 "Loop component that creates the main loop of the algorithm and determines when to stop it. It has an iterations parameter."@en ;
                                    rdfs:label "Componente de criterio de parada"@es ,
                                               "Stopping Criterion Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#StrengthFitnessComponent
+CO-META:StrengthFitnessComponent rdf:type owl:Class ;
+                                 rdfs:subClassOf CO-META:FitnessAssignmentComponent ;
+                                 rdfs:comment "Componente de asignación de aptitud que da a cada individuo la suma de las fuerzas (número de individuos dominados) de los que lo dominan (aptitud bruta de SPEA2)."@es ,
+                                              "Fitness assignment component that gives each individual the sum of the strengths (number of dominated individuals) of those that dominate it (SPEA2 raw fitness)."@en ;
+                                 rdfs:label "Componente de aptitud por fuerza"@es ,
+                                            "Strength Fitness Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SubtractionComponent

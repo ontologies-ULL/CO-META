@@ -55,13 +55,13 @@ CO-META:SPEA2_crossover rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour
 CO-META:SPEA2_diversity_preservation_kth_nearest_neighbour rdf:type owl:NamedIndividual ,
-                                                                    CO-META:DiversityPreservationComponent ;
+                                                                    CO-META:NearestNeighbourDensityComponent ;
                                                            CO-META:hasOutput CO-META:SPEA2_truncation .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness
 CO-META:SPEA2_fitness_assignment_raw_fitness rdf:type owl:NamedIndividual ,
-                                                      CO-META:FitnessAssignmentComponent ;
+                                                      CO-META:StrengthFitnessComponent ;
                                              CO-META:hasOutput CO-META:SPEA2_diversity_preservation_kth_nearest_neighbour .
 
 

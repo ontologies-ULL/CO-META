@@ -39,13 +39,13 @@ CO-META:NSGA-II_crossover rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_diversity_preservation_crowding_distance
 CO-META:NSGA-II_diversity_preservation_crowding_distance rdf:type owl:NamedIndividual ,
-                                                                  CO-META:DiversityPreservationComponent ;
+                                                                  CO-META:CrowdingDistanceComponent ;
                                                          CO-META:hasOutput CO-META:NSGA-II_truncation .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_fitness_assignment_non_dominance
 CO-META:NSGA-II_fitness_assignment_non_dominance rdf:type owl:NamedIndividual ,
-                                                          CO-META:FitnessAssignmentComponent ;
+                                                          CO-META:NonDominatedSortingComponent ;
                                                  CO-META:hasOutput CO-META:NSGA-II_diversity_preservation_crowding_distance .
 
 
@@ -58,13 +58,13 @@ CO-META:NSGA-II_generate_population rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_diversity_preservation_crowding_distance
 CO-META:NSGA-II_initial_diversity_preservation_crowding_distance rdf:type owl:NamedIndividual ,
-                                                                          CO-META:DiversityPreservationComponent ;
+                                                                          CO-META:CrowdingDistanceComponent ;
                                                                  CO-META:hasOutputStart CO-META:NSGA-II_stop .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_initial_fitness_assignment_non_dominance
 CO-META:NSGA-II_initial_fitness_assignment_non_dominance rdf:type owl:NamedIndividual ,
-                                                                  CO-META:FitnessAssignmentComponent ;
+                                                                  CO-META:NonDominatedSortingComponent ;
                                                          CO-META:hasOutput CO-META:NSGA-II_initial_diversity_preservation_crowding_distance .
 
 
