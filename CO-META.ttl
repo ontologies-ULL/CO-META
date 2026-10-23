@@ -501,6 +501,15 @@ CO-META:AcceptanceComponent rdf:type owl:Class ;
                                        "Componente de aceptación"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#ArchiveUpdateComponent
+CO-META:ArchiveUpdateComponent rdf:type owl:Class ;
+                               rdfs:subClassOf CO-META:DataHandlerComponent ;
+                               rdfs:comment "Manejador de datos que sustituye el contenido del archivo que escribe por las soluciones que recibe, y las deja pasar."@es ,
+                                            "Data handler that replaces the content of the archive it writes with the solutions it receives, and passes them on."@en ;
+                               rdfs:label "Componente de actualización del archivo"@es ,
+                                          "Archive Update Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#BaseType
 CO-META:BaseType rdf:type owl:Class ;
                  owl:equivalentClass [ rdf:type owl:Class ;
@@ -532,6 +541,16 @@ CO-META:BestImprovementLocalSearchComponent rdf:type owl:Class ;
                                                          "Local search component that moves to the best neighbour of the neighbourhood it uses while it improves."@en ;
                                             rdfs:label "Componente de búsqueda local de mejor mejora"@es ,
                                                        "Best Improvement Local Search Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent
+CO-META:BestSolutionsUpdateComponent rdf:type owl:Class ;
+                                     rdfs:subClassOf CO-META:DataHandlerComponent ,
+                                                     CO-META:UpdateBestComponent ;
+                                     rdfs:comment "Manejador de datos que conserva en la estructura que escribe la mejor solución vista: una única para una estructura escalar, o una por posición (p. ej. por partícula) para una colección."@es ,
+                                                  "Data handler that keeps in the structure it writes the best solution seen: a single one for a scalar structure, or one per position (e.g. per particle) for a collection."@en ;
+                                     rdfs:label "Componente de actualización de las mejores soluciones"@es ,
+                                                "Best Solutions Update Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent
@@ -817,6 +836,15 @@ CO-META:GenerationComponent rdf:type owl:Class ;
                                          "Componente que genera una solución inicial o una población inicial."@es ;
                             rdfs:label "Componente de generación"@es ,
                                        "Generation Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GeometricCoolingComponent
+CO-META:GeometricCoolingComponent rdf:type owl:Class ;
+                                  rdfs:subClassOf CO-META:DataHandlerComponent ;
+                                  rdfs:comment "Manejador de datos que reduce de forma geométrica la temperatura que escribe, desde la temperatura máxima al principio hasta la mínima cuando se agota el presupuesto de iteraciones del criterio de parada que lo contiene."@es ,
+                                               "Data handler that lowers the temperature it writes geometrically, from the maximum temperature at the start to the minimum one when the iteration budget of the enclosing stopping criterion is spent."@en ;
+                                  rdfs:label "Componente de enfriamiento geométrico"@es ,
+                                             "Geometric Cooling Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent
@@ -1116,6 +1144,15 @@ CO-META:NearestNeighbourDensityComponent rdf:type owl:Class ;
                                                     "Nearest Neighbour Density Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodChangeComponent
+CO-META:NeighbourhoodChangeComponent rdf:type owl:Class ;
+                                     rdfs:subClassOf CO-META:DataHandlerComponent ;
+                                     rdfs:comment "Manejador de datos que reinicia a 1 el índice de vecindario que escribe cuando la candidata mejora la solución actual y lo incrementa en otro caso, volviendo a 1 tras su cota superior."@es ,
+                                                  "Data handler that resets the neighbourhood index it writes to 1 when the candidate improves the current solution and increases it otherwise, back to 1 after its upper bound."@en ;
+                                     rdfs:label "Componente de cambio de vecindario"@es ,
+                                                "Neighbourhood Change Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodComponent
 CO-META:NeighbourhoodComponent rdf:type owl:Class ;
                                rdfs:subClassOf CO-META:ModificationComponent ;
@@ -1213,6 +1250,24 @@ CO-META:PermutationVariable rdf:type owl:Class ;
                                          "Variable de decisión formada por una ordenación de valores sin repeticiones. Cuando su longitud coincide con el número de valores posibles es una permutación completa (p. ej., el recorrido por las ciudades en el TSP); si no, es una permutación parcial. Se deduce de la forma, por lo que no es necesario declararla."@es ;
                             rdfs:label "Permutation Variable"@en ,
                                        "Variable de permutación"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PheromoneDepositComponent
+CO-META:PheromoneDepositComponent rdf:type owl:Class ;
+                                  rdfs:subClassOf CO-META:DataHandlerComponent ;
+                                  rdfs:comment "Manejador de datos que añade, en los elementos que usa cada solución que recibe, la adición de feromona dividida por el coste de la solución."@es ,
+                                               "Data handler that adds, on the elements used by each solution it receives, the pheromone addition divided by the solution's cost."@en ;
+                                  rdfs:label "Componente de depósito de feromonas"@es ,
+                                             "Pheromone Deposit Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporationComponent
+CO-META:PheromoneEvaporationComponent rdf:type owl:Class ;
+                                      rdfs:subClassOf CO-META:DataHandlerComponent ;
+                                      rdfs:comment "Manejador de datos que multiplica cada feromona que escribe por (1 - tasa de evaporación)."@es ,
+                                                   "Data handler that multiplies every pheromone it writes by (1 - evaporation rate)."@en ;
+                                      rdfs:label "Componente de evaporación de feromonas"@es ,
+                                                 "Pheromone Evaporation Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic
@@ -1725,6 +1780,22 @@ CO-META:TableShape rdf:type owl:Class ;
                               "Forma de tabla"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#TabuListUpdateComponent
+CO-META:TabuListUpdateComponent rdf:type owl:Class ;
+                                rdfs:subClassOf CO-META:DataHandlerComponent ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty CO-META:hasParameter ;
+                                                  owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty CO-META:hasType ;
+                                                                       owl:hasValue CO-META:StorageSize
+                                                                     ]
+                                                ] ;
+                                rdfs:comment "Manejador de datos que almacena las soluciones que recibe en la lista que escribe, descartando las más antiguas por encima del tamaño de almacenamiento, y las deja pasar."@es ,
+                                             "Data handler that stores the solutions it receives in the list it writes, discarding the oldest beyond the storage size, and passes them on."@en ;
+                                rdfs:label "Componente de actualización de la lista tabú"@es ,
+                                           "Tabu List Update Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent
 CO-META:TournamentSelectionComponent rdf:type owl:Class ;
                                      rdfs:subClassOf CO-META:SelectionComponent ,
@@ -1819,6 +1890,24 @@ CO-META:VariationComponent rdf:type owl:Class ;
                                         "Modification component that introduces small random changes to a solution (mutation)."@en ;
                            rdfs:label "Componente de variación"@es ,
                                       "Variation Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VelocityApplicationComponent
+CO-META:VelocityApplicationComponent rdf:type owl:Class ;
+                                     rdfs:subClassOf CO-META:ModificationComponent ;
+                                     rdfs:comment "Componente de modificación que desplaza cada partícula que recibe según su velocidad: sumada a los valores reales, o mediante una sigmoide como probabilidad de un 1 en valores binarios."@es ,
+                                                  "Modification component that moves each particle it receives by its velocity: added to real values, or through a sigmoid as the probability of a 1 for binary values."@en ;
+                                     rdfs:label "Componente de aplicación de la velocidad"@es ,
+                                                "Velocity Application Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VelocityUpdateComponent
+CO-META:VelocityUpdateComponent rdf:type owl:Class ;
+                                rdfs:subClassOf CO-META:DataHandlerComponent ;
+                                rdfs:comment "Manejador de datos que actualiza la velocidad de cada partícula que recibe a partir de su inercia y la atracción hacia su mejor posición personal y la mejor global."@es ,
+                                             "Data handler that updates the velocity of each particle it receives from its inertia and the attraction towards its personal best and the global best."@en ;
+                                rdfs:label "Componente de actualización de la velocidad"@es ,
+                                           "Velocity Update Component"@en .
 
 
 #################################################################

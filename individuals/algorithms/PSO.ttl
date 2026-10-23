@@ -41,7 +41,7 @@ CO-META:PSO_ParticleSwarmOptimization rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity
 CO-META:PSO_apply_velocity rdf:type owl:NamedIndividual ,
-                                    CO-META:ModificationComponent ;
+                                    CO-META:VelocityApplicationComponent ;
                            CO-META:hasOutput CO-META:PSO_update_local_best ;
                            CO-META:readsData CO-META:PSO_velocities .
 
@@ -133,14 +133,14 @@ CO-META:PSO_stop rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_store_global_best
 CO-META:PSO_store_global_best rdf:type owl:NamedIndividual ,
-                                       CO-META:DataHandlerComponent ;
+                                       CO-META:BestSolutionsUpdateComponent ;
                               CO-META:hasOutputStart CO-META:PSO_stop ;
                               CO-META:writesData CO-META:PSO_archive_global_best .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_store_local_best
 CO-META:PSO_store_local_best rdf:type owl:NamedIndividual ,
-                                      CO-META:DataHandlerComponent ;
+                                      CO-META:BestSolutionsUpdateComponent ;
                              CO-META:hasOutput CO-META:PSO_store_global_best ;
                              CO-META:writesData CO-META:PSO_archive_local_best ,
                                                 CO-META:PSO_velocities .
@@ -148,21 +148,21 @@ CO-META:PSO_store_local_best rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_update_global_best
 CO-META:PSO_update_global_best rdf:type owl:NamedIndividual ,
-                                        CO-META:DataHandlerComponent ;
+                                        CO-META:BestSolutionsUpdateComponent ;
                                CO-META:hasOutput CO-META:PSO_iterate_population ;
                                CO-META:writesData CO-META:PSO_archive_global_best .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_update_local_best
 CO-META:PSO_update_local_best rdf:type owl:NamedIndividual ,
-                                       CO-META:DataHandlerComponent ;
+                                       CO-META:BestSolutionsUpdateComponent ;
                               CO-META:hasOutput CO-META:PSO_update_global_best ;
                               CO-META:writesData CO-META:PSO_archive_local_best .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_update_velocity
 CO-META:PSO_update_velocity rdf:type owl:NamedIndividual ,
-                                     CO-META:DataHandlerComponent ;
+                                     CO-META:VelocityUpdateComponent ;
                             CO-META:hasOutput CO-META:PSO_apply_velocity ;
                             CO-META:hasParameter CO-META:PSO_parameter_globalbestinfluence ,
                                                  CO-META:PSO_parameter_inertiafactor ,

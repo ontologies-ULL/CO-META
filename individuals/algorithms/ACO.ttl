@@ -37,7 +37,7 @@ CO-META:ACO_construction_pheromones rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_evaporate_pheromones
 CO-META:ACO_evaporate_pheromones rdf:type owl:NamedIndividual ,
-                                          CO-META:DataHandlerComponent ;
+                                          CO-META:PheromoneEvaporationComponent ;
                                  CO-META:hasOutputStart CO-META:ACO_iterate_population ;
                                  CO-META:hasParameter CO-META:ACO_parameter_pheromone_evaporation ;
                                  CO-META:writesData CO-META:ACO_pheromones .
@@ -102,7 +102,7 @@ CO-META:ACO_pheromones_shape rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_place_pheromones
 CO-META:ACO_place_pheromones rdf:type owl:NamedIndividual ,
-                                      CO-META:DataHandlerComponent ;
+                                      CO-META:PheromoneDepositComponent ;
                              CO-META:hasOutput CO-META:ACO_iterate_population ;
                              CO-META:hasParameter CO-META:ACO_parameter_pheromone_addition ;
                              CO-META:writesData CO-META:ACO_pheromones ;

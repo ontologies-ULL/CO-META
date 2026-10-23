@@ -70,7 +70,7 @@ CO-META:TS_stop rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_store_visited
 CO-META:TS_store_visited rdf:type owl:NamedIndividual ,
-                                  CO-META:DataHandlerComponent ;
+                                  CO-META:TabuListUpdateComponent ;
                          CO-META:hasOutput CO-META:TS_neighbourhood ;
                          CO-META:hasParameter CO-META:TS_parameter_storagesize ;
                          CO-META:writesData CO-META:TS_tabu_list .

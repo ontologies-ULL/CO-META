@@ -33,7 +33,7 @@ CO-META:VNS_acceptance rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood
 CO-META:VNS_change_neighbourhood rdf:type owl:NamedIndividual ,
-                                          CO-META:DataHandlerComponent ;
+                                          CO-META:NeighbourhoodChangeComponent ;
                                  CO-META:hasOutput CO-META:VNS_stop ;
                                  CO-META:writesData CO-META:VNS_neighbourhood .
 

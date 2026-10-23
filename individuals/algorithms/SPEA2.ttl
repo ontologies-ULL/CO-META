@@ -137,7 +137,7 @@ CO-META:SPEA2_stop rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_store_solutions
 CO-META:SPEA2_store_solutions rdf:type owl:NamedIndividual ,
-                                       CO-META:DataHandlerComponent ;
+                                       CO-META:ArchiveUpdateComponent ;
                               CO-META:hasOutputStart CO-META:SPEA2_next_generation ;
                               CO-META:hasParameter CO-META:SPEA2_parameter_storagesize ;
                               CO-META:writesData CO-META:SPEA2_archive .
