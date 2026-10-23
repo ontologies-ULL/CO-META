@@ -3540,10 +3540,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Expresión LaTeX de un objetivo o de una restricción. En las restricciones incluye el comparador y el cuantificador universal, si lo hay."
+    "@value" : "Expresión LaTeX de un objetivo o de una restricción. En las restricciones incluye el comparador (=, \\neq, <, \\leq, >, \\geq; se admiten cadenas como 0 \\leq x_i \\leq 1) y el cuantificador universal, si lo hay, antes o después de la condición (\\forall i \\in S). Los índices empiezan en 1. Un subíndice es un índice (x_i, d_{ij}, X_{x_i}): los términos yuxtapuestos en un subíndice son índices distintos, por lo que un producto en un índice se escribe con \\cdot. Una columna de una tabla se indexa por registro (v_i), una matriz por fila y columna (d_{ij}), y los valores de las variables de decisión pueden usarse como índices. Conjuntos: \\{a, \\ldots, b\\}, \\{a, b, c\\} y \\{ i \\in S : P(i) \\}, con |S| su tamaño. Agregados: \\sum, \\prod, \\min y \\max, sobre _{i=a}^{b}, _{i \\in S} o _{i \\in S : P(i)}. Funciones: \\sqrt, \\frac, |x|, \\lfloor x \\rfloor, \\lceil x \\rceil, \\exp, \\ln, \\log (logaritmo natural), \\min(a, b), \\max(a, b) y \\bmod."
   }, {
     "@language" : "en",
-    "@value" : "LaTeX expression of an objective or constraint. For constraints it includes the comparator and the universal quantifier, if any."
+    "@value" : "LaTeX expression of an objective or constraint. For constraints it includes the comparator (=, \\neq, <, \\leq, >, \\geq; chains such as 0 \\leq x_i \\leq 1 are allowed) and the universal quantifier, if any, before or after the condition (\\forall i \\in S). Indices start at 1. A subscript is an index (x_i, d_{ij}, X_{x_i}): juxtaposed terms in a subscript are separate indices, so a product in an index is written with \\cdot. A column of a table is indexed by record (v_i), a matrix by row and column (d_{ij}), and values of decision variables can be used as indices. Sets: \\{a, \\ldots, b\\}, \\{a, b, c\\} and \\{ i \\in S : P(i) \\}, with |S| their size. Aggregates: \\sum, \\prod, \\min and \\max, over _{i=a}^{b}, _{i \\in S} or _{i \\in S : P(i)}. Functions: \\sqrt, \\frac, |x|, \\lfloor x \\rfloor, \\lceil x \\rceil, \\exp, \\ln, \\log (natural logarithm), \\min(a, b), \\max(a, b) and \\bmod."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid22"
