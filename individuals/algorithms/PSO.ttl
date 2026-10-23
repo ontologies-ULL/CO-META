@@ -84,7 +84,7 @@ CO-META:PSO_iterate_population rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_iterative_selector
 CO-META:PSO_iterative_selector rdf:type owl:NamedIndividual ,
-                                        CO-META:IterativeSelectionComponent ;
+                                        CO-META:SequentialIterativeSelectionComponent ;
                                CO-META:hasOutput CO-META:PSO_update_velocity .
 
 

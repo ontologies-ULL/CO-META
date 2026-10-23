@@ -52,7 +52,7 @@ CO-META:ACO_iterate_population rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_iterative_selector
 CO-META:ACO_iterative_selector rdf:type owl:NamedIndividual ,
-                                        CO-META:IterativeSelectionComponent ;
+                                        CO-META:SequentialIterativeSelectionComponent ;
                                CO-META:hasOutput CO-META:ACO_place_pheromones .
 
 

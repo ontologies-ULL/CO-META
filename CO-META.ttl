@@ -1390,6 +1390,19 @@ CO-META:RandomSelectionComponent rdf:type owl:Class ;
                                             "Random Selection Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#RouletteWheelSelectionComponent
+CO-META:RouletteWheelSelectionComponent rdf:type owl:Class ;
+                                        rdfs:subClassOf CO-META:SelectionComponent ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty CO-META:hasOutputSize ;
+                                                          owl:hasValue 2
+                                                        ] ;
+                                        rdfs:comment "Componente de selección que selecciona cada individuo con probabilidad proporcional a su posición según la aptitud."@es ,
+                                                     "Selection component that selects each individual with probability proportional to its fitness rank."@en ;
+                                        rdfs:label "Componente de selección por ruleta"@es ,
+                                                   "Roulette Wheel Selection Component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#ScalarShape
 CO-META:ScalarShape rdf:type owl:Class ;
                     owl:equivalentClass [ rdf:type owl:Class ;
@@ -1468,6 +1481,15 @@ CO-META:SequenceVariable rdf:type owl:Class ;
                                       "Variable de decisión formada por una secuencia ordenada de valores, uno por posición, que pueden repetirse salvo que sea una permutación (p. ej., si cada objeto se mete en la mochila). Se deduce de la forma, por lo que no es necesario declararla."@es ;
                          rdfs:label "Sequence Variable"@en ,
                                     "Variable de secuencia"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SequentialIterativeSelectionComponent
+CO-META:SequentialIterativeSelectionComponent rdf:type owl:Class ;
+                                              rdfs:subClassOf CO-META:IterativeSelectionComponent ;
+                                              rdfs:comment "Componente de selección iterativa que selecciona los individuos de la población uno a uno, en orden (p. ej. cada hormiga o cada partícula)."@es ,
+                                                           "Iterative selection component that selects the individuals of the population one by one, in order (e.g. each ant or each particle)."@en ;
+                                              rdfs:label "Componente de selección iterativa secuencial"@es ,
+                                                         "Sequential Iterative Selection Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SetShape
