@@ -132,7 +132,7 @@ CO-META:SPEA2_parameter_truncationsize rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop
 CO-META:SPEA2_stop rdf:type owl:NamedIndividual ,
                             CO-META:StoppingCriterionComponent ;
-                   CO-META:hasOutput CO-META:SPEA2_union ;
+                   CO-META:hasCurrentOutput CO-META:SPEA2_union ;
                    CO-META:hasParameter CO-META:SPEA2_parameter_iterations .
 
 

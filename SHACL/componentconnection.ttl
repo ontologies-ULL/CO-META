@@ -16,9 +16,12 @@ cm:ComponentConnectionSizeShape
         sh:message "Connection error: Output size of ({?this}) does not match input size of ({?next})." ;
         sh:select """
             PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             SELECT ?this ?next
             WHERE {
-                ?this cm:hasOutput ?next .
+                # Also hasOutputStart, hasCandidateOutput and the like, without inference
+                ?this ?output ?next .
+                ?output rdfs:subPropertyOf* cm:hasOutput .
                 
                 ?this cm:hasOutputSize ?outSize .
                 ?next cm:hasInputSize ?inSize .
@@ -26,4 +29,32 @@ cm:ComponentConnectionSizeShape
                 FILTER (?outSize != ?inSize)
             }
         """ ;
+    ] .
+
+# Only components that compare or join a current and a candidate input have ports
+cm:PortTargetShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf cm:hasCurrentOutput , cm:hasCandidateOutput ;
+    sh:targetSubjectsOf cm:hasCurrentInput , cm:hasCandidateInput ;
+    sh:or (
+        [ sh:class cm:AcceptanceComponent ]
+        [ sh:class cm:UnionComponent ]
+        [ sh:class cm:NeighbourhoodChangeComponent ]
+    ) ;
+    sh:message "Only acceptance, union and neighbourhood change components have current and candidate inputs." .
+
+# Components that compare the current solution with a candidate need both inputs
+cm:PortRequirementShape
+    a sh:NodeShape ;
+    sh:targetClass cm:ImprovementAcceptanceComponent , cm:MetropolisAcceptanceComponent ,
+                   cm:NeighbourhoodChangeComponent ;
+    sh:property [
+        sh:path [ sh:alternativePath ( [ sh:inversePath cm:hasCurrentOutput ] cm:hasCurrentInput ) ] ;
+        sh:minCount 1 ;
+        sh:message "The component compares a candidate with the current solution, so it needs a current input." ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( [ sh:inversePath cm:hasCandidateOutput ] cm:hasCandidateInput ) ] ;
+        sh:minCount 1 ;
+        sh:message "The component compares a candidate with the current solution, so it needs a candidate input." ;
     ] .

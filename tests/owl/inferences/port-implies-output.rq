@@ -1,0 +1,9 @@
+PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+PREFIX t: <http://example.org/co-meta-test#>
+
+ASK {
+    t:perturbation cm:hasOutput t:acceptance ;
+                   cm:isConnectedTo t:acceptance .
+    t:acceptance cm:hasCandidateInput t:perturbation ;
+                 cm:hasInput t:perturbation .
+}

@@ -1,0 +1,14 @@
+# Expected: SHACL violation (PortRequirementShape).
+# A Metropolis acceptance compares a candidate with the current solution,
+# so it needs both inputs.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/metropolis-without-candidate> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:generate a owl:NamedIndividual , CO-META:RandomGenerationComponent ;
+    CO-META:hasCurrentOutput t:acceptance .
+
+t:acceptance a owl:NamedIndividual , CO-META:MetropolisAcceptanceComponent .

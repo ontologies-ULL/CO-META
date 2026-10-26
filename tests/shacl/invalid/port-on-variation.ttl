@@ -1,0 +1,13 @@
+# Expected: SHACL violation (PortTargetShape).
+# A mutation has a single input, so it has no candidate port.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/port-on-variation> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:generate a owl:NamedIndividual , CO-META:RandomGenerationComponent ;
+    CO-META:hasCandidateOutput t:mutation .
+
+t:mutation a owl:NamedIndividual , CO-META:SwapMutationComponent .

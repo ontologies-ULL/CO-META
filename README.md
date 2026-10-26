@@ -33,7 +33,7 @@ Documentation: <https://w3id.org/ontologies-ULL/CO-META>
 - Every quantity has a shape (`hasShape`: scalar, collection, matrix, table) and a value domain (`hasValueDomain`). Variables such as permutations or tables of data are then classified by the reasoner from their shape.
 
 ### Algorithms
-- A `Metaheuristic` starts at a component (`hasStart`) connected to the others through `hasOutput`; its type (e.g. evolutionary algorithm) is inferred from the components it is connected to.
+- A `Metaheuristic` starts at a component (`hasStart`) connected to the others through `hasOutput`; its type (e.g. evolutionary algorithm) is inferred from the components it is connected to. An acceptance, a union or a neighbourhood change receives a current and a candidate input: `hasCurrentOutput` and `hasCandidateOutput` say which one an output feeds.
 - Parameters are set through `ParameterValue` individuals (`hasParameter`, `hasType`, `hasValue`), and data structures have a shape and a value domain.
 - `supportsShape` states the kind of solutions a metaheuristic or a component can handle.
 

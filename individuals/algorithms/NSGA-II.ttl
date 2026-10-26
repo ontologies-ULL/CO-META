@@ -79,6 +79,7 @@ CO-META:NSGA-II_mutation rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_next_generation
 CO-META:NSGA-II_next_generation rdf:type owl:NamedIndividual ,
                                          CO-META:PopulationModifierComponent ;
+                                CO-META:hasCandidateOutput CO-META:NSGA-II_union ;
                                 CO-META:hasOutput CO-META:NSGA-II_binary_tournament_selection ;
                                 CO-META:hasOutputEnd CO-META:NSGA-II_union .
 
@@ -116,7 +117,7 @@ CO-META:NSGA-II_parameter_truncationsize rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_stop
 CO-META:NSGA-II_stop rdf:type owl:NamedIndividual ,
                               CO-META:StoppingCriterionComponent ;
-                     CO-META:hasOutput CO-META:NSGA-II_union ;
+                     CO-META:hasCurrentOutput CO-META:NSGA-II_union ;
                      CO-META:hasOutputStart CO-META:NSGA-II_next_generation ;
                      CO-META:hasParameter CO-META:NSGA-II_parameter_iterations .
 

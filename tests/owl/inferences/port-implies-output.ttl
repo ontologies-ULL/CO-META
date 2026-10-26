@@ -1,0 +1,14 @@
+# Expected: the inferences of port-implies-output.rq.
+# An output with a port is an output, and connects both components, so it
+# takes part in the classification of the metaheuristic.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/port-implies-output> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:perturbation a owl:NamedIndividual , CO-META:SwapMutationComponent ;
+    CO-META:hasCandidateOutput t:acceptance .
+
+t:acceptance a owl:NamedIndividual , CO-META:MetropolisAcceptanceComponent .

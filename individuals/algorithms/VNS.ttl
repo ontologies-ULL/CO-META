@@ -28,7 +28,7 @@ CO-META:VNS_VariableNeighbourhoodSearch rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_acceptance
 CO-META:VNS_acceptance rdf:type owl:NamedIndividual ,
                                 CO-META:ImprovementAcceptanceComponent ;
-                       CO-META:hasOutput CO-META:VNS_change_neighbourhood .
+                       CO-META:hasCandidateOutput CO-META:VNS_change_neighbourhood .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_change_neighbourhood
@@ -48,7 +48,7 @@ CO-META:VNS_generate rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch
 CO-META:VNS_localsearch rdf:type owl:NamedIndividual ,
                                  CO-META:FirstImprovementLocalSearchComponent ;
-                        CO-META:hasOutput CO-META:VNS_acceptance .
+                        CO-META:hasCandidateOutput CO-META:VNS_acceptance .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_neighbourhood
@@ -81,9 +81,9 @@ CO-META:VNS_perturbation rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_stop
 CO-META:VNS_stop rdf:type owl:NamedIndividual ,
                           CO-META:StoppingCriterionComponent ;
-                 CO-META:hasOutput CO-META:VNS_acceptance ,
-                                   CO-META:VNS_change_neighbourhood ,
-                                   CO-META:VNS_perturbation ;
+                 CO-META:hasCurrentOutput CO-META:VNS_acceptance ,
+                                          CO-META:VNS_change_neighbourhood ;
+                 CO-META:hasOutput CO-META:VNS_perturbation ;
                  CO-META:hasParameter CO-META:VNS_parameter_iterations .
 
 
