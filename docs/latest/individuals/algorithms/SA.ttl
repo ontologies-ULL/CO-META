@@ -88,14 +88,14 @@ CO-META:SA_parameter_populationsize rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_perturbation
 CO-META:SA_perturbation rdf:type owl:NamedIndividual ,
                                  CO-META:VariationComponent ;
-                        CO-META:hasOutput CO-META:SA_acceptance .
+                        CO-META:hasCandidateOutput CO-META:SA_acceptance .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_stop
 CO-META:SA_stop rdf:type owl:NamedIndividual ,
                          CO-META:StoppingCriterionComponent ;
-                CO-META:hasOutput CO-META:SA_acceptance ,
-                                  CO-META:SA_perturbation ;
+                CO-META:hasCurrentOutput CO-META:SA_acceptance ;
+                CO-META:hasOutput CO-META:SA_perturbation ;
                 CO-META:hasParameter CO-META:SA_parameter_iterations .
 
 

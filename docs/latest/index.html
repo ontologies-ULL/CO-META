@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics.", "dateReleased":"Fri Oct 23 22:22:19 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics.", "dateReleased":"Mon Oct 26 12:54:35 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -577,7 +577,16 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/ontologies-ULL/CO-META#hasBaseType">has base type</a>
    </li>
    <li>
-      <a href="#hasColumn" title="https://w3id.org/ontologies-ULL/CO-META#hasColumn">has column</a>
+      <a href="#hasCandidateInput"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput">has candidate input</a>
+   </li>
+   <li>
+      <a href="#hasCandidateOutput"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput">has candidate output</a>
+   </li>
+   <li>
+      <a href="#hasColumn"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasColumn">has column</a>
    </li>
    <li>
       <a href="#hasColumnCount"
@@ -592,6 +601,14 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/ontologies-ULL/CO-META#hasConstraint">
          <span>has Constraint</span>
       </a>
+   </li>
+   <li>
+      <a href="#hasCurrentInput"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput">has current input</a>
+   </li>
+   <li>
+      <a href="#hasCurrentOutput"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput">has current output</a>
    </li>
    <li>
       <a href="#hasDataStructure"
@@ -3586,10 +3603,14 @@ This section provides details for each class and property defined by CO-META.
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
   <li><a href="#hasBaseType" title="https://w3id.org/ontologies-ULL/CO-META#hasBaseType">has base type</a></li>
+  <li><a href="#hasCandidateInput" title="https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput">has candidate input</a></li>
+  <li><a href="#hasCandidateOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput">has candidate output</a></li>
   <li><a href="#hasColumn" title="https://w3id.org/ontologies-ULL/CO-META#hasColumn">has column</a></li>
   <li><a href="#hasColumnCount" title="https://w3id.org/ontologies-ULL/CO-META#hasColumnCount">has column count</a></li>
   <li><a href="#hasComponent" title="https://w3id.org/ontologies-ULL/CO-META#hasComponent">has component</a></li>
   <li><a href="#hasConstraint" title="https://w3id.org/ontologies-ULL/CO-META#hasConstraint"> <span>has Constraint</span> </a></li>
+  <li><a href="#hasCurrentInput" title="https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput">has current input</a></li>
+  <li><a href="#hasCurrentOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput">has current output</a></li>
   <li><a href="#hasDataStructure" title="https://w3id.org/ontologies-ULL/CO-META#hasDataStructure"> <span>has Data Structure</span> </a></li>
   <li><a href="#hasExclusiveLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveLowerBound">has exclusive lower bound</a></li>
   <li><a href="#hasExclusiveUpperBound" title="https://w3id.org/ontologies-ULL/CO-META#hasExclusiveUpperBound">has exclusive upper bound</a></li>
@@ -3638,6 +3659,52 @@ This section provides details for each class and property defined by CO-META.
     </dt>
     <dd>
      <a href="#BaseType" title="https://w3id.org/ontologies-ULL/CO-META#BaseType">Base Type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCandidateInput">
+  <h3>has candidate input<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput</p>
+  <div class="comment">
+   <span class="markdown">Input of a component that holds the new solutions to judge or add (e.g. offspring).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasInput" title="https://w3id.org/ontologies-ULL/CO-META#hasInput">has Input</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasCandidateOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput">has candidate output</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCandidateOutput">
+  <h3>has candidate output<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput</p>
+  <div class="comment">
+   <span class="markdown">Output that feeds the input of the target component that holds the new solutions to judge or add (e.g. offspring).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasOutput">has Output</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasCandidateInput" title="https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput">has candidate input</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -3744,6 +3811,52 @@ This section provides details for each class and property defined by CO-META.
    </dl>
   </div>
  </div>
+ <div class="entity" id="hasCurrentInput">
+  <h3>has current input<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput</p>
+  <div class="comment">
+   <span class="markdown">Input of a component that holds the current solution or population, against which candidates are judged.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasInput" title="https://w3id.org/ontologies-ULL/CO-META#hasInput">has Input</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasCurrentOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput">has current output</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCurrentOutput">
+  <h3>has current output<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput</p>
+  <div class="comment">
+   <span class="markdown">Output that feeds the input of the target component that holds the current solution or population, against which candidates are judged.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasOutput">has Output</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasCurrentInput" title="https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput">has current input</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="hasDataStructure">
   <h3>has Data Structure<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasDataStructure</p>
@@ -3827,7 +3940,7 @@ This section provides details for each class and property defined by CO-META.
      has sub-properties
     </dt>
     <dd>
-     <a href="#hasInputEnd" title="https://w3id.org/ontologies-ULL/CO-META#hasInputEnd">has Input End</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInputStart" title="https://w3id.org/ontologies-ULL/CO-META#hasInputStart">has Input Start</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#hasInputEnd" title="https://w3id.org/ontologies-ULL/CO-META#hasInputEnd">has Input End</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInputStart" title="https://w3id.org/ontologies-ULL/CO-META#hasInputStart">has Input Start</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCandidateInput" title="https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput">has candidate input</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCurrentInput" title="https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput">has current input</a> <sup class="type-op" title="object property">op</sup>
     </dd>
     <dt>
      is inverse of
@@ -3961,6 +4074,9 @@ This section provides details for each class and property defined by CO-META.
  <div class="entity" id="hasOutput">
   <h3>has Output<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasOutput</p>
+  <div class="comment">
+   <span class="markdown">Output of a component that feeds the input of another: the data flow from one component to the next.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -3973,7 +4089,7 @@ This section provides details for each class and property defined by CO-META.
      has sub-properties
     </dt>
     <dd>
-     <a href="#hasOutputEnd" title="https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd">has Output End</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasOutputStart" title="https://w3id.org/ontologies-ULL/CO-META#hasOutputStart">has Output Start</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#hasOutputEnd" title="https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd">has Output End</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasOutputStart" title="https://w3id.org/ontologies-ULL/CO-META#hasOutputStart">has Output Start</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCandidateOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput">has candidate output</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCurrentOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput">has current output</a> <sup class="type-op" title="object property">op</sup>
     </dd>
     <dt>
      has domain

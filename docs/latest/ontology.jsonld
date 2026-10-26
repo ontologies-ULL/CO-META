@@ -4788,6 +4788,49 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#BaseType"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Entrada de un componente con las soluciones nuevas que juzgar o añadir (p. ej. descendientes)."
+  }, {
+    "@language" : "en",
+    "@value" : "Input of a component that holds the new solutions to judge or add (e.g. offspring)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has candidate input"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene entrada candidata"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasInput"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Output that feeds the input of the target component that holds the new solutions to judge or add (e.g. offspring)."
+  }, {
+    "@language" : "es",
+    "@value" : "Salida que alimenta la entrada del componente de destino con las soluciones nuevas que juzgar o añadir (p. ej. descendientes)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has candidate output"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene salida candidata"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutput"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasCodeReference",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -4893,6 +4936,49 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isConstraintOf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Entrada de un componente con la solución o población actual, con la que se juzgan las candidatas."
+  }, {
+    "@language" : "en",
+    "@value" : "Input of a component that holds the current solution or population, against which candidates are judged."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has current input"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene entrada actual"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasInput"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Output that feeds the input of the target component that holds the current solution or population, against which candidates are judged."
+  }, {
+    "@language" : "es",
+    "@value" : "Salida que alimenta la entrada del componente de destino con la solución o población actual, con la que se juzgan las candidatas."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has current output"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene salida actual"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutput"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasDataStructure",
@@ -5164,6 +5250,13 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutput",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Output of a component that feeds the input of another: the data flow from one component to the next."
+  }, {
+    "@language" : "es",
+    "@value" : "Salida de un componente que alimenta la entrada de otro: el flujo de datos de un componente al siguiente."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
   } ],

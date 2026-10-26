@@ -34,7 +34,7 @@ CO-META:ILS_generate rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch
 CO-META:ILS_localsearch rdf:type owl:NamedIndividual ,
                                  CO-META:FirstImprovementLocalSearchComponent ;
-                        CO-META:hasOutput CO-META:ILS_acceptance .
+                        CO-META:hasCandidateOutput CO-META:ILS_acceptance .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ILS_parameter_iterations
@@ -60,8 +60,8 @@ CO-META:ILS_perturbation rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#ILS_stop
 CO-META:ILS_stop rdf:type owl:NamedIndividual ,
                           CO-META:StoppingCriterionComponent ;
-                 CO-META:hasOutput CO-META:ILS_acceptance ,
-                                   CO-META:ILS_perturbation ;
+                 CO-META:hasCurrentOutput CO-META:ILS_acceptance ;
+                 CO-META:hasOutput CO-META:ILS_perturbation ;
                  CO-META:hasParameter CO-META:ILS_parameter_iterations .
 
 

@@ -56,6 +56,23 @@
 <https://w3id.org/ontologies-ULL/CO-META#hasBaseType> <http://www.w3.org/2000/01/rdf-schema#label> "has base type"@en .
 <https://w3id.org/ontologies-ULL/CO-META#hasBaseType> <http://www.w3.org/2000/01/rdf-schema#label> "tiene tipo base"@es .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput
+<https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#hasInput> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Entrada de un componente con las soluciones nuevas que juzgar o añadir (p. ej. descendientes)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Input of a component that holds the new solutions to judge or add (e.g. offspring)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput> <http://www.w3.org/2000/01/rdf-schema#label> "has candidate input"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput> <http://www.w3.org/2000/01/rdf-schema#label> "tiene entrada candidata"@es .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput
+<https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Output that feeds the input of the target component that holds the new solutions to judge or add (e.g. offspring)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Salida que alimenta la entrada del componente de destino con las soluciones nuevas que juzgar o añadir (p. ej. descendientes)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput> <http://www.w3.org/2000/01/rdf-schema#label> "has candidate output"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput> <http://www.w3.org/2000/01/rdf-schema#label> "tiene salida candidata"@es .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#hasColumn
 <https://w3id.org/ontologies-ULL/CO-META#hasColumn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#hasColumn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#TableShape> .
@@ -90,6 +107,23 @@
 <https://w3id.org/ontologies-ULL/CO-META#hasConstraint> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#isConstraintOf> .
 <https://w3id.org/ontologies-ULL/CO-META#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Problem> .
 <https://w3id.org/ontologies-ULL/CO-META#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#Constraint> .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput
+<https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#hasInput> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Entrada de un componente con la solución o población actual, con la que se juzgan las candidatas."@es .
+<https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Input of a component that holds the current solution or population, against which candidates are judged."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput> <http://www.w3.org/2000/01/rdf-schema#label> "has current input"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput> <http://www.w3.org/2000/01/rdf-schema#label> "tiene entrada actual"@es .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput
+<https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> .
+<https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Output that feeds the input of the target component that holds the current solution or population, against which candidates are judged."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Salida que alimenta la entrada del componente de destino con la solución o población actual, con la que se juzgan las candidatas."@es .
+<https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput> <http://www.w3.org/2000/01/rdf-schema#label> "has current output"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput> <http://www.w3.org/2000/01/rdf-schema#label> "tiene salida actual"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#hasDataStructure
 <https://w3id.org/ontologies-ULL/CO-META#hasDataStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -163,6 +197,8 @@
 <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Output of a component that feeds the input of another: the data flow from one component to the next."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Salida de un componente que alimenta la entrada de otro: el flujo de datos de un componente al siguiente."@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

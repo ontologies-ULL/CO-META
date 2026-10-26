@@ -87,7 +87,7 @@ CO-META:TS_store_visited rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_substraction
 CO-META:TS_substraction rdf:type owl:NamedIndividual ,
                                  CO-META:SubtractionComponent ;
-                        CO-META:hasOutput CO-META:TS_select_best ;
+                        CO-META:hasCandidateOutput CO-META:TS_select_best ;
                         CO-META:readsData CO-META:TS_tabu_list .
 
 

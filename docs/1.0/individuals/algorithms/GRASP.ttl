@@ -41,7 +41,7 @@ CO-META:GRASP_construction_rcl rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch
 CO-META:GRASP_localsearch rdf:type owl:NamedIndividual ,
                                    CO-META:FirstImprovementLocalSearchComponent ;
-                          CO-META:hasOutput CO-META:GRASP_acceptance .
+                          CO-META:hasCandidateOutput CO-META:GRASP_acceptance .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#GRASP_parameter_iterations
@@ -66,8 +66,8 @@ CO-META:GRASP_parameter_rclrandomness rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#GRASP_stop
 CO-META:GRASP_stop rdf:type owl:NamedIndividual ,
                             CO-META:StoppingCriterionComponent ;
-                   CO-META:hasOutput CO-META:GRASP_acceptance ,
-                                     CO-META:GRASP_construction_rcl ;
+                   CO-META:hasCurrentOutput CO-META:GRASP_acceptance ;
+                   CO-META:hasOutput CO-META:GRASP_construction_rcl ;
                    CO-META:hasParameter CO-META:GRASP_parameter_iterations .
 
 

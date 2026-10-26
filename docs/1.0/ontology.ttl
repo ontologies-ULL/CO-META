@@ -61,6 +61,25 @@
                         "tiene tipo base"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput
+:hasCandidateInput rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasInput ;
+                   owl:inverseOf :hasCandidateOutput ;
+                   rdfs:comment "Entrada de un componente con las soluciones nuevas que juzgar o añadir (p. ej. descendientes)."@es ,
+                                "Input of a component that holds the new solutions to judge or add (e.g. offspring)."@en ;
+                   rdfs:label "has candidate input"@en ,
+                              "tiene entrada candidata"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput
+:hasCandidateOutput rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasOutput ;
+                    rdfs:comment "Output that feeds the input of the target component that holds the new solutions to judge or add (e.g. offspring)."@en ,
+                                 "Salida que alimenta la entrada del componente de destino con las soluciones nuevas que juzgar o añadir (p. ej. descendientes)."@es ;
+                    rdfs:label "has candidate output"@en ,
+                               "tiene salida candidata"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasColumn
 :hasColumn rdf:type owl:ObjectProperty ;
            rdfs:domain :TableShape ;
@@ -98,6 +117,25 @@
                owl:inverseOf :isConstraintOf ;
                rdfs:domain :Problem ;
                rdfs:range :Constraint .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput
+:hasCurrentInput rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasInput ;
+                 owl:inverseOf :hasCurrentOutput ;
+                 rdfs:comment "Entrada de un componente con la solución o población actual, con la que se juzgan las candidatas."@es ,
+                              "Input of a component that holds the current solution or population, against which candidates are judged."@en ;
+                 rdfs:label "has current input"@en ,
+                            "tiene entrada actual"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput
+:hasCurrentOutput rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasOutput ;
+                  rdfs:comment "Output that feeds the input of the target component that holds the current solution or population, against which candidates are judged."@en ,
+                               "Salida que alimenta la entrada del componente de destino con la solución o población actual, con la que se juzgan las candidatas."@es ;
+                  rdfs:label "has current output"@en ,
+                             "tiene salida actual"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasDataStructure
@@ -180,7 +218,9 @@
 :hasOutput rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :isConnectedTo ;
            rdfs:domain :MetaheuristicComponent ;
-           rdfs:range :MetaheuristicComponent .
+           rdfs:range :MetaheuristicComponent ;
+           rdfs:comment "Output of a component that feeds the input of another: the data flow from one component to the next."@en ,
+                        "Salida de un componente que alimenta la entrada de otro: el flujo de datos de un componente al siguiente."@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd

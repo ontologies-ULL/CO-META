@@ -103,6 +103,33 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasCandidateInput">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasInput"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput"/>
+        <rdfs:comment xml:lang="es">Entrada de un componente con las soluciones nuevas que juzgar o añadir (p. ej. descendientes).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Input of a component that holds the new solutions to judge or add (e.g. offspring).</rdfs:comment>
+        <rdfs:label xml:lang="en">has candidate input</rdfs:label>
+        <rdfs:label xml:lang="es">tiene entrada candidata</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutput"/>
+        <rdfs:comment xml:lang="en">Output that feeds the input of the target component that holds the new solutions to judge or add (e.g. offspring).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Salida que alimenta la entrada del componente de destino con las soluciones nuevas que juzgar o añadir (p. ej. descendientes).</rdfs:comment>
+        <rdfs:label xml:lang="en">has candidate output</rdfs:label>
+        <rdfs:label xml:lang="es">tiene salida candidata</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#hasColumn -->
 
 
@@ -154,6 +181,33 @@
         <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConstraintOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Problem"/>
         <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Constraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasInput"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput"/>
+        <rdfs:comment xml:lang="es">Entrada de un componente con la solución o población actual, con la que se juzgan las candidatas.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Input of a component that holds the current solution or population, against which candidates are judged.</rdfs:comment>
+        <rdfs:label xml:lang="en">has current input</rdfs:label>
+        <rdfs:label xml:lang="es">tiene entrada actual</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutput"/>
+        <rdfs:comment xml:lang="en">Output that feeds the input of the target component that holds the current solution or population, against which candidates are judged.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Salida que alimenta la entrada del componente de destino con la solución o población actual, con la que se juzgan las candidatas.</rdfs:comment>
+        <rdfs:label xml:lang="en">has current output</rdfs:label>
+        <rdfs:label xml:lang="es">tiene salida actual</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -277,6 +331,8 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
         <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
+        <rdfs:comment xml:lang="en">Output of a component that feeds the input of another: the data flow from one component to the next.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Salida de un componente que alimenta la entrada de otro: el flujo de datos de un componente al siguiente.</rdfs:comment>
     </owl:ObjectProperty>
     
 
