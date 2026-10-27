@@ -166,6 +166,17 @@
                                    "tiene cota superior exclusiva"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasInitialValue
+:hasInitialValue rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :DataStructure ;
+                 rdfs:range :ValueSpecification ;
+                 rdfs:comment "Valor de cada elemento de una estructura de datos numérica al empezar el algoritmo."@es ,
+                              "Value of every element of a numeric data structure when the algorithm starts."@en ;
+                 rdfs:label "has initial value"@en ,
+                            "tiene valor inicial"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasInput
 :hasInput rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :isConnectedTo ;
@@ -2386,8 +2397,8 @@
 :One rdf:type owl:NamedIndividual ,
               :LiteralValue ;
      :hasLiteralValue 1 ;
-     rdfs:comment "El número 1, como valor literal para tamaños y cotas."@es ,
-                  "The number 1, as a literal value for sizes and bounds."@en ;
+     rdfs:comment "El número 1, como valor literal para tamaños, cotas y valores iniciales."@es ,
+                  "The number 1, as a literal value for sizes, bounds and initial values."@en ;
      rdfs:label "One"@en ,
                 "Uno"@es .
 
@@ -2541,8 +2552,8 @@
 :Zero rdf:type owl:NamedIndividual ,
                :LiteralValue ;
       :hasLiteralValue 0 ;
-      rdfs:comment "El número 0, como valor literal para tamaños y cotas."@es ,
-                   "The number 0, as a literal value for sizes and bounds."@en ;
+      rdfs:comment "El número 0, como valor literal para tamaños, cotas y valores iniciales."@es ,
+                   "The number 0, as a literal value for sizes, bounds and initial values."@en ;
       rdfs:label "Cero"@es ,
                  "Zero"@en .
 

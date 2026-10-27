@@ -252,6 +252,21 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasInitialValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasInitialValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"/>
+        <rdfs:comment xml:lang="es">Valor de cada elemento de una estructura de datos numérica al empezar el algoritmo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Value of every element of a numeric data structure when the algorithm starts.</rdfs:comment>
+        <rdfs:label xml:lang="en">has initial value</rdfs:label>
+        <rdfs:label xml:lang="es">tiene valor inicial</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#hasInput -->
 
 
@@ -3519,8 +3534,8 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#One">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LiteralValue"/>
         <hasLiteralValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasLiteralValue>
-        <rdfs:comment xml:lang="es">El número 1, como valor literal para tamaños y cotas.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The number 1, as a literal value for sizes and bounds.</rdfs:comment>
+        <rdfs:comment xml:lang="es">El número 1, como valor literal para tamaños, cotas y valores iniciales.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The number 1, as a literal value for sizes, bounds and initial values.</rdfs:comment>
         <rdfs:label xml:lang="en">One</rdfs:label>
         <rdfs:label xml:lang="es">Uno</rdfs:label>
     </owl:NamedIndividual>
@@ -3754,8 +3769,8 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#Zero">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LiteralValue"/>
         <hasLiteralValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasLiteralValue>
-        <rdfs:comment xml:lang="es">El número 0, como valor literal para tamaños y cotas.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The number 0, as a literal value for sizes and bounds.</rdfs:comment>
+        <rdfs:comment xml:lang="es">El número 0, como valor literal para tamaños, cotas y valores iniciales.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The number 0, as a literal value for sizes, bounds and initial values.</rdfs:comment>
         <rdfs:label xml:lang="es">Cero</rdfs:label>
         <rdfs:label xml:lang="en">Zero</rdfs:label>
     </owl:NamedIndividual>

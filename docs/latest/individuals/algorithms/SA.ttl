@@ -108,6 +108,7 @@ CO-META:SA_stop rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_temperature
 CO-META:SA_temperature rdf:type owl:NamedIndividual ,
                                 CO-META:DataStructure ;
+                       CO-META:hasInitialValue CO-META:SA_parameter_max_temperature_reference ;
                        CO-META:hasShape CO-META:Scalar ;
                        CO-META:hasValueDomain CO-META:SA_temperature_domain .
 

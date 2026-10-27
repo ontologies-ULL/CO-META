@@ -150,6 +150,16 @@
 <https://w3id.org/ontologies-ULL/CO-META#hasExclusiveUpperBound> <http://www.w3.org/2000/01/rdf-schema#label> "has exclusive upper bound"@en .
 <https://w3id.org/ontologies-ULL/CO-META#hasExclusiveUpperBound> <http://www.w3.org/2000/01/rdf-schema#label> "tiene cota superior exclusiva"@es .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#hasInitialValue
+<https://w3id.org/ontologies-ULL/CO-META#hasInitialValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasInitialValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasInitialValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#DataStructure> .
+<https://w3id.org/ontologies-ULL/CO-META#hasInitialValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#ValueSpecification> .
+<https://w3id.org/ontologies-ULL/CO-META#hasInitialValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Valor de cada elemento de una estructura de datos numérica al empezar el algoritmo."@es .
+<https://w3id.org/ontologies-ULL/CO-META#hasInitialValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Value of every element of a numeric data structure when the algorithm starts."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasInitialValue> <http://www.w3.org/2000/01/rdf-schema#label> "has initial value"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasInitialValue> <http://www.w3.org/2000/01/rdf-schema#label> "tiene valor inicial"@es .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#hasInput
 <https://w3id.org/ontologies-ULL/CO-META#hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#hasInput> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> .
@@ -2386,8 +2396,8 @@ _:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#One> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#One> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#LiteralValue> .
 <https://w3id.org/ontologies-ULL/CO-META#One> <https://w3id.org/ontologies-ULL/CO-META#hasLiteralValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/ontologies-ULL/CO-META#One> <http://www.w3.org/2000/01/rdf-schema#comment> "El número 1, como valor literal para tamaños y cotas."@es .
-<https://w3id.org/ontologies-ULL/CO-META#One> <http://www.w3.org/2000/01/rdf-schema#comment> "The number 1, as a literal value for sizes and bounds."@en .
+<https://w3id.org/ontologies-ULL/CO-META#One> <http://www.w3.org/2000/01/rdf-schema#comment> "El número 1, como valor literal para tamaños, cotas y valores iniciales."@es .
+<https://w3id.org/ontologies-ULL/CO-META#One> <http://www.w3.org/2000/01/rdf-schema#comment> "The number 1, as a literal value for sizes, bounds and initial values."@en .
 <https://w3id.org/ontologies-ULL/CO-META#One> <http://www.w3.org/2000/01/rdf-schema#label> "One"@en .
 <https://w3id.org/ontologies-ULL/CO-META#One> <http://www.w3.org/2000/01/rdf-schema#label> "Uno"@es .
 # 
@@ -2521,8 +2531,8 @@ _:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#Zero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#Zero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#LiteralValue> .
 <https://w3id.org/ontologies-ULL/CO-META#Zero> <https://w3id.org/ontologies-ULL/CO-META#hasLiteralValue> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/ontologies-ULL/CO-META#Zero> <http://www.w3.org/2000/01/rdf-schema#comment> "El número 0, como valor literal para tamaños y cotas."@es .
-<https://w3id.org/ontologies-ULL/CO-META#Zero> <http://www.w3.org/2000/01/rdf-schema#comment> "The number 0, as a literal value for sizes and bounds."@en .
+<https://w3id.org/ontologies-ULL/CO-META#Zero> <http://www.w3.org/2000/01/rdf-schema#comment> "El número 0, como valor literal para tamaños, cotas y valores iniciales."@es .
+<https://w3id.org/ontologies-ULL/CO-META#Zero> <http://www.w3.org/2000/01/rdf-schema#comment> "The number 0, as a literal value for sizes, bounds and initial values."@en .
 <https://w3id.org/ontologies-ULL/CO-META#Zero> <http://www.w3.org/2000/01/rdf-schema#label> "Cero"@es .
 <https://w3id.org/ontologies-ULL/CO-META#Zero> <http://www.w3.org/2000/01/rdf-schema#label> "Zero"@en .
 # 

@@ -97,6 +97,7 @@ CO-META:ACO_parameter_populationsize rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_pheromones
 CO-META:ACO_pheromones rdf:type owl:NamedIndividual ,
                                 CO-META:DataStructure ;
+                       CO-META:hasInitialValue CO-META:One ;
                        CO-META:hasShape CO-META:ACO_pheromones_shape ;
                        CO-META:hasValueDomain CO-META:NonNegativeReals .
 

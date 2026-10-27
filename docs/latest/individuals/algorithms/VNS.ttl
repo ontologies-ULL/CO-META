@@ -60,6 +60,7 @@ CO-META:VNS_localsearch_neighbourhood rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_neighbourhood
 CO-META:VNS_neighbourhood rdf:type owl:NamedIndividual ,
                                    CO-META:DataStructure ;
+                          CO-META:hasInitialValue CO-META:One ;
                           CO-META:hasShape CO-META:Scalar ;
                           CO-META:hasValueDomain CO-META:PositiveIntegers .
 
