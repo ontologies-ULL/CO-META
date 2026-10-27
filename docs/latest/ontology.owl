@@ -2412,12 +2412,23 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Elitism"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"/>
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="es">Componente de selección que selecciona aleatoriamente una pareja de individuos.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Selection component that selects a pair of individuals at random.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de selección que selecciona aleatoriamente una pareja de individuos. Tiene un parámetro de elitismo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Selection component that selects a pair of individuals at random. It has an elitism parameter.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de selección aleatoria</rdfs:label>
         <rdfs:label xml:lang="en">Random Selection Component</rdfs:label>
     </owl:Class>
@@ -2431,12 +2442,23 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Elitism"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"/>
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="es">Componente de selección que selecciona cada individuo con probabilidad proporcional a su posición según la aptitud.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Selection component that selects each individual with probability proportional to its fitness rank.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de selección que selecciona cada individuo con probabilidad proporcional a su posición según la aptitud. Tiene un parámetro de elitismo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Selection component that selects each individual with probability proportional to its fitness rank. It has an elitism parameter.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de selección por ruleta</rdfs:label>
         <rdfs:label xml:lang="en">Roulette Wheel Selection Component</rdfs:label>
     </owl:Class>
@@ -2492,19 +2514,8 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Elitism"/>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="es">Componente de modificación que selecciona los individuos que formarán parte de la siguiente generación. Tiene un parámetro de elitismo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Modification component that selects the individuals that will take part in the next generation. It has an elitism parameter.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de modificación que selecciona los individuos que formarán parte de la siguiente generación.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Modification component that selects the individuals that will take part in the next generation.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de selección</rdfs:label>
         <rdfs:label xml:lang="en">Selection Component</rdfs:label>
     </owl:Class>
@@ -2644,12 +2655,23 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SelectionComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Elitism"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"/>
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="es">Componente de selección que selecciona individuos por parejas en orden.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Selection component that selects pairs of individuals in order.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de selección que selecciona individuos por parejas en orden. Tiene un parámetro de elitismo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Selection component that selects pairs of individuals in order. It has an elitism parameter.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de selección simple por parejas</rdfs:label>
         <rdfs:label xml:lang="en">Simple Pair Selection Component</rdfs:label>
     </owl:Class>
@@ -2952,6 +2974,17 @@
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Elitism"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
                         <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#TournamentSize"/>
                     </owl:Restriction>
                 </owl:someValuesFrom>
@@ -2963,8 +2996,8 @@
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="es">Componente de selección que selecciona cada individuo como el mejor de un grupo elegido aleatoriamente (torneo). Tiene un parámetro de tamaño de torneo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has a tournament size parameter.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de selección que selecciona cada individuo como el mejor de un grupo elegido aleatoriamente (torneo). Tiene parámetros de elitismo y de tamaño de torneo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has elitism and tournament size parameters.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de selección por torneo</rdfs:label>
         <rdfs:label xml:lang="en">Tournament Selection Component</rdfs:label>
     </owl:Class>

@@ -1633,11 +1633,18 @@
 :RandomSelectionComponent rdf:type owl:Class ;
                           rdfs:subClassOf :SelectionComponent ,
                                           [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasParameter ;
+                                            owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :hasType ;
+                                                                 owl:hasValue :Elitism
+                                                               ]
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
                                             owl:onProperty :hasOutputSize ;
                                             owl:hasValue 2
                                           ] ;
-                          rdfs:comment "Componente de selección que selecciona aleatoriamente una pareja de individuos."@es ,
-                                       "Selection component that selects a pair of individuals at random."@en ;
+                          rdfs:comment "Componente de selección que selecciona aleatoriamente una pareja de individuos. Tiene un parámetro de elitismo."@es ,
+                                       "Selection component that selects a pair of individuals at random. It has an elitism parameter."@en ;
                           rdfs:label "Componente de selección aleatoria"@es ,
                                      "Random Selection Component"@en .
 
@@ -1646,11 +1653,18 @@
 :RouletteWheelSelectionComponent rdf:type owl:Class ;
                                  rdfs:subClassOf :SelectionComponent ,
                                                  [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasParameter ;
+                                                   owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty :hasType ;
+                                                                        owl:hasValue :Elitism
+                                                                      ]
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
                                                    owl:onProperty :hasOutputSize ;
                                                    owl:hasValue 2
                                                  ] ;
-                                 rdfs:comment "Componente de selección que selecciona cada individuo con probabilidad proporcional a su posición según la aptitud."@es ,
-                                              "Selection component that selects each individual with probability proportional to its fitness rank."@en ;
+                                 rdfs:comment "Componente de selección que selecciona cada individuo con probabilidad proporcional a su posición según la aptitud. Tiene un parámetro de elitismo."@es ,
+                                              "Selection component that selects each individual with probability proportional to its fitness rank. It has an elitism parameter."@en ;
                                  rdfs:label "Componente de selección por ruleta"@es ,
                                             "Roulette Wheel Selection Component"@en .
 
@@ -1687,16 +1701,9 @@
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SelectionComponent
 :SelectionComponent rdf:type owl:Class ;
-                    rdfs:subClassOf :ModificationComponent ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty :hasParameter ;
-                                      owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                           owl:onProperty :hasType ;
-                                                           owl:hasValue :Elitism
-                                                         ]
-                                    ] ;
-                    rdfs:comment "Componente de modificación que selecciona los individuos que formarán parte de la siguiente generación. Tiene un parámetro de elitismo."@es ,
-                                 "Modification component that selects the individuals that will take part in the next generation. It has an elitism parameter."@en ;
+                    rdfs:subClassOf :ModificationComponent ;
+                    rdfs:comment "Componente de modificación que selecciona los individuos que formarán parte de la siguiente generación."@es ,
+                                 "Modification component that selects the individuals that will take part in the next generation."@en ;
                     rdfs:label "Componente de selección"@es ,
                                "Selection Component"@en .
 
@@ -1795,11 +1802,18 @@
 :SimplePairSelectionComponent rdf:type owl:Class ;
                               rdfs:subClassOf :SelectionComponent ,
                                               [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasParameter ;
+                                                owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty :hasType ;
+                                                                     owl:hasValue :Elitism
+                                                                   ]
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
                                                 owl:onProperty :hasOutputSize ;
                                                 owl:hasValue 2
                                               ] ;
-                              rdfs:comment "Componente de selección que selecciona individuos por parejas en orden."@es ,
-                                           "Selection component that selects pairs of individuals in order."@en ;
+                              rdfs:comment "Componente de selección que selecciona individuos por parejas en orden. Tiene un parámetro de elitismo."@es ,
+                                           "Selection component that selects pairs of individuals in order. It has an elitism parameter."@en ;
                               rdfs:label "Componente de selección simple por parejas"@es ,
                                          "Simple Pair Selection Component"@en .
 
@@ -2009,6 +2023,13 @@
                                                 owl:onProperty :hasParameter ;
                                                 owl:someValuesFrom [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :hasType ;
+                                                                     owl:hasValue :Elitism
+                                                                   ]
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasParameter ;
+                                                owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty :hasType ;
                                                                      owl:hasValue :TournamentSize
                                                                    ]
                                               ] ,
@@ -2016,8 +2037,8 @@
                                                 owl:onProperty :hasOutputSize ;
                                                 owl:hasValue 2
                                               ] ;
-                              rdfs:comment "Componente de selección que selecciona cada individuo como el mejor de un grupo elegido aleatoriamente (torneo). Tiene un parámetro de tamaño de torneo."@es ,
-                                           "Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has a tournament size parameter."@en ;
+                              rdfs:comment "Componente de selección que selecciona cada individuo como el mejor de un grupo elegido aleatoriamente (torneo). Tiene parámetros de elitismo y de tamaño de torneo."@es ,
+                                           "Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has elitism and tournament size parameters."@en ;
                               rdfs:label "Componente de selección por torneo"@es ,
                                          "Tournament Selection Component"@en .
 

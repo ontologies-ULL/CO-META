@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics.", "dateReleased":"Mon Oct 26 12:54:35 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics.", "dateReleased":"Tue Oct 27 16:08:18 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -2936,7 +2936,7 @@ This section provides details for each class and property defined by CO-META.
   <h3>Random Selection Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#RandomSelectionComponent</p>
   <div class="comment">
-   <span class="markdown">Selection component that selects a pair of individuals at random.</span>
+   <span class="markdown">Selection component that selects a pair of individuals at random. It has an elitism parameter.</span>
   </div>
   <dl class="description">
    <dt>
@@ -2951,7 +2951,7 @@ This section provides details for each class and property defined by CO-META.
   <h3>Roulette Wheel Selection Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#RouletteWheelSelectionComponent</p>
   <div class="comment">
-   <span class="markdown">Selection component that selects each individual with probability proportional to its fitness rank.</span>
+   <span class="markdown">Selection component that selects each individual with probability proportional to its fitness rank. It has an elitism parameter.</span>
   </div>
   <dl class="description">
    <dt>
@@ -3020,7 +3020,7 @@ This section provides details for each class and property defined by CO-META.
   <h3>Selection Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#SelectionComponent</p>
   <div class="comment">
-   <span class="markdown">Modification component that selects the individuals that will take part in the next generation. It has an elitism parameter.</span>
+   <span class="markdown">Modification component that selects the individuals that will take part in the next generation.</span>
   </div>
   <dl class="description">
    <dt>
@@ -3155,7 +3155,7 @@ This section provides details for each class and property defined by CO-META.
   <h3>Simple Pair Selection Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#SimplePairSelectionComponent</p>
   <div class="comment">
-   <span class="markdown">Selection component that selects pairs of individuals in order.</span>
+   <span class="markdown">Selection component that selects pairs of individuals in order. It has an elitism parameter.</span>
   </div>
   <dl class="description">
    <dt>
@@ -3422,7 +3422,7 @@ This section provides details for each class and property defined by CO-META.
   <h3>Tournament Selection Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#TournamentSelectionComponent</p>
   <div class="comment">
-   <span class="markdown">Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has a tournament size parameter.</span>
+   <span class="markdown">Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has elitism and tournament size parameters.</span>
   </div>
   <dl class="description">
    <dt>
