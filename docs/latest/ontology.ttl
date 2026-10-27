@@ -1557,10 +1557,17 @@
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent
 :PopulationModifierComponent rdf:type owl:Class ;
-                             rdfs:subClassOf :LoopComponent ;
+                             rdfs:subClassOf :LoopComponent ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasParameter ;
+                                               owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty :hasType ;
+                                                                    owl:hasValue :PopulationSize
+                                                                  ]
+                                             ] ;
                              owl:disjointWith :StoppingCriterionComponent ;
-                             rdfs:comment "Componente de bucle que repite un proceso parcial, tomando la población anterior como entrada, hasta completar la nueva población."@es ,
-                                          "Loop component that repeats a partial process, taking the old population as input, until the new population is filled."@en ;
+                             rdfs:comment "Componente de bucle que repite un proceso parcial, tomando la población anterior como entrada, hasta completar la nueva población. Tiene un parámetro de tamaño de población."@es ,
+                                          "Loop component that repeats a partial process, taking the old population as input, until the new population is filled. It has a population size parameter."@en ;
                              rdfs:label "Componente modificador de población"@es ,
                                         "Population Modifier Component"@en .
 

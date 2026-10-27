@@ -51,7 +51,8 @@ CO-META:EA_mutation rdf:type owl:NamedIndividual ,
 CO-META:EA_next_generation rdf:type owl:NamedIndividual ,
                                     CO-META:PopulationModifierComponent ;
                            CO-META:hasInput CO-META:EA_mutation ;
-                           CO-META:hasInputStart CO-META:EA_stop .
+                           CO-META:hasInputStart CO-META:EA_stop ;
+                           CO-META:hasParameter CO-META:EA_parameter_populationsize .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover

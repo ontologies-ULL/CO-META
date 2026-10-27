@@ -86,7 +86,8 @@ CO-META:SPEA2_mutation rdf:type owl:NamedIndividual ,
 CO-META:SPEA2_next_generation rdf:type owl:NamedIndividual ,
                                        CO-META:PopulationModifierComponent ;
                               CO-META:hasOutput CO-META:SPEA2_binary_tournament_selection ;
-                              CO-META:hasOutputEnd CO-META:SPEA2_stop .
+                              CO-META:hasOutputEnd CO-META:SPEA2_stop ;
+                              CO-META:hasParameter CO-META:SPEA2_parameter_populationsize .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_crossoverprobability

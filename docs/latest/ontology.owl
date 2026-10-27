@@ -2302,9 +2302,20 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationModifierComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasParameter"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PopulationSize"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent"/>
-        <rdfs:comment xml:lang="es">Componente de bucle que repite un proceso parcial, tomando la población anterior como entrada, hasta completar la nueva población.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Loop component that repeats a partial process, taking the old population as input, until the new population is filled.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de bucle que repite un proceso parcial, tomando la población anterior como entrada, hasta completar la nueva población. Tiene un parámetro de tamaño de población.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Loop component that repeats a partial process, taking the old population as input, until the new population is filled. It has a population size parameter.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente modificador de población</rdfs:label>
         <rdfs:label xml:lang="en">Population Modifier Component</rdfs:label>
     </owl:Class>

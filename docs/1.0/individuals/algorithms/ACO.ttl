@@ -48,7 +48,8 @@ CO-META:ACO_evaporate_pheromones rdf:type owl:NamedIndividual ,
 CO-META:ACO_iterate_population rdf:type owl:NamedIndividual ,
                                         CO-META:PopulationModifierComponent ;
                                CO-META:hasOutput CO-META:ACO_iterative_selector ;
-                               CO-META:hasOutputEnd CO-META:ACO_stop .
+                               CO-META:hasOutputEnd CO-META:ACO_stop ;
+                               CO-META:hasParameter CO-META:ACO_parameter_populationsize .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_iterative_selector
