@@ -171,6 +171,17 @@ CO-META:hasExclusiveUpperBound rdf:type owl:ObjectProperty ,
                                           "tiene cota superior exclusiva"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasInitialValue
+CO-META:hasInitialValue rdf:type owl:ObjectProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain CO-META:DataStructure ;
+                        rdfs:range CO-META:ValueSpecification ;
+                        rdfs:comment "Valor de cada elemento de una estructura de datos numérica al empezar el algoritmo."@es ,
+                                     "Value of every element of a numeric data structure when the algorithm starts."@en ;
+                        rdfs:label "has initial value"@en ,
+                                   "tiene valor inicial"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasInput
 CO-META:hasInput rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf CO-META:isConnectedTo ;
@@ -2363,8 +2374,8 @@ CO-META:NonNegativeReals rdf:type owl:NamedIndividual ,
 CO-META:One rdf:type owl:NamedIndividual ,
                      CO-META:LiteralValue ;
             CO-META:hasLiteralValue 1 ;
-            rdfs:comment "The number 1, as a literal value for sizes and bounds."@en ,
-                         "El número 1, como valor literal para tamaños y cotas."@es ;
+            rdfs:comment "The number 1, as a literal value for sizes, bounds and initial values."@en ,
+                         "El número 1, como valor literal para tamaños, cotas y valores iniciales."@es ;
             rdfs:label "One"@en ,
                        "Uno"@es .
 
@@ -2518,8 +2529,8 @@ CO-META:Unsafe rdf:type owl:NamedIndividual ,
 CO-META:Zero rdf:type owl:NamedIndividual ,
                       CO-META:LiteralValue ;
              CO-META:hasLiteralValue 0 ;
-             rdfs:comment "The number 0, as a literal value for sizes and bounds."@en ,
-                          "El número 0, como valor literal para tamaños y cotas."@es ;
+             rdfs:comment "The number 0, as a literal value for sizes, bounds and initial values."@en ,
+                          "El número 0, como valor literal para tamaños, cotas y valores iniciales."@es ;
              rdfs:label "Zero"@en ,
                         "Cero"@es .
 
