@@ -34,7 +34,13 @@ CO-META:ILS_generate rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch
 CO-META:ILS_localsearch rdf:type owl:NamedIndividual ,
                                  CO-META:FirstImprovementLocalSearchComponent ;
-                        CO-META:hasCandidateOutput CO-META:ILS_acceptance .
+                        CO-META:hasCandidateOutput CO-META:ILS_acceptance ;
+                        CO-META:usesComponent CO-META:ILS_localsearch_neighbourhood .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ILS_localsearch_neighbourhood
+CO-META:ILS_localsearch_neighbourhood rdf:type owl:NamedIndividual ,
+                                               CO-META:NeighbourhoodComponent .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ILS_parameter_iterations
@@ -54,7 +60,13 @@ CO-META:ILS_parameter_populationsize rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation
 CO-META:ILS_perturbation rdf:type owl:NamedIndividual ,
                                   CO-META:VariationComponent ;
-                         CO-META:hasOutput CO-META:ILS_localsearch .
+                         CO-META:hasOutput CO-META:ILS_localsearch ;
+                         CO-META:usesComponent CO-META:ILS_perturbation_neighbourhood .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ILS_perturbation_neighbourhood
+CO-META:ILS_perturbation_neighbourhood rdf:type owl:NamedIndividual ,
+                                                CO-META:NeighbourhoodComponent .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ILS_stop

@@ -48,6 +48,11 @@ CO-META:SA_generate rdf:type owl:NamedIndividual ,
                     CO-META:hasParameter CO-META:SA_parameter_populationsize .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#SA_neighbourhood
+CO-META:SA_neighbourhood rdf:type owl:NamedIndividual ,
+                                  CO-META:NeighbourhoodComponent .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_parameter_iterations
 CO-META:SA_parameter_iterations rdf:type owl:NamedIndividual ,
                                          CO-META:ParameterValue ;
@@ -88,7 +93,8 @@ CO-META:SA_parameter_populationsize rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_perturbation
 CO-META:SA_perturbation rdf:type owl:NamedIndividual ,
                                  CO-META:VariationComponent ;
-                        CO-META:hasCandidateOutput CO-META:SA_acceptance .
+                        CO-META:hasCandidateOutput CO-META:SA_acceptance ;
+                        CO-META:usesComponent CO-META:SA_neighbourhood .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_stop

@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics.", "dateReleased":"Tue Oct 27 16:08:18 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics.", "dateReleased":"Tue Oct 27 18:47:32 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -740,6 +740,10 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/ontologies-ULL/CO-META#supportsShape">supports shape</a>
    </li>
    <li>
+      <a href="#usesComponent"
+         title="https://w3id.org/ontologies-ULL/CO-META#usesComponent">uses component</a>
+   </li>
+   <li>
       <a href="#writesData"
          title="https://w3id.org/ontologies-ULL/CO-META#writesData">
          <span>writes Data</span>
@@ -789,7 +793,8 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/ontologies-ULL/CO-META#hasPosition">has position</a>
    </li>
    <li>
-      <a href="#hasValue" title="https://w3id.org/ontologies-ULL/CO-META#hasValue">
+      <a href="#hasValue"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasValue">
          <span>has Value</span>
       </a>
    </li>
@@ -2056,7 +2061,7 @@ This section provides details for each class and property defined by CO-META.
   <h3>Local Search Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent</p>
   <div class="comment">
-   <span class="markdown">Modification component that improves the fitness of a solution by exploring its neighbourhood.</span>
+   <span class="markdown">Modification component that improves the fitness of a solution by exploring the neighbourhood it uses.</span>
   </div>
   <dl class="description">
    <dt>
@@ -2264,13 +2269,13 @@ This section provides details for each class and property defined by CO-META.
     is in domain of
    </dt>
    <dd>
-    <a href="#hasInputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasInputSize">has Input Size</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasOutput">has Output</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasOutputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize">has Output Size</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasParameter" title="https://w3id.org/ontologies-ULL/CO-META#hasParameter">has Parameter</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSafety" title="https://w3id.org/ontologies-ULL/CO-META#hasSafety">has Safety</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCodeReference" title="https://w3id.org/ontologies-ULL/CO-META#hasCodeReference">has code reference</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#readsData" title="https://w3id.org/ontologies-ULL/CO-META#readsData">reads Data</a> <sup class="type-op" title="object property">op</sup>, <a href="#supportsShape" title="https://w3id.org/ontologies-ULL/CO-META#supportsShape">supports shape</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasInputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasInputSize">has Input Size</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasOutput">has Output</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasOutputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize">has Output Size</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasParameter" title="https://w3id.org/ontologies-ULL/CO-META#hasParameter">has Parameter</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSafety" title="https://w3id.org/ontologies-ULL/CO-META#hasSafety">has Safety</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCodeReference" title="https://w3id.org/ontologies-ULL/CO-META#hasCodeReference">has code reference</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#readsData" title="https://w3id.org/ontologies-ULL/CO-META#readsData">reads Data</a> <sup class="type-op" title="object property">op</sup>, <a href="#supportsShape" title="https://w3id.org/ontologies-ULL/CO-META#supportsShape">supports shape</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesComponent" title="https://w3id.org/ontologies-ULL/CO-META#usesComponent">uses component</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#hasOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasOutput">has Output</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasStart" title="https://w3id.org/ontologies-ULL/CO-META#hasStart">has Start</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasOutput">has Output</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasStart" title="https://w3id.org/ontologies-ULL/CO-META#hasStart">has Start</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesComponent" title="https://w3id.org/ontologies-ULL/CO-META#usesComponent">uses component</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is disjoint with
@@ -3140,7 +3145,7 @@ This section provides details for each class and property defined by CO-META.
   <h3>Shaking Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#ShakingComponent</p>
   <div class="comment">
-   <span class="markdown">Variation component that applies k random moves of a neighbourhood, where k is the value of the data structure it reads (the current neighbourhood of a variable neighbourhood search).</span>
+   <span class="markdown">Variation component that applies k random moves of the neighbourhood it uses, where k is the value of the data structure it reads (the current neighbourhood of a variable neighbourhood search).</span>
   </div>
   <dl class="description">
    <dt>
@@ -3637,6 +3642,7 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#readsData" title="https://w3id.org/ontologies-ULL/CO-META#readsData"> <span>reads Data</span> </a></li>
   <li><a href="#refersTo" title="https://w3id.org/ontologies-ULL/CO-META#refersTo">refers to</a></li>
   <li><a href="#supportsShape" title="https://w3id.org/ontologies-ULL/CO-META#supportsShape">supports shape</a></li>
+  <li><a href="#usesComponent" title="https://w3id.org/ontologies-ULL/CO-META#usesComponent">uses component</a></li>
   <li><a href="#writesData" title="https://w3id.org/ontologies-ULL/CO-META#writesData"> <span>writes Data</span> </a></li>
  </ul>
  <div class="entity" id="hasBaseType">
@@ -4492,6 +4498,29 @@ This section provides details for each class and property defined by CO-META.
     </dt>
     <dd>
      <a href="#DataShape" title="https://w3id.org/ontologies-ULL/CO-META#DataShape">Data Shape</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="usesComponent">
+  <h3>uses component<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#usesComponent</p>
+  <div class="comment">
+   <span class="markdown">Component used internally by another one, outside the data flow of the algorithm: e.g. the neighbourhood that a local search explores or from which a perturbation takes its moves.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>

@@ -393,6 +393,16 @@
                           "supports shape"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#usesComponent
+:usesComponent rdf:type owl:ObjectProperty ;
+               rdfs:domain :MetaheuristicComponent ;
+               rdfs:range :MetaheuristicComponent ;
+               rdfs:comment "Component used internally by another one, outside the data flow of the algorithm: e.g. the neighbourhood that a local search explores or from which a perturbation takes its moves."@en ,
+                            "Componente usado internamente por otro, fuera del flujo de datos del algoritmo: p. ej. el vecindario que explora una búsqueda local o del que una perturbación toma sus movimientos."@es ;
+               rdfs:label "usa componente"@es ,
+                          "uses component"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#writesData
 :writesData rdf:type owl:ObjectProperty ;
             rdfs:domain :DataHandlerComponent ;
@@ -1127,8 +1137,8 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent
 :LocalSearchComponent rdf:type owl:Class ;
                       rdfs:subClassOf :ModificationComponent ;
-                      rdfs:comment "Componente de modificación que mejora la aptitud de una solución explorando su vecindario."@es ,
-                                   "Modification component that improves the fitness of a solution by exploring its neighbourhood."@en ;
+                      rdfs:comment "Componente de modificación que mejora la aptitud de una solución explorando el vecindario que usa."@es ,
+                                   "Modification component that improves the fitness of a solution by exploring the neighbourhood it uses."@en ;
                       rdfs:label "Componente de búsqueda local"@es ,
                                  "Local Search Component"@en .
 
@@ -1792,8 +1802,8 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#ShakingComponent
 :ShakingComponent rdf:type owl:Class ;
                   rdfs:subClassOf :VariationComponent ;
-                  rdfs:comment "Componente de variación que aplica k movimientos aleatorios de un vecindario, donde k es el valor de la estructura de datos que lee (el vecindario actual de una búsqueda de vecindario variable)."@es ,
-                               "Variation component that applies k random moves of a neighbourhood, where k is the value of the data structure it reads (the current neighbourhood of a variable neighbourhood search)."@en ;
+                  rdfs:comment "Componente de variación que aplica k movimientos aleatorios del vecindario que usa, donde k es el valor de la estructura de datos que lee (el vecindario actual de una búsqueda de vecindario variable)."@es ,
+                               "Variation component that applies k random moves of the neighbourhood it uses, where k is the value of the data structure it reads (the current neighbourhood of a variable neighbourhood search)."@en ;
                   rdfs:label "Componente de agitación"@es ,
                              "Shaking Component"@en .
 
