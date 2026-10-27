@@ -68,7 +68,8 @@ CO-META:PSO_generate_population rdf:type owl:NamedIndividual ,
 CO-META:PSO_iterate_population rdf:type owl:NamedIndividual ,
                                         CO-META:PopulationModifierComponent ;
                                CO-META:hasOutput CO-META:PSO_iterative_selector ;
-                               CO-META:hasOutputEnd CO-META:PSO_stop .
+                               CO-META:hasOutputEnd CO-META:PSO_stop ;
+                               CO-META:hasParameter CO-META:PSO_parameter_populationsize .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_iterative_selector
