@@ -58,3 +58,13 @@ cm:PortRequirementShape
         sh:minCount 1 ;
         sh:message "The component compares a candidate with the current solution, so it needs a candidate input." ;
     ] .
+
+# Local searches and variations use neighbourhoods
+cm:UsedNeighbourhoodShape
+    a sh:NodeShape ;
+    sh:targetClass cm:LocalSearchComponent , cm:VariationComponent ;
+    sh:property [
+        sh:path cm:usesComponent ;
+        sh:class cm:NeighbourhoodComponent ;
+        sh:message "A local search or a variation can only use neighbourhoods." ;
+    ] .

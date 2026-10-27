@@ -1,0 +1,13 @@
+# Expected: SHACL violation (UsedNeighbourhoodShape).
+# A local search explores a neighbourhood, not a mutation.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/local-search-uses-mutation> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:localsearch a owl:NamedIndividual , CO-META:FirstImprovementLocalSearchComponent ;
+    CO-META:usesComponent t:mutation .
+
+t:mutation a owl:NamedIndividual , CO-META:SwapMutationComponent .

@@ -41,7 +41,13 @@ CO-META:GRASP_construction_rcl rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#GRASP_localsearch
 CO-META:GRASP_localsearch rdf:type owl:NamedIndividual ,
                                    CO-META:FirstImprovementLocalSearchComponent ;
-                          CO-META:hasCandidateOutput CO-META:GRASP_acceptance .
+                          CO-META:hasCandidateOutput CO-META:GRASP_acceptance ;
+                          CO-META:usesComponent CO-META:GRASP_neighbourhood .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GRASP_neighbourhood
+CO-META:GRASP_neighbourhood rdf:type owl:NamedIndividual ,
+                                     CO-META:NeighbourhoodComponent .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#GRASP_parameter_iterations

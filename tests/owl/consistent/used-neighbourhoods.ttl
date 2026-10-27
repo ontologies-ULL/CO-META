@@ -1,0 +1,19 @@
+# Expected: consistent.
+# A local search explores the neighbourhood it uses, and a shaking takes its moves from another one.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/used-neighbourhoods> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:shaking a owl:NamedIndividual , CO-META:ShakingComponent ;
+    CO-META:hasOutput t:localsearch ;
+    CO-META:usesComponent t:insertions .
+
+t:localsearch a owl:NamedIndividual , CO-META:FirstImprovementLocalSearchComponent ;
+    CO-META:usesComponent t:swaps .
+
+t:swaps a owl:NamedIndividual , CO-META:SwapNeighbourhoodComponent .
+
+t:insertions a owl:NamedIndividual , CO-META:InsertionNeighbourhoodComponent .

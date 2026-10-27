@@ -48,7 +48,13 @@ CO-META:VNS_generate rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch
 CO-META:VNS_localsearch rdf:type owl:NamedIndividual ,
                                  CO-META:FirstImprovementLocalSearchComponent ;
-                        CO-META:hasCandidateOutput CO-META:VNS_acceptance .
+                        CO-META:hasCandidateOutput CO-META:VNS_acceptance ;
+                        CO-META:usesComponent CO-META:VNS_localsearch_neighbourhood .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VNS_localsearch_neighbourhood
+CO-META:VNS_localsearch_neighbourhood rdf:type owl:NamedIndividual ,
+                                               CO-META:NeighbourhoodComponent .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_neighbourhood
@@ -75,7 +81,13 @@ CO-META:VNS_parameter_populationsize rdf:type owl:NamedIndividual ,
 CO-META:VNS_perturbation rdf:type owl:NamedIndividual ,
                                   CO-META:VariationComponent ;
                          CO-META:hasOutput CO-META:VNS_localsearch ;
-                         CO-META:readsData CO-META:VNS_neighbourhood .
+                         CO-META:readsData CO-META:VNS_neighbourhood ;
+                         CO-META:usesComponent CO-META:VNS_shaking_neighbourhood .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VNS_shaking_neighbourhood
+CO-META:VNS_shaking_neighbourhood rdf:type owl:NamedIndividual ,
+                                           CO-META:NeighbourhoodComponent .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_stop
