@@ -43,7 +43,9 @@ CO-META:SPEA2_archive_shape rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection
 CO-META:SPEA2_binary_tournament_selection rdf:type owl:NamedIndividual ,
                                                    CO-META:TournamentSelectionComponent ;
-                                          CO-META:hasOutput CO-META:SPEA2_crossover .
+                                          CO-META:hasOutput CO-META:SPEA2_crossover ;
+                                          CO-META:hasParameter CO-META:SPEA2_parameter_elitism ,
+                                                               CO-META:SPEA2_parameter_tournamentsize .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover
@@ -93,6 +95,12 @@ CO-META:SPEA2_parameter_crossoverprobability rdf:type owl:NamedIndividual ,
                                              CO-META:hasType CO-META:CrossoverProbability .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_elitism
+CO-META:SPEA2_parameter_elitism rdf:type owl:NamedIndividual ,
+                                         CO-META:ParameterValue ;
+                                CO-META:hasType CO-META:Elitism .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_iterations
 CO-META:SPEA2_parameter_iterations rdf:type owl:NamedIndividual ,
                                             CO-META:ParameterValue ;
@@ -121,6 +129,13 @@ CO-META:SPEA2_parameter_storagesize rdf:type owl:NamedIndividual ,
 CO-META:SPEA2_parameter_storagesize_reference rdf:type owl:NamedIndividual ,
                                                        CO-META:ParameterReference ;
                                               CO-META:refersTo CO-META:SPEA2_parameter_storagesize .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_tournamentsize
+CO-META:SPEA2_parameter_tournamentsize rdf:type owl:NamedIndividual ,
+                                                CO-META:ParameterValue ;
+                                       CO-META:hasType CO-META:TournamentSize ;
+                                       CO-META:hasValue 2 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_truncationsize

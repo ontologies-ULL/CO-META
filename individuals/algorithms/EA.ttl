@@ -27,7 +27,9 @@ CO-META:EA_EvolutionaryAlgorithm rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection
 CO-META:EA_binary_tournament_selection rdf:type owl:NamedIndividual ,
                                                 CO-META:TournamentSelectionComponent ;
-                                       CO-META:hasInput CO-META:EA_next_generation .
+                                       CO-META:hasInput CO-META:EA_next_generation ;
+                                       CO-META:hasParameter CO-META:EA_parameter_elitism ,
+                                                            CO-META:EA_parameter_tournamentsize .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#EA_generate_population
@@ -65,6 +67,12 @@ CO-META:EA_parameter_crossoverprobability rdf:type owl:NamedIndividual ,
                                           CO-META:hasType CO-META:CrossoverProbability .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#EA_parameter_elitism
+CO-META:EA_parameter_elitism rdf:type owl:NamedIndividual ,
+                                      CO-META:ParameterValue ;
+                             CO-META:hasType CO-META:Elitism .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#EA_parameter_iterations
 CO-META:EA_parameter_iterations rdf:type owl:NamedIndividual ,
                                          CO-META:ParameterValue ;
@@ -81,6 +89,13 @@ CO-META:EA_parameter_mutationprobability rdf:type owl:NamedIndividual ,
 CO-META:EA_parameter_populationsize rdf:type owl:NamedIndividual ,
                                              CO-META:ParameterValue ;
                                     CO-META:hasType CO-META:PopulationSize .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#EA_parameter_tournamentsize
+CO-META:EA_parameter_tournamentsize rdf:type owl:NamedIndividual ,
+                                             CO-META:ParameterValue ;
+                                    CO-META:hasType CO-META:TournamentSize ;
+                                    CO-META:hasValue 2 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#EA_stop
