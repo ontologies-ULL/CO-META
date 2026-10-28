@@ -515,6 +515,21 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasValueReference -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasValueReference">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterValue"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ParameterReference"/>
+        <rdfs:comment xml:lang="es">El valor de parámetro toma el valor de otro (p. ej. un truncamiento conserva tantos individuos como el tamaño de población).</rdfs:comment>
+        <rdfs:comment xml:lang="en">The parameter value takes the value of another one (e.g. a truncation keeps as many individuals as the population size).</rdfs:comment>
+        <rdfs:label xml:lang="en">has value reference</rdfs:label>
+        <rdfs:label xml:lang="es">tiene referencia de valor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#isConnectedTo -->
 
 
@@ -657,6 +672,20 @@
         <rdfs:comment xml:lang="en">Key of an implementation of the component in a program that runs metaheuristics (e.g. &quot;cometa:swap-mutation&quot;). It selects that implementation explicitly; without it, the most specific class of the component is used.</rdfs:comment>
         <rdfs:label xml:lang="en">has code reference</rdfs:label>
         <rdfs:label xml:lang="es">tiene referencia de código</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <rdfs:comment xml:lang="es">Valor que se usa para un valor de parámetro que no indica ni un valor ni una referencia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Value used for a parameter value that states neither a value nor a reference.</rdfs:comment>
+        <rdfs:label xml:lang="en">has default value</rdfs:label>
+        <rdfs:label xml:lang="es">tiene valor por defecto</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3341,6 +3370,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#BlendAlpha">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasDefaultValue>
         <rdfs:comment xml:lang="es">Ampliación del intervalo de los progenitores en un cruce por mezcla, como fracción de su anchura.</rdfs:comment>
         <rdfs:comment xml:lang="en">Extension of the parents&apos; interval in a blend crossover, as a fraction of its width.</rdfs:comment>
         <rdfs:label xml:lang="es">Alfa de mezcla</rdfs:label>
@@ -3377,6 +3407,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3387,6 +3418,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3397,6 +3429,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#Elitism">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3407,6 +3440,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3417,6 +3451,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3427,6 +3462,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3450,6 +3486,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#Iterations">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3460,6 +3497,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PositiveReals"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3470,6 +3508,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#MinTemperature">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PositiveReals"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0001</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3480,6 +3519,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3490,10 +3530,26 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</hasDefaultValue>
         <rdfs:comment xml:lang="es">Desviación típica de una mutación gaussiana, como fracción de la anchura del dominio.</rdfs:comment>
         <rdfs:comment xml:lang="en">Standard deviation of a Gaussian mutation, as a fraction of the width of the domain.</rdfs:comment>
         <rdfs:label xml:lang="es">Intensidad de mutación</rdfs:label>
         <rdfs:label xml:lang="en">Mutation Strength</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasDefaultValue>
+        <rdfs:comment xml:lang="en">Number of neighbourhoods of a variable neighbourhood search.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Número de vecindarios de una búsqueda de vecindario variable.</rdfs:comment>
+        <rdfs:label xml:lang="en">Neighbourhood Count</rdfs:label>
+        <rdfs:label xml:lang="es">Número de vecindarios</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3548,6 +3604,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3558,6 +3615,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3568,6 +3626,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3578,6 +3637,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3588,6 +3648,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#PopulationSize">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3628,6 +3689,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3714,6 +3776,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#StorageSize">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasDefaultValue>
     </owl:NamedIndividual>
     
 
@@ -3734,6 +3797,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TournamentSize">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers"/>
+        <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDefaultValue>
     </owl:NamedIndividual>
     
 

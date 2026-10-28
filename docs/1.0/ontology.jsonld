@@ -2008,6 +2008,10 @@
     "@language" : "en",
     "@value" : "Blend Alpha"
   } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.5"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"
   } ]
@@ -2246,6 +2250,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers"
   } ]
@@ -2254,6 +2262,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.9"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#UnitInterval"
@@ -2443,6 +2455,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"
   } ]
@@ -2578,6 +2594,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.5"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"
   } ]
@@ -2609,6 +2629,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "2.0"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"
   } ]
@@ -2637,6 +2661,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.7"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#UnitInterval"
@@ -2754,6 +2782,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1000"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"
@@ -2962,6 +2994,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.1"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#PositiveReals"
   } ]
@@ -3068,6 +3104,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.0001"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#PositiveReals"
   } ]
@@ -3160,6 +3200,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.2"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#UnitInterval"
   } ]
@@ -3182,6 +3226,10 @@
   }, {
     "@language" : "en",
     "@value" : "Mutation Strength"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.1"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#UnitInterval"
@@ -3245,6 +3293,33 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ModificationComponent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of neighbourhoods of a variable neighbourhood search."
+  }, {
+    "@language" : "es",
+    "@value" : "Número de vecindarios de una búsqueda de vecindario variable."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Neighbourhood Count"
+  }, {
+    "@language" : "es",
+    "@value" : "Número de vecindarios"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonDominatedSortingComponent",
@@ -3491,6 +3566,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.5"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"
   } ]
@@ -3499,6 +3578,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"
@@ -3531,6 +3614,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.1"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#UnitInterval"
   } ]
@@ -3561,6 +3648,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.0"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"
@@ -3690,6 +3781,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "50"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"
@@ -3828,6 +3923,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.3"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#UnitInterval"
@@ -4392,6 +4491,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "10"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"
   } ]
@@ -4590,6 +4693,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasValueDomain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers"
@@ -5068,6 +5175,26 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Valor que se usa para un valor de parámetro que no indica ni un valor ni una referencia."
+  }, {
+    "@language" : "en",
+    "@value" : "Value used for a parameter value that states neither a value nor a reference."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has default value"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene valor por defecto"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex",
@@ -5584,6 +5711,29 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasValueReference",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El valor de parámetro toma el valor de otro (p. ej. un truncamiento conserva tantos individuos como el tamaño de población)."
+  }, {
+    "@language" : "en",
+    "@value" : "The parameter value takes the value of another one (e.g. a truncation keeps as many individuals as the population size)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ParameterValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has value reference"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene referencia de valor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ParameterReference"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasWeight",

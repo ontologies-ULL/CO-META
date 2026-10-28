@@ -344,6 +344,17 @@
                            "tiene dominio de valores"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasValueReference
+:hasValueReference rdf:type owl:ObjectProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain :ParameterValue ;
+                   rdfs:range :ParameterReference ;
+                   rdfs:comment "El valor de parámetro toma el valor de otro (p. ej. un truncamiento conserva tantos individuos como el tamaño de población)."@es ,
+                                "The parameter value takes the value of another one (e.g. a truncation keeps as many individuals as the population size)."@en ;
+                   rdfs:label "has value reference"@en ,
+                              "tiene referencia de valor"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#isConnectedTo
 :isConnectedTo rdf:type owl:ObjectProperty ,
                         owl:TransitiveProperty ;
@@ -432,6 +443,16 @@
                                "Key of an implementation of the component in a program that runs metaheuristics (e.g. \"cometa:swap-mutation\"). It selects that implementation explicitly; without it, the most specific class of the component is used."@en ;
                   rdfs:label "has code reference"@en ,
                              "tiene referencia de código"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue
+:hasDefaultValue rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :Parameter ;
+                 rdfs:comment "Valor que se usa para un valor de parámetro que no indica ni un valor ni una referencia."@es ,
+                              "Value used for a parameter value that states neither a value nor a reference."@en ;
+                 rdfs:label "has default value"@en ,
+                            "tiene valor por defecto"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex
@@ -2272,6 +2293,7 @@
 :BlendAlpha rdf:type owl:NamedIndividual ,
                      :Parameter ;
             :hasValueDomain :NonNegativeReals ;
+            :hasDefaultValue 0.5 ;
             rdfs:comment "Ampliación del intervalo de los progenitores en un cruce por mezcla, como fracción de su anchura."@es ,
                          "Extension of the parents' interval in a blend crossover, as a fraction of its width."@en ;
             rdfs:label "Alfa de mezcla"@es ,
@@ -2295,37 +2317,43 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints
 :CrossoverKPoints rdf:type owl:NamedIndividual ,
                            :Parameter ;
-                  :hasValueDomain :PositiveIntegers .
+                  :hasValueDomain :PositiveIntegers ;
+                  :hasDefaultValue 1 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability
 :CrossoverProbability rdf:type owl:NamedIndividual ,
                                :Parameter ;
-                      :hasValueDomain :UnitInterval .
+                      :hasValueDomain :UnitInterval ;
+                      :hasDefaultValue 0.9 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Elitism
 :Elitism rdf:type owl:NamedIndividual ,
                   :Parameter ;
-         :hasValueDomain :NonNegativeIntegers .
+         :hasValueDomain :NonNegativeIntegers ;
+         :hasDefaultValue 1 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence
 :GlobalBestInfluence rdf:type owl:NamedIndividual ,
                               :Parameter ;
-                     :hasValueDomain :NonNegativeReals .
+                     :hasValueDomain :NonNegativeReals ;
+                     :hasDefaultValue 1.5 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence
 :HeuristicInfluence rdf:type owl:NamedIndividual ,
                              :Parameter ;
-                    :hasValueDomain :NonNegativeReals .
+                    :hasValueDomain :NonNegativeReals ;
+                    :hasDefaultValue 2.0 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#InertiaFactor
 :InertiaFactor rdf:type owl:NamedIndividual ,
                         :Parameter ;
-               :hasValueDomain :UnitInterval .
+               :hasValueDomain :UnitInterval ;
+               :hasDefaultValue 0.7 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Integers
@@ -2340,35 +2368,51 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#Iterations
 :Iterations rdf:type owl:NamedIndividual ,
                      :Parameter ;
-            :hasValueDomain :NonNegativeIntegers .
+            :hasValueDomain :NonNegativeIntegers ;
+            :hasDefaultValue 1000 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MaxTemperature
 :MaxTemperature rdf:type owl:NamedIndividual ,
                          :Parameter ;
-                :hasValueDomain :PositiveReals .
+                :hasValueDomain :PositiveReals ;
+                :hasDefaultValue 0.1 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MinTemperature
 :MinTemperature rdf:type owl:NamedIndividual ,
                          :Parameter ;
-                :hasValueDomain :PositiveReals .
+                :hasValueDomain :PositiveReals ;
+                :hasDefaultValue 0.0001 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MutationProbability
 :MutationProbability rdf:type owl:NamedIndividual ,
                               :Parameter ;
-                     :hasValueDomain :UnitInterval .
+                     :hasValueDomain :UnitInterval ;
+                     :hasDefaultValue 0.2 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MutationStrength
 :MutationStrength rdf:type owl:NamedIndividual ,
                            :Parameter ;
                   :hasValueDomain :UnitInterval ;
+                  :hasDefaultValue 0.1 ;
                   rdfs:comment "Desviación típica de una mutación gaussiana, como fracción de la anchura del dominio."@es ,
                                "Standard deviation of a Gaussian mutation, as a fraction of the width of the domain."@en ;
                   rdfs:label "Intensidad de mutación"@es ,
                              "Mutation Strength"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount
+:NeighbourhoodCount rdf:type owl:NamedIndividual ,
+                             :Parameter ;
+                    :hasValueDomain :PositiveIntegers ;
+                    :hasDefaultValue 3 ;
+                    rdfs:comment "Number of neighbourhoods of a variable neighbourhood search."@en ,
+                                 "Número de vecindarios de una búsqueda de vecindario variable."@es ;
+                    rdfs:label "Neighbourhood Count"@en ,
+                               "Número de vecindarios"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers
@@ -2406,31 +2450,36 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence
 :PersonalBestInfluence rdf:type owl:NamedIndividual ,
                                 :Parameter ;
-                       :hasValueDomain :NonNegativeReals .
+                       :hasValueDomain :NonNegativeReals ;
+                       :hasDefaultValue 1.5 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition
 :PheromoneAddition rdf:type owl:NamedIndividual ,
                             :Parameter ;
-                   :hasValueDomain :NonNegativeIntegers .
+                   :hasValueDomain :NonNegativeIntegers ;
+                   :hasDefaultValue 1 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation
 :PheromoneEvaporation rdf:type owl:NamedIndividual ,
                                :Parameter ;
-                      :hasValueDomain :UnitInterval .
+                      :hasValueDomain :UnitInterval ;
+                      :hasDefaultValue 0.1 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence
 :PheromoneInfluence rdf:type owl:NamedIndividual ,
                              :Parameter ;
-                    :hasValueDomain :NonNegativeReals .
+                    :hasValueDomain :NonNegativeReals ;
+                    :hasDefaultValue 1.0 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PopulationSize
 :PopulationSize rdf:type owl:NamedIndividual ,
                          :Parameter ;
-                :hasValueDomain :NonNegativeIntegers .
+                :hasValueDomain :NonNegativeIntegers ;
+                :hasDefaultValue 50 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers
@@ -2458,7 +2507,8 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#RCLRandomness
 :RCLRandomness rdf:type owl:NamedIndividual ,
                         :Parameter ;
-               :hasValueDomain :UnitInterval .
+               :hasValueDomain :UnitInterval ;
+               :hasDefaultValue 0.3 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Reals
@@ -2516,7 +2566,8 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#StorageSize
 :StorageSize rdf:type owl:NamedIndividual ,
                       :Parameter ;
-             :hasValueDomain :NonNegativeIntegers .
+             :hasValueDomain :NonNegativeIntegers ;
+             :hasDefaultValue 10 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Time
@@ -2528,7 +2579,8 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#TournamentSize
 :TournamentSize rdf:type owl:NamedIndividual ,
                          :Parameter ;
-                :hasValueDomain :PositiveIntegers .
+                :hasValueDomain :PositiveIntegers ;
+                :hasDefaultValue 2 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#UnitInterval

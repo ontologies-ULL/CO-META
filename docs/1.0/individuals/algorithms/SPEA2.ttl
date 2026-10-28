@@ -142,7 +142,8 @@ CO-META:SPEA2_parameter_tournamentsize rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_truncationsize
 CO-META:SPEA2_parameter_truncationsize rdf:type owl:NamedIndividual ,
                                                 CO-META:ParameterValue ;
-                                       CO-META:hasType CO-META:PopulationSize .
+                                       CO-META:hasType CO-META:PopulationSize ;
+                                       CO-META:hasValueReference CO-META:SPEA2_parameter_storagesize_reference .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop

@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics.", "dateReleased":"Tue Oct 27 19:42:18 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics.", "dateReleased":"Wed Oct 28 22:59:20 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -719,6 +719,10 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a>
    </li>
    <li>
+      <a href="#hasValueReference"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasValueReference">has value reference</a>
+   </li>
+   <li>
       <a href="#isConnectedTo"
          title="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo">
          <span>is Connected To</span>
@@ -759,6 +763,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#hasCodeReference"
          title="https://w3id.org/ontologies-ULL/CO-META#hasCodeReference">has code reference</a>
+   </li>
+   <li>
+      <a href="#hasDefaultValue"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a>
    </li>
    <li>
       <a href="#hasDimensionIndex"
@@ -947,6 +955,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#MutationStrength"
          title="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">Mutation Strength</a>
+   </li>
+   <li>
+      <a href="#NeighbourhoodCount"
+         title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount">Neighbourhood Count</a>
    </li>
    <li>
       <a href="#NonNegativeIntegers"
@@ -2519,7 +2531,7 @@ This section provides details for each class and property defined by CO-META.
     is in domain of
    </dt>
    <dd>
-    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -2531,7 +2543,7 @@ This section provides details for each class and property defined by CO-META.
     has members
    </dt>
    <dd>
-    <a href="#BlendAlpha" title="https://w3id.org/ontologies-ULL/CO-META#BlendAlpha">Blend Alpha</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#CrossoverKPoints" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints">Crossover K Points</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#CrossoverProbability" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability">Crossover Probability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Elitism" title="https://w3id.org/ontologies-ULL/CO-META#Elitism">Elitism</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#GlobalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">Global Best Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HeuristicInfluence" title="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence">Heuristic Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#InertiaFactor" title="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor">Inertia Factor</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Iterations" title="https://w3id.org/ontologies-ULL/CO-META#Iterations">Iterations</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MaxTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature">Max Temperature</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MinTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MinTemperature">Min Temperature</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MutationProbability" title="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">Mutation Probability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MutationStrength" title="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">Mutation Strength</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PersonalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence">Personal Best Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PheromoneAddition" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition">Pheromone Addition</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PheromoneEvaporation" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation">Pheromone Evaporation</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PheromoneInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence">Pheromone Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PopulationSize" title="https://w3id.org/ontologies-ULL/CO-META#PopulationSize">Population Size</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RCLRandomness" title="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness">R C L Randomness</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#StorageSize" title="https://w3id.org/ontologies-ULL/CO-META#StorageSize">Storage Size</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">Time</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#TournamentSize" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSize">Tournament Size</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#BlendAlpha" title="https://w3id.org/ontologies-ULL/CO-META#BlendAlpha">Blend Alpha</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#CrossoverKPoints" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints">Crossover K Points</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#CrossoverProbability" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability">Crossover Probability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Elitism" title="https://w3id.org/ontologies-ULL/CO-META#Elitism">Elitism</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#GlobalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">Global Best Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HeuristicInfluence" title="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence">Heuristic Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#InertiaFactor" title="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor">Inertia Factor</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Iterations" title="https://w3id.org/ontologies-ULL/CO-META#Iterations">Iterations</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MaxTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature">Max Temperature</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MinTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MinTemperature">Min Temperature</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MutationProbability" title="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">Mutation Probability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MutationStrength" title="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">Mutation Strength</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#NeighbourhoodCount" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount">Neighbourhood Count</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PersonalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence">Personal Best Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PheromoneAddition" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition">Pheromone Addition</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PheromoneEvaporation" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation">Pheromone Evaporation</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PheromoneInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence">Pheromone Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PopulationSize" title="https://w3id.org/ontologies-ULL/CO-META#PopulationSize">Population Size</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RCLRandomness" title="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness">R C L Randomness</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#StorageSize" title="https://w3id.org/ontologies-ULL/CO-META#StorageSize">Storage Size</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">Time</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#TournamentSize" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSize">Tournament Size</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dt>
     is disjoint with
@@ -2561,6 +2573,12 @@ This section provides details for each class and property defined by CO-META.
     <a href="#refersTo" title="https://w3id.org/ontologies-ULL/CO-META#refersTo">refers to</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasValueReference" title="https://w3id.org/ontologies-ULL/CO-META#hasValueReference">has value reference</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
     is disjoint with
    </dt>
    <dd>
@@ -2579,7 +2597,7 @@ This section provides details for each class and property defined by CO-META.
     is in domain of
    </dt>
    <dd>
-    <a href="#hasType" title="https://w3id.org/ontologies-ULL/CO-META#hasType">has Type</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasValue" title="https://w3id.org/ontologies-ULL/CO-META#hasValue">has Value</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#hasType" title="https://w3id.org/ontologies-ULL/CO-META#hasType">has Type</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasValue" title="https://w3id.org/ontologies-ULL/CO-META#hasValue">has Value</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasValueReference" title="https://w3id.org/ontologies-ULL/CO-META#hasValueReference">has value reference</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -3642,6 +3660,7 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#hasType" title="https://w3id.org/ontologies-ULL/CO-META#hasType"> <span>has Type</span> </a></li>
   <li><a href="#hasUpperBound" title="https://w3id.org/ontologies-ULL/CO-META#hasUpperBound">has upper bound</a></li>
   <li><a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a></li>
+  <li><a href="#hasValueReference" title="https://w3id.org/ontologies-ULL/CO-META#hasValueReference">has value reference</a></li>
   <li><a href="#isConnectedTo" title="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"> <span>is Connected To</span> </a></li>
   <li><a href="#isStartOf" title="https://w3id.org/ontologies-ULL/CO-META#isStartOf"> <span>is Start Of</span> </a></li>
   <li><a href="#readsData" title="https://w3id.org/ontologies-ULL/CO-META#readsData"> <span>reads Data</span> </a></li>
@@ -4423,6 +4442,30 @@ This section provides details for each class and property defined by CO-META.
    </dl>
   </div>
  </div>
+ <div class="entity" id="hasValueReference">
+  <h3>has value reference<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasValueReference</p>
+  <div class="comment">
+   <span class="markdown">The parameter value takes the value of another one (e.g. a truncation keeps as many individuals as the population size).</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Parameter Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ParameterReference" title="https://w3id.org/ontologies-ULL/CO-META#ParameterReference">Parameter Reference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="isConnectedTo">
   <h3>is Connected To<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#isConnectedTo</p>
@@ -4578,6 +4621,7 @@ This section provides details for each class and property defined by CO-META.
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
   <li><a href="#hasCodeReference" title="https://w3id.org/ontologies-ULL/CO-META#hasCodeReference">has code reference</a></li>
+  <li><a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a></li>
   <li><a href="#hasDimensionIndex" title="https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex">has dimension index</a></li>
   <li><a href="#hasIdentifier" title="https://w3id.org/ontologies-ULL/CO-META#hasIdentifier">has identifier</a></li>
   <li><a href="#hasInputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasInputSize"> <span>has Input Size</span> </a></li>
@@ -4611,6 +4655,24 @@ This section provides details for each class and property defined by CO-META.
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDefaultValue">
+  <h3>has default value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue</p>
+  <div class="comment">
+   <span class="markdown">Value used for a parameter value that states neither a value nor a reference.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -4962,6 +5024,7 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#MinTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MinTemperature"> <span>Min Temperature</span> </a></li>
   <li><a href="#MutationProbability" title="https://w3id.org/ontologies-ULL/CO-META#MutationProbability"> <span>Mutation Probability</span> </a></li>
   <li><a href="#MutationStrength" title="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">Mutation Strength</a></li>
+  <li><a href="#NeighbourhoodCount" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount">Neighbourhood Count</a></li>
   <li><a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Non-Negative Integers</a></li>
   <li><a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Non-Negative Reals</a></li>
   <li><a href="#One" title="https://w3id.org/ontologies-ULL/CO-META#One">One</a></li>
@@ -5116,6 +5179,9 @@ This section provides details for each class and property defined by CO-META.
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Non-Negative Reals</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.5"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="Booleans">
@@ -5161,6 +5227,9 @@ This section provides details for each class and property defined by CO-META.
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#PositiveIntegers" title="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers">Positive Integers</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="CrossoverProbability">
@@ -5178,6 +5247,9 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Unit Interval</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.9"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
    </dd>
   </dl>
  </div>
@@ -5197,6 +5269,9 @@ This section provides details for each class and property defined by CO-META.
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Non-Negative Integers</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="GlobalBestInfluence">
@@ -5214,6 +5289,9 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Non-Negative Reals</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.5"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
    </dd>
   </dl>
  </div>
@@ -5233,6 +5311,9 @@ This section provides details for each class and property defined by CO-META.
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Non-Negative Reals</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2.0"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="InertiaFactor">
@@ -5250,6 +5331,9 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Unit Interval</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.7"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
    </dd>
   </dl>
  </div>
@@ -5284,6 +5368,9 @@ This section provides details for each class and property defined by CO-META.
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Non-Negative Integers</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1000"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="MaxTemperature">
@@ -5301,6 +5388,9 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#PositiveReals" title="https://w3id.org/ontologies-ULL/CO-META#PositiveReals">Positive Reals</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
    </dd>
   </dl>
  </div>
@@ -5320,6 +5410,9 @@ This section provides details for each class and property defined by CO-META.
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#PositiveReals" title="https://w3id.org/ontologies-ULL/CO-META#PositiveReals">Positive Reals</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.0001"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="MutationProbability">
@@ -5337,6 +5430,9 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Unit Interval</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.2"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
    </dd>
   </dl>
  </div>
@@ -5358,6 +5454,33 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Unit Interval</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NeighbourhoodCount">
+  <h3>Neighbourhood Count<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount</p>
+  <div class="comment">
+   <span class="markdown">Number of neighbourhoods of a variable neighbourhood search.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#PositiveIntegers" title="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers">Positive Integers</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
    </dd>
   </dl>
  </div>
@@ -5446,6 +5569,9 @@ This section provides details for each class and property defined by CO-META.
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Non-Negative Reals</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.5"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="PheromoneAddition">
@@ -5463,6 +5589,9 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Non-Negative Integers</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
    </dd>
   </dl>
  </div>
@@ -5482,6 +5611,9 @@ This section provides details for each class and property defined by CO-META.
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Unit Interval</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="PheromoneInfluence">
@@ -5500,6 +5632,9 @@ This section provides details for each class and property defined by CO-META.
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Non-Negative Reals</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1.0"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="PopulationSize">
@@ -5517,6 +5652,9 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Non-Negative Integers</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"50"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
    </dd>
   </dl>
  </div>
@@ -5583,6 +5721,9 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Unit Interval</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"0.3"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
    </dd>
   </dl>
  </div>
@@ -5701,6 +5842,9 @@ This section provides details for each class and property defined by CO-META.
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Non-Negative Integers</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"10"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="Time">
@@ -5736,6 +5880,9 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#PositiveIntegers" title="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers">Positive Integers</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
    </dd>
   </dl>
  </div>

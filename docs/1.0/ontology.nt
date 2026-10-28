@@ -329,6 +329,16 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <http://www.w3.org/2000/01/rdf-schema#label> "has value domain"@en .
 <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <http://www.w3.org/2000/01/rdf-schema#label> "tiene dominio de valores"@es .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#hasValueReference
+<https://w3id.org/ontologies-ULL/CO-META#hasValueReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasValueReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasValueReference> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#ParameterValue> .
+<https://w3id.org/ontologies-ULL/CO-META#hasValueReference> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#ParameterReference> .
+<https://w3id.org/ontologies-ULL/CO-META#hasValueReference> <http://www.w3.org/2000/01/rdf-schema#comment> "El valor de parámetro toma el valor de otro (p. ej. un truncamiento conserva tantos individuos como el tamaño de población)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#hasValueReference> <http://www.w3.org/2000/01/rdf-schema#comment> "The parameter value takes the value of another one (e.g. a truncation keeps as many individuals as the population size)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasValueReference> <http://www.w3.org/2000/01/rdf-schema#label> "has value reference"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasValueReference> <http://www.w3.org/2000/01/rdf-schema#label> "tiene referencia de valor"@es .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#isConnectedTo
 <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#isConnectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
@@ -424,6 +434,15 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/ontologies-ULL/CO-META#hasCodeReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Key of an implementation of the component in a program that runs metaheuristics (e.g. \"cometa:swap-mutation\"). It selects that implementation explicitly; without it, the most specific class of the component is used."@en .
 <https://w3id.org/ontologies-ULL/CO-META#hasCodeReference> <http://www.w3.org/2000/01/rdf-schema#label> "has code reference"@en .
 <https://w3id.org/ontologies-ULL/CO-META#hasCodeReference> <http://www.w3.org/2000/01/rdf-schema#label> "tiene referencia de código"@es .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue
+<https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+<https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Valor que se usa para un valor de parámetro que no indica ni un valor ni una referencia."@es .
+<https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Value used for a parameter value that states neither a value nor a reference."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> <http://www.w3.org/2000/01/rdf-schema#label> "has default value"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> <http://www.w3.org/2000/01/rdf-schema#label> "tiene valor por defecto"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex
 <https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2288,6 +2307,7 @@ _:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#BlendAlpha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#BlendAlpha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#BlendAlpha> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals> .
+<https://w3id.org/ontologies-ULL/CO-META#BlendAlpha> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/ontologies-ULL/CO-META#BlendAlpha> <http://www.w3.org/2000/01/rdf-schema#comment> "Ampliación del intervalo de los progenitores en un cruce por mezcla, como fracción de su anchura."@es .
 <https://w3id.org/ontologies-ULL/CO-META#BlendAlpha> <http://www.w3.org/2000/01/rdf-schema#comment> "Extension of the parents' interval in a blend crossover, as a fraction of its width."@en .
 <https://w3id.org/ontologies-ULL/CO-META#BlendAlpha> <http://www.w3.org/2000/01/rdf-schema#label> "Alfa de mezcla"@es .
@@ -2309,31 +2329,37 @@ _:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers> .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#UnitInterval> .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.9"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Elitism
 <https://w3id.org/ontologies-ULL/CO-META#Elitism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#Elitism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#Elitism> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers> .
+<https://w3id.org/ontologies-ULL/CO-META#Elitism> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence
 <https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals> .
+<https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence
 <https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals> .
+<https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "2.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#InertiaFactor
 <https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#UnitInterval> .
+<https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.7"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Integers
 <https://w3id.org/ontologies-ULL/CO-META#Integers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2347,30 +2373,45 @@ _:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#Iterations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#Iterations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#Iterations> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers> .
+<https://w3id.org/ontologies-ULL/CO-META#Iterations> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1000"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MaxTemperature
 <https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#PositiveReals> .
+<https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MinTemperature
 <https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#PositiveReals> .
+<https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.0001"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MutationProbability
 <https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#UnitInterval> .
+<https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MutationStrength
 <https://w3id.org/ontologies-ULL/CO-META#MutationStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#MutationStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#MutationStrength> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#UnitInterval> .
+<https://w3id.org/ontologies-ULL/CO-META#MutationStrength> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/ontologies-ULL/CO-META#MutationStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "Desviación típica de una mutación gaussiana, como fracción de la anchura del dominio."@es .
 <https://w3id.org/ontologies-ULL/CO-META#MutationStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "Standard deviation of a Gaussian mutation, as a fraction of the width of the domain."@en .
 <https://w3id.org/ontologies-ULL/CO-META#MutationStrength> <http://www.w3.org/2000/01/rdf-schema#label> "Intensidad de mutación"@es .
 <https://w3id.org/ontologies-ULL/CO-META#MutationStrength> <http://www.w3.org/2000/01/rdf-schema#label> "Mutation Strength"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers> .
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of neighbourhoods of a variable neighbourhood search."@en .
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Número de vecindarios de una búsqueda de vecindario variable."@es .
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount> <http://www.w3.org/2000/01/rdf-schema#label> "Neighbourhood Count"@en .
+<https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount> <http://www.w3.org/2000/01/rdf-schema#label> "Número de vecindarios"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers
 <https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2405,26 +2446,31 @@ _:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals> .
+<https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers> .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#UnitInterval> .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals> .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PopulationSize
 <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "50"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers
 <https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2450,6 +2496,7 @@ _:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#UnitInterval> .
+<https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Reals
 <https://w3id.org/ontologies-ULL/CO-META#Reals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2501,6 +2548,7 @@ _:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#StorageSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#StorageSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#StorageSize> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers> .
+<https://w3id.org/ontologies-ULL/CO-META#StorageSize> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Time
 <https://w3id.org/ontologies-ULL/CO-META#Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2511,6 +2559,7 @@ _:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSize> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers> .
+<https://w3id.org/ontologies-ULL/CO-META#TournamentSize> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#UnitInterval
 <https://w3id.org/ontologies-ULL/CO-META#UnitInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

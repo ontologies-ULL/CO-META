@@ -35,6 +35,7 @@ CO-META:VNS_acceptance rdf:type owl:NamedIndividual ,
 CO-META:VNS_change_neighbourhood rdf:type owl:NamedIndividual ,
                                           CO-META:NeighbourhoodChangeComponent ;
                                  CO-META:hasOutput CO-META:VNS_stop ;
+                                 CO-META:hasParameter CO-META:VNS_parameter_neighbourhoodcount ;
                                  CO-META:writesData CO-META:VNS_neighbourhood .
 
 
@@ -62,13 +63,33 @@ CO-META:VNS_neighbourhood rdf:type owl:NamedIndividual ,
                                    CO-META:DataStructure ;
                           CO-META:hasInitialValue CO-META:One ;
                           CO-META:hasShape CO-META:Scalar ;
-                          CO-META:hasValueDomain CO-META:PositiveIntegers .
+                          CO-META:hasValueDomain CO-META:VNS_neighbourhood_domain .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VNS_neighbourhood_domain
+CO-META:VNS_neighbourhood_domain rdf:type owl:NamedIndividual ,
+                                          CO-META:ValueDomain ;
+                                 CO-META:hasBaseType CO-META:Integers ;
+                                 CO-META:hasLowerBound CO-META:One ;
+                                 CO-META:hasUpperBound CO-META:VNS_parameter_neighbourhoodcount_reference .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_parameter_iterations
 CO-META:VNS_parameter_iterations rdf:type owl:NamedIndividual ,
                                           CO-META:ParameterValue ;
                                  CO-META:hasType CO-META:Iterations .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VNS_parameter_neighbourhoodcount
+CO-META:VNS_parameter_neighbourhoodcount rdf:type owl:NamedIndividual ,
+                                                  CO-META:ParameterValue ;
+                                         CO-META:hasType CO-META:NeighbourhoodCount .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#VNS_parameter_neighbourhoodcount_reference
+CO-META:VNS_parameter_neighbourhoodcount_reference rdf:type owl:NamedIndividual ,
+                                                            CO-META:ParameterReference ;
+                                                   CO-META:refersTo CO-META:VNS_parameter_neighbourhoodcount .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VNS_parameter_populationsize
