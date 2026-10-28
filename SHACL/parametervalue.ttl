@@ -59,3 +59,35 @@ cm:ParameterValueShape
             }
         """ ;
     ] .
+
+# The bounds of the parameter value domain also apply to the default value of the parameter
+cm:ParameterDefaultShape
+    a sh:NodeShape ;
+    sh:targetClass cm:Parameter ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Default value {?value} of {$this} is outside the bound {?bound} of its value domain." ;
+        sh:select """
+            PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+            SELECT $this ?value ?bound
+            WHERE {
+                $this cm:hasDefaultValue ?value ;
+                      cm:hasValueDomain ?domain .
+                {
+                    ?domain cm:hasLowerBound/cm:hasLiteralValue ?bound .
+                    BIND ("lower" AS ?side)
+                } UNION {
+                    ?domain cm:hasUpperBound/cm:hasLiteralValue ?bound .
+                    BIND ("upper" AS ?side)
+                } UNION {
+                    ?domain cm:hasExclusiveLowerBound/cm:hasLiteralValue ?bound .
+                    BIND ("exclusive lower" AS ?side)
+                } UNION {
+                    ?domain cm:hasExclusiveUpperBound/cm:hasLiteralValue ?bound .
+                    BIND ("exclusive upper" AS ?side)
+                }
+                FILTER ((?side = "lower" && ?value < ?bound) || (?side = "upper" && ?value > ?bound) ||
+                        (?side = "exclusive lower" && ?value <= ?bound) || (?side = "exclusive upper" && ?value >= ?bound))
+            }
+        """ ;
+    ] .

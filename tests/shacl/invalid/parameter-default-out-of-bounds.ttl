@@ -1,0 +1,13 @@
+# Expected: SHACL violation (ParameterDefaultShape).
+# The default value of a parameter must be within its value domain.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/parameter-default-out-of-bounds> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:rate a owl:NamedIndividual , CO-META:Parameter ;
+    CO-META:hasValueDomain CO-META:UnitInterval ;
+    CO-META:hasDefaultValue 1.5 .
