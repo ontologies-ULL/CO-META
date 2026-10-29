@@ -1,5 +1,5 @@
 # CO-META
-Ontology for Combinatory Optimization Metaheuristics.
+Ontology for Combinatorial Optimization Metaheuristics.
 
 CO-META describes metaheuristics as networks of interconnected components (generation, selection, crossover, acceptance, stopping criteria...) with their parameters and data structures, and optimization problems through their formulation: input data, decision variables, objectives and constraints. It is written in OWL 2 DL, so it can be checked and queried with standard reasoners.
 
