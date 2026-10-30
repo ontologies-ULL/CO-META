@@ -3,4 +3,5 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri name="https://w3id.org/ontologies-ULL/CO-META" uri="CO-META.ttl"/>
     <uri name="https://w3id.org/ontologies-ULL/CO-META/imports/qudt" uri="imports/qudt.ttl"/>
+    <uri name="https://w3id.org/ontologies-ULL/CO-META/imports/qudt-units" uri="imports/qudt-units.ttl"/>
 </catalog>

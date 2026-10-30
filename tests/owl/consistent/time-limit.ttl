@@ -1,0 +1,15 @@
+# Expected: consistent.
+# A stopping criterion may have only a time limit, which need not be whole seconds.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/time-limit> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:stop a owl:NamedIndividual , CO-META:StoppingCriterionComponent ;
+    CO-META:hasParameter t:time .
+
+t:time a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:Time ;
+    CO-META:hasValue 2.5 .

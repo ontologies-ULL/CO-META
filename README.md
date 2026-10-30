@@ -48,6 +48,7 @@ External vocabularies are reused as long as CO-META stays in OWL 2 DL. When a vo
 | Module | Source | Use |
 |---|---|---|
 | `imports/qudt.ttl` | [QUDT](https://qudt.org) 3.5.2, datatypes | Data shapes are subclasses of the QUDT structured datatypes (`qudt:Sequence`, `qudt:Set`, `qudt:Matrix`, `qudt:Table`...) |
+| `imports/qudt-units.ttl` | [QUDT](https://qudt.org) 3.5.2, units | The unit of `Time` (`qudt:unit unit:SEC`) |
 
 The `catalog-v001.xml` files map the IRIs of the ontology and of its modules to the local files, so Protégé and the validation scripts use the working copy instead of the published version.
 
