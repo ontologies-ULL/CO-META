@@ -21,6 +21,7 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_AntColonyOptimization
 CO-META:ACO_AntColonyOptimization rdf:type owl:NamedIndividual ,
                                            CO-META:Metaheuristic ;
+                                  CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
                                   CO-META:hasDataStructure CO-META:ACO_pheromones ;
                                   CO-META:hasStart CO-META:ACO_stop .
 

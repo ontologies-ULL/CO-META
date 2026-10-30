@@ -21,6 +21,7 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#EA_EvolutionaryAlgorithm
 CO-META:EA_EvolutionaryAlgorithm rdf:type owl:NamedIndividual ,
                                           CO-META:Metaheuristic ;
+                                 CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
                                  rdfs:label "Evolutionary Algorithm"@en .
 
 

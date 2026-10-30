@@ -21,6 +21,7 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#TS_TabuSearch
 CO-META:TS_TabuSearch rdf:type owl:NamedIndividual ,
                                CO-META:Metaheuristic ;
+                      CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
                       CO-META:hasDataStructure CO-META:TS_tabu_list ;
                       CO-META:hasStart CO-META:TS_generate .
 

@@ -80,6 +80,7 @@ CO-META:ILS_stop rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#IteratedLocalSearch
 CO-META:IteratedLocalSearch rdf:type owl:NamedIndividual ,
                                      CO-META:Metaheuristic ;
+                            CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
                             CO-META:hasStart CO-META:ILS_generate .
 
 
