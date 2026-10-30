@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria.", "dateReleased":"Fri Oct 30 14:14:19 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria.", "dateReleased":"Fri Oct 30 21:26:22 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -852,6 +852,11 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          <span>source</span>
       </a>
    </li>
+   <li>
+      <a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">
+         <span>unit</span>
+      </a>
+   </li>
 </ul><h4>Individuos</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
@@ -923,6 +928,10 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
       <a href="#Scalar" title="https://w3id.org/ontologies-ULL/CO-META#Scalar">Escalar</a>
    </li>
    <li>
+      <a href="#Evaluations"
+         title="https://w3id.org/ontologies-ULL/CO-META#Evaluations">Evaluaciones</a>
+   </li>
+   <li>
       <a href="#GlobalBestInfluence"
          title="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">
          <span>Global Best Influence</span>
@@ -947,6 +956,10 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
    <li>
       <a href="#UnitInterval"
          title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Intervalo unidad</a>
+   </li>
+   <li>
+      <a href="#IterationsWithoutImprovement"
+         title="https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement">Iteraciones sin mejora</a>
    </li>
    <li>
       <a href="#Iterations"
@@ -1047,9 +1060,7 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#SolutionSecondDimensionSize">Tamaño de la segunda dimensión de la solución</a>
    </li>
    <li>
-      <a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">
-         <span>Time</span>
-      </a>
+      <a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">Tiempo</a>
    </li>
    <li>
       <a href="#TournamentSize"
@@ -1064,6 +1075,10 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
       <a href="#Unsafe" title="https://w3id.org/ontologies-ULL/CO-META#Unsafe">
          <span>Unsafe</span>
       </a>
+   </li>
+   <li>
+      <a href="#TargetValue"
+         title="https://w3id.org/ontologies-ULL/CO-META#TargetValue">Valor objetivo</a>
    </li>
 </ul>
 </div>
@@ -1682,7 +1697,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <h3>Componente de criterio de parada<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent</p>
   <div class="comment">
-   <span class="markdown">Componente de bucle que crea el bucle principal del algoritmo y determina cuándo detenerlo. Tiene un parámetro de número de iteraciones.</span>
+   <span class="markdown">Componente de bucle que crea el bucle principal del algoritmo y determina cuándo detenerlo. Se detiene en cuanto alcanza cualquiera de sus límites: iteraciones, tiempo, evaluaciones, iteraciones sin mejora o valor objetivo.</span>
   </div>
   <dl class="description">
    <dt>
@@ -3193,7 +3208,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     miembros
    </dt>
    <dd>
-    <a href="#BlendAlpha" title="https://w3id.org/ontologies-ULL/CO-META#BlendAlpha">Alfa de mezcla</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#CrossoverKPoints" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints">Crossover K Points</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#CrossoverProbability" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability">Crossover Probability</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#Elitism" title="https://w3id.org/ontologies-ULL/CO-META#Elitism">Elitism</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#GlobalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">Global Best Influence</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#HeuristicInfluence" title="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence">Heuristic Influence</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#InertiaFactor" title="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor">Inertia Factor</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#MutationStrength" title="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">Intensidad de mutación</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#Iterations" title="https://w3id.org/ontologies-ULL/CO-META#Iterations">Iterations</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#MaxTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature">Max Temperature</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#MinTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MinTemperature">Min Temperature</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#MutationProbability" title="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">Mutation Probability</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#NeighbourhoodCount" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount">Número de vecindarios</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PersonalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence">Personal Best Influence</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PheromoneAddition" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition">Pheromone Addition</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PheromoneEvaporation" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation">Pheromone Evaporation</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PheromoneInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence">Pheromone Influence</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PopulationSize" title="https://w3id.org/ontologies-ULL/CO-META#PopulationSize">Population Size</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#RCLRandomness" title="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness">R C L Randomness</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#StorageSize" title="https://w3id.org/ontologies-ULL/CO-META#StorageSize">Storage Size</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">Time</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#TournamentSize" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSize">Tournament Size</a> <sup class="type-ni" title="Individuo">ni</sup>
+    <a href="#BlendAlpha" title="https://w3id.org/ontologies-ULL/CO-META#BlendAlpha">Alfa de mezcla</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#CrossoverKPoints" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints">Crossover K Points</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#CrossoverProbability" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability">Crossover Probability</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#Elitism" title="https://w3id.org/ontologies-ULL/CO-META#Elitism">Elitism</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#Evaluations" title="https://w3id.org/ontologies-ULL/CO-META#Evaluations">Evaluaciones</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#GlobalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">Global Best Influence</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#HeuristicInfluence" title="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence">Heuristic Influence</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#InertiaFactor" title="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor">Inertia Factor</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#MutationStrength" title="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">Intensidad de mutación</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#IterationsWithoutImprovement" title="https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement">Iteraciones sin mejora</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#Iterations" title="https://w3id.org/ontologies-ULL/CO-META#Iterations">Iterations</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#MaxTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature">Max Temperature</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#MinTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MinTemperature">Min Temperature</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#MutationProbability" title="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">Mutation Probability</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#NeighbourhoodCount" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount">Número de vecindarios</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PersonalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence">Personal Best Influence</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PheromoneAddition" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition">Pheromone Addition</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PheromoneEvaporation" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation">Pheromone Evaporation</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PheromoneInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence">Pheromone Influence</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#PopulationSize" title="https://w3id.org/ontologies-ULL/CO-META#PopulationSize">Population Size</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#RCLRandomness" title="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness">R C L Randomness</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#StorageSize" title="https://w3id.org/ontologies-ULL/CO-META#StorageSize">Storage Size</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">Tiempo</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#TournamentSize" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSize">Tournament Size</a> <sup class="type-ni" title="Individuo">ni</sup>, <a href="#TargetValue" title="https://w3id.org/ontologies-ULL/CO-META#TargetValue">Valor objetivo</a> <sup class="type-ni" title="Individuo">ni</sup>
    </dd>
    <dt>
     disjunto a
@@ -4978,6 +4993,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description"> <span>description</span> </a></li>
   <li><a href="#http://creativecommons.org/ns#license" title="http://creativecommons.org/ns#license"> <span>license</span> </a></li>
   <li><a href="#http://purl.org/dc/elements/1.1/source" title="http://purl.org/dc/elements/1.1/source"> <span>source</span> </a></li>
+  <li><a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit"> <span>unit</span> </a></li>
  </ul>
  <div class="entity" id="http://purl.org/dc/terms/abstract">
   <h3>abstract<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
@@ -4999,6 +5015,10 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <h3>source<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/source</p>
  </div>
+ <div class="entity" id="http://qudt.org/schema/qudt/unit">
+  <h3>unit<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/unit</p>
+ </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
  <h3 id="namedindividuals" class="list">Individuos</h3>
  <ul class="hlist">
@@ -5018,11 +5038,13 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Enteros no negativos</a></li>
   <li><a href="#PositiveIntegers" title="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers">Enteros positivos</a></li>
   <li><a href="#Scalar" title="https://w3id.org/ontologies-ULL/CO-META#Scalar">Escalar</a></li>
+  <li><a href="#Evaluations" title="https://w3id.org/ontologies-ULL/CO-META#Evaluations">Evaluaciones</a></li>
   <li><a href="#GlobalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence"> <span>Global Best Influence</span> </a></li>
   <li><a href="#HeuristicInfluence" title="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence"> <span>Heuristic Influence</span> </a></li>
   <li><a href="#InertiaFactor" title="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor"> <span>Inertia Factor</span> </a></li>
   <li><a href="#MutationStrength" title="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">Intensidad de mutación</a></li>
   <li><a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Intervalo unidad</a></li>
+  <li><a href="#IterationsWithoutImprovement" title="https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement">Iteraciones sin mejora</a></li>
   <li><a href="#Iterations" title="https://w3id.org/ontologies-ULL/CO-META#Iterations"> <span>Iterations</span> </a></li>
   <li><a href="#MaxTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature"> <span>Max Temperature</span> </a></li>
   <li><a href="#MinTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MinTemperature"> <span>Min Temperature</span> </a></li>
@@ -5042,10 +5064,11 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#StorageSize" title="https://w3id.org/ontologies-ULL/CO-META#StorageSize"> <span>Storage Size</span> </a></li>
   <li><a href="#SolutionFirstDimensionSize" title="https://w3id.org/ontologies-ULL/CO-META#SolutionFirstDimensionSize">Tamaño de la primera dimensión de la solución</a></li>
   <li><a href="#SolutionSecondDimensionSize" title="https://w3id.org/ontologies-ULL/CO-META#SolutionSecondDimensionSize">Tamaño de la segunda dimensión de la solución</a></li>
-  <li><a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time"> <span>Time</span> </a></li>
+  <li><a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">Tiempo</a></li>
   <li><a href="#TournamentSize" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSize"> <span>Tournament Size</span> </a></li>
   <li><a href="#One" title="https://w3id.org/ontologies-ULL/CO-META#One">Uno</a></li>
   <li><a href="#Unsafe" title="https://w3id.org/ontologies-ULL/CO-META#Unsafe"> <span>Unsafe</span> </a></li>
+  <li><a href="#TargetValue" title="https://w3id.org/ontologies-ULL/CO-META#TargetValue">Valor objetivo</a></li>
  </ul>
  <div class="entity" id="BlendAlpha">
   <h3>Alfa de mezcla<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
@@ -5371,6 +5394,27 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
+ <div class="entity" id="Evaluations">
+  <h3>Evaluaciones<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#Evaluations</p>
+  <div class="comment">
+   <span class="markdown">Número máximo de evaluaciones de soluciones.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#PositiveIntegers" title="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers">Enteros positivos</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="GlobalBestInfluence">
   <h3>Global Best Influence<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence</p>
@@ -5482,6 +5526,27 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
    <dd>
     <a href="#hasUpperBound" title="https://w3id.org/ontologies-ULL/CO-META#hasUpperBound">tiene cota superior</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#One" title="https://w3id.org/ontologies-ULL/CO-META#One">Uno</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IterationsWithoutImprovement">
+  <h3>Iteraciones sin mejora<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement</p>
+  <div class="comment">
+   <span class="markdown">Número de iteraciones consecutivas sin mejorar la mejor solución tras las que se detiene el bucle.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#PositiveIntegers" title="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers">Enteros positivos</a> <sup class="type-ni" title="Individuo">ni</sup>
    </dd>
   </dl>
  </div>
@@ -5873,8 +5938,11 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   </dl>
  </div>
  <div class="entity" id="Time">
-  <h3>Time<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <h3>Tiempo<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#Time</p>
+  <div class="comment">
+   <span class="markdown">Tiempo máximo de ejecución, en la unidad que indica qudt:unit (segundos).</span>
+  </div>
   <dl class="description">
    <dt>
     pertenece a
@@ -5886,7 +5954,10 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     hechos
    </dt>
    <dd>
-    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Enteros no negativos</a> <sup class="type-ni" title="Individuo">ni</sup>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Reales no negativos</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://qudt.org/schema/qudt/unit" target="_blank" title="http://qudt.org/schema/qudt/unit">unit</a> <sup class="type-ap" title="propiedad de anotación">ap</sup> <a href="http://qudt.org/vocab/unit/SEC" target="_blank" title="http://qudt.org/vocab/unit/SEC">S E C</a> <sup class="type-ep" title="propiedad externa">ep</sup>
    </dd>
   </dl>
  </div>
@@ -5944,6 +6015,27 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dd>
   </dl>
  </div>
+ <div class="entity" id="TargetValue">
+  <h3>Valor objetivo<sup class="type-ni" title="Individuo">ni</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#TargetValue</p>
+  <div class="comment">
+   <span class="markdown">Valor del objetivo (ponderado) que, al alcanzarlo una solución factible, detiene el bucle.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    pertenece a
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parámetro</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    hechos
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">tiene dominio de valores</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <a href="#AnyReal" title="https://w3id.org/ontologies-ULL/CO-META#AnyReal">Cualquier real</a> <sup class="type-ni" title="Individuo">ni</sup>
+   </dd>
+  </dl>
+ </div>
 </div><div id="legend">
 <h2>Leyenda <span class="backlink"> volver a <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
@@ -5951,6 +6043,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
 <sup class="type-op" title="Propiedades de objeto">op</sup>: Propiedades de objeto <br/>
 <sup class="type-dp" title="Propiedades de datos">dp</sup>: Propiedades de datos <br/>
 <sup class="type-ni" title="Individuos">ni</sup>: Individuos <br/>
+<sup class="type-ep" title="Propiedades externas">ep</sup>: Propiedades externas
 </div>
 </div>
 </div>

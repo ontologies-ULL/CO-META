@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatorial optimization metaheuristics.", "dateReleased":"Fri Oct 30 14:14:18 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatorial optimization metaheuristics.", "dateReleased":"Fri Oct 30 21:26:21 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -854,6 +854,11 @@ This ontology has the following classes and properties.</span>
          <span>source</span>
       </a>
    </li>
+   <li>
+      <a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">
+         <span>unit</span>
+      </a>
+   </li>
 </ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
@@ -907,6 +912,10 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#Evaluations"
+         title="https://w3id.org/ontologies-ULL/CO-META#Evaluations">Evaluations</a>
+   </li>
+   <li>
       <a href="#GlobalBestInfluence"
          title="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">
          <span>Global Best Influence</span>
@@ -933,6 +942,10 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/ontologies-ULL/CO-META#Iterations">
          <span>Iterations</span>
       </a>
+   </li>
+   <li>
+      <a href="#IterationsWithoutImprovement"
+         title="https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement">Iterations Without Improvement</a>
    </li>
    <li>
       <a href="#MaxTemperature"
@@ -1045,9 +1058,11 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">
-         <span>Time</span>
-      </a>
+      <a href="#TargetValue"
+         title="https://w3id.org/ontologies-ULL/CO-META#TargetValue">Target Value</a>
+   </li>
+   <li>
+      <a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">Time</a>
    </li>
    <li>
       <a href="#TournamentSize"
@@ -2543,7 +2558,7 @@ This section provides details for each class and property defined by CO-META.
     has members
    </dt>
    <dd>
-    <a href="#BlendAlpha" title="https://w3id.org/ontologies-ULL/CO-META#BlendAlpha">Blend Alpha</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#CrossoverKPoints" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints">Crossover K Points</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#CrossoverProbability" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability">Crossover Probability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Elitism" title="https://w3id.org/ontologies-ULL/CO-META#Elitism">Elitism</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#GlobalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">Global Best Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HeuristicInfluence" title="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence">Heuristic Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#InertiaFactor" title="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor">Inertia Factor</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Iterations" title="https://w3id.org/ontologies-ULL/CO-META#Iterations">Iterations</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MaxTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature">Max Temperature</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MinTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MinTemperature">Min Temperature</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MutationProbability" title="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">Mutation Probability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MutationStrength" title="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">Mutation Strength</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#NeighbourhoodCount" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount">Neighbourhood Count</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PersonalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence">Personal Best Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PheromoneAddition" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition">Pheromone Addition</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PheromoneEvaporation" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation">Pheromone Evaporation</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PheromoneInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence">Pheromone Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PopulationSize" title="https://w3id.org/ontologies-ULL/CO-META#PopulationSize">Population Size</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RCLRandomness" title="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness">R C L Randomness</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#StorageSize" title="https://w3id.org/ontologies-ULL/CO-META#StorageSize">Storage Size</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">Time</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#TournamentSize" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSize">Tournament Size</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#BlendAlpha" title="https://w3id.org/ontologies-ULL/CO-META#BlendAlpha">Blend Alpha</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#CrossoverKPoints" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints">Crossover K Points</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#CrossoverProbability" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability">Crossover Probability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Elitism" title="https://w3id.org/ontologies-ULL/CO-META#Elitism">Elitism</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Evaluations" title="https://w3id.org/ontologies-ULL/CO-META#Evaluations">Evaluations</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#GlobalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence">Global Best Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HeuristicInfluence" title="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence">Heuristic Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#InertiaFactor" title="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor">Inertia Factor</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Iterations" title="https://w3id.org/ontologies-ULL/CO-META#Iterations">Iterations</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#IterationsWithoutImprovement" title="https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement">Iterations Without Improvement</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MaxTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature">Max Temperature</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MinTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MinTemperature">Min Temperature</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MutationProbability" title="https://w3id.org/ontologies-ULL/CO-META#MutationProbability">Mutation Probability</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MutationStrength" title="https://w3id.org/ontologies-ULL/CO-META#MutationStrength">Mutation Strength</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#NeighbourhoodCount" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodCount">Neighbourhood Count</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PersonalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence">Personal Best Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PheromoneAddition" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition">Pheromone Addition</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PheromoneEvaporation" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation">Pheromone Evaporation</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PheromoneInfluence" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence">Pheromone Influence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PopulationSize" title="https://w3id.org/ontologies-ULL/CO-META#PopulationSize">Population Size</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#RCLRandomness" title="https://w3id.org/ontologies-ULL/CO-META#RCLRandomness">R C L Randomness</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#StorageSize" title="https://w3id.org/ontologies-ULL/CO-META#StorageSize">Storage Size</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#TargetValue" title="https://w3id.org/ontologies-ULL/CO-META#TargetValue">Target Value</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">Time</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#TournamentSize" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSize">Tournament Size</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dt>
     is disjoint with
@@ -3305,7 +3320,7 @@ This section provides details for each class and property defined by CO-META.
   <h3>Stopping Criterion Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#StoppingCriterionComponent</p>
   <div class="comment">
-   <span class="markdown">Loop component that creates the main loop of the algorithm and determines when to stop it. It has an iterations parameter.</span>
+   <span class="markdown">Loop component that creates the main loop of the algorithm and determines when to stop it. It stops as soon as it reaches any of its limits: iterations, time, evaluations, iterations without improvement or target value.</span>
   </div>
   <dl class="description">
    <dt>
@@ -4980,6 +4995,7 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description"> <span>description</span> </a></li>
   <li><a href="#http://creativecommons.org/ns#license" title="http://creativecommons.org/ns#license"> <span>license</span> </a></li>
   <li><a href="#http://purl.org/dc/elements/1.1/source" title="http://purl.org/dc/elements/1.1/source"> <span>source</span> </a></li>
+  <li><a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit"> <span>unit</span> </a></li>
  </ul>
  <div class="entity" id="http://purl.org/dc/terms/abstract">
   <h3>abstract<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
@@ -5001,6 +5017,10 @@ This section provides details for each class and property defined by CO-META.
   <h3>source<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/source</p>
  </div>
+ <div class="entity" id="http://qudt.org/schema/qudt/unit">
+  <h3>unit<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/unit</p>
+ </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
  <h3 id="namedindividuals" class="list">Named Individuals</h3>
  <ul class="hlist">
@@ -5015,11 +5035,13 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#CrossoverKPoints" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints"> <span>Crossover K Points</span> </a></li>
   <li><a href="#CrossoverProbability" title="https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability"> <span>Crossover Probability</span> </a></li>
   <li><a href="#Elitism" title="https://w3id.org/ontologies-ULL/CO-META#Elitism"> <span>Elitism</span> </a></li>
+  <li><a href="#Evaluations" title="https://w3id.org/ontologies-ULL/CO-META#Evaluations">Evaluations</a></li>
   <li><a href="#GlobalBestInfluence" title="https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence"> <span>Global Best Influence</span> </a></li>
   <li><a href="#HeuristicInfluence" title="https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence"> <span>Heuristic Influence</span> </a></li>
   <li><a href="#InertiaFactor" title="https://w3id.org/ontologies-ULL/CO-META#InertiaFactor"> <span>Inertia Factor</span> </a></li>
   <li><a href="#Integers" title="https://w3id.org/ontologies-ULL/CO-META#Integers">Integers</a></li>
   <li><a href="#Iterations" title="https://w3id.org/ontologies-ULL/CO-META#Iterations"> <span>Iterations</span> </a></li>
+  <li><a href="#IterationsWithoutImprovement" title="https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement">Iterations Without Improvement</a></li>
   <li><a href="#MaxTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MaxTemperature"> <span>Max Temperature</span> </a></li>
   <li><a href="#MinTemperature" title="https://w3id.org/ontologies-ULL/CO-META#MinTemperature"> <span>Min Temperature</span> </a></li>
   <li><a href="#MutationProbability" title="https://w3id.org/ontologies-ULL/CO-META#MutationProbability"> <span>Mutation Probability</span> </a></li>
@@ -5043,7 +5065,8 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#SolutionSecondDimensionSize" title="https://w3id.org/ontologies-ULL/CO-META#SolutionSecondDimensionSize">Solution Second Dimension Size</a></li>
   <li><a href="#Solutions" title="https://w3id.org/ontologies-ULL/CO-META#Solutions">Solutions</a></li>
   <li><a href="#StorageSize" title="https://w3id.org/ontologies-ULL/CO-META#StorageSize"> <span>Storage Size</span> </a></li>
-  <li><a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time"> <span>Time</span> </a></li>
+  <li><a href="#TargetValue" title="https://w3id.org/ontologies-ULL/CO-META#TargetValue">Target Value</a></li>
+  <li><a href="#Time" title="https://w3id.org/ontologies-ULL/CO-META#Time">Time</a></li>
   <li><a href="#TournamentSize" title="https://w3id.org/ontologies-ULL/CO-META#TournamentSize"> <span>Tournament Size</span> </a></li>
   <li><a href="#UnitInterval" title="https://w3id.org/ontologies-ULL/CO-META#UnitInterval">Unit Interval</a></li>
   <li><a href="#Unsafe" title="https://w3id.org/ontologies-ULL/CO-META#Unsafe"> <span>Unsafe</span> </a></li>
@@ -5274,6 +5297,27 @@ This section provides details for each class and property defined by CO-META.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="Evaluations">
+  <h3>Evaluations<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#Evaluations</p>
+  <div class="comment">
+   <span class="markdown">Maximum number of solution evaluations.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#PositiveIntegers" title="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers">Positive Integers</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="GlobalBestInfluence">
   <h3>Global Best Influence<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence</p>
@@ -5370,6 +5414,27 @@ This section provides details for each class and property defined by CO-META.
    </dd>
    <dd>
     <a href="#hasDefaultValue" title="https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue">has default value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1000"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IterationsWithoutImprovement">
+  <h3>Iterations Without Improvement<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement</p>
+  <div class="comment">
+   <span class="markdown">Number of consecutive iterations without improving the best solution after which the loop stops.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#PositiveIntegers" title="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers">Positive Integers</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -5847,9 +5912,12 @@ This section provides details for each class and property defined by CO-META.
    </dd>
   </dl>
  </div>
- <div class="entity" id="Time">
-  <h3>Time<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#Time</p>
+ <div class="entity" id="TargetValue">
+  <h3>Target Value<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#TargetValue</p>
+  <div class="comment">
+   <span class="markdown">Value of the (weighted) objective that, once reached by a feasible solution, stops the loop.</span>
+  </div>
   <dl class="description">
    <dt>
     belongs to
@@ -5861,7 +5929,31 @@ This section provides details for each class and property defined by CO-META.
     has facts
    </dt>
    <dd>
-    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#NonNegativeIntegers" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers">Non-Negative Integers</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#AnyReal" title="https://w3id.org/ontologies-ULL/CO-META#AnyReal">Any Real</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Time">
+  <h3>Time<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#Time</p>
+  <div class="comment">
+   <span class="markdown">Maximum running time, in the unit given by qudt:unit (seconds).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Parameter" title="https://w3id.org/ontologies-ULL/CO-META#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasValueDomain" title="https://w3id.org/ontologies-ULL/CO-META#hasValueDomain">has value domain</a> <sup class="type-op" title="object property">op</sup> <a href="#NonNegativeReals" title="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals">Non-Negative Reals</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://qudt.org/schema/qudt/unit" target="_blank" title="http://qudt.org/schema/qudt/unit">unit</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://qudt.org/vocab/unit/SEC" target="_blank" title="http://qudt.org/vocab/unit/SEC">S E C</a> <sup class="type-ep" title="external property">ep</sup>
    </dd>
   </dl>
  </div>
@@ -5953,6 +6045,7 @@ This section provides details for each class and property defined by CO-META.
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
 <sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
 <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+<sup class="type-ep" title="External Properties">ep</sup>: External Properties
 </div>
 </div>
 </div>

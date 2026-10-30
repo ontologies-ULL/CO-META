@@ -8,7 +8,8 @@
 
 <https://w3id.org/ontologies-ULL/CO-META> rdf:type owl:Ontology ;
                                            owl:versionIRI <https://w3id.org/ontologies-ULL/CO-META/1.0> ;
-                                           owl:imports <https://w3id.org/ontologies-ULL/CO-META/imports/qudt> ;
+                                           owl:imports <https://w3id.org/ontologies-ULL/CO-META/imports/qudt> ,
+                                                       <https://w3id.org/ontologies-ULL/CO-META/imports/qudt-units> ;
                                            <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by-nc-sa/4.0/> ;
                                            <http://purl.org/dc/elements/1.1/creator> "Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)" ,
                                                                                      "Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)" ,
@@ -44,6 +45,10 @@
 
 ###  http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://qudt.org/schema/qudt/unit
+<http://qudt.org/schema/qudt/unit> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -1961,11 +1966,18 @@
                                               owl:onProperty :hasParameter ;
                                               owl:someValuesFrom [ rdf:type owl:Restriction ;
                                                                    owl:onProperty :hasType ;
-                                                                   owl:hasValue :Iterations
+                                                                   owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                        owl:oneOf ( :Evaluations
+                                                                                                    :Iterations
+                                                                                                    :IterationsWithoutImprovement
+                                                                                                    :TargetValue
+                                                                                                    :Time
+                                                                                                  )
+                                                                                      ]
                                                                  ]
                                             ] ;
-                            rdfs:comment "Componente de bucle que crea el bucle principal del algoritmo y determina cuándo detenerlo. Tiene un parámetro de número de iteraciones."@es ,
-                                         "Loop component that creates the main loop of the algorithm and determines when to stop it. It has an iterations parameter."@en ;
+                            rdfs:comment "Componente de bucle que crea el bucle principal del algoritmo y determina cuándo detenerlo. Se detiene en cuanto alcanza cualquiera de sus límites: iteraciones, tiempo, evaluaciones, iteraciones sin mejora o valor objetivo."@es ,
+                                         "Loop component that creates the main loop of the algorithm and determines when to stop it. It stops as soon as it reaches any of its limits: iterations, time, evaluations, iterations without improvement or target value."@en ;
                             rdfs:label "Componente de criterio de parada"@es ,
                                        "Stopping Criterion Component"@en .
 
@@ -2335,6 +2347,16 @@
          :hasDefaultValue 1 .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#Evaluations
+:Evaluations rdf:type owl:NamedIndividual ,
+                      :Parameter ;
+             :hasValueDomain :PositiveIntegers ;
+             rdfs:comment "Maximum number of solution evaluations."@en ,
+                          "Número máximo de evaluaciones de soluciones."@es ;
+             rdfs:label "Evaluaciones"@es ,
+                        "Evaluations"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence
 :GlobalBestInfluence rdf:type owl:NamedIndividual ,
                               :Parameter ;
@@ -2370,6 +2392,16 @@
                      :Parameter ;
             :hasValueDomain :NonNegativeIntegers ;
             :hasDefaultValue 1000 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement
+:IterationsWithoutImprovement rdf:type owl:NamedIndividual ,
+                                       :Parameter ;
+                              :hasValueDomain :PositiveIntegers ;
+                              rdfs:comment "Number of consecutive iterations without improving the best solution after which the loop stops."@en ,
+                                           "Número de iteraciones consecutivas sin mejorar la mejor solución tras las que se detiene el bucle."@es ;
+                              rdfs:label "Iteraciones sin mejora"@es ,
+                                         "Iterations Without Improvement"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MaxTemperature
@@ -2570,10 +2602,25 @@
              :hasDefaultValue 10 .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#TargetValue
+:TargetValue rdf:type owl:NamedIndividual ,
+                      :Parameter ;
+             :hasValueDomain :AnyReal ;
+             rdfs:comment "Valor del objetivo (ponderado) que, al alcanzarlo una solución factible, detiene el bucle."@es ,
+                          "Value of the (weighted) objective that, once reached by a feasible solution, stops the loop."@en ;
+             rdfs:label "Target Value"@en ,
+                        "Valor objetivo"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#Time
 :Time rdf:type owl:NamedIndividual ,
                :Parameter ;
-      :hasValueDomain :NonNegativeIntegers .
+      :hasValueDomain :NonNegativeReals ;
+      <http://qudt.org/schema/qudt/unit> <http://qudt.org/vocab/unit/SEC> ;
+      rdfs:comment "Maximum running time, in the unit given by qudt:unit (seconds)."@en ,
+                   "Tiempo máximo de ejecución, en la unidad que indica qudt:unit (segundos)."@es ;
+      rdfs:label "Tiempo"@es ,
+                 "Time"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TournamentSize

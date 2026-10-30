@@ -7,12 +7,14 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:CO-META="https://w3id.org/ontologies-ULL/CO-META#">
     <owl:Ontology rdf:about="https://w3id.org/ontologies-ULL/CO-META">
         <owl:versionIRI rdf:resource="https://w3id.org/ontologies-ULL/CO-META/1.0"/>
         <owl:imports rdf:resource="https://w3id.org/ontologies-ULL/CO-META/imports/qudt"/>
+        <owl:imports rdf:resource="https://w3id.org/ontologies-ULL/CO-META/imports/qudt-units"/>
         <ns:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/4.0/"/>
         <dc:creator>Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)</dc:creator>
         <dc:creator>Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)</dc:creator>
@@ -73,6 +75,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/unit -->
+
+
+    <owl:AnnotationProperty rdf:about="http://qudt.org/schema/qudt/unit"/>
     
 
 
@@ -2881,13 +2890,23 @@
                 <owl:someValuesFrom>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasType"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Iterations"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Evaluations"/>
+                                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Iterations"/>
+                                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement"/>
+                                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#TargetValue"/>
+                                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Time"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
                     </owl:Restriction>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="es">Componente de bucle que crea el bucle principal del algoritmo y determina cuándo detenerlo. Tiene un parámetro de número de iteraciones.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Loop component that creates the main loop of the algorithm and determines when to stop it. It has an iterations parameter.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Componente de bucle que crea el bucle principal del algoritmo y determina cuándo detenerlo. Se detiene en cuanto alcanza cualquiera de sus límites: iteraciones, tiempo, evaluaciones, iteraciones sin mejora o valor objetivo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Loop component that creates the main loop of the algorithm and determines when to stop it. It stops as soon as it reaches any of its limits: iterations, time, evaluations, iterations without improvement or target value.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de criterio de parada</rdfs:label>
         <rdfs:label xml:lang="en">Stopping Criterion Component</rdfs:label>
     </owl:Class>
@@ -3434,6 +3453,20 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#Evaluations -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#Evaluations">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers"/>
+        <rdfs:comment xml:lang="en">Maximum number of solution evaluations.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Número máximo de evaluaciones de soluciones.</rdfs:comment>
+        <rdfs:label xml:lang="es">Evaluaciones</rdfs:label>
+        <rdfs:label xml:lang="en">Evaluations</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence -->
 
 
@@ -3487,6 +3520,20 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</hasDefaultValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers"/>
+        <rdfs:comment xml:lang="en">Number of consecutive iterations without improving the best solution after which the loop stops.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Número de iteraciones consecutivas sin mejorar la mejor solución tras las que se detiene el bucle.</rdfs:comment>
+        <rdfs:label xml:lang="es">Iteraciones sin mejora</rdfs:label>
+        <rdfs:label xml:lang="en">Iterations Without Improvement</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3781,12 +3828,31 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#TargetValue -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#TargetValue">
+        <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#AnyReal"/>
+        <rdfs:comment xml:lang="es">Valor del objetivo (ponderado) que, al alcanzarlo una solución factible, detiene el bucle.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Value of the (weighted) objective that, once reached by a feasible solution, stops the loop.</rdfs:comment>
+        <rdfs:label xml:lang="en">Target Value</rdfs:label>
+        <rdfs:label xml:lang="es">Valor objetivo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#Time -->
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/ontologies-ULL/CO-META#Time">
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
-        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"/>
+        <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
+        <qudt:unit rdf:resource="http://qudt.org/vocab/unit/SEC"/>
+        <rdfs:comment xml:lang="en">Maximum running time, in the unit given by qudt:unit (seconds).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Tiempo máximo de ejecución, en la unidad que indica qudt:unit (segundos).</rdfs:comment>
+        <rdfs:label xml:lang="es">Tiempo</rdfs:label>
+        <rdfs:label xml:lang="en">Time</rdfs:label>
     </owl:NamedIndividual>
     
 
