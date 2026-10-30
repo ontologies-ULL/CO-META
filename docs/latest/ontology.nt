@@ -249,6 +249,16 @@
 <https://w3id.org/ontologies-ULL/CO-META#hasProblemElement> <http://www.w3.org/2000/01/rdf-schema#label> "has problem element"@en .
 <https://w3id.org/ontologies-ULL/CO-META#hasProblemElement> <http://www.w3.org/2000/01/rdf-schema#label> "tiene elemento del problema"@es .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#hasResult
+<https://w3id.org/ontologies-ULL/CO-META#hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasResult> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Metaheuristic> .
+<https://w3id.org/ontologies-ULL/CO-META#hasResult> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#DataStructure> .
+<https://w3id.org/ontologies-ULL/CO-META#hasResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Data structure whose solutions are the result of the metaheuristic. Without it, the result is the best solution found or, with several objectives, the non-dominated solutions found."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Estructura de datos cuyas soluciones son el resultado de la metaheurística. Si no se indica, el resultado es la mejor solución encontrada o, con varios objetivos, las soluciones no dominadas encontradas."@es .
+<https://w3id.org/ontologies-ULL/CO-META#hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "has result"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "tiene resultado"@es .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#hasRowCount
 <https://w3id.org/ontologies-ULL/CO-META#hasRowCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#hasRowCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .

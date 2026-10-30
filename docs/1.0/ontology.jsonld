@@ -5979,6 +5979,29 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemElement"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Data structure whose solutions are the result of the metaheuristic. Without it, the result is the best solution found or, with several objectives, the non-dominated solutions found."
+  }, {
+    "@language" : "es",
+    "@value" : "Estructura de datos cuyas soluciones son el resultado de la metaheurística. Si no se indica, el resultado es la mejor solución encontrada o, con varios objetivos, las soluciones no dominadas encontradas."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has result"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene resultado"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataStructure"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasRowCount",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {

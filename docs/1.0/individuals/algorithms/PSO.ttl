@@ -25,6 +25,7 @@ CO-META:PSO_ParticleSwarmOptimization rdf:type owl:NamedIndividual ,
                                       CO-META:hasDataStructure CO-META:PSO_archive_global_best ,
                                                                CO-META:PSO_archive_local_best ,
                                                                CO-META:PSO_velocities ;
+                                      CO-META:hasResult CO-META:PSO_archive_global_best ;
                                       CO-META:hasStart CO-META:PSO_generate_population .
 
 

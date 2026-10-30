@@ -279,6 +279,17 @@
                               "tiene elemento del problema"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasResult
+:hasResult rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Metaheuristic ;
+           rdfs:range :DataStructure ;
+           rdfs:comment "Data structure whose solutions are the result of the metaheuristic. Without it, the result is the best solution found or, with several objectives, the non-dominated solutions found."@en ,
+                        "Estructura de datos cuyas soluciones son el resultado de la metaheurística. Si no se indica, el resultado es la mejor solución encontrada o, con varios objetivos, las soluciones no dominadas encontradas."@es ;
+           rdfs:label "has result"@en ,
+                      "tiene resultado"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasRowCount
 :hasRowCount rdf:type owl:ObjectProperty ,
                       owl:FunctionalProperty ;

@@ -421,6 +421,21 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasResult -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasResult">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataStructure"/>
+        <rdfs:comment xml:lang="en">Data structure whose solutions are the result of the metaheuristic. Without it, the result is the best solution found or, with several objectives, the non-dominated solutions found.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Estructura de datos cuyas soluciones son el resultado de la metaheurística. Si no se indica, el resultado es la mejor solución encontrada o, con varios objetivos, las soluciones no dominadas encontradas.</rdfs:comment>
+        <rdfs:label xml:lang="en">has result</rdfs:label>
+        <rdfs:label xml:lang="es">tiene resultado</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#hasRowCount -->
 
 

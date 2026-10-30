@@ -23,6 +23,7 @@ CO-META:SPEA2 rdf:type owl:NamedIndividual ,
                        CO-META:Metaheuristic ;
               CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
               CO-META:hasDataStructure CO-META:SPEA2_archive ;
+              CO-META:hasResult CO-META:SPEA2_archive ;
               CO-META:hasStart CO-META:SPEA2_generate_population .
 
 
