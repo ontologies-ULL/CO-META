@@ -21,6 +21,7 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#GRASP
 CO-META:GRASP rdf:type owl:NamedIndividual ,
                        CO-META:Metaheuristic ;
+              CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
               CO-META:hasStart CO-META:GRASP_stop .
 
 

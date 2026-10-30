@@ -126,6 +126,17 @@ CO-META:hasConstraint rdf:type owl:ObjectProperty ;
                       rdfs:range CO-META:Constraint .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasConstraintHandling
+CO-META:hasConstraintHandling rdf:type owl:ObjectProperty ,
+                                       owl:FunctionalProperty ;
+                              rdfs:domain CO-META:Metaheuristic ;
+                              rdfs:range CO-META:ConstraintHandling ;
+                              rdfs:comment "Cómo trata una metaheurística las soluciones no factibles."@es ,
+                                           "How a metaheuristic deals with infeasible solutions."@en ;
+                              rdfs:label "has constraint handling"@en ,
+                                         "tiene tratamiento de restricciones"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasCurrentInput
 CO-META:hasCurrentInput rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf CO-META:hasInput ;
@@ -789,6 +800,21 @@ CO-META:Constraint rdf:type owl:Class ;
                               "Restricción"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#ConstraintHandling
+CO-META:ConstraintHandling rdf:type owl:Class ;
+                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                 owl:oneOf ( CO-META:DeathPenaltyHandling
+                                                             CO-META:FeasibilityFirstHandling
+                                                             CO-META:PenaltyHandling
+                                                             CO-META:RepairHandling
+                                                           )
+                                               ] ;
+                           rdfs:comment "Cómo trata una metaheurística las soluciones no factibles."@es ,
+                                        "How a metaheuristic deals with infeasible solutions."@en ;
+                           rdfs:label "Constraint Handling"@en ,
+                                      "Tratamiento de restricciones"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent
 CO-META:ConstructionComponent rdf:type owl:Class ;
                               rdfs:subClassOf CO-META:MetaheuristicComponent ;
@@ -831,6 +857,10 @@ CO-META:CrossoverComponent rdf:type owl:Class ;
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty CO-META:hasOutputSize ;
                                              owl:hasValue 2
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty CO-META:hasSafety ;
+                                             owl:hasValue CO-META:Unsafe
                                            ] ;
                            rdfs:comment "Componente de modificación que produce uno o más individuos descendientes recombinando dos o más individuos progenitores. Tiene un parámetro de probabilidad de cruce."@es ,
                                         "Modification component that produces one or more offspring individuals by recombining two or more parent individuals. It has a crossover probability parameter."@en ;
@@ -1040,6 +1070,15 @@ CO-META:GreedyRandomizedConstructionComponent rdf:type owl:Class ;
                                                            "Construction component that adds one element at a time, chosen at random from a restricted candidate list (RCL) built from the heuristic information of the problem. Its RCL randomness parameter goes from purely greedy (0) to purely random (1)."@en ;
                                               rdfs:label "Componente de construcción voraz aleatorizada"@es ,
                                                          "Greedy Randomized Construction Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#GreedyRepairComponent
+CO-META:GreedyRepairComponent rdf:type owl:Class ;
+                              rdfs:subClassOf CO-META:RepairComponent ;
+                              rdfs:comment "Componente de reparación que cambia, uno cada vez, el valor cuyo cambio más reduce la violación de las restricciones, hasta que la solución es factible."@es ,
+                                           "Repair component that changes, one at a time, the value whose change reduces the constraint violation the most, until the solution is feasible."@en ;
+                              rdfs:label "Componente de reparación voraz"@es ,
+                                         "Greedy Repair Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent
@@ -1641,7 +1680,11 @@ CO-META:RandomDecisionCrossoverComponent rdf:type owl:Class ;
 
 ###  https://w3id.org/ontologies-ULL/CO-META#RandomGenerationComponent
 CO-META:RandomGenerationComponent rdf:type owl:Class ;
-                                  rdfs:subClassOf CO-META:GenerationComponent ;
+                                  rdfs:subClassOf CO-META:GenerationComponent ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty CO-META:hasSafety ;
+                                                    owl:hasValue CO-META:Unsafe
+                                                  ] ;
                                   rdfs:comment "Componente de generación que obtiene cada solución de forma uniformemente aleatoria a partir de la representación de las variables de decisión."@es ,
                                                "Generation component that draws each solution uniformly at random from the representation of the decision variables."@en ;
                                   rdfs:label "Componente de generación aleatoria"@es ,
@@ -1675,6 +1718,19 @@ CO-META:RandomSelectionComponent rdf:type owl:Class ;
                                               "Selection component that selects a pair of individuals at random. It has an elitism parameter."@en ;
                                  rdfs:label "Componente de selección aleatoria"@es ,
                                             "Random Selection Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#RepairComponent
+CO-META:RepairComponent rdf:type owl:Class ;
+                        rdfs:subClassOf CO-META:ModificationComponent ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty CO-META:hasSafety ;
+                                          owl:hasValue CO-META:Safe
+                                        ] ;
+                        rdfs:comment "Componente de modificación que convierte soluciones no factibles en factibles."@es ,
+                                     "Modification component that turns infeasible solutions into feasible ones."@en ;
+                        rdfs:label "Componente de reparación"@es ,
+                                   "Repair Component"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#RouletteWheelSelectionComponent
@@ -2173,7 +2229,11 @@ CO-META:ValueSpecification rdf:type owl:Class ;
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VariationComponent
 CO-META:VariationComponent rdf:type owl:Class ;
-                           rdfs:subClassOf CO-META:ModificationComponent ;
+                           rdfs:subClassOf CO-META:ModificationComponent ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty CO-META:hasSafety ;
+                                             owl:hasValue CO-META:Unsafe
+                                           ] ;
                            rdfs:comment "Componente de modificación que introduce pequeños cambios aleatorios en una solución (mutación)."@es ,
                                         "Modification component that introduces small random changes to a solution (mutation)."@en ;
                            rdfs:label "Componente de variación"@es ,
@@ -2182,7 +2242,11 @@ CO-META:VariationComponent rdf:type owl:Class ;
 
 ###  https://w3id.org/ontologies-ULL/CO-META#VelocityApplicationComponent
 CO-META:VelocityApplicationComponent rdf:type owl:Class ;
-                                     rdfs:subClassOf CO-META:ModificationComponent ;
+                                     rdfs:subClassOf CO-META:ModificationComponent ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty CO-META:hasSafety ;
+                                                       owl:hasValue CO-META:Unsafe
+                                                     ] ;
                                      rdfs:comment "Componente de modificación que desplaza cada partícula que recibe según su velocidad: sumada a los valores reales, o mediante una sigmoide como probabilidad de un 1 en valores binarios."@es ,
                                                   "Modification component that moves each particle it receives by its velocity: added to real values, or through a sigmoid as the probability of a 1 for binary values."@en ;
                                      rdfs:label "Componente de aplicación de la velocidad"@es ,
@@ -2297,7 +2361,11 @@ CO-META:Booleans rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Both
 CO-META:Both rdf:type owl:NamedIndividual ,
-                      CO-META:ComponentSafety .
+                      CO-META:ComponentSafety ;
+             rdfs:comment "El componente puede configurarse para producir solo soluciones factibles o no."@es ,
+                          "The component can be configured to produce only feasible solutions or not."@en ;
+             rdfs:label "Ambos"@es ,
+                        "Both"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints
@@ -2312,6 +2380,15 @@ CO-META:CrossoverProbability rdf:type owl:NamedIndividual ,
                                       CO-META:Parameter ;
                              CO-META:hasDefaultValue "0.9"^^xsd:decimal ;
                              CO-META:hasValueDomain CO-META:UnitInterval .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#DeathPenaltyHandling
+CO-META:DeathPenaltyHandling rdf:type owl:NamedIndividual ,
+                                      CO-META:ConstraintHandling ;
+                             rdfs:comment "Infeasible solutions are discarded."@en ,
+                                          "Las soluciones no factibles se descartan."@es ;
+                             rdfs:label "Death Penalty"@en ,
+                                        "Pena de muerte"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Elitism
@@ -2329,6 +2406,15 @@ CO-META:Evaluations rdf:type owl:NamedIndividual ,
                                  "Número máximo de evaluaciones de soluciones."@es ;
                     rdfs:label "Evaluaciones"@es ,
                                "Evaluations"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#FeasibilityFirstHandling
+CO-META:FeasibilityFirstHandling rdf:type owl:NamedIndividual ,
+                                          CO-META:ConstraintHandling ;
+                                 rdfs:comment "Feasible solutions are better than infeasible ones, and infeasible ones are compared by their violation."@en ,
+                                              "Las soluciones factibles son mejores que las no factibles, y estas se comparan por su violación."@es ;
+                                 rdfs:label "Factibilidad primero"@es ,
+                                            "Feasibility First"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence
@@ -2453,6 +2539,15 @@ CO-META:One rdf:type owl:NamedIndividual ,
                        "Uno"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#PenaltyHandling
+CO-META:PenaltyHandling rdf:type owl:NamedIndividual ,
+                                 CO-META:ConstraintHandling ;
+                        rdfs:comment "La violación ponderada de las restricciones se suma al objetivo que se minimiza."@es ,
+                                     "The weighted violation of the constraints is added to the objective to minimize."@en ;
+                        rdfs:label "Penalización"@es ,
+                                   "Penalty"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence
 CO-META:PersonalBestInfluence rdf:type owl:NamedIndividual ,
                                        CO-META:Parameter ;
@@ -2526,9 +2621,22 @@ CO-META:Reals rdf:type owl:NamedIndividual ,
                          "Reales"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#RepairHandling
+CO-META:RepairHandling rdf:type owl:NamedIndividual ,
+                                CO-META:ConstraintHandling ;
+                       rdfs:comment "Las soluciones producidas por componentes inseguros se reparan."@es ,
+                                    "Solutions produced by unsafe components are repaired."@en ;
+                       rdfs:label "Repair"@en ,
+                                  "Reparación"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#Safe
 CO-META:Safe rdf:type owl:NamedIndividual ,
-                      CO-META:ComponentSafety .
+                      CO-META:ComponentSafety ;
+             rdfs:comment "El componente solo produce soluciones factibles."@es ,
+                          "The component only produces feasible solutions."@en ;
+             rdfs:label "Safe"@en ,
+                        "Seguro"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Scalar
@@ -2618,7 +2726,11 @@ CO-META:UnitInterval rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Unsafe
 CO-META:Unsafe rdf:type owl:NamedIndividual ,
-                        CO-META:ComponentSafety .
+                        CO-META:ComponentSafety ;
+               rdfs:comment "El componente puede producir soluciones no factibles."@es ,
+                            "The component may produce infeasible solutions."@en ;
+               rdfs:label "Inseguro"@es ,
+                          "Unsafe"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Zero
@@ -2638,6 +2750,7 @@ CO-META:Zero rdf:type owl:NamedIndividual ,
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( CO-META:BaseType
                 CO-META:ComponentSafety
+                CO-META:ConstraintHandling
                 CO-META:DataShape
                 CO-META:DataStructure
                 CO-META:Metaheuristic
@@ -2683,6 +2796,15 @@ CO-META:Zero rdf:type owl:NamedIndividual ,
                         CO-META:Integers
                         CO-META:Reals
                         CO-META:Solutions
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( CO-META:DeathPenaltyHandling
+                        CO-META:FeasibilityFirstHandling
+                        CO-META:PenaltyHandling
+                        CO-META:RepairHandling
                       )
 ] .
 

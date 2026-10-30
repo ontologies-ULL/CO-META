@@ -21,6 +21,7 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II
 CO-META:NSGA-II rdf:type owl:NamedIndividual ,
                          CO-META:Metaheuristic ;
+                CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
                 CO-META:hasStart CO-META:NSGA-II_generate_population .
 
 

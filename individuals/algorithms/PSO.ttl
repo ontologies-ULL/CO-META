@@ -21,6 +21,7 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_ParticleSwarmOptimization
 CO-META:PSO_ParticleSwarmOptimization rdf:type owl:NamedIndividual ,
                                                CO-META:Metaheuristic ;
+                                      CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
                                       CO-META:hasDataStructure CO-META:PSO_archive_global_best ,
                                                                CO-META:PSO_archive_local_best ,
                                                                CO-META:PSO_velocities ;

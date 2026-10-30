@@ -1,0 +1,11 @@
+# Expected: inconsistent.
+# A metaheuristic deals with infeasible solutions in one way.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/single-constraint-handling> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:metaheuristic a owl:NamedIndividual , CO-META:Metaheuristic ;
+    CO-META:hasConstraintHandling CO-META:PenaltyHandling , CO-META:RepairHandling .
