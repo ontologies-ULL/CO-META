@@ -1653,7 +1653,7 @@
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "en",
-    "@value" : "Ontology for Combinatory Optimization Metaheuristics"
+    "@value" : "Ontology for Combinatorial Optimization Metaheuristics"
   }, {
     "@language" : "es",
     "@value" : "Ontología para Metaheurísticas de Optimización Combinatoria"
@@ -1666,7 +1666,7 @@
     "@value" : "Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria."
   }, {
     "@language" : "en",
-    "@value" : "This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics."
+    "@value" : "This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatorial optimization metaheuristics."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

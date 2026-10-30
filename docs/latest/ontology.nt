@@ -6,11 +6,11 @@
 <https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/creator> "Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)" .
 <https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/creator> "Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)" .
 <https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/creator> "Miguel Luna García (http://orcid.org/0009-0006-6611-4360)" .
-<https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/description> "Ontology for Combinatory Optimization Metaheuristics"@en .
+<https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/description> "Ontology for Combinatorial Optimization Metaheuristics"@en .
 <https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/description> "Ontología para Metaheurísticas de Optimización Combinatoria"@es .
 <https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/elements/1.1/source> <https://github.com/ontologies-ULL/CO-META> .
 <https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/terms/abstract> "Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria."@es .
-<https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/terms/abstract> "This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatory optimization metaheuristics."@en .
+<https://w3id.org/ontologies-ULL/CO-META> <http://purl.org/dc/terms/abstract> "This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatorial optimization metaheuristics."@en .
 <https://w3id.org/ontologies-ULL/CO-META> <http://www.w3.org/2000/01/rdf-schema#label> "CO-META"@en .
 <https://w3id.org/ontologies-ULL/CO-META> <http://www.w3.org/2000/01/rdf-schema#label> "CO-META"@es .
 # 
