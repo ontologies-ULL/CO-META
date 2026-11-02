@@ -557,6 +557,17 @@
                rdfs:range xsd:integer .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasPenaltyWeight
+:hasPenaltyWeight rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :Constraint ;
+                  rdfs:range xsd:double ;
+                  rdfs:comment "Peso de la violación de la restricción cuando se penaliza (1 por defecto)."@es ,
+                               "Weight of the violation of the constraint when it is penalized (1 by default)."@en ;
+                  rdfs:label "has penalty weight"@en ,
+                             "tiene peso de penalización"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasPosition
 :hasPosition rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
@@ -596,6 +607,17 @@
                        "is distinct"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#isHard
+:isHard rdf:type owl:DatatypeProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain :Constraint ;
+        rdfs:range xsd:boolean ;
+        rdfs:comment "Si una solución que viola la restricción es no factible (true, por defecto) o solo se penaliza (false)."@es ,
+                     "Whether a solution that violates the constraint is infeasible (true, the default) or only penalized (false)."@en ;
+        rdfs:label "es dura"@es ,
+                   "is hard"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#isImplicit
 :isImplicit rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
@@ -605,6 +627,17 @@
                          "Indicates that the input parameter was not explicitly declared as problem data, but arose from its use as the size of a table."@en ;
             rdfs:label "es implícito"@es ,
                        "is implicit"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape
+:isImpliedByShape rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :Constraint ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "La forma de las variables de decisión ya garantiza la restricción (p. ej. visitar cada ciudad una vez con una permutación), por lo que no es necesario comprobarla."@es ,
+                               "The shape of the decision variables already guarantees the constraint (e.g. visiting each city once with a permutation), so it need not be checked."@en ;
+                  rdfs:label "está implícita en la forma"@es ,
+                             "is implied by shape"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#isOrdered
@@ -831,8 +864,8 @@
 ###  https://w3id.org/ontologies-ULL/CO-META#Constraint
 :Constraint rdf:type owl:Class ;
             rdfs:subClassOf :ProblemElement ;
-            rdfs:comment "Condición que debe cumplir una solución de un problema de optimización para ser factible."@es ,
-                         "Condition that a solution of an optimization problem must satisfy in order to be feasible."@en ;
+            rdfs:comment "Condición que debe cumplir una solución de un problema de optimización para ser factible. Si no es dura, solo se penalizan las soluciones que la violan."@es ,
+                         "Condition that a solution of an optimization problem must satisfy in order to be feasible. If it is not hard, the solutions that violate it are only penalized."@en ;
             rdfs:label "Constraint"@en ,
                        "Restricción"@es .
 

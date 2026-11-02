@@ -838,6 +838,21 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasPenaltyWeight -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasPenaltyWeight">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Constraint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="es">Peso de la violación de la restricción cuando se penaliza (1 por defecto).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Weight of the violation of the constraint when it is penalized (1 by default).</rdfs:comment>
+        <rdfs:label xml:lang="en">has penalty weight</rdfs:label>
+        <rdfs:label xml:lang="es">tiene peso de penalización</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#hasPosition -->
 
 
@@ -893,6 +908,21 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#isHard -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#isHard">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Constraint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="es">Si una solución que viola la restricción es no factible (true, por defecto) o solo se penaliza (false).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Whether a solution that violates the constraint is infeasible (true, the default) or only penalized (false).</rdfs:comment>
+        <rdfs:label xml:lang="es">es dura</rdfs:label>
+        <rdfs:label xml:lang="en">is hard</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#isImplicit -->
 
 
@@ -904,6 +934,21 @@
         <rdfs:comment xml:lang="en">Indicates that the input parameter was not explicitly declared as problem data, but arose from its use as the size of a table.</rdfs:comment>
         <rdfs:label xml:lang="es">es implícito</rdfs:label>
         <rdfs:label xml:lang="en">is implicit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Constraint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="es">La forma de las variables de decisión ya garantiza la restricción (p. ej. visitar cada ciudad una vez con una permutación), por lo que no es necesario comprobarla.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The shape of the decision variables already guarantees the constraint (e.g. visiting each city once with a permutation), so it need not be checked.</rdfs:comment>
+        <rdfs:label xml:lang="es">está implícita en la forma</rdfs:label>
+        <rdfs:label xml:lang="en">is implied by shape</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1249,8 +1294,8 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#Constraint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ProblemElement"/>
-        <rdfs:comment xml:lang="es">Condición que debe cumplir una solución de un problema de optimización para ser factible.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Condition that a solution of an optimization problem must satisfy in order to be feasible.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Condición que debe cumplir una solución de un problema de optimización para ser factible. Si no es dura, solo se penalizan las soluciones que la violan.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Condition that a solution of an optimization problem must satisfy in order to be feasible. If it is not hard, the solutions that violate it are only penalized.</rdfs:comment>
         <rdfs:label xml:lang="en">Constraint</rdfs:label>
         <rdfs:label xml:lang="es">Restricción</rdfs:label>
     </owl:Class>

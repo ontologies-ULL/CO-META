@@ -544,6 +544,16 @@ _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#hasPenaltyWeight
+<https://w3id.org/ontologies-ULL/CO-META#hasPenaltyWeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasPenaltyWeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasPenaltyWeight> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Constraint> .
+<https://w3id.org/ontologies-ULL/CO-META#hasPenaltyWeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<https://w3id.org/ontologies-ULL/CO-META#hasPenaltyWeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Peso de la violación de la restricción cuando se penaliza (1 por defecto)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#hasPenaltyWeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Weight of the violation of the constraint when it is penalized (1 by default)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasPenaltyWeight> <http://www.w3.org/2000/01/rdf-schema#label> "has penalty weight"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasPenaltyWeight> <http://www.w3.org/2000/01/rdf-schema#label> "tiene peso de penalización"@es .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#hasPosition
 <https://w3id.org/ontologies-ULL/CO-META#hasPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#hasPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
@@ -579,6 +589,16 @@ _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/ontologies-ULL/CO-META#isDistinct> <http://www.w3.org/2000/01/rdf-schema#label> "es sin repeticiones"@es .
 <https://w3id.org/ontologies-ULL/CO-META#isDistinct> <http://www.w3.org/2000/01/rdf-schema#label> "is distinct"@en .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#isHard
+<https://w3id.org/ontologies-ULL/CO-META#isHard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#isHard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#isHard> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Constraint> .
+<https://w3id.org/ontologies-ULL/CO-META#isHard> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/ontologies-ULL/CO-META#isHard> <http://www.w3.org/2000/01/rdf-schema#comment> "Si una solución que viola la restricción es no factible (true, por defecto) o solo se penaliza (false)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#isHard> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether a solution that violates the constraint is infeasible (true, the default) or only penalized (false)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#isHard> <http://www.w3.org/2000/01/rdf-schema#label> "es dura"@es .
+<https://w3id.org/ontologies-ULL/CO-META#isHard> <http://www.w3.org/2000/01/rdf-schema#label> "is hard"@en .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#isImplicit
 <https://w3id.org/ontologies-ULL/CO-META#isImplicit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#isImplicit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
@@ -588,6 +608,16 @@ _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/ontologies-ULL/CO-META#isImplicit> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the input parameter was not explicitly declared as problem data, but arose from its use as the size of a table."@en .
 <https://w3id.org/ontologies-ULL/CO-META#isImplicit> <http://www.w3.org/2000/01/rdf-schema#label> "es implícito"@es .
 <https://w3id.org/ontologies-ULL/CO-META#isImplicit> <http://www.w3.org/2000/01/rdf-schema#label> "is implicit"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape
+<https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Constraint> .
+<https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape> <http://www.w3.org/2000/01/rdf-schema#comment> "La forma de las variables de decisión ya garantiza la restricción (p. ej. visitar cada ciudad una vez con una permutación), por lo que no es necesario comprobarla."@es .
+<https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape> <http://www.w3.org/2000/01/rdf-schema#comment> "The shape of the decision variables already guarantees the constraint (e.g. visiting each city once with a permutation), so it need not be checked."@en .
+<https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape> <http://www.w3.org/2000/01/rdf-schema#label> "está implícita en la forma"@es .
+<https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape> <http://www.w3.org/2000/01/rdf-schema#label> "is implied by shape"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#isOrdered
 <https://w3id.org/ontologies-ULL/CO-META#isOrdered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -810,8 +840,8 @@ _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/ontologies-ULL/CO-META#Constraint
 <https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#ProblemElement> .
-<https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Condición que debe cumplir una solución de un problema de optimización para ser factible."@es .
-<https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Condition that a solution of an optimization problem must satisfy in order to be feasible."@en .
+<https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Condición que debe cumplir una solución de un problema de optimización para ser factible. Si no es dura, solo se penalizan las soluciones que la violan."@es .
+<https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Condition that a solution of an optimization problem must satisfy in order to be feasible. If it is not hard, the solutions that violate it are only penalized."@en .
 <https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint"@en .
 <https://w3id.org/ontologies-ULL/CO-META#Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Restricción"@es .
 # 

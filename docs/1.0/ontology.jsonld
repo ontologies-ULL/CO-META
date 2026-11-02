@@ -2273,10 +2273,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Condición que debe cumplir una solución de un problema de optimización para ser factible."
+    "@value" : "Condición que debe cumplir una solución de un problema de optimización para ser factible. Si no es dura, solo se penalizan las soluciones que la violan."
   }, {
     "@language" : "en",
-    "@value" : "Condition that a solution of an optimization problem must satisfy in order to be feasible."
+    "@value" : "Condition that a solution of an optimization problem must satisfy in order to be feasible. If it is not hard, the solutions that violate it are only penalized."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -5933,6 +5933,29 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#isParameterOf"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasPenaltyWeight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Peso de la violación de la restricción cuando se penaliza (1 por defecto)."
+  }, {
+    "@language" : "en",
+    "@value" : "Weight of the violation of the constraint when it is penalized (1 by default)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Constraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has penalty weight"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene peso de penalización"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasPosition",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -6215,6 +6238,29 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#isHard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Si una solución que viola la restricción es no factible (true, por defecto) o solo se penaliza (false)."
+  }, {
+    "@language" : "en",
+    "@value" : "Whether a solution that violates the constraint is infeasible (true, the default) or only penalized (false)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Constraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es dura"
+  }, {
+    "@language" : "en",
+    "@value" : "is hard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#isImplicit",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -6233,6 +6279,29 @@
   }, {
     "@language" : "en",
     "@value" : "is implicit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "La forma de las variables de decisión ya garantiza la restricción (p. ej. visitar cada ciudad una vez con una permutación), por lo que no es necesario comprobarla."
+  }, {
+    "@language" : "en",
+    "@value" : "The shape of the decision variables already guarantees the constraint (e.g. visiting each city once with a permutation), so it need not be checked."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Constraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "está implícita en la forma"
+  }, {
+    "@language" : "en",
+    "@value" : "is implied by shape"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
