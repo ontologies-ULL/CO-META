@@ -1,0 +1,42 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+@prefix cm: <https://w3id.org/ontologies-ULL/CO-META#> .
+
+# Without its expression and the symbols of its indices, heuristic information
+# cannot be evaluated; under the open world assumption OWL cannot require them.
+
+cm:HeuristicInformationShape
+    a sh:NodeShape ;
+    sh:targetClass cm:HeuristicInformation ;
+    sh:property [
+        sh:path cm:hasLatexExpression ;
+        sh:minCount 1 ;
+        sh:message "Heuristic information must state its LaTeX expression." ;
+    ] .
+
+cm:ValueHeuristicShape
+    a sh:NodeShape ;
+    sh:targetClass cm:ValueHeuristic ;
+    sh:property [
+        sh:path cm:hasValueIndexSymbol ;
+        sh:minCount 1 ;
+        sh:message "A value heuristic must state the symbol of its index." ;
+    ] .
+
+cm:TransitionHeuristicShape
+    a sh:NodeShape ;
+    sh:targetClass cm:TransitionHeuristic ;
+    sh:property [
+        sh:path cm:hasFromIndexSymbol ;
+        sh:minCount 1 ;
+        sh:message "A transition heuristic must state the symbol of the previous value." ;
+    ] ;
+    sh:property [
+        sh:path cm:hasToIndexSymbol ;
+        sh:minCount 1 ;
+        sh:message "A transition heuristic must state the symbol of the next value." ;
+    ] .

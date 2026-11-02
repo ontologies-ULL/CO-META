@@ -1,0 +1,11 @@
+# Expected: inconsistent.
+# Heuristic information is about choosing a value or about the transition
+# between two values, not both.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/heuristic-kinds-disjoint> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:heuristic a owl:NamedIndividual , CO-META:ValueHeuristic , CO-META:TransitionHeuristic .

@@ -1,0 +1,12 @@
+# Expected: SHACL violation (TransitionHeuristicShape).
+# A transition heuristic must name the indices of both values.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/transition-heuristic-without-next-index> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:heuristic a owl:NamedIndividual , CO-META:TransitionHeuristic ;
+    CO-META:hasLatexExpression "\\frac{1}{d_{ij}}" ;
+    CO-META:hasFromIndexSymbol "i" .

@@ -184,6 +184,16 @@ CO-META:hasExclusiveUpperBound rdf:type owl:ObjectProperty ,
                                           "tiene cota superior exclusiva"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasHeuristic
+CO-META:hasHeuristic rdf:type owl:ObjectProperty ;
+                     rdfs:domain CO-META:DecisionVariable ;
+                     rdfs:range CO-META:HeuristicInformation ;
+                     rdfs:comment "Heuristic information that guides the choice of the values of the decision variable when a solution is built step by step."@en ,
+                                  "Información heurística que guía la elección de los valores de la variable de decisión cuando una solución se construye paso a paso."@es ;
+                     rdfs:label "has heuristic"@en ,
+                                "tiene heurística"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasInitialValue
 CO-META:hasInitialValue rdf:type owl:ObjectProperty ,
                                  owl:FunctionalProperty ;
@@ -495,6 +505,17 @@ CO-META:hasDimensionIndex rdf:type owl:DatatypeProperty ,
                                      "tiene índice de dimensión"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasFromIndexSymbol
+CO-META:hasFromIndexSymbol rdf:type owl:DatatypeProperty ,
+                                    owl:FunctionalProperty ;
+                           rdfs:domain CO-META:TransitionHeuristic ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Symbol of the index that the expression of a transition heuristic uses for the previous value."@en ,
+                                        "Símbolo del índice que usa la expresión de una heurística de transición para el valor anterior."@es ;
+                           rdfs:label "has from index symbol"@en ,
+                                      "tiene símbolo del índice de origen"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasIdentifier
 CO-META:hasIdentifier rdf:type owl:DatatypeProperty ,
                                owl:FunctionalProperty ;
@@ -517,12 +538,13 @@ CO-META:hasLatexExpression rdf:type owl:DatatypeProperty ,
                                     owl:FunctionalProperty ;
                            rdfs:domain [ rdf:type owl:Class ;
                                          owl:unionOf ( CO-META:Constraint
+                                                       CO-META:HeuristicInformation
                                                        CO-META:Objective
                                                      )
                                        ] ;
                            rdfs:range xsd:string ;
-                           rdfs:comment "LaTeX expression of an objective or constraint. For constraints it includes the comparator (=, \\neq, <, \\leq, >, \\geq; chains such as 0 \\leq x_i \\leq 1 are allowed) and the universal quantifier, if any, before or after the condition (\\forall i \\in S). Indices start at 1. A subscript is an index (x_i, d_{ij}, X_{x_i}): juxtaposed terms in a subscript are separate indices, so a product in an index is written with \\cdot. A column of a table is indexed by record (v_i), a matrix by row and column (d_{ij}), and values of decision variables can be used as indices. Sets: \\{a, \\ldots, b\\}, \\{a, b, c\\} and \\{ i \\in S : P(i) \\}, with |S| their size. Aggregates: \\sum, \\prod, \\min and \\max, over _{i=a}^{b}, _{i \\in S} or _{i \\in S : P(i)}. Functions: \\sqrt, \\frac, |x|, \\lfloor x \\rfloor, \\lceil x \\rceil, \\exp, \\ln, \\log (natural logarithm), \\min(a, b), \\max(a, b) and \\bmod."@en ,
-                                        "Expresión LaTeX de un objetivo o de una restricción. En las restricciones incluye el comparador (=, \\neq, <, \\leq, >, \\geq; se admiten cadenas como 0 \\leq x_i \\leq 1) y el cuantificador universal, si lo hay, antes o después de la condición (\\forall i \\in S). Los índices empiezan en 1. Un subíndice es un índice (x_i, d_{ij}, X_{x_i}): los términos yuxtapuestos en un subíndice son índices distintos, por lo que un producto en un índice se escribe con \\cdot. Una columna de una tabla se indexa por registro (v_i), una matriz por fila y columna (d_{ij}), y los valores de las variables de decisión pueden usarse como índices. Conjuntos: \\{a, \\ldots, b\\}, \\{a, b, c\\} y \\{ i \\in S : P(i) \\}, con |S| su tamaño. Agregados: \\sum, \\prod, \\min y \\max, sobre _{i=a}^{b}, _{i \\in S} o _{i \\in S : P(i)}. Funciones: \\sqrt, \\frac, |x|, \\lfloor x \\rfloor, \\lceil x \\rceil, \\exp, \\ln, \\log (logaritmo natural), \\min(a, b), \\max(a, b) y \\bmod."@es ;
+                           rdfs:comment "LaTeX expression of an objective, a constraint or heuristic information. For constraints it includes the comparator (=, \\neq, <, \\leq, >, \\geq; chains such as 0 \\leq x_i \\leq 1 are allowed) and the universal quantifier, if any, before or after the condition (\\forall i \\in S). Indices start at 1. A subscript is an index (x_i, d_{ij}, X_{x_i}): juxtaposed terms in a subscript are separate indices, so a product in an index is written with \\cdot. A column of a table is indexed by record (v_i), a matrix by row and column (d_{ij}), and values of decision variables can be used as indices. Sets: \\{a, \\ldots, b\\}, \\{a, b, c\\} and \\{ i \\in S : P(i) \\}, with |S| their size. Aggregates: \\sum, \\prod, \\min and \\max, over _{i=a}^{b}, _{i \\in S} or _{i \\in S : P(i)}. Functions: \\sqrt, \\frac, |x|, \\lfloor x \\rfloor, \\lceil x \\rceil, \\exp, \\ln, \\log (natural logarithm), \\min(a, b), \\max(a, b) and \\bmod."@en ,
+                                        "Expresión LaTeX de un objetivo, de una restricción o de información heurística. En las restricciones incluye el comparador (=, \\neq, <, \\leq, >, \\geq; se admiten cadenas como 0 \\leq x_i \\leq 1) y el cuantificador universal, si lo hay, antes o después de la condición (\\forall i \\in S). Los índices empiezan en 1. Un subíndice es un índice (x_i, d_{ij}, X_{x_i}): los términos yuxtapuestos en un subíndice son índices distintos, por lo que un producto en un índice se escribe con \\cdot. Una columna de una tabla se indexa por registro (v_i), una matriz por fila y columna (d_{ij}), y los valores de las variables de decisión pueden usarse como índices. Conjuntos: \\{a, \\ldots, b\\}, \\{a, b, c\\} y \\{ i \\in S : P(i) \\}, con |S| su tamaño. Agregados: \\sum, \\prod, \\min y \\max, sobre _{i=a}^{b}, _{i \\in S} o _{i \\in S : P(i)}. Funciones: \\sqrt, \\frac, |x|, \\lfloor x \\rfloor, \\lceil x \\rceil, \\exp, \\ln, \\log (logaritmo natural), \\min(a, b), \\max(a, b) y \\bmod."@es ;
                            rdfs:label "has LaTeX expression"@en ,
                                       "tiene expresión LaTeX"@es .
 
@@ -581,10 +603,32 @@ CO-META:hasPosition rdf:type owl:DatatypeProperty ,
                                "tiene posición"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasToIndexSymbol
+CO-META:hasToIndexSymbol rdf:type owl:DatatypeProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:domain CO-META:TransitionHeuristic ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Symbol of the index that the expression of a transition heuristic uses for the next value."@en ,
+                                      "Símbolo del índice que usa la expresión de una heurística de transición para el valor siguiente."@es ;
+                         rdfs:label "has to index symbol"@en ,
+                                    "tiene símbolo del índice de destino"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasValue
 CO-META:hasValue rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
                  rdfs:domain CO-META:ParameterValue .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasValueIndexSymbol
+CO-META:hasValueIndexSymbol rdf:type owl:DatatypeProperty ,
+                                     owl:FunctionalProperty ;
+                            rdfs:domain CO-META:ValueHeuristic ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Symbol of the index that the expression of a value heuristic uses for the value (or the position of a binary vector) being chosen."@en ,
+                                         "Símbolo del índice que usa la expresión de una heurística de valor para el valor (o la posición de un vector binario) que se elige."@es ;
+                            rdfs:label "has value index symbol"@en ,
+                                       "tiene símbolo del índice de valor"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasWeight
@@ -1123,6 +1167,14 @@ CO-META:GreedyRepairComponent rdf:type owl:Class ;
                                            "Repair component that changes, one at a time, the value whose change reduces the constraint violation the most, until the solution is feasible."@en ;
                               rdfs:label "Componente de reparación voraz"@es ,
                                          "Greedy Repair Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#HeuristicInformation
+CO-META:HeuristicInformation rdf:type owl:Class ;
+                             rdfs:comment "Deseabilidad de una elección cuando una solución se construye paso a paso (p. ej. la visibilidad de las colonias de hormigas o la función voraz de GRASP), dada por una expresión LaTeX sobre los símbolos del problema y uno o dos índices."@es ,
+                                          "Desirability of a choice when a solution is built step by step (e.g. the visibility of ant colonies or the greedy function of GRASP), given by a LaTeX expression over the symbols of the problem and one or two indices."@en ;
+                             rdfs:label "Heuristic Information"@en ,
+                                        "Información heurística"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ImprovementAcceptanceComponent
@@ -2178,6 +2230,16 @@ CO-META:TournamentSelectionComponent rdf:type owl:Class ;
                                                 "Tournament Selection Component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#TransitionHeuristic
+CO-META:TransitionHeuristic rdf:type owl:Class ;
+                            rdfs:subClassOf CO-META:HeuristicInformation ;
+                            owl:disjointWith CO-META:ValueHeuristic ;
+                            rdfs:comment "Deseabilidad de colocar un valor justo después de otro en una secuencia, indexada por hasFromIndexSymbol y hasToIndexSymbol."@es ,
+                                         "Desirability of placing a value right after another one in a sequence, indexed by hasFromIndexSymbol and hasToIndexSymbol."@en ;
+                            rdfs:label "Heurística de transición"@es ,
+                                       "Transition Heuristic"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#TruncationComponent
 CO-META:TruncationComponent rdf:type owl:Class ;
                             rdfs:subClassOf CO-META:PopulationOperatorComponent ,
@@ -2261,6 +2323,15 @@ CO-META:ValueDomain rdf:type owl:Class ;
                                  "Conjunto de valores que puede tomar una magnitud o un parámetro, definido por un conjunto numérico base y cotas inferior y superior opcionales, inclusivas o exclusivas (p. ej., los enteros entre 0 y 1)."@es ;
                     rdfs:label "Value Domain"@en ,
                                "Dominio de valores"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ValueHeuristic
+CO-META:ValueHeuristic rdf:type owl:Class ;
+                       rdfs:subClassOf CO-META:HeuristicInformation ;
+                       rdfs:comment "Deseabilidad de elegir un valor (de una permutación o conjunto) o de poner a 1 una posición (de un vector binario), indexada por hasValueIndexSymbol."@es ,
+                                    "Desirability of choosing a value (of a permutation or set) or of setting a position to 1 (of a binary vector), indexed by hasValueIndexSymbol."@en ;
+                       rdfs:label "Heurística de valor"@es ,
+                                  "Value Heuristic"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ValueSpecification
@@ -2797,6 +2868,7 @@ CO-META:Zero rdf:type owl:NamedIndividual ,
                 CO-META:ConstraintHandling
                 CO-META:DataShape
                 CO-META:DataStructure
+                CO-META:HeuristicInformation
                 CO-META:Metaheuristic
                 CO-META:MetaheuristicComponent
                 CO-META:Parameter
