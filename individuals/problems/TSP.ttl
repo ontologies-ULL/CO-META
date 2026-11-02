@@ -83,6 +83,8 @@ CO-META:TSP_N_reference rdf:type owl:NamedIndividual ,
 CO-META:TSP_visit_each_city_once rdf:type owl:NamedIndividual ,
                                           CO-META:Constraint ;
                                  CO-META:hasLatexExpression "\\left|\\{ i \\in \\{1, \\ldots, N\\} : x_i = j \\}\\right| = 1 \\quad \\forall j \\in \\{1, \\ldots, N\\}" ;
+                                 CO-META:isHard "true"^^xsd:boolean ;
+                                 CO-META:isImpliedByShape "true"^^xsd:boolean ;
                                  rdfs:label "Cada ciudad se visita exactamente una vez"@es ,
                                             "Each city is visited exactly once"@en .
 

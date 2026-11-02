@@ -93,6 +93,7 @@ CO-META:KNAPSACK_W rdf:type owl:NamedIndividual ,
 CO-META:KNAPSACK_capacity rdf:type owl:NamedIndividual ,
                                    CO-META:Constraint ;
                           CO-META:hasLatexExpression "\\sum_{i=1}^{N} w_i x_i \\leq W" ;
+                          CO-META:isHard "true"^^xsd:boolean ;
                           rdfs:label "Capacidad de la mochila"@es ,
                                      "Knapsack capacity"@en .
 
