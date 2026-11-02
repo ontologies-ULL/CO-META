@@ -107,9 +107,19 @@ CO-META:KNAPSACK_maximum_value rdf:type owl:NamedIndividual ,
                                           "Valor total máximo"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_value_per_weight
+CO-META:KNAPSACK_value_per_weight rdf:type owl:NamedIndividual ,
+                                           CO-META:ValueHeuristic ;
+                                  CO-META:hasLatexExpression "\\frac{v_j}{w_j}" ;
+                                  CO-META:hasValueIndexSymbol "j" ;
+                                  rdfs:label "Valor por unidad de peso"@es ,
+                                             "Value per unit of weight"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_x
 CO-META:KNAPSACK_x rdf:type owl:NamedIndividual ,
                             CO-META:DecisionVariable ;
+                   CO-META:hasHeuristic CO-META:KNAPSACK_value_per_weight ;
                    CO-META:hasShape CO-META:KNAPSACK_x_shape ;
                    CO-META:hasValueDomain CO-META:BinaryIntegers ;
                    CO-META:hasIdentifier "x" ;
