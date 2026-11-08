@@ -57,6 +57,17 @@ dcterms:abstract rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  https://w3id.org/ontologies-ULL/CO-META#assignsParameterValue
+CO-META:assignsParameterValue rdf:type owl:ObjectProperty ,
+                                       owl:FunctionalProperty ;
+                              rdfs:domain CO-META:ParameterAssignment ;
+                              rdfs:range CO-META:ParameterValue ;
+                              rdfs:comment "Parameter value of the metaheuristic whose value the assignment replaces."@en ,
+                                           "Valor de parámetro de la metaheurística cuyo valor sustituye la asignación."@es ;
+                              rdfs:label "asigna valor de parámetro"@es ,
+                                         "assigns parameter value"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#bindsQuantity
 CO-META:bindsQuantity rdf:type owl:ObjectProperty ,
                                owl:FunctionalProperty ;
@@ -284,6 +295,16 @@ CO-META:hasObjective rdf:type owl:ObjectProperty ;
                      rdfs:range CO-META:Objective .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasObjectiveValue
+CO-META:hasObjectiveValue rdf:type owl:ObjectProperty ;
+                          rdfs:domain CO-META:SolutionRecord ;
+                          rdfs:range CO-META:ObjectiveValue ;
+                          rdfs:comment "Valor de uno de los objetivos para la solución."@es ,
+                                       "Value of one of the objectives for the solution."@en ;
+                          rdfs:label "has objective value"@en ,
+                                     "tiene valor de objetivo"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasOutput
 CO-META:hasOutput rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf CO-META:isConnectedTo ;
@@ -312,6 +333,16 @@ CO-META:hasParameter rdf:type owl:ObjectProperty ;
                      rdfs:range CO-META:ParameterValue .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasParameterAssignment
+CO-META:hasParameterAssignment rdf:type owl:ObjectProperty ;
+                               rdfs:domain CO-META:Execution ;
+                               rdfs:range CO-META:ParameterAssignment ;
+                               rdfs:comment "Valor dado a un valor de parámetro de la metaheurística para esta ejecución."@es ,
+                                            "Value given to a parameter value of the metaheuristic for this execution."@en ;
+                               rdfs:label "has parameter assignment"@en ,
+                                          "tiene asignación de parámetro"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasProblemElement
 CO-META:hasProblemElement rdf:type owl:ObjectProperty ;
                           rdfs:domain CO-META:Problem ;
@@ -331,6 +362,16 @@ CO-META:hasResult rdf:type owl:ObjectProperty ,
                                "Estructura de datos cuyas soluciones son el resultado de la metaheurística. Si no se indica, el resultado es la mejor solución encontrada o, con varios objetivos, las soluciones no dominadas encontradas."@es ;
                   rdfs:label "has result"@en ,
                              "tiene resultado"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasResultSolution
+CO-META:hasResultSolution rdf:type owl:ObjectProperty ;
+                          rdfs:domain CO-META:ExecutionResult ;
+                          rdfs:range CO-META:SolutionRecord ;
+                          rdfs:comment "Solución devuelta por la repetición: la mejor o, con varios objetivos, cada una de las no dominadas."@es ,
+                                       "Solution returned by the run: the best one or, with several objectives, each non-dominated one."@en ;
+                          rdfs:label "has result solution"@en ,
+                                     "tiene solución resultado"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasRowCount
@@ -387,6 +428,17 @@ CO-META:hasStart rdf:type owl:ObjectProperty ;
                  owl:inverseOf CO-META:isStartOf ;
                  rdfs:domain CO-META:Metaheuristic ;
                  rdfs:range CO-META:MetaheuristicComponent .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasTraceLevel
+CO-META:hasTraceLevel rdf:type owl:ObjectProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain CO-META:Execution ;
+                      rdfs:range CO-META:TraceLevel ;
+                      rdfs:comment "Lo que se registra durante la ejecución."@es ,
+                                   "What is recorded while the execution runs."@en ;
+                      rdfs:label "has trace level"@en ,
+                                 "tiene nivel de traza"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasType
@@ -467,6 +519,17 @@ CO-META:isObjectiveOf rdf:type owl:ObjectProperty .
 CO-META:isParameterOf rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#isResultOf
+CO-META:isResultOf rdf:type owl:ObjectProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain CO-META:ExecutionResult ;
+                   rdfs:range CO-META:Execution ;
+                   rdfs:comment "Ejecución una de cuyas repeticiones dio este resultado."@es ,
+                                "Execution one of whose runs gave this result."@en ;
+                   rdfs:label "es resultado de"@es ,
+                              "is result of"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#isStartOf
 CO-META:isStartOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf CO-META:isConnectedTo .
@@ -481,6 +544,17 @@ CO-META:mapsColumn rdf:type owl:ObjectProperty ,
                                 "Columna cuyos valores están en el campo."@es ;
                    rdfs:label "corresponde a columna"@es ,
                               "maps column"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ofObjective
+CO-META:ofObjective rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain CO-META:ObjectiveValue ;
+                    rdfs:range CO-META:Objective ;
+                    rdfs:comment "Objective whose value this is."@en ,
+                                 "Objetivo del que este es el valor."@es ;
+                    rdfs:label "de objetivo"@es ,
+                               "of objective"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#readsData
@@ -502,6 +576,17 @@ CO-META:refersTo rdf:type owl:ObjectProperty ,
                               "Parámetro cuyo valor determina una especificación de valor: un parámetro de entrada del problema o el valor de un parámetro del algoritmo."@es ;
                  rdfs:label "refers to"@en ,
                             "se refiere a"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#solvesInstance
+CO-META:solvesInstance rdf:type owl:ObjectProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain CO-META:Execution ;
+                       rdfs:range CO-META:ProblemInstance ;
+                       rdfs:comment "Instancia del problema sobre la que se ejecuta la metaheurística."@es ,
+                                    "Problem instance on which the metaheuristic runs."@en ;
+                       rdfs:label "resuelve instancia"@es ,
+                                  "solves instance"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#supportsShape
@@ -528,6 +613,17 @@ CO-META:usesComponent rdf:type owl:ObjectProperty ;
                                  "uses component"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#usesMetaheuristic
+CO-META:usesMetaheuristic rdf:type owl:ObjectProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain CO-META:Execution ;
+                          rdfs:range CO-META:Metaheuristic ;
+                          rdfs:comment "Metaheuristic that runs."@en ,
+                                       "Metaheurística que se ejecuta."@es ;
+                          rdfs:label "usa metaheurística"@es ,
+                                     "uses metaheuristic"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#writesData
 CO-META:writesData rdf:type owl:ObjectProperty ;
                    rdfs:domain CO-META:DataHandlerComponent ;
@@ -537,6 +633,16 @@ CO-META:writesData rdf:type owl:ObjectProperty ;
 #################################################################
 #    Data properties
 #################################################################
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasAssignedValue
+CO-META:hasAssignedValue rdf:type owl:DatatypeProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:domain CO-META:ParameterAssignment ;
+                         rdfs:comment "Valor asignado al valor de parámetro. Como hasValue, debe ajustarse al dominio de valores del parámetro."@es ,
+                                      "Value assigned to the parameter value. Like hasValue, it must fit the value domain of the parameter."@en ;
+                         rdfs:label "has assigned value"@en ,
+                                    "tiene valor asignado"@es .
+
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasCodeReference
 CO-META:hasCodeReference rdf:type owl:DatatypeProperty ;
@@ -578,6 +684,28 @@ CO-META:hasDimensionIndex rdf:type owl:DatatypeProperty ,
                                        "Dimensión de la solución cuyo tamaño se referencia: 1 para la longitud de una secuencia o las filas de una matriz, 2 para las columnas de una matriz."@es ;
                           rdfs:label "has dimension index"@en ,
                                      "tiene índice de dimensión"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasElapsedTime
+CO-META:hasElapsedTime rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain CO-META:ExecutionResult ;
+                       rdfs:range xsd:double ;
+                       rdfs:comment "Running time of the run, in seconds."@en ,
+                                    "Tiempo de ejecución de la repetición, en segundos."@es ;
+                       rdfs:label "has elapsed time"@en ,
+                                  "tiene tiempo transcurrido"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasEvaluationCount
+CO-META:hasEvaluationCount rdf:type owl:DatatypeProperty ,
+                                    owl:FunctionalProperty ;
+                           rdfs:domain CO-META:ExecutionResult ;
+                           rdfs:range xsd:nonNegativeInteger ;
+                           rdfs:comment "Number of evaluations of solutions in the run."@en ,
+                                        "Número de evaluaciones de soluciones en la repetición."@es ;
+                           rdfs:label "has evaluation count"@en ,
+                                      "tiene número de evaluaciones"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasFromIndexSymbol
@@ -672,6 +800,17 @@ CO-META:hasLiteralValue rdf:type owl:DatatypeProperty ,
                                    "tiene valor literal"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasNumericValue
+CO-META:hasNumericValue rdf:type owl:DatatypeProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain CO-META:ObjectiveValue ;
+                        rdfs:range xsd:double ;
+                        rdfs:comment "Valor del objetivo."@es ,
+                                     "Value of the objective."@en ;
+                        rdfs:label "has numeric value"@en ,
+                                   "tiene valor numérico"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasOutputSize
 CO-META:hasOutputSize rdf:type owl:DatatypeProperty ;
                       rdfs:domain CO-META:MetaheuristicComponent ;
@@ -698,6 +837,50 @@ CO-META:hasPosition rdf:type owl:DatatypeProperty ,
                                  "Posición de un atributo en el orden en que se describen los registros de su tabla."@es ;
                     rdfs:label "has position"@en ,
                                "tiene posición"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasRunIndex
+CO-META:hasRunIndex rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain CO-META:ExecutionResult ;
+                    rdfs:range xsd:positiveInteger ;
+                    rdfs:comment "Number of the run, from 1."@en ,
+                                 "Número de la repetición, desde 1."@es ;
+                    rdfs:label "has run index"@en ,
+                               "tiene número de repetición"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasRuns
+CO-META:hasRuns rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain CO-META:Execution ;
+                rdfs:range xsd:positiveInteger ;
+                rdfs:comment "Number of independent runs (one by default)."@en ,
+                             "Número de repeticiones independientes (una por defecto)."@es ;
+                rdfs:label "has runs"@en ,
+                           "tiene repeticiones"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasSeed
+CO-META:hasSeed rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain CO-META:Execution ;
+                rdfs:range xsd:nonNegativeInteger ;
+                rdfs:comment "Seed of the random number generator in the first run; each following run uses the next one."@en ,
+                             "Semilla del generador de números aleatorios en la primera repetición; cada repetición siguiente usa la siguiente."@es ;
+                rdfs:label "has seed"@en ,
+                           "tiene semilla"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasSolutionValues
+CO-META:hasSolutionValues rdf:type owl:DatatypeProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain CO-META:SolutionRecord ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Valores de las variables de decisión, como un objeto JSON indexado por sus identificadores."@es ,
+                                       "Values of the decision variables, as a JSON object keyed by their identifiers."@en ;
+                          rdfs:label "has solution values"@en ,
+                                     "tiene valores de la solución"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasSourceField
@@ -770,6 +953,17 @@ CO-META:isDistinct rdf:type owl:DatatypeProperty ,
                                 "Indica si los valores de una colección deben ser distintos entre sí."@es ;
                    rdfs:label "is distinct"@en ,
                               "es sin repeticiones"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#isFeasible
+CO-META:isFeasible rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain CO-META:SolutionRecord ;
+                   rdfs:range xsd:boolean ;
+                   rdfs:comment "Si la solución cumple las restricciones duras."@es ,
+                                "Whether the solution meets the hard constraints."@en ;
+                   rdfs:label "es factible"@es ,
+                              "is feasible"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#isHard
@@ -1227,6 +1421,22 @@ CO-META:EvolutionaryAlgorithm rdf:type owl:Class ;
                                          "Evolutionary Algorithm"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#Execution
+CO-META:Execution rdf:type owl:Class ;
+                  rdfs:comment "Ejecución de una metaheurística sobre una instancia de un problema, con su semilla, número de repeticiones, nivel de traza y asignaciones de parámetros."@es ,
+                               "Run of a metaheuristic on a problem instance, with its seed, number of runs, trace level and parameter assignments."@en ;
+                  rdfs:label "Ejecución"@es ,
+                             "Execution"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ExecutionResult
+CO-META:ExecutionResult rdf:type owl:Class ;
+                        rdfs:comment "Outcome of one run of an execution."@en ,
+                                     "Resultado de una repetición de una ejecución."@es ;
+                        rdfs:label "Execution Result"@en ,
+                                   "Resultado de ejecución"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#FirstImprovementLocalSearchComponent
 CO-META:FirstImprovementLocalSearchComponent rdf:type owl:Class ;
                                              rdfs:subClassOf CO-META:LocalSearchComponent ;
@@ -1659,6 +1869,14 @@ CO-META:Objective rdf:type owl:Class ;
                              "Objetivo"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#ObjectiveValue
+CO-META:ObjectiveValue rdf:type owl:Class ;
+                       rdfs:comment "Valor de un objetivo para una solución."@es ,
+                                    "Value of an objective for a solution."@en ;
+                       rdfs:label "Objective Value"@en ,
+                                  "Valor de objetivo"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#OrderCrossoverComponent
 CO-META:OrderCrossoverComponent rdf:type owl:Class ;
                                 rdfs:subClassOf CO-META:CrossoverComponent ,
@@ -1678,6 +1896,14 @@ CO-META:Parameter rdf:type owl:Class ;
                                "Defines the structure of a parameter used by a component, such as its type and its valid range of values."@en ;
                   rdfs:label "Parameter"@en ,
                              "Parámetro"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ParameterAssignment
+CO-META:ParameterAssignment rdf:type owl:Class ;
+                            rdfs:comment "Valor dado a un valor de parámetro de la metaheurística para una ejecución, que sustituye al valor de la plantilla."@es ,
+                                         "Value given to a parameter value of the metaheuristic for one execution, overriding the value of the template."@en ;
+                            rdfs:label "Asignación de parámetro"@es ,
+                                       "Parameter Assignment"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ParameterReference
@@ -2229,6 +2455,14 @@ CO-META:SingleSolutionMetaheuristic rdf:type owl:Class ;
                                                "Single Solution Based Metaheuristic"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#SolutionRecord
+CO-META:SolutionRecord rdf:type owl:Class ;
+                       rdfs:comment "A solution of a result, with its values and its objective values."@en ,
+                                    "Una solución de un resultado, con sus valores y los valores de sus objetivos."@es ;
+                       rdfs:label "Registro de solución"@es ,
+                                  "Solution Record"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#SolutionSizeReference
 CO-META:SolutionSizeReference rdf:type owl:Class ;
                               rdfs:subClassOf CO-META:ValueSpecification ,
@@ -2385,6 +2619,20 @@ CO-META:TournamentSelectionComponent rdf:type owl:Class ;
                                                   "Selection component that selects each individual as the best one of a randomly chosen group (tournament). It has elitism and tournament size parameters."@en ;
                                      rdfs:label "Componente de selección por torneo"@es ,
                                                 "Tournament Selection Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TraceLevel
+CO-META:TraceLevel rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Class ;
+                                         owl:oneOf ( CO-META:ComponentTrace
+                                                     CO-META:IterationTrace
+                                                     CO-META:NoTrace
+                                                   )
+                                       ] ;
+                   rdfs:comment "Lo que se registra durante una ejecución."@es ,
+                                "What is recorded while an execution runs."@en ;
+                   rdfs:label "Nivel de traza"@es ,
+                              "Trace Level"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TransitionHeuristic
@@ -2640,6 +2888,15 @@ CO-META:Both rdf:type owl:NamedIndividual ,
                         "Both"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#ComponentTrace
+CO-META:ComponentTrace rdf:type owl:NamedIndividual ,
+                                CO-META:TraceLevel ;
+                       rdfs:comment "Every execution of a component is recorded, with its inputs and outputs."@en ,
+                                    "Se registra cada ejecución de un componente, con sus entradas y salidas."@es ;
+                       rdfs:label "Component trace"@en ,
+                                  "Traza por componente"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints
 CO-META:CrossoverKPoints rdf:type owl:NamedIndividual ,
                                   CO-META:Parameter ;
@@ -2737,6 +2994,15 @@ CO-META:Integers rdf:type owl:NamedIndividual ,
                             "Enteros"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#IterationTrace
+CO-META:IterationTrace rdf:type owl:NamedIndividual ,
+                                CO-META:TraceLevel ;
+                       rdfs:comment "Se registra el mejor valor en cada iteración del bucle principal."@es ,
+                                    "The best value is recorded at every iteration of the main loop."@en ;
+                       rdfs:label "Iteration trace"@en ,
+                                  "Traza por iteración"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#Iterations
 CO-META:Iterations rdf:type owl:NamedIndividual ,
                             CO-META:Parameter ;
@@ -2804,6 +3070,15 @@ CO-META:NeighbourhoodCount rdf:type owl:NamedIndividual ,
                                         "Número de vecindarios de una búsqueda de vecindario variable."@es ;
                            rdfs:label "Neighbourhood Count"@en ,
                                       "Número de vecindarios"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#NoTrace
+CO-META:NoTrace rdf:type owl:NamedIndividual ,
+                         CO-META:TraceLevel ;
+                rdfs:comment "Only the results are recorded."@en ,
+                             "Solo se registran los resultados."@es ;
+                rdfs:label "No trace"@en ,
+                           "Sin traza"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers
@@ -3055,14 +3330,20 @@ CO-META:Zero rdf:type owl:NamedIndividual ,
                 CO-META:DataFormat
                 CO-META:DataShape
                 CO-META:DataStructure
+                CO-META:Execution
+                CO-META:ExecutionResult
                 CO-META:HeuristicInformation
                 CO-META:Metaheuristic
                 CO-META:MetaheuristicComponent
+                CO-META:ObjectiveValue
                 CO-META:Parameter
+                CO-META:ParameterAssignment
                 CO-META:ParameterValue
                 CO-META:Problem
                 CO-META:ProblemElement
                 CO-META:ProblemInstance
+                CO-META:SolutionRecord
+                CO-META:TraceLevel
                 CO-META:ValueDomain
                 CO-META:ValueSpecification
               )
@@ -3100,6 +3381,14 @@ CO-META:Zero rdf:type owl:NamedIndividual ,
                         CO-META:Integers
                         CO-META:Reals
                         CO-META:Solutions
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( CO-META:ComponentTrace
+                        CO-META:IterationTrace
+                        CO-META:NoTrace
                       )
 ] .
 

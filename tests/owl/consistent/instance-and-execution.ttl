@@ -1,0 +1,69 @@
+# Expected: consistent.
+# A problem instance with its data bindings, an execution of a metaheuristic
+# on it with a parameter assignment, and the result of one of its runs.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/instance-and-execution> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:problem a owl:NamedIndividual , CO-META:Problem ;
+    CO-META:hasProblemElement t:capacity , t:items .
+t:capacity a owl:NamedIndividual , CO-META:InputParameter ;
+    CO-META:hasShape CO-META:Scalar ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ; CO-META:hasBaseType CO-META:Integers ] .
+t:items a owl:NamedIndividual , CO-META:ProblemData ;
+    CO-META:hasShape [ a CO-META:TableShape ;
+                       CO-META:hasRowCount [ a CO-META:LiteralValue ; CO-META:hasLiteralValue 10 ] ;
+                       CO-META:hasColumn t:weight ] .
+t:weight a owl:NamedIndividual , CO-META:Column ;
+    CO-META:hasPosition 1 ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ; CO-META:hasBaseType CO-META:Integers ] .
+t:objective a owl:NamedIndividual , CO-META:MaximizationObjective ;
+    CO-META:isObjectiveOf t:problem .
+
+t:instance a owl:NamedIndividual , CO-META:ProblemInstance ;
+    CO-META:isInstanceOf t:problem ;
+    CO-META:hasDataBinding t:capacity_binding , t:items_binding .
+t:capacity_binding a owl:NamedIndividual , CO-META:DataBinding ;
+    CO-META:bindsQuantity t:capacity ;
+    CO-META:hasSourceFormat CO-META:InlineFormat ;
+    CO-META:hasInlineValue "165" .
+t:items_binding a owl:NamedIndividual , CO-META:DataBinding ;
+    CO-META:bindsQuantity t:items ;
+    CO-META:hasSourceFormat CO-META:CsvFormat ;
+    CO-META:hasSourceLocation "items.csv"^^xsd:anyURI ;
+    CO-META:hasHeaderRow true ;
+    CO-META:hasDelimiter ";" ;
+    CO-META:hasColumnMapping [ a CO-META:ColumnMapping ; CO-META:mapsColumn t:weight ; CO-META:hasSourceField "weight" ] .
+
+t:metaheuristic a owl:NamedIndividual , CO-META:Metaheuristic ;
+    CO-META:hasStart t:generate .
+t:generate a owl:NamedIndividual , CO-META:RandomGenerationComponent ;
+    CO-META:hasParameter t:population_size .
+t:population_size a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:PopulationSize ; CO-META:hasValue 10 .
+
+t:execution a owl:NamedIndividual , CO-META:Execution ;
+    CO-META:solvesInstance t:instance ;
+    CO-META:usesMetaheuristic t:metaheuristic ;
+    CO-META:hasSeed 7 ;
+    CO-META:hasRuns 2 ;
+    CO-META:hasTraceLevel CO-META:IterationTrace ;
+    CO-META:hasParameterAssignment [ a CO-META:ParameterAssignment ;
+                                     CO-META:assignsParameterValue t:population_size ;
+                                     CO-META:hasAssignedValue 30 ] .
+
+t:result a owl:NamedIndividual , CO-META:ExecutionResult ;
+    CO-META:isResultOf t:execution ;
+    CO-META:hasRunIndex 1 ;
+    CO-META:hasEvaluationCount 1200 ;
+    CO-META:hasElapsedTime "0.25"^^xsd:double ;
+    CO-META:hasResultSolution [ a CO-META:SolutionRecord ;
+                                CO-META:hasSolutionValues "{\"x\": [1, 0, 1]}" ;
+                                CO-META:isFeasible true ;
+                                CO-META:hasObjectiveValue [ a CO-META:ObjectiveValue ;
+                                                            CO-META:ofObjective t:objective ;
+                                                            CO-META:hasNumericValue "309.0"^^xsd:double ] ] .

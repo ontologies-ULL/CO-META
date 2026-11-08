@@ -1,0 +1,11 @@
+# Expected: inconsistent.
+# An execution records one trace level.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/single-trace-level> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:execution a owl:NamedIndividual , CO-META:Execution ;
+    CO-META:hasTraceLevel CO-META:NoTrace , CO-META:ComponentTrace .

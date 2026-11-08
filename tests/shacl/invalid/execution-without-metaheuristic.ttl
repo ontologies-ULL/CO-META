@@ -1,0 +1,14 @@
+# Expected: SHACL violation (ExecutionShape).
+# An execution must name the metaheuristic it runs.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/execution-without-metaheuristic> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:problem a owl:NamedIndividual , CO-META:Problem .
+t:instance a owl:NamedIndividual , CO-META:ProblemInstance ;
+    CO-META:isInstanceOf t:problem .
+t:execution a owl:NamedIndividual , CO-META:Execution ;
+    CO-META:solvesInstance t:instance .

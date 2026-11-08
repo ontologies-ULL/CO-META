@@ -1,0 +1,19 @@
+# Expected inferences: see execution-closed-values.rq.
+# Constraint handlings, data formats and trace levels are closed lists, so
+# their members are typed and the domains of the properties classify the
+# individuals that use them.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/execution-closed-values> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:metaheuristic a owl:NamedIndividual ;
+    CO-META:hasConstraintHandling CO-META:PenaltyHandling .
+t:binding a owl:NamedIndividual ;
+    CO-META:hasSourceFormat CO-META:JsonFormat .
+t:execution a owl:NamedIndividual ;
+    CO-META:hasTraceLevel CO-META:ComponentTrace .
+t:result a owl:NamedIndividual ;
+    CO-META:isResultOf t:execution .

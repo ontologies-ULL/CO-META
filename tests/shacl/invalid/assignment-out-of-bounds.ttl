@@ -1,0 +1,16 @@
+# Expected: SHACL violation (ParameterAssignmentShape).
+# The value assigned to a parameter value must be within the value domain of its parameter.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/assignment-out-of-bounds> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:rate a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:CrossoverProbability ;
+    CO-META:hasValue "0.9"^^xsd:double .
+t:assignment a owl:NamedIndividual , CO-META:ParameterAssignment ;
+    CO-META:assignsParameterValue t:rate ;
+    CO-META:hasAssignedValue "1.5"^^xsd:double .
