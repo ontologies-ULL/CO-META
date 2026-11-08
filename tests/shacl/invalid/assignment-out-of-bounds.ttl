@@ -13,4 +13,4 @@ t:rate a owl:NamedIndividual , CO-META:ParameterValue ;
     CO-META:hasValue "0.9"^^xsd:double .
 t:assignment a owl:NamedIndividual , CO-META:ParameterAssignment ;
     CO-META:assignsParameterValue t:rate ;
-    CO-META:hasAssignedValue "1.5"^^xsd:double .
+    CO-META:hasValue "1.5"^^xsd:double .

@@ -15,5 +15,5 @@ t:binding a owl:NamedIndividual ;
     CO-META:hasSourceFormat CO-META:JsonFormat .
 t:execution a owl:NamedIndividual ;
     CO-META:hasTraceLevel CO-META:ComponentTrace .
-t:result a owl:NamedIndividual ;
-    CO-META:isResultOf t:execution .
+t:run a owl:NamedIndividual ;
+    CO-META:hasRunIndex 1 .

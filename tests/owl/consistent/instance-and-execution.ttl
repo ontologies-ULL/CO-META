@@ -50,20 +50,20 @@ t:execution a owl:NamedIndividual , CO-META:Execution ;
     CO-META:solvesInstance t:instance ;
     CO-META:usesMetaheuristic t:metaheuristic ;
     CO-META:hasSeed 7 ;
-    CO-META:hasRuns 2 ;
+    CO-META:hasRunCount 2 ;
     CO-META:hasTraceLevel CO-META:IterationTrace ;
     CO-META:hasParameterAssignment [ a CO-META:ParameterAssignment ;
                                      CO-META:assignsParameterValue t:population_size ;
-                                     CO-META:hasAssignedValue 30 ] .
+                                     CO-META:hasValue 30 ] ;
+    CO-META:hasRun t:run .
 
-t:result a owl:NamedIndividual , CO-META:ExecutionResult ;
-    CO-META:isResultOf t:execution ;
+t:run a owl:NamedIndividual , CO-META:Run ;
     CO-META:hasRunIndex 1 ;
     CO-META:hasEvaluationCount 1200 ;
     CO-META:hasElapsedTime "0.25"^^xsd:double ;
-    CO-META:hasResultSolution [ a CO-META:SolutionRecord ;
-                                CO-META:hasSolutionValues "{\"x\": [1, 0, 1]}" ;
-                                CO-META:isFeasible true ;
-                                CO-META:hasObjectiveValue [ a CO-META:ObjectiveValue ;
-                                                            CO-META:ofObjective t:objective ;
-                                                            CO-META:hasNumericValue "309.0"^^xsd:double ] ] .
+    CO-META:hasSolution [ a CO-META:SolutionRecord ;
+                          CO-META:hasVariableValues "{\"x\": [1, 0, 1]}" ;
+                          CO-META:isFeasible true ;
+                          CO-META:hasObjectiveValue [ a CO-META:ObjectiveValue ;
+                                                      CO-META:hasType t:objective ;
+                                                      CO-META:hasValue "309.0"^^xsd:double ] ] .

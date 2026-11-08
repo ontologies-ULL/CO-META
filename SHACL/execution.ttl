@@ -32,7 +32,7 @@ cm:ParameterAssignmentShape
         sh:message "An assignment must state the parameter value it assigns." ;
     ] ;
     sh:property [
-        sh:path cm:hasAssignedValue ;
+        sh:path cm:hasValue ;
         sh:minCount 1 ;
         sh:message "An assignment must state the assigned value." ;
     ] ;
@@ -45,7 +45,7 @@ cm:ParameterAssignmentShape
             PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
             SELECT $this ?value ?bound
             WHERE {
-                $this cm:hasAssignedValue ?value ;
+                $this cm:hasValue ?value ;
                       cm:assignsParameterValue/cm:hasType/cm:hasValueDomain ?domain .
                 {
                     ?domain cm:hasLowerBound/cm:hasLiteralValue ?bound .

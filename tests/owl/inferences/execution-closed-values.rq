@@ -5,7 +5,7 @@ ASK {
     t:metaheuristic a cm:Metaheuristic .
     t:binding a cm:DataBinding .
     t:execution a cm:Execution .
-    t:result a cm:ExecutionResult .
+    t:run a cm:Run .
     cm:PenaltyHandling a cm:ConstraintHandling .
     cm:JsonFormat a cm:DataFormat .
     cm:ComponentTrace a cm:TraceLevel .
