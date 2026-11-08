@@ -6377,6 +6377,29 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#HeuristicInformation"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasIdealValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Best value the objective can take. With hasNadirValue, the objective is normalized to (value - ideal) / (nadir - ideal) before it is weighted (hasWeight), so that objectives of different scales can be aggregated."
+  }, {
+    "@language" : "es",
+    "@value" : "Mejor valor que puede tomar el objetivo. Con hasNadirValue, el objetivo se normaliza a (valor - ideal) / (nadir - ideal) antes de ponderarlo (hasWeight), para poder agregar objetivos de escalas distintas."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Objective"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has ideal value"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene valor ideal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasIdentifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -6595,6 +6618,29 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueSpecification"
+  } ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasNadirValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Peor valor del objetivo entre las soluciones eficientes. Se usa con hasIdealValue para normalizar el objetivo."
+  }, {
+    "@language" : "en",
+    "@value" : "Worst value of the objective among the efficient solutions. It is used with hasIdealValue to normalize the objective."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#Objective"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has nadir value"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene valor nadir"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasObjective",

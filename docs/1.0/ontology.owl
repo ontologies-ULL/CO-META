@@ -1055,6 +1055,21 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasIdealValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasIdealValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Objective"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Best value the objective can take. With hasNadirValue, the objective is normalized to (value - ideal) / (nadir - ideal) before it is weighted (hasWeight), so that objectives of different scales can be aggregated.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Mejor valor que puede tomar el objetivo. Con hasNadirValue, el objetivo se normaliza a (valor - ideal) / (nadir - ideal) antes de ponderarlo (hasWeight), para poder agregar objetivos de escalas distintas.</rdfs:comment>
+        <rdfs:label xml:lang="en">has ideal value</rdfs:label>
+        <rdfs:label xml:lang="es">tiene valor ideal</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#hasIdentifier -->
 
 
@@ -1151,6 +1166,21 @@
         <rdfs:comment xml:lang="es">Número indicado de forma explícita. Se usa xsd:double para -INF e INF.</rdfs:comment>
         <rdfs:label xml:lang="en">has literal value</rdfs:label>
         <rdfs:label xml:lang="es">tiene valor literal</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasNadirValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasNadirValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Objective"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="es">Peor valor del objetivo entre las soluciones eficientes. Se usa con hasIdealValue para normalizar el objetivo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Worst value of the objective among the efficient solutions. It is used with hasIdealValue to normalize the objective.</rdfs:comment>
+        <rdfs:label xml:lang="en">has nadir value</rdfs:label>
+        <rdfs:label xml:lang="es">tiene valor nadir</rdfs:label>
     </owl:DatatypeProperty>
     
 

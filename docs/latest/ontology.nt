@@ -691,6 +691,16 @@ _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/ontologies-ULL/CO-META#hasHeaderRow> <http://www.w3.org/2000/01/rdf-schema#label> "has header row"@en .
 <https://w3id.org/ontologies-ULL/CO-META#hasHeaderRow> <http://www.w3.org/2000/01/rdf-schema#label> "tiene fila de cabecera"@es .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#hasIdealValue
+<https://w3id.org/ontologies-ULL/CO-META#hasIdealValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasIdealValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasIdealValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
+<https://w3id.org/ontologies-ULL/CO-META#hasIdealValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<https://w3id.org/ontologies-ULL/CO-META#hasIdealValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Best value the objective can take. With hasNadirValue, the objective is normalized to (value - ideal) / (nadir - ideal) before it is weighted (hasWeight), so that objectives of different scales can be aggregated."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasIdealValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Mejor valor que puede tomar el objetivo. Con hasNadirValue, el objetivo se normaliza a (valor - ideal) / (nadir - ideal) antes de ponderarlo (hasWeight), para poder agregar objetivos de escalas distintas."@es .
+<https://w3id.org/ontologies-ULL/CO-META#hasIdealValue> <http://www.w3.org/2000/01/rdf-schema#label> "has ideal value"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasIdealValue> <http://www.w3.org/2000/01/rdf-schema#label> "tiene valor ideal"@es .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#hasIdentifier
 <https://w3id.org/ontologies-ULL/CO-META#hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
@@ -764,6 +774,16 @@ _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/ontologies-ULL/CO-META#hasLiteralValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Número indicado de forma explícita. Se usa xsd:double para -INF e INF."@es .
 <https://w3id.org/ontologies-ULL/CO-META#hasLiteralValue> <http://www.w3.org/2000/01/rdf-schema#label> "has literal value"@en .
 <https://w3id.org/ontologies-ULL/CO-META#hasLiteralValue> <http://www.w3.org/2000/01/rdf-schema#label> "tiene valor literal"@es .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#hasNadirValue
+<https://w3id.org/ontologies-ULL/CO-META#hasNadirValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasNadirValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasNadirValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#Objective> .
+<https://w3id.org/ontologies-ULL/CO-META#hasNadirValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<https://w3id.org/ontologies-ULL/CO-META#hasNadirValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Peor valor del objetivo entre las soluciones eficientes. Se usa con hasIdealValue para normalizar el objetivo."@es .
+<https://w3id.org/ontologies-ULL/CO-META#hasNadirValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Worst value of the objective among the efficient solutions. It is used with hasIdealValue to normalize the objective."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasNadirValue> <http://www.w3.org/2000/01/rdf-schema#label> "has nadir value"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasNadirValue> <http://www.w3.org/2000/01/rdf-schema#label> "tiene valor nadir"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#hasOutputSize
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
