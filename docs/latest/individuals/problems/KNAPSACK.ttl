@@ -80,6 +80,34 @@ CO-META:KNAPSACK_N_reference rdf:type owl:NamedIndividual ,
                              CO-META:refersTo CO-META:KNAPSACK_N .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_P01
+CO-META:KNAPSACK_P01 rdf:type owl:NamedIndividual ,
+                              CO-META:ProblemInstance ;
+                     CO-META:hasDataBinding CO-META:KNAPSACK_P01_capacity ,
+                                            CO-META:KNAPSACK_P01_items ;
+                     CO-META:isInstanceOf CO-META:KNAPSACK ;
+                     rdfs:comment "Instance P01 of Kreher and Stinson, with 10 items. Its optimum value is 309."@en ,
+                                  "Instancia P01 de Kreher y Stinson, con 10 objetos. Su valor óptimo es 309."@es ;
+                     rdfs:label "Knapsack P01"@en ,
+                                "Mochila P01"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_P01_capacity
+CO-META:KNAPSACK_P01_capacity rdf:type owl:NamedIndividual ,
+                                       CO-META:DataBinding ;
+                              CO-META:bindsQuantity CO-META:KNAPSACK_W ;
+                              CO-META:hasSourceFormat CO-META:InlineFormat ;
+                              CO-META:hasInlineValue "165" .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_P01_items
+CO-META:KNAPSACK_P01_items rdf:type owl:NamedIndividual ,
+                                    CO-META:DataBinding ;
+                           CO-META:bindsQuantity CO-META:KNAPSACK_Items ;
+                           CO-META:hasSourceFormat CO-META:InlineFormat ;
+                           CO-META:hasInlineValue "{\"Value\": [92, 57, 49, 68, 60, 43, 67, 84, 87, 72], \"Weight\": [23, 31, 29, 44, 53, 38, 63, 85, 89, 82]}" .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_W
 CO-META:KNAPSACK_W rdf:type owl:NamedIndividual ,
                             CO-META:InputParameter ;

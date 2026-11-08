@@ -30,6 +30,34 @@ CO-META:TSP rdf:type owl:NamedIndividual ,
                        "Traveling Salesman Problem"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#TSP_6
+CO-META:TSP_6 rdf:type owl:NamedIndividual ,
+                       CO-META:ProblemInstance ;
+              CO-META:hasDataBinding CO-META:TSP_6_cities ,
+                                     CO-META:TSP_6_n ;
+              CO-META:isInstanceOf CO-META:TSP ;
+              rdfs:comment "Seis ciudades en un hexágono. El recorrido óptimo las visita en orden y mide unos 22,42."@es ,
+                           "Six cities on a hexagon. The optimum tour visits them in order and is about 22.42 long."@en ;
+              rdfs:label "TSP con 6 ciudades"@es ,
+                         "TSP with 6 cities"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TSP_6_cities
+CO-META:TSP_6_cities rdf:type owl:NamedIndividual ,
+                              CO-META:DataBinding ;
+                     CO-META:bindsQuantity CO-META:TSP_Cities ;
+                     CO-META:hasSourceFormat CO-META:InlineFormat ;
+                     CO-META:hasInlineValue "{\"X\": [0, 4, 6, 4, 0, -2], \"Y\": [0, 0, 3, 6, 6, 3]}" .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#TSP_6_n
+CO-META:TSP_6_n rdf:type owl:NamedIndividual ,
+                         CO-META:DataBinding ;
+                CO-META:bindsQuantity CO-META:TSP_N ;
+                CO-META:hasSourceFormat CO-META:InlineFormat ;
+                CO-META:hasInlineValue "6" .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#TSP_Cities
 CO-META:TSP_Cities rdf:type owl:NamedIndividual ,
                             CO-META:ProblemData ;
