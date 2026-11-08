@@ -1,0 +1,10 @@
+# Expected: SHACL violation (ProblemInstanceShape).
+# A problem instance must name its problem.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/instance-without-problem> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:instance a owl:NamedIndividual , CO-META:ProblemInstance .

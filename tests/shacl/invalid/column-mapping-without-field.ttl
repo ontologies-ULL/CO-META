@@ -1,0 +1,14 @@
+# Expected: SHACL violation (ColumnMappingShape).
+# A column mapping must name the field of the source.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/column-mapping-without-field> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:weight a owl:NamedIndividual , CO-META:Column ;
+    CO-META:hasPosition 1 ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ; CO-META:hasBaseType CO-META:Integers ] .
+t:mapping a owl:NamedIndividual , CO-META:ColumnMapping ;
+    CO-META:mapsColumn t:weight .

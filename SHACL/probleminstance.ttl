@@ -1,0 +1,67 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+@prefix cm: <https://w3id.org/ontologies-ULL/CO-META#> .
+
+# Without these values the data of an instance cannot be read; under the open
+# world assumption OWL cannot require them.
+
+cm:ProblemInstanceShape
+    a sh:NodeShape ;
+    sh:targetClass cm:ProblemInstance ;
+    sh:property [
+        sh:path cm:isInstanceOf ;
+        sh:minCount 1 ;
+        sh:message "An instance must state the problem it is an instance of." ;
+    ] .
+
+cm:DataBindingShape
+    a sh:NodeShape ;
+    sh:targetClass cm:DataBinding ;
+    sh:property [
+        sh:path cm:bindsQuantity ;
+        sh:minCount 1 ;
+        sh:message "A data binding must state the problem datum it binds." ;
+    ] ;
+    sh:property [
+        sh:path cm:hasSourceFormat ;
+        sh:minCount 1 ;
+        sh:message "A data binding must state the format of its source." ;
+    ] ;
+
+    # An inline binding needs its value, and a file binding its location
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "The source of {$this} does not match its format." ;
+        sh:select """
+            PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+            SELECT $this
+            WHERE {
+                {
+                    $this cm:hasSourceFormat cm:InlineFormat .
+                    FILTER NOT EXISTS { $this cm:hasInlineValue ?value }
+                } UNION {
+                    $this cm:hasSourceFormat ?format .
+                    FILTER (?format IN (cm:CsvFormat, cm:JsonFormat))
+                    FILTER NOT EXISTS { $this cm:hasSourceLocation ?location }
+                }
+            }
+        """ ;
+    ] .
+
+cm:ColumnMappingShape
+    a sh:NodeShape ;
+    sh:targetClass cm:ColumnMapping ;
+    sh:property [
+        sh:path cm:mapsColumn ;
+        sh:minCount 1 ;
+        sh:message "A column mapping must state the column it maps." ;
+    ] ;
+    sh:property [
+        sh:path cm:hasSourceField ;
+        sh:minCount 1 ;
+        sh:message "A column mapping must state the field of the source." ;
+    ] .

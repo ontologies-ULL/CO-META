@@ -1,0 +1,15 @@
+# Expected: SHACL violation (DataBindingShape).
+# A data binding to a CSV or JSON file must give its location.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/file-binding-without-location> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:capacity a owl:NamedIndividual , CO-META:InputParameter ;
+    CO-META:hasShape CO-META:Scalar ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ; CO-META:hasBaseType CO-META:Integers ] .
+t:binding a owl:NamedIndividual , CO-META:DataBinding ;
+    CO-META:bindsQuantity t:capacity ;
+    CO-META:hasSourceFormat CO-META:JsonFormat .

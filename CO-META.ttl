@@ -57,6 +57,17 @@ dcterms:abstract rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  https://w3id.org/ontologies-ULL/CO-META#bindsQuantity
+CO-META:bindsQuantity rdf:type owl:ObjectProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain CO-META:DataBinding ;
+                      rdfs:range CO-META:ProblemData ;
+                      rdfs:comment "Dato del problema cuyos valores da la ligadura."@es ,
+                                   "Problem datum whose values the binding gives."@en ;
+                      rdfs:label "binds quantity"@en ,
+                                 "liga magnitud"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasBaseType
 CO-META:hasBaseType rdf:type owl:ObjectProperty ,
                              owl:FunctionalProperty ;
@@ -108,6 +119,16 @@ CO-META:hasColumnCount rdf:type owl:ObjectProperty ,
                                   "tiene número de columnas"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasColumnMapping
+CO-META:hasColumnMapping rdf:type owl:ObjectProperty ;
+                         rdfs:domain CO-META:DataBinding ;
+                         rdfs:range CO-META:ColumnMapping ;
+                         rdfs:comment "Campo del origen que contiene una columna de la tabla ligada."@es ,
+                                      "Field of the source that holds a column of the bound table."@en ;
+                         rdfs:label "has column mapping"@en ,
+                                    "tiene correspondencia de columna"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasComponent
 CO-META:hasComponent rdf:type owl:ObjectProperty ;
                      rdfs:domain CO-META:CompositeShape ;
@@ -154,6 +175,16 @@ CO-META:hasCurrentOutput rdf:type owl:ObjectProperty ;
                                       "Salida que alimenta la entrada del componente de destino con la solución o población actual, con la que se juzgan las candidatas."@es ;
                          rdfs:label "has current output"@en ,
                                     "tiene salida actual"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasDataBinding
+CO-META:hasDataBinding rdf:type owl:ObjectProperty ;
+                       rdfs:domain CO-META:ProblemInstance ;
+                       rdfs:range CO-META:DataBinding ;
+                       rdfs:comment "Origen de los valores de uno de los datos del problema de la instancia."@es ,
+                                    "Source of the values of one of the problem data of the instance."@en ;
+                       rdfs:label "has data binding"@en ,
+                                  "tiene ligadura de datos"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasDataStructure
@@ -339,6 +370,17 @@ CO-META:hasShape rdf:type owl:ObjectProperty ,
                             "tiene forma"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasSourceFormat
+CO-META:hasSourceFormat rdf:type owl:ObjectProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain CO-META:DataBinding ;
+                        rdfs:range CO-META:DataFormat ;
+                        rdfs:comment "Format of the source of the values."@en ,
+                                     "Formato del origen de los valores."@es ;
+                        rdfs:label "has source format"@en ,
+                                   "tiene formato de origen"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasStart
 CO-META:hasStart rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf CO-META:isConnectedTo ;
@@ -406,6 +448,17 @@ CO-META:isConnectedTo rdf:type owl:ObjectProperty ,
 CO-META:isConstraintOf rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#isInstanceOf
+CO-META:isInstanceOf rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain CO-META:ProblemInstance ;
+                     rdfs:range CO-META:Problem ;
+                     rdfs:comment "Problem of which this is an instance."@en ,
+                                  "Problema del que esta es una instancia."@es ;
+                     rdfs:label "es instancia de"@es ,
+                                "is instance of"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf
 CO-META:isObjectiveOf rdf:type owl:ObjectProperty .
 
@@ -417,6 +470,17 @@ CO-META:isParameterOf rdf:type owl:ObjectProperty .
 ###  https://w3id.org/ontologies-ULL/CO-META#isStartOf
 CO-META:isStartOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf CO-META:isConnectedTo .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#mapsColumn
+CO-META:mapsColumn rdf:type owl:ObjectProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain CO-META:ColumnMapping ;
+                   rdfs:range CO-META:Column ;
+                   rdfs:comment "Column whose values are in the field."@en ,
+                                "Columna cuyos valores están en el campo."@es ;
+                   rdfs:label "corresponde a columna"@es ,
+                              "maps column"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#readsData
@@ -494,6 +558,17 @@ CO-META:hasDefaultValue rdf:type owl:DatatypeProperty ,
                                    "tiene valor por defecto"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasDelimiter
+CO-META:hasDelimiter rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain CO-META:DataBinding ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Carácter que separa los campos de un fichero CSV (una coma por defecto)."@es ,
+                                  "Character that separates the fields of a CSV file (a comma by default)."@en ;
+                     rdfs:label "has delimiter"@en ,
+                                "tiene delimitador"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasDimensionIndex
 CO-META:hasDimensionIndex rdf:type owl:DatatypeProperty ,
                                    owl:FunctionalProperty ;
@@ -516,6 +591,17 @@ CO-META:hasFromIndexSymbol rdf:type owl:DatatypeProperty ,
                                       "tiene símbolo del índice de origen"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasHeaderRow
+CO-META:hasHeaderRow rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain CO-META:DataBinding ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:comment "Si la primera fila de un fichero CSV contiene los nombres de los campos (true por defecto). Sin ella, el fichero se lee como una matriz."@es ,
+                                  "Whether the first row of a CSV file holds the names of the fields (true by default). Without it, the file is read as a matrix."@en ;
+                     rdfs:label "has header row"@en ,
+                                "tiene fila de cabecera"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasIdentifier
 CO-META:hasIdentifier rdf:type owl:DatatypeProperty ,
                                owl:FunctionalProperty ;
@@ -525,6 +611,17 @@ CO-META:hasIdentifier rdf:type owl:DatatypeProperty ,
                                    "Nombre que identifica de forma unívoca una magnitud dentro de la formulación del problema."@es ;
                       rdfs:label "has identifier"@en ,
                                  "tiene identificador"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasInlineValue
+CO-META:hasInlineValue rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain CO-META:DataBinding ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Los valores escritos en JSON: un número, un array, un array de arrays (matriz), un objeto de arrays o un array de objetos (tabla)."@es ,
+                                    "The values written in JSON: a number, an array, an array of arrays (matrix), an object of arrays or an array of objects (table)."@en ;
+                       rdfs:label "has inline value"@en ,
+                                  "tiene valor en línea"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasInputSize
@@ -601,6 +698,28 @@ CO-META:hasPosition rdf:type owl:DatatypeProperty ,
                                  "Posición de un atributo en el orden en que se describen los registros de su tabla."@es ;
                     rdfs:label "has position"@en ,
                                "tiene posición"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasSourceField
+CO-META:hasSourceField rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain CO-META:ColumnMapping ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Name of the field of the source that holds the values of the column (e.g. the header of a CSV column)."@en ,
+                                    "Nombre del campo del origen que contiene los valores de la columna (p. ej. la cabecera de una columna CSV)."@es ;
+                       rdfs:label "has source field"@en ,
+                                  "tiene campo de origen"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasSourceLocation
+CO-META:hasSourceLocation rdf:type owl:DatatypeProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain CO-META:DataBinding ;
+                          rdfs:range xsd:anyURI ;
+                          rdfs:comment "Location of the source file, absolute or relative to the document that states it."@en ,
+                                       "Ubicación del fichero de origen, absoluta o relativa al documento que la indica."@es ;
+                          rdfs:label "has source location"@en ,
+                                     "tiene ubicación de origen"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasToIndexSymbol
@@ -851,6 +970,14 @@ CO-META:Column rdf:type owl:Class ;
                           "Columna"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#ColumnMapping
+CO-META:ColumnMapping rdf:type owl:Class ;
+                      rdfs:comment "Campo del origen que contiene los valores de una columna de una tabla. Sin correspondencias, los campos se emparejan con los identificadores de las columnas."@es ,
+                                   "Field of the source that holds the values of a column of a table. Without mappings, the fields are matched with the identifiers of the columns."@en ;
+                      rdfs:label "Column Mapping"@en ,
+                                 "Correspondencia de columna"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#ComponentSafety
 CO-META:ComponentSafety rdf:type owl:Class ;
                         owl:equivalentClass [ rdf:type owl:Class ;
@@ -976,6 +1103,28 @@ CO-META:CycleCrossoverComponent rdf:type owl:Class ;
                                              "Crossover component for permutations that keeps each value in the position it has in one of the parents, following the cycles between them (CX)."@en ;
                                 rdfs:label "Componente de cruce por ciclos"@es ,
                                            "Cycle Crossover Component"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#DataBinding
+CO-META:DataBinding rdf:type owl:Class ;
+                    rdfs:comment "Fuente de los valores de un dato del problema en una instancia: un valor en línea o un fichero."@es ,
+                                 "Source of the values of one problem datum in an instance: an inline value or a file."@en ;
+                    rdfs:label "Data Binding"@en ,
+                               "Ligadura de datos"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#DataFormat
+CO-META:DataFormat rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Class ;
+                                         owl:oneOf ( CO-META:CsvFormat
+                                                     CO-META:InlineFormat
+                                                     CO-META:JsonFormat
+                                                   )
+                                       ] ;
+                   rdfs:comment "Format of the source of a data binding."@en ,
+                                "Formato del origen de una ligadura de datos."@es ;
+                   rdfs:label "Data Format"@en ,
+                              "Formato de datos"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent
@@ -1756,6 +1905,14 @@ CO-META:ProblemElement rdf:type owl:Class ;
                                   "Problem Element"@en .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#ProblemInstance
+CO-META:ProblemInstance rdf:type owl:Class ;
+                        rdfs:comment "Instancia concreta de un problema, dada por los datos ligados a sus datos del problema."@es ,
+                                     "Specific instance of a problem, given by the data bound to its problem data."@en ;
+                        rdfs:label "Instancia del problema"@es ,
+                                   "Problem Instance"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#ProblemQuantity
 CO-META:ProblemQuantity rdf:type owl:Class ;
                         rdfs:subClassOf CO-META:ProblemElement ;
@@ -2497,6 +2654,15 @@ CO-META:CrossoverProbability rdf:type owl:NamedIndividual ,
                              CO-META:hasValueDomain CO-META:UnitInterval .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#CsvFormat
+CO-META:CsvFormat rdf:type owl:NamedIndividual ,
+                           CO-META:DataFormat ;
+                  rdfs:comment "CSV file (hasSourceLocation): a table, with a header row by default, or a matrix without one."@en ,
+                               "Fichero CSV (hasSourceLocation): una tabla, con fila de cabecera por defecto, o una matriz sin ella."@es ;
+                  rdfs:label "CSV"@en ,
+                             "CSV"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#DeathPenaltyHandling
 CO-META:DeathPenaltyHandling rdf:type owl:NamedIndividual ,
                                       CO-META:ConstraintHandling ;
@@ -2553,6 +2719,15 @@ CO-META:InertiaFactor rdf:type owl:NamedIndividual ,
                       CO-META:hasValueDomain CO-META:UnitInterval .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#InlineFormat
+CO-META:InlineFormat rdf:type owl:NamedIndividual ,
+                              CO-META:DataFormat ;
+                     rdfs:comment "Los valores se escriben en la propia ligadura, en JSON (hasInlineValue)."@es ,
+                                  "The values are written in the binding itself, in JSON (hasInlineValue)."@en ;
+                     rdfs:label "En línea"@es ,
+                                "Inline"@en .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#Integers
 CO-META:Integers rdf:type owl:NamedIndividual ,
                           CO-META:BaseType ;
@@ -2577,6 +2752,15 @@ CO-META:IterationsWithoutImprovement rdf:type owl:NamedIndividual ,
                                                   "Número de iteraciones consecutivas sin mejorar la mejor solución tras las que se detiene el bucle."@es ;
                                      rdfs:label "Iteraciones sin mejora"@es ,
                                                 "Iterations Without Improvement"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#JsonFormat
+CO-META:JsonFormat rdf:type owl:NamedIndividual ,
+                            CO-META:DataFormat ;
+                   rdfs:comment "Fichero JSON (hasSourceLocation) con las mismas formas que un valor en línea."@es ,
+                                "JSON file (hasSourceLocation) with the same forms as an inline value."@en ;
+                   rdfs:label "JSON"@en ,
+                              "JSON"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MaxTemperature
@@ -2864,8 +3048,11 @@ CO-META:Zero rdf:type owl:NamedIndividual ,
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( CO-META:BaseType
+                CO-META:ColumnMapping
                 CO-META:ComponentSafety
                 CO-META:ConstraintHandling
+                CO-META:DataBinding
+                CO-META:DataFormat
                 CO-META:DataShape
                 CO-META:DataStructure
                 CO-META:HeuristicInformation
@@ -2875,6 +3062,7 @@ CO-META:Zero rdf:type owl:NamedIndividual ,
                 CO-META:ParameterValue
                 CO-META:Problem
                 CO-META:ProblemElement
+                CO-META:ProblemInstance
                 CO-META:ValueDomain
                 CO-META:ValueSpecification
               )
@@ -2912,6 +3100,14 @@ CO-META:Zero rdf:type owl:NamedIndividual ,
                         CO-META:Integers
                         CO-META:Reals
                         CO-META:Solutions
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( CO-META:CsvFormat
+                        CO-META:InlineFormat
+                        CO-META:JsonFormat
                       )
 ] .
 

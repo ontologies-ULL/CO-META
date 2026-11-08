@@ -31,6 +31,7 @@ Documentation: <https://w3id.org/ontologies-ULL/CO-META>
   - constraints include the comparator and, if any, the quantifier (`x_i \leq 1 \quad \forall i \in \{1, \ldots, N\}`);
   - `\log` is the natural logarithm.
 - Every quantity has a shape (`hasShape`: scalar, collection, matrix, table) and a value domain (`hasValueDomain`). Variables such as permutations or tables of data are then classified by the reasoner from their shape.
+- A `ProblemInstance` gives the values of the data of a problem through a `DataBinding` for each datum (`isInstanceOf`, `hasDataBinding`). The problem files include an example instance with the data inline (`InlineFormat`), so that they do not depend on other files.
 
 ### Algorithms
 - A `Metaheuristic` starts at a component (`hasStart`) connected to the others through `hasOutput`; its type (e.g. evolutionary algorithm) is inferred from the components it is connected to. An acceptance, a union or a neighbourhood change receives a current and a candidate input: `hasCurrentOutput` and `hasCandidateOutput` say which one an output feeds.

@@ -1,0 +1,11 @@
+# Expected: inconsistent.
+# The source of a data binding has one format.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/single-source-format> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:binding a owl:NamedIndividual , CO-META:DataBinding ;
+    CO-META:hasSourceFormat CO-META:CsvFormat , CO-META:JsonFormat .
