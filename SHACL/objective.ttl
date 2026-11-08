@@ -1,0 +1,37 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+@prefix cm: <https://w3id.org/ontologies-ULL/CO-META#> .
+
+cm:ObjectiveShape
+    a sh:NodeShape ;
+    sh:targetClass cm:MinimizationObjective , cm:MaximizationObjective ;
+
+    # The ideal and nadir values normalize the objective together, and the
+    # ideal value is the better one
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "The ideal and nadir values of {$this} must be stated together, the ideal one better than the nadir one." ;
+        sh:select """
+            PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+            SELECT $this
+            WHERE {
+                {
+                    $this cm:hasIdealValue ?ideal .
+                    FILTER NOT EXISTS { $this cm:hasNadirValue ?nadir }
+                } UNION {
+                    $this cm:hasNadirValue ?nadir .
+                    FILTER NOT EXISTS { $this cm:hasIdealValue ?ideal }
+                } UNION {
+                    $this a cm:MinimizationObjective ; cm:hasIdealValue ?ideal ; cm:hasNadirValue ?nadir .
+                    FILTER (?ideal >= ?nadir)
+                } UNION {
+                    $this a cm:MaximizationObjective ; cm:hasIdealValue ?ideal ; cm:hasNadirValue ?nadir .
+                    FILTER (?ideal <= ?nadir)
+                }
+            }
+        """ ;
+    ] .

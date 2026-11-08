@@ -720,6 +720,17 @@ CO-META:hasHeaderRow rdf:type owl:DatatypeProperty ,
                                 "tiene fila de cabecera"@es .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasIdealValue
+CO-META:hasIdealValue rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain CO-META:Objective ;
+                      rdfs:range xsd:double ;
+                      rdfs:comment "Best value the objective can take. With hasNadirValue, the objective is normalized to (value - ideal) / (nadir - ideal) before it is weighted (hasWeight), so that objectives of different scales can be aggregated."@en ,
+                                   "Mejor valor que puede tomar el objetivo. Con hasNadirValue, el objetivo se normaliza a (valor - ideal) / (nadir - ideal) antes de ponderarlo (hasWeight), para poder agregar objetivos de escalas distintas."@es ;
+                      rdfs:label "has ideal value"@en ,
+                                 "tiene valor ideal"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasIdentifier
 CO-META:hasIdentifier rdf:type owl:DatatypeProperty ,
                                owl:FunctionalProperty ;
@@ -788,6 +799,17 @@ CO-META:hasLiteralValue rdf:type owl:DatatypeProperty ,
                                      "Número indicado de forma explícita. Se usa xsd:double para -INF e INF."@es ;
                         rdfs:label "has literal value"@en ,
                                    "tiene valor literal"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#hasNadirValue
+CO-META:hasNadirValue rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain CO-META:Objective ;
+                      rdfs:range xsd:double ;
+                      rdfs:comment "Peor valor del objetivo entre las soluciones eficientes. Se usa con hasIdealValue para normalizar el objetivo."@es ,
+                                   "Worst value of the objective among the efficient solutions. It is used with hasIdealValue to normalize the objective."@en ;
+                      rdfs:label "has nadir value"@en ,
+                                 "tiene valor nadir"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasOutputSize

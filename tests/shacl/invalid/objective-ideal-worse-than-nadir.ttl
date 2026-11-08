@@ -1,0 +1,13 @@
+# Expected: SHACL violation (ObjectiveShape).
+# The ideal value of a minimization objective is below its nadir value.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/objective-ideal-worse-than-nadir> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:length a owl:NamedIndividual , CO-META:MinimizationObjective ;
+    CO-META:hasIdealValue "100.0"^^xsd:double ;
+    CO-META:hasNadirValue "10.0"^^xsd:double .
