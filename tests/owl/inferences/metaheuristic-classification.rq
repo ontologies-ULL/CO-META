@@ -1,0 +1,10 @@
+PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+PREFIX t: <http://example.org/co-meta-test#>
+
+ASK {
+    t:annealing a cm:PerturbativeMetaheuristic , cm:SingleSolutionMetaheuristic , cm:LocalSearchMetaheuristic .
+    t:evolution a cm:PerturbativeMetaheuristic , cm:PopulationBasedMetaheuristic .
+    t:grasp a cm:ConstructiveMetaheuristic , cm:LocalSearchMetaheuristic .
+    FILTER NOT EXISTS { t:evolution a cm:LocalSearchMetaheuristic }
+    FILTER NOT EXISTS { t:grasp a cm:PerturbativeMetaheuristic }
+}

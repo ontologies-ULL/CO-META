@@ -1,0 +1,30 @@
+# Expected inferences: see metaheuristic-classification.rq.
+# A metaheuristic that starts from complete solutions is perturbative, and it is
+# a local search metaheuristic only when it keeps a single solution or uses a
+# local search: an evolutionary algorithm is not one, while GRASP, which builds
+# its solutions, is.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/metaheuristic-classification> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+# As in simulated annealing: a single random solution
+t:annealing a owl:NamedIndividual , CO-META:Metaheuristic ;
+    CO-META:hasStart t:annealing_generate .
+t:annealing_generate a owl:NamedIndividual , CO-META:RandomGenerationComponent ;
+    CO-META:hasParameter [ a CO-META:ParameterValue ; CO-META:hasType CO-META:PopulationSize ; CO-META:hasValue 1 ] .
+
+# As in an evolutionary algorithm: a random population
+t:evolution a owl:NamedIndividual , CO-META:Metaheuristic ;
+    CO-META:hasStart t:evolution_generate .
+t:evolution_generate a owl:NamedIndividual , CO-META:RandomGenerationComponent ;
+    CO-META:hasParameter [ a CO-META:ParameterValue ; CO-META:hasType CO-META:PopulationSize ; CO-META:hasValue 20 ] .
+
+# As in GRASP: a constructed solution improved by a local search
+t:grasp a owl:NamedIndividual , CO-META:Metaheuristic ;
+    CO-META:hasStart t:grasp_construct .
+t:grasp_construct a owl:NamedIndividual , CO-META:GreedyRandomizedConstructionComponent ;
+    CO-META:hasOutput t:grasp_search .
+t:grasp_search a owl:NamedIndividual , CO-META:FirstImprovementLocalSearchComponent .
