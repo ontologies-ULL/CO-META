@@ -1088,15 +1088,6 @@ _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Best Improvement Local Search Component"@en .
 <https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de búsqueda local de mejor mejora"@es .
 # 
-# https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent
-<https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Data handler that keeps in the structure it writes the best solution seen: a single one for a scalar structure, or one per position (e.g. per particle) for a collection."@en .
-<https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Manejador de datos que conserva en la estructura que escribe la mejor solución vista: una única para una estructura escalar, o una por posición (p. ej. por partícula) para una colección."@es .
-<https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Best Solutions Update Component"@en .
-<https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de actualización de las mejores soluciones"@es .
-# 
 # https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent
 <https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#VariationComponent> .
@@ -2811,9 +2802,9 @@ _:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent
 <https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent> .
-<https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Component that updates the best solution or solutions found so far by the algorithm."@en .
-<https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente que actualiza la mejor solución o soluciones encontradas hasta el momento por el algoritmo."@es .
+<https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Data handler that updates the best solution or solutions found so far by the algorithm. If it writes a data structure, it keeps there the best solution seen: a single one for a scalar structure, or one per position (e.g. per particle) for a collection."@en .
+<https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Manejador de datos que actualiza la mejor solución o soluciones encontradas hasta el momento por el algoritmo. Si escribe una estructura de datos, conserva en ella la mejor solución vista: una única para una estructura escalar, o una por posición (p. ej. por partícula) para una colección."@es .
 <https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de actualización del mejor"@es .
 <https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Update Best Component"@en .
 # 

@@ -1644,20 +1644,6 @@
     
 
 
-    <!-- https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent -->
-
-
-    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent"/>
-        <rdfs:comment xml:lang="en">Data handler that keeps in the structure it writes the best solution seen: a single one for a scalar structure, or one per position (e.g. per particle) for a collection.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Manejador de datos que conserva en la estructura que escribe la mejor solución vista: una única para una estructura escalar, o una por posición (p. ej. por partícula) para una colección.</rdfs:comment>
-        <rdfs:label xml:lang="en">Best Solutions Update Component</rdfs:label>
-        <rdfs:label xml:lang="es">Componente de actualización de las mejores soluciones</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent -->
 
 
@@ -4068,9 +4054,9 @@
 
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
-        <rdfs:comment xml:lang="en">Component that updates the best solution or solutions found so far by the algorithm.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Componente que actualiza la mejor solución o soluciones encontradas hasta el momento por el algoritmo.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"/>
+        <rdfs:comment xml:lang="en">Data handler that updates the best solution or solutions found so far by the algorithm. If it writes a data structure, it keeps there the best solution seen: a single one for a scalar structure, or one per position (e.g. per particle) for a collection.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Manejador de datos que actualiza la mejor solución o soluciones encontradas hasta el momento por el algoritmo. Si escribe una estructura de datos, conserva en ella la mejor solución vista: una única para una estructura escalar, o una por posición (p. ej. por partícula) para una colección.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de actualización del mejor</rdfs:label>
         <rdfs:label xml:lang="en">Update Best Component</rdfs:label>
     </owl:Class>

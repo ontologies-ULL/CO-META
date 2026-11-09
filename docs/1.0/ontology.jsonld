@@ -2255,28 +2255,6 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"
   } ]
 }, {
-  "@id" : "https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Data handler that keeps in the structure it writes the best solution seen: a single one for a scalar structure, or one per position (e.g. per particle) for a collection."
-  }, {
-    "@language" : "es",
-    "@value" : "Manejador de datos que conserva en la estructura que escribe la mejor solución vista: una única para una estructura escalar, o una por posición (p. ej. por partícula) para una colección."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Best Solutions Update Component"
-  }, {
-    "@language" : "es",
-    "@value" : "Componente de actualización de las mejores soluciones"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"
-  }, {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent"
-  } ]
-}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#BinaryIntegers",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -6070,10 +6048,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Component that updates the best solution or solutions found so far by the algorithm."
+    "@value" : "Data handler that updates the best solution or solutions found so far by the algorithm. If it writes a data structure, it keeps there the best solution seen: a single one for a scalar structure, or one per position (e.g. per particle) for a collection."
   }, {
     "@language" : "es",
-    "@value" : "Componente que actualiza la mejor solución o soluciones encontradas hasta el momento por el algoritmo."
+    "@value" : "Manejador de datos que actualiza la mejor solución o soluciones encontradas hasta el momento por el algoritmo. Si escribe una estructura de datos, conserva en ella la mejor solución vista: una única para una estructura escalar, o una por posición (p. ej. por partícula) para una colección."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -6083,7 +6061,7 @@
     "@value" : "Update Best Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent"
   } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#ValueDomain",

@@ -1126,16 +1126,6 @@
                                                 "Componente de búsqueda local de mejor mejora"@es .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent
-:BestSolutionsUpdateComponent rdf:type owl:Class ;
-                              rdfs:subClassOf :DataHandlerComponent ,
-                                              :UpdateBestComponent ;
-                              rdfs:comment "Data handler that keeps in the structure it writes the best solution seen: a single one for a scalar structure, or one per position (e.g. per particle) for a collection."@en ,
-                                           "Manejador de datos que conserva en la estructura que escribe la mejor solución vista: una única para una estructura escalar, o una por posición (p. ej. por partícula) para una colección."@es ;
-                              rdfs:label "Best Solutions Update Component"@en ,
-                                         "Componente de actualización de las mejores soluciones"@es .
-
-
 ###  https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent
 :BitFlipMutationComponent rdf:type owl:Class ;
                           rdfs:subClassOf :VariationComponent ;
@@ -2795,9 +2785,9 @@
 
 ###  https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent
 :UpdateBestComponent rdf:type owl:Class ;
-                     rdfs:subClassOf :MetaheuristicComponent ;
-                     rdfs:comment "Component that updates the best solution or solutions found so far by the algorithm."@en ,
-                                  "Componente que actualiza la mejor solución o soluciones encontradas hasta el momento por el algoritmo."@es ;
+                     rdfs:subClassOf :DataHandlerComponent ;
+                     rdfs:comment "Data handler that updates the best solution or solutions found so far by the algorithm. If it writes a data structure, it keeps there the best solution seen: a single one for a scalar structure, or one per position (e.g. per particle) for a collection."@en ,
+                                  "Manejador de datos que actualiza la mejor solución o soluciones encontradas hasta el momento por el algoritmo. Si escribe una estructura de datos, conserva en ella la mejor solución vista: una única para una estructura escalar, o una por posición (p. ej. por partícula) para una colección."@es ;
                      rdfs:label "Componente de actualización del mejor"@es ,
                                 "Update Best Component"@en .
 

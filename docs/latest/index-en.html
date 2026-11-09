@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatorial optimization metaheuristics.", "dateReleased":"Mon Nov 09 13:33:33 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatorial optimization metaheuristics.", "dateReleased":"Mon Nov 09 14:26:20 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -134,10 +134,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#BestImprovementLocalSearchComponent"
          title="https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent">Best Improvement Local Search Component</a>
-   </li>
-   <li>
-      <a href="#BestSolutionsUpdateComponent"
-         title="https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent">Best Solutions Update Component</a>
    </li>
    <li>
       <a href="#BitFlipMutationComponent"
@@ -1311,7 +1307,6 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#BaseType" title="https://w3id.org/ontologies-ULL/CO-META#BaseType">Base Type</a></li>
   <li><a href="#BestCandidateAcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestCandidateAcceptanceComponent">Best Candidate Acceptance Component</a></li>
   <li><a href="#BestImprovementLocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestImprovementLocalSearchComponent">Best Improvement Local Search Component</a></li>
-  <li><a href="#BestSolutionsUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent">Best Solutions Update Component</a></li>
   <li><a href="#BitFlipMutationComponent" title="https://w3id.org/ontologies-ULL/CO-META#BitFlipMutationComponent">Bit Flip Mutation Component</a></li>
   <li><a href="#BitFlipNeighbourhoodComponent" title="https://w3id.org/ontologies-ULL/CO-META#BitFlipNeighbourhoodComponent">Bit Flip Neighbourhood Component</a></li>
   <li><a href="#BlendCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#BlendCrossoverComponent">Blend Crossover Component</a></li>
@@ -1564,21 +1559,6 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#LocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent">Local Search Component</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="BestSolutionsUpdateComponent">
-  <h3>Best Solutions Update Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent</p>
-  <div class="comment">
-   <span class="markdown">Data handler that keeps in the structure it writes the best solution seen: a single one for a scalar structure, or one per position (e.g. per particle) for a collection.</span>
-  </div>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">Data Handler Component</a> <sup class="type-c" title="class">c</sup>, <a href="#UpdateBestComponent" title="https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent">Update Best Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -2004,7 +1984,7 @@ This section provides details for each class and property defined by CO-META.
     has sub-classes
    </dt>
    <dd>
-    <a href="#ArchiveUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#ArchiveUpdateComponent">Archive Update Component</a> <sup class="type-c" title="class">c</sup>, <a href="#BestSolutionsUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent">Best Solutions Update Component</a> <sup class="type-c" title="class">c</sup>, <a href="#GeometricCoolingComponent" title="https://w3id.org/ontologies-ULL/CO-META#GeometricCoolingComponent">Geometric Cooling Component</a> <sup class="type-c" title="class">c</sup>, <a href="#NeighbourhoodChangeComponent" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodChangeComponent">Neighbourhood Change Component</a> <sup class="type-c" title="class">c</sup>, <a href="#PheromoneDepositComponent" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneDepositComponent">Pheromone Deposit Component</a> <sup class="type-c" title="class">c</sup>, <a href="#PheromoneEvaporationComponent" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporationComponent">Pheromone Evaporation Component</a> <sup class="type-c" title="class">c</sup>, <a href="#TabuListUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#TabuListUpdateComponent">Tabu List Update Component</a> <sup class="type-c" title="class">c</sup>, <a href="#VelocityUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#VelocityUpdateComponent">Velocity Update Component</a> <sup class="type-c" title="class">c</sup>
+    <a href="#ArchiveUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#ArchiveUpdateComponent">Archive Update Component</a> <sup class="type-c" title="class">c</sup>, <a href="#GeometricCoolingComponent" title="https://w3id.org/ontologies-ULL/CO-META#GeometricCoolingComponent">Geometric Cooling Component</a> <sup class="type-c" title="class">c</sup>, <a href="#NeighbourhoodChangeComponent" title="https://w3id.org/ontologies-ULL/CO-META#NeighbourhoodChangeComponent">Neighbourhood Change Component</a> <sup class="type-c" title="class">c</sup>, <a href="#PheromoneDepositComponent" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneDepositComponent">Pheromone Deposit Component</a> <sup class="type-c" title="class">c</sup>, <a href="#PheromoneEvaporationComponent" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporationComponent">Pheromone Evaporation Component</a> <sup class="type-c" title="class">c</sup>, <a href="#TabuListUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#TabuListUpdateComponent">Tabu List Update Component</a> <sup class="type-c" title="class">c</sup>, <a href="#UpdateBestComponent" title="https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent">Update Best Component</a> <sup class="type-c" title="class">c</sup>, <a href="#VelocityUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#VelocityUpdateComponent">Velocity Update Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -2712,7 +2692,7 @@ This section provides details for each class and property defined by CO-META.
     has sub-classes
    </dt>
    <dd>
-    <a href="#AcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent">Acceptance Component</a> <sup class="type-c" title="class">c</sup>, <a href="#ConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent">Construction Component</a> <sup class="type-c" title="class">c</sup>, <a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">Data Handler Component</a> <sup class="type-c" title="class">c</sup>, <a href="#GenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent">Generation Component</a> <sup class="type-c" title="class">c</sup>, <a href="#LoopComponent" title="https://w3id.org/ontologies-ULL/CO-META#LoopComponent">Loop Component</a> <sup class="type-c" title="class">c</sup>, <a href="#ModificationComponent" title="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent">Modification Component</a> <sup class="type-c" title="class">c</sup>, <a href="#MultiobjectiveComponent" title="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent">Multiobjective Component</a> <sup class="type-c" title="class">c</sup>, <a href="#UpdateBestComponent" title="https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent">Update Best Component</a> <sup class="type-c" title="class">c</sup>
+    <a href="#AcceptanceComponent" title="https://w3id.org/ontologies-ULL/CO-META#AcceptanceComponent">Acceptance Component</a> <sup class="type-c" title="class">c</sup>, <a href="#ConstructionComponent" title="https://w3id.org/ontologies-ULL/CO-META#ConstructionComponent">Construction Component</a> <sup class="type-c" title="class">c</sup>, <a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">Data Handler Component</a> <sup class="type-c" title="class">c</sup>, <a href="#GenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent">Generation Component</a> <sup class="type-c" title="class">c</sup>, <a href="#LoopComponent" title="https://w3id.org/ontologies-ULL/CO-META#LoopComponent">Loop Component</a> <sup class="type-c" title="class">c</sup>, <a href="#ModificationComponent" title="https://w3id.org/ontologies-ULL/CO-META#ModificationComponent">Modification Component</a> <sup class="type-c" title="class">c</sup>, <a href="#MultiobjectiveComponent" title="https://w3id.org/ontologies-ULL/CO-META#MultiobjectiveComponent">Multiobjective Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -4178,20 +4158,14 @@ This section provides details for each class and property defined by CO-META.
   <h3>Update Best Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#UpdateBestComponent</p>
   <div class="comment">
-   <span class="markdown">Component that updates the best solution or solutions found so far by the algorithm.</span>
+   <span class="markdown">Data handler that updates the best solution or solutions found so far by the algorithm. If it writes a data structure, it keeps there the best solution seen: a single one for a scalar structure, or one per position (e.g. per particle) for a collection.</span>
   </div>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
-    <a href="#MetaheuristicComponent" title="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent">Metaheuristic Component</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    has sub-classes
-   </dt>
-   <dd>
-    <a href="#BestSolutionsUpdateComponent" title="https://w3id.org/ontologies-ULL/CO-META#BestSolutionsUpdateComponent">Best Solutions Update Component</a> <sup class="type-c" title="class">c</sup>
+    <a href="#DataHandlerComponent" title="https://w3id.org/ontologies-ULL/CO-META#DataHandlerComponent">Data Handler Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>

@@ -137,28 +137,28 @@ CO-META:PSO_stop rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_store_global_best
 CO-META:PSO_store_global_best rdf:type owl:NamedIndividual ,
-                                       CO-META:BestSolutionsUpdateComponent ;
+                                       CO-META:UpdateBestComponent ;
                               CO-META:hasOutputStart CO-META:PSO_stop ;
                               CO-META:writesData CO-META:PSO_archive_global_best .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_store_local_best
 CO-META:PSO_store_local_best rdf:type owl:NamedIndividual ,
-                                      CO-META:BestSolutionsUpdateComponent ;
+                                      CO-META:UpdateBestComponent ;
                              CO-META:hasOutput CO-META:PSO_store_global_best ;
                              CO-META:writesData CO-META:PSO_archive_local_best .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_update_global_best
 CO-META:PSO_update_global_best rdf:type owl:NamedIndividual ,
-                                        CO-META:BestSolutionsUpdateComponent ;
+                                        CO-META:UpdateBestComponent ;
                                CO-META:hasOutput CO-META:PSO_iterate_population ;
                                CO-META:writesData CO-META:PSO_archive_global_best .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_update_local_best
 CO-META:PSO_update_local_best rdf:type owl:NamedIndividual ,
-                                       CO-META:BestSolutionsUpdateComponent ;
+                                       CO-META:UpdateBestComponent ;
                               CO-META:hasOutput CO-META:PSO_update_global_best ;
                               CO-META:writesData CO-META:PSO_archive_local_best .
 
