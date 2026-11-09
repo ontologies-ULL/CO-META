@@ -23,7 +23,10 @@ CO-META:ACO_AntColonyOptimization rdf:type owl:NamedIndividual ,
                                            CO-META:Metaheuristic ;
                                   CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
                                   CO-META:hasDataStructure CO-META:ACO_pheromones ;
-                                  CO-META:hasStart CO-META:ACO_stop .
+                                  CO-META:hasStart CO-META:ACO_stop ;
+                                  CO-META:supportsShape CO-META:ACO_solution_shape ;
+                                  rdfs:label "Ant Colony Optimization"@en ,
+                                             "Optimización por colonia de hormigas"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_construction_pheromones
@@ -68,7 +71,8 @@ CO-META:ACO_parameter_heuristic_influence rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_parameter_iterations
 CO-META:ACO_parameter_iterations rdf:type owl:NamedIndividual ,
                                           CO-META:ParameterValue ;
-                                 CO-META:hasType CO-META:Iterations .
+                                 CO-META:hasType CO-META:Iterations ;
+                                 CO-META:hasValue 100 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_parameter_pheromone_addition
@@ -92,7 +96,8 @@ CO-META:ACO_parameter_pheromone_influence rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_parameter_populationsize
 CO-META:ACO_parameter_populationsize rdf:type owl:NamedIndividual ,
                                               CO-META:ParameterValue ;
-                                     CO-META:hasType CO-META:PopulationSize .
+                                     CO-META:hasType CO-META:PopulationSize ;
+                                     CO-META:hasValue 20 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_pheromones
@@ -118,6 +123,13 @@ CO-META:ACO_place_pheromones rdf:type owl:NamedIndividual ,
                              CO-META:writesData CO-META:ACO_pheromones ;
                              CO-META:hasInputSize 1 ;
                              CO-META:hasOutputSize 1 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#ACO_solution_shape
+CO-META:ACO_solution_shape rdf:type owl:NamedIndividual ,
+                                    CO-META:CollectionShape ;
+                           CO-META:isDistinct "true"^^xsd:boolean ;
+                           CO-META:isOrdered "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#ACO_stop

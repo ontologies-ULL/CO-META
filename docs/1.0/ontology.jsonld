@@ -2541,6 +2541,20 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of cut points of a k-point crossover."
+  }, {
+    "@language" : "es",
+    "@value" : "Número de puntos de corte de un cruce de k puntos."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Crossover K Points"
+  }, {
+    "@language" : "es",
+    "@value" : "Puntos del cruce de k puntos"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "1"
@@ -2553,6 +2567,20 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Probabilidad de que se recombine una pareja de progenitores; si no, se copian."
+  }, {
+    "@language" : "en",
+    "@value" : "Probability that a pair of parents is recombined; otherwise they are copied."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Crossover Probability"
+  }, {
+    "@language" : "es",
+    "@value" : "Probabilidad de cruce"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -2823,6 +2851,20 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of best individuals that a selection keeps in the new population."
+  }, {
+    "@language" : "es",
+    "@value" : "Número de los mejores individuos que una selección conserva en la nueva población."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Elitism"
+  }, {
+    "@language" : "es",
+    "@value" : "Elitismo"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "1"
@@ -3022,6 +3064,20 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Peso de la atracción de una partícula hacia la mejor solución del enjambre (c2)."
+  }, {
+    "@language" : "en",
+    "@value" : "Weight of the attraction of a particle towards the best solution of the swarm (c2)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Global Best Influence"
+  }, {
+    "@language" : "es",
+    "@value" : "Influencia del mejor global"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
     "@value" : "1.5"
@@ -3077,6 +3133,20 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Exponent of the heuristic information (beta)."
+  }, {
+    "@language" : "es",
+    "@value" : "Exponente de la información heurística (beta)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Heuristic Influence"
+  }, {
+    "@language" : "es",
+    "@value" : "Influencia heurística"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
     "@value" : "2.0"
@@ -3126,6 +3196,20 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Fracción de su velocidad anterior que conserva una partícula (w)."
+  }, {
+    "@language" : "en",
+    "@value" : "Fraction of its previous velocity that a particle keeps (w)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Factor de inercia"
+  }, {
+    "@language" : "en",
+    "@value" : "Inertia Factor"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -3287,6 +3371,20 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Maximum number of iterations."
+  }, {
+    "@language" : "es",
+    "@value" : "Número máximo de iteraciones."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Iteraciones"
+  }, {
+    "@language" : "en",
+    "@value" : "Iterations"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -3542,6 +3640,20 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Initial temperature. The Metropolis acceptance uses relative degradations, so temperatures are fractions of the current objective value."
+  }, {
+    "@language" : "es",
+    "@value" : "Temperatura inicial. La aceptación de Metropolis usa empeoramientos relativos, por lo que las temperaturas son fracciones del valor actual del objetivo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Maximum Temperature"
+  }, {
+    "@language" : "es",
+    "@value" : "Temperatura máxima"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
     "@value" : "0.1"
@@ -3652,6 +3764,20 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Temperatura que se alcanza al agotarse el presupuesto de iteraciones."
+  }, {
+    "@language" : "en",
+    "@value" : "Temperature reached when the iteration budget is spent."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Minimum Temperature"
+  }, {
+    "@language" : "es",
+    "@value" : "Temperatura mínima"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
     "@value" : "0.0001"
@@ -3747,6 +3873,20 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Probabilidad de que se mute un individuo."
+  }, {
+    "@language" : "en",
+    "@value" : "Probability that an individual is mutated."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mutation Probability"
+  }, {
+    "@language" : "es",
+    "@value" : "Probabilidad de mutación"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -4194,6 +4334,20 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Peso de la atracción de una partícula hacia la mejor solución que ha encontrado (c1)."
+  }, {
+    "@language" : "en",
+    "@value" : "Weight of the attraction of a particle towards the best solution it has found (c1)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Influencia del mejor personal"
+  }, {
+    "@language" : "en",
+    "@value" : "Personal Best Influence"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
     "@value" : "1.5"
@@ -4206,6 +4360,20 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Amount of pheromone an ant deposits, divided by the cost of its solution."
+  }, {
+    "@language" : "es",
+    "@value" : "Cantidad de feromona que deposita una hormiga, dividida por el coste de su solución."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Adición de feromona"
+  }, {
+    "@language" : "en",
+    "@value" : "Pheromone Addition"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -4242,6 +4410,20 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Fracción de la feromona que se evapora en cada iteración."
+  }, {
+    "@language" : "en",
+    "@value" : "Fraction of the pheromone that evaporates in each iteration."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Evaporación de la feromona"
+  }, {
+    "@language" : "en",
+    "@value" : "Pheromone Evaporation"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
     "@value" : "0.1"
@@ -4276,6 +4458,20 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Exponent of the pheromone (alpha)."
+  }, {
+    "@language" : "es",
+    "@value" : "Exponente de la feromona (alfa)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Influencia de la feromona"
+  }, {
+    "@language" : "en",
+    "@value" : "Pheromone Influence"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -4409,6 +4605,20 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of solutions that a component generates, constructs or iterates over."
+  }, {
+    "@language" : "es",
+    "@value" : "Número de soluciones que un componente genera, construye o recorre."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Population Size"
+  }, {
+    "@language" : "es",
+    "@value" : "Tamaño de la población"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -4568,6 +4778,20 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Anchura de la lista restringida de candidatos, de voraz (0) a aleatoria (1)."
+  }, {
+    "@language" : "en",
+    "@value" : "Width of the restricted candidate list, from greedy (0) to random (1)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Aleatoriedad de la RCL"
+  }, {
+    "@language" : "en",
+    "@value" : "RCL Randomness"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -5228,6 +5452,20 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Maximum number of solutions that a data handler keeps (e.g. a tabu list or an archive)."
+  }, {
+    "@language" : "es",
+    "@value" : "Número máximo de soluciones que guarda un manejador de datos (p. ej. una lista tabú o un archivo)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Storage Size"
+  }, {
+    "@language" : "es",
+    "@value" : "Tamaño del almacenamiento"
+  } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "10"
@@ -5470,6 +5708,20 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of individuals that compete in each tournament."
+  }, {
+    "@language" : "es",
+    "@value" : "Número de individuos que compiten en cada torneo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Tamaño del torneo"
+  }, {
+    "@language" : "en",
+    "@value" : "Tournament Size"
   } ],
   "https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",

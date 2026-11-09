@@ -24,7 +24,9 @@ CO-META:SPEA2 rdf:type owl:NamedIndividual ,
               CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
               CO-META:hasDataStructure CO-META:SPEA2_archive ;
               CO-META:hasResult CO-META:SPEA2_archive ;
-              CO-META:hasStart CO-META:SPEA2_generate_population .
+              CO-META:hasStart CO-META:SPEA2_generate_population ;
+              rdfs:label "Algoritmo evolutivo de Pareto por fuerza 2"@es ,
+                         "Strength Pareto Evolutionary Algorithm 2"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive
@@ -101,13 +103,15 @@ CO-META:SPEA2_parameter_crossoverprobability rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_elitism
 CO-META:SPEA2_parameter_elitism rdf:type owl:NamedIndividual ,
                                          CO-META:ParameterValue ;
-                                CO-META:hasType CO-META:Elitism .
+                                CO-META:hasType CO-META:Elitism ;
+                                CO-META:hasValue 0 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_iterations
 CO-META:SPEA2_parameter_iterations rdf:type owl:NamedIndividual ,
                                             CO-META:ParameterValue ;
-                                   CO-META:hasType CO-META:Iterations .
+                                   CO-META:hasType CO-META:Iterations ;
+                                   CO-META:hasValue 100 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_mutationprobability
@@ -125,7 +129,8 @@ CO-META:SPEA2_parameter_populationsize rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_storagesize
 CO-META:SPEA2_parameter_storagesize rdf:type owl:NamedIndividual ,
                                              CO-META:ParameterValue ;
-                                    CO-META:hasType CO-META:StorageSize .
+                                    CO-META:hasType CO-META:StorageSize ;
+                                    CO-META:hasValue 50 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_storagesize_reference

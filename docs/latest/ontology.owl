@@ -4290,6 +4290,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDefaultValue>
+        <rdfs:comment xml:lang="en">Number of cut points of a k-point crossover.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Número de puntos de corte de un cruce de k puntos.</rdfs:comment>
+        <rdfs:label xml:lang="en">Crossover K Points</rdfs:label>
+        <rdfs:label xml:lang="es">Puntos del cruce de k puntos</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4301,6 +4305,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9</hasDefaultValue>
+        <rdfs:comment xml:lang="es">Probabilidad de que se recombine una pareja de progenitores; si no, se copian.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Probability that a pair of parents is recombined; otherwise they are copied.</rdfs:comment>
+        <rdfs:label xml:lang="en">Crossover Probability</rdfs:label>
+        <rdfs:label xml:lang="es">Probabilidad de cruce</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4338,6 +4346,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDefaultValue>
+        <rdfs:comment xml:lang="en">Number of best individuals that a selection keeps in the new population.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Número de los mejores individuos que una selección conserva en la nueva población.</rdfs:comment>
+        <rdfs:label xml:lang="en">Elitism</rdfs:label>
+        <rdfs:label xml:lang="es">Elitismo</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4376,6 +4388,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</hasDefaultValue>
+        <rdfs:comment xml:lang="es">Peso de la atracción de una partícula hacia la mejor solución del enjambre (c2).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Weight of the attraction of a particle towards the best solution of the swarm (c2).</rdfs:comment>
+        <rdfs:label xml:lang="en">Global Best Influence</rdfs:label>
+        <rdfs:label xml:lang="es">Influencia del mejor global</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4387,6 +4403,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</hasDefaultValue>
+        <rdfs:comment xml:lang="en">Exponent of the heuristic information (beta).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Exponente de la información heurística (beta).</rdfs:comment>
+        <rdfs:label xml:lang="en">Heuristic Influence</rdfs:label>
+        <rdfs:label xml:lang="es">Influencia heurística</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4398,6 +4418,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</hasDefaultValue>
+        <rdfs:comment xml:lang="es">Fracción de su velocidad anterior que conserva una partícula (w).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Fraction of its previous velocity that a particle keeps (w).</rdfs:comment>
+        <rdfs:label xml:lang="es">Factor de inercia</rdfs:label>
+        <rdfs:label xml:lang="en">Inertia Factor</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4448,6 +4472,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</hasDefaultValue>
+        <rdfs:comment xml:lang="en">Maximum number of iterations.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Número máximo de iteraciones.</rdfs:comment>
+        <rdfs:label xml:lang="es">Iteraciones</rdfs:label>
+        <rdfs:label xml:lang="en">Iterations</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4486,6 +4514,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PositiveReals"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</hasDefaultValue>
+        <rdfs:comment xml:lang="en">Initial temperature. The Metropolis acceptance uses relative degradations, so temperatures are fractions of the current objective value.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Temperatura inicial. La aceptación de Metropolis usa empeoramientos relativos, por lo que las temperaturas son fracciones del valor actual del objetivo.</rdfs:comment>
+        <rdfs:label xml:lang="en">Maximum Temperature</rdfs:label>
+        <rdfs:label xml:lang="es">Temperatura máxima</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4497,6 +4529,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PositiveReals"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0001</hasDefaultValue>
+        <rdfs:comment xml:lang="es">Temperatura que se alcanza al agotarse el presupuesto de iteraciones.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Temperature reached when the iteration budget is spent.</rdfs:comment>
+        <rdfs:label xml:lang="en">Minimum Temperature</rdfs:label>
+        <rdfs:label xml:lang="es">Temperatura mínima</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4508,6 +4544,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</hasDefaultValue>
+        <rdfs:comment xml:lang="es">Probabilidad de que se mute un individuo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Probability that an individual is mutated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mutation Probability</rdfs:label>
+        <rdfs:label xml:lang="es">Probabilidad de mutación</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4619,6 +4659,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</hasDefaultValue>
+        <rdfs:comment xml:lang="es">Peso de la atracción de una partícula hacia la mejor solución que ha encontrado (c1).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Weight of the attraction of a particle towards the best solution it has found (c1).</rdfs:comment>
+        <rdfs:label xml:lang="es">Influencia del mejor personal</rdfs:label>
+        <rdfs:label xml:lang="en">Personal Best Influence</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4630,6 +4674,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDefaultValue>
+        <rdfs:comment xml:lang="en">Amount of pheromone an ant deposits, divided by the cost of its solution.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Cantidad de feromona que deposita una hormiga, dividida por el coste de su solución.</rdfs:comment>
+        <rdfs:label xml:lang="es">Adición de feromona</rdfs:label>
+        <rdfs:label xml:lang="en">Pheromone Addition</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4641,6 +4689,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</hasDefaultValue>
+        <rdfs:comment xml:lang="es">Fracción de la feromona que se evapora en cada iteración.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Fraction of the pheromone that evaporates in each iteration.</rdfs:comment>
+        <rdfs:label xml:lang="es">Evaporación de la feromona</rdfs:label>
+        <rdfs:label xml:lang="en">Pheromone Evaporation</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4652,6 +4704,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</hasDefaultValue>
+        <rdfs:comment xml:lang="en">Exponent of the pheromone (alpha).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Exponente de la feromona (alfa).</rdfs:comment>
+        <rdfs:label xml:lang="es">Influencia de la feromona</rdfs:label>
+        <rdfs:label xml:lang="en">Pheromone Influence</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4663,6 +4719,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</hasDefaultValue>
+        <rdfs:comment xml:lang="en">Number of solutions that a component generates, constructs or iterates over.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Número de soluciones que un componente genera, construye o recorre.</rdfs:comment>
+        <rdfs:label xml:lang="en">Population Size</rdfs:label>
+        <rdfs:label xml:lang="es">Tamaño de la población</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4704,6 +4764,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#UnitInterval"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</hasDefaultValue>
+        <rdfs:comment xml:lang="es">Anchura de la lista restringida de candidatos, de voraz (0) a aleatoria (1).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Width of the restricted candidate list, from greedy (0) to random (1).</rdfs:comment>
+        <rdfs:label xml:lang="es">Aleatoriedad de la RCL</rdfs:label>
+        <rdfs:label xml:lang="en">RCL Randomness</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4808,6 +4872,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasDefaultValue>
+        <rdfs:comment xml:lang="en">Maximum number of solutions that a data handler keeps (e.g. a tabu list or an archive).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Número máximo de soluciones que guarda un manejador de datos (p. ej. una lista tabú o un archivo).</rdfs:comment>
+        <rdfs:label xml:lang="en">Storage Size</rdfs:label>
+        <rdfs:label xml:lang="es">Tamaño del almacenamiento</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4848,6 +4916,10 @@
         <rdf:type rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Parameter"/>
         <hasValueDomain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers"/>
         <hasDefaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDefaultValue>
+        <rdfs:comment xml:lang="en">Number of individuals that compete in each tournament.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Número de individuos que compiten en cada torneo.</rdfs:comment>
+        <rdfs:label xml:lang="es">Tamaño del torneo</rdfs:label>
+        <rdfs:label xml:lang="en">Tournament Size</rdfs:label>
     </owl:NamedIndividual>
     
 

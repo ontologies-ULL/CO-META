@@ -23,7 +23,9 @@ CO-META:SA_SimulatedAnnealing rdf:type owl:NamedIndividual ,
                                        CO-META:Metaheuristic ;
                               CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
                               CO-META:hasDataStructure CO-META:SA_temperature ;
-                              CO-META:hasStart CO-META:SA_generate .
+                              CO-META:hasStart CO-META:SA_generate ;
+                              rdfs:label "Recocido simulado"@es ,
+                                         "Simulated Annealing"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SA_acceptance

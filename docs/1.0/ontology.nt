@@ -2948,12 +2948,20 @@ _:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers> .
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of cut points of a k-point crossover."@en .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints> <http://www.w3.org/2000/01/rdf-schema#comment> "Número de puntos de corte de un cruce de k puntos."@es .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints> <http://www.w3.org/2000/01/rdf-schema#label> "Crossover K Points"@en .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverKPoints> <http://www.w3.org/2000/01/rdf-schema#label> "Puntos del cruce de k puntos"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#UnitInterval> .
 <https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.9"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <http://www.w3.org/2000/01/rdf-schema#comment> "Probabilidad de que se recombine una pareja de progenitores; si no, se copian."@es .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability that a pair of parents is recombined; otherwise they are copied."@en .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <http://www.w3.org/2000/01/rdf-schema#label> "Crossover Probability"@en .
+<https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability> <http://www.w3.org/2000/01/rdf-schema#label> "Probabilidad de cruce"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#CsvFormat
 <https://w3id.org/ontologies-ULL/CO-META#CsvFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2976,6 +2984,10 @@ _:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#Elitism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#Elitism> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers> .
 <https://w3id.org/ontologies-ULL/CO-META#Elitism> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/ontologies-ULL/CO-META#Elitism> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of best individuals that a selection keeps in the new population."@en .
+<https://w3id.org/ontologies-ULL/CO-META#Elitism> <http://www.w3.org/2000/01/rdf-schema#comment> "Número de los mejores individuos que una selección conserva en la nueva población."@es .
+<https://w3id.org/ontologies-ULL/CO-META#Elitism> <http://www.w3.org/2000/01/rdf-schema#label> "Elitism"@en .
+<https://w3id.org/ontologies-ULL/CO-META#Elitism> <http://www.w3.org/2000/01/rdf-schema#label> "Elitismo"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Evaluations
 <https://w3id.org/ontologies-ULL/CO-META#Evaluations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2999,18 +3011,30 @@ _:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals> .
 <https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <http://www.w3.org/2000/01/rdf-schema#comment> "Peso de la atracción de una partícula hacia la mejor solución del enjambre (c2)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <http://www.w3.org/2000/01/rdf-schema#comment> "Weight of the attraction of a particle towards the best solution of the swarm (c2)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <http://www.w3.org/2000/01/rdf-schema#label> "Global Best Influence"@en .
+<https://w3id.org/ontologies-ULL/CO-META#GlobalBestInfluence> <http://www.w3.org/2000/01/rdf-schema#label> "Influencia del mejor global"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence
 <https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals> .
 <https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "2.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <http://www.w3.org/2000/01/rdf-schema#comment> "Exponent of the heuristic information (beta)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <http://www.w3.org/2000/01/rdf-schema#comment> "Exponente de la información heurística (beta)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <http://www.w3.org/2000/01/rdf-schema#label> "Heuristic Influence"@en .
+<https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence> <http://www.w3.org/2000/01/rdf-schema#label> "Influencia heurística"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#InertiaFactor
 <https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#UnitInterval> .
 <https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.7"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Fracción de su velocidad anterior que conserva una partícula (w)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Fraction of its previous velocity that a particle keeps (w)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <http://www.w3.org/2000/01/rdf-schema#label> "Factor de inercia"@es .
+<https://w3id.org/ontologies-ULL/CO-META#InertiaFactor> <http://www.w3.org/2000/01/rdf-schema#label> "Inertia Factor"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#InlineFormat
 <https://w3id.org/ontologies-ULL/CO-META#InlineFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3041,6 +3065,10 @@ _:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#Iterations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#Iterations> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers> .
 <https://w3id.org/ontologies-ULL/CO-META#Iterations> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1000"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/ontologies-ULL/CO-META#Iterations> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum number of iterations."@en .
+<https://w3id.org/ontologies-ULL/CO-META#Iterations> <http://www.w3.org/2000/01/rdf-schema#comment> "Número máximo de iteraciones."@es .
+<https://w3id.org/ontologies-ULL/CO-META#Iterations> <http://www.w3.org/2000/01/rdf-schema#label> "Iteraciones"@es .
+<https://w3id.org/ontologies-ULL/CO-META#Iterations> <http://www.w3.org/2000/01/rdf-schema#label> "Iterations"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement
 <https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3064,18 +3092,30 @@ _:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#PositiveReals> .
 <https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Initial temperature. The Metropolis acceptance uses relative degradations, so temperatures are fractions of the current objective value."@en .
+<https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Temperatura inicial. La aceptación de Metropolis usa empeoramientos relativos, por lo que las temperaturas son fracciones del valor actual del objetivo."@es .
+<https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Maximum Temperature"@en .
+<https://w3id.org/ontologies-ULL/CO-META#MaxTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Temperatura máxima"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MinTemperature
 <https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#PositiveReals> .
 <https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.0001"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Temperatura que se alcanza al agotarse el presupuesto de iteraciones."@es .
+<https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Temperature reached when the iteration budget is spent."@en .
+<https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Minimum Temperature"@en .
+<https://w3id.org/ontologies-ULL/CO-META#MinTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Temperatura mínima"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MutationProbability
 <https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#UnitInterval> .
 <https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <http://www.w3.org/2000/01/rdf-schema#comment> "Probabilidad de que se mute un individuo."@es .
+<https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability that an individual is mutated."@en .
+<https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <http://www.w3.org/2000/01/rdf-schema#label> "Mutation Probability"@en .
+<https://w3id.org/ontologies-ULL/CO-META#MutationProbability> <http://www.w3.org/2000/01/rdf-schema#label> "Probabilidad de mutación"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#MutationStrength
 <https://w3id.org/ontologies-ULL/CO-META#MutationStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3147,30 +3187,50 @@ _:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals> .
 <https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <http://www.w3.org/2000/01/rdf-schema#comment> "Peso de la atracción de una partícula hacia la mejor solución que ha encontrado (c1)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <http://www.w3.org/2000/01/rdf-schema#comment> "Weight of the attraction of a particle towards the best solution it has found (c1)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <http://www.w3.org/2000/01/rdf-schema#label> "Influencia del mejor personal"@es .
+<https://w3id.org/ontologies-ULL/CO-META#PersonalBestInfluence> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Best Influence"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <http://www.w3.org/2000/01/rdf-schema#comment> "Amount of pheromone an ant deposits, divided by the cost of its solution."@en .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <http://www.w3.org/2000/01/rdf-schema#comment> "Cantidad de feromona que deposita una hormiga, dividida por el coste de su solución."@es .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <http://www.w3.org/2000/01/rdf-schema#label> "Adición de feromona"@es .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition> <http://www.w3.org/2000/01/rdf-schema#label> "Pheromone Addition"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#UnitInterval> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <http://www.w3.org/2000/01/rdf-schema#comment> "Fracción de la feromona que se evapora en cada iteración."@es .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <http://www.w3.org/2000/01/rdf-schema#comment> "Fraction of the pheromone that evaporates in each iteration."@en .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <http://www.w3.org/2000/01/rdf-schema#label> "Evaporación de la feromona"@es .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation> <http://www.w3.org/2000/01/rdf-schema#label> "Pheromone Evaporation"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeReals> .
 <https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <http://www.w3.org/2000/01/rdf-schema#comment> "Exponent of the pheromone (alpha)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <http://www.w3.org/2000/01/rdf-schema#comment> "Exponente de la feromona (alfa)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <http://www.w3.org/2000/01/rdf-schema#label> "Influencia de la feromona"@es .
+<https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence> <http://www.w3.org/2000/01/rdf-schema#label> "Pheromone Influence"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PopulationSize
 <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers> .
 <https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "50"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of solutions that a component generates, constructs or iterates over."@en .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Número de soluciones que un componente genera, construye o recorre."@es .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <http://www.w3.org/2000/01/rdf-schema#label> "Population Size"@en .
+<https://w3id.org/ontologies-ULL/CO-META#PopulationSize> <http://www.w3.org/2000/01/rdf-schema#label> "Tamaño de la población"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers
 <https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3197,6 +3257,10 @@ _:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#UnitInterval> .
 <https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "0.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <http://www.w3.org/2000/01/rdf-schema#comment> "Anchura de la lista restringida de candidatos, de voraz (0) a aleatoria (1)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of the restricted candidate list, from greedy (0) to random (1)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <http://www.w3.org/2000/01/rdf-schema#label> "Aleatoriedad de la RCL"@es .
+<https://w3id.org/ontologies-ULL/CO-META#RCLRandomness> <http://www.w3.org/2000/01/rdf-schema#label> "RCL Randomness"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#Reals
 <https://w3id.org/ontologies-ULL/CO-META#Reals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3261,6 +3325,10 @@ _:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#StorageSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#StorageSize> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#NonNegativeIntegers> .
 <https://w3id.org/ontologies-ULL/CO-META#StorageSize> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/ontologies-ULL/CO-META#StorageSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum number of solutions that a data handler keeps (e.g. a tabu list or an archive)."@en .
+<https://w3id.org/ontologies-ULL/CO-META#StorageSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Número máximo de soluciones que guarda un manejador de datos (p. ej. una lista tabú o un archivo)."@es .
+<https://w3id.org/ontologies-ULL/CO-META#StorageSize> <http://www.w3.org/2000/01/rdf-schema#label> "Storage Size"@en .
+<https://w3id.org/ontologies-ULL/CO-META#StorageSize> <http://www.w3.org/2000/01/rdf-schema#label> "Tamaño del almacenamiento"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#TargetValue
 <https://w3id.org/ontologies-ULL/CO-META#TargetValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3286,6 +3354,10 @@ _:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ontologies-ULL/CO-META#Parameter> .
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSize> <https://w3id.org/ontologies-ULL/CO-META#hasValueDomain> <https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers> .
 <https://w3id.org/ontologies-ULL/CO-META#TournamentSize> <https://w3id.org/ontologies-ULL/CO-META#hasDefaultValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/ontologies-ULL/CO-META#TournamentSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of individuals that compete in each tournament."@en .
+<https://w3id.org/ontologies-ULL/CO-META#TournamentSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Número de individuos que compiten en cada torneo."@es .
+<https://w3id.org/ontologies-ULL/CO-META#TournamentSize> <http://www.w3.org/2000/01/rdf-schema#label> "Tamaño del torneo"@es .
+<https://w3id.org/ontologies-ULL/CO-META#TournamentSize> <http://www.w3.org/2000/01/rdf-schema#label> "Tournament Size"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#UnitInterval
 <https://w3id.org/ontologies-ULL/CO-META#UnitInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

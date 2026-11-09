@@ -22,7 +22,9 @@
 CO-META:GRASP rdf:type owl:NamedIndividual ,
                        CO-META:Metaheuristic ;
               CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
-              CO-META:hasStart CO-META:GRASP_stop .
+              CO-META:hasStart CO-META:GRASP_stop ;
+              rdfs:label "Greedy Randomized Adaptive Search Procedure"@en ,
+                         "Procedimiento de búsqueda voraz aleatorizado y adaptativo"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#GRASP_acceptance
@@ -54,7 +56,8 @@ CO-META:GRASP_neighbourhood rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#GRASP_parameter_iterations
 CO-META:GRASP_parameter_iterations rdf:type owl:NamedIndividual ,
                                             CO-META:ParameterValue ;
-                                   CO-META:hasType CO-META:Iterations .
+                                   CO-META:hasType CO-META:Iterations ;
+                                   CO-META:hasValue 100 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#GRASP_parameter_populationsize
