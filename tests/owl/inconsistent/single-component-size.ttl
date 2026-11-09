@@ -1,0 +1,12 @@
+# Expected: inconsistent.
+# A component has a single output size: an order crossover produces two
+# offspring, so it cannot produce one.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/single-component-size> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:crossover a owl:NamedIndividual , CO-META:OrderCrossoverComponent ;
+    CO-META:hasOutputSize 1 .

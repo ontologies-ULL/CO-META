@@ -754,7 +754,8 @@ CO-META:hasInlineValue rdf:type owl:DatatypeProperty ,
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasInputSize
-CO-META:hasInputSize rdf:type owl:DatatypeProperty ;
+CO-META:hasInputSize rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
                      rdfs:domain CO-META:MetaheuristicComponent ;
                      rdfs:range xsd:integer .
 
@@ -813,7 +814,8 @@ CO-META:hasNadirValue rdf:type owl:DatatypeProperty ,
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasOutputSize
-CO-META:hasOutputSize rdf:type owl:DatatypeProperty ;
+CO-META:hasOutputSize rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
                       rdfs:domain CO-META:MetaheuristicComponent ;
                       rdfs:range xsd:integer .
 
@@ -1135,11 +1137,19 @@ CO-META:BlendCrossoverComponent rdf:type owl:Class ;
                                                                        owl:onProperty CO-META:hasType ;
                                                                        owl:hasValue CO-META:BlendAlpha
                                                                      ]
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty CO-META:hasInputSize ;
+                                                  owl:hasValue 2
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty CO-META:hasOutputSize ;
+                                                  owl:hasValue 2
                                                 ] ;
                                 rdfs:comment "Componente de cruce para valores reales que obtiene cada valor del descendiente de forma uniforme en el intervalo de los valores de los progenitores ampliado en alfa veces su anchura (BLX-alfa)."@es ,
                                              "Crossover component for real values that draws each offspring value uniformly from the interval of the parents' values extended by alpha times its width (BLX-alpha)."@en ;
-                                rdfs:label "Componente de cruce por mezcla"@es ,
-                                           "Blend Crossover Component"@en .
+                                rdfs:label "Blend Crossover Component"@en ,
+                                           "Componente de cruce por mezcla"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#CollectionShape
@@ -1270,14 +1280,6 @@ CO-META:CrossoverComponent rdf:type owl:Class ;
                                                                 ]
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty CO-META:hasInputSize ;
-                                             owl:hasValue 2
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty CO-META:hasOutputSize ;
-                                             owl:hasValue 2
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
                                              owl:onProperty CO-META:hasSafety ;
                                              owl:hasValue CO-META:Unsafe
                                            ] ;
@@ -1302,6 +1304,14 @@ CO-META:CycleCrossoverComponent rdf:type owl:Class ;
                                                 [ rdf:type owl:Restriction ;
                                                   owl:onProperty CO-META:supportsShape ;
                                                   owl:allValuesFrom CO-META:DistinctSequenceShape
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty CO-META:hasInputSize ;
+                                                  owl:hasValue 2
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty CO-META:hasOutputSize ;
+                                                  owl:hasValue 2
                                                 ] ;
                                 rdfs:comment "Componente de cruce para permutaciones que mantiene cada valor en la posición que ocupa en uno de los progenitores, siguiendo los ciclos entre ellos (CX)."@es ,
                                              "Crossover component for permutations that keeps each value in the position it has in one of the parents, following the cycles between them (CX)."@en ;
@@ -1621,6 +1631,14 @@ CO-META:KPointCrossoverComponent rdf:type owl:Class ;
                                                                         owl:onProperty CO-META:hasType ;
                                                                         owl:hasValue CO-META:CrossoverKPoints
                                                                       ]
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty CO-META:hasInputSize ;
+                                                   owl:hasValue 2
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty CO-META:hasOutputSize ;
+                                                   owl:hasValue 2
                                                  ] ;
                                  rdfs:comment "Componente de cruce que divide a los progenitores en k puntos de corte e intercambia los segmentos resultantes. Tiene un parámetro para el número de puntos de corte."@es ,
                                               "Crossover component that splits the parents at k cut points and exchanges the resulting segments. It has a parameter for the number of cut points."@en ;
@@ -1897,6 +1915,14 @@ CO-META:OrderCrossoverComponent rdf:type owl:Class ;
                                                 [ rdf:type owl:Restriction ;
                                                   owl:onProperty CO-META:supportsShape ;
                                                   owl:allValuesFrom CO-META:DistinctSequenceShape
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty CO-META:hasInputSize ;
+                                                  owl:hasValue 2
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty CO-META:hasOutputSize ;
+                                                  owl:hasValue 2
                                                 ] ;
                                 rdfs:comment "Componente de cruce para permutaciones que copia un segmento de un progenitor y rellena las posiciones restantes con los valores del otro progenitor en su orden (OX)."@es ,
                                              "Crossover component for permutations that copies a segment from one parent and fills the remaining positions with the values of the other parent in their order (OX)."@en ;
@@ -1951,6 +1977,14 @@ CO-META:PartiallyMappedCrossoverComponent rdf:type owl:Class ;
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty CO-META:supportsShape ;
                                                             owl:allValuesFrom CO-META:DistinctSequenceShape
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty CO-META:hasInputSize ;
+                                                            owl:hasValue 2
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty CO-META:hasOutputSize ;
+                                                            owl:hasValue 2
                                                           ] ;
                                           rdfs:comment "Componente de cruce para permutaciones que intercambia un segmento entre los progenitores y repara las posiciones restantes mediante la correspondencia definida por dicho segmento (PMX)."@es ,
                                                        "Crossover component for permutations that exchanges a segment between parents and repairs the remaining positions using the mapping defined by that segment (PMX)."@en ;
@@ -2184,7 +2218,15 @@ CO-META:ProblemQuantity rdf:type owl:Class ;
 
 ###  https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent
 CO-META:RandomDecisionCrossoverComponent rdf:type owl:Class ;
-                                         rdfs:subClassOf CO-META:CrossoverComponent ;
+                                         rdfs:subClassOf CO-META:CrossoverComponent ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty CO-META:hasInputSize ;
+                                                           owl:hasValue 2
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty CO-META:hasOutputSize ;
+                                                           owl:hasValue 2
+                                                         ] ;
                                          rdfs:comment "Componente de cruce que decide aleatoriamente, para cada posición, de qué progenitor hereda el valor el descendiente."@es ,
                                                       "Crossover component that decides randomly, for each position, from which parent the offspring inherits the value."@en ;
                                          rdfs:label "Componente de cruce por decisión aleatoria"@es ,

@@ -1,0 +1,17 @@
+# Expected: consistent.
+# A crossover may produce a single offspring: the sizes of two parents and two
+# offspring belong to the concrete crossovers, not to CrossoverComponent.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/one-offspring-crossover> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:crossover a owl:NamedIndividual , CO-META:CrossoverComponent ;
+    CO-META:hasParameter t:crossover_probability ;
+    CO-META:hasInputSize 2 ;
+    CO-META:hasOutputSize 1 .
+
+t:crossover_probability a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:CrossoverProbability .
