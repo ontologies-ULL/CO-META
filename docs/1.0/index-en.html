@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatorial optimization metaheuristics.", "dateReleased":"Mon Nov 09 11:06:01 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatorial optimization metaheuristics.", "dateReleased":"Mon Nov 09 13:17:27 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -417,6 +417,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#PermutationVariable"
          title="https://w3id.org/ontologies-ULL/CO-META#PermutationVariable">Permutation Variable</a>
+   </li>
+   <li>
+      <a href="#PerturbativeMetaheuristic"
+         title="https://w3id.org/ontologies-ULL/CO-META#PerturbativeMetaheuristic">Perturbative Metaheuristic</a>
    </li>
    <li>
       <a href="#PheromoneDepositComponent"
@@ -1378,6 +1382,7 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#ParameterValue" title="https://w3id.org/ontologies-ULL/CO-META#ParameterValue">Parameter Value</a></li>
   <li><a href="#PartiallyMappedCrossoverComponent" title="https://w3id.org/ontologies-ULL/CO-META#PartiallyMappedCrossoverComponent">Partially Mapped Crossover Component</a></li>
   <li><a href="#PermutationVariable" title="https://w3id.org/ontologies-ULL/CO-META#PermutationVariable">Permutation Variable</a></li>
+  <li><a href="#PerturbativeMetaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#PerturbativeMetaheuristic">Perturbative Metaheuristic</a></li>
   <li><a href="#PheromoneDepositComponent" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneDepositComponent">Pheromone Deposit Component</a></li>
   <li><a href="#PheromoneEvaporationComponent" title="https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporationComponent">Pheromone Evaporation Component</a></li>
   <li><a href="#PopulationBasedMetaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#PopulationBasedMetaheuristic">Population Based Metaheuristic</a></li>
@@ -2520,14 +2525,14 @@ This section provides details for each class and property defined by CO-META.
   <h3>Local Search Metaheuristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic</p>
   <div class="comment">
-   <span class="markdown">Metaheuristic that starts from complete solutions and iteratively improves them.</span>
+   <span class="markdown">Metaheuristic that improves solutions by exploring their neighbourhoods: a perturbative single-solution metaheuristic, or one that uses a local search.</span>
   </div>
   <dl class="description">
    <dt>
     is equivalent to
    </dt>
    <dd>
-    <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#isConnectedTo" title="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo">is Connected To</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#GenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent">Generation Component</a> <sup class="type-c" title="class">c</sup>)
+    (<a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#isConnectedTo" title="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo">is Connected To</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#LocalSearchComponent" title="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent">Local Search Component</a> <sup class="type-c" title="class">c</sup>)) <span class="logic">or</span> (<a href="#PerturbativeMetaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#PerturbativeMetaheuristic">Perturbative Metaheuristic</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> <a href="#SingleSolutionMetaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic">Single Solution Based Metaheuristic</a> <sup class="type-c" title="class">c</sup>)
    </dd>
   </dl>
  </div>
@@ -3136,6 +3141,21 @@ This section provides details for each class and property defined by CO-META.
    </dt>
    <dd>
     <a href="#DecisionVariable" title="https://w3id.org/ontologies-ULL/CO-META#DecisionVariable">Decision Variable</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PerturbativeMetaheuristic">
+  <h3>Perturbative Metaheuristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#PerturbativeMetaheuristic</p>
+  <div class="comment">
+   <span class="markdown">Metaheuristic that starts from complete solutions and iteratively improves them.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#Metaheuristic" title="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic">Metaheuristic</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#isConnectedTo" title="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo">is Connected To</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#GenerationComponent" title="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent">Generation Component</a> <sup class="type-c" title="class">c</sup>)
    </dd>
   </dl>
  </div>

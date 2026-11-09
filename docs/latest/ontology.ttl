@@ -1678,16 +1678,24 @@
 
 ###  https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic
 :LocalSearchMetaheuristic rdf:type owl:Class ;
-                          owl:equivalentClass [ owl:intersectionOf ( :Metaheuristic
-                                                                     [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty :isConnectedTo ;
-                                                                       owl:someValuesFrom :GenerationComponent
-                                                                     ]
-                                                                   ) ;
-                                                rdf:type owl:Class
+                          owl:equivalentClass [ rdf:type owl:Class ;
+                                                owl:unionOf ( [ owl:intersectionOf ( :Metaheuristic
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty :isConnectedTo ;
+                                                                                       owl:someValuesFrom :LocalSearchComponent
+                                                                                     ]
+                                                                                   ) ;
+                                                                rdf:type owl:Class
+                                                              ]
+                                                              [ owl:intersectionOf ( :PerturbativeMetaheuristic
+                                                                                     :SingleSolutionMetaheuristic
+                                                                                   ) ;
+                                                                rdf:type owl:Class
+                                                              ]
+                                                            )
                                               ] ;
-                          rdfs:comment "Metaheuristic that starts from complete solutions and iteratively improves them."@en ,
-                                       "Metaheurística que parte de soluciones completas y las mejora iterativamente."@es ;
+                          rdfs:comment "Metaheuristic that improves solutions by exploring their neighbourhoods: a perturbative single-solution metaheuristic, or one that uses a local search."@en ,
+                                       "Metaheurística que mejora soluciones explorando sus vecindarios: una metaheurística perturbativa de solución única, o una que usa una búsqueda local."@es ;
                           rdfs:label "Local Search Metaheuristic"@en ,
                                      "Metaheurística de búsqueda local"@es .
 
@@ -1991,6 +1999,22 @@
                                   "Variable de decisión formada por una ordenación de valores sin repeticiones. Cuando su longitud coincide con el número de valores posibles es una permutación completa (p. ej., el recorrido por las ciudades en el TSP); si no, es una permutación parcial. Se deduce de la forma, por lo que no es necesario declararla."@es ;
                      rdfs:label "Permutation Variable"@en ,
                                 "Variable de permutación"@es .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#PerturbativeMetaheuristic
+:PerturbativeMetaheuristic rdf:type owl:Class ;
+                           owl:equivalentClass [ owl:intersectionOf ( :Metaheuristic
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty :isConnectedTo ;
+                                                                        owl:someValuesFrom :GenerationComponent
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] ;
+                           rdfs:comment "Metaheuristic that starts from complete solutions and iteratively improves them."@en ,
+                                        "Metaheurística que parte de soluciones completas y las mejora iterativamente."@es ;
+                           rdfs:label "Metaheurística perturbativa"@es ,
+                                      "Perturbative Metaheuristic"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PheromoneDepositComponent

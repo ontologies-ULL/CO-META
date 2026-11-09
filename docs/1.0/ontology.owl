@@ -2451,17 +2451,27 @@
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#LocalSearchMetaheuristic">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LocalSearchComponent"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#PerturbativeMetaheuristic"/>
+                            <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#SingleSolutionMetaheuristic"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">Metaheuristic that starts from complete solutions and iteratively improves them.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Metaheurística que parte de soluciones completas y las mejora iterativamente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Metaheuristic that improves solutions by exploring their neighbourhoods: a perturbative single-solution metaheuristic, or one that uses a local search.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Metaheurística que mejora soluciones explorando sus vecindarios: una metaheurística perturbativa de solución única, o una que usa una búsqueda local.</rdfs:comment>
         <rdfs:label xml:lang="en">Local Search Metaheuristic</rdfs:label>
         <rdfs:label xml:lang="es">Metaheurística de búsqueda local</rdfs:label>
     </owl:Class>
@@ -2898,6 +2908,29 @@
         <rdfs:comment xml:lang="es">Variable de decisión formada por una ordenación de valores sin repeticiones. Cuando su longitud coincide con el número de valores posibles es una permutación completa (p. ej., el recorrido por las ciudades en el TSP); si no, es una permutación parcial. Se deduce de la forma, por lo que no es necesario declararla.</rdfs:comment>
         <rdfs:label xml:lang="en">Permutation Variable</rdfs:label>
         <rdfs:label xml:lang="es">Variable de permutación</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#PerturbativeMetaheuristic -->
+
+
+    <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#PerturbativeMetaheuristic">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/ontologies-ULL/CO-META#Metaheuristic"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#isConnectedTo"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#GenerationComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Metaheuristic that starts from complete solutions and iteratively improves them.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Metaheurística que parte de soluciones completas y las mejora iterativamente.</rdfs:comment>
+        <rdfs:label xml:lang="es">Metaheurística perturbativa</rdfs:label>
+        <rdfs:label xml:lang="en">Perturbative Metaheuristic</rdfs:label>
     </owl:Class>
     
 
