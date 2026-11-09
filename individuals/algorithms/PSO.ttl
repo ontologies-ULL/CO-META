@@ -26,7 +26,10 @@ CO-META:PSO_ParticleSwarmOptimization rdf:type owl:NamedIndividual ,
                                                                CO-META:PSO_archive_local_best ,
                                                                CO-META:PSO_velocities ;
                                       CO-META:hasResult CO-META:PSO_archive_global_best ;
-                                      CO-META:hasStart CO-META:PSO_generate_population .
+                                      CO-META:hasStart CO-META:PSO_generate_population ;
+                                      CO-META:supportsShape CO-META:PSO_solution_shape ;
+                                      rdfs:label "Optimización por enjambre de partículas"@es ,
+                                                 "Particle Swarm Optimization"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_apply_velocity
@@ -95,7 +98,8 @@ CO-META:PSO_parameter_inertiafactor rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_iterations
 CO-META:PSO_parameter_iterations rdf:type owl:NamedIndividual ,
                                           CO-META:ParameterValue ;
-                                 CO-META:hasType CO-META:Iterations .
+                                 CO-META:hasType CO-META:Iterations ;
+                                 CO-META:hasValue 200 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_personalbestinfluence
@@ -107,7 +111,8 @@ CO-META:PSO_parameter_personalbestinfluence rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_populationsize
 CO-META:PSO_parameter_populationsize rdf:type owl:NamedIndividual ,
                                               CO-META:ParameterValue ;
-                                     CO-META:hasType CO-META:PopulationSize .
+                                     CO-META:hasType CO-META:PopulationSize ;
+                                     CO-META:hasValue 30 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_parameter_populationsize_reference
@@ -116,10 +121,17 @@ CO-META:PSO_parameter_populationsize_reference rdf:type owl:NamedIndividual ,
                                                CO-META:refersTo CO-META:PSO_parameter_populationsize .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#PSO_solution_shape
+CO-META:PSO_solution_shape rdf:type owl:NamedIndividual ,
+                                    CO-META:CollectionShape ;
+                           CO-META:isDistinct "false"^^xsd:boolean ;
+                           CO-META:isOrdered "true"^^xsd:boolean .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_stop
 CO-META:PSO_stop rdf:type owl:NamedIndividual ,
                           CO-META:StoppingCriterionComponent ;
-                 CO-META:hasOutput CO-META:PSO_iterate_population ;
+                 CO-META:hasOutputStart CO-META:PSO_iterate_population ;
                  CO-META:hasParameter CO-META:PSO_parameter_iterations .
 
 
@@ -134,8 +146,7 @@ CO-META:PSO_store_global_best rdf:type owl:NamedIndividual ,
 CO-META:PSO_store_local_best rdf:type owl:NamedIndividual ,
                                       CO-META:BestSolutionsUpdateComponent ;
                              CO-META:hasOutput CO-META:PSO_store_global_best ;
-                             CO-META:writesData CO-META:PSO_archive_local_best ,
-                                                CO-META:PSO_velocities .
+                             CO-META:writesData CO-META:PSO_archive_local_best .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PSO_update_global_best

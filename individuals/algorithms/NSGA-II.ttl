@@ -22,7 +22,9 @@
 CO-META:NSGA-II rdf:type owl:NamedIndividual ,
                          CO-META:Metaheuristic ;
                 CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
-                CO-META:hasStart CO-META:NSGA-II_generate_population .
+                CO-META:hasStart CO-META:NSGA-II_generate_population ;
+                rdfs:label "Algoritmo genético de ordenación no dominada II"@es ,
+                           "Non-dominated Sorting Genetic Algorithm II"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_binary_tournament_selection
@@ -97,13 +99,15 @@ CO-META:NSGA-II_parameter_crossover rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_parameter_elitism
 CO-META:NSGA-II_parameter_elitism rdf:type owl:NamedIndividual ,
                                            CO-META:ParameterValue ;
-                                  CO-META:hasType CO-META:Elitism .
+                                  CO-META:hasType CO-META:Elitism ;
+                                  CO-META:hasValue 0 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_parameter_iterations
 CO-META:NSGA-II_parameter_iterations rdf:type owl:NamedIndividual ,
                                               CO-META:ParameterValue ;
-                                     CO-META:hasType CO-META:Iterations .
+                                     CO-META:hasType CO-META:Iterations ;
+                                     CO-META:hasValue 100 .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#NSGA-II_parameter_mutation

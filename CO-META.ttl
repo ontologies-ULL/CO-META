@@ -2919,14 +2919,22 @@ CO-META:ComponentTrace rdf:type owl:NamedIndividual ,
 CO-META:CrossoverKPoints rdf:type owl:NamedIndividual ,
                                   CO-META:Parameter ;
                          CO-META:hasDefaultValue 1 ;
-                         CO-META:hasValueDomain CO-META:PositiveIntegers .
+                         CO-META:hasValueDomain CO-META:PositiveIntegers ;
+                         rdfs:comment "Number of cut points of a k-point crossover."@en ,
+                                      "Número de puntos de corte de un cruce de k puntos."@es ;
+                         rdfs:label "Crossover K Points"@en ,
+                                    "Puntos del cruce de k puntos"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#CrossoverProbability
 CO-META:CrossoverProbability rdf:type owl:NamedIndividual ,
                                       CO-META:Parameter ;
                              CO-META:hasDefaultValue "0.9"^^xsd:decimal ;
-                             CO-META:hasValueDomain CO-META:UnitInterval .
+                             CO-META:hasValueDomain CO-META:UnitInterval ;
+                             rdfs:comment "Probabilidad de que se recombine una pareja de progenitores; si no, se copian."@es ,
+                                          "Probability that a pair of parents is recombined; otherwise they are copied."@en ;
+                             rdfs:label "Crossover Probability"@en ,
+                                        "Probabilidad de cruce"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#CsvFormat
@@ -2951,7 +2959,11 @@ CO-META:DeathPenaltyHandling rdf:type owl:NamedIndividual ,
 CO-META:Elitism rdf:type owl:NamedIndividual ,
                          CO-META:Parameter ;
                 CO-META:hasDefaultValue 1 ;
-                CO-META:hasValueDomain CO-META:NonNegativeIntegers .
+                CO-META:hasValueDomain CO-META:NonNegativeIntegers ;
+                rdfs:comment "Number of best individuals that a selection keeps in the new population."@en ,
+                             "Número de los mejores individuos que una selección conserva en la nueva población."@es ;
+                rdfs:label "Elitism"@en ,
+                           "Elitismo"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Evaluations
@@ -2977,21 +2989,33 @@ CO-META:FeasibilityFirstHandling rdf:type owl:NamedIndividual ,
 CO-META:GlobalBestInfluence rdf:type owl:NamedIndividual ,
                                      CO-META:Parameter ;
                             CO-META:hasDefaultValue "1.5"^^xsd:decimal ;
-                            CO-META:hasValueDomain CO-META:NonNegativeReals .
+                            CO-META:hasValueDomain CO-META:NonNegativeReals ;
+                            rdfs:comment "Peso de la atracción de una partícula hacia la mejor solución del enjambre (c2)."@es ,
+                                         "Weight of the attraction of a particle towards the best solution of the swarm (c2)."@en ;
+                            rdfs:label "Global Best Influence"@en ,
+                                       "Influencia del mejor global"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#HeuristicInfluence
 CO-META:HeuristicInfluence rdf:type owl:NamedIndividual ,
                                     CO-META:Parameter ;
                            CO-META:hasDefaultValue "2.0"^^xsd:decimal ;
-                           CO-META:hasValueDomain CO-META:NonNegativeReals .
+                           CO-META:hasValueDomain CO-META:NonNegativeReals ;
+                           rdfs:comment "Exponent of the heuristic information (beta)."@en ,
+                                        "Exponente de la información heurística (beta)."@es ;
+                           rdfs:label "Heuristic Influence"@en ,
+                                      "Influencia heurística"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#InertiaFactor
 CO-META:InertiaFactor rdf:type owl:NamedIndividual ,
                                CO-META:Parameter ;
                       CO-META:hasDefaultValue "0.7"^^xsd:decimal ;
-                      CO-META:hasValueDomain CO-META:UnitInterval .
+                      CO-META:hasValueDomain CO-META:UnitInterval ;
+                      rdfs:comment "Fracción de su velocidad anterior que conserva una partícula (w)."@es ,
+                                   "Fraction of its previous velocity that a particle keeps (w)."@en ;
+                      rdfs:label "Factor de inercia"@es ,
+                                 "Inertia Factor"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#InlineFormat
@@ -3025,7 +3049,11 @@ CO-META:IterationTrace rdf:type owl:NamedIndividual ,
 CO-META:Iterations rdf:type owl:NamedIndividual ,
                             CO-META:Parameter ;
                    CO-META:hasDefaultValue 1000 ;
-                   CO-META:hasValueDomain CO-META:NonNegativeIntegers .
+                   CO-META:hasValueDomain CO-META:NonNegativeIntegers ;
+                   rdfs:comment "Maximum number of iterations."@en ,
+                                "Número máximo de iteraciones."@es ;
+                   rdfs:label "Iteraciones"@es ,
+                              "Iterations"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#IterationsWithoutImprovement
@@ -3051,21 +3079,33 @@ CO-META:JsonFormat rdf:type owl:NamedIndividual ,
 CO-META:MaxTemperature rdf:type owl:NamedIndividual ,
                                 CO-META:Parameter ;
                        CO-META:hasDefaultValue "0.1"^^xsd:decimal ;
-                       CO-META:hasValueDomain CO-META:PositiveReals .
+                       CO-META:hasValueDomain CO-META:PositiveReals ;
+                       rdfs:comment "Initial temperature. The Metropolis acceptance uses relative degradations, so temperatures are fractions of the current objective value."@en ,
+                                    "Temperatura inicial. La aceptación de Metropolis usa empeoramientos relativos, por lo que las temperaturas son fracciones del valor actual del objetivo."@es ;
+                       rdfs:label "Maximum Temperature"@en ,
+                                  "Temperatura máxima"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MinTemperature
 CO-META:MinTemperature rdf:type owl:NamedIndividual ,
                                 CO-META:Parameter ;
                        CO-META:hasDefaultValue "0.0001"^^xsd:decimal ;
-                       CO-META:hasValueDomain CO-META:PositiveReals .
+                       CO-META:hasValueDomain CO-META:PositiveReals ;
+                       rdfs:comment "Temperatura que se alcanza al agotarse el presupuesto de iteraciones."@es ,
+                                    "Temperature reached when the iteration budget is spent."@en ;
+                       rdfs:label "Minimum Temperature"@en ,
+                                  "Temperatura mínima"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MutationProbability
 CO-META:MutationProbability rdf:type owl:NamedIndividual ,
                                      CO-META:Parameter ;
                             CO-META:hasDefaultValue "0.2"^^xsd:decimal ;
-                            CO-META:hasValueDomain CO-META:UnitInterval .
+                            CO-META:hasValueDomain CO-META:UnitInterval ;
+                            rdfs:comment "Probabilidad de que se mute un individuo."@es ,
+                                         "Probability that an individual is mutated."@en ;
+                            rdfs:label "Mutation Probability"@en ,
+                                       "Probabilidad de mutación"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#MutationStrength
@@ -3144,35 +3184,55 @@ CO-META:PenaltyHandling rdf:type owl:NamedIndividual ,
 CO-META:PersonalBestInfluence rdf:type owl:NamedIndividual ,
                                        CO-META:Parameter ;
                               CO-META:hasDefaultValue "1.5"^^xsd:decimal ;
-                              CO-META:hasValueDomain CO-META:NonNegativeReals .
+                              CO-META:hasValueDomain CO-META:NonNegativeReals ;
+                              rdfs:comment "Peso de la atracción de una partícula hacia la mejor solución que ha encontrado (c1)."@es ,
+                                           "Weight of the attraction of a particle towards the best solution it has found (c1)."@en ;
+                              rdfs:label "Influencia del mejor personal"@es ,
+                                         "Personal Best Influence"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PheromoneAddition
 CO-META:PheromoneAddition rdf:type owl:NamedIndividual ,
                                    CO-META:Parameter ;
                           CO-META:hasDefaultValue 1 ;
-                          CO-META:hasValueDomain CO-META:NonNegativeIntegers .
+                          CO-META:hasValueDomain CO-META:NonNegativeIntegers ;
+                          rdfs:comment "Amount of pheromone an ant deposits, divided by the cost of its solution."@en ,
+                                       "Cantidad de feromona que deposita una hormiga, dividida por el coste de su solución."@es ;
+                          rdfs:label "Adición de feromona"@es ,
+                                     "Pheromone Addition"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PheromoneEvaporation
 CO-META:PheromoneEvaporation rdf:type owl:NamedIndividual ,
                                       CO-META:Parameter ;
                              CO-META:hasDefaultValue "0.1"^^xsd:decimal ;
-                             CO-META:hasValueDomain CO-META:UnitInterval .
+                             CO-META:hasValueDomain CO-META:UnitInterval ;
+                             rdfs:comment "Fracción de la feromona que se evapora en cada iteración."@es ,
+                                          "Fraction of the pheromone that evaporates in each iteration."@en ;
+                             rdfs:label "Evaporación de la feromona"@es ,
+                                        "Pheromone Evaporation"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PheromoneInfluence
 CO-META:PheromoneInfluence rdf:type owl:NamedIndividual ,
                                     CO-META:Parameter ;
                            CO-META:hasDefaultValue "1.0"^^xsd:decimal ;
-                           CO-META:hasValueDomain CO-META:NonNegativeReals .
+                           CO-META:hasValueDomain CO-META:NonNegativeReals ;
+                           rdfs:comment "Exponent of the pheromone (alpha)."@en ,
+                                        "Exponente de la feromona (alfa)."@es ;
+                           rdfs:label "Influencia de la feromona"@es ,
+                                      "Pheromone Influence"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PopulationSize
 CO-META:PopulationSize rdf:type owl:NamedIndividual ,
                                 CO-META:Parameter ;
                        CO-META:hasDefaultValue 50 ;
-                       CO-META:hasValueDomain CO-META:NonNegativeIntegers .
+                       CO-META:hasValueDomain CO-META:NonNegativeIntegers ;
+                       rdfs:comment "Number of solutions that a component generates, constructs or iterates over."@en ,
+                                    "Número de soluciones que un componente genera, construye o recorre."@es ;
+                       rdfs:label "Population Size"@en ,
+                                  "Tamaño de la población"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#PositiveIntegers
@@ -3201,7 +3261,11 @@ CO-META:PositiveReals rdf:type owl:NamedIndividual ,
 CO-META:RCLRandomness rdf:type owl:NamedIndividual ,
                                CO-META:Parameter ;
                       CO-META:hasDefaultValue "0.3"^^xsd:decimal ;
-                      CO-META:hasValueDomain CO-META:UnitInterval .
+                      CO-META:hasValueDomain CO-META:UnitInterval ;
+                      rdfs:comment "Anchura de la lista restringida de candidatos, de voraz (0) a aleatoria (1)."@es ,
+                                   "Width of the restricted candidate list, from greedy (0) to random (1)."@en ;
+                      rdfs:label "Aleatoriedad de la RCL"@es ,
+                                 "RCL Randomness"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#Reals
@@ -3273,7 +3337,11 @@ CO-META:Solutions rdf:type owl:NamedIndividual ,
 CO-META:StorageSize rdf:type owl:NamedIndividual ,
                              CO-META:Parameter ;
                     CO-META:hasDefaultValue 10 ;
-                    CO-META:hasValueDomain CO-META:NonNegativeIntegers .
+                    CO-META:hasValueDomain CO-META:NonNegativeIntegers ;
+                    rdfs:comment "Maximum number of solutions that a data handler keeps (e.g. a tabu list or an archive)."@en ,
+                                 "Número máximo de soluciones que guarda un manejador de datos (p. ej. una lista tabú o un archivo)."@es ;
+                    rdfs:label "Storage Size"@en ,
+                               "Tamaño del almacenamiento"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#TargetValue
@@ -3301,7 +3369,11 @@ CO-META:Time rdf:type owl:NamedIndividual ,
 CO-META:TournamentSize rdf:type owl:NamedIndividual ,
                                 CO-META:Parameter ;
                        CO-META:hasDefaultValue 2 ;
-                       CO-META:hasValueDomain CO-META:PositiveIntegers .
+                       CO-META:hasValueDomain CO-META:PositiveIntegers ;
+                       rdfs:comment "Number of individuals that compete in each tournament."@en ,
+                                    "Número de individuos que compiten en cada torneo."@es ;
+                       rdfs:label "Tamaño del torneo"@es ,
+                                  "Tournament Size"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#UnitInterval
