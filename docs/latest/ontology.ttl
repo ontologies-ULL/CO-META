@@ -752,7 +752,8 @@
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasInputSize
-:hasInputSize rdf:type owl:DatatypeProperty ;
+:hasInputSize rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
               rdfs:domain :MetaheuristicComponent ;
               rdfs:range xsd:integer .
 
@@ -811,7 +812,8 @@
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasOutputSize
-:hasOutputSize rdf:type owl:DatatypeProperty ;
+:hasOutputSize rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
                rdfs:domain :MetaheuristicComponent ;
                rdfs:range xsd:integer .
 
@@ -1161,6 +1163,14 @@
                                                                 owl:onProperty :hasType ;
                                                                 owl:hasValue :BlendAlpha
                                                               ]
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasInputSize ;
+                                           owl:hasValue 2
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasOutputSize ;
+                                           owl:hasValue 2
                                          ] ;
                          rdfs:comment "Componente de cruce para valores reales que obtiene cada valor del descendiente de forma uniforme en el intervalo de los valores de los progenitores ampliado en alfa veces su anchura (BLX-alfa)."@es ,
                                       "Crossover component for real values that draws each offspring value uniformly from the interval of the parents' values extended by alpha times its width (BLX-alpha)."@en ;
@@ -1298,14 +1308,6 @@
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasSafety ;
                                       owl:hasValue :Unsafe
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty :hasInputSize ;
-                                      owl:hasValue 2
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty :hasOutputSize ;
-                                      owl:hasValue 2
                                     ] ;
                     rdfs:comment "Componente de modificación que produce uno o más individuos descendientes recombinando dos o más individuos progenitores. Tiene un parámetro de probabilidad de cruce."@es ,
                                  "Modification component that produces one or more offspring individuals by recombining two or more parent individuals. It has a crossover probability parameter."@en ;
@@ -1328,6 +1330,14 @@
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :supportsShape ;
                                            owl:allValuesFrom :DistinctSequenceShape
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasInputSize ;
+                                           owl:hasValue 2
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasOutputSize ;
+                                           owl:hasValue 2
                                          ] ;
                          rdfs:comment "Componente de cruce para permutaciones que mantiene cada valor en la posición que ocupa en uno de los progenitores, siguiendo los ciclos entre ellos (CX)."@es ,
                                       "Crossover component for permutations that keeps each value in the position it has in one of the parents, following the cycles between them (CX)."@en ;
@@ -1647,6 +1657,14 @@
                                                                  owl:onProperty :hasType ;
                                                                  owl:hasValue :CrossoverKPoints
                                                                ]
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasInputSize ;
+                                            owl:hasValue 2
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasOutputSize ;
+                                            owl:hasValue 2
                                           ] ;
                           rdfs:comment "Componente de cruce que divide a los progenitores en k puntos de corte e intercambia los segmentos resultantes. Tiene un parámetro para el número de puntos de corte."@es ,
                                        "Crossover component that splits the parents at k cut points and exchanges the resulting segments. It has a parameter for the number of cut points."@en ;
@@ -1923,6 +1941,14 @@
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :supportsShape ;
                                            owl:allValuesFrom :DistinctSequenceShape
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasInputSize ;
+                                           owl:hasValue 2
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasOutputSize ;
+                                           owl:hasValue 2
                                          ] ;
                          rdfs:comment "Componente de cruce para permutaciones que copia un segmento de un progenitor y rellena las posiciones restantes con los valores del otro progenitor en su orden (OX)."@es ,
                                       "Crossover component for permutations that copies a segment from one parent and fills the remaining positions with the values of the other parent in their order (OX)."@en ;
@@ -1977,6 +2003,14 @@
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :supportsShape ;
                                                      owl:allValuesFrom :DistinctSequenceShape
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasInputSize ;
+                                                     owl:hasValue 2
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasOutputSize ;
+                                                     owl:hasValue 2
                                                    ] ;
                                    rdfs:comment "Componente de cruce para permutaciones que intercambia un segmento entre los progenitores y repara las posiciones restantes mediante la correspondencia definida por dicho segmento (PMX)."@es ,
                                                 "Crossover component for permutations that exchanges a segment between parents and repairs the remaining positions using the mapping defined by that segment (PMX)."@en ;
@@ -2210,7 +2244,15 @@
 
 ###  https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent
 :RandomDecisionCrossoverComponent rdf:type owl:Class ;
-                                  rdfs:subClassOf :CrossoverComponent ;
+                                  rdfs:subClassOf :CrossoverComponent ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasInputSize ;
+                                                    owl:hasValue 2
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasOutputSize ;
+                                                    owl:hasValue 2
+                                                  ] ;
                                   rdfs:comment "Componente de cruce que decide aleatoriamente, para cada posición, de qué progenitor hereda el valor el descendiente."@es ,
                                                "Crossover component that decides randomly, for each position, from which parent the offspring inherits the value."@en ;
                                   rdfs:label "Componente de cruce por decisión aleatoria"@es ,

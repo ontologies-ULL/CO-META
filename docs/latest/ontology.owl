@@ -1104,6 +1104,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasInputSize">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -1189,6 +1190,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#MetaheuristicComponent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -1698,6 +1700,18 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasInputSize"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Componente de cruce para valores reales que obtiene cada valor del descendiente de forma uniforme en el intervalo de los valores de los progenitores ampliado en alfa veces su anchura (BLX-alfa).</rdfs:comment>
         <rdfs:comment xml:lang="en">Crossover component for real values that draws each offspring value uniformly from the interval of the parents&apos; values extended by alpha times its width (BLX-alpha).</rdfs:comment>
         <rdfs:label xml:lang="en">Blend Crossover Component</rdfs:label>
@@ -1898,18 +1912,6 @@
                 <owl:hasValue rdf:resource="https://w3id.org/ontologies-ULL/CO-META#Unsafe"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasInputSize"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Componente de modificación que produce uno o más individuos descendientes recombinando dos o más individuos progenitores. Tiene un parámetro de probabilidad de cruce.</rdfs:comment>
         <rdfs:comment xml:lang="en">Modification component that produces one or more offspring individuals by recombining two or more parent individuals. It has a crossover probability parameter.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de cruce</rdfs:label>
@@ -1940,6 +1942,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#supportsShape"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasInputSize"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Componente de cruce para permutaciones que mantiene cada valor en la posición que ocupa en uno de los progenitores, siguiendo los ciclos entre ellos (CX).</rdfs:comment>
@@ -2405,6 +2419,18 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasInputSize"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Componente de cruce que divide a los progenitores en k puntos de corte e intercambia los segmentos resultantes. Tiene un parámetro para el número de puntos de corte.</rdfs:comment>
         <rdfs:comment xml:lang="en">Crossover component that splits the parents at k cut points and exchanges the resulting segments. It has a parameter for the number of cut points.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de cruce de k puntos</rdfs:label>
@@ -2800,6 +2826,18 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasInputSize"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Componente de cruce para permutaciones que copia un segmento de un progenitor y rellena las posiciones restantes con los valores del otro progenitor en su orden (OX).</rdfs:comment>
         <rdfs:comment xml:lang="en">Crossover component for permutations that copies a segment from one parent and fills the remaining positions with the values of the other parent in their order (OX).</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de cruce de orden</rdfs:label>
@@ -2878,6 +2916,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#supportsShape"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/ontologies-ULL/CO-META#DistinctSequenceShape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasInputSize"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Componente de cruce para permutaciones que intercambia un segmento entre los progenitores y repara las posiciones restantes mediante la correspondencia definida por dicho segmento (PMX).</rdfs:comment>
@@ -3219,6 +3269,18 @@
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#RandomDecisionCrossoverComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#CrossoverComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasInputSize"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Componente de cruce que decide aleatoriamente, para cada posición, de qué progenitor hereda el valor el descendiente.</rdfs:comment>
         <rdfs:comment xml:lang="en">Crossover component that decides randomly, for each position, from which parent the offspring inherits the value.</rdfs:comment>
         <rdfs:label xml:lang="es">Componente de cruce por decisión aleatoria</rdfs:label>
