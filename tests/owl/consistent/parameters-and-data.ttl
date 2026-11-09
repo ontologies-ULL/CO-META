@@ -1,0 +1,44 @@
+# Expected: consistent.
+# Default values, values taken from another parameter value, the initial value
+# of a data structure, a stopping criterion with several limits and the
+# result of a metaheuristic.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/parameters-and-data> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:metaheuristic a owl:NamedIndividual , CO-META:Metaheuristic ;
+    CO-META:hasStart t:generate ;
+    CO-META:hasDataStructure t:temperature ;
+    CO-META:hasResult t:temperature .
+
+t:generate a owl:NamedIndividual , CO-META:RandomGenerationComponent ;
+    CO-META:hasParameter t:population_size ;
+    CO-META:hasOutputStart t:stop .
+t:stop a owl:NamedIndividual , CO-META:StoppingCriterionComponent ;
+    CO-META:hasParameter t:iterations , t:evaluations , t:stagnation ;
+    CO-META:hasOutput t:truncation .
+t:truncation a owl:NamedIndividual , CO-META:TruncationComponent ;
+    CO-META:hasParameter t:truncation_size ;
+    CO-META:hasOutput t:stop .
+
+t:population_size a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:PopulationSize ; CO-META:hasValue 20 .
+t:truncation_size a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:PopulationSize ;
+    CO-META:hasValueReference [ a CO-META:ParameterReference ; CO-META:refersTo t:population_size ] .
+# No value: the default value of Iterations is used.
+t:iterations a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:Iterations .
+t:evaluations a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:Evaluations ; CO-META:hasValue 10000 .
+t:stagnation a owl:NamedIndividual , CO-META:ParameterValue ;
+    CO-META:hasType CO-META:IterationsWithoutImprovement ; CO-META:hasValue 100 .
+
+t:temperature a owl:NamedIndividual , CO-META:DataStructure ;
+    CO-META:hasShape CO-META:Scalar ;
+    CO-META:hasValueDomain [ a CO-META:ValueDomain ; CO-META:hasBaseType CO-META:Reals ] ;
+    CO-META:hasInitialValue [ a CO-META:LiteralValue ; CO-META:hasLiteralValue "0.5"^^xsd:double ] .

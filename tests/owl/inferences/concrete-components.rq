@@ -1,0 +1,14 @@
+PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+PREFIX t: <http://example.org/co-meta-test#>
+
+ASK {
+    t:mutation a cm:VariationComponent , cm:MetaheuristicComponent ;
+        cm:hasSafety cm:Unsafe .
+    t:crossover a cm:CrossoverComponent ;
+        cm:hasSafety cm:Unsafe .
+    t:acceptance a cm:AcceptanceComponent .
+    t:repair a cm:RepairComponent , cm:ModificationComponent ;
+        cm:hasSafety cm:Safe .
+    t:sorting a cm:FitnessAssignmentComponent .
+    t:cooling a cm:DataHandlerComponent .
+}

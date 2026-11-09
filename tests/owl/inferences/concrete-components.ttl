@@ -1,0 +1,16 @@
+# Expected inferences: see concrete-components.rq.
+# Concrete components are classified under their families and take the safety
+# of their class.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/concrete-components> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:mutation a owl:NamedIndividual , CO-META:SwapMutationComponent .
+t:crossover a owl:NamedIndividual , CO-META:OrderCrossoverComponent .
+t:acceptance a owl:NamedIndividual , CO-META:MetropolisAcceptanceComponent .
+t:repair a owl:NamedIndividual , CO-META:GreedyRepairComponent .
+t:sorting a owl:NamedIndividual , CO-META:NonDominatedSortingComponent .
+t:cooling a owl:NamedIndividual , CO-META:GeometricCoolingComponent .
