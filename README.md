@@ -19,7 +19,7 @@ Documentation: <https://w3id.org/ontologies-ULL/CO-META>
 
 ### General
 - Describe each metaheuristic or problem in its own file, with its own ontology IRI and importing `https://w3id.org/ontologies-ULL/CO-META`.
-- All individuals share the CO-META namespace, so prefix their names with the metaheuristic or problem they belong to (`ACO_pheromones`, `TSP_x`).
+- The individuals of a metaheuristic are in the namespace of its own ontology, without a prefix (`https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/ACO#pheromones`). The individuals of a problem share the CO-META namespace, so prefix their names with the problem they belong to (`TSP_x`).
 - Give labels in English and Spanish to new ontology terms and to problems, objectives and constraints, and a short comment in both languages to new ontology terms.
 - Do not declare in the individuals files the properties of the ontology. Protégé does it as annotation properties when it cannot load the import, which takes the files out of OWL 2 DL; the catalogs described in [Imported modules](#imported-modules) prevent it.
 

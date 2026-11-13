@@ -1,14 +1,11 @@
-@prefix : <https://w3id.org/ontologies-ULL/CO-META#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix ns: <http://creativecommons.org/ns#> .
+@prefix : <https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix terms: <http://purl.org/dc/terms/> .
 @prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
-@base <https://w3id.org/ontologies-ULL/CO-META#> .
+@base <https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA> .
 
 <https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA> rdf:type owl:Ontology ;
                                                                      owl:imports <https://w3id.org/ontologies-ULL/CO-META> ;
@@ -18,104 +15,104 @@
 #    Individuals
 #################################################################
 
-###  https://w3id.org/ontologies-ULL/CO-META#EA_EvolutionaryAlgorithm
-CO-META:EA_EvolutionaryAlgorithm rdf:type owl:NamedIndividual ,
-                                          CO-META:Metaheuristic ;
-                                 CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
-                                 CO-META:hasStart CO-META:EA_generate_population ;
-                                 CO-META:supportsShape CO-META:EA_solution_shape ;
-                                 rdfs:label "Algoritmo evolutivo"@es ,
-                                            "Evolutionary Algorithm"@en .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#EvolutionaryAlgorithm
+:EvolutionaryAlgorithm rdf:type owl:NamedIndividual ,
+                                CO-META:Metaheuristic ;
+                       CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
+                       CO-META:hasStart :generate_population ;
+                       CO-META:supportsShape :solution_shape ;
+                       rdfs:label "Algoritmo evolutivo"@es ,
+                                  "Evolutionary Algorithm"@en .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#EA_binary_tournament_selection
-CO-META:EA_binary_tournament_selection rdf:type owl:NamedIndividual ,
-                                                CO-META:TournamentSelectionComponent ;
-                                       CO-META:hasOutput CO-META:EA_order_crossover ;
-                                       CO-META:hasParameter CO-META:EA_parameter_elitism ,
-                                                            CO-META:EA_parameter_tournamentsize .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#binary_tournament_selection
+:binary_tournament_selection rdf:type owl:NamedIndividual ,
+                                      CO-META:TournamentSelectionComponent ;
+                             CO-META:hasOutput :order_crossover ;
+                             CO-META:hasParameter :parameter_elitism ,
+                                                  :parameter_tournamentsize .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#EA_generate_population
-CO-META:EA_generate_population rdf:type owl:NamedIndividual ,
-                                        CO-META:PopulationGenerationComponent ,
-                                        CO-META:RandomGenerationComponent ;
-                               CO-META:hasOutputStart CO-META:EA_stop ;
-                               CO-META:hasParameter CO-META:EA_parameter_populationsize .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#generate_population
+:generate_population rdf:type owl:NamedIndividual ,
+                              CO-META:PopulationGenerationComponent ,
+                              CO-META:RandomGenerationComponent ;
+                     CO-META:hasOutputStart :stop ;
+                     CO-META:hasParameter :parameter_populationsize .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#EA_mutation
-CO-META:EA_mutation rdf:type owl:NamedIndividual ,
-                             CO-META:SwapMutationComponent ;
-                    CO-META:hasOutput CO-META:EA_next_generation ;
-                    CO-META:hasParameter CO-META:EA_parameter_mutationprobability .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#mutation
+:mutation rdf:type owl:NamedIndividual ,
+                   CO-META:SwapMutationComponent ;
+          CO-META:hasOutput :next_generation ;
+          CO-META:hasParameter :parameter_mutationprobability .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#EA_next_generation
-CO-META:EA_next_generation rdf:type owl:NamedIndividual ,
-                                    CO-META:PopulationModifierComponent ;
-                           CO-META:hasOutput CO-META:EA_binary_tournament_selection ;
-                           CO-META:hasOutputEnd CO-META:EA_stop ;
-                           CO-META:hasParameter CO-META:EA_parameter_populationsize .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#next_generation
+:next_generation rdf:type owl:NamedIndividual ,
+                          CO-META:PopulationModifierComponent ;
+                 CO-META:hasOutput :binary_tournament_selection ;
+                 CO-META:hasOutputEnd :stop ;
+                 CO-META:hasParameter :parameter_populationsize .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#EA_order_crossover
-CO-META:EA_order_crossover rdf:type owl:NamedIndividual ,
-                                    CO-META:OrderCrossoverComponent ;
-                           CO-META:hasOutput CO-META:EA_mutation ;
-                           CO-META:hasParameter CO-META:EA_parameter_crossoverprobability .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#order_crossover
+:order_crossover rdf:type owl:NamedIndividual ,
+                          CO-META:OrderCrossoverComponent ;
+                 CO-META:hasOutput :mutation ;
+                 CO-META:hasParameter :parameter_crossoverprobability .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#EA_parameter_crossoverprobability
-CO-META:EA_parameter_crossoverprobability rdf:type owl:NamedIndividual ,
-                                                   CO-META:ParameterValue ;
-                                          CO-META:hasType CO-META:CrossoverProbability .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META#EA_parameter_elitism
-CO-META:EA_parameter_elitism rdf:type owl:NamedIndividual ,
-                                      CO-META:ParameterValue ;
-                             CO-META:hasType CO-META:Elitism .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META#EA_parameter_iterations
-CO-META:EA_parameter_iterations rdf:type owl:NamedIndividual ,
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#parameter_crossoverprobability
+:parameter_crossoverprobability rdf:type owl:NamedIndividual ,
                                          CO-META:ParameterValue ;
-                                CO-META:hasType CO-META:Iterations ;
-                                CO-META:hasValue 200 .
+                                CO-META:hasType CO-META:CrossoverProbability .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#EA_parameter_mutationprobability
-CO-META:EA_parameter_mutationprobability rdf:type owl:NamedIndividual ,
-                                                  CO-META:ParameterValue ;
-                                         CO-META:hasType CO-META:MutationProbability .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#parameter_elitism
+:parameter_elitism rdf:type owl:NamedIndividual ,
+                            CO-META:ParameterValue ;
+                   CO-META:hasType CO-META:Elitism .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#EA_parameter_populationsize
-CO-META:EA_parameter_populationsize rdf:type owl:NamedIndividual ,
-                                             CO-META:ParameterValue ;
-                                    CO-META:hasType CO-META:PopulationSize .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#parameter_iterations
+:parameter_iterations rdf:type owl:NamedIndividual ,
+                               CO-META:ParameterValue ;
+                      CO-META:hasType CO-META:Iterations ;
+                      CO-META:hasValue 200 .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#EA_parameter_tournamentsize
-CO-META:EA_parameter_tournamentsize rdf:type owl:NamedIndividual ,
-                                             CO-META:ParameterValue ;
-                                    CO-META:hasType CO-META:TournamentSize ;
-                                    CO-META:hasValue 2 .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#parameter_mutationprobability
+:parameter_mutationprobability rdf:type owl:NamedIndividual ,
+                                        CO-META:ParameterValue ;
+                               CO-META:hasType CO-META:MutationProbability .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#EA_solution_shape
-CO-META:EA_solution_shape rdf:type owl:NamedIndividual ,
-                                   CO-META:CollectionShape ;
-                          CO-META:isDistinct "true"^^xsd:boolean ;
-                          CO-META:isOrdered "true"^^xsd:boolean .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#parameter_populationsize
+:parameter_populationsize rdf:type owl:NamedIndividual ,
+                                   CO-META:ParameterValue ;
+                          CO-META:hasType CO-META:PopulationSize .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#EA_stop
-CO-META:EA_stop rdf:type owl:NamedIndividual ,
-                         CO-META:StoppingCriterionComponent ;
-                CO-META:hasOutputStart CO-META:EA_next_generation ;
-                CO-META:hasParameter CO-META:EA_parameter_iterations .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#parameter_tournamentsize
+:parameter_tournamentsize rdf:type owl:NamedIndividual ,
+                                   CO-META:ParameterValue ;
+                          CO-META:hasType CO-META:TournamentSize ;
+                          CO-META:hasValue 2 .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#solution_shape
+:solution_shape rdf:type owl:NamedIndividual ,
+                         CO-META:CollectionShape ;
+                CO-META:isDistinct "true"^^xsd:boolean ;
+                CO-META:isOrdered "true"^^xsd:boolean .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/EA#stop
+:stop rdf:type owl:NamedIndividual ,
+               CO-META:StoppingCriterionComponent ;
+      CO-META:hasOutputStart :next_generation ;
+      CO-META:hasParameter :parameter_iterations .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
