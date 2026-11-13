@@ -1,0 +1,20 @@
+# Expected: SHACL violation (KnownSolutionShape).
+# A known solution must give the value of at least one objective.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/known-solution-without-objective-value> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:problem a owl:NamedIndividual , CO-META:Problem ;
+    CO-META:hasObjective t:length .
+t:length a owl:NamedIndividual , CO-META:MinimizationObjective .
+t:other a owl:NamedIndividual , CO-META:MinimizationObjective .
+
+t:instance a owl:NamedIndividual , CO-META:ProblemInstance ;
+    CO-META:isInstanceOf t:problem ;
+    CO-META:hasKnownSolution t:solution .
+t:solution a owl:NamedIndividual , CO-META:SolutionRecord ;
+    CO-META:isOptimal true .

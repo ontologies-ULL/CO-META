@@ -265,6 +265,16 @@ CO-META:hasInputStart rdf:type owl:ObjectProperty ;
                       owl:inverseOf CO-META:hasOutputStart .
 
 
+###  https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution
+CO-META:hasKnownSolution rdf:type owl:ObjectProperty ;
+                         rdfs:domain CO-META:ProblemInstance ;
+                         rdfs:range CO-META:SolutionRecord ;
+                         rdfs:comment "Solución de la instancia conocida de antemano, para comparar los resultados con ella: un óptimo, la mejor conocida o, con varios objetivos, cada punto de un frente conocido."@es ,
+                                      "Solution of the instance known beforehand, to compare results with: an optimum, the best known one or, with several objectives, each point of a known front."@en ;
+                         rdfs:label "has known solution"@en ,
+                                    "tiene solución conocida"@es .
+
+
 ###  https://w3id.org/ontologies-ULL/CO-META#hasLength
 CO-META:hasLength rdf:type owl:ObjectProperty ,
                            owl:FunctionalProperty ;
@@ -1009,6 +1019,17 @@ CO-META:isImpliedByShape rdf:type owl:DatatypeProperty ,
                                       "The shape of the decision variables already guarantees the constraint (e.g. visiting each city once with a permutation), so it need not be checked."@en ;
                          rdfs:label "está implícita en la forma"@es ,
                                     "is implied by shape"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META#isOptimal
+CO-META:isOptimal rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain CO-META:SolutionRecord ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "Si está demostrado que la solución es óptima o, con varios objetivos, óptima de Pareto."@es ,
+                               "Whether the solution is proven optimal or, with several objectives, Pareto optimal."@en ;
+                  rdfs:label "es óptima"@es ,
+                             "is optimal"@en .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#isOrdered
@@ -2531,8 +2552,8 @@ CO-META:SingleSolutionMetaheuristic rdf:type owl:Class ;
 
 ###  https://w3id.org/ontologies-ULL/CO-META#SolutionRecord
 CO-META:SolutionRecord rdf:type owl:Class ;
-                       rdfs:comment "A solution returned by a run, with the values of its variables and of its objectives."@en ,
-                                    "Una solución devuelta por una repetición, con los valores de sus variables y de sus objetivos."@es ;
+                       rdfs:comment "A solution of a problem instance, returned by a run or known beforehand, with the values of its variables and of its objectives."@en ,
+                                    "Una solución de una instancia de un problema, devuelta por una ejecución o conocida de antemano, con los valores de sus variables y de sus objetivos."@es ;
                        rdfs:label "Registro de solución"@es ,
                                   "Solution Record"@en .
 

@@ -16,6 +16,30 @@ cm:ProblemInstanceShape
         sh:path cm:isInstanceOf ;
         sh:minCount 1 ;
         sh:message "An instance must state the problem it is an instance of." ;
+    ] ;
+
+    # A known solution gives values of the objectives of the problem of the instance
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A known solution of {$this} gives the value of {?objective}, which is not an objective of its problem." ;
+        sh:select """
+            PREFIX cm: <https://w3id.org/ontologies-ULL/CO-META#>
+            SELECT $this ?objective
+            WHERE {
+                $this cm:isInstanceOf ?problem ;
+                      cm:hasKnownSolution/cm:hasObjectiveValue/cm:hasType ?objective .
+                FILTER NOT EXISTS { ?problem cm:hasObjective ?objective }
+            }
+        """ ;
+    ] .
+
+cm:KnownSolutionShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf cm:hasKnownSolution ;
+    sh:property [
+        sh:path cm:hasObjectiveValue ;
+        sh:minCount 1 ;
+        sh:message "A known solution must give the value of at least one objective." ;
     ] .
 
 cm:DataBindingShape

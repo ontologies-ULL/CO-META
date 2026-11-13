@@ -81,6 +81,7 @@
                      CO-META:ProblemInstance ;
             CO-META:hasDataBinding :instance_6_cities ,
                                    :instance_6_n ;
+            CO-META:hasKnownSolution :instance_6_optimum ;
             CO-META:isInstanceOf :TSP ;
             rdfs:comment "Seis ciudades en un hexágono. El recorrido óptimo las visita en orden y mide unos 22,42."@es ,
                          "Six cities on a hexagon. The optimum tour visits them in order and is about 22.42 long."@en ;
@@ -102,6 +103,22 @@
               CO-META:bindsQuantity :N ;
               CO-META:hasSourceFormat CO-META:InlineFormat ;
               CO-META:hasInlineValue "6" .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/TSP#instance_6_optimum
+:instance_6_optimum rdf:type owl:NamedIndividual ,
+                             CO-META:SolutionRecord ;
+                    CO-META:hasObjectiveValue :instance_6_optimum_minimum_distance ;
+                    CO-META:hasVariableValues "{\"x\": [1, 2, 3, 4, 5, 6]}" ;
+                    CO-META:isFeasible "true"^^xsd:boolean ;
+                    CO-META:isOptimal "true"^^xsd:boolean .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/TSP#instance_6_optimum_minimum_distance
+:instance_6_optimum_minimum_distance rdf:type owl:NamedIndividual ,
+                                              CO-META:ObjectiveValue ;
+                                     CO-META:hasType :minimum_distance ;
+                                     CO-META:hasValue "22.42220510185596"^^xsd:double .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/TSP#inverse_distance

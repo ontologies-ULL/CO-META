@@ -1,0 +1,12 @@
+# Expected: inconsistent.
+# A solution is either optimal or not.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
+@prefix t: <http://example.org/co-meta-test#> .
+
+<http://example.org/co-meta-test/single-optimality> a owl:Ontology ;
+    owl:imports <https://w3id.org/ontologies-ULL/CO-META> .
+
+t:solution a owl:NamedIndividual , CO-META:SolutionRecord ;
+    CO-META:isOptimal true , false .
