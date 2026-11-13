@@ -1,14 +1,11 @@
-@prefix : <https://w3id.org/ontologies-ULL/CO-META#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix ns: <http://creativecommons.org/ns#> .
+@prefix : <https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix terms: <http://purl.org/dc/terms/> .
 @prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
-@base <https://w3id.org/ontologies-ULL/CO-META#> .
+@base <https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2> .
 
 <https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2> rdf:type owl:Ontology ;
                                                                         owl:imports <https://w3id.org/ontologies-ULL/CO-META> ;
@@ -18,168 +15,168 @@
 #    Individuals
 #################################################################
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2
-CO-META:SPEA2 rdf:type owl:NamedIndividual ,
-                       CO-META:Metaheuristic ;
-              CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
-              CO-META:hasDataStructure CO-META:SPEA2_archive ;
-              CO-META:hasResult CO-META:SPEA2_archive ;
-              CO-META:hasStart CO-META:SPEA2_generate_population ;
-              rdfs:label "Algoritmo evolutivo de Pareto por fuerza 2"@es ,
-                         "Strength Pareto Evolutionary Algorithm 2"@en .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#SPEA2
+:SPEA2 rdf:type owl:NamedIndividual ,
+                CO-META:Metaheuristic ;
+       CO-META:hasConstraintHandling CO-META:FeasibilityFirstHandling ;
+       CO-META:hasDataStructure :archive ;
+       CO-META:hasResult :archive ;
+       CO-META:hasStart :generate_population ;
+       rdfs:label "Algoritmo evolutivo de Pareto por fuerza 2"@es ,
+                  "Strength Pareto Evolutionary Algorithm 2"@en .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive
-CO-META:SPEA2_archive rdf:type owl:NamedIndividual ,
-                               CO-META:DataStructure ;
-                      CO-META:hasShape CO-META:SPEA2_archive_shape ;
-                      CO-META:hasValueDomain CO-META:AnySolution .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#archive
+:archive rdf:type owl:NamedIndividual ,
+                  CO-META:DataStructure ;
+         CO-META:hasShape :archive_shape ;
+         CO-META:hasValueDomain CO-META:AnySolution .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_archive_shape
-CO-META:SPEA2_archive_shape rdf:type owl:NamedIndividual ,
-                                     CO-META:CollectionShape ;
-                            CO-META:hasLength CO-META:SPEA2_parameter_storagesize_reference ;
-                            CO-META:isDistinct "true"^^xsd:boolean ;
-                            CO-META:isOrdered "false"^^xsd:boolean .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#archive_shape
+:archive_shape rdf:type owl:NamedIndividual ,
+                        CO-META:CollectionShape ;
+               CO-META:hasLength :parameter_storagesize_reference ;
+               CO-META:isDistinct "true"^^xsd:boolean ;
+               CO-META:isOrdered "false"^^xsd:boolean .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_binary_tournament_selection
-CO-META:SPEA2_binary_tournament_selection rdf:type owl:NamedIndividual ,
-                                                   CO-META:TournamentSelectionComponent ;
-                                          CO-META:hasOutput CO-META:SPEA2_crossover ;
-                                          CO-META:hasParameter CO-META:SPEA2_parameter_elitism ,
-                                                               CO-META:SPEA2_parameter_tournamentsize .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#binary_tournament_selection
+:binary_tournament_selection rdf:type owl:NamedIndividual ,
+                                      CO-META:TournamentSelectionComponent ;
+                             CO-META:hasOutput :crossover ;
+                             CO-META:hasParameter :parameter_elitism ,
+                                                  :parameter_tournamentsize .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_crossover
-CO-META:SPEA2_crossover rdf:type owl:NamedIndividual ,
-                                 CO-META:CrossoverComponent ;
-                        CO-META:hasOutput CO-META:SPEA2_mutation ;
-                        CO-META:hasParameter CO-META:SPEA2_parameter_crossoverprobability .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#crossover
+:crossover rdf:type owl:NamedIndividual ,
+                    CO-META:CrossoverComponent ;
+           CO-META:hasOutput :mutation ;
+           CO-META:hasParameter :parameter_crossoverprobability .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_diversity_preservation_kth_nearest_neighbour
-CO-META:SPEA2_diversity_preservation_kth_nearest_neighbour rdf:type owl:NamedIndividual ,
-                                                                    CO-META:NearestNeighbourDensityComponent ;
-                                                           CO-META:hasOutput CO-META:SPEA2_truncation .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#diversity_preservation_kth_nearest_neighbour
+:diversity_preservation_kth_nearest_neighbour rdf:type owl:NamedIndividual ,
+                                                       CO-META:NearestNeighbourDensityComponent ;
+                                              CO-META:hasOutput :truncation .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_fitness_assignment_raw_fitness
-CO-META:SPEA2_fitness_assignment_raw_fitness rdf:type owl:NamedIndividual ,
-                                                      CO-META:StrengthFitnessComponent ;
-                                             CO-META:hasOutput CO-META:SPEA2_diversity_preservation_kth_nearest_neighbour .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#fitness_assignment_raw_fitness
+:fitness_assignment_raw_fitness rdf:type owl:NamedIndividual ,
+                                         CO-META:StrengthFitnessComponent ;
+                                CO-META:hasOutput :diversity_preservation_kth_nearest_neighbour .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_generate_population
-CO-META:SPEA2_generate_population rdf:type owl:NamedIndividual ,
-                                           CO-META:PopulationGenerationComponent ,
-                                           CO-META:RandomGenerationComponent ;
-                                  CO-META:hasOutputStart CO-META:SPEA2_stop ;
-                                  CO-META:hasParameter CO-META:SPEA2_parameter_populationsize .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#generate_population
+:generate_population rdf:type owl:NamedIndividual ,
+                              CO-META:PopulationGenerationComponent ,
+                              CO-META:RandomGenerationComponent ;
+                     CO-META:hasOutputStart :stop ;
+                     CO-META:hasParameter :parameter_populationsize .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_mutation
-CO-META:SPEA2_mutation rdf:type owl:NamedIndividual ,
-                                CO-META:VariationComponent ;
-                       CO-META:hasOutput CO-META:SPEA2_next_generation ;
-                       CO-META:hasParameter CO-META:SPEA2_parameter_mutationprobability .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#mutation
+:mutation rdf:type owl:NamedIndividual ,
+                   CO-META:VariationComponent ;
+          CO-META:hasOutput :next_generation ;
+          CO-META:hasParameter :parameter_mutationprobability .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_next_generation
-CO-META:SPEA2_next_generation rdf:type owl:NamedIndividual ,
-                                       CO-META:PopulationModifierComponent ;
-                              CO-META:hasOutput CO-META:SPEA2_binary_tournament_selection ;
-                              CO-META:hasOutputEnd CO-META:SPEA2_stop ;
-                              CO-META:hasParameter CO-META:SPEA2_parameter_populationsize .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#next_generation
+:next_generation rdf:type owl:NamedIndividual ,
+                          CO-META:PopulationModifierComponent ;
+                 CO-META:hasOutput :binary_tournament_selection ;
+                 CO-META:hasOutputEnd :stop ;
+                 CO-META:hasParameter :parameter_populationsize .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_crossoverprobability
-CO-META:SPEA2_parameter_crossoverprobability rdf:type owl:NamedIndividual ,
-                                                      CO-META:ParameterValue ;
-                                             CO-META:hasType CO-META:CrossoverProbability .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_elitism
-CO-META:SPEA2_parameter_elitism rdf:type owl:NamedIndividual ,
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#parameter_crossoverprobability
+:parameter_crossoverprobability rdf:type owl:NamedIndividual ,
                                          CO-META:ParameterValue ;
-                                CO-META:hasType CO-META:Elitism ;
-                                CO-META:hasValue 0 .
+                                CO-META:hasType CO-META:CrossoverProbability .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_iterations
-CO-META:SPEA2_parameter_iterations rdf:type owl:NamedIndividual ,
-                                            CO-META:ParameterValue ;
-                                   CO-META:hasType CO-META:Iterations ;
-                                   CO-META:hasValue 100 .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#parameter_elitism
+:parameter_elitism rdf:type owl:NamedIndividual ,
+                            CO-META:ParameterValue ;
+                   CO-META:hasType CO-META:Elitism ;
+                   CO-META:hasValue 0 .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_mutationprobability
-CO-META:SPEA2_parameter_mutationprobability rdf:type owl:NamedIndividual ,
-                                                     CO-META:ParameterValue ;
-                                            CO-META:hasType CO-META:MutationProbability .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#parameter_iterations
+:parameter_iterations rdf:type owl:NamedIndividual ,
+                               CO-META:ParameterValue ;
+                      CO-META:hasType CO-META:Iterations ;
+                      CO-META:hasValue 100 .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_populationsize
-CO-META:SPEA2_parameter_populationsize rdf:type owl:NamedIndividual ,
-                                                CO-META:ParameterValue ;
-                                       CO-META:hasType CO-META:PopulationSize .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#parameter_mutationprobability
+:parameter_mutationprobability rdf:type owl:NamedIndividual ,
+                                        CO-META:ParameterValue ;
+                               CO-META:hasType CO-META:MutationProbability .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_storagesize
-CO-META:SPEA2_parameter_storagesize rdf:type owl:NamedIndividual ,
-                                             CO-META:ParameterValue ;
-                                    CO-META:hasType CO-META:StorageSize ;
-                                    CO-META:hasValue 50 .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#parameter_populationsize
+:parameter_populationsize rdf:type owl:NamedIndividual ,
+                                   CO-META:ParameterValue ;
+                          CO-META:hasType CO-META:PopulationSize .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_storagesize_reference
-CO-META:SPEA2_parameter_storagesize_reference rdf:type owl:NamedIndividual ,
-                                                       CO-META:ParameterReference ;
-                                              CO-META:refersTo CO-META:SPEA2_parameter_storagesize .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#parameter_storagesize
+:parameter_storagesize rdf:type owl:NamedIndividual ,
+                                CO-META:ParameterValue ;
+                       CO-META:hasType CO-META:StorageSize ;
+                       CO-META:hasValue 50 .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_tournamentsize
-CO-META:SPEA2_parameter_tournamentsize rdf:type owl:NamedIndividual ,
-                                                CO-META:ParameterValue ;
-                                       CO-META:hasType CO-META:TournamentSize ;
-                                       CO-META:hasValue 2 .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#parameter_storagesize_reference
+:parameter_storagesize_reference rdf:type owl:NamedIndividual ,
+                                          CO-META:ParameterReference ;
+                                 CO-META:refersTo :parameter_storagesize .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_parameter_truncationsize
-CO-META:SPEA2_parameter_truncationsize rdf:type owl:NamedIndividual ,
-                                                CO-META:ParameterValue ;
-                                       CO-META:hasType CO-META:PopulationSize ;
-                                       CO-META:hasValueReference CO-META:SPEA2_parameter_storagesize_reference .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#parameter_tournamentsize
+:parameter_tournamentsize rdf:type owl:NamedIndividual ,
+                                   CO-META:ParameterValue ;
+                          CO-META:hasType CO-META:TournamentSize ;
+                          CO-META:hasValue 2 .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_stop
-CO-META:SPEA2_stop rdf:type owl:NamedIndividual ,
-                            CO-META:StoppingCriterionComponent ;
-                   CO-META:hasCurrentOutput CO-META:SPEA2_union ;
-                   CO-META:hasParameter CO-META:SPEA2_parameter_iterations .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#parameter_truncationsize
+:parameter_truncationsize rdf:type owl:NamedIndividual ,
+                                   CO-META:ParameterValue ;
+                          CO-META:hasType CO-META:PopulationSize ;
+                          CO-META:hasValueReference :parameter_storagesize_reference .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_store_solutions
-CO-META:SPEA2_store_solutions rdf:type owl:NamedIndividual ,
-                                       CO-META:ArchiveUpdateComponent ;
-                              CO-META:hasOutputStart CO-META:SPEA2_next_generation ;
-                              CO-META:hasParameter CO-META:SPEA2_parameter_storagesize ;
-                              CO-META:writesData CO-META:SPEA2_archive .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#stop
+:stop rdf:type owl:NamedIndividual ,
+               CO-META:StoppingCriterionComponent ;
+      CO-META:hasCurrentOutput :union ;
+      CO-META:hasParameter :parameter_iterations .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_truncation
-CO-META:SPEA2_truncation rdf:type owl:NamedIndividual ,
-                                  CO-META:TruncationComponent ;
-                         CO-META:hasOutput CO-META:SPEA2_store_solutions ;
-                         CO-META:hasParameter CO-META:SPEA2_parameter_truncationsize .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#store_solutions
+:store_solutions rdf:type owl:NamedIndividual ,
+                          CO-META:ArchiveUpdateComponent ;
+                 CO-META:hasOutputStart :next_generation ;
+                 CO-META:hasParameter :parameter_storagesize ;
+                 CO-META:writesData :archive .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#SPEA2_union
-CO-META:SPEA2_union rdf:type owl:NamedIndividual ,
-                             CO-META:UnionComponent ;
-                    CO-META:hasOutput CO-META:SPEA2_fitness_assignment_raw_fitness ;
-                    CO-META:readsData CO-META:SPEA2_archive .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#truncation
+:truncation rdf:type owl:NamedIndividual ,
+                     CO-META:TruncationComponent ;
+            CO-META:hasOutput :store_solutions ;
+            CO-META:hasParameter :parameter_truncationsize .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/SPEA2#union
+:union rdf:type owl:NamedIndividual ,
+                CO-META:UnionComponent ;
+       CO-META:hasOutput :fitness_assignment_raw_fitness ;
+       CO-META:readsData :archive .
 
 
 ###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

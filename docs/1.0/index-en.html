@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatorial optimization metaheuristics.", "dateReleased":"Tue Nov 10 14:57:24 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"This ontology provides a structured framework for the interoperability of data sources and applications in the context of combinatorial optimization metaheuristics.", "dateReleased":"Fri Nov 13 18:59:06 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -733,6 +733,10 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#hasKnownSolution"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution">has known solution</a>
+   </li>
+   <li>
       <a href="#hasLength"
          title="https://w3id.org/ontologies-ULL/CO-META#hasLength">has length</a>
    </li>
@@ -1026,6 +1030,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#isImpliedByShape"
          title="https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape">is implied by shape</a>
+   </li>
+   <li>
+      <a href="#isOptimal"
+         title="https://w3id.org/ontologies-ULL/CO-META#isOptimal">is optimal</a>
    </li>
    <li>
       <a href="#isOrdered"
@@ -3394,7 +3402,7 @@ This section provides details for each class and property defined by CO-META.
     is in domain of
    </dt>
    <dd>
-    <a href="#hasDataBinding" title="https://w3id.org/ontologies-ULL/CO-META#hasDataBinding">has data binding</a> <sup class="type-op" title="object property">op</sup>, <a href="#isInstanceOf" title="https://w3id.org/ontologies-ULL/CO-META#isInstanceOf">is instance of</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasDataBinding" title="https://w3id.org/ontologies-ULL/CO-META#hasDataBinding">has data binding</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasKnownSolution" title="https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution">has known solution</a> <sup class="type-op" title="object property">op</sup>, <a href="#isInstanceOf" title="https://w3id.org/ontologies-ULL/CO-META#isInstanceOf">is instance of</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -3849,20 +3857,20 @@ This section provides details for each class and property defined by CO-META.
   <h3>Solution Record<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#SolutionRecord</p>
   <div class="comment">
-   <span class="markdown">A solution returned by a run, with the values of its variables and of its objectives.</span>
+   <span class="markdown">A solution of a problem instance, returned by a run or known beforehand, with the values of its variables and of its objectives.</span>
   </div>
   <dl class="description">
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#hasObjectiveValue" title="https://w3id.org/ontologies-ULL/CO-META#hasObjectiveValue">has objective value</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasVariableValues" title="https://w3id.org/ontologies-ULL/CO-META#hasVariableValues">has variable values</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isFeasible" title="https://w3id.org/ontologies-ULL/CO-META#isFeasible">is feasible</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#hasObjectiveValue" title="https://w3id.org/ontologies-ULL/CO-META#hasObjectiveValue">has objective value</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasVariableValues" title="https://w3id.org/ontologies-ULL/CO-META#hasVariableValues">has variable values</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isFeasible" title="https://w3id.org/ontologies-ULL/CO-META#isFeasible">is feasible</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isOptimal" title="https://w3id.org/ontologies-ULL/CO-META#isOptimal">is optimal</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#hasSolution" title="https://w3id.org/ontologies-ULL/CO-META#hasSolution">has solution</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasKnownSolution" title="https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution">has known solution</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSolution" title="https://w3id.org/ontologies-ULL/CO-META#hasSolution">has solution</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is disjoint with
@@ -4336,6 +4344,7 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#hasInput" title="https://w3id.org/ontologies-ULL/CO-META#hasInput"> <span>has Input</span> </a></li>
   <li><a href="#hasInputEnd" title="https://w3id.org/ontologies-ULL/CO-META#hasInputEnd"> <span>has Input End</span> </a></li>
   <li><a href="#hasInputStart" title="https://w3id.org/ontologies-ULL/CO-META#hasInputStart"> <span>has Input Start</span> </a></li>
+  <li><a href="#hasKnownSolution" title="https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution">has known solution</a></li>
   <li><a href="#hasLength" title="https://w3id.org/ontologies-ULL/CO-META#hasLength">has length</a></li>
   <li><a href="#hasLowerBound" title="https://w3id.org/ontologies-ULL/CO-META#hasLowerBound">has lower bound</a></li>
   <li><a href="#hasObjective" title="https://w3id.org/ontologies-ULL/CO-META#hasObjective"> <span>has Objective</span> </a></li>
@@ -4884,6 +4893,29 @@ This section provides details for each class and property defined by CO-META.
     </dt>
     <dd>
      <a href="#hasOutputStart" title="https://w3id.org/ontologies-ULL/CO-META#hasOutputStart">has Output Start</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasKnownSolution">
+  <h3>has known solution<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution</p>
+  <div class="comment">
+   <span class="markdown">Solution of the instance known beforehand, to compare results with: an optimum, the best known one or, with several objectives, each point of a known front.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ProblemInstance" title="https://w3id.org/ontologies-ULL/CO-META#ProblemInstance">Problem Instance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SolutionRecord" title="https://w3id.org/ontologies-ULL/CO-META#SolutionRecord">Solution Record</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -5760,6 +5792,7 @@ This section provides details for each class and property defined by CO-META.
   <li><a href="#isHard" title="https://w3id.org/ontologies-ULL/CO-META#isHard">is hard</a></li>
   <li><a href="#isImplicit" title="https://w3id.org/ontologies-ULL/CO-META#isImplicit">is implicit</a></li>
   <li><a href="#isImpliedByShape" title="https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape">is implied by shape</a></li>
+  <li><a href="#isOptimal" title="https://w3id.org/ontologies-ULL/CO-META#isOptimal">is optimal</a></li>
   <li><a href="#isOrdered" title="https://w3id.org/ontologies-ULL/CO-META#isOrdered">is ordered</a></li>
  </ul>
  <div class="entity" id="hasCodeReference">
@@ -6549,6 +6582,30 @@ This section provides details for each class and property defined by CO-META.
     </dt>
     <dd>
      <a href="#Constraint" title="https://w3id.org/ontologies-ULL/CO-META#Constraint">Constraint</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isOptimal">
+  <h3>is optimal<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#isOptimal</p>
+  <div class="comment">
+   <span class="markdown">Whether the solution is proven optimal or, with several objectives, Pareto optimal.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SolutionRecord" title="https://w3id.org/ontologies-ULL/CO-META#SolutionRecord">Solution Record</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range

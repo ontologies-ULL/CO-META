@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria.", "dateReleased":"Tue Nov 10 14:57:26 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ontologies-ULL/CO-META","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ontologies-ULL/CO-META","name":"https://w3id.org/ontologies-ULL/CO-META", "headline":"Esta ontología proporciona un marco estructurado para la interoperabilidad de fuentes de datos y aplicaciones en el contexto de las metaheurísticas de optimización combinatoria.", "dateReleased":"Fri Nov 13 18:59:07 UTC 2026", "license":"http://creativecommons.org/licenses/by-nc-sa/4.0/", "author":[{"@type":"Person","name":"Eduardo Segredo (https://orcid.org/0000-0002-4085-4356)"},{"@type":"Person","name":"Gara Miranda Valladares (http://orcid.org/0000-0002-2181-0067)"},{"@type":"Person","name":"Iván Castilla Rodríguez (http://orcid.org/0000-0003-3933-2582)"},{"@type":"Person","name":"Miguel Luna García (http://orcid.org/0009-0006-6611-4360)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -852,6 +852,10 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
          title="https://w3id.org/ontologies-ULL/CO-META#hasSolution">tiene solución</a>
    </li>
    <li>
+      <a href="#hasKnownSolution"
+         title="https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution">tiene solución conocida</a>
+   </li>
+   <li>
       <a href="#hasType" title="https://w3id.org/ontologies-ULL/CO-META#hasType">tiene tipo</a>
    </li>
    <li>
@@ -905,6 +909,10 @@ Esta ontología proporciona un marco estructurado para la interoperabilidad de f
    <li>
       <a href="#isDistinct"
          title="https://w3id.org/ontologies-ULL/CO-META#isDistinct">es sin repeticiones</a>
+   </li>
+   <li>
+      <a href="#isOptimal"
+         title="https://w3id.org/ontologies-ULL/CO-META#isOptimal">es óptima</a>
    </li>
    <li>
       <a href="#isImpliedByShape"
@@ -3423,7 +3431,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     en dominio de
    </dt>
    <dd>
-    <a href="#isInstanceOf" title="https://w3id.org/ontologies-ULL/CO-META#isInstanceOf">es instancia de</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasDataBinding" title="https://w3id.org/ontologies-ULL/CO-META#hasDataBinding">tiene ligadura de datos</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#isInstanceOf" title="https://w3id.org/ontologies-ULL/CO-META#isInstanceOf">es instancia de</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasDataBinding" title="https://w3id.org/ontologies-ULL/CO-META#hasDataBinding">tiene ligadura de datos</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasKnownSolution" title="https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution">tiene solución conocida</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
    <dt>
     en rango de
@@ -3894,20 +3902,20 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <h3>Registro de solución<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#SolutionRecord</p>
   <div class="comment">
-   <span class="markdown">Una solución devuelta por una repetición, con los valores de sus variables y de sus objetivos.</span>
+   <span class="markdown">Una solución de una instancia de un problema, devuelta por una ejecución o conocida de antemano, con los valores de sus variables y de sus objetivos.</span>
   </div>
   <dl class="description">
    <dt>
     en dominio de
    </dt>
    <dd>
-    <a href="#isFeasible" title="https://w3id.org/ontologies-ULL/CO-META#isFeasible">es factible</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasObjectiveValue" title="https://w3id.org/ontologies-ULL/CO-META#hasObjectiveValue">tiene valor de objetivo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasVariableValues" title="https://w3id.org/ontologies-ULL/CO-META#hasVariableValues">tiene valores de las variables</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
+    <a href="#isFeasible" title="https://w3id.org/ontologies-ULL/CO-META#isFeasible">es factible</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#isOptimal" title="https://w3id.org/ontologies-ULL/CO-META#isOptimal">es óptima</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#hasObjectiveValue" title="https://w3id.org/ontologies-ULL/CO-META#hasObjectiveValue">tiene valor de objetivo</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasVariableValues" title="https://w3id.org/ontologies-ULL/CO-META#hasVariableValues">tiene valores de las variables</a> <sup class="type-dp" title="Propiedad de datos">dp</sup>
    </dd>
    <dt>
     en rango de
    </dt>
    <dd>
-    <a href="#hasSolution" title="https://w3id.org/ontologies-ULL/CO-META#hasSolution">tiene solución</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
+    <a href="#hasSolution" title="https://w3id.org/ontologies-ULL/CO-META#hasSolution">tiene solución</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#hasKnownSolution" title="https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution">tiene solución conocida</a> <sup class="type-op" title="Propiedad entre objetos">op</sup>
    </dd>
    <dt>
     disjunto a
@@ -4360,6 +4368,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#hasCurrentOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasCurrentOutput">tiene salida actual</a></li>
   <li><a href="#hasCandidateOutput" title="https://w3id.org/ontologies-ULL/CO-META#hasCandidateOutput">tiene salida candidata</a></li>
   <li><a href="#hasSolution" title="https://w3id.org/ontologies-ULL/CO-META#hasSolution">tiene solución</a></li>
+  <li><a href="#hasKnownSolution" title="https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution">tiene solución conocida</a></li>
   <li><a href="#hasType" title="https://w3id.org/ontologies-ULL/CO-META#hasType">tiene tipo</a></li>
   <li><a href="#hasBaseType" title="https://w3id.org/ontologies-ULL/CO-META#hasBaseType">tiene tipo base</a></li>
   <li><a href="#hasConstraintHandling" title="https://w3id.org/ontologies-ULL/CO-META#hasConstraintHandling">tiene tratamiento de restricciones</a></li>
@@ -5535,6 +5544,29 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    </dl>
   </div>
  </div>
+ <div class="entity" id="hasKnownSolution">
+  <h3>tiene solución conocida<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution</p>
+  <div class="comment">
+   <span class="markdown">Solución de la instancia conocida de antemano, para comparar los resultados con ella: un óptimo, la mejor conocida o, con varios objetivos, cada punto de un frente conocido.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#ProblemInstance" title="https://w3id.org/ontologies-ULL/CO-META#ProblemInstance">Instancia del problema</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="#SolutionRecord" title="https://w3id.org/ontologies-ULL/CO-META#SolutionRecord">Registro de solución</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="hasType">
   <h3>tiene tipo<sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#hasType</p>
@@ -5729,6 +5761,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
   <li><a href="#isImplicit" title="https://w3id.org/ontologies-ULL/CO-META#isImplicit">es implícito</a></li>
   <li><a href="#isOrdered" title="https://w3id.org/ontologies-ULL/CO-META#isOrdered">es ordenada</a></li>
   <li><a href="#isDistinct" title="https://w3id.org/ontologies-ULL/CO-META#isDistinct">es sin repeticiones</a></li>
+  <li><a href="#isOptimal" title="https://w3id.org/ontologies-ULL/CO-META#isOptimal">es óptima</a></li>
   <li><a href="#isImpliedByShape" title="https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape">está implícita en la forma</a></li>
   <li><a href="#hasInputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasInputSize"> <span>has Input Size</span> </a></li>
   <li><a href="#hasOutputSize" title="https://w3id.org/ontologies-ULL/CO-META#hasOutputSize"> <span>has Output Size</span> </a></li>
@@ -5870,6 +5903,30 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
     </dt>
     <dd>
      <a href="#CollectionShape" title="https://w3id.org/ontologies-ULL/CO-META#CollectionShape">Forma de colección</a> <sup class="type-c" title="clase">c</sup>
+    </dd>
+    <dt>
+     rango
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isOptimal">
+  <h3>es óptima<sup class="type-dp" title="Propiedad de datos">dp</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ontologies-ULL/CO-META#isOptimal</p>
+  <div class="comment">
+   <span class="markdown">Si está demostrado que la solución es óptima o, con varios objetivos, óptima de Pareto.</span>
+  </div>
+  <div class="description">
+   <p><strong>tiene características: </strong> funcional</p>
+   <dl>
+    <dt>
+     dominio
+    </dt>
+    <dd>
+     <a href="#SolutionRecord" title="https://w3id.org/ontologies-ULL/CO-META#SolutionRecord">Registro de solución</a> <sup class="type-c" title="clase">c</sup>
     </dd>
     <dt>
      rango

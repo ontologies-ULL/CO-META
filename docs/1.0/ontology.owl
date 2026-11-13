@@ -393,6 +393,20 @@
     
 
 
+    <!-- https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution">
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#ProblemInstance"/>
+        <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionRecord"/>
+        <rdfs:comment xml:lang="es">Solución de la instancia conocida de antemano, para comparar los resultados con ella: un óptimo, la mejor conocida o, con varios objetivos, cada punto de un frente conocido.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Solution of the instance known beforehand, to compare results with: an optimum, the best known one or, with several objectives, each point of a known front.</rdfs:comment>
+        <rdfs:label xml:lang="en">has known solution</rdfs:label>
+        <rdfs:label xml:lang="es">tiene solución conocida</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/ontologies-ULL/CO-META#hasLength -->
 
 
@@ -1455,6 +1469,21 @@
         <rdfs:comment xml:lang="en">The shape of the decision variables already guarantees the constraint (e.g. visiting each city once with a permutation), so it need not be checked.</rdfs:comment>
         <rdfs:label xml:lang="es">está implícita en la forma</rdfs:label>
         <rdfs:label xml:lang="en">is implied by shape</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/ontologies-ULL/CO-META#isOptimal -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#isOptimal">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#SolutionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="es">Si está demostrado que la solución es óptima o, con varios objetivos, óptima de Pareto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Whether the solution is proven optimal or, with several objectives, Pareto optimal.</rdfs:comment>
+        <rdfs:label xml:lang="es">es óptima</rdfs:label>
+        <rdfs:label xml:lang="en">is optimal</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3719,8 +3748,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/ontologies-ULL/CO-META#SolutionRecord">
-        <rdfs:comment xml:lang="en">A solution returned by a run, with the values of its variables and of its objectives.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Una solución devuelta por una repetición, con los valores de sus variables y de sus objetivos.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A solution of a problem instance, returned by a run or known beforehand, with the values of its variables and of its objectives.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una solución de una instancia de un problema, devuelta por una ejecución o conocida de antemano, con los valores de sus variables y de sus objetivos.</rdfs:comment>
         <rdfs:label xml:lang="es">Registro de solución</rdfs:label>
         <rdfs:label xml:lang="en">Solution Record</rdfs:label>
     </owl:Class>

@@ -236,6 +236,15 @@
 <https://w3id.org/ontologies-ULL/CO-META#hasInputStart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#hasInput> .
 <https://w3id.org/ontologies-ULL/CO-META#hasInputStart> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> .
 # 
+# https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution
+<https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#ProblemInstance> .
+<https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#SolutionRecord> .
+<https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Solución de la instancia conocida de antemano, para comparar los resultados con ella: un óptimo, la mejor conocida o, con varios objetivos, cada punto de un frente conocido."@es .
+<https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Solution of the instance known beforehand, to compare results with: an optimum, the best known one or, with several objectives, each point of a known front."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution> <http://www.w3.org/2000/01/rdf-schema#label> "has known solution"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution> <http://www.w3.org/2000/01/rdf-schema#label> "tiene solución conocida"@es .
+# 
 # https://w3id.org/ontologies-ULL/CO-META#hasLength
 <https://w3id.org/ontologies-ULL/CO-META#hasLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#hasLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
@@ -971,6 +980,16 @@ _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape> <http://www.w3.org/2000/01/rdf-schema#comment> "The shape of the decision variables already guarantees the constraint (e.g. visiting each city once with a permutation), so it need not be checked."@en .
 <https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape> <http://www.w3.org/2000/01/rdf-schema#label> "está implícita en la forma"@es .
 <https://w3id.org/ontologies-ULL/CO-META#isImpliedByShape> <http://www.w3.org/2000/01/rdf-schema#label> "is implied by shape"@en .
+# 
+# https://w3id.org/ontologies-ULL/CO-META#isOptimal
+<https://w3id.org/ontologies-ULL/CO-META#isOptimal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#isOptimal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/ontologies-ULL/CO-META#isOptimal> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#SolutionRecord> .
+<https://w3id.org/ontologies-ULL/CO-META#isOptimal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/ontologies-ULL/CO-META#isOptimal> <http://www.w3.org/2000/01/rdf-schema#comment> "Si está demostrado que la solución es óptima o, con varios objetivos, óptima de Pareto."@es .
+<https://w3id.org/ontologies-ULL/CO-META#isOptimal> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether the solution is proven optimal or, with several objectives, Pareto optimal."@en .
+<https://w3id.org/ontologies-ULL/CO-META#isOptimal> <http://www.w3.org/2000/01/rdf-schema#label> "es óptima"@es .
+<https://w3id.org/ontologies-ULL/CO-META#isOptimal> <http://www.w3.org/2000/01/rdf-schema#label> "is optimal"@en .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#isOrdered
 <https://w3id.org/ontologies-ULL/CO-META#isOrdered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2570,8 +2589,8 @@ _:genid259 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/ontologies-ULL/CO-META#SolutionRecord
 <https://w3id.org/ontologies-ULL/CO-META#SolutionRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/ontologies-ULL/CO-META#SolutionRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "A solution returned by a run, with the values of its variables and of its objectives."@en .
-<https://w3id.org/ontologies-ULL/CO-META#SolutionRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "Una solución devuelta por una repetición, con los valores de sus variables y de sus objetivos."@es .
+<https://w3id.org/ontologies-ULL/CO-META#SolutionRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "A solution of a problem instance, returned by a run or known beforehand, with the values of its variables and of its objectives."@en .
+<https://w3id.org/ontologies-ULL/CO-META#SolutionRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "Una solución de una instancia de un problema, devuelta por una ejecución o conocida de antemano, con los valores de sus variables y de sus objetivos."@es .
 <https://w3id.org/ontologies-ULL/CO-META#SolutionRecord> <http://www.w3.org/2000/01/rdf-schema#label> "Registro de solución"@es .
 <https://w3id.org/ontologies-ULL/CO-META#SolutionRecord> <http://www.w3.org/2000/01/rdf-schema#label> "Solution Record"@en .
 # 

@@ -1,14 +1,11 @@
-@prefix : <https://w3id.org/ontologies-ULL/CO-META#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix ns: <http://creativecommons.org/ns#> .
+@prefix : <https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix terms: <http://purl.org/dc/terms/> .
 @prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
-@base <https://w3id.org/ontologies-ULL/CO-META#> .
+@base <https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK> .
 
 <https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK> rdf:type owl:Ontology ;
                                                                          owl:imports <https://w3id.org/ontologies-ULL/CO-META> ;
@@ -18,148 +15,165 @@
 #    Individuals
 #################################################################
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK
-CO-META:KNAPSACK rdf:type owl:NamedIndividual ,
-                          CO-META:Problem ;
-                 CO-META:hasConstraint CO-META:KNAPSACK_capacity ;
-                 CO-META:hasObjective CO-META:KNAPSACK_maximum_value ;
-                 CO-META:hasProblemElement CO-META:KNAPSACK_Items ,
-                                           CO-META:KNAPSACK_N ,
-                                           CO-META:KNAPSACK_W ,
-                                           CO-META:KNAPSACK_x ;
-                 rdfs:label "Knapsack Problem"@en ,
-                            "Problema de la mochila"@es .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#Items
+:Items rdf:type owl:NamedIndividual ,
+                CO-META:ProblemData ;
+       CO-META:hasShape :Items_shape ;
+       CO-META:hasIdentifier "Items" ;
+       CO-META:hasLatexSymbol "I" .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_Items
-CO-META:KNAPSACK_Items rdf:type owl:NamedIndividual ,
-                                CO-META:ProblemData ;
-                       CO-META:hasShape CO-META:KNAPSACK_Items_shape ;
-                       CO-META:hasIdentifier "Items" ;
-                       CO-META:hasLatexSymbol "I" .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#Items_Value
+:Items_Value rdf:type owl:NamedIndividual ,
+                      CO-META:Column ;
+             CO-META:hasValueDomain CO-META:NonNegativeReals ;
+             CO-META:hasIdentifier "Value" ;
+             CO-META:hasLatexSymbol "v" ;
+             CO-META:hasPosition 1 .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_Items_Value
-CO-META:KNAPSACK_Items_Value rdf:type owl:NamedIndividual ,
-                                      CO-META:Column ;
-                             CO-META:hasValueDomain CO-META:NonNegativeReals ;
-                             CO-META:hasIdentifier "Value" ;
-                             CO-META:hasLatexSymbol "v" ;
-                             CO-META:hasPosition 1 .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#Items_Weight
+:Items_Weight rdf:type owl:NamedIndividual ,
+                       CO-META:Column ;
+              CO-META:hasValueDomain CO-META:NonNegativeReals ;
+              CO-META:hasIdentifier "Weight" ;
+              CO-META:hasLatexSymbol "w" ;
+              CO-META:hasPosition 2 .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_Items_Weight
-CO-META:KNAPSACK_Items_Weight rdf:type owl:NamedIndividual ,
-                                       CO-META:Column ;
-                              CO-META:hasValueDomain CO-META:NonNegativeReals ;
-                              CO-META:hasIdentifier "Weight" ;
-                              CO-META:hasLatexSymbol "w" ;
-                              CO-META:hasPosition 2 .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#Items_shape
+:Items_shape rdf:type owl:NamedIndividual ,
+                      CO-META:TableShape ;
+             CO-META:hasColumn :Items_Value ,
+                               :Items_Weight ;
+             CO-META:hasRowCount :N_reference .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_Items_shape
-CO-META:KNAPSACK_Items_shape rdf:type owl:NamedIndividual ,
-                                      CO-META:TableShape ;
-                             CO-META:hasColumn CO-META:KNAPSACK_Items_Value ,
-                                               CO-META:KNAPSACK_Items_Weight ;
-                             CO-META:hasRowCount CO-META:KNAPSACK_N_reference .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#KNAPSACK
+:KNAPSACK rdf:type owl:NamedIndividual ,
+                   CO-META:Problem ;
+          CO-META:hasConstraint :capacity ;
+          CO-META:hasObjective :maximum_value ;
+          CO-META:hasProblemElement :Items ,
+                                    :N ,
+                                    :W ,
+                                    :x ;
+          rdfs:label "Knapsack Problem"@en ,
+                     "Problema de la mochila"@es .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_N
-CO-META:KNAPSACK_N rdf:type owl:NamedIndividual ,
-                            CO-META:InputParameter ;
-                   CO-META:hasValueDomain CO-META:PositiveIntegers ;
-                   CO-META:hasIdentifier "N" ;
-                   CO-META:hasLatexSymbol "N" ;
-                   CO-META:isImplicit "true"^^xsd:boolean .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#N
+:N rdf:type owl:NamedIndividual ,
+            CO-META:InputParameter ;
+   CO-META:hasValueDomain CO-META:PositiveIntegers ;
+   CO-META:hasIdentifier "N" ;
+   CO-META:hasLatexSymbol "N" ;
+   CO-META:isImplicit "true"^^xsd:boolean .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_N_reference
-CO-META:KNAPSACK_N_reference rdf:type owl:NamedIndividual ,
-                                      CO-META:ParameterReference ;
-                             CO-META:refersTo CO-META:KNAPSACK_N .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#N_reference
+:N_reference rdf:type owl:NamedIndividual ,
+                      CO-META:ParameterReference ;
+             CO-META:refersTo :N .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_P01
-CO-META:KNAPSACK_P01 rdf:type owl:NamedIndividual ,
-                              CO-META:ProblemInstance ;
-                     CO-META:hasDataBinding CO-META:KNAPSACK_P01_capacity ,
-                                            CO-META:KNAPSACK_P01_items ;
-                     CO-META:isInstanceOf CO-META:KNAPSACK ;
-                     rdfs:comment "Instance P01 of Kreher and Stinson, with 10 items. Its optimum value is 309."@en ,
-                                  "Instancia P01 de Kreher y Stinson, con 10 objetos. Su valor óptimo es 309."@es ;
-                     rdfs:label "Knapsack P01"@en ,
-                                "Mochila P01"@es .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#W
+:W rdf:type owl:NamedIndividual ,
+            CO-META:InputParameter ;
+   CO-META:hasValueDomain CO-META:NonNegativeReals ;
+   CO-META:hasIdentifier "W" ;
+   CO-META:hasLatexSymbol "W" ;
+   CO-META:isImplicit "false"^^xsd:boolean .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_P01_capacity
-CO-META:KNAPSACK_P01_capacity rdf:type owl:NamedIndividual ,
-                                       CO-META:DataBinding ;
-                              CO-META:bindsQuantity CO-META:KNAPSACK_W ;
-                              CO-META:hasSourceFormat CO-META:InlineFormat ;
-                              CO-META:hasInlineValue "165" .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#capacity
+:capacity rdf:type owl:NamedIndividual ,
+                   CO-META:Constraint ;
+          CO-META:hasLatexExpression "\\sum_{i=1}^{N} w_i x_i \\leq W" ;
+          CO-META:isHard "true"^^xsd:boolean ;
+          rdfs:label "Capacidad de la mochila"@es ,
+                     "Knapsack capacity"@en .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_P01_items
-CO-META:KNAPSACK_P01_items rdf:type owl:NamedIndividual ,
-                                    CO-META:DataBinding ;
-                           CO-META:bindsQuantity CO-META:KNAPSACK_Items ;
-                           CO-META:hasSourceFormat CO-META:InlineFormat ;
-                           CO-META:hasInlineValue "{\"Value\": [92, 57, 49, 68, 60, 43, 67, 84, 87, 72], \"Weight\": [23, 31, 29, 44, 53, 38, 63, 85, 89, 82]}" .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#instance_P01
+:instance_P01 rdf:type owl:NamedIndividual ,
+                       CO-META:ProblemInstance ;
+              CO-META:hasDataBinding :instance_P01_capacity ,
+                                     :instance_P01_items ;
+              CO-META:hasKnownSolution :instance_P01_optimum ;
+              CO-META:isInstanceOf :KNAPSACK ;
+              rdfs:comment "Instance P01 of Kreher and Stinson, with 10 items. Its optimum value is 309."@en ,
+                           "Instancia P01 de Kreher y Stinson, con 10 objetos. Su valor óptimo es 309."@es ;
+              rdfs:label "Knapsack P01"@en ,
+                         "Mochila P01"@es .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_W
-CO-META:KNAPSACK_W rdf:type owl:NamedIndividual ,
-                            CO-META:InputParameter ;
-                   CO-META:hasValueDomain CO-META:NonNegativeReals ;
-                   CO-META:hasIdentifier "W" ;
-                   CO-META:hasLatexSymbol "W" ;
-                   CO-META:isImplicit "false"^^xsd:boolean .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#instance_P01_capacity
+:instance_P01_capacity rdf:type owl:NamedIndividual ,
+                                CO-META:DataBinding ;
+                       CO-META:bindsQuantity :W ;
+                       CO-META:hasSourceFormat CO-META:InlineFormat ;
+                       CO-META:hasInlineValue "165" .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_capacity
-CO-META:KNAPSACK_capacity rdf:type owl:NamedIndividual ,
-                                   CO-META:Constraint ;
-                          CO-META:hasLatexExpression "\\sum_{i=1}^{N} w_i x_i \\leq W" ;
-                          CO-META:isHard "true"^^xsd:boolean ;
-                          rdfs:label "Capacidad de la mochila"@es ,
-                                     "Knapsack capacity"@en .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#instance_P01_items
+:instance_P01_items rdf:type owl:NamedIndividual ,
+                             CO-META:DataBinding ;
+                    CO-META:bindsQuantity :Items ;
+                    CO-META:hasSourceFormat CO-META:InlineFormat ;
+                    CO-META:hasInlineValue "{\"Value\": [92, 57, 49, 68, 60, 43, 67, 84, 87, 72], \"Weight\": [23, 31, 29, 44, 53, 38, 63, 85, 89, 82]}" .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_maximum_value
-CO-META:KNAPSACK_maximum_value rdf:type owl:NamedIndividual ,
-                                        CO-META:MaximizationObjective ;
-                               CO-META:hasLatexExpression "\\sum_{i=1}^{N} v_i x_i" ;
-                               CO-META:hasWeight "1.0"^^xsd:double ;
-                               rdfs:label "Maximum total value"@en ,
-                                          "Valor total máximo"@es .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#instance_P01_optimum
+:instance_P01_optimum rdf:type owl:NamedIndividual ,
+                               CO-META:SolutionRecord ;
+                      CO-META:hasObjectiveValue :instance_P01_optimum_maximum_value ;
+                      CO-META:hasVariableValues "{\"x\": [1, 1, 1, 1, 0, 1, 0, 0, 0, 0]}" ;
+                      CO-META:isFeasible "true"^^xsd:boolean ;
+                      CO-META:isOptimal "true"^^xsd:boolean .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_value_per_weight
-CO-META:KNAPSACK_value_per_weight rdf:type owl:NamedIndividual ,
-                                           CO-META:ValueHeuristic ;
-                                  CO-META:hasLatexExpression "\\frac{v_j}{w_j}" ;
-                                  CO-META:hasValueIndexSymbol "j" ;
-                                  rdfs:label "Valor por unidad de peso"@es ,
-                                             "Value per unit of weight"@en .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#instance_P01_optimum_maximum_value
+:instance_P01_optimum_maximum_value rdf:type owl:NamedIndividual ,
+                                             CO-META:ObjectiveValue ;
+                                    CO-META:hasType :maximum_value ;
+                                    CO-META:hasValue "309.0"^^xsd:double .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_x
-CO-META:KNAPSACK_x rdf:type owl:NamedIndividual ,
-                            CO-META:DecisionVariable ;
-                   CO-META:hasHeuristic CO-META:KNAPSACK_value_per_weight ;
-                   CO-META:hasShape CO-META:KNAPSACK_x_shape ;
-                   CO-META:hasValueDomain CO-META:BinaryIntegers ;
-                   CO-META:hasIdentifier "x" ;
-                   CO-META:hasLatexSymbol "x" .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#maximum_value
+:maximum_value rdf:type owl:NamedIndividual ,
+                        CO-META:MaximizationObjective ;
+               CO-META:hasLatexExpression "\\sum_{i=1}^{N} v_i x_i" ;
+               CO-META:hasWeight "1.0"^^xsd:double ;
+               rdfs:label "Maximum total value"@en ,
+                          "Valor total máximo"@es .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#KNAPSACK_x_shape
-CO-META:KNAPSACK_x_shape rdf:type owl:NamedIndividual ,
-                                  CO-META:CollectionShape ;
-                         CO-META:hasLength CO-META:KNAPSACK_N_reference ;
-                         CO-META:isDistinct "false"^^xsd:boolean ;
-                         CO-META:isOrdered "true"^^xsd:boolean .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#value_per_weight
+:value_per_weight rdf:type owl:NamedIndividual ,
+                           CO-META:ValueHeuristic ;
+                  CO-META:hasLatexExpression "\\frac{v_j}{w_j}" ;
+                  CO-META:hasValueIndexSymbol "j" ;
+                  rdfs:label "Valor por unidad de peso"@es ,
+                             "Value per unit of weight"@en .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#x
+:x rdf:type owl:NamedIndividual ,
+            CO-META:DecisionVariable ;
+   CO-META:hasHeuristic :value_per_weight ;
+   CO-META:hasShape :x_shape ;
+   CO-META:hasValueDomain CO-META:BinaryIntegers ;
+   CO-META:hasIdentifier "x" ;
+   CO-META:hasLatexSymbol "x" .
+
+
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#x_shape
+:x_shape rdf:type owl:NamedIndividual ,
+                  CO-META:CollectionShape ;
+         CO-META:hasLength :N_reference ;
+         CO-META:isDistinct "false"^^xsd:boolean ;
+         CO-META:isOrdered "true"^^xsd:boolean .
 
 
 ###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

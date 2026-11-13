@@ -5503,10 +5503,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A solution returned by a run, with the values of its variables and of its objectives."
+    "@value" : "A solution of a problem instance, returned by a run or known beforehand, with the values of its variables and of its objectives."
   }, {
     "@language" : "es",
-    "@value" : "Una solución devuelta por una repetición, con los valores de sus variables y de sus objetivos."
+    "@value" : "Una solución de una instancia de un problema, devuelta por una ejecución o conocida de antemano, con los valores de sus variables y de sus objetivos."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -6914,6 +6914,29 @@
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputStart"
   } ]
 }, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasKnownSolution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Solución de la instancia conocida de antemano, para comparar los resultados con ella: un óptimo, la mejor conocida o, con varios objetivos, cada punto de un frente conocido."
+  }, {
+    "@language" : "en",
+    "@value" : "Solution of the instance known beforehand, to compare results with: an optimum, the best known one or, with several objectives, each point of a known front."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#ProblemInstance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has known solution"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene solución conocida"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionRecord"
+  } ]
+}, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasLatexExpression",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -7897,6 +7920,29 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#isObjectiveOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/ontologies-ULL/CO-META#isOptimal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Si está demostrado que la solución es óptima o, con varios objetivos, óptima de Pareto."
+  }, {
+    "@language" : "en",
+    "@value" : "Whether the solution is proven optimal or, with several objectives, Pareto optimal."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/ontologies-ULL/CO-META#SolutionRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es óptima"
+  }, {
+    "@language" : "en",
+    "@value" : "is optimal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#isOrdered",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
