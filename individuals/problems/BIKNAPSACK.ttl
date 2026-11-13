@@ -1,14 +1,11 @@
-@prefix : <https://w3id.org/ontologies-ULL/CO-META#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix ns: <http://creativecommons.org/ns#> .
+@prefix : <https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix terms: <http://purl.org/dc/terms/> .
 @prefix CO-META: <https://w3id.org/ontologies-ULL/CO-META#> .
-@base <https://w3id.org/ontologies-ULL/CO-META#> .
+@base <https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK> .
 
 <https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK> rdf:type owl:Ontology ;
                                                                            owl:imports <https://w3id.org/ontologies-ULL/CO-META> ;
@@ -18,158 +15,158 @@
 #    Individuals
 #################################################################
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK
-CO-META:BIKNAPSACK rdf:type owl:NamedIndividual ,
-                            CO-META:Problem ;
-                   CO-META:hasConstraint CO-META:BIKNAPSACK_capacity ;
-                   CO-META:hasObjective CO-META:BIKNAPSACK_maximum_first_value ,
-                                        CO-META:BIKNAPSACK_maximum_second_value ;
-                   CO-META:hasProblemElement CO-META:BIKNAPSACK_Items ,
-                                             CO-META:BIKNAPSACK_N ,
-                                             CO-META:BIKNAPSACK_W ,
-                                             CO-META:BIKNAPSACK_x ;
-                   rdfs:label "Bi-objective Knapsack Problem"@en ,
-                              "Problema de la mochila biobjetivo"@es .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#BIKNAPSACK
+:BIKNAPSACK rdf:type owl:NamedIndividual ,
+                     CO-META:Problem ;
+            CO-META:hasConstraint :capacity ;
+            CO-META:hasObjective :maximum_first_value ,
+                                 :maximum_second_value ;
+            CO-META:hasProblemElement :Items ,
+                                      :N ,
+                                      :W ,
+                                      :x ;
+            rdfs:label "Bi-objective Knapsack Problem"@en ,
+                       "Problema de la mochila biobjetivo"@es .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_10
-CO-META:BIKNAPSACK_10 rdf:type owl:NamedIndividual ,
-                               CO-META:ProblemInstance ;
-                      CO-META:hasDataBinding CO-META:BIKNAPSACK_10_capacity ,
-                                             CO-META:BIKNAPSACK_10_items ;
-                      CO-META:isInstanceOf CO-META:BIKNAPSACK ;
-                      rdfs:comment "Diez objetos. Su frente de Pareto de (primer valor, segundo valor) es (369, 440), (390, 343), (402, 261)."@es ,
-                                   "Ten items. Its Pareto front of (first value, second value) is (369, 440), (390, 343), (402, 261)."@en ;
-                      rdfs:label "Bi-objective knapsack with 10 items"@en ,
-                                 "Mochila biobjetivo con 10 objetos"@es .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#Items
+:Items rdf:type owl:NamedIndividual ,
+                CO-META:ProblemData ;
+       CO-META:hasShape :Items_shape ;
+       CO-META:hasIdentifier "Items" ;
+       CO-META:hasLatexSymbol "I" .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_10_capacity
-CO-META:BIKNAPSACK_10_capacity rdf:type owl:NamedIndividual ,
-                                        CO-META:DataBinding ;
-                               CO-META:bindsQuantity CO-META:BIKNAPSACK_W ;
-                               CO-META:hasSourceFormat CO-META:InlineFormat ;
-                               CO-META:hasInlineValue "193" .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#Items_FirstValue
+:Items_FirstValue rdf:type owl:NamedIndividual ,
+                           CO-META:Column ;
+                  CO-META:hasValueDomain CO-META:NonNegativeReals ;
+                  CO-META:hasIdentifier "FirstValue" ;
+                  CO-META:hasLatexSymbol "u" ;
+                  CO-META:hasPosition 1 .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_10_items
-CO-META:BIKNAPSACK_10_items rdf:type owl:NamedIndividual ,
-                                     CO-META:DataBinding ;
-                            CO-META:bindsQuantity CO-META:BIKNAPSACK_Items ;
-                            CO-META:hasSourceFormat CO-META:InlineFormat ;
-                            CO-META:hasInlineValue "{\"FirstValue\": [40, 26, 70, 18, 70, 39, 70, 80, 91, 91], \"SecondValue\": [85, 57, 90, 87, 43, 34, 79, 70, 29, 29], \"Weight\": [39, 43, 42, 5, 40, 50, 58, 30, 19, 60]}" .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#Items_SecondValue
+:Items_SecondValue rdf:type owl:NamedIndividual ,
+                            CO-META:Column ;
+                   CO-META:hasValueDomain CO-META:NonNegativeReals ;
+                   CO-META:hasIdentifier "SecondValue" ;
+                   CO-META:hasLatexSymbol "v" ;
+                   CO-META:hasPosition 2 .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_Items
-CO-META:BIKNAPSACK_Items rdf:type owl:NamedIndividual ,
-                                  CO-META:ProblemData ;
-                         CO-META:hasShape CO-META:BIKNAPSACK_Items_shape ;
-                         CO-META:hasIdentifier "Items" ;
-                         CO-META:hasLatexSymbol "I" .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#Items_Weight
+:Items_Weight rdf:type owl:NamedIndividual ,
+                       CO-META:Column ;
+              CO-META:hasValueDomain CO-META:NonNegativeReals ;
+              CO-META:hasIdentifier "Weight" ;
+              CO-META:hasLatexSymbol "w" ;
+              CO-META:hasPosition 3 .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_Items_FirstValue
-CO-META:BIKNAPSACK_Items_FirstValue rdf:type owl:NamedIndividual ,
-                                             CO-META:Column ;
-                                    CO-META:hasValueDomain CO-META:NonNegativeReals ;
-                                    CO-META:hasIdentifier "FirstValue" ;
-                                    CO-META:hasLatexSymbol "u" ;
-                                    CO-META:hasPosition 1 .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#Items_shape
+:Items_shape rdf:type owl:NamedIndividual ,
+                      CO-META:TableShape ;
+             CO-META:hasColumn :Items_FirstValue ,
+                               :Items_SecondValue ,
+                               :Items_Weight ;
+             CO-META:hasRowCount :N_reference .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_Items_SecondValue
-CO-META:BIKNAPSACK_Items_SecondValue rdf:type owl:NamedIndividual ,
-                                              CO-META:Column ;
-                                     CO-META:hasValueDomain CO-META:NonNegativeReals ;
-                                     CO-META:hasIdentifier "SecondValue" ;
-                                     CO-META:hasLatexSymbol "v" ;
-                                     CO-META:hasPosition 2 .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#N
+:N rdf:type owl:NamedIndividual ,
+            CO-META:InputParameter ;
+   CO-META:hasValueDomain CO-META:PositiveIntegers ;
+   CO-META:hasIdentifier "N" ;
+   CO-META:hasLatexSymbol "N" ;
+   CO-META:isImplicit "true"^^xsd:boolean .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_Items_Weight
-CO-META:BIKNAPSACK_Items_Weight rdf:type owl:NamedIndividual ,
-                                         CO-META:Column ;
-                                CO-META:hasValueDomain CO-META:NonNegativeReals ;
-                                CO-META:hasIdentifier "Weight" ;
-                                CO-META:hasLatexSymbol "w" ;
-                                CO-META:hasPosition 3 .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#N_reference
+:N_reference rdf:type owl:NamedIndividual ,
+                      CO-META:ParameterReference ;
+             CO-META:refersTo :N .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_Items_shape
-CO-META:BIKNAPSACK_Items_shape rdf:type owl:NamedIndividual ,
-                                        CO-META:TableShape ;
-                               CO-META:hasColumn CO-META:BIKNAPSACK_Items_FirstValue ,
-                                                 CO-META:BIKNAPSACK_Items_SecondValue ,
-                                                 CO-META:BIKNAPSACK_Items_Weight ;
-                               CO-META:hasRowCount CO-META:BIKNAPSACK_N_reference .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#W
+:W rdf:type owl:NamedIndividual ,
+            CO-META:InputParameter ;
+   CO-META:hasValueDomain CO-META:NonNegativeReals ;
+   CO-META:hasIdentifier "W" ;
+   CO-META:hasLatexSymbol "W" ;
+   CO-META:isImplicit "false"^^xsd:boolean .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_N
-CO-META:BIKNAPSACK_N rdf:type owl:NamedIndividual ,
-                              CO-META:InputParameter ;
-                     CO-META:hasValueDomain CO-META:PositiveIntegers ;
-                     CO-META:hasIdentifier "N" ;
-                     CO-META:hasLatexSymbol "N" ;
-                     CO-META:isImplicit "true"^^xsd:boolean .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#capacity
+:capacity rdf:type owl:NamedIndividual ,
+                   CO-META:Constraint ;
+          CO-META:hasLatexExpression "\\sum_{i=1}^{N} w_i x_i \\leq W" ;
+          CO-META:isHard "true"^^xsd:boolean ;
+          rdfs:label "Capacidad de la mochila"@es ,
+                     "Knapsack capacity"@en .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_N_reference
-CO-META:BIKNAPSACK_N_reference rdf:type owl:NamedIndividual ,
-                                        CO-META:ParameterReference ;
-                               CO-META:refersTo CO-META:BIKNAPSACK_N .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#instance_10
+:instance_10 rdf:type owl:NamedIndividual ,
+                      CO-META:ProblemInstance ;
+             CO-META:hasDataBinding :instance_10_capacity ,
+                                    :instance_10_items ;
+             CO-META:isInstanceOf :BIKNAPSACK ;
+             rdfs:comment "Diez objetos. Su frente de Pareto de (primer valor, segundo valor) es (369, 440), (390, 343), (402, 261)."@es ,
+                          "Ten items. Its Pareto front of (first value, second value) is (369, 440), (390, 343), (402, 261)."@en ;
+             rdfs:label "Bi-objective knapsack with 10 items"@en ,
+                        "Mochila biobjetivo con 10 objetos"@es .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_W
-CO-META:BIKNAPSACK_W rdf:type owl:NamedIndividual ,
-                              CO-META:InputParameter ;
-                     CO-META:hasValueDomain CO-META:NonNegativeReals ;
-                     CO-META:hasIdentifier "W" ;
-                     CO-META:hasLatexSymbol "W" ;
-                     CO-META:isImplicit "false"^^xsd:boolean .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#instance_10_capacity
+:instance_10_capacity rdf:type owl:NamedIndividual ,
+                               CO-META:DataBinding ;
+                      CO-META:bindsQuantity :W ;
+                      CO-META:hasSourceFormat CO-META:InlineFormat ;
+                      CO-META:hasInlineValue "193" .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_capacity
-CO-META:BIKNAPSACK_capacity rdf:type owl:NamedIndividual ,
-                                     CO-META:Constraint ;
-                            CO-META:hasLatexExpression "\\sum_{i=1}^{N} w_i x_i \\leq W" ;
-                            CO-META:isHard "true"^^xsd:boolean ;
-                            rdfs:label "Capacidad de la mochila"@es ,
-                                       "Knapsack capacity"@en .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#instance_10_items
+:instance_10_items rdf:type owl:NamedIndividual ,
+                            CO-META:DataBinding ;
+                   CO-META:bindsQuantity :Items ;
+                   CO-META:hasSourceFormat CO-META:InlineFormat ;
+                   CO-META:hasInlineValue "{\"FirstValue\": [40, 26, 70, 18, 70, 39, 70, 80, 91, 91], \"SecondValue\": [85, 57, 90, 87, 43, 34, 79, 70, 29, 29], \"Weight\": [39, 43, 42, 5, 40, 50, 58, 30, 19, 60]}" .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_maximum_first_value
-CO-META:BIKNAPSACK_maximum_first_value rdf:type owl:NamedIndividual ,
-                                                CO-META:MaximizationObjective ;
-                                       CO-META:hasLatexExpression "\\sum_{i=1}^{N} u_i x_i" ;
-                                       CO-META:hasWeight "1.0"^^xsd:double ;
-                                       rdfs:label "Maximum total first value"@en ,
-                                                  "Primer valor total máximo"@es .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#maximum_first_value
+:maximum_first_value rdf:type owl:NamedIndividual ,
+                              CO-META:MaximizationObjective ;
+                     CO-META:hasLatexExpression "\\sum_{i=1}^{N} u_i x_i" ;
+                     CO-META:hasWeight "1.0"^^xsd:double ;
+                     rdfs:label "Maximum total first value"@en ,
+                                "Primer valor total máximo"@es .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_maximum_second_value
-CO-META:BIKNAPSACK_maximum_second_value rdf:type owl:NamedIndividual ,
-                                                 CO-META:MaximizationObjective ;
-                                        CO-META:hasLatexExpression "\\sum_{i=1}^{N} v_i x_i" ;
-                                        CO-META:hasWeight "1.0"^^xsd:double ;
-                                        rdfs:label "Maximum total second value"@en ,
-                                                   "Segundo valor total máximo"@es .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#maximum_second_value
+:maximum_second_value rdf:type owl:NamedIndividual ,
+                               CO-META:MaximizationObjective ;
+                      CO-META:hasLatexExpression "\\sum_{i=1}^{N} v_i x_i" ;
+                      CO-META:hasWeight "1.0"^^xsd:double ;
+                      rdfs:label "Maximum total second value"@en ,
+                                 "Segundo valor total máximo"@es .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_x
-CO-META:BIKNAPSACK_x rdf:type owl:NamedIndividual ,
-                              CO-META:DecisionVariable ;
-                     CO-META:hasShape CO-META:BIKNAPSACK_x_shape ;
-                     CO-META:hasValueDomain CO-META:BinaryIntegers ;
-                     CO-META:hasIdentifier "x" ;
-                     CO-META:hasLatexSymbol "x" .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#x
+:x rdf:type owl:NamedIndividual ,
+            CO-META:DecisionVariable ;
+   CO-META:hasShape :x_shape ;
+   CO-META:hasValueDomain CO-META:BinaryIntegers ;
+   CO-META:hasIdentifier "x" ;
+   CO-META:hasLatexSymbol "x" .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META#BIKNAPSACK_x_shape
-CO-META:BIKNAPSACK_x_shape rdf:type owl:NamedIndividual ,
-                                    CO-META:CollectionShape ;
-                           CO-META:hasLength CO-META:BIKNAPSACK_N_reference ;
-                           CO-META:isDistinct "false"^^xsd:boolean ;
-                           CO-META:isOrdered "true"^^xsd:boolean .
+###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK#x_shape
+:x_shape rdf:type owl:NamedIndividual ,
+                  CO-META:CollectionShape ;
+         CO-META:hasLength :N_reference ;
+         CO-META:isDistinct "false"^^xsd:boolean ;
+         CO-META:isOrdered "true"^^xsd:boolean .
 
 
 ###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi
