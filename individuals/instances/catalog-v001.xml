@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Resolves CO-META, its modules and the problems to the local files when they are opened in Protégé. -->
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri name="https://w3id.org/ontologies-ULL/CO-META" uri="../../CO-META.ttl"/>
+    <uri name="https://w3id.org/ontologies-ULL/CO-META/imports/qudt" uri="../../imports/qudt.ttl"/>
+    <uri name="https://w3id.org/ontologies-ULL/CO-META/imports/qudt-units" uri="../../imports/qudt-units.ttl"/>
+    <uri name="https://w3id.org/ontologies-ULL/CO-META/individuals/problems/BIKNAPSACK" uri="../problems/BIKNAPSACK.ttl"/>
+    <uri name="https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK" uri="../problems/KNAPSACK.ttl"/>
+    <uri name="https://w3id.org/ontologies-ULL/CO-META/individuals/problems/TSP" uri="../problems/TSP.ttl"/>
+</catalog>

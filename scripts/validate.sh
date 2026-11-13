@@ -9,7 +9,7 @@
 #   4. SHACL: the individuals and every tests/owl/consistent/*.ttl must conform
 #      to SHACL/*.ttl, and every tests/shacl/invalid/*.ttl must violate them.
 #
-# Imports of CO-META and of its modules (imports/*.ttl) are resolved to the local
+# Imports of CO-META, of its modules (imports/*.ttl) and of the problems are resolved to the local
 # files through catalog-v001.xml, so the published versions are never used.
 #
 # Requirements: Java 11+ and pyshacl (pip install pyshacl). ROBOT is downloaded

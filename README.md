@@ -8,6 +8,7 @@ Documentation: <https://w3id.org/ontologies-ULL/CO-META>
 ## Repository structure
 - `CO-META.ttl`: the ontology.
 - `individuals/algorithms/`, `individuals/problems/`: descriptions of specific metaheuristics and problems, one file each, that import the ontology.
+- `individuals/instances/`: example instances of the problems, one file each, that import their problem.
 - `imports/`: modules with the terms reused from external vocabularies.
 - `SHACL/`: shapes that check what OWL cannot, such as required values or parameter values within their bounds.
 - `tests/`: test cases for the ontology and the shapes.
@@ -18,8 +19,8 @@ Documentation: <https://w3id.org/ontologies-ULL/CO-META>
 ## Modelling conventions
 
 ### General
-- Describe each metaheuristic or problem in its own file, with its own ontology IRI and importing `https://w3id.org/ontologies-ULL/CO-META`.
-- The individuals of each metaheuristic or problem are in the namespace of its own ontology, so their names need no prefix (`https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/ACO#pheromones`, `https://w3id.org/ontologies-ULL/CO-META/individuals/problems/TSP#x`). The CO-META namespace holds only the terms of the ontology.
+- Describe each metaheuristic, problem or instance in its own file, with its own ontology IRI and importing `https://w3id.org/ontologies-ULL/CO-META` (an instance imports its problem instead).
+- The individuals of each metaheuristic, problem or instance are in the namespace of its own ontology, so their names need no prefix (`https://w3id.org/ontologies-ULL/CO-META/individuals/algorithms/ACO#pheromones`, `https://w3id.org/ontologies-ULL/CO-META/individuals/problems/TSP#x`, `https://w3id.org/ontologies-ULL/CO-META/individuals/instances/TSP-6#instance`). The CO-META namespace holds only the terms of the ontology.
 - Give labels in English and Spanish to new ontology terms and to problems, objectives and constraints, and a short comment in both languages to new ontology terms.
 - Do not declare in the individuals files the properties of the ontology. Protégé does it as annotation properties when it cannot load the import, which takes the files out of OWL 2 DL; the catalogs described in [Imported modules](#imported-modules) prevent it.
 
@@ -31,7 +32,7 @@ Documentation: <https://w3id.org/ontologies-ULL/CO-META>
   - constraints include the comparator and, if any, the quantifier (`x_i \leq 1 \quad \forall i \in \{1, \ldots, N\}`);
   - `\log` is the natural logarithm.
 - Every quantity has a shape (`hasShape`: scalar, collection, matrix, table) and a value domain (`hasValueDomain`). Variables such as permutations or tables of data are then classified by the reasoner from their shape.
-- A `ProblemInstance` gives the values of the data of a problem through a `DataBinding` for each datum (`isInstanceOf`, `hasDataBinding`). The problem files include an example instance with the data inline (`InlineFormat`), so that they do not depend on other files, and its known solution (`hasKnownSolution`): the optimum, or the points of the Pareto front, to compare results with.
+- A `ProblemInstance` gives the values of the data of a problem through a `DataBinding` for each datum (`isInstanceOf`, `hasDataBinding`). Instances are kept apart from their problem, in `individuals/instances/`, so that loading a problem does not load data; the individual of the instance is `#instance`. The example instances have the data inline (`InlineFormat`), so that they do not depend on other files, and their known solution (`hasKnownSolution`): the optimum, or the points of the Pareto front, to compare results with.
 
 ### Algorithms
 - A `Metaheuristic` starts at a component (`hasStart`) connected to the others through `hasOutput`; its type (e.g. evolutionary algorithm) is inferred from the components it is connected to. An acceptance, a union or a neighbourhood change receives a current and a candidate input: `hasCurrentOutput` and `hasCandidateOutput` say which one an output feeds.
@@ -51,7 +52,7 @@ External vocabularies are reused as long as CO-META stays in OWL 2 DL. When a vo
 | `imports/qudt.ttl` | [QUDT](https://qudt.org) 3.5.2, datatypes | Data shapes are subclasses of the QUDT structured datatypes (`qudt:Sequence`, `qudt:Set`, `qudt:Matrix`, `qudt:Table`...) |
 | `imports/qudt-units.ttl` | [QUDT](https://qudt.org) 3.5.2, units | The unit of `Time` (`qudt:unit unit:SEC`) |
 
-The `catalog-v001.xml` files map the IRIs of the ontology and of its modules to the local files, so Protégé and the validation scripts use the working copy instead of the published version.
+The `catalog-v001.xml` files map the IRIs of the ontology, of its modules and of the problems (imported by the instances) to the local files, so Protégé and the validation scripts use the working copy instead of the published version.
 
 ## Validation
 Run `scripts/validate.sh` before committing changes. It requires Java 11+ and `pip install pyshacl`; ROBOT is downloaded on the first run. It checks that:
