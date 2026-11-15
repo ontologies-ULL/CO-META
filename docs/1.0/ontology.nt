@@ -293,11 +293,15 @@
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#LoopComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/2000/01/rdf-schema#label> "has output end"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/2000/01/rdf-schema#label> "tiene salida de fin"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#hasOutputStart
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#LoopComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/2000/01/rdf-schema#label> "has output start"@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/2000/01/rdf-schema#label> "tiene salida de inicio"@es .
 # 
 # https://w3id.org/ontologies-ULL/CO-META#hasParameter
 <https://w3id.org/ontologies-ULL/CO-META#hasParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

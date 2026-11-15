@@ -95,51 +95,6 @@
                      "Knapsack capacity"@en .
 
 
-###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#instance_P01
-:instance_P01 rdf:type owl:NamedIndividual ,
-                       CO-META:ProblemInstance ;
-              CO-META:hasDataBinding :instance_P01_capacity ,
-                                     :instance_P01_items ;
-              CO-META:hasKnownSolution :instance_P01_optimum ;
-              CO-META:isInstanceOf :KNAPSACK ;
-              rdfs:comment "Instance P01 of Kreher and Stinson, with 10 items. Its optimum value is 309."@en ,
-                           "Instancia P01 de Kreher y Stinson, con 10 objetos. Su valor óptimo es 309."@es ;
-              rdfs:label "Knapsack P01"@en ,
-                         "Mochila P01"@es .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#instance_P01_capacity
-:instance_P01_capacity rdf:type owl:NamedIndividual ,
-                                CO-META:DataBinding ;
-                       CO-META:bindsQuantity :W ;
-                       CO-META:hasSourceFormat CO-META:InlineFormat ;
-                       CO-META:hasInlineValue "165" .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#instance_P01_items
-:instance_P01_items rdf:type owl:NamedIndividual ,
-                             CO-META:DataBinding ;
-                    CO-META:bindsQuantity :Items ;
-                    CO-META:hasSourceFormat CO-META:InlineFormat ;
-                    CO-META:hasInlineValue "{\"Value\": [92, 57, 49, 68, 60, 43, 67, 84, 87, 72], \"Weight\": [23, 31, 29, 44, 53, 38, 63, 85, 89, 82]}" .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#instance_P01_optimum
-:instance_P01_optimum rdf:type owl:NamedIndividual ,
-                               CO-META:SolutionRecord ;
-                      CO-META:hasObjectiveValue :instance_P01_optimum_maximum_value ;
-                      CO-META:hasVariableValues "{\"x\": [1, 1, 1, 1, 0, 1, 0, 0, 0, 0]}" ;
-                      CO-META:isFeasible "true"^^xsd:boolean ;
-                      CO-META:isOptimal "true"^^xsd:boolean .
-
-
-###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#instance_P01_optimum_maximum_value
-:instance_P01_optimum_maximum_value rdf:type owl:NamedIndividual ,
-                                             CO-META:ObjectiveValue ;
-                                    CO-META:hasType :maximum_value ;
-                                    CO-META:hasValue "309.0"^^xsd:double .
-
-
 ###  https://w3id.org/ontologies-ULL/CO-META/individuals/problems/KNAPSACK#maximum_value
 :maximum_value rdf:type owl:NamedIndividual ,
                         CO-META:MaximizationObjective ;

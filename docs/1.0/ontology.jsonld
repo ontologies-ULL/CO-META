@@ -7137,6 +7137,13 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#LoopComponent"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has output end"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene salida de fin"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutput"
   } ]
@@ -7152,6 +7159,13 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputStart",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has output start"
+  }, {
+    "@language" : "es",
+    "@value" : "tiene salida de inicio"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#LoopComponent"
   } ],

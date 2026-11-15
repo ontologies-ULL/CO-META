@@ -482,6 +482,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutput"/>
         <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
+        <rdfs:label xml:lang="en">has output end</rdfs:label>
+        <rdfs:label xml:lang="es">tiene salida de fin</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -492,6 +494,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasOutputStart">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutput"/>
         <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
+        <rdfs:label xml:lang="en">has output start</rdfs:label>
+        <rdfs:label xml:lang="es">tiene salida de inicio</rdfs:label>
     </owl:ObjectProperty>
     
 
