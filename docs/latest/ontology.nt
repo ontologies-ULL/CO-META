@@ -293,6 +293,8 @@
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontologies-ULL/CO-META#LoopComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "Output that a loop component follows when its condition is met and it finishes. The target is not part of the body of the loop."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "Salida que sigue un componente de bucle cuando se cumple su condición y termina. El destino no forma parte del cuerpo del bucle."@es .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/2000/01/rdf-schema#label> "has output end"@en .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd> <http://www.w3.org/2000/01/rdf-schema#label> "tiene salida de fin"@es .
 # 
@@ -300,6 +302,8 @@
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ontologies-ULL/CO-META#hasOutput> .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontologies-ULL/CO-META#LoopComponent> .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/2000/01/rdf-schema#comment> "Output that enters a loop component and starts its iterations, from the component before the loop or from an enclosing loop."@en .
+<https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/2000/01/rdf-schema#comment> "Salida que entra en un componente de bucle e inicia sus iteraciones, desde el componente anterior al bucle o desde un bucle que lo contiene."@es .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/2000/01/rdf-schema#label> "has output start"@en .
 <https://w3id.org/ontologies-ULL/CO-META#hasOutputStart> <http://www.w3.org/2000/01/rdf-schema#label> "tiene salida de inicio"@es .
 # 

@@ -326,6 +326,8 @@
 :hasOutputEnd rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :hasOutput ;
               rdfs:domain :LoopComponent ;
+              rdfs:comment "Output that a loop component follows when its condition is met and it finishes. The target is not part of the body of the loop."@en ,
+                           "Salida que sigue un componente de bucle cuando se cumple su condición y termina. El destino no forma parte del cuerpo del bucle."@es ;
               rdfs:label "has output end"@en ,
                          "tiene salida de fin"@es .
 
@@ -334,6 +336,8 @@
 :hasOutputStart rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasOutput ;
                 rdfs:range :LoopComponent ;
+                rdfs:comment "Output that enters a loop component and starts its iterations, from the component before the loop or from an enclosing loop."@en ,
+                             "Salida que entra en un componente de bucle e inicia sus iteraciones, desde el componente anterior al bucle o desde un bucle que lo contiene."@es ;
                 rdfs:label "has output start"@en ,
                            "tiene salida de inicio"@es .
 

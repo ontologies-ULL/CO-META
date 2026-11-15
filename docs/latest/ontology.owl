@@ -482,6 +482,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutput"/>
         <rdfs:domain rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
+        <rdfs:comment xml:lang="en">Output that a loop component follows when its condition is met and it finishes. The target is not part of the body of the loop.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Salida que sigue un componente de bucle cuando se cumple su condición y termina. El destino no forma parte del cuerpo del bucle.</rdfs:comment>
         <rdfs:label xml:lang="en">has output end</rdfs:label>
         <rdfs:label xml:lang="es">tiene salida de fin</rdfs:label>
     </owl:ObjectProperty>
@@ -494,6 +496,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/ontologies-ULL/CO-META#hasOutputStart">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/ontologies-ULL/CO-META#hasOutput"/>
         <rdfs:range rdf:resource="https://w3id.org/ontologies-ULL/CO-META#LoopComponent"/>
+        <rdfs:comment xml:lang="en">Output that enters a loop component and starts its iterations, from the component before the loop or from an enclosing loop.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Salida que entra en un componente de bucle e inicia sus iteraciones, desde el componente anterior al bucle o desde un bucle que lo contiene.</rdfs:comment>
         <rdfs:label xml:lang="en">has output start</rdfs:label>
         <rdfs:label xml:lang="es">tiene salida de inicio</rdfs:label>
     </owl:ObjectProperty>

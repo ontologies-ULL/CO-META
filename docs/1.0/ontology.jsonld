@@ -7134,6 +7134,13 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Output that a loop component follows when its condition is met and it finishes. The target is not part of the body of the loop."
+  }, {
+    "@language" : "es",
+    "@value" : "Salida que sigue un componente de bucle cuando se cumple su condición y termina. El destino no forma parte del cuerpo del bucle."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/ontologies-ULL/CO-META#LoopComponent"
   } ],
@@ -7159,6 +7166,13 @@
 }, {
   "@id" : "https://w3id.org/ontologies-ULL/CO-META#hasOutputStart",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Output that enters a loop component and starts its iterations, from the component before the loop or from an enclosing loop."
+  }, {
+    "@language" : "es",
+    "@value" : "Salida que entra en un componente de bucle e inicia sus iteraciones, desde el componente anterior al bucle o desde un bucle que lo contiene."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has output start"
