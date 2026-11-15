@@ -327,13 +327,17 @@ CO-META:hasOutput rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/ontologies-ULL/CO-META#hasOutputEnd
 CO-META:hasOutputEnd rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf CO-META:hasOutput ;
-                     rdfs:domain CO-META:LoopComponent .
+                     rdfs:domain CO-META:LoopComponent ;
+                     rdfs:label "has output end"@en ,
+                                "tiene salida de fin"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasOutputStart
 CO-META:hasOutputStart rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf CO-META:hasOutput ;
-                       rdfs:range CO-META:LoopComponent .
+                       rdfs:range CO-META:LoopComponent ;
+                       rdfs:label "has output start"@en ,
+                                  "tiene salida de inicio"@es .
 
 
 ###  https://w3id.org/ontologies-ULL/CO-META#hasParameter
